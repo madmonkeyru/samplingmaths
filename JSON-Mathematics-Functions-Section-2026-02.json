@@ -1,0 +1,866 @@
+{
+  "metadata": {
+    "exam": "Bachillerato por Madurez Suficiente — Matemáticas",
+    "convocatoria": "02-2026",
+    "section": "Relaciones y Álgebra (Funciones)",
+    "item_range": "24–48",
+    "total_items": 25,
+    "source": "Práctica BXM Matemáticas 02-2026 — Sección Funciones",
+    "solucionario_verified": true,
+    "language": "es-CR"
+  },
+  "items": [
+    {
+      "id": 24,
+      "area": "Relaciones y Álgebra",
+      "topic": "Concepto de función y de gráfica de una función",
+      "affirmation": "A1",
+      "evidence": "A1.1",
+      "evidence_text": "Identifica en diversos contextos si una relación dada en forma tabular, simbólica o gráfica corresponde a una función.",
+      "stem": "En las siguientes relaciones “x” representa la variable independiente y “y” la dependiente. ¿Cuál de ellas corresponde a una función?",
+      "options": {
+        "A": "Gráfica A (curva suave que pasa la prueba de la recta vertical)",
+        "B": "Gráfica B (dos rayos desde un punto en el eje y)",
+        "C": "Gráfica C (curva en forma de S acostada)",
+        "D": "Gráfica D (dos rayos desde un punto en el eje x positivo)"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Una relación es función si a cada valor de x le corresponde un único valor de y.",
+        "Esto se verifica con la prueba de la recta vertical: si alguna recta vertical interseca la gráfica en más de un punto, la relación no es función.",
+        "La gráfica A pasa la prueba de la recta vertical en todo su dominio.",
+        "Las gráficas B, C y D fallan la prueba: B y D tienen dos valores de y para un mismo x en ciertos intervalos; C tiene múltiples valores de y para un mismo x.",
+        "Por lo tanto, la respuesta correcta es A."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "visual_type": "multi_view_grid",
+        "layout": "2x2",
+        "views": [
+          {
+            "label": "A",
+            "type": "cartesian_2d",
+            "x_range": [-5, 5],
+            "y_range": [-5, 5],
+            "elements": [
+              { "type": "axes", "arrows": true, "grid": false },
+              { "type": "curve", "description": "curva suave tipo onda que pasa la prueba de la recta vertical", "points": [[-4, -1], [-2, 1], [0, 0.5], [2, -0.5], [4, 1]] }
+            ]
+          },
+          {
+            "label": "B",
+            "type": "cartesian_2d",
+            "x_range": [-5, 5],
+            "y_range": [-5, 5],
+            "elements": [
+              { "type": "axes", "arrows": true, "grid": false },
+              { "type": "point", "coords": [0, 1] },
+              { "type": "ray", "origin": [0, 1], "direction": "up-right" },
+              { "type": "ray", "origin": [0, 1], "direction": "down-right" }
+            ]
+          },
+          {
+            "label": "C",
+            "type": "cartesian_2d",
+            "x_range": [-5, 5],
+            "y_range": [-5, 5],
+            "elements": [
+              { "type": "axes", "arrows": true, "grid": false },
+              { "type": "curve", "description": "curva en forma de S acostada (falla la prueba de la recta vertical)", "points": [[-4, -1], [-2, 2], [0, 0], [2, -2], [4, 1]] }
+            ]
+          },
+          {
+            "label": "D",
+            "type": "cartesian_2d",
+            "x_range": [-5, 5],
+            "y_range": [-5, 5],
+            "elements": [
+              { "type": "axes", "arrows": true, "grid": false },
+              { "type": "point", "coords": [2, 0] },
+              { "type": "ray", "origin": [2, 0], "direction": "up-left" },
+              { "type": "ray", "origin": [2, 0], "direction": "left-horizontal" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "area": "Relaciones y Álgebra",
+      "topic": "Composición de funciones",
+      "affirmation": "A1",
+      "evidence": "A1.4",
+      "evidence_text": "Determina las condiciones necesarias y suficientes para que se defina la composición de dos funciones en diversos contextos.",
+      "stem": "Considere las siguientes funciones f, g y p con sus respectivos dominios y ámbitos:\n• f: [0, 4] → [1, 5]\n• g: [2, 6] → [1, 4]\n• p: [2, 6] → [0, 4]\n¿Cuál de las siguientes composiciones de funciones está bien definida?",
+      "options": {
+        "A": "(g ° f)(x)",
+        "B": "(p ° f)(x)",
+        "C": "(f ° p)(x)",
+        "D": "(g ° p)(x)"
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "Para que (h ° k)(x) = h(k(x)) esté bien definida, el ámbito de k debe estar contenido en el dominio de h.",
+        "(g ° f): ámbito de f = [1, 5]; dominio de g = [2, 6]. [1, 5] ⊄ [2, 6]. No está bien definida.",
+        "(p ° f): ámbito de f = [1, 5]; dominio de p = [2, 6]. [1, 5] ⊄ [2, 6]. No está bien definida.",
+        "(f ° p): ámbito de p = [0, 4]; dominio de f = [0, 4]. [0, 4] ⊆ [0, 4]. ✓ Bien definida.",
+        "(g ° p): ámbito de p = [0, 4]; dominio de g = [2, 6]. [0, 4] ⊄ [2, 6]. No está bien definida.",
+        "Por lo tanto, la respuesta correcta es C."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 26,
+      "area": "Relaciones y Álgebra",
+      "topic": "Análisis de gráficas de funciones",
+      "affirmation": "A2",
+      "evidence": "A2.1",
+      "evidence_text": "Analiza una función a partir de sus representaciones en diversos contextos.",
+      "stem": "¿Cuál fue el precio del litro de combustible, en colones, en la semana 10?",
+      "shared_context": {
+        "group_id": "fuel_price",
+        "items": [26, 27],
+        "description": "La siguiente representación gráfica muestra el precio p(x) por litro de combustible, en colones, en función del tiempo x en semanas con 0 ≤ x ≤ 24."
+      },
+      "options": {
+        "A": "600",
+        "B": "650",
+        "C": "750",
+        "D": "900"
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "En la gráfica, entre la semana 8 y la semana 12, el precio se mantiene constante en 750 colones.",
+        "La semana 10 está dentro de ese intervalo.",
+        "Por lo tanto, el precio en la semana 10 es 750 colones.",
+        "Respuesta: C."
+      ],
+      "group_id": "fuel_price",
+      "visual_spec": {
+        "visual_type": "cartesian_2d",
+        "group_id": "fuel_price",
+        "shared": true,
+        "x_range": [0, 25],
+        "y_range": [450, 950],
+        "x_label": "x",
+        "y_label": "p(x)",
+        "elements": [
+          { "type": "axes", "arrows": true, "grid": false },
+          { "type": "polyline", "points": [[0, 500], [4, 600], [8, 750], [12, 750], [16, 900], [20, 600], [24, 500]], "stroke": "black", "width": 2 },
+          { "type": "point", "coords": [4, 600], "label": "4" },
+          { "type": "point", "coords": [8, 750], "label": "8" },
+          { "type": "point", "coords": [12, 750], "label": "12" },
+          { "type": "point", "coords": [16, 900], "label": "16" },
+          { "type": "point", "coords": [20, 600], "label": "20" },
+          { "type": "point", "coords": [24, 500], "label": "24" },
+          { "type": "dashed_line", "from": [4, 600], "to": [4, 0] },
+          { "type": "dashed_line", "from": [8, 750], "to": [8, 0] },
+          { "type": "dashed_line", "from": [12, 750], "to": [12, 0] },
+          { "type": "dashed_line", "from": [16, 900], "to": [16, 0] },
+          { "type": "dashed_line", "from": [20, 600], "to": [20, 0] },
+          { "type": "dashed_line", "from": [24, 500], "to": [24, 0] },
+          { "type": "dashed_line", "from": [0, 500], "to": [4, 500] },
+          { "type": "dashed_line", "from": [0, 600], "to": [4, 600] },
+          { "type": "dashed_line", "from": [0, 750], "to": [8, 750] },
+          { "type": "dashed_line", "from": [0, 900], "to": [16, 900] }
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "area": "Relaciones y Álgebra",
+      "topic": "Análisis de gráficas de funciones",
+      "affirmation": "A2",
+      "evidence": "A2.1",
+      "evidence_text": "Analiza una función a partir de sus representaciones en diversos contextos.",
+      "stem": "¿En cuál semana se registró el precio más alto de todo el periodo?",
+      "shared_context": {
+        "group_id": "fuel_price",
+        "items": [26, 27],
+        "description": "La siguiente representación gráfica muestra el precio p(x) por litro de combustible, en colones, en función del tiempo x en semanas con 0 ≤ x ≤ 24."
+      },
+      "options": {
+        "A": "18",
+        "B": "16",
+        "C": "20",
+        "D": "24"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "El punto más alto de la gráfica corresponde a 900 colones.",
+        "Observando la gráfica, ese valor ocurre en x = 16 semanas.",
+        "Por lo tanto, el precio más alto se registró en la semana 16.",
+        "Respuesta: B."
+      ],
+      "group_id": "fuel_price",
+      "visual_spec": {
+        "visual_type": "cartesian_2d",
+        "group_id": "fuel_price",
+        "shared": true,
+        "x_range": [0, 25],
+        "y_range": [450, 950],
+        "x_label": "x",
+        "y_label": "p(x)",
+        "elements": [
+          { "type": "axes", "arrows": true, "grid": false },
+          { "type": "polyline", "points": [[0, 500], [4, 600], [8, 750], [12, 750], [16, 900], [20, 600], [24, 500]], "stroke": "black", "width": 2 },
+          { "type": "point", "coords": [4, 600], "label": "4" },
+          { "type": "point", "coords": [8, 750], "label": "8" },
+          { "type": "point", "coords": [12, 750], "label": "12" },
+          { "type": "point", "coords": [16, 900], "label": "16" },
+          { "type": "point", "coords": [20, 600], "label": "20" },
+          { "type": "point", "coords": [24, 500], "label": "24" },
+          { "type": "dashed_line", "from": [4, 600], "to": [4, 0] },
+          { "type": "dashed_line", "from": [8, 750], "to": [8, 0] },
+          { "type": "dashed_line", "from": [12, 750], "to": [12, 0] },
+          { "type": "dashed_line", "from": [16, 900], "to": [16, 0] },
+          { "type": "dashed_line", "from": [20, 600], "to": [20, 0] },
+          { "type": "dashed_line", "from": [24, 500], "to": [24, 0] },
+          { "type": "dashed_line", "from": [0, 500], "to": [4, 500] },
+          { "type": "dashed_line", "from": [0, 600], "to": [4, 600] },
+          { "type": "dashed_line", "from": [0, 750], "to": [8, 750] },
+          { "type": "dashed_line", "from": [0, 900], "to": [16, 900] }
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función lineal",
+      "affirmation": "A2",
+      "evidence": "A2.4",
+      "evidence_text": "Determina la ecuación de una recta utilizando datos relacionados con ella en diversos contextos.",
+      "stem": "Sea la función g cuyo criterio está definido por g(x) = mx + 4. Si el punto (3, 19) pertenece a la gráfica de g, entonces, ¿cuál es la pendiente de g?",
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "8",
+        "D": "15"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Sustituyendo el punto (3, 19) en g(x) = mx + 4:",
+        "19 = m(3) + 4",
+        "19 − 4 = 3m",
+        "15 = 3m",
+        "m = 5",
+        "Por lo tanto, la pendiente de g es 5.",
+        "Respuesta: B."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 29,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función cuadrática",
+      "affirmation": "A2",
+      "evidence": "A2.5",
+      "evidence_text": "Determina elementos o propiedades de la función cuadrática con criterio dado por f(x) = ax² + bx + c, a ≠ 0, en su representación gráfica o algebraica, en diversos contextos.",
+      "stem": "Considere la siguiente representación gráfica de la función g, definida por g(x) = ax² + bx + c, con a < 0:\n[gráfica de parábola que abre hacia abajo, con vértice en (−1, 5) y raíces en −4 y 2]\n¿En cuál valor de “x” alcanza “g” su valor máximo?",
+      "options": {
+        "A": "2",
+        "B": "5",
+        "C": "−1",
+        "D": "−4"
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "Como a < 0, la parábola abre hacia abajo y su valor máximo se alcanza en el vértice.",
+        "En la gráfica, el vértice está en el punto (−1, 5).",
+        "Por lo tanto, g alcanza su valor máximo cuando x = −1.",
+        "Respuesta: C."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "visual_type": "cartesian_2d",
+        "x_range": [-6, 4],
+        "y_range": [-2, 7],
+        "x_label": "x",
+        "y_label": "y",
+        "elements": [
+          { "type": "axes", "arrows": true, "grid": false },
+          { "type": "function", "expression": "quadratic", "vertex": [-1, 5], "roots": [-4, 2], "opens": "down", "label": "g" },
+          { "type": "point", "coords": [-1, 5], "label": "5" },
+          { "type": "point", "coords": [-4, 0], "label": "−4" },
+          { "type": "point", "coords": [2, 0], "label": "2" },
+          { "type": "point", "coords": [-1, 0], "label": "−1" },
+          { "type": "dashed_line", "from": [-1, 5], "to": [-1, 0] },
+          { "type": "dashed_line", "from": [-1, 5], "to": [0, 5] }
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función lineal",
+      "affirmation": "A2",
+      "evidence": "A2.3",
+      "evidence_text": "Determina la pendiente, la intersección con el eje de las ordenadas o de las abscisas de una recta dada en forma gráfica o algebraica en diversos contextos.",
+      "stem": "Dada la ecuación de la recta y = 2x + b, y sabiendo que el punto (−2, 1) pertenece a ella, ¿cuáles son las coordenadas del punto de intersección con el eje y?",
+      "options": {
+        "A": "(0, −3)",
+        "B": "(−3, 0)",
+        "C": "(5, 0)",
+        "D": "(0, 5)"
+      },
+      "correct_answer": "D",
+      "solution_steps": [
+        "Sustituyendo el punto (−2, 1) en y = 2x + b:",
+        "1 = 2(−2) + b",
+        "1 = −4 + b",
+        "b = 5",
+        "La intersección con el eje y ocurre cuando x = 0, es decir, en (0, b) = (0, 5).",
+        "Respuesta: D."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 31,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función lineal — modelado",
+      "affirmation": "A3",
+      "evidence": "A3.1",
+      "evidence_text": "Resuelve problemas en contextos reales utilizando las funciones lineales y cuadráticas.",
+      "stem": "Un gimnasio ofrece un paquete de entrenamiento personalizado para un mes. Toda persona que desee inscribirse debe pagar una cuota única de inscripción de 25 000 y luego 4000 por cada clase asistida con el entrenador. Si un cliente reservó espacio para 15 clases durante el último mes, pero al final asistió solamente a 12 clases, entonces, ¿cuánto pagó en total?",
+      "options": {
+        "A": "85 000",
+        "B": "73 000",
+        "C": "60 000",
+        "D": "48 000"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "El pago total es la cuota de inscripción más el costo por las clases efectivamente asistidas.",
+        "Clases asistidas: 12 (no 15, pues se cobra solo por clase a la que asistió).",
+        "Pago = 25 000 + 4000 × 12",
+        "Pago = 25 000 + 48 000 = 73 000",
+        "Respuesta: B."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 32,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función lineal — modelado",
+      "affirmation": "A3",
+      "evidence": "A3.1",
+      "evidence_text": "Resuelve problemas en contextos reales utilizando las funciones lineales y cuadráticas.",
+      "stem": "Luis llama por teléfono a Ana y le comenta que la temperatura en su ciudad es de 41 °F. Si se sabe que la relación entre la temperatura en grados Fahrenheit (°F) y en grados Celsius (°C) está asociada mediante la función F(C) = (9/5)C + 32, entonces, ¿a cuántos grados Celsius equivale la temperatura comentada?",
+      "options": {
+        "A": "5",
+        "B": "9",
+        "C": "22,8",
+        "D": "40,5"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Sustituyendo F = 41 en F(C) = (9/5)C + 32:",
+        "41 = (9/5)C + 32",
+        "41 − 32 = (9/5)C",
+        "9 = (9/5)C",
+        "C = 9 × (5/9) = 5",
+        "Por lo tanto, 41 °F equivalen a 5 °C.",
+        "Respuesta: A."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 33,
+      "area": "Relaciones y Álgebra",
+      "topic": "Sistemas de dos ecuaciones lineales con dos incógnitas",
+      "affirmation": "A3",
+      "evidence": "A3.3",
+      "evidence_text": "Resuelve problemas, de diversos contextos (reales), relacionados con sistemas de dos ecuaciones con dos incógnitas.",
+      "stem": "En una pastelería se producen únicamente queques de chocolate y galletas de avena. Cada queque requiere 4 h de horneado y 2 h de decoración; mientras que cada paquete de galletas requiere 3 h de horneado y 1 h de decoración. Si en total se utilizaron 110 h para horneado y 50 h para decoración, entonces, ¿cuántos queques de chocolate se produjeron?",
+      "options": {
+        "A": "30",
+        "B": "20",
+        "C": "15",
+        "D": "5"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Sea q = cantidad de queques y g = cantidad de paquetes de galletas.",
+        "Sistema de ecuaciones:\n4q + 3g = 110  (horneado)\n2q + g = 50    (decoración)",
+        "De la segunda ecuación: g = 50 − 2q.",
+        "Sustituyendo en la primera: 4q + 3(50 − 2q) = 110",
+        "4q + 150 − 6q = 110",
+        "−2q = −40",
+        "q = 20",
+        "Por lo tanto, se produjeron 20 queques de chocolate.",
+        "Respuesta: B."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 34,
+      "area": "Relaciones y Álgebra",
+      "topic": "Sistemas de dos ecuaciones lineales con dos incógnitas",
+      "affirmation": "A3",
+      "evidence": "A3.3",
+      "evidence_text": "Resuelve problemas, de diversos contextos (reales), relacionados con sistemas de dos ecuaciones con dos incógnitas.",
+      "stem": "Roy y Rosa fueron de compras. Él compró 5 kg de zanahoria y 3 kg de brócoli y por esa compra pagó 4650 en total; mientras que ella compró 3 kg de zanahoria y 5 kg de brócoli y pagó 5350 en total. Si ambos compraron a los mismos precios, entonces, ¿cuánto costó el kilogramo de brócoli?",
+      "options": {
+        "A": "700",
+        "B": "800",
+        "C": "625",
+        "D": "900"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Sea z = precio del kg de zanahoria y b = precio del kg de brócoli.",
+        "Sistema:\n5z + 3b = 4650\n3z + 5b = 5350",
+        "Multiplicando la primera ecuación por 3 y la segunda por 5:\n15z + 9b = 13 950\n15z + 25b = 26 750",
+        "Restando la primera de la segunda:\n16b = 12 800",
+        "b = 800",
+        "Por lo tanto, el kilogramo de brócoli costó 800.",
+        "Respuesta: B."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 35,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función inversa",
+      "affirmation": "A4",
+      "evidence": "A4.1",
+      "evidence_text": "Identifica las condiciones para que una función tenga inversa en diversos contextos.",
+      "stem": "Sea una función f con dominio A y codominio B (considere el codominio igual al ámbito). ¿Cuál de las siguientes condiciones es necesaria y suficiente para garantizar la existencia de su función inversa?",
+      "options": {
+        "A": "Que la función sea lineal.",
+        "B": "Que la gráfica de la función no pase por el origen (0, 0).",
+        "C": "Que la función posea únicamente números positivos en su dominio.",
+        "D": "Que elementos distintos del dominio A tengan imágenes distintas en el codominio B."
+      },
+      "correct_answer": "D",
+      "solution_steps": [
+        "Una función tiene inversa si y solo si es inyectiva (uno a uno).",
+        "La inyectividad significa que elementos distintos del dominio tienen imágenes distintas en el codominio.",
+        "La opción D expresa exactamente esta condición necesaria y suficiente.",
+        "Las opciones A, B y C no garantizan inyectividad (una función lineal puede no ser inyectiva si es constante; pasar o no por el origen no determina inyectividad; restringir a positivos no garantiza inyectividad).",
+        "Respuesta: D."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 36,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función cuadrática — inversa",
+      "affirmation": "A4",
+      "evidence": "A4.3",
+      "evidence_text": "Determina intervalos en los cuales una función representada gráficamente tiene inversa en diversos contextos.",
+      "stem": "Una posible gráfica de la función h(x) = x² − 4; x ∈ ℝ es la siguiente:\n[gráfica de parábola que abre hacia arriba, vértice en (0, −4), raíces en −2 y 2]\nSi se desea que h tenga inversa, entonces, un posible dominio para h corresponde a",
+      "options": {
+        "A": "[−2, 2]",
+        "B": "] −∞, 2]",
+        "C": "[0, +∞[",
+        "D": "[−2, +∞["
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "Para que una función tenga inversa, debe ser inyectiva en su dominio.",
+        "h(x) = x² − 4 es una parábola que abre hacia arriba con vértice en (0, −4).",
+        "Es decreciente en ]−∞, 0] y creciente en [0, +∞[.",
+        "Restringiendo el dominio a [0, +∞[ (donde es estrictamente creciente), h es inyectiva y por tanto tiene inversa.",
+        "El intervalo [−2, 2] incluye el vértice, donde la función no es inyectiva. Los intervalos ]−∞, 2] y [−2, +∞[ tampoco garantizan inyectividad.",
+        "Respuesta: C."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "visual_type": "cartesian_2d",
+        "x_range": [-5, 5],
+        "y_range": [-6, 4],
+        "x_label": "x",
+        "y_label": "y",
+        "elements": [
+          { "type": "axes", "arrows": true, "grid": false },
+          { "type": "function", "expression": "quadratic", "vertex": [0, -4], "roots": [-2, 2], "opens": "up", "label": "h" },
+          { "type": "point", "coords": [-2, 0], "label": "−2" },
+          { "type": "point", "coords": [2, 0], "label": "2" },
+          { "type": "point", "coords": [0, -4], "label": "−4" }
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "area": "Relaciones y Álgebra",
+      "topic": "Inversa de la función lineal",
+      "affirmation": "A4",
+      "evidence": "A4.4",
+      "evidence_text": "Determina la función inversa de f(x) = mx + b, m ≠ 0, en diversos contextos.",
+      "stem": "Si la inversa de la función r dada por r(x) = (6 − 2x)/8 es de la forma r⁻¹(x) = ax + b, entonces, se cumple que",
+      "options": {
+        "A": "a = −4 y b = −3",
+        "B": "a = −4 y b = 3",
+        "C": "a = −8 y b = 6",
+        "D": "a = 4 y b = 3"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Simplificando r(x): r(x) = (6 − 2x)/8 = 6/8 − 2x/8 = 3/4 − x/4.",
+        "Para hallar la inversa, se escribe y = 3/4 − x/4 y se intercambian x e y:",
+        "x = 3/4 − y/4",
+        "4x = 3 − y",
+        "y = 3 − 4x",
+        "Por lo tanto, r⁻¹(x) = 3 − 4x, es decir, a = −4 y b = 3.",
+        "Respuesta: B."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 38,
+      "area": "Relaciones y Álgebra",
+      "topic": "Transformaciones de la gráfica de la función f(x) = a√x + b + c",
+      "affirmation": "A4",
+      "evidence": "A4.5",
+      "evidence_text": "Determina la transformación de la gráfica de la función dada por f(x) = a√x + b + c, en diversos contextos.",
+      "stem": "Sea la función f definida por f(x) = √x. Si su gráfica original se traslada verticalmente tres unidades hacia abajo para obtener la función h, entonces, ¿cuál es el criterio de h(x)?",
+      "options": {
+        "A": "√(x − 3)",
+        "B": "√x + 3",
+        "C": "√(x + 3)",
+        "D": "√x − 3"
+      },
+      "correct_answer": "D",
+      "solution_steps": [
+        "Una traslación vertical de k unidades hacia abajo se obtiene restando k a la función original.",
+        "Si f(x) = √x y la traslación es 3 unidades hacia abajo:",
+        "h(x) = f(x) − 3 = √x − 3",
+        "Por lo tanto, el criterio es h(x) = √x − 3.",
+        "Respuesta: D."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 39,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función inversa — representación gráfica",
+      "affirmation": "A4",
+      "evidence": "A4.2",
+      "evidence_text": "Reconoce la gráfica de la inversa de una función a partir de la gráfica de la función en diversos contextos.",
+      "stem": "Considere la representación gráfica de una función p:\n[recta que pasa por (0, −3) y (6, 0)]\nCon base en la información dada, ¿cuál es la representación gráfica de la función inversa de p?",
+      "options": {
+        "A": "Recta que pasa por (−3, 0) y (0, 6)",
+        "B": "Recta que pasa por (0, 6) y (3, 0)",
+        "C": "Recta que pasa por (−6, 0) y (0, 3)",
+        "D": "Recta que pasa por (0, 3) y (6, 0)"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La función p pasa por (0, −3) y (6, 0). Su ecuación es p(x) = x/2 − 3.",
+        "La inversa se obtiene intercambiando x e y: x = y/2 − 3 → y = 2x + 6.",
+        "La recta y = 2x + 6 pasa por (−3, 0) y (0, 6).",
+        "Esta corresponde a la opción A.",
+        "Respuesta: A."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "visual_type": "multi_view_grid",
+        "layout": "1+4",
+        "original": {
+          "type": "cartesian_2d",
+          "x_range": [-4, 8],
+          "y_range": [-4, 7],
+          "elements": [
+            { "type": "axes", "arrows": true, "grid": false },
+            { "type": "line", "through": [[0, -3], [6, 0]], "label": "p" },
+            { "type": "point", "coords": [0, -3], "label": "−3" },
+            { "type": "point", "coords": [6, 0], "label": "6" }
+          ]
+        },
+        "options": [
+          {
+            "label": "A",
+            "type": "cartesian_2d",
+            "x_range": [-5, 3],
+            "y_range": [-2, 8],
+            "elements": [
+              { "type": "axes", "arrows": true, "grid": false },
+              { "type": "line", "through": [[-3, 0], [0, 6]] },
+              { "type": "point", "coords": [-3, 0], "label": "−3" },
+              { "type": "point", "coords": [0, 6], "label": "6" }
+            ]
+          },
+          {
+            "label": "B",
+            "type": "cartesian_2d",
+            "x_range": [-2, 5],
+            "y_range": [-2, 8],
+            "elements": [
+              { "type": "axes", "arrows": true, "grid": false },
+              { "type": "line", "through": [[0, 6], [3, 0]] },
+              { "type": "point", "coords": [0, 6], "label": "6" },
+              { "type": "point", "coords": [3, 0], "label": "3" }
+            ]
+          },
+          {
+            "label": "C",
+            "type": "cartesian_2d",
+            "x_range": [-8, 2],
+            "y_range": [-2, 5],
+            "elements": [
+              { "type": "axes", "arrows": true, "grid": false },
+              { "type": "line", "through": [[-6, 0], [0, 3]] },
+              { "type": "point", "coords": [-6, 0], "label": "−6" },
+              { "type": "point", "coords": [0, 3], "label": "3" }
+            ]
+          },
+          {
+            "label": "D",
+            "type": "cartesian_2d",
+            "x_range": [-2, 8],
+            "y_range": [-2, 5],
+            "elements": [
+              { "type": "axes", "arrows": true, "grid": false },
+              { "type": "line", "through": [[0, 3], [6, 0]] },
+              { "type": "point", "coords": [0, 3], "label": "3" },
+              { "type": "point", "coords": [6, 0], "label": "6" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función exponencial",
+      "affirmation": "A5",
+      "evidence": "A5.4",
+      "evidence_text": "Resuelve problemas en contextos reales utilizando ecuaciones exponenciales.",
+      "stem": "Si la población “p(x)” de una comunidad se estima mediante p(x) = 2000 • 2^(x/5), donde “x” representa los años transcurridos a partir de 2025, entonces, ¿cuántos años deben transcurrir para que la población sea de 16 000 individuos?",
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "8",
+        "D": "3"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Igualando p(x) = 16 000:",
+        "16 000 = 2000 • 2^(x/5)",
+        "8 = 2^(x/5)",
+        "2³ = 2^(x/5)",
+        "3 = x/5",
+        "x = 15",
+        "Por lo tanto, deben transcurrir 15 años.",
+        "Respuesta: B."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 41,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función raíz cuadrada",
+      "affirmation": "A4",
+      "evidence": "A4.6",
+      "evidence_text": "Resuelve problemas de diversos contextos (reales), relacionados con las funciones de la forma f(x) = a√x + b + c.",
+      "stem": "El tiempo T(v), en minutos, que tarda un video corto en volverse viral se modela mediante la función T(v) = 5 • √v, donde “v” representa la cantidad de veces que se ha compartido (en miles). Si el video se tardó 20 minutos en viralizarse, entonces, ¿cuántas miles de veces se compartió?",
+      "options": {
+        "A": "4",
+        "B": "16",
+        "C": "25",
+        "D": "80"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Sustituyendo T = 20 en T(v) = 5√v:",
+        "20 = 5√v",
+        "√v = 4",
+        "v = 16",
+        "Por lo tanto, el video se compartió 16 mil veces.",
+        "Respuesta: B."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 42,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función logarítmica",
+      "affirmation": "A5",
+      "evidence": "A5.7",
+      "evidence_text": "Resuelve problemas en contextos reales utilizando ecuaciones logarítmicas.",
+      "stem": "La escala de pH de una solución química especial está dada por la función p(x) = 2log₃(x), donde “x” representa la concentración de ciertos iones en la mezcla con 3 ≤ x ≤ 81. Si la concentración detectada es de 27 unidades, entonces, ¿cuál es el valor del pH obtenido?",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "18",
+        "D": "54"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Sustituyendo x = 27 en p(x) = 2log₃(x):",
+        "p(27) = 2 · log₃(27)",
+        "Como 3³ = 27, log₃(27) = 3.",
+        "p(27) = 2 · 3 = 6",
+        "Por lo tanto, el pH obtenido es 6.",
+        "Respuesta: A."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 43,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función exponencial y logarítmica",
+      "affirmation": "A5",
+      "evidence": "A5.1",
+      "evidence_text": "Identifica la función logarítmica como la inversa de la función exponencial en diversos contextos.",
+      "stem": "¿Cuál de las siguientes funciones es inversa con la función f(x) = 2^x?",
+      "options": {
+        "A": "g(x) = (1/2)^x",
+        "B": "t(x) = log₂(x)",
+        "C": "h(x) = log₁(x)",
+        "D": "r(x) = 2log(x)"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La función inversa de una función exponencial de base a es la función logarítmica de base a.",
+        "Para f(x) = 2^x, la inversa es f⁻¹(x) = log₂(x).",
+        "Por lo tanto, t(x) = log₂(x) es la función inversa.",
+        "Respuesta: B."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 44,
+      "area": "Relaciones y Álgebra",
+      "topic": "Ecuaciones exponenciales",
+      "affirmation": "A5",
+      "evidence": "A5.8",
+      "evidence_text": "Resuelve ecuaciones exponenciales de la forma a^(f(x)) = b^(g(x)), (a, b números reales positivos y distintos de 1, f, g polinomios de grado menor que 3) mediante la utilización de logaritmos, en diversos contextos.",
+      "stem": "En un centro de investigación, dos bacterias clónicas se reproducen en laboratorios con ambientes distintos. La cantidad de bacterias del primer tipo se comporta según la expresión 3^(x+8), mientras que la del segundo tipo sigue la expresión 9^(x+1), donde “x” representa el tiempo transcurrido en horas. ¿Qué valor debe tomar la variable x para que ambos laboratorios tengan exactamente la misma cantidad de bacterias?",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "4",
+        "D": "10"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Igualando ambas expresiones:",
+        "3^(x+8) = 9^(x+1)",
+        "Como 9 = 3², se tiene: 9^(x+1) = (3²)^(x+1) = 3^(2x+2)",
+        "Por lo tanto: 3^(x+8) = 3^(2x+2)",
+        "Igualando exponentes: x + 8 = 2x + 2",
+        "8 − 2 = 2x − x",
+        "6 = x",
+        "Respuesta: A."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 45,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función exponencial — modelado",
+      "affirmation": "A6",
+      "evidence": "A6.1",
+      "evidence_text": "Identifica modelos matemáticos que involucran las funciones exponenciales en diversos contextos.",
+      "stem": "Una persona abre una cuenta de ahorros especial que duplica el dinero depositado cada año que pasa. Si la cantidad inicial depositada fue de $250, entonces, ¿cuál es el criterio del modelo matemático D(t) que explica la cantidad de dinero acumulado en función de los años t?",
+      "options": {
+        "A": "250 + 2t",
+        "B": "250 • 2t",
+        "C": "250 + 2^t",
+        "D": "250 • 2^t"
+      },
+      "correct_answer": "D",
+      "solution_steps": [
+        "El dinero se duplica cada año, lo que corresponde a un crecimiento exponencial.",
+        "El modelo general es D(t) = D₀ • r^t, donde D₀ es la cantidad inicial y r es el factor de crecimiento.",
+        "Aquí D₀ = 250 y r = 2 (se duplica).",
+        "Por lo tanto: D(t) = 250 • 2^t.",
+        "Respuesta: D."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 46,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función lineal — modelado",
+      "affirmation": "A6",
+      "evidence": "A6.5",
+      "evidence_text": "Determina la función lineal, cuadrática, raíz cuadrada, exponencial o logarítmica que sirva de modelo en diversos contextos.",
+      "stem": "Una aplicación de transporte cobra una tarifa por viaje de 1500 por seguro de vida más 1000 por kilómetro del recorrido. Si x representa la cantidad de kilómetros recorridos y C(x) el costo total en colones, entonces, ¿cuál es el criterio de la función C(x) que describe la situación anterior?",
+      "options": {
+        "A": "500x",
+        "B": "2500x",
+        "C": "1000x + 1500",
+        "D": "1500x + 1000"
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "El costo total es la suma de una tarifa fija (seguro) más un costo variable por kilómetro.",
+        "Tarifa fija: 1500",
+        "Costo variable: 1000 por kilómetro → 1000x",
+        "Por lo tanto: C(x) = 1000x + 1500.",
+        "Respuesta: C."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 47,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función cuadrática — modelado",
+      "affirmation": "A6",
+      "evidence": "A6.5",
+      "evidence_text": "Determina la función lineal, cuadrática, raíz cuadrada, exponencial o logarítmica que sirva de modelo en diversos contextos.",
+      "stem": "En el diseño de la pantalla de un nuevo teléfono inteligente, el largo de la pantalla mide el triple de su ancho. Si el área total de la pantalla se calcula en milímetros cuadrados, entonces, ¿cuál es el criterio que modela correctamente el área A(x) de la pantalla en función de su ancho denotado con “x”?",
+      "options": {
+        "A": "9x²",
+        "B": "3x²",
+        "C": "(1/3)x²",
+        "D": "(1/9)x²"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Sea x el ancho de la pantalla.",
+        "El largo es el triple del ancho: largo = 3x.",
+        "El área de un rectángulo es ancho × largo:",
+        "A(x) = x · 3x = 3x²",
+        "Respuesta: B."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 48,
+      "area": "Relaciones y Álgebra",
+      "topic": "Función logarítmica — modelado",
+      "affirmation": "A6",
+      "evidence": "A6.3",
+      "evidence_text": "Identifica modelos matemáticos que involucran las funciones logarítmicas en diversos contextos.",
+      "stem": "Un biólogo determina que el crecimiento C(t) de una colonia de hongos se comporta según un modelo logarítmico que depende del tiempo (t) en días. Si a los 8 días el crecimiento registra un valor exacto de 3, entonces, ¿cuál es el criterio de C(t) que modela correctamente esta situación?",
+      "options": {
+        "A": "log₂(t)",
+        "B": "log₃(t)",
+        "C": "log₅(t)",
+        "D": "log₈(t)"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Se busca una función logarítmica C(t) = log_b(t) tal que C(8) = 3.",
+        "Probando con base b: log_b(8) = 3 → b³ = 8 → b = 2.",
+        "Por lo tanto, C(t) = log₂(t).",
+        "Verificación: C(8) = log₂(8) = 3. ✓",
+        "Respuesta: A."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    }
+  ]
+}
