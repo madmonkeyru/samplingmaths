@@ -14,6 +14,11 @@ import {
   AlertTriangle,
   Menu,
   X,
+  EyeOff,
+  BookOpen,
+  Filter,
+  CheckCircle2,
+  XCircle,
 } from 'lucide-react';
 
 interface TestShellProps {
@@ -26,12 +31,53 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [responses, setResponses] = useState<Record<number, ItemResponse>>({});
   const [flaggedItems, setFlaggedItems] = useState<Record<number, boolean>>({});
+  const [eliminatedOptions, setEliminatedOptions] = useState<Record<number, Record<string, boolean>>>({});
   const [timeLeftSeconds, setTimeLeftSeconds] = useState<number>(
     config.timerDurationMinutes * 60
   );
   const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
   const [isConfirmOpen, setIsConfirmOpen] = useState<boolean>(false);
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
+  const [isFormulaOpen, setIsFormulaOpen] = useState<boolean>(false);
+  const [navFilter, setNavFilter] = useState<'all' | 'unanswered' | 'answered' | 'flagged'>('all');
+  const [showPracticeExplanation, setShowPracticeExplanation] = useState<Record<number, boolean>>({});
+
+  // Keyboard Shortcuts Handler
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't intercept if user is typing in an input/textarea or modal is open
+      const target = e.target as HTMLElement | null;
+      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) {
+        return;
+      }
+      if (isConfirmOpen || items.length === 0) return;
+
+      const key = e.key.toLowerCase();
+
+      if (key === 'a' || key === '1') {
+        handleSelectOption('A');
+      } else if (key === 'b' || key === '2') {
+        handleSelectOption('B');
+      } else if (key === 'c' || key === '3') {
+        handleSelectOption('C');
+      } else if (key === 'd' || key === '4') {
+        handleSelectOption('D');
+      } else if (key === 'arrowleft' || key === '[') {
+        setCurrentIndex((prev) => Math.max(0, prev - 1));
+      } else if (key === 'arrowright' || key === ']') {
+        setCurrentIndex((prev) => Math.min(items.length - 1, prev + 1));
+      } else if (key === 'f' || key === 'm') {
+        setFlaggedItems((prev) => {
+          const curId = items[currentIndex]?.id;
+          if (!curId) return prev;
+          return { ...prev, [curId]: !prev[curId] };
+        });
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [items, currentIndex, isConfirmOpen]);
 
   // Initialize Items
   useEffect(() => {
@@ -141,6 +187,20 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
     }));
   };
 
+  const handleToggleEliminate = (e: React.MouseEvent, letter: 'A' | 'B' | 'C' | 'D') => {
+    e.stopPropagation();
+    setEliminatedOptions((prev) => {
+      const currentElims = prev[currentItem.id] || {};
+      return {
+        ...prev,
+        [currentItem.id]: {
+          ...currentElims,
+          [letter]: !currentElims[letter],
+        },
+      };
+    });
+  };
+
   const handleFinalSubmit = () => {
     storageService.clearActiveSession();
 
@@ -220,6 +280,15 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
               </div>
             </div>
 
+            <button
+              onClick={() => setIsFormulaOpen(true)}
+              className="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold rounded-lg text-xs flex items-center gap-1.5 border border-indigo-200 transition"
+              title="Ver fórmulas del examen"
+            >
+              <BookOpen className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Fórmulas</span>
+            </button>
+
             {config.enableTimer && (
               <div
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold ${
@@ -248,22 +317,65 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 py-6 flex-1 flex gap-6">
         {/* Navigation Sidebar (Desktop & Mobile Drawer) */}
         <aside
-          className={`fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-slate-200 p-4 transform transition-transform lg:static lg:translate-x-0 ${
+          className={`fixed inset-y-0 left-0 z-40 w-72 bg-white border-r border-slate-200 p-4 flex flex-col transform transition-transform lg:static lg:translate-x-0 ${
             isNavOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
           <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-200">
-            <h3 className="font-bold text-sm text-slate-800">Navegador de Ítems</h3>
+            <h3 className="font-bold text-sm text-slate-800 flex items-center gap-2">
+              <Filter className="w-4 h-4 text-slate-500" />
+              Navegador de Ítems
+            </h3>
             <button onClick={() => setIsNavOpen(false)} className="lg:hidden text-slate-400">
               <X className="w-5 h-5" />
             </button>
           </div>
 
-          <div className="grid grid-cols-5 gap-2 overflow-y-auto max-h-[calc(100vh-200px)]">
+          {/* Filter Tabs */}
+          <div className="flex bg-slate-100 p-1 rounded-lg mb-3 gap-1 text-[11px] font-semibold">
+            <button
+              onClick={() => setNavFilter('all')}
+              className={`flex-1 py-1 rounded-md text-center transition ${
+                navFilter === 'all' ? 'bg-white text-slate-800 shadow-xs' : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              Todas
+            </button>
+            <button
+              onClick={() => setNavFilter('unanswered')}
+              className={`flex-1 py-1 rounded-md text-center transition ${
+                navFilter === 'unanswered' ? 'bg-white text-slate-800 shadow-xs' : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              Pendientes
+            </button>
+            <button
+              onClick={() => setNavFilter('answered')}
+              className={`flex-1 py-1 rounded-md text-center transition ${
+                navFilter === 'answered' ? 'bg-white text-slate-800 shadow-xs' : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              Listas
+            </button>
+            <button
+              onClick={() => setNavFilter('flagged')}
+              className={`flex-1 py-1 rounded-md text-center transition ${
+                navFilter === 'flagged' ? 'bg-white text-slate-800 shadow-xs' : 'text-slate-500 hover:text-slate-700'
+              }`}
+            >
+              Marcadas
+            </button>
+          </div>
+
+          <div className="grid grid-cols-5 gap-2 overflow-y-auto flex-1 max-h-[calc(100vh-280px)] pr-1">
             {items.map((it, idx) => {
               const isAnswered = !!responses[it.id]?.selectedOption;
               const isFlagged = !!flaggedItems[it.id];
               const isCurrent = idx === currentIndex;
+
+              if (navFilter === 'unanswered' && isAnswered) return null;
+              if (navFilter === 'answered' && !isAnswered) return null;
+              if (navFilter === 'flagged' && !isFlagged) return null;
 
               let btnClass = 'bg-white border-slate-300 text-slate-700 hover:bg-slate-50';
               if (isAnswered) btnClass = 'bg-blue-50 border-blue-400 text-blue-700 font-bold';
@@ -286,6 +398,22 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
               );
             })}
           </div>
+
+          {/* Navigator Legend */}
+          <div className="mt-3 pt-3 border-t border-slate-200 text-[11px] text-slate-500 space-y-1.5">
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded bg-blue-50 border border-blue-400 shrink-0" />
+              <span>Respondida</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded bg-white border border-slate-300 shrink-0" />
+              <span>Sin responder</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-500 border border-white shrink-0" />
+              <span>Marcada para revisión</span>
+            </div>
+          </div>
         </aside>
 
         {/* Question Area */}
@@ -299,6 +427,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
               <button
                 onClick={handleToggleFlag}
+                title="Atajo de teclado: F o M"
                 className={`flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold border transition ${
                   flaggedItems[currentItem.id]
                     ? 'bg-amber-50 border-amber-300 text-amber-700'
@@ -306,7 +435,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
                 }`}
               >
                 <Flag className="w-3.5 h-3.5 fill-current" />
-                <span>{flaggedItems[currentItem.id] ? 'Marcada' : 'Marcar revisión'}</span>
+                <span>{flaggedItems[currentItem.id] ? 'Marcada [F]' : 'Marcar revisión [F]'}</span>
               </button>
             </div>
 
@@ -323,33 +452,107 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
               <VisualRenderer spec={currentItem.visual_spec} itemId={currentItem.id} />
             )}
 
+            {/* Practice Mode Instant Feedback Toggle & Banner */}
+            {config.mode !== 'simulation' && responses[currentItem.id]?.selectedOption && (
+              <div className="pt-2">
+                {!showPracticeExplanation[currentItem.id] ? (
+                  <button
+                    onClick={() =>
+                      setShowPracticeExplanation((prev) => ({ ...prev, [currentItem.id]: true }))
+                    }
+                    className="px-4 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold rounded-xl text-xs flex items-center gap-2 border border-indigo-200 transition"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-indigo-600" />
+                    <span>Verificar respuesta y ver explicación</span>
+                  </button>
+                ) : (
+                  <div className="p-4 rounded-xl border space-y-3 bg-slate-50 border-slate-200">
+                    <div className="flex items-center gap-2 font-bold text-sm">
+                      {responses[currentItem.id]?.selectedOption === currentItem.correct_answer ? (
+                        <div className="flex items-center gap-1.5 text-emerald-700">
+                          <CheckCircle2 className="w-5 h-5 text-emerald-600" />
+                          <span>¡Respuesta Correcta! (Opción {currentItem.correct_answer})</span>
+                        </div>
+                      ) : (
+                        <div className="flex items-center gap-1.5 text-red-700">
+                          <XCircle className="w-5 h-5 text-red-600" />
+                          <span>Respuesta Incorrecta. La opción correcta es {currentItem.correct_answer}.</span>
+                        </div>
+                      )}
+                    </div>
+
+                    {currentItem.solution_steps && currentItem.solution_steps.length > 0 && (
+                      <div className="pt-2 border-t border-slate-200 text-xs space-y-2">
+                        <span className="font-bold text-slate-800 uppercase tracking-wider block text-[11px]">
+                          Solución paso a paso:
+                        </span>
+                        {currentItem.solution_steps.map((step, sIdx) => (
+                          <div key={sIdx} className="bg-white p-2.5 rounded-lg border border-slate-200">
+                            {typeof step === 'string' ? (
+                              <TextRenderer content={step} />
+                            ) : (
+                              <div>
+                                <span className="font-semibold text-slate-800">{step.title}: </span>
+                                <TextRenderer content={step.explanation} />
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
+
             {/* Answer Options Selector (FR-A-01) */}
             <div className="space-y-3 pt-2">
               {getOptionArray(currentItem).map((opt) => {
                 const selected = responses[currentItem.id]?.selectedOption === opt.letter;
+                const isEliminated = !!eliminatedOptions[currentItem.id]?.[opt.letter];
+
+                let optionContainerStyle = 'border-slate-200 hover:border-slate-300 bg-white';
+                if (selected) {
+                  optionContainerStyle = 'border-blue-600 bg-blue-50/50 shadow-xs';
+                } else if (isEliminated) {
+                  optionContainerStyle = 'border-slate-200 bg-slate-50 opacity-60';
+                }
+
                 return (
-                  <button
-                    key={opt.letter}
-                    onClick={() => handleSelectOption(opt.letter)}
-                    className={`w-full text-left p-4 rounded-xl border-2 flex items-start gap-3.5 transition ${
-                      selected
-                        ? 'border-blue-600 bg-blue-50/50 shadow-xs'
-                        : 'border-slate-200 hover:border-slate-300 bg-white'
-                    }`}
-                  >
-                    <span
-                      className={`w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center shrink-0 transition ${
-                        selected
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-slate-100 text-slate-600 border border-slate-200'
+                  <div key={opt.letter} className="relative flex items-center gap-2">
+                    <button
+                      onClick={() => handleSelectOption(opt.letter)}
+                      className={`w-full text-left p-4 rounded-xl border-2 flex items-start gap-3.5 transition ${optionContainerStyle}`}
+                    >
+                      <span
+                        className={`w-7 h-7 rounded-lg text-xs font-bold flex items-center justify-center shrink-0 transition ${
+                          selected
+                            ? 'bg-blue-600 text-white'
+                            : isEliminated
+                            ? 'bg-slate-200 text-slate-400 line-through'
+                            : 'bg-slate-100 text-slate-600 border border-slate-200'
+                        }`}
+                        title={`Presiona ${opt.letter} o ${getOptionArray(currentItem).findIndex(o => o.letter === opt.letter) + 1}`}
+                      >
+                        {opt.letter}
+                      </span>
+                      <div className={`text-sm text-slate-800 pt-0.5 leading-normal flex-1 ${isEliminated ? 'line-through text-slate-400' : ''}`}>
+                        <TextRenderer content={opt.text} />
+                      </div>
+                    </button>
+
+                    <button
+                      onClick={(e) => handleToggleEliminate(e, opt.letter)}
+                      title={isEliminated ? 'Restaurar opción' : 'Descartar opción'}
+                      className={`p-2 rounded-lg transition shrink-0 ${
+                        isEliminated
+                          ? 'text-red-500 bg-red-50 hover:bg-red-100'
+                          : 'text-slate-400 hover:text-slate-600 hover:bg-slate-100'
                       }`}
                     >
-                      {opt.letter}
-                    </span>
-                    <div className="text-sm text-slate-800 pt-0.5 leading-normal">
-                      <TextRenderer content={opt.text} />
-                    </div>
-                  </button>
+                      <EyeOff className="w-4 h-4" />
+                    </button>
+                  </div>
                 );
               })}
             </div>
@@ -377,6 +580,108 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
           </div>
         </main>
       </div>
+
+      {/* Formula Reference Modal */}
+      {isFormulaOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-xs p-4">
+          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+            <div className="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-indigo-600" />
+                <h3 className="text-base font-bold text-slate-800">Simbología y Fórmulas del Examen (BXM)</h3>
+              </div>
+              <button
+                onClick={() => setIsFormulaOpen(false)}
+                className="p-1 text-slate-400 hover:text-slate-600 hover:bg-slate-200 rounded-lg transition"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-6 overflow-y-auto space-y-6 text-sm text-slate-700">
+              {/* Geometria */}
+              <div className="space-y-3">
+                <h4 className="font-bold text-indigo-900 border-b border-indigo-100 pb-1 uppercase tracking-wide text-xs">
+                  Geometría y Circunferencia
+                </h4>
+                <div className="grid sm:grid-cols-2 gap-3 text-xs">
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
+                    <span className="font-semibold block text-slate-800">Ecuación de la Circunferencia:</span>
+                    <TextRenderer content="$(x - h)^2 + (y - k)^2 = r^2$" />
+                  </div>
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
+                    <span className="font-semibold block text-slate-800">Área y Perímetro del Círculo:</span>
+                    <TextRenderer content="$A = \pi r^2 \quad | \quad P = 2\pi r$" />
+                  </div>
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
+                    <span className="font-semibold block text-slate-800">Polígono Regular (Suma de Ángulos Int.):</span>
+                    <TextRenderer content="$S_i = 180^\circ (n - 2)$" />
+                  </div>
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
+                    <span className="font-semibold block text-slate-800">Área Regular / Apotema:</span>
+                    <TextRenderer content="$A = \frac{P \cdot a}{2}$" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Funciones y Algebra */}
+              <div className="space-y-3">
+                <h4 className="font-bold text-indigo-900 border-b border-indigo-100 pb-1 uppercase tracking-wide text-xs">
+                  Funciones y Álgebra
+                </h4>
+                <div className="grid sm:grid-cols-2 gap-3 text-xs">
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
+                    <span className="font-semibold block text-slate-800">Función Lineal:</span>
+                    <TextRenderer content="$f(x) = mx + b \quad (m = \frac{y_2 - y_1}{x_2 - x_1})$" />
+                  </div>
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
+                    <span className="font-semibold block text-slate-800">Vértice de Parábola (Cuadrática):</span>
+                    <TextRenderer content="$V = \left( -\frac{b}{2a}, -\frac{\Delta}{4a} \right), \quad \Delta = b^2 - 4ac$" />
+                  </div>
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
+                    <span className="font-semibold block text-slate-800">Función Exponencial y Logarítmica:</span>
+                    <TextRenderer content="$f(x) = a^x \iff f^{-1}(x) = \log_a(x)$" />
+                  </div>
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
+                    <span className="font-semibold block text-slate-800">Interés Compuesto:</span>
+                    <TextRenderer content="$C(t) = C_0 (1 + i)^t$" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Estadistica y Probabilidad */}
+              <div className="space-y-3">
+                <h4 className="font-bold text-indigo-900 border-b border-indigo-100 pb-1 uppercase tracking-wide text-xs">
+                  Estadística y Probabilidad
+                </h4>
+                <div className="grid sm:grid-cols-2 gap-3 text-xs">
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
+                    <span className="font-semibold block text-slate-800">Media Aritmética ($\bar{x}$):</span>
+                    <TextRenderer content="$\bar{x} = \frac{\sum x_i}{n}$" />
+                  </div>
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
+                    <span className="font-semibold block text-slate-800">Recorrido Intercuartilico (RIC):</span>
+                    <TextRenderer content="$RIC = Q_3 - Q_1$" />
+                  </div>
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1 sm:col-span-2">
+                    <span className="font-semibold block text-slate-800">Probabilidad Laplace:</span>
+                    <TextRenderer content="$P(A) = \frac{\text{Casos favorables}}{\text{Casos posibles}}$" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-4 border-t border-slate-200 bg-slate-50 text-right">
+              <button
+                onClick={() => setIsFormulaOpen(false)}
+                className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg text-xs"
+              >
+                Cerrar Fórmulas
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Confirmation Modal */}
       {isConfirmOpen && (
