@@ -41,20 +41,21 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/70 backdrop-blur-xs p-4">
-      <div className="bg-white rounded-2xl border-2 border-zinc-900 shadow-2xl max-w-lg w-full p-6 relative">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/70 backdrop-blur-xs p-3.5 sm:p-4 overflow-y-auto">
+      <div className="bg-white rounded-2xl border-2 border-zinc-900 shadow-2xl max-w-lg w-full p-5 sm:p-6 relative my-auto">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-zinc-900 hover:bg-zinc-100 p-2 rounded-xl transition min-h-[44px] min-w-[44px] flex items-center justify-center"
+          aria-label="Cerrar modal"
+          className="absolute top-3.5 right-3.5 text-zinc-900 hover:bg-zinc-100 p-2 rounded-xl transition min-h-[44px] min-w-[44px] flex items-center justify-center"
         >
           <X className="w-5 h-5 stroke-[2.5]" />
         </button>
 
-        <div className="flex items-center gap-3 mb-5 border-b-2 border-zinc-900 pb-3">
-          <div className="p-2.5 bg-zinc-950 text-white rounded-xl border-2 border-zinc-900">
+        <div className="flex items-center gap-3 mb-4 sm:mb-5 border-b-2 border-zinc-900 pb-3">
+          <div className="p-2 sm:p-2.5 bg-zinc-950 text-white rounded-xl border-2 border-zinc-900 shrink-0">
             {initialMode === 'area' ? <Layers className="w-5 h-5" /> : <Target className="w-5 h-5" />}
           </div>
-          <h2 className="text-xl font-black text-zinc-900 uppercase">
+          <h2 className="text-lg sm:text-xl font-black text-zinc-900 uppercase">
             {initialMode === 'area' ? 'Práctica por Área' : 'Práctica por Tema'}
           </h2>
         </div>
