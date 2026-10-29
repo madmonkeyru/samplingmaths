@@ -41,28 +41,28 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-xs p-4">
-      <div className="bg-white rounded-xl shadow-xl max-w-lg w-full p-6 relative">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/70 backdrop-blur-xs p-4">
+      <div className="bg-white rounded-2xl border-2 border-zinc-900 shadow-2xl max-w-lg w-full p-6 relative">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition"
+          className="absolute top-4 right-4 text-zinc-900 hover:bg-zinc-100 p-2 rounded-xl transition min-h-[44px] min-w-[44px] flex items-center justify-center"
         >
-          <X className="w-5 h-5" />
+          <X className="w-5 h-5 stroke-[2.5]" />
         </button>
 
-        <div className="flex items-center gap-2 mb-4">
-          <div className="p-2 bg-indigo-100 text-indigo-600 rounded-lg">
+        <div className="flex items-center gap-3 mb-5 border-b-2 border-zinc-900 pb-3">
+          <div className="p-2.5 bg-zinc-950 text-white rounded-xl border-2 border-zinc-900">
             {initialMode === 'area' ? <Layers className="w-5 h-5" /> : <Target className="w-5 h-5" />}
           </div>
-          <h2 className="text-xl font-bold text-slate-800">
+          <h2 className="text-xl font-black text-zinc-900 uppercase">
             {initialMode === 'area' ? 'Práctica por Área' : 'Práctica por Tema'}
           </h2>
         </div>
 
-        <form onSubmit={handleStart} className="space-y-4">
+        <form onSubmit={handleStart} className="space-y-5">
           {/* Area Selector */}
           <div>
-            <label className="block text-xs font-semibold text-slate-600 mb-1">Área temática</label>
+            <label className="block text-xs font-black text-zinc-900 mb-1.5 uppercase">Área temática</label>
             <select
               value={selectedArea}
               onChange={(e) => {
@@ -70,7 +70,7 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
                 setSelectedArea(area);
                 setSelectedTopic('all');
               }}
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-3.5 py-2.5 border-2 border-zinc-900 rounded-xl text-xs font-extrabold bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
             >
               <option value="geometry">Geometría (23 ítems)</option>
               <option value="functions">Relaciones y Álgebra (25 ítems)</option>
@@ -78,14 +78,14 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
             </select>
           </div>
 
-          {/* Topic Selector (if mode is topic) */}
+          {/* Topic Selector */}
           {initialMode === 'topic' && (
             <div>
-              <label className="block text-xs font-semibold text-slate-600 mb-1">Tema específico</label>
+              <label className="block text-xs font-black text-zinc-900 mb-1.5 uppercase">Tema específico</label>
               <select
                 value={selectedTopic}
                 onChange={(e) => setSelectedTopic(e.target.value)}
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full px-3.5 py-2.5 border-2 border-zinc-900 rounded-xl text-xs font-extrabold bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
               >
                 <option value="all">Todos los temas de esta área</option>
                 {availableTopics.map((topic, i) => (
@@ -99,17 +99,17 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
 
           {/* Item Count */}
           <div>
-            <label className="block text-xs font-semibold text-slate-600 mb-1">Cantidad de preguntas</label>
+            <label className="block text-xs font-black text-zinc-900 mb-1.5 uppercase">Cantidad de preguntas</label>
             <div className="grid grid-cols-4 gap-2">
               {[5, 10, 20, 'all'].map((count) => (
                 <button
                   type="button"
                   key={String(count)}
                   onClick={() => setItemCount(count as number | 'all')}
-                  className={`py-2 text-xs font-semibold rounded-lg border transition ${
+                  className={`py-2.5 text-xs font-black rounded-xl border-2 transition min-h-[44px] ${
                     itemCount === count
-                      ? 'bg-indigo-600 text-white border-indigo-600'
-                      : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-50'
+                      ? 'bg-zinc-950 text-white border-zinc-950'
+                      : 'bg-white text-zinc-900 border-zinc-900 hover:bg-zinc-100'
                   }`}
                 >
                   {count === 'all' ? 'Todas' : `${count}`}
@@ -119,10 +119,10 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
           </div>
 
           {/* Timer Config */}
-          <div className="pt-2 border-t border-slate-200">
+          <div className="pt-3 border-t-2 border-zinc-900">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-semibold text-slate-700 flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-slate-500" />
+              <span className="text-xs font-black text-zinc-900 uppercase flex items-center gap-1.5">
+                <Clock className="w-4 h-4 stroke-[2.5]" />
                 Temporizador
               </span>
               <label className="relative inline-flex items-center cursor-pointer">
@@ -132,7 +132,7 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
                   onChange={(e) => setEnableTimer(e.target.checked)}
                   className="sr-only peer"
                 />
-                <div className="w-9 h-5 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-indigo-600"></div>
+                <div className="w-10 h-6 bg-zinc-200 border-2 border-zinc-900 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-zinc-950 after:content-[''] after:absolute after:top-[3px] after:left-[3px] after:bg-zinc-950 after:border-zinc-950 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-zinc-950 peer-checked:after:bg-white"></div>
               </label>
             </div>
 
@@ -144,19 +144,19 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
                   max={180}
                   value={timerDuration}
                   onChange={(e) => setTimerDuration(Number(e.target.value))}
-                  className="w-20 px-3 py-1.5 border border-slate-300 rounded-lg text-sm text-center focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-24 px-3 py-2 border-2 border-zinc-900 rounded-xl text-xs font-black text-center focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
                 />
-                <span className="text-xs text-slate-500">minutos</span>
+                <span className="text-xs text-zinc-700 font-bold uppercase">minutos</span>
               </div>
             )}
           </div>
 
           <button
             type="submit"
-            className="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg text-sm shadow transition flex items-center justify-center gap-2 mt-4"
+            className="w-full py-3 bg-zinc-950 hover:bg-zinc-800 text-white font-extrabold rounded-xl text-xs border-2 border-zinc-950 shadow transition flex items-center justify-center gap-2 mt-5 min-h-[44px]"
           >
             <Play className="w-4 h-4 fill-current" />
-            Iniciar práctica
+            <span>Iniciar Práctica</span>
           </button>
         </form>
       </div>

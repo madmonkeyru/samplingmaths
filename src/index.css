@@ -1,2 +1,56 @@
 @import "tailwindcss";
 @import "katex/dist/katex.min.css";
+
+/* Base crisp monochrome styles & touch target adjustments */
+:root {
+  color-scheme: light;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-dark: #09090b;
+  --text-primary: #09090b;
+  --text-muted: #52525b;
+  --border-contrast: #09090b;
+  --border-subtle: #e4e4e7;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #09090b;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Touch target minimum sizes */
+button,
+a,
+input,
+select {
+  min-height: 44px;
+}
+
+/* Inline math responsive scroll/wrap container */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0 !important;
+}
+
+.katex {
+  font-size: 1.05em;
+}
+
+/* Responsive SVG visual container */
+.visual-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.visual-container svg {
+  max-width: 100%;
+  height: auto;
+}

@@ -44,9 +44,9 @@ class VisualErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
   render() {
     if (this.state.hasError) {
       return (
-        <div className="visual-error-fallback p-3 border border-amber-300 bg-amber-50 rounded text-amber-800 text-sm my-2">
-          <p className="font-semibold">Representación gráfica no disponible</p>
-          {this.props.alt && <p className="text-xs text-amber-700 italic mt-1">{this.props.alt}</p>}
+        <div className="visual-error-fallback p-3 border-2 border-zinc-900 bg-zinc-100 rounded-lg text-zinc-900 text-xs my-2">
+          <p className="font-bold">Representación gráfica no disponible</p>
+          {this.props.alt && <p className="text-[11px] text-zinc-700 italic mt-1">{this.props.alt}</p>}
         </div>
       );
     }
@@ -121,9 +121,11 @@ export const VisualRenderer: React.FC<VisualRendererProps> = ({
       <figure
         role="img"
         aria-label={accessibleAlt}
-        className={`visual-renderer my-3 flex flex-col items-center justify-center ${className}`}
+        className={`visual-renderer my-4 w-full flex flex-col items-center justify-center overflow-x-auto ${className}`}
       >
-        {renderComponent()}
+        <div className="w-full max-w-full flex justify-center overflow-x-auto py-1">
+          {renderComponent()}
+        </div>
         {accessibleAlt && (
           <figcaption className="sr-only">{accessibleAlt}</figcaption>
         )}
