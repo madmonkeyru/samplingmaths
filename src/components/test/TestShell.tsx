@@ -317,10 +317,6 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
           }`}
         >
           <div className="flex items-center justify-between pb-3 mb-3 border-b-2 border-zinc-900 dark:border-zinc-800">
-            <h3 className="font-black text-sm text-zinc-900 dark:text-zinc-100 uppercase tracking-wide flex items-center gap-2">
-              <Filter className="w-4 h-4 text-zinc-900 dark:text-zinc-100" />
-              Navegador de Ítems
-            </h3>
             <button
               onClick={() => setIsNavOpen(false)}
               className="lg:hidden p-2 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer"
