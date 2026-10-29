@@ -18,4 +18,26 @@ describe('TextRenderer', () => {
     const { container } = render(<TextRenderer content="Formula: $$\\int_0^1 x dx$$" />);
     expect(container.querySelector('.katex-display')).not.toBeNull();
   });
+
+  it('renders bare equations embedded in question text', () => {
+    const { container } = render(
+      <TextRenderer content="La circunferencia está dada por (x − 2)^2 + (y − 1)^2 = 9." />,
+    );
+    expect(container.querySelector('.katex')).not.toBeNull();
+    expect(container.querySelector('.katex .mrel')).not.toBeNull();
+    expect(container.querySelector('.katex .msupsub')).not.toBeNull();
+    expect(container.textContent).toContain('La circunferencia está dada por');
+  });
+
+  it('renders equations with nested parentheses', () => {
+    const { container } = render(<TextRenderer content="Centro h = -4: (x - (-4))^2 = 36." />);
+    expect(container.querySelector('.katex .mrel')).not.toBeNull();
+    expect(container.querySelector('.katex .msupsub')).not.toBeNull();
+  });
+
+  it('does not render hyphenated prose as math', () => {
+    const { container } = render(<TextRenderer content="Texto claro y bien organizado." />);
+    expect(container.querySelector('.katex')).toBeNull();
+    expect(container).toHaveTextContent('Texto claro y bien organizado.');
+  });
 });

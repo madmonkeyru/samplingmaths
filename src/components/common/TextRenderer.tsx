@@ -13,7 +13,22 @@ interface TextRendererProps {
  */
 function normalizeMathExpr(expr: string): string {
   // Convert \frac to \dfrac for better vertical spacing in inline math unless it's already \dfrac or \cfrac
-  return expr.replace(/\\frac\{/g, '\\dfrac{');
+  return expr.replace(/\\frac\{/g, '\\dfrac{').replace(/−/g, '-');
+}
+
+const mathAtom = String.raw`(?:\((?:[^()]|\([^()]*\))*\)|[\p{L}][\p{L}\d]*|\d+(?:[.,]\d+)?)(?:\s*(?:\^|_)\s*(?:\{[^{}]+\}|[\p{L}\d]+))?`;
+const mathOperator = String.raw`[+\-−*/×÷=<>≤≥≠]`;
+const bareMathPattern = new RegExp(
+  String.raw`(?<![\p{L}\d])(${mathAtom}(?:\s*${mathOperator}\s*${mathAtom})*)(?![\p{L}\d])`,
+  'gu',
+);
+
+function isBareMath(expression: string): boolean {
+  if (/[\^_=<>≤≥≠*/×÷]/u.test(expression)) return true;
+  if (!/[+\-−]/u.test(expression)) return false;
+
+  const withoutParentheses = expression.replace(/\([^()]*\)/g, '');
+  return !/[\p{L}]{2,}/u.test(withoutParentheses);
 }
 
 export const TextRenderer: React.FC<TextRendererProps> = ({
@@ -23,25 +38,49 @@ export const TextRenderer: React.FC<TextRendererProps> = ({
 }) => {
   if (!content) return null;
 
-  // Split by LaTeX delimiters: $...$, $$...$$, \(...\), \[...\]
+  // Recognize explicit LaTeX delimiters and common bare algebra in question text.
   const parts: Array<{ text: string; isMath: boolean; isBlock: boolean }> = [];
   const regex = /(\$\$.*?\$\$|\$.*?\$|\\\(.*?\\\)|\\\[.*?\\\])/gs;
 
   let lastIndex = 0;
   let match;
 
+  const tokens: Array<{ text: string; index: number; isDelimitedMath: boolean }> = [];
   while ((match = regex.exec(content)) !== null) {
-    if (match.index > lastIndex) {
+    tokens.push({ text: match[0], index: match.index, isDelimitedMath: true });
+  }
+  bareMathPattern.lastIndex = 0;
+  while ((match = bareMathPattern.exec(content)) !== null) {
+    if (isBareMath(match[0])) {
+      tokens.push({ text: match[0], index: match.index, isDelimitedMath: false });
+    }
+  }
+  tokens.sort((left, right) => left.index - right.index);
+
+  for (const token of tokens) {
+    if (token.index < lastIndex) continue;
+
+    if (token.index > lastIndex) {
       parts.push({
-        text: content.substring(lastIndex, match.index),
+        text: content.substring(lastIndex, token.index),
         isMath: false,
         isBlock: false,
       });
     }
 
-    const matchedStr = match[0];
+    const matchedStr = token.text;
     let mathExpr = matchedStr;
     let isBlock = false;
+
+    if (!token.isDelimitedMath) {
+      parts.push({
+        text: normalizeMathExpr(mathExpr),
+        isMath: true,
+        isBlock: false,
+      });
+      lastIndex = token.index + matchedStr.length;
+      continue;
+    }
 
     if (matchedStr.startsWith('$$') && matchedStr.endsWith('$$')) {
       mathExpr = matchedStr.slice(2, -2);
@@ -61,7 +100,7 @@ export const TextRenderer: React.FC<TextRendererProps> = ({
       isBlock,
     });
 
-    lastIndex = regex.lastIndex;
+    lastIndex = token.index + matchedStr.length;
   }
 
   if (lastIndex < content.length) {
