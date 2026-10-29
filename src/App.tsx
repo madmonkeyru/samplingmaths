@@ -56,6 +56,7 @@ export function App() {
         currentUser={currentUser}
         onUserChanged={setCurrentUser}
         onNavigateHome={() => setCurrentView('landing')}
+        currentView={currentView}
       />
 
       <main className="flex-1">

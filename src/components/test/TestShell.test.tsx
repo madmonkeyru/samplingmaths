@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { TestShell } from './TestShell';
 import { PracticeConfig } from '../../types';
+import { ThemeProvider } from '../../context/ThemeContext';
 
 import { fireEvent } from '@testing-library/react';
 
@@ -14,7 +15,11 @@ describe('TestShell', () => {
       timerDurationMinutes: 15,
     };
 
-    render(<TestShell config={config} onFinishTest={vi.fn()} />);
+    render(
+      <ThemeProvider>
+        <TestShell config={config} onFinishTest={vi.fn()} />
+      </ThemeProvider>
+    );
 
     expect(await screen.findByText(/Pregunta 1 de 5/)).toBeInTheDocument();
   });
@@ -27,7 +32,11 @@ describe('TestShell', () => {
       timerDurationMinutes: 15,
     };
 
-    render(<TestShell config={config} onFinishTest={vi.fn()} />);
+    render(
+      <ThemeProvider>
+        <TestShell config={config} onFinishTest={vi.fn()} />
+      </ThemeProvider>
+    );
 
     expect(await screen.findByText(/Pregunta 1 de 5/)).toBeInTheDocument();
 
@@ -52,7 +61,11 @@ describe('TestShell', () => {
       timerDurationMinutes: 15,
     };
 
-    render(<TestShell config={config} onFinishTest={vi.fn()} />);
+    render(
+      <ThemeProvider>
+        <TestShell config={config} onFinishTest={vi.fn()} />
+      </ThemeProvider>
+    );
 
     // Open formulas modal
     const formulaBtn = await screen.findByTitle('Ver fórmulas del examen');

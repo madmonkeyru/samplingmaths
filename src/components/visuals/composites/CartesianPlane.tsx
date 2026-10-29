@@ -28,9 +28,9 @@ export interface CartesianCanvasProps {
   overlay?: React.ReactNode;
 }
 
-const AXIS_COLOR = '#334155';
-const GRID_COLOR = '#e2e8f0';
-const TICK_COLOR = '#64748b';
+const AXIS_COLOR = 'currentColor';
+const GRID_COLOR = 'var(--visual-grid, #cbd5e1)';
+const TICK_COLOR = 'var(--visual-tick, #64748b)';
 
 const resolveColor = (child: any, fallback: string) =>
   child.color || child.stroke || fallback;
@@ -112,7 +112,7 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
           points={child.points || through}
           slope={child.slope}
           intercept={child.intercept}
-          color={resolveColor(child, '#1e293b')}
+          color={resolveColor(child, 'currentColor')}
           strokeWidth={resolveWidth(child, 2)}
           dashed={child.dashed}
           transform={transform}
@@ -144,12 +144,12 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
           <Line
             p1={origin}
             p2={end}
-            color={resolveColor(child, '#1e293b')}
+            color={resolveColor(child, 'currentColor')}
             strokeWidth={resolveWidth(child, 2)}
             dashed={child.dashed}
             transform={transform}
           />
-          {child.label && <Point coords={origin} label={child.label} transform={transform} color={resolveColor(child, '#1e293b')} />}
+          {child.label && <Point coords={origin} label={child.label} transform={transform} color={resolveColor(child, 'currentColor')} />}
         </React.Fragment>
       );
     }
@@ -175,7 +175,7 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
           key={key}
           d={d}
           fill="none"
-          stroke={resolveColor(child, '#1e293b')}
+          stroke={resolveColor(child, 'currentColor')}
           strokeWidth={resolveWidth(child, 2)}
           strokeDasharray={child.dashed ? '4,4' : undefined}
           strokeLinejoin="round"
@@ -192,7 +192,7 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
           <PolygonPrimitive
             points={points}
             color={resolveColor(child, '#2563eb')}
-            fill={child.fill || 'rgba(37, 99, 235, 0.1)'}
+            fill={child.fill || 'rgba(37, 99, 235, 0.15)'}
             strokeWidth={resolveWidth(child, 2)}
             transform={transform}
           />
@@ -221,7 +221,7 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
       const to: [number, number] = child.to || child.p2 || [1, 1];
       return (
         <React.Fragment key={key}>
-          <Line p1={from} p2={to} color={resolveColor(child, '#1e293b')} strokeWidth={resolveWidth(child, 2)} transform={transform} />
+          <Line p1={from} p2={to} color={resolveColor(child, 'currentColor')} strokeWidth={resolveWidth(child, 2)} transform={transform} />
         </React.Fragment>
       );
     }
@@ -243,7 +243,7 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
   elements,
   width = 400,
   height = 300,
-  padding = 35,
+  padding = 24,
   preserveAspect,
   overlay,
 }) => {
@@ -285,114 +285,115 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
   const xTicks = niceTicks(xMin, xMax, width < 300 ? 6 : 8);
   const yTicks = niceTicks(yMin, yMax, height < 240 ? 5 : 7);
 
-  const showTickLabels = width >= 260;
+  const showTickLabels = width >= 220;
 
   return (
-    <svg
-      width={width}
-      height={height}
-      viewBox={`0 0 ${width} ${height}`}
-      className="cartesian-plane bg-white rounded border border-slate-200"
-    >
-      <defs>
-        <clipPath id={clipId}>
-          <rect x={plotLeft} y={plotTop} width={transform.plotWidth} height={transform.plotHeight} />
-        </clipPath>
-      </defs>
+    <div className="w-full flex justify-center items-center my-3 max-w-full overflow-hidden">
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        style={{ width: '100%', height: 'auto', maxWidth: `${width}px` }}
+        className="cartesian-plane bg-white dark:bg-zinc-900 rounded-2xl border-2 border-zinc-900 dark:border-zinc-700 shadow-xs text-zinc-900 dark:text-zinc-100 transition-colors"
+      >
+        <defs>
+          <clipPath id={clipId}>
+            <rect x={plotLeft} y={plotTop} width={transform.plotWidth} height={transform.plotHeight} />
+          </clipPath>
+        </defs>
 
-      {/* Grid Lines */}
-      {grid && (
-        <g stroke={GRID_COLOR} strokeWidth={1}>
+        {/* Grid Lines */}
+        {grid && (
+          <g stroke={GRID_COLOR} strokeWidth={1} strokeDasharray="2,2">
+            {xTicks.map((val, i) => {
+              const px = transform.toPixelX(val);
+              return <line key={`gx-${i}`} x1={px} y1={plotTop} x2={px} y2={plotBottom} />;
+            })}
+            {yTicks.map((val, i) => {
+              const py = transform.toPixelY(val);
+              return <line key={`gy-${i}`} x1={plotLeft} y1={py} x2={plotRight} y2={py} />;
+            })}
+          </g>
+        )}
+
+        {/* Plot border (only visible when axes fall outside the domain) */}
+        {(!xInDomain || !yInDomain) && (
+          <rect
+            x={plotLeft}
+            y={plotTop}
+            width={transform.plotWidth}
+            height={transform.plotHeight}
+            fill="none"
+            stroke={AXIS_COLOR}
+            strokeWidth={1.5}
+          />
+        )}
+
+        {/* Axes */}
+        {yInDomain && (
+          <line x1={plotLeft} y1={originPy} x2={plotRight} y2={originPy} stroke={AXIS_COLOR} strokeWidth={2} />
+        )}
+        {xInDomain && (
+          <line x1={originPx} y1={plotTop} x2={originPx} y2={plotBottom} stroke={AXIS_COLOR} strokeWidth={2} />
+        )}
+
+        {/* Arrowheads */}
+        {axes?.arrows && yInDomain && (
+          <polygon
+            points={`${plotRight},${originPy} ${plotRight - 8},${originPy - 4} ${plotRight - 8},${originPy + 4}`}
+            fill={AXIS_COLOR}
+          />
+        )}
+        {axes?.arrows && xInDomain && (
+          <polygon
+            points={`${originPx},${plotTop} ${originPx - 4},${plotTop + 8} ${originPx + 4},${plotTop + 8}`}
+            fill={AXIS_COLOR}
+          />
+        )}
+
+        {/* Tick marks and labels */}
+        <g stroke={TICK_COLOR} strokeWidth={1.25}>
           {xTicks.map((val, i) => {
             const px = transform.toPixelX(val);
-            return <line key={`gx-${i}`} x1={px} y1={plotTop} x2={px} y2={plotBottom} />;
+            return (
+              <React.Fragment key={`xt-${i}`}>
+                <line x1={px} y1={xAxisPy - 4} x2={px} y2={xAxisPy + 4} />
+                {showTickLabels && Math.abs(val) > 1e-9 && (
+                  <text x={px} y={xAxisPy + 14} fontSize={10} fontWeight="bold" fill="currentColor" textAnchor="middle">
+                    {val}
+                  </text>
+                )}
+              </React.Fragment>
+            );
           })}
           {yTicks.map((val, i) => {
             const py = transform.toPixelY(val);
-            return <line key={`gy-${i}`} x1={plotLeft} y1={py} x2={plotRight} y2={py} />;
+            return (
+              <React.Fragment key={`yt-${i}`}>
+                <line x1={yAxisPx - 4} y1={py} x2={yAxisPx + 4} y2={py} />
+                {showTickLabels && Math.abs(val) > 1e-9 && (
+                  <text x={yAxisPx - 7} y={py + 3.5} fontSize={10} fontWeight="bold" fill="currentColor" textAnchor="end">
+                    {val}
+                  </text>
+                )}
+              </React.Fragment>
+            );
           })}
         </g>
-      )}
 
-      {/* Plot border (only visible when axes fall outside the domain) */}
-      {(!xInDomain || !yInDomain) && (
-        <rect
-          x={plotLeft}
-          y={plotTop}
-          width={transform.plotWidth}
-          height={transform.plotHeight}
-          fill="none"
-          stroke={AXIS_COLOR}
-          strokeWidth={1.25}
-        />
-      )}
+        {/* Axis Labels */}
+        <text x={plotRight - 4} y={xAxisPy - 8} fontSize={12} fontWeight="900" fill="currentColor" textAnchor="end">
+          {x_label}
+        </text>
+        <text x={yAxisPx + 8} y={plotTop + 12} fontSize={12} fontWeight="900" fill="currentColor" textAnchor="start">
+          {y_label}
+        </text>
 
-      {/* Axes */}
-      {yInDomain && (
-        <line x1={plotLeft} y1={originPy} x2={plotRight} y2={originPy} stroke={AXIS_COLOR} strokeWidth={1.5} />
-      )}
-      {xInDomain && (
-        <line x1={originPx} y1={plotTop} x2={originPx} y2={plotBottom} stroke={AXIS_COLOR} strokeWidth={1.5} />
-      )}
-
-      {/* Arrowheads */}
-      {axes?.arrows && yInDomain && (
-        <polygon
-          points={`${plotRight},${originPy} ${plotRight - 7},${originPy - 3.5} ${plotRight - 7},${originPy + 3.5}`}
-          fill={AXIS_COLOR}
-        />
-      )}
-      {axes?.arrows && xInDomain && (
-        <polygon
-          points={`${originPx},${plotTop} ${originPx - 3.5},${plotTop + 7} ${originPx + 3.5},${plotTop + 7}`}
-          fill={AXIS_COLOR}
-        />
-      )}
-
-      {/* Tick marks and labels */}
-      <g stroke={TICK_COLOR} strokeWidth={1} opacity={0.85}>
-        {xTicks.map((val, i) => {
-          const px = transform.toPixelX(val);
-          return (
-            <React.Fragment key={`xt-${i}`}>
-              <line x1={px} y1={xAxisPy - 3} x2={px} y2={xAxisPy + 3} />
-              {showTickLabels && Math.abs(val) > 1e-9 && (
-                <text x={px} y={xAxisPy + 14} fontSize={9} fill={TICK_COLOR} textAnchor="middle">
-                  {val}
-                </text>
-              )}
-            </React.Fragment>
-          );
-        })}
-        {yTicks.map((val, i) => {
-          const py = transform.toPixelY(val);
-          return (
-            <React.Fragment key={`yt-${i}`}>
-              <line x1={yAxisPx - 3} y1={py} x2={yAxisPx + 3} y2={py} />
-              {showTickLabels && Math.abs(val) > 1e-9 && (
-                <text x={yAxisPx - 6} y={py + 3} fontSize={9} fill={TICK_COLOR} textAnchor="end">
-                  {val}
-                </text>
-              )}
-            </React.Fragment>
-          );
-        })}
-      </g>
-
-      {/* Axis Labels */}
-      <text x={plotRight - 6} y={xAxisPy - 8} fontSize={12} fontWeight="bold" fill={AXIS_COLOR} textAnchor="end">
-        {x_label}
-      </text>
-      <text x={yAxisPx + 8} y={plotTop + 12} fontSize={12} fontWeight="bold" fill={AXIS_COLOR} textAnchor="start">
-        {y_label}
-      </text>
-
-      {/* Primitive Children (clipped to plot area) */}
-      <g clipPath={`url(#${clipId})`}>
-        {childList.map((child, idx) => renderPrimitive(child, transform, idx))}
-        {overlay}
-      </g>
-    </svg>
+        {/* Primitive Children (clipped to plot area) */}
+        <g clipPath={`url(#${clipId})`}>
+          {childList.map((child, idx) => renderPrimitive(child, transform, idx))}
+          {overlay}
+        </g>
+      </svg>
+    </div>
   );
 };
 
