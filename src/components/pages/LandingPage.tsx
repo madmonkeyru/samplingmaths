@@ -31,9 +31,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({
           <h2 className="text-xl sm:text-3xl font-black tracking-tight uppercase leading-tight">
             Preparación Oficial de Matemáticas MEP
           </h2>
-          <p className="text-xs sm:text-sm text-zinc-300 mt-2 leading-relaxed font-medium">
-            Simula la prueba completa de 60 ítems con gráficos vectoriales dinámicos o práctica temas específicos con explicaciones paso a paso.
-          </p>
         </div>
       </div>
 
