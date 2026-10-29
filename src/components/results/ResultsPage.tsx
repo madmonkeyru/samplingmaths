@@ -207,18 +207,25 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
               }`}
             >
               <div className="flex items-center justify-between pb-2 border-b-2 border-zinc-900 dark:border-zinc-800">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 min-w-0">
                   <span
-                    className="w-7 h-7 rounded-lg text-xs font-black flex items-center justify-center text-white dark:text-zinc-950 bg-zinc-950 dark:bg-zinc-100 border-2 border-zinc-950 dark:border-zinc-100"
+                    className="w-7 h-7 rounded-lg text-xs font-black flex items-center justify-center text-white dark:text-zinc-950 bg-zinc-950 dark:bg-zinc-100 border-2 border-zinc-950 dark:border-zinc-100 shrink-0"
                   >
                     {index + 1}
                   </span>
-                  <span className="text-xs font-black uppercase">
-                    {item.topic || item.area}
-                  </span>
+                  <div className="min-w-0 flex flex-col">
+                    <span className="text-xs font-black uppercase truncate">
+                      {item.spec?.block ? `${item.spec.block}` : item.area} • {item.topic || item.area}
+                    </span>
+                    {item.spec?.evidence_desc && (
+                      <span className="text-[11px] font-extrabold text-zinc-600 dark:text-zinc-400 leading-snug">
+                        {item.spec.evidence}: {item.spec.evidence_desc}
+                      </span>
+                    )}
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 shrink-0">
                   {isCorrect ? (
                     <span className="px-3 py-1 bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-extrabold rounded-xl border-2 border-zinc-950 dark:border-zinc-100 flex items-center gap-1">
                       <CheckCircle2 className="w-3.5 h-3.5 stroke-[2.5]" /> Correcta

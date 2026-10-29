@@ -427,9 +427,16 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
           <div className="space-y-5 sm:space-y-6">
             {/* Question Bar Header */}
             <div className="flex items-center justify-between gap-2 border-b-2 border-zinc-900 dark:border-zinc-800 pb-3">
-              <span className="text-[11px] sm:text-xs font-black text-zinc-900 dark:text-zinc-100 uppercase tracking-wider min-w-0 truncate">
-                {currentItem.evidence ? `Evidencia: ${currentItem.evidence}` : 'Opción Múltiple'}
-              </span>
+              <div className="min-w-0 flex flex-col">
+                <span className="text-[11px] sm:text-xs font-black text-zinc-900 dark:text-zinc-100 uppercase tracking-wider truncate">
+                  {currentItem.spec?.block ? `${currentItem.spec.block}` : currentItem.area}
+                </span>
+                {currentItem.spec?.evidence_desc && (
+                  <span className="text-[10px] sm:text-[11px] font-extrabold text-zinc-600 dark:text-zinc-400 mt-0.5 leading-tight">
+                    {currentItem.spec.evidence}: {currentItem.spec.evidence_desc}
+                  </span>
+                )}
+              </div>
 
               <button
                 onClick={handleToggleFlag}
