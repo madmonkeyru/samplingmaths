@@ -4,8 +4,8 @@ import { createTransform } from '../../../utils/coordinateTransform';
 import { smoothPath } from '../../../utils/smoothPath';
 import { Point } from '../primitives/Point';
 
-const CURVE_COLOR = '#2563eb';
-const ANNOTATION_COLOR = '#e11d48';
+const CURVE_COLOR = 'var(--visual-primary, #2563eb)';
+const ANNOTATION_COLOR = 'var(--visual-annotation, #e11d48)';
 
 interface QuadraticCoeffs {
   a: number;
@@ -43,7 +43,7 @@ function deriveQuadratic(params: any): QuadraticCoeffs {
 }
 
 export interface FunctionPlotProps {
-  form?: 'quadratic' | 'linear' | 'piecewise';
+  form?: 'quadratic' | 'linear' | 'piecewise' | 'sqrt' | 'exponential' | 'logarithmic' | string;
   params?: any;
   annotations?: any;
   domain?: { x?: [number, number]; y?: [number, number] };
@@ -80,13 +80,51 @@ export const FunctionPlot: React.FC<FunctionPlotProps> = ({
   });
 
   const points: [number, number][] = [];
-  const step = (xDomain[1] - xDomain[0]) / 160;
+  const step = (xDomain[1] - xDomain[0]) / 180;
 
   if (form === 'linear') {
     const m = params?.slope ?? params?.m ?? 1;
     const b = params?.intercept ?? params?.b ?? 0;
     for (let x = xDomain[0]; x <= xDomain[1] + step; x += step) {
       points.push([x, m * x + b]);
+    }
+  } else if (form === 'sqrt') {
+    const a = params?.a ?? 1;
+    const h = params?.h ?? params?.origin?.[0] ?? 0;
+    const k = params?.k ?? params?.origin?.[1] ?? 0;
+    const startX = Math.max(xDomain[0], h);
+    for (let x = startX; x <= xDomain[1] + step; x += step) {
+      const val = x - h;
+      if (val >= 0) {
+        points.push([x, a * Math.sqrt(val) + k]);
+      }
+    }
+  } else if (form === 'exponential') {
+    const a = params?.a ?? 1;
+    const b = params?.base ?? params?.b ?? Math.E;
+    const c = params?.c ?? params?.vertical_shift ?? 0;
+    const rate = params?.k ?? 1;
+    for (let x = xDomain[0]; x <= xDomain[1] + step; x += step) {
+      const yVal = a * Math.pow(b, rate * x) + c;
+      if (Number.isFinite(yVal) && yVal >= yDomain[0] - 10 && yVal <= yDomain[1] + 10) {
+        points.push([x, yVal]);
+      }
+    }
+  } else if (form === 'logarithmic') {
+    const a = params?.a ?? 1;
+    const b = params?.base ?? params?.b ?? Math.E;
+    const h = params?.h ?? params?.asymptote ?? 0;
+    const k = params?.k ?? 0;
+    const startX = Math.max(xDomain[0], h + 0.01);
+    for (let x = startX; x <= xDomain[1] + step; x += step) {
+      const val = x - h;
+      if (val > 0) {
+        const logVal = Math.log(val) / Math.log(b);
+        const yVal = a * logVal + k;
+        if (Number.isFinite(yVal) && yVal >= yDomain[0] - 10 && yVal <= yDomain[1] + 10) {
+          points.push([x, yVal]);
+        }
+      }
     }
   } else if (form === 'piecewise' && Array.isArray(params?.points)) {
     points.push(...params.points);
@@ -148,12 +186,16 @@ export const FunctionPlot: React.FC<FunctionPlotProps> = ({
       {/* Function label */}
       {function_label && (
         <text
-          x={transform.toPixelX(vertex[0]) + 12}
-          y={transform.toPixelY(vertex[1]) - 12}
+          x={transform.toPixelX(vertex[0]) + 14}
+          y={transform.toPixelY(vertex[1]) - 14}
           fontSize={13}
           fontWeight="bold"
           fontStyle="italic"
           fill={CURVE_COLOR}
+          stroke="var(--visual-halo, rgba(255, 255, 255, 0.92))"
+          strokeWidth="3.5px"
+          paintOrder="stroke fill"
+          strokeLinejoin="round"
         >
           {function_label}
         </text>
@@ -166,6 +208,7 @@ export const FunctionPlot: React.FC<FunctionPlotProps> = ({
             key={`root-${i}`}
             coords={[r, 0]}
             label={rootLabels[i] ?? String(r)}
+            labelPosition="bottom"
             color={ANNOTATION_COLOR}
             transform={transform}
           />
@@ -176,6 +219,7 @@ export const FunctionPlot: React.FC<FunctionPlotProps> = ({
         <Point
           coords={vertex}
           label={vertexLabel}
+          labelPosition={params?.opens === 'down' ? 'bottom' : 'top'}
           color={ANNOTATION_COLOR}
           transform={transform}
         />
@@ -256,9 +300,11 @@ export const MultiViewGrid: React.FC<MultiViewGridProps> = ({
   const renderView = (view: any) => {
     const content = renderVisual ? renderVisual(view.visual) : null;
     return (
-      <div className="view-item flex flex-col items-center bg-white p-2 rounded shadow-sm border border-slate-100">
+      <div className="view-item flex flex-col items-center bg-white dark:bg-zinc-900 p-2 rounded-xl shadow-xs border border-zinc-200 dark:border-zinc-800 transition-colors w-full">
         {view.label && (
-          <div className="text-sm font-bold text-slate-700 mb-1">{view.label}</div>
+          <div className="text-xs sm:text-sm font-bold text-zinc-800 dark:text-zinc-200 mb-1">
+            {view.label}
+          </div>
         )}
         {content}
       </div>
@@ -266,21 +312,30 @@ export const MultiViewGrid: React.FC<MultiViewGridProps> = ({
   };
 
   return (
-    <div className="multi-view-grid space-y-3 p-2 bg-slate-50 border border-slate-200 rounded">
+    <div className="multi-view-grid w-full space-y-2 p-2 bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-2xl transition-colors">
       {original && (
-        <div className="view-item flex flex-col items-center bg-white p-2 rounded shadow-sm border border-slate-100">
+        <div className="view-item flex flex-col items-center bg-white dark:bg-zinc-900 p-2 rounded-xl shadow-xs border border-zinc-200 dark:border-zinc-800 transition-colors">
           {original.label && (
-            <div className="text-sm font-bold text-slate-700 mb-1">{original.label}</div>
+            <div className="text-xs sm:text-sm font-bold text-zinc-800 dark:text-zinc-200 mb-1">
+              {original.label}
+            </div>
           )}
           {renderVisual ? renderVisual(original.visual) : null}
         </div>
       )}
       <div
-        className="grid gap-3"
-        style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
+        className="grid gap-2 grid-cols-1 sm:grid-cols-2"
+        style={{
+          gridTemplateColumns:
+            cols > 2
+              ? `repeat(auto-fit, minmax(180px, 1fr))`
+              : undefined,
+        }}
       >
         {views.map((view, idx) => (
-          <div key={view.id || idx}>{renderView(view)}</div>
+          <div key={view.id || idx} className="flex justify-center w-full">
+            {renderView(view)}
+          </div>
         ))}
       </div>
     </div>

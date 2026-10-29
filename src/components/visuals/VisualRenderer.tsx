@@ -44,9 +44,9 @@ class VisualErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
   render() {
     if (this.state.hasError) {
       return (
-        <div className="visual-error-fallback p-3 border-2 border-zinc-900 bg-zinc-100 rounded-lg text-zinc-900 text-xs my-2">
+        <div className="visual-error-fallback p-3 border-2 border-zinc-900 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 rounded-xl text-zinc-900 dark:text-zinc-100 text-xs my-2">
           <p className="font-bold">Representación gráfica no disponible</p>
-          {this.props.alt && <p className="text-[11px] text-zinc-700 italic mt-1">{this.props.alt}</p>}
+          {this.props.alt && <p className="text-[11px] text-zinc-700 dark:text-zinc-300 italic mt-1">{this.props.alt}</p>}
         </div>
       );
     }

@@ -28,8 +28,8 @@ export interface CartesianCanvasProps {
   overlay?: React.ReactNode;
 }
 
-const AXIS_COLOR = 'currentColor';
-const GRID_COLOR = 'var(--visual-grid, #cbd5e1)';
+const AXIS_COLOR = 'var(--visual-axis, currentColor)';
+const GRID_COLOR = 'var(--visual-grid, #e2e8f0)';
 const TICK_COLOR = 'var(--visual-tick, #64748b)';
 
 const resolveColor = (child: any, fallback: string) =>
@@ -48,14 +48,14 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
           <CirclePrimitive
             center={child.center || [0, 0]}
             radius={child.radius || 1}
-            color={resolveColor(child, '#2563eb')}
+            color={resolveColor(child, 'var(--visual-primary, #2563eb)')}
             fill={child.fill || 'none'}
             strokeWidth={resolveWidth(child, 2)}
             dashed={child.dashed}
             transform={transform}
           />
           {child.label && child.center && (
-            <Point coords={child.center} label={child.label} transform={transform} color={resolveColor(child, '#2563eb')} />
+            <Point coords={child.center} label={child.label} transform={transform} color={resolveColor(child, 'var(--visual-primary, #2563eb)')} />
           )}
         </React.Fragment>
       );
@@ -69,7 +69,7 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
             coords={coords}
             label={child.label}
             toAxis={child.dashed_to_axis || child.dashed}
-            color={resolveColor(child, '#64748b')}
+            color={resolveColor(child, 'var(--visual-tick, #64748b)')}
             transform={transform}
           />
         );
@@ -80,7 +80,7 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
           coords={coords}
           label={child.label}
           labelPosition={child.label_position}
-          color={resolveColor(child, '#2563eb')}
+          color={resolveColor(child, 'var(--visual-primary, #2563eb)')}
           radius={child.radius}
           transform={transform}
         />
@@ -159,7 +159,7 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
         <PolylinePrimitive
           key={key}
           points={child.points || []}
-          color={resolveColor(child, '#2563eb')}
+            color={resolveColor(child, 'var(--visual-primary, #2563eb)')}
           strokeWidth={resolveWidth(child, 2)}
           dashed={child.dashed}
           transform={transform}
@@ -187,26 +187,46 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
     case 'polygon': {
       const points: [number, number][] = child.vertices || child.points || [];
       const labels: string[] = child.labels || child.vertex_labels || [];
+
+      // Compute centroid of polygon for automatic outward label positioning
+      let cx = 0;
+      let cy = 0;
+      if (points.length > 0) {
+        cx = points.reduce((acc, p) => acc + p[0], 0) / points.length;
+        cy = points.reduce((acc, p) => acc + p[1], 0) / points.length;
+      }
+
       return (
         <React.Fragment key={key}>
           <PolygonPrimitive
             points={points}
-            color={resolveColor(child, '#2563eb')}
+            color={resolveColor(child, 'var(--visual-primary, #2563eb)')}
             fill={child.fill || 'rgba(37, 99, 235, 0.15)'}
             strokeWidth={resolveWidth(child, 2)}
             transform={transform}
           />
-          {labels.map((label, i) =>
-            points[i] ? (
+          {labels.map((label, i) => {
+            const pt = points[i];
+            if (!pt) return null;
+            const dx = pt[0] - cx;
+            const dy = pt[1] - cy;
+            let labelPos: 'top-right' | 'top-left' | 'bottom-left' | 'bottom-right' | 'top' | 'bottom' = 'top-right';
+            if (dx >= 0 && dy >= 0) labelPos = 'top-right';
+            else if (dx < 0 && dy >= 0) labelPos = 'top-left';
+            else if (dx < 0 && dy < 0) labelPos = 'bottom-left';
+            else labelPos = 'bottom-right';
+
+            return (
               <Point
                 key={`${key}-label-${i}`}
-                coords={points[i]}
+                coords={pt}
                 label={label}
+                labelPosition={child.label_positions?.[i] || labelPos}
                 transform={transform}
                 color={resolveColor(child, '#2563eb')}
               />
-            ) : null
-          )}
+            );
+          })}
         </React.Fragment>
       );
     }
@@ -291,8 +311,15 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
     <div className="w-full flex justify-center items-center my-3 max-w-full overflow-hidden">
       <svg
         viewBox={`0 0 ${width} ${height}`}
-        style={{ width: '100%', height: 'auto', maxWidth: `${width}px` }}
-        className="cartesian-plane bg-white dark:bg-zinc-900 rounded-2xl border-2 border-zinc-900 dark:border-zinc-700 shadow-xs text-zinc-900 dark:text-zinc-100 transition-colors"
+        style={{
+          width: '100%',
+          height: 'auto',
+          maxWidth: `${width}px`,
+          backgroundColor: 'var(--visual-bg, #ffffff)',
+          shapeRendering: 'geometricPrecision',
+          textRendering: 'optimizeLegibility',
+        }}
+        className="cartesian-plane rounded-2xl border-2 border-zinc-900 dark:border-zinc-700 shadow-xs text-zinc-900 dark:text-zinc-100 transition-colors"
       >
         <defs>
           <clipPath id={clipId}>
@@ -357,7 +384,18 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
               <React.Fragment key={`xt-${i}`}>
                 <line x1={px} y1={xAxisPy - 4} x2={px} y2={xAxisPy + 4} />
                 {showTickLabels && Math.abs(val) > 1e-9 && (
-                  <text x={px} y={xAxisPy + 14} fontSize={10} fontWeight="bold" fill="currentColor" textAnchor="middle">
+                  <text
+                    x={px}
+                    y={xAxisPy + 14}
+                    fontSize={10}
+                    fontWeight="bold"
+                    fill="var(--visual-text, currentColor)"
+                    stroke="var(--visual-halo, rgba(255, 255, 255, 0.92))"
+                    strokeWidth="3px"
+                    paintOrder="stroke fill"
+                    strokeLinejoin="round"
+                    textAnchor="middle"
+                  >
                     {val}
                   </text>
                 )}
@@ -370,7 +408,18 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
               <React.Fragment key={`yt-${i}`}>
                 <line x1={yAxisPx - 4} y1={py} x2={yAxisPx + 4} y2={py} />
                 {showTickLabels && Math.abs(val) > 1e-9 && (
-                  <text x={yAxisPx - 7} y={py + 3.5} fontSize={10} fontWeight="bold" fill="currentColor" textAnchor="end">
+                  <text
+                    x={yAxisPx - 7}
+                    y={py + 3.5}
+                    fontSize={10}
+                    fontWeight="bold"
+                    fill="var(--visual-text, currentColor)"
+                    stroke="var(--visual-halo, rgba(255, 255, 255, 0.92))"
+                    strokeWidth="3px"
+                    paintOrder="stroke fill"
+                    strokeLinejoin="round"
+                    textAnchor="end"
+                  >
                     {val}
                   </text>
                 )}
@@ -380,10 +429,32 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
         </g>
 
         {/* Axis Labels */}
-        <text x={plotRight - 4} y={xAxisPy - 8} fontSize={12} fontWeight="900" fill="currentColor" textAnchor="end">
+        <text
+          x={plotRight - 4}
+          y={xAxisPy - 8}
+          fontSize={12}
+          fontWeight="900"
+          fill="var(--visual-text, currentColor)"
+          stroke="var(--visual-halo, rgba(255, 255, 255, 0.92))"
+          strokeWidth="3px"
+          paintOrder="stroke fill"
+          strokeLinejoin="round"
+          textAnchor="end"
+        >
           {x_label}
         </text>
-        <text x={yAxisPx + 8} y={plotTop + 12} fontSize={12} fontWeight="900" fill="currentColor" textAnchor="start">
+        <text
+          x={yAxisPx + 10}
+          y={plotTop - 4}
+          fontSize={12}
+          fontWeight="900"
+          fill="var(--visual-text, currentColor)"
+          stroke="var(--visual-halo, rgba(255, 255, 255, 0.92))"
+          strokeWidth="3px"
+          paintOrder="stroke fill"
+          strokeLinejoin="round"
+          textAnchor="start"
+        >
           {y_label}
         </text>
 
