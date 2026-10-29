@@ -11,6 +11,31 @@
   --text-muted: #52525b;
   --border-contrast: #09090b;
   --border-subtle: #e4e4e7;
+
+  /* Visual Spec Theme Variables */
+  --visual-bg: #ffffff;
+  --visual-border: #18181b;
+  --visual-text: #09090b;
+  --visual-grid: #e2e8f0;
+  --visual-axis: #09090b;
+  --visual-tick: #64748b;
+  --visual-halo: rgba(255, 255, 255, 0.92);
+  --visual-primary: #2563eb;
+  --visual-secondary: #0284c7;
+  --visual-annotation: #e11d48;
+}
+
+.dark {
+  --visual-bg: #18181b;
+  --visual-border: #3f3f46;
+  --visual-text: #f4f4f5;
+  --visual-grid: #27272a;
+  --visual-axis: #f4f4f5;
+  --visual-tick: #a1a1aa;
+  --visual-halo: rgba(24, 24, 27, 0.92);
+  --visual-primary: #60a5fa;
+  --visual-secondary: #38bdf8;
+  --visual-annotation: #fb7185;
 }
 
 body {

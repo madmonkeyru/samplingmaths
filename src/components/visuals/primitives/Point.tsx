@@ -19,7 +19,7 @@ export const Point: React.FC<PointProps> = ({
   y,
   label,
   labelPosition = 'top-right',
-  color = '#2563eb',
+  color = 'var(--visual-primary, #2563eb)',
   radius = 4,
   transform,
 }) => {
@@ -27,54 +27,105 @@ export const Point: React.FC<PointProps> = ({
   const ptY = coords ? coords[1] : y ?? 0;
   const { px, py } = transform.toPixel(ptX, ptY);
 
+  // Calculate smart offsets based on position
   let dx = 8;
   let dy = -8;
+  let textAnchor: 'start' | 'middle' | 'end' = 'start';
 
   switch (labelPosition) {
     case 'top':
-      dx = -4;
-      dy = -12;
+      dx = 0;
+      dy = -(radius + 8);
+      textAnchor = 'middle';
       break;
     case 'bottom':
-      dx = -4;
-      dy = 12;
+      dx = 0;
+      dy = radius + 14;
+      textAnchor = 'middle';
       break;
     case 'left':
-      dx = -16;
+      dx = -(radius + 8);
       dy = 4;
+      textAnchor = 'end';
       break;
     case 'right':
-      dx = 8;
+      dx = radius + 8;
       dy = 4;
+      textAnchor = 'start';
       break;
     case 'top-left':
-      dx = -16;
-      dy = -8;
+      dx = -(radius + 6);
+      dy = -(radius + 6);
+      textAnchor = 'end';
       break;
     case 'bottom-left':
-      dx = -16;
-      dy = 12;
+      dx = -(radius + 6);
+      dy = radius + 12;
+      textAnchor = 'end';
       break;
     case 'bottom-right':
-      dx = 8;
-      dy = 12;
+      dx = radius + 6;
+      dy = radius + 12;
+      textAnchor = 'start';
       break;
     case 'top-right':
     default:
-      dx = 8;
-      dy = -8;
+      dx = radius + 6;
+      dy = -(radius + 6);
+      textAnchor = 'start';
       break;
   }
 
+  const isMathOrComplex = label && (label.includes('$') || label.includes('\\') || label.length > 10);
+
   return (
     <g className="primitive-point">
-      <circle cx={px} cy={py} r={radius} fill={color} stroke="#ffffff" strokeWidth={1.5} />
+      {radius > 0 && (
+        <circle
+          cx={px}
+          cy={py}
+          r={radius}
+          fill={color}
+          stroke="var(--visual-bg, #ffffff)"
+          strokeWidth={1.5}
+        />
+      )}
       {label && (
-        <foreignObject x={px + dx} y={py + dy} width={80} height={30} className="overflow-visible pointer-events-none">
-          <div className="text-xs font-semibold text-slate-800 flex items-center">
-            <TextRenderer content={label} />
-          </div>
-        </foreignObject>
+        isMathOrComplex ? (
+          <foreignObject
+            x={px + (textAnchor === 'end' ? dx - 80 : textAnchor === 'middle' ? dx - 40 : dx)}
+            y={py + dy - 12}
+            width={80}
+            height={32}
+            className="overflow-visible pointer-events-none"
+          >
+            <div
+              className="text-xs font-semibold flex items-center px-1 rounded backdrop-blur-xs"
+              style={{
+                color: 'var(--visual-text, #09090b)',
+                backgroundColor: 'var(--visual-halo, rgba(255, 255, 255, 0.85))',
+                width: 'fit-content',
+              }}
+            >
+              <TextRenderer content={label} />
+            </div>
+          </foreignObject>
+        ) : (
+          <text
+            x={px + dx}
+            y={py + dy}
+            textAnchor={textAnchor}
+            fontSize={12}
+            fontWeight="bold"
+            fill="var(--visual-text, #09090b)"
+            stroke="var(--visual-halo, rgba(255, 255, 255, 0.92))"
+            strokeWidth="3.5px"
+            paintOrder="stroke fill"
+            strokeLinejoin="round"
+          >
+            {label}
+          </text>
+        )
       )}
     </g>
   );

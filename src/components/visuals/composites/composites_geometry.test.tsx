@@ -83,4 +83,22 @@ describe('Geometry and Functions Composites', () => {
 
     expect(container.querySelector('path')).toBeInTheDocument();
   });
+
+  it('renders FunctionPlot with sqrt, exponential, and logarithmic forms', () => {
+    const { container: cSqrt } = render(
+      <FunctionPlot form="sqrt" params={{ a: 2, h: 1, k: -1 }} function_label="f(x)" />
+    );
+    expect(cSqrt.querySelector('path')).toBeInTheDocument();
+    expect(screen.getByText('f(x)')).toBeInTheDocument();
+
+    const { container: cExp } = render(
+      <FunctionPlot form="exponential" params={{ a: 1, base: 2, vertical_shift: 1 }} />
+    );
+    expect(cExp.querySelector('path')).toBeInTheDocument();
+
+    const { container: cLog } = render(
+      <FunctionPlot form="logarithmic" params={{ a: 1, base: 10, asymptote: 0 }} />
+    );
+    expect(cLog.querySelector('path')).toBeInTheDocument();
+  });
 });
