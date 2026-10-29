@@ -36,7 +36,7 @@ export const Header: React.FC<HeaderProps> = ({
           isTestView ? 'hidden sm:block' : ''
         }`}
       >
-        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-3.5 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
           <button
             onClick={onNavigateHome}
             className="flex items-center gap-2.5 sm:gap-3 text-left group focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded-lg p-1 min-h-[44px] cursor-pointer"
@@ -66,7 +66,7 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
             )}
 
-            <ThemeToggle showDropdown />
+            <ThemeToggle />
 
             {currentUser ? (
               <div className="flex items-center gap-2 sm:gap-3 bg-stone-800 dark:bg-slate-800 px-2.5 sm:px-3.5 py-1.5 rounded-xl border border-stone-700 dark:border-slate-700 min-h-[44px]">

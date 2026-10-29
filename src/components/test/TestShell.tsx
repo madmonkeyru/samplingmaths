@@ -230,9 +230,9 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
   return (
     <div className="test-shell min-h-screen bg-zinc-100 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 flex flex-col transition-colors">
       {/* Test Shell Header */}
-      <div className="bg-white dark:bg-zinc-900 border-b-2 border-zinc-900 dark:border-zinc-700 sticky top-0 sm:top-14 z-30 px-3 sm:px-6 py-2.5 sm:py-3 shadow-xs">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
-          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+      <div className="bg-white dark:bg-zinc-900 border-b-2 border-zinc-900 dark:border-zinc-700 sticky top-0 sm:top-14 z-30 px-3.5 sm:px-6 py-2.5 sm:py-3 shadow-xs">
+        <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto flex items-center justify-between gap-3 sm:gap-6">
+          <div className="flex items-center gap-2 sm:gap-3.5 min-w-0">
             <button
               onClick={() => setIsNavOpen(!isNavOpen)}
               className="lg:hidden p-2 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0 cursor-pointer"
@@ -251,11 +251,11 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
           </div>
 
           {/* Progress Bar & Timer & Actions */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-2.5 sm:gap-3.5 shrink-0">
             {/* Theme Toggle Button for Mobile and Desktop */}
             <ThemeToggle className="shrink-0" />
 
-            <div className="hidden sm:flex flex-col items-end w-32">
+            <div className="hidden md:flex flex-col items-end w-32 shrink-0">
               <div className="text-[11px] font-black text-zinc-800 dark:text-zinc-200 mb-1">
                 {progressPct}% ({answeredCount}/{items.length})
               </div>
@@ -269,7 +269,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
             <button
               onClick={() => setIsFormulaOpen(true)}
-              className="px-2.5 sm:px-3.5 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-950 dark:text-zinc-100 font-extrabold rounded-xl text-xs flex items-center gap-1.5 border-2 border-zinc-900 dark:border-zinc-700 transition min-h-[44px] cursor-pointer"
+              className="px-3 sm:px-3.5 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-950 dark:text-zinc-100 font-extrabold rounded-xl text-xs flex items-center gap-1.5 border-2 border-zinc-900 dark:border-zinc-700 transition min-h-[44px] cursor-pointer"
               title="Ver fórmulas del examen"
             >
               <BookOpen className="w-4 h-4 stroke-[2.5] shrink-0" />
@@ -278,7 +278,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
             {config.enableTimer && (
               <div
-                className={`flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-black border-2 border-zinc-900 dark:border-zinc-700 min-h-[44px] ${
+                className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl text-xs font-black border-2 border-zinc-900 dark:border-zinc-700 min-h-[44px] ${
                   timeLeftSeconds < 300
                     ? 'bg-zinc-950 text-white dark:bg-red-950 dark:text-red-100 dark:border-red-600 animate-pulse'
                     : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-950 dark:text-zinc-100'
@@ -291,7 +291,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
             <button
               onClick={() => setIsConfirmOpen(true)}
-              className="px-3 sm:px-4 py-2 bg-zinc-950 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-extrabold rounded-xl text-xs flex items-center gap-1.5 transition border-2 border-zinc-950 dark:border-zinc-100 min-h-[44px] cursor-pointer"
+              className="px-3.5 sm:px-4 py-2 bg-zinc-950 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-extrabold rounded-xl text-xs flex items-center gap-1.5 transition border-2 border-zinc-950 dark:border-zinc-100 min-h-[44px] cursor-pointer"
             >
               <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5] shrink-0" />
               <span className="hidden xs:inline sm:inline">Finalizar</span>
@@ -301,7 +301,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
       </div>
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto w-full px-3.5 sm:px-6 py-4 sm:py-6 flex-1 flex gap-6 relative">
+      <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto w-full px-3.5 sm:px-6 py-4 sm:py-6 flex-1 flex gap-6 relative">
         {/* Mobile Backdrop Overlay for Drawer */}
         {isNavOpen && (
           <div
@@ -312,18 +312,16 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
         {/* Navigation Sidebar (Desktop & Mobile Drawer) */}
         <aside
-          className={`fixed inset-y-0 left-0 z-40 w-72 max-w-[85vw] bg-white dark:bg-zinc-900 border-r-2 border-zinc-900 dark:border-zinc-800 p-4 flex flex-col transform transition-transform lg:static lg:translate-x-0 ${
+          className={`fixed inset-y-0 left-0 z-40 w-72 max-w-[85vw] bg-white dark:bg-zinc-900 border-r-2 border-zinc-900 dark:border-zinc-800 p-4 flex flex-col transform transition-transform lg:static lg:translate-x-0 lg:sticky lg:top-[124px] lg:self-start lg:max-h-[calc(100vh-140px)] lg:w-72 lg:shrink-0 lg:border-2 lg:rounded-2xl lg:shadow-xs ${
             isNavOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
-          <div className="flex items-center justify-between pb-3 mb-3 border-b-2 border-zinc-900 dark:border-zinc-800">
-            <h3 className="font-black text-sm text-zinc-900 dark:text-zinc-100 uppercase tracking-wide flex items-center gap-2">
-              <Filter className="w-4 h-4 text-zinc-900 dark:text-zinc-100" />
-              Navegador de Ítems
-            </h3>
+          {/* Close button for Mobile Drawer only */}
+          <div className="lg:hidden flex items-center justify-end pb-2 mb-2">
             <button
               onClick={() => setIsNavOpen(false)}
-              className="lg:hidden p-2 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer"
+              className="p-2 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer"
+              aria-label="Cerrar navegador de ítems"
             >
               <X className="w-5 h-5 stroke-[2.5]" />
             </button>
@@ -373,7 +371,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
             </button>
           </div>
 
-          <div className="grid grid-cols-5 gap-2 overflow-y-auto flex-1 max-h-[calc(100vh-280px)] pr-1">
+          <div className="grid grid-cols-5 gap-2 overflow-y-auto flex-1 max-h-[calc(100vh-280px)] p-1.5">
             {items.map((it, idx) => {
               const isAnswered = !!responses[it.id]?.selectedOption;
               const isFlagged = !!flaggedItems[it.id];
@@ -385,7 +383,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
               let btnClass = 'bg-white dark:bg-zinc-800 border-zinc-900 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700';
               if (isAnswered) btnClass = 'bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 border-zinc-950 dark:border-zinc-100 font-black';
-              if (isCurrent) btnClass += ' ring-4 ring-zinc-950 dark:ring-zinc-100 ring-offset-1 dark:ring-offset-zinc-900';
+              if (isCurrent) btnClass += ' ring-2 ring-indigo-600 dark:ring-indigo-400 ring-offset-1 dark:ring-offset-zinc-900 font-black';
 
               return (
                 <button
@@ -394,7 +392,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
                     setCurrentIndex(idx);
                     setIsNavOpen(false);
                   }}
-                  className={`relative h-11 w-11 rounded-xl text-xs font-bold border-2 flex items-center justify-center transition cursor-pointer ${btnClass}`}
+                  className={`relative h-10 w-10 rounded-xl text-xs font-bold border-2 flex items-center justify-center transition cursor-pointer ${btnClass}`}
                 >
                   {idx + 1}
                   {isFlagged && (

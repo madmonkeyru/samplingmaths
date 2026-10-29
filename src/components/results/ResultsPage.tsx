@@ -98,7 +98,7 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
   };
 
   return (
-    <div className="results-page max-w-5xl mx-auto px-3.5 sm:px-6 py-5 sm:py-8 space-y-5 sm:space-y-8 text-zinc-900 dark:text-zinc-100 transition-colors">
+    <div className="results-page max-w-5xl 2xl:max-w-[1536px] mx-auto px-3.5 sm:px-6 py-5 sm:py-8 space-y-5 sm:space-y-8 text-zinc-900 dark:text-zinc-100 transition-colors">
       {/* First Time User Encouragement Banner */}
       {attempts.length <= 1 && (
         <div className="bg-zinc-950 dark:bg-zinc-900 border-2 border-zinc-900 dark:border-zinc-700 text-white rounded-2xl p-4 flex items-center gap-3 shadow-xs">

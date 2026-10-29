@@ -23,6 +23,7 @@ export interface CartesianCanvasProps {
   elements?: any[];
   width?: number;
   height?: number;
+  maxWidth?: number | string;
   padding?: number;
   preserveAspect?: boolean;
   overlay?: React.ReactNode;
@@ -263,10 +264,16 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
   elements,
   width = 400,
   height = 300,
+  maxWidth,
   padding = 24,
   preserveAspect,
   overlay,
 }) => {
+  const effectiveMaxWidth = maxWidth
+    ? typeof maxWidth === 'number'
+      ? `${maxWidth}px`
+      : maxWidth
+    : `${Math.max(width, 650)}px`;
   const clipId = useId().replace(/:/g, '');
   const xDomain = domain?.x || x_range || [-6, 6];
   const yDomain = domain?.y || y_range || [-6, 6];
@@ -314,7 +321,7 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
         style={{
           width: '100%',
           height: 'auto',
-          maxWidth: `${width}px`,
+          maxWidth: effectiveMaxWidth,
           backgroundColor: 'var(--visual-bg, #ffffff)',
           shapeRendering: 'geometricPrecision',
           textRendering: 'optimizeLegibility',
@@ -341,18 +348,7 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
           </g>
         )}
 
-        {/* Plot border (only visible when axes fall outside the domain) */}
-        {(!xInDomain || !yInDomain) && (
-          <rect
-            x={plotLeft}
-            y={plotTop}
-            width={transform.plotWidth}
-            height={transform.plotHeight}
-            fill="none"
-            stroke={AXIS_COLOR}
-            strokeWidth={1.5}
-          />
-        )}
+        {/* Note: Automatic plot border <rect> removed to prevent unwanted bounding squares when 0,0 is out of domain (e.g. Question ID 6 Option A). */}
 
         {/* Axes */}
         {yInDomain && (
@@ -480,6 +476,7 @@ export interface CartesianPlaneProps {
   elements?: any[];
   width?: number;
   height?: number;
+  maxWidth?: number | string;
   padding?: number;
   preserveAspect?: boolean;
 }

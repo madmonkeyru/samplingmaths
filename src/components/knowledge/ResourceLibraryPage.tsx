@@ -20,7 +20,7 @@ export const ResourceLibraryPage: React.FC<ResourceLibraryPageProps> = ({
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-3.5 sm:px-6 py-6 space-y-6">
+    <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-3.5 sm:px-6 py-6 space-y-6">
       {/* Top Header Navigation */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-zinc-900 border-2 border-zinc-900 dark:border-zinc-700 rounded-2xl p-4 sm:p-5 shadow-xs">
         <div className="flex items-center gap-3">
