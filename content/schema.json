@@ -27,6 +27,19 @@
         }
       }
     },
+    "sets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description", "total_items"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "total_items": { "type": "integer" }
+        }
+      }
+    },
     "notes": { "type": "array", "items": { "type": "string" } },
     "items": { "type": "array", "items": { "$ref": "#/$defs/item" } }
   },
@@ -36,6 +49,7 @@
       "required": ["id", "area", "area_id", "topic", "spec", "stem", "options", "correct_answer", "solution_steps", "group_id", "visual_spec"],
       "properties": {
         "id": { "type": "integer", "minimum": 1 },
+        "set_id": { "type": "string" },
         "area": { "type": "string" },
         "area_id": { "enum": ["geometry", "functions", "statistics"] },
         "topic": { "type": "string" },

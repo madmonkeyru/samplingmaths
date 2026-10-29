@@ -16,6 +16,7 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
   onClose,
   onStartSession,
 }) => {
+  const [selectedSet, setSelectedSet] = useState<string>('all');
   const [selectedArea, setSelectedArea] = useState<DomainArea>('geometry');
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
   const [itemCount, setItemCount] = useState<number | 'all'>(10);
@@ -24,12 +25,18 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
 
   if (!isOpen) return null;
 
-  const availableTopics = dataService.getTopicsByArea(selectedArea);
+  const sets = dataService.getSets();
+  const availableTopics = dataService.getTopicsByArea(selectedArea, selectedSet);
+
+  const geoCount = dataService.getItemsByArea('geometry', selectedSet).length;
+  const funcCount = dataService.getItemsByArea('functions', selectedSet).length;
+  const statCount = dataService.getItemsByArea('statistics', selectedSet).length;
 
   const handleStart = (e: React.FormEvent) => {
     e.preventDefault();
     const config: PracticeConfig = {
       mode: initialMode,
+      setId: selectedSet,
       area: selectedArea,
       topic: initialMode === 'topic' ? selectedTopic : 'all',
       itemCount,
@@ -61,6 +68,26 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
         </div>
 
         <form onSubmit={handleStart} className="space-y-5">
+          {/* Set Selector */}
+          <div>
+            <label className="block text-xs font-black text-zinc-900 mb-1.5 uppercase">Conjunto de Preguntas</label>
+            <select
+              value={selectedSet}
+              onChange={(e) => {
+                setSelectedSet(e.target.value);
+                setSelectedTopic('all');
+              }}
+              className="w-full px-3.5 py-2.5 border-2 border-zinc-900 rounded-xl text-xs font-extrabold bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
+            >
+              <option value="all">Todos los conjuntos ({dataService.getAllItems().length} ítems totales)</option>
+              {sets.map((s) => (
+                <option key={s.id} value={s.id}>
+                  {s.name} ({s.total_items} ítems)
+                </option>
+              ))}
+            </select>
+          </div>
+
           {/* Area Selector */}
           <div>
             <label className="block text-xs font-black text-zinc-900 mb-1.5 uppercase">Área temática</label>
@@ -73,9 +100,9 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
               }}
               className="w-full px-3.5 py-2.5 border-2 border-zinc-900 rounded-xl text-xs font-extrabold bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
             >
-              <option value="geometry">Geometría (50 ítems)</option>
-              <option value="functions">Relaciones y Álgebra (25 ítems)</option>
-              <option value="statistics">Estadística y Probabilidad (12 ítems)</option>
+              <option value="geometry">Geometría ({geoCount} ítems)</option>
+              <option value="functions">Relaciones y Álgebra ({funcCount} ítems)</option>
+              <option value="statistics">Estadística y Probabilidad ({statCount} ítems)</option>
             </select>
           </div>
 

@@ -6,7 +6,7 @@
   "source": "Práctica BXM Matemáticas 02-2026",
   "specification": "Tabla de especificaciones MATEMÁTICAS — Bachillerato por Madurez Suficiente, convocatoria 02-2026",
   "solucionario_verified": true,
-  "total_items": 87,
+  "total_items": 130,
   "sections": [
     {
       "id": "geometry",
@@ -74,7 +74,8 @@
         "Por lo tanto, la opción correcta es B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 2,
@@ -103,7 +104,8 @@
         "Opción correcta: A."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 3,
@@ -199,7 +201,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 4,
@@ -228,7 +231,8 @@
         "Opción correcta: A."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 5,
@@ -325,7 +329,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 6,
@@ -487,7 +492,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 7,
@@ -516,7 +522,8 @@
         "Opción correcta: D."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 8,
@@ -546,7 +553,8 @@
         "Opción correcta: B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 9,
@@ -676,7 +684,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 10,
@@ -708,7 +717,8 @@
         "Opción correcta: C."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 11,
@@ -740,7 +750,8 @@
         "Opción correcta: C."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 12,
@@ -841,7 +852,8 @@
             ]
           }
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 13,
@@ -948,7 +960,8 @@
             ]
           }
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 14,
@@ -978,7 +991,8 @@
         "Opción correcta: D."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 15,
@@ -1008,7 +1022,8 @@
         "Opción correcta: A."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 16,
@@ -1037,7 +1052,8 @@
         "Opción correcta: B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 17,
@@ -1065,7 +1081,8 @@
         "Opción correcta: A."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 18,
@@ -1094,7 +1111,8 @@
         "Opción correcta: C."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 19,
@@ -1200,7 +1218,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 20,
@@ -1345,7 +1364,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 21,
@@ -1377,7 +1397,8 @@
       "visual_spec": null,
       "flags": [
         "polygon_vertices_need_pdf_verification"
-      ]
+      ],
+      "set_id": "set_1"
     },
     {
       "id": 22,
@@ -1410,7 +1431,8 @@
       "visual_spec": null,
       "flags": [
         "polygon_vertices_need_pdf_verification"
-      ]
+      ],
+      "set_id": "set_1"
     },
     {
       "id": 23,
@@ -1442,7 +1464,8 @@
       "visual_spec": null,
       "flags": [
         "polygon_vertices_need_pdf_verification"
-      ]
+      ],
+      "set_id": "set_1"
     },
     {
       "id": 24,
@@ -1520,7 +1543,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 25,
@@ -1598,7 +1622,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 26,
@@ -1676,7 +1701,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 27,
@@ -1756,7 +1782,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 28,
@@ -1835,7 +1862,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 29,
@@ -1931,7 +1959,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 30,
@@ -2009,7 +2038,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 31,
@@ -2078,7 +2108,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 32,
@@ -2161,7 +2192,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 33,
@@ -2235,7 +2267,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 34,
@@ -2322,7 +2355,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 35,
@@ -2400,7 +2434,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 36,
@@ -2515,7 +2550,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 37,
@@ -2619,7 +2655,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 38,
@@ -2700,7 +2737,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 39,
@@ -2804,7 +2842,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 40,
@@ -2895,7 +2934,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 41,
@@ -2978,7 +3018,8 @@
             ]
           }
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 42,
@@ -3004,7 +3045,8 @@
         "r = d / 2 = 8 / 2 = 4 metros."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_2"
     },
     {
       "id": 43,
@@ -3030,7 +3072,8 @@
         "Por lo tanto, la figura obtenida es una circunferencia."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_2"
     },
     {
       "id": 44,
@@ -3058,7 +3101,8 @@
         "r = sqrt(64) = 8 cm."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_2"
     },
     {
       "id": 45,
@@ -3162,7 +3206,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 46,
@@ -3266,7 +3311,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 47,
@@ -3366,7 +3412,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 48,
@@ -3470,7 +3517,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 49,
@@ -3496,7 +3544,8 @@
         "Las isometrías conservan las distancias (longitud de lados) y las medidas de los ángulos internos."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_2"
     },
     {
       "id": 50,
@@ -3576,7 +3625,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_2"
     },
     {
       "id": 51,
@@ -3803,7 +3853,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 52,
@@ -3834,7 +3885,8 @@
         "Por lo tanto, la respuesta correcta es C."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 53,
@@ -3863,7 +3915,8 @@
         "Respuesta: C."
       ],
       "group_id": "g_fuel_price",
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 54,
@@ -3892,7 +3945,8 @@
         "Respuesta: B."
       ],
       "group_id": "g_fuel_price",
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 55,
@@ -3924,7 +3978,8 @@
         "Respuesta: B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 56,
@@ -4008,7 +4063,8 @@
             }
           }
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 57,
@@ -4039,7 +4095,8 @@
         "Respuesta: D."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 58,
@@ -4069,7 +4126,8 @@
         "Respuesta: B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 59,
@@ -4101,7 +4159,8 @@
         "Respuesta: A."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 60,
@@ -4135,7 +4194,8 @@
         "Respuesta: B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 61,
@@ -4167,7 +4227,8 @@
         "Respuesta: B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 62,
@@ -4197,7 +4258,8 @@
         "Respuesta: D."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 63,
@@ -4276,7 +4338,8 @@
             }
           }
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 64,
@@ -4308,7 +4371,8 @@
         "Respuesta: B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 65,
@@ -4338,7 +4402,8 @@
         "Respuesta: D."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 66,
@@ -4636,7 +4701,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 67,
@@ -4669,7 +4735,8 @@
         "Respuesta: B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 68,
@@ -4700,7 +4767,8 @@
         "Respuesta: B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 69,
@@ -4731,7 +4799,8 @@
         "Respuesta: A."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 70,
@@ -4760,7 +4829,8 @@
         "Respuesta: B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 71,
@@ -4793,7 +4863,8 @@
         "Respuesta: A."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 72,
@@ -4823,7 +4894,8 @@
         "Respuesta: D."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 73,
@@ -4853,7 +4925,8 @@
         "Respuesta: C."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 74,
@@ -4883,7 +4956,8 @@
         "Respuesta: B."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 75,
@@ -4913,7 +4987,8 @@
         "Respuesta: A."
       ],
       "group_id": null,
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 76,
@@ -4972,7 +5047,8 @@
             100
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 77,
@@ -5033,7 +5109,8 @@
             ]
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 78,
@@ -5088,7 +5165,8 @@
             }
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 79,
@@ -5138,7 +5216,8 @@
             ]
           ]
         }
-      }
+      },
+      "set_id": "set_1"
     },
     {
       "id": 80,
@@ -5167,7 +5246,8 @@
         "P(E ∪ F) = P(E) + P(F) − P(E ∩ F) = (8/80) + (15/80) − 0 = 23/80."
       ],
       "group_id": "g_cont_table",
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 81,
@@ -5196,7 +5276,8 @@
         "Por lo tanto, F ∩ G es un evento imposible."
       ],
       "group_id": "g_cont_table",
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 82,
@@ -5225,7 +5306,8 @@
         "P(tres disciplinas) = 0/43 = 0."
       ],
       "group_id": "g_venn_3set",
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 83,
@@ -5253,7 +5335,8 @@
         "P(exactamente dos disciplinas) = 7/43."
       ],
       "group_id": "g_venn_3set",
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 84,
@@ -5282,7 +5365,8 @@
         "El empleado de menor edad entre ambas empresas tiene 19 años."
       ],
       "group_id": "g_emp_ages",
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 85,
@@ -5311,7 +5395,8 @@
         "D) Falso: no se puede garantizar que exista un empleado con exactamente 33 años en ambas empresas."
       ],
       "group_id": "g_emp_ages",
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 86,
@@ -5342,7 +5427,8 @@
         "El menor coeficiente de variación corresponde al grupo Q (28,13 %)."
       ],
       "group_id": "g_volunteer",
-      "visual_spec": null
+      "visual_spec": null,
+      "set_id": "set_1"
     },
     {
       "id": 87,
@@ -5373,7 +5459,2255 @@
         "El mayor valor de posición relativa corresponde a María (0,222), por lo que presenta el mejor desempeño relativo."
       ],
       "group_id": "g_volunteer",
+      "visual_spec": null,
+      "set_id": "set_1"
+    },
+    {
+      "id": 88,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Concepto de función y de gráfica de una función",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A1",
+        "affirmation_desc": "Identificar relaciones funcionales",
+        "evidence": "A1.1",
+        "evidence_desc": "Determina si una representación gráfica corresponde a una función mediante la prueba de la recta vertical."
+      },
+      "stem": "Considere la siguiente representación gráfica de una relación en el plano cartesiano:",
+      "options": {
+        "A": "El dominio de la relación es $[-3, 3]$.",
+        "B": "Corresponde a la gráfica de una función.",
+        "C": "No corresponde a una función pues existen rectas verticales que intersecan la gráfica en más de un punto.",
+        "D": "El ámbito es $[0, 5]$."
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "Para que una relación gráfica en el plano cartesiano represente una función, cada elemento $x$ del dominio debe tener una única imagen $y$.",
+        "Aplicando el criterio de la recta vertical, una recta vertical $x = 0$ interseca la figura semicircular en dos puntos distintos: $(0, 3)$ y $(0, -3)$.",
+        "Por lo tanto, no corresponde a una función."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Círculo centrado en el origen con radio 3",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -4,
+              4
+            ],
+            "y": [
+              -4,
+              4
+            ]
+          },
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                0,
+                0
+              ],
+              "r": 3,
+              "color": "#2563eb",
+              "strokeWidth": 2
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                3
+              ],
+              "label": "(0,3)",
+              "color": "#1e293b"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                -3
+              ],
+              "label": "(0,-3)",
+              "color": "#1e293b"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                0
+              ],
+              "label": "3",
+              "color": "#1e293b"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -3,
+                0
+              ],
+              "label": "-3",
+              "color": "#1e293b"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 89,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Dominio y ámbito de funciones",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A1",
+        "evidence": "A1.2",
+        "evidence_desc": "Determina el ámbito de una función cuadrática a partir de su representación gráfica."
+      },
+      "stem": "Considere la gráfica de la función cuadrática $f$ cuyo vértice es $(2, -3)$ y abre hacia arriba:",
+      "options": {
+        "A": "$[-3, +\\infty[$",
+        "B": "$]-\\infty, -3]$",
+        "C": "$[2, +\\infty[$",
+        "D": "$]-\\infty, 2]$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El ámbito de una función cuadrática $f(x) = ax^2+bx+c$ que abre hacia arriba ($a > 0$) con vértice $(h, k)$ está dado por $[k, +\\infty[$.",
+        "Dado que el vértice es $(2, -3)$, la ordenada mínima es $y = -3$.",
+        "Por lo tanto, el ámbito es $[-3, +\\infty[$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Parábola con vértice en (2, -3) abriendo hacia arriba",
+        "visual": {
+          "type": "function_plot",
+          "form": "quadratic",
+          "params": {
+            "a": 1,
+            "vertex": [
+              2,
+              -3
+            ],
+            "roots": [
+              0.27,
+              3.73
+            ]
+          },
+          "annotations": {
+            "vertex": {
+              "show": true,
+              "label": "V(2, -3)",
+              "project_to": [
+                "x",
+                "y"
+              ]
+            },
+            "roots": {
+              "show": false
+            }
+          },
+          "domain": {
+            "x": [
+              -1,
+              5
+            ],
+            "y": [
+              -4,
+              5
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 90,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función lineal",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.1",
+        "evidence_desc": "Calcula la pendiente de una recta a partir de dos puntos."
+      },
+      "stem": "Considere la gráfica de la función lineal $g(x) = mx + b$ que pasa por los puntos $(-2, 0)$ y $(0, 4)$:",
+      "options": {
+        "A": "$m = 2$",
+        "B": "$m = -2$",
+        "C": "$m = \\frac{1}{2}$",
+        "D": "$m = -\\frac{1}{2}$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La pendiente $m$ de una recta que pasa por $(x_1, y_1)$ y $(x_2, y_2)$ se calcula como $m = \\frac{y_2 - y_1}{x_2 - x_1}$.",
+        "Sustituyendo $(-2, 0)$ y $(0, 4)$: $m = \\frac{4 - 0}{0 - (-2)} = \\frac{4}{2} = 2$.",
+        "Por lo tanto, la pendiente es $m = 2$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Recta pasando por (-2,0) y (0,4)",
+        "visual": {
+          "type": "function_plot",
+          "form": "linear",
+          "params": {
+            "m": 2,
+            "b": 4
+          },
+          "domain": {
+            "x": [
+              -4,
+              3
+            ],
+            "y": [
+              -2,
+              6
+            ]
+          },
+          "annotations": {
+            "vertex": {
+              "show": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 91,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función inversa",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.2",
+        "evidence_desc": "Identifica la gráfica de la función inversa por simetría sobre la recta y = x."
+      },
+      "stem": "Si la función $f(x) = 2x - 2$ tiene como intersección con el eje $y$ el punto $(0, -2)$ y con el eje $x$ el punto $(1, 0)$, ¿cuál de las siguientes opciones representa la gráfica de su función inversa $f^{-1}$?",
+      "options": {
+        "A": "Gráfica A (pasa por $(-2, 0)$ y $(0, 1)$)",
+        "B": "Gráfica B (pasa por $(2, 0)$ y $(0, -1)$)",
+        "C": "Gráfica C (pasa por $(0, -2)$ y $(1, 0)$)",
+        "D": "Gráfica D (pasa por $(-1, 0)$ y $(0, 2)$)"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Los puntos de la función inversa $f^{-1}$ se obtienen intercambiando las coordenadas $(x, y) \\to (y, x)$.",
+        "Dado que $f$ pasa por $(0, -2)$ y $(1, 0)$, la inversa $f^{-1}$ debe pasar por $(-2, 0)$ y $(0, 1)$.",
+        "La Opción A muestra la recta que pasa por $(-2, 0)$ y $(0, 1)$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Cuatro gráficas de funciones lineales opciones A-D",
+        "visual": {
+          "type": "multi_view_grid",
+          "layout": {
+            "rows": 2,
+            "cols": 2
+          },
+          "views": [
+            {
+              "label": "A)",
+              "visual": {
+                "type": "function_plot",
+                "form": "linear",
+                "params": {
+                  "m": 0.5,
+                  "b": 1
+                },
+                "domain": {
+                  "x": [
+                    -3,
+                    3
+                  ],
+                  "y": [
+                    -2,
+                    3
+                  ]
+                }
+              }
+            },
+            {
+              "label": "B)",
+              "visual": {
+                "type": "function_plot",
+                "form": "linear",
+                "params": {
+                  "m": 0.5,
+                  "b": -1
+                },
+                "domain": {
+                  "x": [
+                    -3,
+                    3
+                  ],
+                  "y": [
+                    -3,
+                    2
+                  ]
+                }
+              }
+            },
+            {
+              "label": "C)",
+              "visual": {
+                "type": "function_plot",
+                "form": "linear",
+                "params": {
+                  "m": 2,
+                  "b": -2
+                },
+                "domain": {
+                  "x": [
+                    -3,
+                    3
+                  ],
+                  "y": [
+                    -3,
+                    3
+                  ]
+                }
+              }
+            },
+            {
+              "label": "D)",
+              "visual": {
+                "type": "function_plot",
+                "form": "linear",
+                "params": {
+                  "m": 2,
+                  "b": 2
+                },
+                "domain": {
+                  "x": [
+                    -3,
+                    3
+                  ],
+                  "y": [
+                    -2,
+                    4
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 92,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función exponencial",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A3",
+        "evidence": "A3.1",
+        "evidence_desc": "Analiza la monotonicidad de una función exponencial f(x) = a^x."
+      },
+      "stem": "Considere la función exponencial $f(x) = \\left(\\frac{1}{3}\\right)^x$. ¿Cuál de las siguientes afirmaciones respecto a $f$ es correcta?",
+      "options": {
+        "A": "Es estrictamente decreciente en todo su dominio.",
+        "B": "Es estrictamente creciente en todo su dominio.",
+        "C": "Interseca al eje $x$ en el punto $(1, 0)$.",
+        "D": "Su intersección con el eje $y$ es $(0, \\frac{1}{3})$."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "En una función exponencial de la forma $f(x) = a^x$, si $0 < a < 1$, la función es estrictamente decreciente.",
+        "Dado que $a = \\frac{1}{3}$, $0 < \\frac{1}{3} < 1$, la función es estrictamente decreciente en $\\mathbb{R}$.",
+        "Además, $f(0) = \\left(\\frac{1}{3}\\right)^0 = 1$, por lo que interseca al eje $y$ en $(0, 1)$ y nunca interseca al eje $x$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Gráfica de función exponencial decreciente f(x) = (1/3)^x",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -3,
+              3
+            ],
+            "y": [
+              -1,
+              5
+            ]
+          },
+          "children": [
+            {
+              "type": "point",
+              "coords": [
+                0,
+                1
+              ],
+              "label": "(0,1)",
+              "color": "#2563eb"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -1,
+                3
+              ],
+              "label": "(-1,3)",
+              "color": "#1e293b"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                0.33
+              ],
+              "label": "(1, 1/3)",
+              "color": "#1e293b"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 93,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función logarítmica",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A3",
+        "evidence": "A3.2",
+        "evidence_desc": "Identifica las características de la función logarítmica."
+      },
+      "stem": "Considere la función logarítmica $h(x) = \\log_2(x)$. ¿Cuál es la recta asíntota de la gráfica de $h$?",
+      "options": {
+        "A": "La recta $y = 0$ (eje $x$)",
+        "B": "La recta $x = 0$ (eje $y$)",
+        "C": "La recta $y = 1$",
+        "D": "La recta $x = 1$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La función logarítmica $h(x) = \\log_a(x)$ con $a > 0, a \\neq 1$ tiene como dominio $]0, +\\infty[$.",
+        "A medida que $x \\to 0^+$, $h(x) \\to -\\infty$, por lo que el eje $y$ (la recta $x = 0$) es una asíntota vertical."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Gráfica de función logarítmica h(x) = log2(x)",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -1,
+              5
+            ],
+            "y": [
+              -3,
+              3
+            ]
+          },
+          "children": [
+            {
+              "type": "point",
+              "coords": [
+                1,
+                0
+              ],
+              "label": "(1,0)",
+              "color": "#2563eb"
+            },
+            {
+              "type": "point",
+              "coords": [
+                2,
+                1
+              ],
+              "label": "(2,1)",
+              "color": "#1e293b"
+            },
+            {
+              "type": "point",
+              "coords": [
+                4,
+                2
+              ],
+              "label": "(4,2)",
+              "color": "#1e293b"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 94,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función cuadrática",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.3",
+        "evidence_desc": "Calcula la ecuación del eje de simetría de una parábola."
+      },
+      "stem": "Dada la función cuadrática $f(x) = -x^2 + 6x - 5$, ¿cuál es la ecuación de su eje de simetría?",
+      "options": {
+        "A": "$x = 3$",
+        "B": "$x = -3$",
+        "C": "$x = 6$",
+        "D": "$x = 4$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El eje de simetría de una parábola dada por $f(x) = ax^2 + bx + c$ es la recta vertical $x = -\\frac{b}{2a}$.",
+        "Para $a = -1$, $b = 6$: $x = -\\frac{6}{2(-1)} = \\frac{-6}{-2} = 3$.",
+        "Por lo tanto, la ecuación del eje de simetría es $x = 3$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Parábola abre hacia abajo con eje de simetría en x = 3",
+        "visual": {
+          "type": "function_plot",
+          "form": "quadratic",
+          "params": {
+            "a": -1,
+            "b": 6,
+            "c": -5,
+            "vertex": [
+              3,
+              4
+            ],
+            "roots": [
+              1,
+              5
+            ]
+          },
+          "annotations": {
+            "axis_of_symmetry": {
+              "show": true,
+              "x": 3
+            },
+            "vertex": {
+              "show": true,
+              "label": "V(3, 4)"
+            },
+            "roots": {
+              "show": true,
+              "labels": [
+                "1",
+                "5"
+              ]
+            }
+          },
+          "domain": {
+            "x": [
+              -1,
+              7
+            ],
+            "y": [
+              -2,
+              6
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 95,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función lineal — Criterio de paralelismo",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.4",
+        "evidence_desc": "Determina el criterio de una recta paralela a otra dada."
+      },
+      "stem": "Considere la recta $L_1$ definida por $y = 3x - 2$. ¿Cuál de las siguientes rectas es paralela a $L_1$ y pasa por el punto $(1, 5)$?",
+      "options": {
+        "A": "$y = 3x + 2$",
+        "B": "$y = -3x + 8$",
+        "C": "$y = \\frac{1}{3}x + \\frac{14}{3}$",
+        "D": "$y = 3x - 5$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Dos rectas son paralelas si y solo si sus pendientes son iguales: $m_2 = m_1 = 3$.",
+        "Utilizando la forma punto-pendiente con $(x_1, y_1) = (1, 5)$: $y - 5 = 3(x - 1) \\implies y - 5 = 3x - 3 \\implies y = 3x + 2$.",
+        "Por lo tanto, la ecuación es $y = 3x + 2$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Dos rectas paralelas con pendiente m = 3",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -2,
+              4
+            ],
+            "y": [
+              -4,
+              8
+            ]
+          },
+          "children": [
+            {
+              "type": "line",
+              "p1": [
+                -1,
+                -5
+              ],
+              "p2": [
+                2,
+                4
+              ],
+              "color": "#2563eb",
+              "strokeWidth": 2,
+              "label": "L1: y=3x-2"
+            },
+            {
+              "type": "line",
+              "p1": [
+                -1,
+                -1
+              ],
+              "p2": [
+                2,
+                8
+              ],
+              "color": "#e11d48",
+              "strokeWidth": 2,
+              "label": "L2: y=3x+2"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                5
+              ],
+              "label": "(1,5)",
+              "color": "#e11d48"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 96,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función raíz cuadrada",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A1",
+        "evidence": "A1.3",
+        "evidence_desc": "Determina el dominio máximo de una función raíz cuadrada."
+      },
+      "stem": "Considere la función $f(x) = \\sqrt{x - 4}$. ¿Cuál es el dominio máximo de $f$?",
+      "options": {
+        "A": "$[4, +\\infty[$",
+        "B": "$]- \\infty, 4]$",
+        "C": "$[0, +\\infty[$",
+        "D": "$\\mathbb{R}$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Para que la función raíz cuadrada con índice par esté definida en los números reales, el subradical debe ser mayor o igual a cero.",
+        "$x - 4 \\ge 0 \\implies x \\ge 4$.",
+        "Por lo tanto, el dominio máximo es $[4, +\\infty[$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Gráfica de función raíz cuadrada f(x) = sqrt(x-4) initiating at x=4",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -1,
+              10
+            ],
+            "y": [
+              -1,
+              4
+            ]
+          },
+          "children": [
+            {
+              "type": "point",
+              "coords": [
+                4,
+                0
+              ],
+              "label": "(4,0)",
+              "color": "#2563eb"
+            },
+            {
+              "type": "point",
+              "coords": [
+                5,
+                1
+              ],
+              "label": "(5,1)",
+              "color": "#1e293b"
+            },
+            {
+              "type": "point",
+              "coords": [
+                8,
+                2
+              ],
+              "label": "(8,2)",
+              "color": "#1e293b"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 97,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Sistemas de ecuaciones lineales",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A4",
+        "evidence": "A4.1",
+        "evidence_desc": "Resuelve problemas mediante sistemas de dos ecuaciones lineales."
+      },
+      "stem": "En una tienda de deportes se vendieron un total de 30 balones entre fútbol y baloncesto. Los balones de fútbol cuestan ₡10 000 cada uno y los de baloncesto ₡15 000. Si el ingreso total por la venta fue de ₡360 000, ¿cuántos balones de baloncesto se vendieron?",
+      "options": {
+        "A": "12",
+        "B": "18",
+        "C": "15",
+        "D": "20"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Sea $x$ la cantidad de balones de fútbol e $y$ la de baloncesto.",
+        "Ecuación de cantidad: $x + y = 30 \\implies x = 30 - y$.",
+        "Ecuación de dinero: $10000x + 15000y = 360000 \\implies 10x + 15y = 360$.",
+        "Sustituyendo $x$: $10(30 - y) + 15y = 360 \\implies 300 - 10y + 15y = 360 \\implies 5y = 60 \\implies y = 12$.",
+        "Se vendieron 12 balones de baloncesto."
+      ],
+      "group_id": null,
       "visual_spec": null
+    },
+    {
+      "id": 98,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función lineal — Modelado",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.5",
+        "evidence_desc": "Interpreta el significado de la pendiente y la intersección en un contexto real."
+      },
+      "stem": "El costo $C(x)$ en colones de fabricar $x$ camisetas se modela por la función $C(x) = 2500x + 40000$. En este contexto, ¿qué representa el valor $40000$?",
+      "options": {
+        "A": "El costo fijo inicial de producción.",
+        "B": "El costo de producir una camiseta individual.",
+        "C": "La cantidad máxima de camisetas que se pueden fabricar.",
+        "D": "La ganancia por cada camiseta vendida."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "En la función lineal $C(x) = mx + b$, $m = 2500$ representa el costo variable por unidad producida ($x$).",
+        "El valor constante $b = 40000$ corresponde al costo cuando $x = 0$ ($C(0) = 40000$), es decir, el costo fijo inicial (alquiler, equipo, etc.)."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Gráfica de costo lineal C(x) = 2500x + 40000",
+        "visual": {
+          "type": "function_plot",
+          "form": "linear",
+          "params": {
+            "m": 2.5,
+            "b": 40
+          },
+          "domain": {
+            "x": [
+              0,
+              20
+            ],
+            "y": [
+              0,
+              100
+            ]
+          },
+          "x_label": "Camisetas (x)",
+          "y_label": "Costo en miles (C)"
+        }
+      }
+    },
+    {
+      "id": 99,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Intersección de funciones",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.6",
+        "evidence_desc": "Determina los puntos de intersección entre una recta y una parábola."
+      },
+      "stem": "Considere las funciones $f(x) = x^2$ y $g(x) = x + 2$. ¿Cuáles son las abscisas ($x$) de los puntos donde se intersecan las gráficas de $f$ y $g$?",
+      "options": {
+        "A": "$x = -1$ y $x = 2$",
+        "B": "$x = 1$ y $x = -2$",
+        "C": "$x = 0$ y $x = 2$",
+        "D": "$x = -1$ y $x = -2$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Para hallar las intersecciones, igualamos las expresiones: $f(x) = g(x) \\implies x^2 = x + 2$.",
+        "Reordenando a la forma estándar: $x^2 - x - 2 = 0$.",
+        "Factorizando: $(x - 2)(x + 1) = 0 \\implies x = 2$ ó $x = -1$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Intersección de parábola y recta en x = -1 y x = 2",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -3,
+              4
+            ],
+            "y": [
+              -1,
+              6
+            ]
+          },
+          "children": [
+            {
+              "type": "line",
+              "p1": [
+                -2,
+                0
+              ],
+              "p2": [
+                3,
+                5
+              ],
+              "color": "#e11d48",
+              "strokeWidth": 2,
+              "label": "y = x+2"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -1,
+                1
+              ],
+              "label": "(-1,1)",
+              "color": "#2563eb"
+            },
+            {
+              "type": "point",
+              "coords": [
+                2,
+                4
+              ],
+              "label": "(2,4)",
+              "color": "#2563eb"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 100,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Composición de funciones",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A1",
+        "evidence": "A1.4",
+        "evidence_desc": "Evalúa la composición de dos funciones (g o f)(x)."
+      },
+      "stem": "Dadas las funciones $f(x) = 2x + 3$ y $g(x) = x^2 - 1$, ¿cuál es el criterio de la función compuesta $(g \\circ f)(x)$?",
+      "options": {
+        "A": "4x^2 + 12x + 8",
+        "B": "2x^2 + 1",
+        "C": "4x^2 + 9",
+        "D": "4x^2 + 12x + 10"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Por definición, $(g \\circ f)(x) = g(f(x))$.",
+        "Sustituyendo $f(x) = 2x + 3$ en $g$: $g(2x + 3) = (2x + 3)^2 - 1$.",
+        "Desarrollando el binomio al cuadrado: $(2x)^2 + 2(2x)(3) + 3^2 - 1 = 4x^2 + 12x + 9 - 1 = 4x^2 + 12x + 8$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 101,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Transformaciones de funciones",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.7",
+        "evidence_desc": "Determina el criterio de una función trasladada horizontal y verticalmente."
+      },
+      "stem": "Si la gráfica de $f(x) = x^2$ se traslada 3 unidades a la derecha y 2 unidades hacia arriba para obtener $g(x)$, ¿cuál es el criterio de $g(x)$?",
+      "options": {
+        "A": "g(x) = (x - 3)^2 + 2",
+        "B": "g(x) = (x + 3)^2 + 2",
+        "C": "g(x) = (x - 3)^2 - 2",
+        "D": "g(x) = (x + 3)^2 - 2"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Una traslación de $h$ unidades a la derecha sustituye $x$ por $(x - h)$. Aquí $h = 3$, por lo que queda $(x - 3)^2$.",
+        "Una traslación de $k$ unidades hacia arriba suma $k$ al final. Aquí $k = 2$.",
+        "Por lo tanto, el nuevo criterio es $g(x) = (x - 3)^2 + 2$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Parábola trasladada con vértice en (3, 2)",
+        "visual": {
+          "type": "function_plot",
+          "form": "quadratic",
+          "params": {
+            "a": 1,
+            "vertex": [
+              3,
+              2
+            ]
+          },
+          "annotations": {
+            "vertex": {
+              "show": true,
+              "label": "V(3, 2)",
+              "project_to": [
+                "x",
+                "y"
+              ]
+            }
+          },
+          "domain": {
+            "x": [
+              -1,
+              6
+            ],
+            "y": [
+              0,
+              8
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 102,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función exponencial — Modelado",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A3",
+        "evidence": "A3.3",
+        "evidence_desc": "Evalúa un modelo exponencial de crecimiento poblacional."
+      },
+      "stem": "La población de bacterias en un cultivo después de $t$ horas está dada por $P(t) = 500 \\cdot 2^t$. ¿Cuántas bacterias habrá al cabo de 4 horas?",
+      "options": {
+        "A": "8000",
+        "B": "4000",
+        "C": "2000",
+        "D": "16000"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Para $t = 4$, sustituimos en el modelo: $P(4) = 500 \\cdot 2^4$.",
+        "Calculando la potencia: $2^4 = 16$.",
+        "Multiplicando: $P(4) = 500 \\cdot 16 = 8000$ bacterias."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 103,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Ecuaciones logarítmicas",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A3",
+        "evidence": "A3.4",
+        "evidence_desc": "Resuelve ecuaciones logarítmicas simples."
+      },
+      "stem": "Considere la ecuación $\\log_3(2x - 1) = 2$. ¿Cuál es el valor de $x$?",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "9",
+        "D": "8"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Convertimos la ecuación logarítmica a forma exponencial: $\\log_a(M) = N \\iff M = a^N$.",
+        "$2x - 1 = 3^2 \\implies 2x - 1 = 9$.",
+        "Sumando 1: $2x = 10 \\implies x = 5$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 104,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Dominio y ámbito de funciones",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A1",
+        "evidence": "A1.5",
+        "evidence_desc": "Calcula el ámbito de una función lineal con dominio restringido."
+      },
+      "stem": "Sea $f: [-1, 4] \\to \\mathbb{R}$ dada por $f(x) = 3x - 2$. ¿Cuál es el ámbito de $f$?",
+      "options": {
+        "A": "[-5, 10]",
+        "B": "[-1, 4]",
+        "C": "[1, 10]",
+        "D": "[-5, 12]"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Dado que $f$ es estrictamente creciente ($m = 3 > 0$), el valor mínimo ocurre en el extremo izquierdo $x = -1$ y el máximo en $x = 4$.",
+        "$f(-1) = 3(-1) - 2 = -3 - 2 = -5$.",
+        "$f(4) = 3(4) - 2 = 12 - 2 = 10$.",
+        "Por lo tanto, el ámbito es $[-5, 10]$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Segmento de recta f(x) = 3x - 2 en el dominio [-1, 4]",
+        "visual": {
+          "type": "function_plot",
+          "form": "linear",
+          "params": {
+            "m": 3,
+            "b": -2
+          },
+          "domain": {
+            "x": [
+              -2,
+              5
+            ],
+            "y": [
+              -6,
+              12
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 105,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función cuadrática",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.8",
+        "evidence_desc": "Relaciona el signo del discriminante con la cantidad de intersecciones con el eje x."
+      },
+      "stem": "Considere la función cuadrática $f(x) = x^2 - 4x + 4$. ¿Cuántas intersecciones tiene su gráfica con el eje $x$?",
+      "options": {
+        "A": "Exactamente una intersección (el vértice roza el eje $x$).",
+        "B": "Dos intersecciones distintas.",
+        "C": "Ninguna intersección.",
+        "D": "Tres intersecciones."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Calculamos el discriminante $\\Delta = b^2 - 4ac$.",
+        "Para $a = 1, b = -4, c = 4$: $\\Delta = (-4)^2 - 4(1)(4) = 16 - 16 = 0$.",
+        "Cuando $\\Delta = 0$, la gráfica tiene exactamente una intersección con el eje $x$ en el punto $(2, 0)$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Parábola tangencial al eje x en (2,0)",
+        "visual": {
+          "type": "function_plot",
+          "form": "quadratic",
+          "params": {
+            "a": 1,
+            "vertex": [
+              2,
+              0
+            ],
+            "roots": [
+              2
+            ]
+          },
+          "annotations": {
+            "vertex": {
+              "show": true,
+              "label": "(2,0)"
+            }
+          },
+          "domain": {
+            "x": [
+              -1,
+              5
+            ],
+            "y": [
+              -1,
+              5
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 106,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función cuadrática — Problemas de optimización",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.9",
+        "evidence_desc": "Determina el valor máximo o mínimo en problemas de optimización cuadrática."
+      },
+      "stem": "La ganancia diaria $G(x)$ en dólares por la venta de $x$ artículos está dada por $G(x) = -2x^2 + 80x - 300$. ¿Cuántos artículos se deben vender para obtener la ganancia máxima?",
+      "options": {
+        "A": "20 artículos",
+        "B": "40 artículos",
+        "C": "50 artículos",
+        "D": "80 artículos"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Dado que $a = -2 < 0$, la función alcanza su valor máximo en la abscisa del vértice $x_v = -\\frac{b}{2a}$.",
+        "$x_v = -\\frac{80}{2(-2)} = \\frac{-80}{-4} = 20$.",
+        "Se deben vender 20 artículos para maximizar la ganancia."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 107,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Comparación de modelos de funciones",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A3",
+        "evidence": "A3.5",
+        "evidence_desc": "Diferencia entre crecimiento constante (lineal) y crecimiento multiplicativo (exponencial)."
+      },
+      "stem": "Un inversionista analiza dos opciones de ahorro para un capital inicial de $₡100 000$: el Plan A agrega $₡10 000$ fijos cada año, mientras que el Plan B duplica el monto total acumulado cada 5 años. ¿Qué tipos de modelos describen el Plan A y el Plan B respectivamente?",
+      "options": {
+        "A": "Plan A es lineal y Plan B es exponencial.",
+        "B": "Plan A es exponencial y Plan B es lineal.",
+        "C": "Ambos planes se modelan con funciones cuadráticas.",
+        "D": "Ambos planes se modelan con funciones lineales."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Un incremento de una cantidad fija por unidad de tiempo representa una razón de cambio constante, la cual se modela mediante una función lineal $A(t) = 10000t + 100000$.",
+        "Un incremento por factor constante (duplicar) representa una tasa de crecimiento porcentual/multiplicativo, el cual se modela mediante una función exponencial $B(t) = 100000 \\cdot 2^{t/5}$.",
+        "Por lo tanto, Plan A es lineal y Plan B es exponencial."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 108,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función cuadrática — Ceros",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.10",
+        "evidence_desc": "Encuentra las intersecciones con el eje x de una parábola."
+      },
+      "stem": "Considere la gráfica de la función $f(x) = x^2 - 9$:",
+      "options": {
+        "A": "Los ceros de la función son $x = -3$ y $x = 3$.",
+        "B": "Los ceros de la función son $x = 0$ y $x = 9$.",
+        "C": "El único cero de la función es $x = 9$.",
+        "D": "La función no tiene ceros reales."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Los ceros de la función ocurren cuando $f(x) = 0 \\implies x^2 - 9 = 0$.",
+        "Factorizando la diferencia de cuadrados: $(x - 3)(x + 3) = 0 \\implies x = 3$ ó $x = -3$.",
+        "Por lo tanto, interseca al eje $x$ en $(-3, 0)$ y $(3, 0)$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Parábola x^2 - 9 con ceros en x = -3 y x = 3",
+        "visual": {
+          "type": "function_plot",
+          "form": "quadratic",
+          "params": {
+            "a": 1,
+            "vertex": [
+              0,
+              -9
+            ],
+            "roots": [
+              -3,
+              3
+            ]
+          },
+          "annotations": {
+            "roots": {
+              "show": true,
+              "labels": [
+                "-3",
+                "3"
+              ]
+            }
+          },
+          "domain": {
+            "x": [
+              -5,
+              5
+            ],
+            "y": [
+              -10,
+              4
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 109,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función lineal — Perpendicularidad",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.11",
+        "evidence_desc": "Calcula la pendiente de una recta perpendicular."
+      },
+      "stem": "Si la recta $L_1$ tiene como criterio $y = -\\frac{2}{5}x + 1$, ¿cuál es la pendiente de cualquier recta $L_2$ perpendicular a $L_1$?",
+      "options": {
+        "A": "m_2 = \\frac{5}{2}",
+        "B": "m_2 = -\\frac{5}{2}",
+        "C": "m_2 = \\frac{2}{5}",
+        "D": "m_2 = -\\frac{2}{5}"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Dos rectas no verticales son perpendiculares si y solo si el producto de sus pendientes es $-1$: $m_1 \\cdot m_2 = -1$.",
+        "Dado $m_1 = -\\frac{2}{5}$, despejamos $m_2 = -\\frac{1}{m_1} = -\\frac{1}{-2/5} = \\frac{5}{2}$.",
+        "Por lo tanto, la pendiente es $\\frac{5}{2}$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 110,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función logarítmica",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A3",
+        "evidence": "A3.6",
+        "evidence_desc": "Analiza el comportamiento creciente de una función logarítmica."
+      },
+      "stem": "Considere la función $g(x) = \\log_{10}(x)$. ¿En cuál de los siguientes intervalos la función es estrictamente creciente?",
+      "options": {
+        "A": "$]0, +\\infty[$",
+        "B": "$]-\\infty, 0[$",
+        "C": "$[1, +\\infty[$ únicamente",
+        "D": "En ningún intervalo"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Toda función logarítmica $g(x) = \\log_a(x)$ con base $a > 1$ (aquí $a = 10$) es estrictamente creciente en todo su dominio.",
+        "El dominio de la función logarítmica es el conjunto de números reales positivos $]0, +\\infty[$.",
+        "Por lo tanto, es estrictamente creciente en $]0, +\\infty[$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Gráfica creciente de log10(x)",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -1,
+              10
+            ],
+            "y": [
+              -2,
+              2
+            ]
+          },
+          "children": [
+            {
+              "type": "point",
+              "coords": [
+                1,
+                0
+              ],
+              "label": "(1,0)",
+              "color": "#2563eb"
+            },
+            {
+              "type": "point",
+              "coords": [
+                10,
+                1
+              ],
+              "label": "(10,1)",
+              "color": "#1e293b"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 111,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Dominio de funciones",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A1",
+        "evidence": "A1.6",
+        "evidence_desc": "Determina las restricciones del dominio para expresiones racionales."
+      },
+      "stem": "Considere la función $f(x) = \\frac{x + 2}{x - 3}$. ¿Cuál es el dominio máximo de $f$ en los números reales?",
+      "options": {
+        "A": "\\mathbb{R} \\setminus \\{3\\}",
+        "B": "\\mathbb{R} \\setminus \\{-2\\}",
+        "C": "]3, +\\infty[",
+        "D": "\\mathbb{R}"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Para que una expresión racional esté definida en $\\mathbb{R}$, el denominador no puede ser igual a cero.",
+        "$x - 3 \\neq 0 \\implies x \\neq 3$.",
+        "Por lo tanto, el dominio máximo es $\\mathbb{R} \\setminus \\{3\\}$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 112,
+      "set_id": "set_2",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función cuadrática",
+      "spec": {
+        "block": "Relaciones y Álgebra",
+        "affirmation": "A2",
+        "evidence": "A2.12",
+        "evidence_desc": "Determina las coordenadas del punto de intersección con el eje y."
+      },
+      "stem": "Dada la función cuadrática $f(x) = 2x^2 - 5x + 7$, ¿cuál es el punto de intersección de su gráfica con el eje $y$?",
+      "options": {
+        "A": "(0, 7)",
+        "B": "(7, 0)",
+        "C": "(0, -5)",
+        "D": "(0, 2)"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La intersección con el eje $y$ de cualquier función se obtiene evaluando $x = 0$.",
+        "$f(0) = 2(0)^2 - 5(0) + 7 = 7$.",
+        "Por lo tanto, el punto de intersección es $(0, 7)$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 113,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Medidas de posición",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A1",
+        "evidence": "A1.1",
+        "evidence_desc": "Calcula la media aritmética a partir de una tabla de distribución de frecuencias."
+      },
+      "stem": "En un hospital se registró el número de días de internamiento de 50 pacientes. Los resultados se resumen en la siguiente tabla:",
+      "options": {
+        "A": "3,2 días",
+        "B": "3,0 días",
+        "C": "3,5 días",
+        "D": "2,8 días"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Para hallar la media aritmética $\\bar{x}$, sumamos los productos de cada valor por su frecuencia y dividimos entre el total $N = 50$:",
+        "$\\sum x_i f_i = (1 \\cdot 10) + (2 \\cdot 15) + (4 \\cdot 15) + (5 \\cdot 10) = 10 + 30 + 60 + 50 = 160$.",
+        "$\\bar{x} = \\frac{160}{50} = 3,2$ días."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Tabla de frecuencias de días de internamiento",
+        "visual": {
+          "type": "table",
+          "variant": "frequency_table",
+          "headers": [
+            "Días de internamiento (x)",
+            "Cantidad de pacientes (f)"
+          ],
+          "rows": [
+            [
+              "1 día",
+              "10"
+            ],
+            [
+              "2 días",
+              "15"
+            ],
+            [
+              "4 días",
+              "15"
+            ],
+            [
+              "5 días",
+              "10"
+            ]
+          ],
+          "total_row": [
+            "Total",
+            "50"
+          ]
+        }
+      }
+    },
+    {
+      "id": 114,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Medidas de posición y dispersión",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A1",
+        "evidence": "A1.2",
+        "evidence_desc": "Identifica los cinco números resumen a partir de un diagrama de caja."
+      },
+      "stem": "El siguiente diagrama de caja representa los salarios mensuales, en miles de colones, de los empleados de una PYME:",
+      "options": {
+        "A": "El recorrido intercuartílico (RIC) es 200 mil colones.",
+        "B": "La mediana del salario es 350 mil colones.",
+        "C": "El 50% de los empleados gana entre 400 y 600 mil colones.",
+        "D": "El salario máximo es 500 mil colones."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Del diagrama de caja obtenemos: $M\\text{ín} = 250$, $Q_1 = 350$, $M\\text{ediana} = 450$, $Q_3 = 550$, $M\\text{áx} = 700$.",
+        "El recorrido intercuartílico es $RIC = Q_3 - Q_1 = 550 - 350 = 200$ miles de colones.",
+        "Por lo tanto, la opción A es totalmente correcta."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Diagrama de caja de salarios en miles de colones",
+        "visual": {
+          "type": "box_plot",
+          "min": 250,
+          "q1": 350,
+          "median": 450,
+          "q3": 550,
+          "max": 700,
+          "axis": {
+            "label": "Salarios en miles de ₡",
+            "min": 200,
+            "max": 750
+          }
+        }
+      }
+    },
+    {
+      "id": 115,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Asimetría de la distribución",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A2",
+        "evidence": "A2.1",
+        "evidence_desc": "Identifica la relación entre media, mediana y moda en una distribución con asimetría positiva."
+      },
+      "stem": "Considere la siguiente gráfica que muestra la distribución de tiempos de espera en minutos en una ventanilla de servicios:",
+      "options": {
+        "A": "Presenta asimetría positiva (sesgada a la derecha), cumpliéndose $Moda < Mediana < Media$.",
+        "B": "Presenta asimetría negativa (sesgada a la izquierda), cumpliéndose $Media < Mediana < Moda$.",
+        "C": "Es una distribución perfectamente simétrica donde $Media = Mediana = Moda$.",
+        "D": "La moda es igual a 25 minutos."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "En una gráfica con la cola más larga hacia la derecha (asimetría positiva o sesgada a la derecha), la moda está en el pico más alto a la izquierda, la mediana en el centro y la media es arrastrada hacia valores mayores por la cola derecha.",
+        "Por lo tanto, la relación de orden es $\\text{Moda} < \\text{Mediana} < \\text{Media}$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Curva de distribución con asimetría positiva (sesgada a la derecha)",
+        "visual": {
+          "type": "distribution_curve",
+          "skew": "positive",
+          "markers": [
+            {
+              "label": "Moda (10)",
+              "value": 10,
+              "dashed": true
+            },
+            {
+              "label": "Mediana (15)",
+              "value": 15,
+              "dashed": true
+            },
+            {
+              "label": "Media (20)",
+              "value": 20,
+              "dashed": true
+            }
+          ],
+          "x_axis": {
+            "label": "Tiempo de espera (min)",
+            "ticks": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              30
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 116,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Probabilidad y Teoría de Conjuntos",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A3",
+        "evidence": "A3.1",
+        "evidence_desc": "Calcula probabilidades a partir de un diagrama de Venn de dos conjuntos."
+      },
+      "stem": "En un grupo de 60 estudiantes, 35 practican Baloncesto (B), 25 practican Natación (N) y 10 practican ambos deportes. El siguiente diagrama ilustra la distribución:",
+      "options": {
+        "A": "\\frac{10}{60} = \\frac{1}{6}",
+        "B": "\\frac{25}{60} = \\frac{5}{12}",
+        "C": "\\frac{50}{60} = \\frac{5}{6}",
+        "D": "\\frac{15}{60} = \\frac{1}{4}"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El número de estudiantes que practican ambos deportes corresponden a la intersección $B \\cap N$, que según el enunciado es 10.",
+        "El total de estudiantes es 60.",
+        "Por la regla de Laplace: $P(B \\cap N) = \\frac{10}{60} = \\frac{1}{6}$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Diagrama de Venn de 2 conjuntos Baloncesto y Natación",
+        "visual": {
+          "type": "venn_diagram",
+          "sets": [
+            "Baloncesto (B)",
+            "Natación (N)"
+          ],
+          "region_values": {
+            "A_only": 25,
+            "B_only": 15,
+            "A_B_only": 10,
+            "outside": 10
+          },
+          "total": 60
+        }
+      }
+    },
+    {
+      "id": 117,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Posición relativa (z-score)",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A2",
+        "evidence": "A2.2",
+        "evidence_desc": "Compara la posición relativa (estandarización z) de dos observaciones de distintas poblaciones."
+      },
+      "stem": "Carlos obtuvo una nota de 85 en Matemáticas (media $\\bar{x} = 75$, desviación estándar $s = 5$) y una nota de 88 in Español (media $\\bar{x} = 80$, desviación estándar $s = 8$). ¿En cuál asignatura tuvo Carlos una mejor posición relativa respecto a su grupo?",
+      "options": {
+        "A": "En Matemáticas, pues su puntuación estandarizada ($z = 2,0$) es mayor que en Español ($z = 1,0$).",
+        "B": "En Español, pues obtuvo una calificación más alta (88 frente a 85).",
+        "C": "En ambas tuvo exactamente la misma posición relativa.",
+        "D": "En Español, pues la media del grupo fue mayor."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Calculamos la nota estandarizada $z = \\frac{x - \\bar{x}}{s}$ para cada materia:",
+        "Matemáticas: $z_{Mat} = \\frac{85 - 75}{5} = \\frac{10}{5} = 2,0$.",
+        "Español: $z_{Esp} = \\frac{88 - 80}{8} = \\frac{8}{8} = 1,0$.",
+        "Como $z_{Mat} > z_{Esp}$ ($2,0 > 1,0$), Carlos tuvo un desempeño relativo significativamente mejor en Matemáticas."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Tabla comparativa de calificaciones y estadísticos",
+        "visual": {
+          "type": "table",
+          "variant": "stats_table",
+          "headers": [
+            "Asignatura",
+            "Nota (x)",
+            "Media (x̄)",
+            "Desviación (s)",
+            "Z-score"
+          ],
+          "rows": [
+            [
+              "Matemáticas",
+              "85",
+              "75",
+              "5",
+              "z = +2,0"
+            ],
+            [
+              "Español",
+              "88",
+              "80",
+              "8",
+              "z = +1,0"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": 118,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Análisis de diagramas de caja",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A1",
+        "evidence": "A1.3",
+        "evidence_desc": "Interpreta los porcentajes acumulados por cuartiles en un diagrama de caja."
+      },
+      "stem": "Un estudio sobre las edades de 200 participantes en una carrera arrojó los cuartiles $Q_1 = 22$ años, $Q_2 = 30$ años y $Q_3 = 42$ años. ¿Cuántos participantes tienen al menos 30 años?",
+      "options": {
+        "A": "100 participantes",
+        "B": "50 participantes",
+        "C": "150 participantes",
+        "D": "75 participantes"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La mediana $Q_2 = 30$ divide la distribución en dos partes iguales, exactamente el 50% por debajo y el 50% por encima.",
+        "Tener 'al menos 30 años' significa tener 30 años o más (el 50% superior).",
+        "50% de 200 participantes $= 0,50 \\cdot 200 = 100$ participantes."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Diagrama de caja con Q1=22, Q2=30, Q3=42",
+        "visual": {
+          "type": "box_plot",
+          "min": 18,
+          "q1": 22,
+          "median": 30,
+          "q3": 42,
+          "max": 65,
+          "axis": {
+            "label": "Edad en años",
+            "min": 15,
+            "max": 70
+          }
+        }
+      }
+    },
+    {
+      "id": 119,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Probabilidad condicional",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A3",
+        "evidence": "A3.2",
+        "evidence_desc": "Calcula probabilidades condicionales a partir de una tabla de contingencia."
+      },
+      "stem": "Considere la siguiente tabla de contingencia sobre la preferencia de modalidad de estudio en un instituto según el género:",
+      "options": {
+        "A": "\\frac{30}{60} = 0,50",
+        "B": "\\frac{30}{100} = 0,30",
+        "C": "\\frac{30}{50} = 0,60",
+        "D": "\\frac{20}{60} = 0,33"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Nos piden la probabilidad de que prefiera la modalidad Presencial dado que es Mujer: $P(\\text{Presencial} \\mid \\text{Mujer})$.",
+        "El espacio muestral restringido son las mujeres (total = 60).",
+        "De esas 60 mujeres, 30 prefieren modalidad Presencial.",
+        "Por lo tanto, la probabilidad es $\\frac{30}{60} = 0,50$ (50%)."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Tabla de contingencia género vs modalidad",
+        "visual": {
+          "type": "table",
+          "variant": "contingency_table",
+          "headers": [
+            "Género / Modalidad",
+            "Presencial",
+            "Virtual",
+            "Total"
+          ],
+          "rows": [
+            [
+              "Hombre",
+              "20",
+              "20",
+              "40"
+            ],
+            [
+              "Mujer",
+              "30",
+              "30",
+              "60"
+            ]
+          ],
+          "total_row": [
+            "Total",
+            "50",
+            "50",
+            "100"
+          ]
+        }
+      }
+    },
+    {
+      "id": 120,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Medidas de posición — Promedio ponderado",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A1",
+        "evidence": "A1.4",
+        "evidence_desc": "Calcula el promedio ponderado en una escala de porcentajes."
+      },
+      "stem": "La calificación final de un curso se calcula mediante los siguientes porcentajes: Exámenes 50%, Tareas 30% y Proyecto 20%. Si un estudiante obtuvo 80 en Exámenes, 90 en Tareas y 70 en Proyecto, ¿cuál es su nota final ponderada?",
+      "options": {
+        "A": "81",
+        "B": "80",
+        "C": "83",
+        "D": "85"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Multiplicamos cada nota por su peso relativo en decimales:",
+        "Exámenes: $80 \\cdot 0,50 = 40$.",
+        "Tareas: $90 \\cdot 0,30 = 27$.",
+        "Proyecto: $70 \\cdot 0,20 = 14$.",
+        "Suma ponderada total: $40 + 27 + 14 = 81$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Tabla de pesos y notas para promedio ponderado",
+        "visual": {
+          "type": "table",
+          "variant": "weighted_table",
+          "headers": [
+            "Evaluación",
+            "Porcentaje (Peso)",
+            "Nota Obtenida"
+          ],
+          "rows": [
+            [
+              "Exámenes",
+              "50%",
+              "80"
+            ],
+            [
+              "Tareas",
+              "30%",
+              "90"
+            ],
+            [
+              "Proyecto",
+              "20%",
+              "70"
+            ]
+          ],
+          "total_row": [
+            "Total",
+            "100%",
+            "Nota Final: 81"
+          ]
+        }
+      }
+    },
+    {
+      "id": 121,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Medidas de variabilidad — Coeficiente de variación",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A2",
+        "evidence": "A2.3",
+        "evidence_desc": "Compara la variabilidad relativa de dos grupos."
+      },
+      "stem": "Dos secciones de décimo año realizaron el mismo examen de Matemática. La Sección A tuvo una media $\\bar{x} = 80$ y desviación $s = 8$. La Sección B tuvo una media $\\bar{x} = 60$ y desviación $s = 9$. ¿Cuál de las secciones presentó mayor variabilidad relativa (CV)?",
+      "options": {
+        "A": "La Sección B ($CV = 15\\%$), por tener mayor coeficiente de variación que la Sección A ($CV = 10\\%$).",
+        "B": "La Sección A, por tener una media más alta.",
+        "C": "Ambas secciones tuvieron exactamente la misma variabilidad relativa.",
+        "D": "La Sección A, pues su desviación estándar es menor."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El coeficiente de variación ($CV$) mide la variabilidad relativa: $CV = \\frac{s}{\\bar{x}} \\cdot 100\\%$.",
+        "Sección A: $CV_A = \\frac{8}{80} \\cdot 100\\% = 0,10 \\cdot 100\\% = 10\\%$.",
+        "Sección B: $CV_B = \\frac{9}{60} \\cdot 100\\% = 0,15 \\cdot 100\\% = 15\\%$.",
+        "Como $15\\% > 10\\%$, la Sección B presenta mayor variabilidad relativa."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Tabla comparativa de promedios y desviaciones de secciones A y B",
+        "visual": {
+          "type": "table",
+          "variant": "stats_table",
+          "headers": [
+            "Sección",
+            "Media (x̄)",
+            "Desviación (s)",
+            "CV (%)"
+          ],
+          "rows": [
+            [
+              "Sección A",
+              "80",
+              "8",
+              "10%"
+            ],
+            [
+              "Sección B",
+              "60",
+              "9",
+              "15%"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": 122,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Probabilidad de eventos",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A3",
+        "evidence": "A3.3",
+        "evidence_desc": "Aplica la regla de la suma para eventos mutuamente excluyentes."
+      },
+      "stem": "En una caja hay únicamente fichas rojas, verdes y azules. Si la probabilidad de extraer una ficha roja es $P(R) = 0,35$ y de extraer una verde es $P(V) = 0,40$, ¿cuál es la probabilidad de extraer una ficha roja o verde?",
+      "options": {
+        "A": "0,75",
+        "B": "0,14",
+        "C": "0,25",
+        "D": "0,50"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Los eventos $R$ (extraer roja) y $V$ (extraer verde) son mutuamente excluyentes (una ficha no puede ser roja y verde a la vez).",
+        "Por la regla de la suma para eventos incompatibles: $P(R \\cup V) = P(R) + P(V)$.",
+        "$P(R \\cup V) = 0,35 + 0,40 = 0,75$ (75%)."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 123,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Distribución simétrica",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A2",
+        "evidence": "A2.4",
+        "evidence_desc": "Reconoce las propiedades de una distribución simétrica."
+      },
+      "stem": "Considere la gráfica de la siguiente distribución de estaturas de un colectivo:",
+      "options": {
+        "A": "Es simétrica, por lo que la media, la mediana y la moda coinciden en 170 cm.",
+        "B": "Tiene asimetría positiva con media mayor que la moda.",
+        "C": "Tiene asimetría negativa con media menor que la moda.",
+        "D": "La mediana es igual a 180 cm."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Una gráfica acampanada con el pico en el centro y colas de igual longitud a ambos lados representa una distribución simétrica (normal).",
+        "En toda distribución simétrica unimodal, las tres medidas de tendencia central son exactamente iguales: $\\text{Media} = \\text{Mediana} = \\text{Moda} = 170$ cm."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Curva de distribución simétrica acampanada centrado en 170",
+        "visual": {
+          "type": "distribution_curve",
+          "skew": "symmetric",
+          "markers": [
+            {
+              "label": "x̄ = Me = Mo (170)",
+              "value": 170,
+              "dashed": true
+            }
+          ],
+          "x_axis": {
+            "label": "Estatura (cm)",
+            "ticks": [
+              150,
+              160,
+              170,
+              180,
+              190
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 124,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Diagramas de Venn de 3 conjuntos",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A3",
+        "evidence": "A3.4",
+        "evidence_desc": "Interpreta regiones en un diagrama de Venn de 3 conjuntos."
+      },
+      "stem": "El siguiente diagrama de Venn muestra la distribución de estudiantes según las materias que cursan: Inglés (I), Francés (F) y Alemán (A):",
+      "options": {
+        "A": "8 estudiantes",
+        "B": "12 estudiantes",
+        "C": "20 estudiantes",
+        "D": "5 estudiantes"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La región central donde se traslapan los tres círculos ($I \\cap F \\cap A$) representa a los estudiantes matriculados en los tres idiomas simultáneamente.",
+        "Mirando el valor en la región central del diagrama (`A_B_C`), hay exactamente 8 estudiantes."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Diagrama de Venn de 3 conjuntos para idiomas I, F, A",
+        "visual": {
+          "type": "venn_diagram",
+          "sets": [
+            "Inglés (I)",
+            "Francés (F)",
+            "Alemán (A)"
+          ],
+          "region_values": {
+            "A_only": 20,
+            "B_only": 15,
+            "C_only": 10,
+            "A_B_only": 6,
+            "A_C_only": 5,
+            "B_C_only": 4,
+            "A_B_C": 8,
+            "outside": 12
+          },
+          "total": 80
+        }
+      }
+    },
+    {
+      "id": 125,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Comparación de distribuciones mediante diagramas de caja",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A1",
+        "evidence": "A1.5",
+        "evidence_desc": "Compara las medianas y rangos entre dos diagramas de caja comparativos."
+      },
+      "stem": "Los siguientes diagramas de caja comparan el tiempo de armado (en minutos) de un producto por dos turnos de trabajo (Turno Mañana y Turno Noche):",
+      "options": {
+        "A": "El Turno Mañana tuvo una mediana menor (25 min) que el Turno Noche (35 min).",
+        "B": "El Turno Mañana fue más lento en promedio que el Turno Noche.",
+        "C": "Ambos turnos tuvieron exactamente la misma dispersión intercuartílica.",
+        "D": "El tiempo mínimo en el Turno Noche fue 10 minutos."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Observando la línea central (mediana) de cada caja:",
+        "Turno Mañana: Mediana $= 25$ minutos.",
+        "Turno Noche: Mediana $= 35$ minutos.",
+        "Por lo tanto, la mediana del Turno Mañana (25 min) es menor que la del Turno Noche (35 min)."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Diagramas de caja comparativos Turno Mañana vs Turno Noche",
+        "visual": {
+          "type": "box_plot",
+          "groups": [
+            {
+              "label": "Mañana",
+              "min": 15,
+              "q1": 20,
+              "median": 25,
+              "q3": 30,
+              "max": 40
+            },
+            {
+              "label": "Noche",
+              "min": 20,
+              "q1": 28,
+              "median": 35,
+              "q3": 42,
+              "max": 50
+            }
+          ],
+          "axis": {
+            "label": "Tiempo de armado (min)",
+            "min": 10,
+            "max": 55
+          }
+        }
+      }
+    },
+    {
+      "id": 126,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Probabilidad del complemento",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A3",
+        "evidence": "A3.5",
+        "evidence_desc": "Calcula la probabilidad del evento contrario o complemento."
+      },
+      "stem": "Si la probabilidad de que llueva durante la tarde en una zona tropical es del 68% ($P(L) = 0,68$), ¿cuál es la probabilidad de que no llueva ($P(L^c)$)?",
+      "options": {
+        "A": "32%",
+        "B": "68%",
+        "C": "40%",
+        "D": "50%"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La regla del complemento establece que $P(A^c) = 1 - P(A)$.",
+        "$P(L^c) = 100\\% - 68\\% = 32\\%$ (ó $1 - 0,68 = 0,32$).",
+        "Por lo tanto, la probabilidad de que no llueva es 32%."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 127,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Regla de Laplace",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A3",
+        "evidence": "A3.6",
+        "evidence_desc": "Calcula la probabilidad teórica de un evento simple."
+      },
+      "stem": "Se lanza un dado justo de 6 caras numeradas del 1 al 6. ¿Cuál es la probabilidad de obtener un número primo?",
+      "options": {
+        "A": "\\frac{3}{6} = \\frac{1}{2}",
+        "B": "\\frac{2}{6} = \\frac{1}{3}",
+        "C": "\\frac{4}{6} = \\frac{2}{3}",
+        "D": "\\frac{1}{6}"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El espacio muestral al lanzar un dado de 6 caras es $S = \\{1, 2, 3, 4, 5, 6\\}$ ($N = 6$).",
+        "Los números primos entre 1 y 6 son $A = \\{2, 3, 5\\}$ (3 casos favorables).",
+        "Por la regla de Laplace: $P(A) = \\frac{3}{6} = \\frac{1}{2}$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 128,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Medidas de dispersión — Rango",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A1",
+        "evidence": "A1.6",
+        "evidence_desc": "Calcula el recorrido o rango total a partir de un diagrama de caja."
+      },
+      "stem": "Considere la siguiente información de temperaturas mínimas registradas en una estación meteorológica durante un mes, representada en un diagrama de caja:",
+      "options": {
+        "A": "El recorrido (rango total) es de 14 °C.",
+        "B": "La mediana es de 20 °C.",
+        "C": "El 75% de las lecturas superan los 24 °C.",
+        "D": "El rango intercuartílico es de 20 °C."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Del diagrama obtenemos el valor mínimo $M\\text{ín} = 10\\,°\\text{C}$ y el valor máximo $M\\text{áx} = 24\\,°\\text{C}$.",
+        "El recorrido o rango total se calcula como $R = M\\text{áx} - M\\text{ín} = 24 - 10 = 14\\,°\\text{C}$.",
+        "Por lo tanto, la opción A es correcta."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Diagrama de caja de temperaturas mínimas",
+        "visual": {
+          "type": "box_plot",
+          "min": 10,
+          "q1": 13,
+          "median": 16,
+          "q3": 19,
+          "max": 24,
+          "axis": {
+            "label": "Temperatura (°C)",
+            "min": 5,
+            "max": 28
+          }
+        }
+      }
+    },
+    {
+      "id": 129,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Resumen de cinco números",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A1",
+        "evidence": "A1.7",
+        "evidence_desc": "Interpreta una tabla de cinco números resumen."
+      },
+      "stem": "La siguiente tabla muestra el resumen de las calificaciones de un curso universitario:",
+      "options": {
+        "A": "El 25% superior de los estudiantes obtuvo calificaciones superiores a 88.",
+        "B": "La calificación promedio fue 78.",
+        "C": "El 50% de los estudiantes reprobó.",
+        "D": "La nota máxima fue 88."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El tercer cuartil $Q_3 = 88$ indica que el 75% de las notas están por debajo de 88 y el 25% superior está por encima de 88.",
+        "Por lo tanto, es correcto afiramar que el 25% superior obtuvo calificaciones superiores a 88."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Tabla resumen de cinco números",
+        "visual": {
+          "type": "table",
+          "variant": "summary_table",
+          "headers": [
+            "Mínimo",
+            "Cuartil 1 (Q1)",
+            "Mediana (Me)",
+            "Cuartil 3 (Q3)",
+            "Máximo"
+          ],
+          "rows": [
+            [
+              "45",
+              "65",
+              "78",
+              "88",
+              "100"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": 130,
+      "set_id": "set_2",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Desviación estándar",
+      "spec": {
+        "block": "Estadística y Probabilidad",
+        "affirmation": "A2",
+        "evidence": "A2.5",
+        "evidence_desc": "Interpreta la desviación estándar como medida de dispersión alrededor de la media."
+      },
+      "stem": "Un fabricante mide el peso de cajas de galletas de 500 gramos. Si la media del proceso es 500 g y la desviación estándar es 2 g, ¿entre qué valores se concentran aproximadamente las cajas que están a menos de una desviación estándar de la media?",
+      "options": {
+        "A": "Entre 498 g y 502 g",
+        "B": "Entre 496 g y 504 g",
+        "C": "Entre 490 g y 510 g",
+        "D": "Entre 495 g y 505 g"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Un intervalo a una desviación estándar alrededor de la media está dado por $[\\bar{x} - s, \\bar{x} + s]$.",
+        "Sustituyendo $\\bar{x} = 500$ g y $s = 2$ g:",
+        "Límite inferior: $500 - 2 = 498$ g.",
+        "Límite superior: $500 + 2 = 502$ g.",
+        "Por lo tanto, las cajas están entre 498 g y 502 g."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    }
+  ],
+  "sets": [
+    {
+      "id": "set_1",
+      "name": "Prueba Oficial Convocatoria 02-2026 (Simulación)",
+      "description": "Examen oficial de simulación completa con 60 ítems (23 Geometría, 25 Relaciones y Álgebra, 12 Estadística).",
+      "total_items": 60
+    },
+    {
+      "id": "set_2",
+      "name": "Banco de Práctica Adicional (Set de Expansión)",
+      "description": "Banco ampliado con 70 preguntas adicionales ricas en componentes visuales interactivos para refuerzo.",
+      "total_items": 70
     }
   ]
 }
