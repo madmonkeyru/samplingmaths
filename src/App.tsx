@@ -66,7 +66,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 text-slate-900 font-sans flex flex-col">
+    <div className="min-h-screen bg-[#fdfbf7] dark:bg-slate-950 text-stone-900 dark:text-slate-100 font-sans flex flex-col transition-colors">
       <Header
         currentUser={currentUser}
         onUserChanged={setCurrentUser}

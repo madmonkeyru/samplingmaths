@@ -1,19 +1,43 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { LandingPage } from './LandingPage';
 
 describe('LandingPage', () => {
-  it('renders mode entry cards for simulation and practice', () => {
+  it('renders combined mode widget with segmented control toggle and stacked performance/history widget', () => {
+    const onStartSimulation = vi.fn();
+    const onStartPractice = vi.fn();
+
     render(
       <LandingPage
         currentUser={null}
-        onStartSimulation={vi.fn()}
-        onStartPractice={vi.fn()}
+        onStartSimulation={onStartSimulation}
+        onStartPractice={onStartPractice}
       />
     );
 
-    expect(screen.getByText('Prueba de Simulación')).toBeInTheDocument();
-    expect(screen.getByText('Práctica por Área')).toBeInTheDocument();
-    expect(screen.getByText('Práctica por Tema')).toBeInTheDocument();
+    // Header title
+    expect(screen.getByText('Preparación Oficial de Matemáticas MEP')).toBeInTheDocument();
+
+    // Segmented tab buttons
+    expect(screen.getByRole('button', { name: /^Simulación$/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /^Por Área$/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /^Por Tema$/i })).toBeInTheDocument();
+
+    // Stacked Widget elements
+    expect(screen.getByText('Indicador de Rendimiento')).toBeInTheDocument();
+    expect(screen.getByText('Historial Reciente')).toBeInTheDocument();
+
+    // Default active tab is simulation
+    const startButton = screen.getByRole('button', { name: /Iniciar Simulación/i });
+    expect(startButton).toBeInTheDocument();
+
+    fireEvent.click(startButton);
+    expect(onStartSimulation).toHaveBeenCalledTimes(1);
+
+    // Switch tab to Por Área
+    const areaTab = screen.getByRole('button', { name: /^Por Área$/i });
+    fireEvent.click(areaTab);
+
+    expect(screen.getByRole('button', { name: /Configurar Práctica por Área/i })).toBeInTheDocument();
   });
 });
