@@ -7,6 +7,15 @@ interface TextRendererProps {
   inline?: boolean;
 }
 
+/**
+  Normalizes LaTeX math expressions to ensure beautiful fraction rendering.
+  Replaces standard \frac with \dfrac (display fraction) when appropriate or ensures displayMode formatting.
+ */
+function normalizeMathExpr(expr: string): string {
+  // Convert \frac to \dfrac for better vertical spacing in inline math unless it's already \dfrac or \cfrac
+  return expr.replace(/\\frac\{/g, '\\dfrac{');
+}
+
 export const TextRenderer: React.FC<TextRendererProps> = ({
   content = '',
   className = '',
@@ -15,7 +24,6 @@ export const TextRenderer: React.FC<TextRendererProps> = ({
   if (!content) return null;
 
   // Split by LaTeX delimiters: $...$, $$...$$, \(...\), \[...\]
-  // Pattern matches $...$, $$...$$, \(...\), or \[...\]
   const parts: Array<{ text: string; isMath: boolean; isBlock: boolean }> = [];
   const regex = /(\$\$.*?\$\$|\$.*?\$|\\\(.*?\\\)|\\\[.*?\\\])/gs;
 
@@ -48,7 +56,7 @@ export const TextRenderer: React.FC<TextRendererProps> = ({
     }
 
     parts.push({
-      text: mathExpr,
+      text: normalizeMathExpr(mathExpr),
       isMath: true,
       isBlock,
     });
@@ -80,7 +88,11 @@ export const TextRenderer: React.FC<TextRendererProps> = ({
           return (
             <span
               key={index}
-              className={part.isBlock ? 'block my-2 text-center' : 'inline-block px-0.5'}
+              className={`math-data-badge ${
+                part.isBlock
+                  ? 'block my-3 text-center p-2 rounded-xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-300 dark:border-zinc-700 shadow-2xs font-extrabold text-zinc-950 dark:text-zinc-50'
+                  : 'inline-flex items-center px-1.5 py-0.5 mx-0.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/70 text-indigo-950 dark:text-indigo-100 font-bold align-baseline transition-colors'
+              }`}
               dangerouslySetInnerHTML={{ __html: html }}
             />
           );

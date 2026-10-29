@@ -98,10 +98,10 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
   };
 
   return (
-    <div className="results-page max-w-5xl mx-auto px-3.5 sm:px-6 py-5 sm:py-8 space-y-5 sm:space-y-8">
+    <div className="results-page max-w-5xl mx-auto px-3.5 sm:px-6 py-5 sm:py-8 space-y-5 sm:space-y-8 text-zinc-900 dark:text-zinc-100 transition-colors">
       {/* First Time User Encouragement Banner */}
       {attempts.length <= 1 && (
-        <div className="bg-zinc-950 border-2 border-zinc-900 text-white rounded-2xl p-4 flex items-center gap-3 shadow-xs">
+        <div className="bg-zinc-950 dark:bg-zinc-900 border-2 border-zinc-900 dark:border-zinc-700 text-white rounded-2xl p-4 flex items-center gap-3 shadow-xs">
           <Sparkles className="w-5 h-5 text-white shrink-0" />
           <p className="text-xs sm:text-sm font-extrabold">
             Sigue practicando y te diremos cómo vas.
@@ -110,28 +110,28 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
       )}
 
       {/* Results Summary Header */}
-      <div className="bg-white border-2 border-zinc-900 rounded-2xl p-5 sm:p-8 shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-5 sm:gap-6">
+      <div className="bg-white dark:bg-zinc-900 border-2 border-zinc-900 dark:border-zinc-800 rounded-2xl p-5 sm:p-8 shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-5 sm:gap-6">
         <div className="flex items-center gap-4 sm:gap-5">
           <div
-            className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center text-white font-black text-xl sm:text-2xl shadow-xs border-2 border-zinc-900 bg-zinc-950 shrink-0"
+            className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center text-white dark:text-zinc-950 font-black text-xl sm:text-2xl shadow-xs border-2 border-zinc-900 dark:border-zinc-100 bg-zinc-950 dark:bg-zinc-100 shrink-0"
           >
             {scorePercentage}%
           </div>
           <div className="min-w-0">
-            <span className="text-[10px] sm:text-xs font-black text-zinc-900 uppercase tracking-wider block">
+            <span className="text-[10px] sm:text-xs font-black uppercase tracking-wider block text-zinc-600 dark:text-zinc-400">
               Resultado de la Sesión
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-zinc-900 uppercase leading-tight truncate">
+            <h2 className="text-xl sm:text-2xl font-black uppercase leading-tight truncate">
               {scorePercentage >= 70 ? '¡Buen Trabajo!' : 'Sigue Practicando'}
             </h2>
-            <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-xs font-bold text-zinc-700 mt-1 sm:mt-1.5">
-              <span className="flex items-center gap-1 text-zinc-900">
-                <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5] shrink-0" /> {correctCount} Correctas
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-xs font-bold text-zinc-700 dark:text-zinc-300 mt-1 sm:mt-1.5">
+              <span className="flex items-center gap-1">
+                <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5] text-emerald-600 dark:text-emerald-400 shrink-0" /> {correctCount} Correctas
               </span>
-              <span className="flex items-center gap-1 text-zinc-600">
-                <XCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5] shrink-0" /> {totalItems - correctCount} Incorrectas
+              <span className="flex items-center gap-1">
+                <XCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5] text-rose-600 dark:text-rose-400 shrink-0" /> {totalItems - correctCount} Incorrectas
               </span>
-              <span className="flex items-center gap-1 text-zinc-700">
+              <span className="flex items-center gap-1">
                 <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5] shrink-0" /> {formatDuration(session.elapsedSeconds)}
               </span>
             </div>
@@ -139,17 +139,17 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
         </div>
 
         {/* CTAs */}
-        <div className="flex items-center gap-2.5 sm:gap-3 w-full md:w-auto pt-3 md:pt-0 border-t-2 md:border-t-0 border-zinc-100">
+        <div className="flex items-center gap-2.5 sm:gap-3 w-full md:w-auto pt-3 md:pt-0 border-t-2 md:border-t-0 border-zinc-100 dark:border-zinc-800">
           <button
             onClick={onRetry}
-            className="flex-1 md:flex-initial px-3.5 sm:px-4 py-2.5 sm:py-3 bg-zinc-100 hover:bg-zinc-200 text-zinc-950 font-extrabold rounded-xl text-xs flex items-center justify-center gap-1.5 sm:gap-2 transition border-2 border-zinc-900 min-h-[44px]"
+            className="flex-1 md:flex-initial px-3.5 sm:px-4 py-2.5 sm:py-3 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-950 dark:text-zinc-100 font-extrabold rounded-xl text-xs flex items-center justify-center gap-1.5 sm:gap-2 transition border-2 border-zinc-900 dark:border-zinc-700 min-h-[44px] cursor-pointer"
           >
             <RotateCcw className="w-4 h-4 stroke-[2.5] shrink-0" />
             <span>Reintentar</span>
           </button>
           <button
             onClick={onNewTest}
-            className="flex-1 md:flex-initial px-3.5 sm:px-4 py-2.5 sm:py-3 bg-zinc-950 hover:bg-zinc-800 text-white font-extrabold rounded-xl text-xs flex items-center justify-center gap-1.5 sm:gap-2 transition border-2 border-zinc-950 shadow-xs min-h-[44px]"
+            className="flex-1 md:flex-initial px-3.5 sm:px-4 py-2.5 sm:py-3 bg-zinc-950 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-extrabold rounded-xl text-xs flex items-center justify-center gap-1.5 sm:gap-2 transition border-2 border-zinc-950 dark:border-zinc-100 shadow-xs min-h-[44px] cursor-pointer"
           >
             <Award className="w-4 h-4 stroke-[2.5] shrink-0" />
             <span>Nueva Práctica</span>
@@ -157,7 +157,7 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
           <button
             onClick={onGoHome}
             aria-label="Inicio"
-            className="p-2.5 sm:p-3 bg-zinc-100 hover:bg-zinc-200 text-zinc-950 rounded-xl transition border-2 border-zinc-900 min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0"
+            className="p-2.5 sm:p-3 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-950 dark:text-zinc-100 rounded-xl transition border-2 border-zinc-900 dark:border-zinc-700 min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0 cursor-pointer"
             title="Inicio"
           >
             <Home className="w-5 h-5 stroke-[2.5]" />
@@ -167,22 +167,22 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
 
       {/* Performance Graph */}
       {attempts.length >= 2 && (
-        <div className="bg-white border-2 border-zinc-900 rounded-2xl p-6 shadow-xs">
-          <div className="flex items-center gap-2 mb-4 pb-2 border-b-2 border-zinc-900">
-            <TrendingUp className="w-5 h-5 text-zinc-900 stroke-[2.5]" />
-            <h3 className="text-base font-black text-zinc-900 uppercase">Tendencia de Desempeño</h3>
+        <div className="bg-white dark:bg-zinc-900 border-2 border-zinc-900 dark:border-zinc-800 rounded-2xl p-6 shadow-xs">
+          <div className="flex items-center gap-2 mb-4 pb-2 border-b-2 border-zinc-900 dark:border-zinc-800">
+            <TrendingUp className="w-5 h-5 stroke-[2.5]" />
+            <h3 className="text-base font-black uppercase">Tendencia de Desempeño</h3>
           </div>
-          <div className="h-32 flex items-end gap-3 pt-6 border-b-2 border-zinc-900 pb-2">
+          <div className="h-32 flex items-end gap-3 pt-6 border-b-2 border-zinc-900 dark:border-zinc-800 pb-2">
             {attempts.slice(0, 10).reverse().map((att, idx) => (
               <div key={att.id} className="flex-1 flex flex-col items-center gap-1 group">
-                <div className="text-[10px] font-black text-zinc-900 opacity-0 group-hover:opacity-100 transition">
+                <div className="text-[10px] font-black opacity-0 group-hover:opacity-100 transition">
                   {att.scorePercentage}%
                 </div>
                 <div
-                  className="w-full bg-zinc-950 rounded-t-sm transition-all hover:bg-zinc-800 border-x-2 border-t-2 border-zinc-900"
+                  className="w-full bg-zinc-950 dark:bg-zinc-100 rounded-t-sm transition-all hover:bg-zinc-800 dark:hover:bg-zinc-300 border-x-2 border-t-2 border-zinc-900 dark:border-zinc-700"
                   style={{ height: `${Math.max(10, att.scorePercentage)}%` }}
                 />
-                <span className="text-[10px] text-zinc-700 font-bold">#{idx + 1}</span>
+                <span className="text-[10px] text-zinc-700 dark:text-zinc-400 font-bold">#{idx + 1}</span>
               </div>
             ))}
           </div>
@@ -191,7 +191,7 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
 
       {/* Item Review List */}
       <div className="space-y-6">
-        <h3 className="text-lg font-black text-zinc-900 uppercase">Revisión Detallada de Respuestas</h3>
+        <h3 className="text-lg font-black uppercase">Revisión Detallada de Respuestas</h3>
 
         {items.map((item, index) => {
           const userResp = session.responses[item.id];
@@ -202,29 +202,29 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
           return (
             <div
               key={item.id}
-              className={`bg-white border-2 rounded-2xl p-6 shadow-xs space-y-4 transition border-zinc-900 ${
-                !isCorrect ? 'bg-zinc-50/50' : ''
+              className={`bg-white dark:bg-zinc-900 border-2 rounded-2xl p-6 shadow-xs space-y-4 transition border-zinc-900 dark:border-zinc-800 ${
+                !isCorrect ? 'bg-zinc-50/50 dark:bg-zinc-800/30' : ''
               }`}
             >
-              <div className="flex items-center justify-between pb-2 border-b-2 border-zinc-900">
+              <div className="flex items-center justify-between pb-2 border-b-2 border-zinc-900 dark:border-zinc-800">
                 <div className="flex items-center gap-3">
                   <span
-                    className="w-7 h-7 rounded-lg text-xs font-black flex items-center justify-center text-white bg-zinc-950 border-2 border-zinc-950"
+                    className="w-7 h-7 rounded-lg text-xs font-black flex items-center justify-center text-white dark:text-zinc-950 bg-zinc-950 dark:bg-zinc-100 border-2 border-zinc-950 dark:border-zinc-100"
                   >
                     {index + 1}
                   </span>
-                  <span className="text-xs font-black text-zinc-900 uppercase">
+                  <span className="text-xs font-black uppercase">
                     {item.topic || item.area}
                   </span>
                 </div>
 
                 <div className="flex items-center gap-2">
                   {isCorrect ? (
-                    <span className="px-3 py-1 bg-zinc-950 text-white text-xs font-extrabold rounded-xl border-2 border-zinc-950 flex items-center gap-1">
+                    <span className="px-3 py-1 bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 text-xs font-extrabold rounded-xl border-2 border-zinc-950 dark:border-zinc-100 flex items-center gap-1">
                       <CheckCircle2 className="w-3.5 h-3.5 stroke-[2.5]" /> Correcta
                     </span>
                   ) : (
-                    <span className="px-3 py-1 bg-zinc-100 text-zinc-950 text-xs font-extrabold rounded-xl border-2 border-zinc-900 flex items-center gap-1">
+                    <span className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 text-zinc-950 dark:text-zinc-100 text-xs font-extrabold rounded-xl border-2 border-zinc-900 dark:border-zinc-700 flex items-center gap-1">
                       <XCircle className="w-3.5 h-3.5 stroke-[2.5]" /> Incorrecta
                     </span>
                   )}
@@ -233,7 +233,7 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
 
               {group && <GroupVisual group={group} />}
 
-              <div className="text-sm font-bold text-zinc-900 leading-relaxed">
+              <div className="text-sm font-bold leading-relaxed">
                 <TextRenderer content={item.stem} />
               </div>
 
@@ -247,10 +247,10 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
                   const isUserSelected = userResp?.selectedOption === opt.letter;
                   const isCorrectAnswer = item.correct_answer === opt.letter;
 
-                  let optionStyle = 'border-zinc-300 bg-white text-zinc-900';
-                  if (isCorrectAnswer) optionStyle = 'border-zinc-950 bg-zinc-950 text-white font-bold';
+                  let optionStyle = 'border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100';
+                  if (isCorrectAnswer) optionStyle = 'border-zinc-950 dark:border-zinc-100 bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 font-bold';
                   else if (isUserSelected && !isCorrectAnswer)
-                    optionStyle = 'border-zinc-900 bg-zinc-100 text-zinc-900 line-through';
+                    optionStyle = 'border-zinc-900 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 line-through';
 
                   return (
                     <div
@@ -267,20 +267,20 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
               </div>
 
               {/* Expandable Step-by-Step Solution */}
-              <div className="pt-2 border-t-2 border-zinc-900">
+              <div className="pt-2 border-t-2 border-zinc-900 dark:border-zinc-800">
                 <button
                   onClick={() => toggleSolution(item.id)}
-                  className="flex items-center gap-1.5 text-xs font-black text-zinc-950 hover:text-zinc-700 transition min-h-[44px]"
+                  className="flex items-center gap-1.5 text-xs font-black hover:opacity-80 transition min-h-[44px] cursor-pointer"
                 >
                   <span>{isExpanded ? 'Ocultar explicación' : 'Ver solución paso a paso'}</span>
                   {isExpanded ? <ChevronUp className="w-4 h-4 stroke-[2.5]" /> : <ChevronDown className="w-4 h-4 stroke-[2.5]" />}
                 </button>
 
                 {isExpanded && (
-                  <div className="mt-3 p-4 bg-zinc-50 border-2 border-zinc-900 rounded-xl space-y-2 text-xs text-zinc-900 font-medium">
-                    <div className="font-black text-zinc-900 uppercase mb-1">Explicación Oficial:</div>
+                  <div className="mt-3 p-4 bg-zinc-50 dark:bg-zinc-800/60 border-2 border-zinc-900 dark:border-zinc-700 rounded-xl space-y-2 text-xs font-medium">
+                    <div className="font-black uppercase mb-1">Explicación Oficial:</div>
                     {item.solution_steps.map((step, sIdx) => (
-                      <div key={sIdx} className="leading-relaxed bg-white p-2.5 rounded-lg border-2 border-zinc-900">
+                      <div key={sIdx} className="leading-relaxed bg-white dark:bg-zinc-900 p-2.5 rounded-lg border-2 border-zinc-900 dark:border-zinc-700">
                         • <TextRenderer content={typeof step === 'string' ? step : step.explanation} />
                       </div>
                     ))}

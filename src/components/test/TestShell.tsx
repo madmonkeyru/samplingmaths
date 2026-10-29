@@ -5,6 +5,7 @@ import { storageService } from '../../services/storageService';
 import { TextRenderer } from '../common/TextRenderer';
 import { VisualRenderer } from '../visuals/VisualRenderer';
 import { GroupVisual } from '../visuals/GroupVisual';
+import { ThemeToggle } from '../common/ThemeToggle';
 import {
   Clock,
   Flag,
@@ -14,7 +15,6 @@ import {
   AlertTriangle,
   Menu,
   X,
-  EyeOff,
   BookOpen,
   Filter,
   CheckCircle2,
@@ -31,7 +31,6 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [responses, setResponses] = useState<Record<number, ItemResponse>>({});
   const [flaggedItems, setFlaggedItems] = useState<Record<number, boolean>>({});
-  const [eliminatedOptions, setEliminatedOptions] = useState<Record<number, Record<string, boolean>>>({});
   const [timeLeftSeconds, setTimeLeftSeconds] = useState<number>(
     config.timerDurationMinutes * 60
   );
@@ -45,7 +44,6 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
   // Keyboard Shortcuts Handler
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Don't intercept if user is typing in an input/textarea or modal is open
       const target = e.target as HTMLElement | null;
       if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) {
         return;
@@ -157,7 +155,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
   if (items.length === 0) {
     return (
-      <div className="max-w-4xl mx-auto p-8 text-center text-zinc-900 font-bold">
+      <div className="max-w-4xl mx-auto p-8 text-center text-zinc-900 dark:text-zinc-100 font-bold">
         Cargando preguntas de la prueba...
       </div>
     );
@@ -185,20 +183,6 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
       ...prev,
       [currentItem.id]: !prev[currentItem.id],
     }));
-  };
-
-  const handleToggleEliminate = (e: React.MouseEvent, letter: 'A' | 'B' | 'C' | 'D') => {
-    e.stopPropagation();
-    setEliminatedOptions((prev) => {
-      const currentElims = prev[currentItem.id] || {};
-      return {
-        ...prev,
-        [currentItem.id]: {
-          ...currentElims,
-          [letter]: !currentElims[letter],
-        },
-      };
-    });
   };
 
   const handleFinalSubmit = () => {
@@ -244,37 +228,40 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
   };
 
   return (
-    <div className="test-shell min-h-[calc(100vh-65px)] bg-zinc-100 flex flex-col">
+    <div className="test-shell min-h-screen bg-zinc-100 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 flex flex-col transition-colors">
       {/* Test Shell Header */}
-      <div className="bg-white border-b-2 border-zinc-900 sticky top-12 sm:top-14 z-30 px-3 sm:px-6 py-2.5 sm:py-3 shadow-xs">
+      <div className="bg-white dark:bg-zinc-900 border-b-2 border-zinc-900 dark:border-zinc-700 sticky top-0 sm:top-14 z-30 px-3 sm:px-6 py-2.5 sm:py-3 shadow-xs">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
           <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             <button
               onClick={() => setIsNavOpen(!isNavOpen)}
-              className="lg:hidden p-2 text-zinc-900 hover:bg-zinc-100 rounded-xl border-2 border-zinc-900 min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0"
+              className="lg:hidden p-2 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0 cursor-pointer"
               aria-label="Abrir navegador de ítems"
             >
               <Menu className="w-5 h-5 stroke-[2.5]" />
             </button>
             <div className="min-w-0">
-              <div className="text-xs sm:text-sm font-black text-zinc-900 truncate">
+              <div className="text-xs sm:text-sm font-black text-zinc-900 dark:text-zinc-100 truncate">
                 Pregunta {currentIndex + 1} de {items.length}
               </div>
-              <div className="text-[10px] sm:text-xs text-zinc-600 font-bold uppercase tracking-wider truncate">
+              <div className="text-[10px] sm:text-xs text-zinc-600 dark:text-zinc-400 font-bold uppercase tracking-wider truncate">
                 {currentItem.topic || currentItem.area}
               </div>
             </div>
           </div>
 
           {/* Progress Bar & Timer & Actions */}
-          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
-            <div className="hidden sm:flex flex-col items-end w-36">
-              <div className="text-[11px] font-black text-zinc-800 mb-1">
-                Progreso: {progressPct}% ({answeredCount}/{items.length})
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            {/* Theme Toggle Button for Mobile and Desktop */}
+            <ThemeToggle className="shrink-0" />
+
+            <div className="hidden sm:flex flex-col items-end w-32">
+              <div className="text-[11px] font-black text-zinc-800 dark:text-zinc-200 mb-1">
+                {progressPct}% ({answeredCount}/{items.length})
               </div>
-              <div className="w-full h-2.5 bg-zinc-200 rounded-full border border-zinc-900 overflow-hidden">
+              <div className="w-full h-2.5 bg-zinc-200 dark:bg-zinc-800 rounded-full border border-zinc-900 dark:border-zinc-700 overflow-hidden">
                 <div
-                  className="h-full bg-zinc-950 transition-all duration-300"
+                  className="h-full bg-zinc-950 dark:bg-zinc-100 transition-all duration-300"
                   style={{ width: `${progressPct}%` }}
                 />
               </div>
@@ -282,7 +269,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
             <button
               onClick={() => setIsFormulaOpen(true)}
-              className="px-2.5 sm:px-3.5 py-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-950 font-extrabold rounded-xl text-xs flex items-center gap-1.5 border-2 border-zinc-900 transition min-h-[44px]"
+              className="px-2.5 sm:px-3.5 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-950 dark:text-zinc-100 font-extrabold rounded-xl text-xs flex items-center gap-1.5 border-2 border-zinc-900 dark:border-zinc-700 transition min-h-[44px] cursor-pointer"
               title="Ver fórmulas del examen"
             >
               <BookOpen className="w-4 h-4 stroke-[2.5] shrink-0" />
@@ -291,10 +278,10 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
             {config.enableTimer && (
               <div
-                className={`flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-black border-2 border-zinc-900 min-h-[44px] ${
+                className={`flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-black border-2 border-zinc-900 dark:border-zinc-700 min-h-[44px] ${
                   timeLeftSeconds < 300
-                    ? 'bg-zinc-950 text-white border-zinc-950 animate-pulse'
-                    : 'bg-zinc-100 text-zinc-950'
+                    ? 'bg-zinc-950 text-white dark:bg-red-950 dark:text-red-100 dark:border-red-600 animate-pulse'
+                    : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-950 dark:text-zinc-100'
                 }`}
               >
                 <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5] shrink-0" />
@@ -304,7 +291,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
             <button
               onClick={() => setIsConfirmOpen(true)}
-              className="px-3 sm:px-4 py-2 bg-zinc-950 hover:bg-zinc-800 text-white font-extrabold rounded-xl text-xs flex items-center gap-1.5 transition border-2 border-zinc-950 min-h-[44px]"
+              className="px-3 sm:px-4 py-2 bg-zinc-950 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-extrabold rounded-xl text-xs flex items-center gap-1.5 transition border-2 border-zinc-950 dark:border-zinc-100 min-h-[44px] cursor-pointer"
             >
               <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5] shrink-0" />
               <span className="hidden xs:inline sm:inline">Finalizar</span>
@@ -325,53 +312,61 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
         {/* Navigation Sidebar (Desktop & Mobile Drawer) */}
         <aside
-          className={`fixed inset-y-0 left-0 z-40 w-72 max-w-[85vw] bg-white border-r-2 border-zinc-900 p-4 flex flex-col transform transition-transform lg:static lg:translate-x-0 ${
+          className={`fixed inset-y-0 left-0 z-40 w-72 max-w-[85vw] bg-white dark:bg-zinc-900 border-r-2 border-zinc-900 dark:border-zinc-800 p-4 flex flex-col transform transition-transform lg:static lg:translate-x-0 ${
             isNavOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
-          <div className="flex items-center justify-between pb-3 mb-3 border-b-2 border-zinc-900">
-            <h3 className="font-black text-sm text-zinc-900 uppercase tracking-wide flex items-center gap-2">
-              <Filter className="w-4 h-4 text-zinc-900" />
+          <div className="flex items-center justify-between pb-3 mb-3 border-b-2 border-zinc-900 dark:border-zinc-800">
+            <h3 className="font-black text-sm text-zinc-900 dark:text-zinc-100 uppercase tracking-wide flex items-center gap-2">
+              <Filter className="w-4 h-4 text-zinc-900 dark:text-zinc-100" />
               Navegador de Ítems
             </h3>
             <button
               onClick={() => setIsNavOpen(false)}
-              className="lg:hidden p-2 text-zinc-900 hover:bg-zinc-100 rounded-lg min-h-[44px] min-w-[44px] flex items-center justify-center"
+              className="lg:hidden p-2 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer"
             >
               <X className="w-5 h-5 stroke-[2.5]" />
             </button>
           </div>
 
           {/* Filter Tabs */}
-          <div className="flex bg-zinc-100 p-1 rounded-xl border border-zinc-900 mb-3 gap-1 text-[11px] font-bold">
+          <div className="flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-xl border border-zinc-900 dark:border-zinc-700 mb-3 gap-1 text-[11px] font-bold">
             <button
               onClick={() => setNavFilter('all')}
-              className={`flex-1 py-1.5 rounded-lg text-center transition min-h-[36px] ${
-                navFilter === 'all' ? 'bg-zinc-950 text-white' : 'text-zinc-700 hover:text-zinc-950'
+              className={`flex-1 py-1.5 rounded-lg text-center transition min-h-[36px] cursor-pointer ${
+                navFilter === 'all'
+                  ? 'bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950'
+                  : 'text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white'
               }`}
             >
               Todas
             </button>
             <button
               onClick={() => setNavFilter('unanswered')}
-              className={`flex-1 py-1.5 rounded-lg text-center transition min-h-[36px] ${
-                navFilter === 'unanswered' ? 'bg-zinc-950 text-white' : 'text-zinc-700 hover:text-zinc-950'
+              className={`flex-1 py-1.5 rounded-lg text-center transition min-h-[36px] cursor-pointer ${
+                navFilter === 'unanswered'
+                  ? 'bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950'
+                  : 'text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white'
               }`}
             >
               Pendientes
             </button>
             <button
               onClick={() => setNavFilter('answered')}
-              className={`flex-1 py-1.5 rounded-lg text-center transition min-h-[36px] ${
-                navFilter === 'answered' ? 'bg-zinc-950 text-white' : 'text-zinc-700 hover:text-zinc-950'
+              className={`flex-1 py-1.5 rounded-lg text-center transition min-h-[36px] cursor-pointer ${
+                navFilter === 'answered'
+                  ? 'bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950'
+                  : 'text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white'
               }`}
             >
               Listas
             </button>
             <button
               onClick={() => setNavFilter('flagged')}
-              className={`flex-1 py-1.5 rounded-lg text-center transition min-h-[36px] ${
-                navFilter === 'flagged' ? 'bg-zinc-950 text-white' : 'text-zinc-700 hover:text-zinc-950'
+              className={`flex-1 py-1.5 rounded-lg text-center transition min-h-[36px] cursor-pointer ${
+                navFilter === 'flagged'
+                  ? 'bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950'
+                  : 'text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white'
               }`}
             >
               Marcadas
@@ -388,9 +383,9 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
               if (navFilter === 'answered' && !isAnswered) return null;
               if (navFilter === 'flagged' && !isFlagged) return null;
 
-              let btnClass = 'bg-white border-zinc-900 text-zinc-900 hover:bg-zinc-100';
-              if (isAnswered) btnClass = 'bg-zinc-950 text-white border-zinc-950 font-black';
-              if (isCurrent) btnClass += ' ring-4 ring-zinc-950 ring-offset-1';
+              let btnClass = 'bg-white dark:bg-zinc-800 border-zinc-900 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700';
+              if (isAnswered) btnClass = 'bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 border-zinc-950 dark:border-zinc-100 font-black';
+              if (isCurrent) btnClass += ' ring-4 ring-zinc-950 dark:ring-zinc-100 ring-offset-1 dark:ring-offset-zinc-900';
 
               return (
                 <button
@@ -399,11 +394,11 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
                     setCurrentIndex(idx);
                     setIsNavOpen(false);
                   }}
-                  className={`relative h-11 w-11 rounded-xl text-xs font-bold border-2 flex items-center justify-center transition ${btnClass}`}
+                  className={`relative h-11 w-11 rounded-xl text-xs font-bold border-2 flex items-center justify-center transition cursor-pointer ${btnClass}`}
                 >
                   {idx + 1}
                   {isFlagged && (
-                    <span className="absolute -top-1 -right-1 w-3 h-3 bg-zinc-950 border-2 border-white rounded-full" />
+                    <span className="absolute -top-1 -right-1 w-3 h-3 bg-zinc-950 dark:bg-yellow-400 border-2 border-white dark:border-zinc-900 rounded-full" />
                   )}
                 </button>
               );
@@ -411,38 +406,38 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
           </div>
 
           {/* Navigator Legend */}
-          <div className="mt-3 pt-3 border-t-2 border-zinc-900 text-[11px] text-zinc-800 font-bold space-y-1.5">
+          <div className="mt-3 pt-3 border-t-2 border-zinc-900 dark:border-zinc-800 text-[11px] text-zinc-800 dark:text-zinc-200 font-bold space-y-1.5">
             <div className="flex items-center gap-2">
-              <span className="w-3.5 h-3.5 rounded bg-zinc-950 border border-zinc-950 shrink-0" />
+              <span className="w-3.5 h-3.5 rounded bg-zinc-950 dark:bg-zinc-100 border border-zinc-950 dark:border-zinc-100 shrink-0" />
               <span>Respondida</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-3.5 h-3.5 rounded bg-white border-2 border-zinc-900 shrink-0" />
+              <span className="w-3.5 h-3.5 rounded bg-white dark:bg-zinc-800 border-2 border-zinc-900 dark:border-zinc-700 shrink-0" />
               <span>Sin responder</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-zinc-950 border border-white shrink-0" />
+              <span className="w-3 h-3 rounded-full bg-zinc-950 dark:bg-yellow-400 border border-white dark:border-zinc-900 shrink-0" />
               <span>Marcada para revisión</span>
             </div>
           </div>
         </aside>
 
         {/* Question Area */}
-        <main className="flex-1 bg-white rounded-2xl border-2 border-zinc-900 p-4 sm:p-8 shadow-xs flex flex-col justify-between max-w-full overflow-hidden">
+        <main className="flex-1 bg-white dark:bg-zinc-900 rounded-2xl border-2 border-zinc-900 dark:border-zinc-800 p-4 sm:p-8 shadow-xs flex flex-col justify-between max-w-full overflow-hidden">
           <div className="space-y-5 sm:space-y-6">
             {/* Question Bar Header */}
-            <div className="flex items-center justify-between gap-2 border-b-2 border-zinc-900 pb-3">
-              <span className="text-[11px] sm:text-xs font-black text-zinc-900 uppercase tracking-wider min-w-0 truncate">
+            <div className="flex items-center justify-between gap-2 border-b-2 border-zinc-900 dark:border-zinc-800 pb-3">
+              <span className="text-[11px] sm:text-xs font-black text-zinc-900 dark:text-zinc-100 uppercase tracking-wider min-w-0 truncate">
                 {currentItem.evidence ? `Evidencia: ${currentItem.evidence}` : 'Opción Múltiple'}
               </span>
 
               <button
                 onClick={handleToggleFlag}
                 title="Atajo de teclado: F o M"
-                className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-bold border-2 transition min-h-[44px] shrink-0 ${
+                className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-bold border-2 transition min-h-[44px] shrink-0 cursor-pointer ${
                   flaggedItems[currentItem.id]
-                    ? 'bg-zinc-950 border-zinc-950 text-white'
-                    : 'bg-zinc-100 border-zinc-900 text-zinc-900 hover:bg-zinc-200'
+                    ? 'bg-zinc-950 dark:bg-zinc-100 border-zinc-950 dark:border-zinc-100 text-white dark:text-zinc-950'
+                    : 'bg-zinc-100 dark:bg-zinc-800 border-zinc-900 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-200 dark:hover:bg-zinc-700'
                 }`}
               >
                 <Flag className="w-4 h-4 fill-current shrink-0" />
@@ -451,11 +446,11 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
               </button>
             </div>
 
-            {/* Shared Group Visual Context (FR-S-06) */}
+            {/* Shared Group Visual Context */}
             {group && <GroupVisual group={group} />}
 
             {/* Question Stem */}
-            <div className="text-base text-zinc-900 leading-relaxed font-bold">
+            <div className="text-base text-zinc-900 dark:text-zinc-100 leading-relaxed font-bold">
               <TextRenderer content={currentItem.stem} />
             </div>
 
@@ -472,21 +467,21 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
                     onClick={() =>
                       setShowPracticeExplanation((prev) => ({ ...prev, [currentItem.id]: true }))
                     }
-                    className="px-4 py-2.5 bg-zinc-950 text-white font-extrabold rounded-xl text-xs flex items-center gap-2 border-2 border-zinc-950 transition min-h-[44px]"
+                    className="px-4 py-2.5 bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 font-extrabold rounded-xl text-xs flex items-center gap-2 border-2 border-zinc-950 dark:border-zinc-100 transition min-h-[44px] cursor-pointer"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-white" />
+                    <CheckCircle2 className="w-4 h-4 text-white dark:text-zinc-950" />
                     <span>Verificar respuesta y ver explicación</span>
                   </button>
                 ) : (
-                  <div className="p-4 rounded-xl border-2 border-zinc-900 space-y-3 bg-zinc-50">
+                  <div className="p-4 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-3 bg-zinc-50 dark:bg-zinc-800/60">
                     <div className="flex items-center gap-2 font-black text-sm">
                       {responses[currentItem.id]?.selectedOption === currentItem.correct_answer ? (
-                        <div className="flex items-center gap-2 text-zinc-900">
+                        <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-400">
                           <CheckCircle2 className="w-5 h-5 stroke-[2.5]" />
                           <span>¡Respuesta Correcta! (Opción {currentItem.correct_answer})</span>
                         </div>
                       ) : (
-                        <div className="flex items-center gap-2 text-zinc-900">
+                        <div className="flex items-center gap-2 text-rose-700 dark:text-rose-400">
                           <XCircle className="w-5 h-5 stroke-[2.5]" />
                           <span>Respuesta Incorrecta. La opción correcta es {currentItem.correct_answer}.</span>
                         </div>
@@ -494,17 +489,17 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
                     </div>
 
                     {currentItem.solution_steps && currentItem.solution_steps.length > 0 && (
-                      <div className="pt-2 border-t-2 border-zinc-900 text-xs space-y-2">
-                        <span className="font-black text-zinc-900 uppercase tracking-wider block text-[11px]">
+                      <div className="pt-2 border-t-2 border-zinc-900 dark:border-zinc-700 text-xs space-y-2">
+                        <span className="font-black text-zinc-900 dark:text-zinc-100 uppercase tracking-wider block text-[11px]">
                           Solución paso a paso:
                         </span>
                         {currentItem.solution_steps.map((step, sIdx) => (
-                          <div key={sIdx} className="bg-white p-3 rounded-lg border-2 border-zinc-900 font-medium">
+                          <div key={sIdx} className="bg-white dark:bg-zinc-900 p-3 rounded-lg border-2 border-zinc-900 dark:border-zinc-700 font-medium">
                             {typeof step === 'string' ? (
                               <TextRenderer content={step} />
                             ) : (
                               <div>
-                                <span className="font-extrabold text-zinc-900">{step.title}: </span>
+                                <span className="font-extrabold text-zinc-900 dark:text-zinc-100">{step.title}: </span>
                                 <TextRenderer content={step.explanation} />
                               </div>
                             )}
@@ -517,66 +512,47 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
               </div>
             )}
 
-            {/* Answer Options Selector (FR-A-01) */}
+            {/* Answer Options Selector (Cleaned option remover) */}
             <div className="space-y-2.5 sm:space-y-3 pt-1 sm:pt-2">
               {getOptionArray(currentItem).map((opt) => {
                 const selected = responses[currentItem.id]?.selectedOption === opt.letter;
-                const isEliminated = !!eliminatedOptions[currentItem.id]?.[opt.letter];
 
-                let optionContainerStyle = 'border-zinc-900 hover:bg-zinc-50 bg-white text-zinc-900';
+                let optionContainerStyle = 'border-zinc-900 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100';
                 if (selected) {
-                  optionContainerStyle = 'border-zinc-950 bg-zinc-950 text-white font-bold';
-                } else if (isEliminated) {
-                  optionContainerStyle = 'border-zinc-300 bg-zinc-100 text-zinc-400 opacity-60';
+                  optionContainerStyle = 'border-zinc-950 dark:border-zinc-100 bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 font-bold';
                 }
 
                 return (
-                  <div key={opt.letter} className="relative flex items-center gap-2">
-                    <button
-                      onClick={() => handleSelectOption(opt.letter)}
-                      className={`w-full text-left p-3 sm:p-4 rounded-xl border-2 flex items-start gap-2.5 sm:gap-3.5 transition min-h-[52px] ${optionContainerStyle}`}
-                    >
-                      <span
-                        className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg text-xs font-black flex items-center justify-center shrink-0 transition border-2 ${
-                          selected
-                            ? 'bg-white text-zinc-950 border-white'
-                            : isEliminated
-                            ? 'bg-zinc-200 text-zinc-400 border-zinc-300 line-through'
-                            : 'bg-zinc-100 text-zinc-900 border-zinc-900'
-                        }`}
-                        title={`Presiona ${opt.letter} o ${getOptionArray(currentItem).findIndex(o => o.letter === opt.letter) + 1}`}
-                      >
-                        {opt.letter}
-                      </span>
-                      <div className={`text-xs sm:text-sm pt-0.5 sm:pt-1 leading-normal flex-1 font-bold ${isEliminated ? 'line-through' : ''}`}>
-                        <TextRenderer content={opt.text} />
-                      </div>
-                    </button>
-
-                    <button
-                      onClick={(e) => handleToggleEliminate(e, opt.letter)}
-                      title={isEliminated ? 'Restaurar opción' : 'Descartar opción'}
-                      aria-label={isEliminated ? 'Restaurar opción' : 'Descartar opción'}
-                      className={`p-2.5 sm:p-3 rounded-xl border-2 transition shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center ${
-                        isEliminated
-                          ? 'text-zinc-950 bg-zinc-200 border-zinc-900'
-                          : 'text-zinc-600 border-zinc-300 hover:border-zinc-900 hover:text-zinc-950'
+                  <button
+                    key={opt.letter}
+                    onClick={() => handleSelectOption(opt.letter)}
+                    className={`w-full text-left p-3 sm:p-4 rounded-xl border-2 flex items-start gap-2.5 sm:gap-3.5 transition min-h-[52px] cursor-pointer ${optionContainerStyle}`}
+                  >
+                    <span
+                      className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg text-xs font-black flex items-center justify-center shrink-0 transition border-2 ${
+                        selected
+                          ? 'bg-white dark:bg-zinc-950 text-zinc-950 dark:text-white border-white dark:border-zinc-950'
+                          : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 border-zinc-900 dark:border-zinc-700'
                       }`}
+                      title={`Presiona ${opt.letter} o ${getOptionArray(currentItem).findIndex(o => o.letter === opt.letter) + 1}`}
                     >
-                      <EyeOff className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
-                    </button>
-                  </div>
+                      {opt.letter}
+                    </span>
+                    <div className="text-xs sm:text-sm pt-0.5 sm:pt-1 leading-normal flex-1 font-bold">
+                      <TextRenderer content={opt.text} />
+                    </div>
+                  </button>
                 );
               })}
             </div>
           </div>
 
           {/* Navigation Controls */}
-          <div className="flex items-center justify-between pt-5 sm:pt-8 border-t-2 border-zinc-900 mt-6 sm:mt-8 gap-3">
+          <div className="flex items-center justify-between pt-5 sm:pt-8 border-t-2 border-zinc-900 dark:border-zinc-800 mt-6 sm:mt-8 gap-3">
             <button
               disabled={currentIndex === 0}
               onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
-              className="px-4 sm:px-5 py-2.5 bg-zinc-100 hover:bg-zinc-200 disabled:opacity-30 text-zinc-950 font-extrabold rounded-xl text-xs flex items-center gap-1.5 sm:gap-2 border-2 border-zinc-900 transition min-h-[44px]"
+              className="px-4 sm:px-5 py-2.5 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 disabled:opacity-30 text-zinc-950 dark:text-zinc-100 font-extrabold rounded-xl text-xs flex items-center gap-1.5 sm:gap-2 border-2 border-zinc-900 dark:border-zinc-700 transition min-h-[44px] cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4 stroke-[2.5] shrink-0" />
               <span>Anterior</span>
@@ -585,7 +561,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
             <button
               disabled={currentIndex === items.length - 1}
               onClick={() => setCurrentIndex((prev) => Math.min(items.length - 1, prev + 1))}
-              className="px-4 sm:px-5 py-2.5 bg-zinc-950 hover:bg-zinc-800 disabled:opacity-30 text-white font-extrabold rounded-xl text-xs flex items-center gap-1.5 sm:gap-2 border-2 border-zinc-950 transition min-h-[44px]"
+              className="px-4 sm:px-5 py-2.5 bg-zinc-950 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-zinc-200 disabled:opacity-30 text-white dark:text-zinc-950 font-extrabold rounded-xl text-xs flex items-center gap-1.5 sm:gap-2 border-2 border-zinc-950 dark:border-zinc-100 transition min-h-[44px] cursor-pointer"
             >
               <span>Siguiente</span>
               <ChevronRight className="w-4 h-4 stroke-[2.5] shrink-0" />
@@ -593,18 +569,18 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
           </div>
 
           {/* Keyboard Shortcuts Hint Bar */}
-          <div className="hidden sm:flex items-center justify-center gap-4 pt-4 text-[11px] text-zinc-600 font-bold">
+          <div className="hidden sm:flex items-center justify-center gap-4 pt-4 text-[11px] text-zinc-600 dark:text-zinc-400 font-bold">
             <span className="flex items-center gap-1.5">
-              <kbd className="px-2 py-0.5 bg-zinc-100 border-2 border-zinc-900 rounded text-zinc-950 text-[10px] font-black">A–D</kbd>
+              <kbd className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-800 border-2 border-zinc-900 dark:border-zinc-700 rounded text-zinc-950 dark:text-zinc-100 text-[10px] font-black">A–D</kbd>
               responder
             </span>
             <span className="flex items-center gap-1.5">
-              <kbd className="px-2 py-0.5 bg-zinc-100 border-2 border-zinc-900 rounded text-zinc-950 text-[10px] font-black">F</kbd>
+              <kbd className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-800 border-2 border-zinc-900 dark:border-zinc-700 rounded text-zinc-950 dark:text-zinc-100 text-[10px] font-black">F</kbd>
               marcar revisión
             </span>
             <span className="flex items-center gap-1.5">
-              <kbd className="px-2 py-0.5 bg-zinc-100 border-2 border-zinc-900 rounded text-zinc-950 text-[10px] font-black">←</kbd>
-              <kbd className="px-2 py-0.5 bg-zinc-100 border-2 border-zinc-900 rounded text-zinc-950 text-[10px] font-black">→</kbd>
+              <kbd className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-800 border-2 border-zinc-900 dark:border-zinc-700 rounded text-zinc-950 dark:text-zinc-100 text-[10px] font-black">←</kbd>
+              <kbd className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-800 border-2 border-zinc-900 dark:border-zinc-700 rounded text-zinc-950 dark:text-zinc-100 text-[10px] font-black">→</kbd>
               navegar
             </span>
           </div>
@@ -614,41 +590,41 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
       {/* Formula Reference Modal */}
       {isFormulaOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/70 backdrop-blur-xs p-4">
-          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col border-2 border-zinc-900 shadow-2xl overflow-hidden">
-            <div className="p-4 sm:p-5 border-b-2 border-zinc-900 flex items-center justify-between bg-zinc-100">
+          <div className="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col border-2 border-zinc-900 dark:border-zinc-700 shadow-2xl overflow-hidden">
+            <div className="p-4 sm:p-5 border-b-2 border-zinc-900 dark:border-zinc-700 flex items-center justify-between bg-zinc-100 dark:bg-zinc-800">
               <div className="flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-zinc-900 stroke-[2.5]" />
-                <h3 className="text-base font-black text-zinc-900 uppercase">Simbología y Fórmulas del Examen (BXM)</h3>
+                <BookOpen className="w-5 h-5 stroke-[2.5]" />
+                <h3 className="text-base font-black uppercase">Simbología y Fórmulas del Examen (BXM)</h3>
               </div>
               <button
                 onClick={() => setIsFormulaOpen(false)}
-                className="p-2 text-zinc-900 hover:bg-zinc-200 rounded-xl transition min-h-[44px] min-w-[44px] flex items-center justify-center"
+                className="p-2 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-xl transition min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer"
               >
                 <X className="w-5 h-5 stroke-[2.5]" />
               </button>
             </div>
 
-            <div className="p-6 overflow-y-auto space-y-6 text-sm text-zinc-900 font-medium">
+            <div className="p-6 overflow-y-auto space-y-6 text-sm font-medium">
               {/* Geometria */}
               <div className="space-y-3">
-                <h4 className="font-black text-zinc-900 border-b-2 border-zinc-900 pb-1 uppercase tracking-wide text-xs">
+                <h4 className="font-black border-b-2 border-zinc-900 dark:border-zinc-700 pb-1 uppercase tracking-wide text-xs">
                   Geometría y Circunferencia
                 </h4>
                 <div className="grid sm:grid-cols-2 gap-3 text-xs">
-                  <div className="bg-zinc-50 p-3 rounded-xl border-2 border-zinc-900 space-y-1">
-                    <span className="font-black block text-zinc-900">Ecuación de la Circunferencia:</span>
+                  <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1">
+                    <span className="font-black block">Ecuación de la Circunferencia:</span>
                     <TextRenderer content="$(x - h)^2 + (y - k)^2 = r^2$" />
                   </div>
-                  <div className="bg-zinc-50 p-3 rounded-xl border-2 border-zinc-900 space-y-1">
-                    <span className="font-black block text-zinc-900">Área y Perímetro del Círculo:</span>
+                  <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1">
+                    <span className="font-black block">Área y Perímetro del Círculo:</span>
                     <TextRenderer content="$A = \pi r^2 \quad | \quad P = 2\pi r$" />
                   </div>
-                  <div className="bg-zinc-50 p-3 rounded-xl border-2 border-zinc-900 space-y-1">
-                    <span className="font-black block text-zinc-900">Polígono Regular (Suma de Ángulos Int.):</span>
+                  <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1">
+                    <span className="font-black block">Polígono Regular (Suma de Ángulos Int.):</span>
                     <TextRenderer content="$S_i = 180^\circ (n - 2)$" />
                   </div>
-                  <div className="bg-zinc-50 p-3 rounded-xl border-2 border-zinc-900 space-y-1">
-                    <span className="font-black block text-zinc-900">Área Regular / Apotema:</span>
+                  <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1">
+                    <span className="font-black block">Área Regular / Apotema:</span>
                     <TextRenderer content="$A = \frac{P \cdot a}{2}$" />
                   </div>
                 </div>
@@ -656,24 +632,24 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
               {/* Funciones y Algebra */}
               <div className="space-y-3">
-                <h4 className="font-black text-zinc-900 border-b-2 border-zinc-900 pb-1 uppercase tracking-wide text-xs">
+                <h4 className="font-black border-b-2 border-zinc-900 dark:border-zinc-700 pb-1 uppercase tracking-wide text-xs">
                   Funciones y Álgebra
                 </h4>
                 <div className="grid sm:grid-cols-2 gap-3 text-xs">
-                  <div className="bg-zinc-50 p-3 rounded-xl border-2 border-zinc-900 space-y-1">
-                    <span className="font-black block text-zinc-900">Función Lineal:</span>
+                  <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1">
+                    <span className="font-black block">Función Lineal:</span>
                     <TextRenderer content="$f(x) = mx + b \quad (m = \frac{y_2 - y_1}{x_2 - x_1})$" />
                   </div>
-                  <div className="bg-zinc-50 p-3 rounded-xl border-2 border-zinc-900 space-y-1">
-                    <span className="font-black block text-zinc-900">Vértice de Parábola (Cuadrática):</span>
+                  <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1">
+                    <span className="font-black block">Vértice de Parábola (Cuadrática):</span>
                     <TextRenderer content="$V = \left( -\frac{b}{2a}, -\frac{\Delta}{4a} \right), \quad \Delta = b^2 - 4ac$" />
                   </div>
-                  <div className="bg-zinc-50 p-3 rounded-xl border-2 border-zinc-900 space-y-1">
-                    <span className="font-black block text-zinc-900">Función Exponencial y Logarítmica:</span>
+                  <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1">
+                    <span className="font-black block">Función Exponencial y Logarítmica:</span>
                     <TextRenderer content="$f(x) = a^x \iff f^{-1}(x) = \log_a(x)$" />
                   </div>
-                  <div className="bg-zinc-50 p-3 rounded-xl border-2 border-zinc-900 space-y-1">
-                    <span className="font-black block text-zinc-900">Interés Compuesto:</span>
+                  <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1">
+                    <span className="font-black block">Interés Compuesto:</span>
                     <TextRenderer content="$C(t) = C_0 (1 + i)^t$" />
                   </div>
                 </div>
@@ -681,32 +657,32 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
               {/* Estadistica y Probabilidad */}
               <div className="space-y-3">
-                <h4 className="font-black text-zinc-900 border-b-2 border-zinc-900 pb-1 uppercase tracking-wide text-xs">
+                <h4 className="font-black border-b-2 border-zinc-900 dark:border-zinc-700 pb-1 uppercase tracking-wide text-xs">
                   Estadística y Probabilidad
                 </h4>
                 <div className="grid sm:grid-cols-2 gap-3 text-xs">
-                  <div className="bg-zinc-50 p-3 rounded-xl border-2 border-zinc-900 space-y-1">
-                    <span className="font-black block text-zinc-900">
+                  <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1">
+                    <span className="font-black block">
                       Media Aritmética (<TextRenderer inline content="$\bar{x}$" />):
                     </span>
                     <TextRenderer content="$\bar{x} = \frac{\sum x_i}{n}$" />
                   </div>
-                  <div className="bg-zinc-50 p-3 rounded-xl border-2 border-zinc-900 space-y-1">
-                    <span className="font-black block text-zinc-900">Recorrido Intercuartílico (RIC):</span>
+                  <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1">
+                    <span className="font-black block">Recorrido Intercuartílico (RIC):</span>
                     <TextRenderer content="$RIC = Q_3 - Q_1$" />
                   </div>
-                  <div className="bg-zinc-50 p-3 rounded-xl border-2 border-zinc-900 space-y-1 sm:col-span-2">
-                    <span className="font-black block text-zinc-900">Probabilidad Laplace:</span>
+                  <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1 sm:col-span-2">
+                    <span className="font-black block">Probabilidad Laplace:</span>
                     <TextRenderer content="$P(A) = \frac{\text{Casos favorables}}{\text{Casos posibles}}$" />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="p-4 border-t-2 border-zinc-900 bg-zinc-100 text-right">
+            <div className="p-4 border-t-2 border-zinc-900 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 text-right">
               <button
                 onClick={() => setIsFormulaOpen(false)}
-                className="px-5 py-2.5 bg-zinc-950 text-white font-extrabold rounded-xl text-xs border-2 border-zinc-950 min-h-[44px]"
+                className="px-5 py-2.5 bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 font-extrabold rounded-xl text-xs border-2 border-zinc-950 dark:border-zinc-100 min-h-[44px] cursor-pointer"
               >
                 Cerrar Fórmulas
               </button>
@@ -718,21 +694,21 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
       {/* Confirmation Modal */}
       {isConfirmOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/70 backdrop-blur-xs p-4">
-          <div className="bg-white rounded-2xl p-6 max-w-sm w-full text-center space-y-4 border-2 border-zinc-900 shadow-2xl">
-            <div className="w-12 h-12 bg-zinc-100 text-zinc-950 rounded-full border-2 border-zinc-900 flex items-center justify-center mx-auto">
+          <div className="bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 rounded-2xl p-6 max-w-sm w-full text-center space-y-4 border-2 border-zinc-900 dark:border-zinc-700 shadow-2xl">
+            <div className="w-12 h-12 bg-zinc-100 dark:bg-zinc-800 text-zinc-950 dark:text-zinc-100 rounded-full border-2 border-zinc-900 dark:border-zinc-700 flex items-center justify-center mx-auto">
               <AlertTriangle className="w-6 h-6 stroke-[2.5]" />
             </div>
             <div>
-              <h3 className="text-lg font-black text-zinc-900 uppercase">¿Entregar la prueba?</h3>
-              <p className="text-xs text-zinc-700 font-bold mt-1">
+              <h3 className="text-lg font-black uppercase">¿Entregar la prueba?</h3>
+              <p className="text-xs text-zinc-700 dark:text-zinc-300 font-bold mt-1">
                 Has respondido {answeredCount} de {items.length} preguntas.
                 {items.length - answeredCount > 0 && (
-                  <span className="block text-zinc-900 font-black mt-1">
+                  <span className="block text-zinc-900 dark:text-zinc-100 font-black mt-1">
                     Atención: Quedan {items.length - answeredCount} preguntas sin responder.
                   </span>
                 )}
                 {flaggedCount > 0 && (
-                  <span className="block text-zinc-800 mt-1">
+                  <span className="block text-zinc-800 dark:text-zinc-200 mt-1">
                     Tienes {flaggedCount} pregunta{flaggedCount === 1 ? '' : 's'} marcada{flaggedCount === 1 ? '' : 's'} para revisión.
                   </span>
                 )}
@@ -741,13 +717,13 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
             <div className="flex gap-3">
               <button
                 onClick={() => setIsConfirmOpen(false)}
-                className="flex-1 py-2.5 bg-zinc-100 hover:bg-zinc-200 text-zinc-950 font-extrabold rounded-xl text-xs border-2 border-zinc-900 min-h-[44px]"
+                className="flex-1 py-2.5 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-950 dark:text-zinc-100 font-extrabold rounded-xl text-xs border-2 border-zinc-900 dark:border-zinc-700 min-h-[44px] cursor-pointer"
               >
                 Seguir respondiendo
               </button>
               <button
                 onClick={handleFinalSubmit}
-                className="flex-1 py-2.5 bg-zinc-950 hover:bg-zinc-800 text-white font-extrabold rounded-xl text-xs border-2 border-zinc-950 min-h-[44px]"
+                className="flex-1 py-2.5 bg-zinc-950 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-zinc-200 text-white dark:text-zinc-950 font-extrabold rounded-xl text-xs border-2 border-zinc-950 dark:border-zinc-100 min-h-[44px] cursor-pointer"
               >
                 Sí, entregar
               </button>
