@@ -72,6 +72,8 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
           if (!curId) return prev;
           return { ...prev, [curId]: !prev[curId] };
         });
+      } else if (key === 'escape') {
+        setIsNavOpen(false);
       }
     };
 
@@ -246,28 +248,28 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
   return (
     <div className="test-shell min-h-[calc(100vh-65px)] bg-zinc-100 flex flex-col">
       {/* Test Shell Header */}
-      <div className="bg-white border-b-2 border-zinc-900 sticky top-14 z-30 px-4 sm:px-6 py-3 shadow-xs">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
+      <div className="bg-white border-b-2 border-zinc-900 sticky top-12 sm:top-14 z-30 px-3 sm:px-6 py-2.5 sm:py-3 shadow-xs">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             <button
               onClick={() => setIsNavOpen(!isNavOpen)}
-              className="lg:hidden p-2 text-zinc-900 hover:bg-zinc-100 rounded-xl border border-zinc-900 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              className="lg:hidden p-2 text-zinc-900 hover:bg-zinc-100 rounded-xl border-2 border-zinc-900 min-h-[44px] min-w-[44px] flex items-center justify-center shrink-0"
               aria-label="Abrir navegador de ítems"
             >
               <Menu className="w-5 h-5 stroke-[2.5]" />
             </button>
-            <div>
-              <div className="text-sm font-black text-zinc-900">
+            <div className="min-w-0">
+              <div className="text-xs sm:text-sm font-black text-zinc-900 truncate">
                 Pregunta {currentIndex + 1} de {items.length}
               </div>
-              <div className="text-xs text-zinc-600 font-bold uppercase tracking-wider">
+              <div className="text-[10px] sm:text-xs text-zinc-600 font-bold uppercase tracking-wider truncate">
                 {currentItem.topic || currentItem.area}
               </div>
             </div>
           </div>
 
-          {/* Progress Bar & Timer */}
-          <div className="flex items-center gap-4 sm:gap-6">
+          {/* Progress Bar & Timer & Actions */}
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             <div className="hidden sm:flex flex-col items-end w-36">
               <div className="text-[11px] font-black text-zinc-800 mb-1">
                 Progreso: {progressPct}% ({answeredCount}/{items.length})
@@ -282,42 +284,50 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
             <button
               onClick={() => setIsFormulaOpen(true)}
-              className="px-3.5 py-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-950 font-extrabold rounded-xl text-xs flex items-center gap-1.5 border-2 border-zinc-900 transition min-h-[44px]"
+              className="px-2.5 sm:px-3.5 py-2 bg-zinc-100 hover:bg-zinc-200 text-zinc-950 font-extrabold rounded-xl text-xs flex items-center gap-1.5 border-2 border-zinc-900 transition min-h-[44px]"
               title="Ver fórmulas del examen"
             >
-              <BookOpen className="w-4 h-4 stroke-[2.5]" />
+              <BookOpen className="w-4 h-4 stroke-[2.5] shrink-0" />
               <span className="hidden sm:inline">Fórmulas</span>
             </button>
 
             {config.enableTimer && (
               <div
-                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-black border-2 border-zinc-900 min-h-[44px] ${
+                className={`flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-black border-2 border-zinc-900 min-h-[44px] ${
                   timeLeftSeconds < 300
                     ? 'bg-zinc-950 text-white border-zinc-950 animate-pulse'
                     : 'bg-zinc-100 text-zinc-950'
                 }`}
               >
-                <Clock className="w-4 h-4 stroke-[2.5]" />
-                <span>{formatTimer(timeLeftSeconds)}</span>
+                <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5] shrink-0" />
+                <span className="text-[11px] sm:text-xs">{formatTimer(timeLeftSeconds)}</span>
               </div>
             )}
 
             <button
               onClick={() => setIsConfirmOpen(true)}
-              className="px-4 py-2 bg-zinc-950 hover:bg-zinc-800 text-white font-extrabold rounded-xl text-xs flex items-center gap-1.5 transition border-2 border-zinc-950 min-h-[44px]"
+              className="px-3 sm:px-4 py-2 bg-zinc-950 hover:bg-zinc-800 text-white font-extrabold rounded-xl text-xs flex items-center gap-1.5 transition border-2 border-zinc-950 min-h-[44px]"
             >
-              <Send className="w-4 h-4 stroke-[2.5]" />
-              <span>Finalizar</span>
+              <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5] shrink-0" />
+              <span className="hidden xs:inline sm:inline">Finalizar</span>
             </button>
           </div>
         </div>
       </div>
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 py-6 flex-1 flex gap-6">
+      <div className="max-w-7xl mx-auto w-full px-3.5 sm:px-6 py-4 sm:py-6 flex-1 flex gap-6 relative">
+        {/* Mobile Backdrop Overlay for Drawer */}
+        {isNavOpen && (
+          <div
+            onClick={() => setIsNavOpen(false)}
+            className="fixed inset-0 bg-zinc-950/60 z-35 lg:hidden backdrop-blur-xs"
+          />
+        )}
+
         {/* Navigation Sidebar (Desktop & Mobile Drawer) */}
         <aside
-          className={`fixed inset-y-0 left-0 z-40 w-72 bg-white border-r-2 border-zinc-900 p-4 flex flex-col transform transition-transform lg:static lg:translate-x-0 ${
+          className={`fixed inset-y-0 left-0 z-40 w-72 max-w-[85vw] bg-white border-r-2 border-zinc-900 p-4 flex flex-col transform transition-transform lg:static lg:translate-x-0 ${
             isNavOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
@@ -420,25 +430,26 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
         </aside>
 
         {/* Question Area */}
-        <main className="flex-1 bg-white rounded-2xl border-2 border-zinc-900 p-6 sm:p-8 shadow-xs flex flex-col justify-between">
-          <div className="space-y-6">
+        <main className="flex-1 bg-white rounded-2xl border-2 border-zinc-900 p-4 sm:p-8 shadow-xs flex flex-col justify-between max-w-full overflow-hidden">
+          <div className="space-y-5 sm:space-y-6">
             {/* Question Bar Header */}
-            <div className="flex items-center justify-between border-b-2 border-zinc-900 pb-3">
-              <span className="text-xs font-black text-zinc-900 uppercase tracking-wider">
+            <div className="flex items-center justify-between gap-2 border-b-2 border-zinc-900 pb-3">
+              <span className="text-[11px] sm:text-xs font-black text-zinc-900 uppercase tracking-wider min-w-0 truncate">
                 {currentItem.evidence ? `Evidencia: ${currentItem.evidence}` : 'Opción Múltiple'}
               </span>
 
               <button
                 onClick={handleToggleFlag}
                 title="Atajo de teclado: F o M"
-                className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold border-2 transition min-h-[44px] ${
+                className={`flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2 rounded-xl text-xs font-bold border-2 transition min-h-[44px] shrink-0 ${
                   flaggedItems[currentItem.id]
                     ? 'bg-zinc-950 border-zinc-950 text-white'
                     : 'bg-zinc-100 border-zinc-900 text-zinc-900 hover:bg-zinc-200'
                 }`}
               >
-                <Flag className="w-4 h-4 fill-current" />
-                <span>{flaggedItems[currentItem.id] ? 'Marcada [F]' : 'Marcar revisión [F]'}</span>
+                <Flag className="w-4 h-4 fill-current shrink-0" />
+                <span className="hidden xs:inline">{flaggedItems[currentItem.id] ? 'Marcada [F]' : 'Marcar [F]'}</span>
+                <span className="xs:hidden">{flaggedItems[currentItem.id] ? 'Marcada' : 'Marcar'}</span>
               </button>
             </div>
 
@@ -509,7 +520,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
             )}
 
             {/* Answer Options Selector (FR-A-01) */}
-            <div className="space-y-3 pt-2">
+            <div className="space-y-2.5 sm:space-y-3 pt-1 sm:pt-2">
               {getOptionArray(currentItem).map((opt) => {
                 const selected = responses[currentItem.id]?.selectedOption === opt.letter;
                 const isEliminated = !!eliminatedOptions[currentItem.id]?.[opt.letter];
@@ -525,10 +536,10 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
                   <div key={opt.letter} className="relative flex items-center gap-2">
                     <button
                       onClick={() => handleSelectOption(opt.letter)}
-                      className={`w-full text-left p-4 rounded-xl border-2 flex items-start gap-3.5 transition min-h-[52px] ${optionContainerStyle}`}
+                      className={`w-full text-left p-3 sm:p-4 rounded-xl border-2 flex items-start gap-2.5 sm:gap-3.5 transition min-h-[52px] ${optionContainerStyle}`}
                     >
                       <span
-                        className={`w-8 h-8 rounded-lg text-xs font-black flex items-center justify-center shrink-0 transition border-2 ${
+                        className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg text-xs font-black flex items-center justify-center shrink-0 transition border-2 ${
                           selected
                             ? 'bg-white text-zinc-950 border-white'
                             : isEliminated
@@ -539,7 +550,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
                       >
                         {opt.letter}
                       </span>
-                      <div className={`text-sm pt-1 leading-normal flex-1 font-bold ${isEliminated ? 'line-through' : ''}`}>
+                      <div className={`text-xs sm:text-sm pt-0.5 sm:pt-1 leading-normal flex-1 font-bold ${isEliminated ? 'line-through' : ''}`}>
                         <TextRenderer content={opt.text} />
                       </div>
                     </button>
@@ -547,13 +558,14 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
                     <button
                       onClick={(e) => handleToggleEliminate(e, opt.letter)}
                       title={isEliminated ? 'Restaurar opción' : 'Descartar opción'}
-                      className={`p-3 rounded-xl border-2 transition shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center ${
+                      aria-label={isEliminated ? 'Restaurar opción' : 'Descartar opción'}
+                      className={`p-2.5 sm:p-3 rounded-xl border-2 transition shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center ${
                         isEliminated
                           ? 'text-zinc-950 bg-zinc-200 border-zinc-900'
                           : 'text-zinc-600 border-zinc-300 hover:border-zinc-900 hover:text-zinc-950'
                       }`}
                     >
-                      <EyeOff className="w-5 h-5 stroke-[2.5]" />
+                      <EyeOff className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
                     </button>
                   </div>
                 );
@@ -562,23 +574,23 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
           </div>
 
           {/* Navigation Controls */}
-          <div className="flex items-center justify-between pt-8 border-t-2 border-zinc-900 mt-8">
+          <div className="flex items-center justify-between pt-5 sm:pt-8 border-t-2 border-zinc-900 mt-6 sm:mt-8 gap-3">
             <button
               disabled={currentIndex === 0}
               onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
-              className="px-5 py-2.5 bg-zinc-100 hover:bg-zinc-200 disabled:opacity-30 text-zinc-950 font-extrabold rounded-xl text-xs flex items-center gap-2 border-2 border-zinc-900 transition min-h-[44px]"
+              className="px-4 sm:px-5 py-2.5 bg-zinc-100 hover:bg-zinc-200 disabled:opacity-30 text-zinc-950 font-extrabold rounded-xl text-xs flex items-center gap-1.5 sm:gap-2 border-2 border-zinc-900 transition min-h-[44px]"
             >
-              <ChevronLeft className="w-4 h-4 stroke-[2.5]" />
+              <ChevronLeft className="w-4 h-4 stroke-[2.5] shrink-0" />
               <span>Anterior</span>
             </button>
 
             <button
               disabled={currentIndex === items.length - 1}
               onClick={() => setCurrentIndex((prev) => Math.min(items.length - 1, prev + 1))}
-              className="px-5 py-2.5 bg-zinc-950 hover:bg-zinc-800 disabled:opacity-30 text-white font-extrabold rounded-xl text-xs flex items-center gap-2 border-2 border-zinc-950 transition min-h-[44px]"
+              className="px-4 sm:px-5 py-2.5 bg-zinc-950 hover:bg-zinc-800 disabled:opacity-30 text-white font-extrabold rounded-xl text-xs flex items-center gap-1.5 sm:gap-2 border-2 border-zinc-950 transition min-h-[44px]"
             >
               <span>Siguiente</span>
-              <ChevronRight className="w-4 h-4 stroke-[2.5]" />
+              <ChevronRight className="w-4 h-4 stroke-[2.5] shrink-0" />
             </button>
           </div>
 
