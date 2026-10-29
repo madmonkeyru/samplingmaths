@@ -3,16 +3,23 @@ import { User } from '../../types';
 import { storageService } from '../../services/storageService';
 import { AuthModal } from '../auth/AuthModal';
 import { ThemeToggle } from '../common/ThemeToggle';
-import { BookOpen, User as UserIcon, LogOut } from 'lucide-react';
+import { BookOpen, User as UserIcon, LogOut, Library } from 'lucide-react';
 
 interface HeaderProps {
   currentUser: User | null;
   onUserChanged: (user: User | null) => void;
   onNavigateHome: () => void;
-  currentView?: 'landing' | 'test' | 'results';
+  onNavigateResources?: () => void;
+  currentView?: 'landing' | 'test' | 'results' | 'resources';
 }
 
-export const Header: React.FC<HeaderProps> = ({ currentUser, onUserChanged, onNavigateHome, currentView }) => {
+export const Header: React.FC<HeaderProps> = ({
+  currentUser,
+  onUserChanged,
+  onNavigateHome,
+  onNavigateResources,
+  currentView,
+}) => {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
 
   const handleLogout = () => {
@@ -44,6 +51,21 @@ export const Header: React.FC<HeaderProps> = ({ currentUser, onUserChanged, onNa
           </button>
 
           <div className="flex items-center gap-2 shrink-0">
+            {onNavigateResources && !isTestView && (
+              <button
+                onClick={onNavigateResources}
+                className={`px-3 py-2 rounded-xl font-extrabold text-xs flex items-center gap-1.5 transition border-2 border-zinc-800 dark:border-zinc-700 min-h-[44px] cursor-pointer ${
+                  currentView === 'resources'
+                    ? 'bg-white text-zinc-950 font-black'
+                    : 'bg-zinc-900 text-zinc-200 hover:bg-zinc-800 hover:text-white'
+                }`}
+                title="Tabla de Especificaciones, Diccionario y Fórmulas"
+              >
+                <Library className="w-4 h-4 stroke-[2.5]" />
+                <span className="hidden md:inline">Especificaciones & Recursos</span>
+              </button>
+            )}
+
             <ThemeToggle showDropdown />
 
             {currentUser ? (
