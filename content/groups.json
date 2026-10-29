@@ -4,8 +4,8 @@
     {
       "group_id": "g_fuel_price",
       "items": [
-        26,
-        27
+        53,
+        54
       ],
       "title": "Precio del combustible por semana",
       "context_text": "La siguiente representación gráfica muestra el precio p(x) por litro de combustible, en colones, en función del tiempo x en semanas con 0 ≤ x ≤ 24.",
@@ -320,8 +320,8 @@
     {
       "group_id": "g_cont_table",
       "items": [
-        53,
-        54
+        80,
+        81
       ],
       "title": "Tabla de contingencia: Acompañamiento / Bebida",
       "context_text": null,
@@ -369,8 +369,8 @@
     {
       "group_id": "g_venn_3set",
       "items": [
-        55,
-        56
+        82,
+        83
       ],
       "title": "Diagrama de Venn: Música, Pintura, Ballet",
       "context_text": null,
@@ -401,8 +401,8 @@
     {
       "group_id": "g_emp_ages",
       "items": [
-        57,
-        58
+        84,
+        85
       ],
       "title": "Diagramas de caja: edades de empleados en Empresas A y B",
       "context_text": null,
@@ -442,8 +442,8 @@
     {
       "group_id": "g_volunteer",
       "items": [
-        59,
-        60
+        86,
+        87
       ],
       "title": "Horas mensuales de voluntariado por grupo",
       "context_text": null,

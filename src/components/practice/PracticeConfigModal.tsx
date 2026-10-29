@@ -72,7 +72,7 @@ export const PracticeConfigModal: React.FC<PracticeConfigModalProps> = ({
               }}
               className="w-full px-3.5 py-2.5 border-2 border-zinc-900 rounded-xl text-xs font-extrabold bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
             >
-              <option value="geometry">Geometría (23 ítems)</option>
+              <option value="geometry">Geometría (50 ítems)</option>
               <option value="functions">Relaciones y Álgebra (25 ítems)</option>
               <option value="statistics">Estadística y Probabilidad (12 ítems)</option>
             </select>

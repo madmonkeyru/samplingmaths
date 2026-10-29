@@ -6,23 +6,23 @@
   "source": "Práctica BXM Matemáticas 02-2026",
   "specification": "Tabla de especificaciones MATEMÁTICAS — Bachillerato por Madurez Suficiente, convocatoria 02-2026",
   "solucionario_verified": true,
-  "total_items": 60,
+  "total_items": 87,
   "sections": [
     {
       "id": "geometry",
       "name": "Geometría",
       "item_range": [
         1,
-        23
+        50
       ],
-      "total_items": 23
+      "total_items": 50
     },
     {
       "id": "functions",
       "name": "Relaciones y Álgebra",
       "item_range": [
-        24,
-        48
+        51,
+        75
       ],
       "total_items": 25
     },
@@ -30,8 +30,8 @@
       "id": "statistics",
       "name": "Estadística y Probabilidad",
       "item_range": [
-        49,
-        60
+        76,
+        87
       ],
       "total_items": 12,
       "distribution": {
@@ -1446,6 +1446,2140 @@
     },
     {
       "id": 24,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A1",
+        "evidence": "A1.1",
+        "evidence_desc": "Reconoce la representación gráfica de una circunferencia dado su centro y su radio, en diversos contextos."
+      },
+      "stem": "Considere la siguiente representación gráfica de una circunferencia \"c\" en el plano cartesiano:",
+      "options": {
+        "A": "Centro (3, -2) y radio 4.",
+        "B": "Centro (-3, 2) y radio 4.",
+        "C": "Centro (3, -2) y radio 16.",
+        "D": "Centro (-2, 3) y radio 4."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Al observar la gráfica, el centro se ubica en x = 3, y = -2, lo que da las coordenadas (3, -2).",
+        "La distancia desde el centro a los puntos extremos vertical u horizontalmente es de 4 unidades, por lo que el radio r = 4.",
+        "Por lo tanto, corresponde a centro (3, -2) y radio 4."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Circunferencia en el plano cartesiano con centro en (3, -2) y radio 4.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -2,
+              8
+            ],
+            "y": [
+              -7,
+              3
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                3,
+                -2
+              ],
+              "radius": 4,
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                -2
+              ],
+              "label": "O(3,-2)"
+            },
+            {
+              "type": "dashed_projection",
+              "from": [
+                3,
+                -2
+              ],
+              "to_axis": "x"
+            },
+            {
+              "type": "dashed_projection",
+              "from": [
+                3,
+                -2
+              ],
+              "to_axis": "y"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 25,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A1",
+        "evidence": "A1.2",
+        "evidence_desc": "Reconoce la representación algebraica de una circunferencia dado su centro y su radio, en diversos contextos."
+      },
+      "stem": "Un estanque circular en un parque tiene su centro en el punto (-4, 5) del plano cartesiano y un radio de 6 metros. ¿Cuál es la ecuación algebraica que representa el borde de este estanque?",
+      "options": {
+        "A": "(x - 4)^2 + (y + 5)^2 = 36",
+        "B": "(x + 4)^2 + (y - 5)^2 = 36",
+        "C": "(x + 4)^2 + (y - 5)^2 = 12",
+        "D": "(x - 4)^2 + (y + 5)^2 = 12"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La ecuación ordinaria de la circunferencia es (x - h)^2 + (y - k)^2 = r^2.",
+        "Sustituyendo h = -4, k = 5 y r = 6: (x - (-4))^2 + (y - 5)^2 = 6^2.",
+        "Esto simplifica a (x + 4)^2 + (y - 5)^2 = 36."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Representación del estanque circular centrado en (-4, 5) con radio 6.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -11,
+              3
+            ],
+            "y": [
+              -2,
+              12
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                -4,
+                5
+              ],
+              "radius": 6,
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -4,
+                5
+              ],
+              "label": "Centro(-4, 5)"
+            },
+            {
+              "type": "dashed_projection",
+              "from": [
+                -4,
+                5
+              ],
+              "to_axis": "x"
+            },
+            {
+              "type": "dashed_projection",
+              "from": [
+                -4,
+                5
+              ],
+              "to_axis": "y"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 26,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A1",
+        "evidence": "A1.3",
+        "evidence_desc": "Resuelve problemas, de diversos contextos, relacionados con la circunferencia y sus representaciones."
+      },
+      "stem": "La zona de cobertura circular de una antena WiFi está dada por la ecuación (x - 1)^2 + (y + 3)^2 = 25. Según la representación gráfica mostrada a continuación, ¿cuál es el radio de alcance máximo de la señal de la antena?",
+      "options": {
+        "A": "5 unidades",
+        "B": "10 unidades",
+        "C": "25 unidades",
+        "D": "50 unidades"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "De la ecuación (x - 1)^2 + (y + 3)^2 = 25, se identifica que r^2 = 25.",
+        "Calculando la raíz cuadrada: r = sqrt(25) = 5.",
+        "El alcance máximo (radio) de la antena es de 5 unidades."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Zona de cobertura de la antena WiFi de centro (1, -3) y radio 5.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -5,
+              7
+            ],
+            "y": [
+              -9,
+              3
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                1,
+                -3
+              ],
+              "radius": 5,
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                -3
+              ],
+              "label": "Antena(1, -3)"
+            },
+            {
+              "type": "dashed_projection",
+              "from": [
+                1,
+                -3
+              ],
+              "to_axis": "x"
+            },
+            {
+              "type": "dashed_projection",
+              "from": [
+                1,
+                -3
+              ],
+              "to_axis": "y"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 27,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Traslación de circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A2",
+        "evidence": "A2.1",
+        "evidence_desc": "Reconoce la representación gráfica o algebraica de la traslación de una circunferencia en diversos contextos."
+      },
+      "stem": "La circunferencia c1 representada en la gráfica adjunta está dada por (x - 2)^2 + (y - 1)^2 = 9. Si c1 se traslada 4 unidades hacia la izquierda y 3 unidades hacia arriba para obtener la circunferencia c2, ¿cuál es la ecuación de c2?",
+      "options": {
+        "A": "(x + 2)^2 + (y - 4)^2 = 9",
+        "B": "(x - 6)^2 + (y + 2)^2 = 9",
+        "C": "(x + 2)^2 + (y + 2)^2 = 9",
+        "D": "(x - 6)^2 + (y - 4)^2 = 9"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El centro original de c1 es (2, 1).",
+        "Trasladar 4 unidades a la izquierda: nuevo x = 2 - 4 = -2.",
+        "Trasladar 3 unidades hacia arriba: nuevo y = 1 + 3 = 4.",
+        "El nuevo centro es (-2, 4) y el radio se mantiene r = 3.",
+        "La ecuación de c2 es (x - (-2))^2 + (y - 4)^2 = 9, es decir, (x + 2)^2 + (y - 4)^2 = 9."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Circunferencia c1 con centro en (2, 1) y radio 3.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -2,
+              6
+            ],
+            "y": [
+              -3,
+              5
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                2,
+                1
+              ],
+              "radius": 3,
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                2,
+                1
+              ],
+              "label": "c1(2, 1)"
+            },
+            {
+              "type": "dashed_projection",
+              "from": [
+                2,
+                1
+              ],
+              "to_axis": "x"
+            },
+            {
+              "type": "dashed_projection",
+              "from": [
+                2,
+                1
+              ],
+              "to_axis": "y"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 28,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Traslación de circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A2",
+        "evidence": "A2.1",
+        "evidence_desc": "Reconoce la representación gráfica o algebraica de la traslación de una circunferencia en diversos contextos."
+      },
+      "stem": "Observe las gráficas de las circunferencias c1 y c2 mostradas a continuación en el plano cartesiano. Si la circunferencia c2 se obtuvo trasladando c1, ¿cuál fue el desplazamiento realizado?",
+      "options": {
+        "A": "5 unidades a la derecha y 3 unidades hacia arriba",
+        "B": "5 unidades a la izquierda y 3 unidades hacia abajo",
+        "C": "3 unidades a la derecha y 5 unidades hacia arriba",
+        "D": "2 unidades a la derecha y 2 unidades hacia arriba"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Centro de c1: (-2, -1). Centro de c2: (3, 2).",
+        "Desplazamiento horizontal: 3 - (-2) = 5 unidades a la derecha.",
+        "Desplazamiento vertical: 2 - (-1) = 3 unidades hacia arriba."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Plano cartesiano mostrando c1 centrado en (-2, -1) y c2 centrado en (3, 2).",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -5,
+              6
+            ],
+            "y": [
+              -4,
+              5
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                -2,
+                -1
+              ],
+              "radius": 2,
+              "stroke": "gray"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -2,
+                -1
+              ],
+              "label": "c1(-2,-1)"
+            },
+            {
+              "type": "circle",
+              "center": [
+                3,
+                2
+              ],
+              "radius": 2,
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                2
+              ],
+              "label": "c2(3,2)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 29,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Traslación de circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A2",
+        "evidence": "A2.2",
+        "evidence_desc": "Resuelve problemas, de diversos contextos, relacionados con la traslación de una circunferencia y sus representaciones."
+      },
+      "stem": "Un disco circular en una máquina industrial está centrado inicialmente en el origen (0, 0) con radio 5. Debido a un ajuste de calibración, el centro se desplaza al punto (3, -4), como se aprecia en la representación gráfica: [imagen]. ¿Cuál es la ecuación de la posición final del disco?",
+      "options": {
+        "A": "(x - 3)^2 + (y + 4)^2 = 25",
+        "B": "(x + 3)^2 + (y - 4)^2 = 25",
+        "C": "(x - 3)^2 + (y - 4)^2 = 25",
+        "D": "(x + 3)^2 + (y + 4)^2 = 25"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La posición inicial es x^2 + y^2 = 25 (centro (0,0)).",
+        "El nuevo centro tras el movimiento es (h, k) = (3, -4).",
+        "El radio r = 5 se mantiene igual.",
+        "La ecuación resultante es (x - 3)^2 + (y - (-4))^2 = 5^2, que da (x - 3)^2 + (y + 4)^2 = 25."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Disco original centrado en (0,0) y disco trasladado centrado en (3, -4).",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -6,
+              9
+            ],
+            "y": [
+              -10,
+              6
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "stroke": "gray"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                0
+              ],
+              "label": "(0,0)"
+            },
+            {
+              "type": "circle",
+              "center": [
+                3,
+                -4
+              ],
+              "radius": 5,
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                -4
+              ],
+              "label": "(3,-4)"
+            },
+            {
+              "type": "dashed_projection",
+              "from": [
+                3,
+                -4
+              ],
+              "to_axis": "x"
+            },
+            {
+              "type": "dashed_projection",
+              "from": [
+                3,
+                -4
+              ],
+              "to_axis": "y"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 30,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Posición de puntos respecto a una circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A3",
+        "evidence": "A3.1",
+        "evidence_desc": "Determina gráfica y algebraicamente si un punto se ubica en el interior o en el exterior de una circunferencia en diversos contextos."
+      },
+      "stem": "Considere la circunferencia representada gráficamente con centro en C(1, 2) y radio 3: [imagen]. ¿Cuál de los siguientes puntos se ubica en el interior de la circunferencia?",
+      "options": {
+        "A": "(1, 4)",
+        "B": "(5, 2)",
+        "C": "(1, 6)",
+        "D": "(-3, 2)"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Para comprobar si un punto (x, y) está en el interior, calculamos la distancia d al centro (1, 2): d = sqrt((x - 1)^2 + (y - 2)^2).",
+        "Para (1, 4): d = sqrt((1-1)^2 + (4-2)^2) = sqrt(4) = 2. Como 2 < 3 (radio), el punto (1, 4) se encuentra estrictamente en el interior.",
+        "Para los demás puntos la distancia es mayor o igual a 3."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Circunferencia centrada en (1, 2) con radio 3 y punto (1, 4) en su interior.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -3,
+              6
+            ],
+            "y": [
+              -2,
+              7
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                1,
+                2
+              ],
+              "radius": 3,
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                2
+              ],
+              "label": "C(1,2)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                4
+              ],
+              "label": "A(1,4)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                5,
+                2
+              ],
+              "label": "B(5,2)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 31,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Posición de puntos respecto a una circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A3",
+        "evidence": "A3.1",
+        "evidence_desc": "Determina gráfica y algebraicamente si un punto se ubica en el interior o en el exterior de una circunferencia en diversos contextos."
+      },
+      "stem": "Una zona de cobertura circular de rescate tiene su centro en (-2, 1) y un radio de 5 km. Un dron de rescate se encuentra en la posición P(1, 3). Según la gráfica adjunta, determine la posición relativa del dron respecto a la zona de rescate.",
+      "options": {
+        "A": "Se ubica en el interior de la zona.",
+        "B": "Se ubica sobre el borde exterior de la zona.",
+        "C": "Se ubica en el exterior de la zona.",
+        "D": "Coincide exactamente con el centro."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Distancia del punto P(1, 3) al centro C(-2, 1): d = sqrt((1 - (-2))^2 + (3 - 1)^2) = sqrt(3^2 + 2^2) = sqrt(9 + 4) = sqrt(13) approx 3.61 km.",
+        "Como 3.61 < 5 km (radio de la zona), el dron se ubica en el interior de la zona."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Zona circular centrada en (-2, 1) con radio 5 y dron en el punto P(1, 3).",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -8,
+              4
+            ],
+            "y": [
+              -5,
+              7
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                -2,
+                1
+              ],
+              "radius": 5,
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -2,
+                1
+              ],
+              "label": "C(-2,1)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                3
+              ],
+              "label": "P(1,3)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 32,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Recta secante a una circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A3",
+        "evidence": "A3.2",
+        "evidence_desc": "Determina si una recta dada gráfica o algebraicamente es secante, tangente o exterior a una circunferencia en diversos contextos."
+      },
+      "stem": "Considere la circunferencia dada por x^2 + y^2 = 25 y la recta L dada por y = 3, cuya representación gráfica se observa a continuación: [imagen]. De acuerdo con la figura, ¿cuál es la posición relativa de la recta L respecto a la circunferencia?",
+      "options": {
+        "A": "Secante",
+        "B": "Tangente",
+        "C": "Exterior",
+        "D": "Perpendicular al eje y"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La recta y = 3 es una recta horizontal a distancia 3 del origen.",
+        "El radio de la circunferencia x^2 + y^2 = 25 es r = sqrt(25) = 5.",
+        "Como la distancia desde el centro (0,0) a la recta (d = 3) es menor que el radio (5), la recta interseca a la circunferencia en dos puntos distintos.",
+        "Por lo tanto, la recta L es secante a la circunferencia."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Circunferencia x^2 + y^2 = 25 e intersección con la recta horizontal y = 3.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -6,
+              6
+            ],
+            "y": [
+              -6,
+              6
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "stroke": "black"
+            },
+            {
+              "type": "line",
+              "from": [
+                -6,
+                3
+              ],
+              "to": [
+                6,
+                3
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -4,
+                3
+              ],
+              "label": "P1"
+            },
+            {
+              "type": "point",
+              "coords": [
+                4,
+                3
+              ],
+              "label": "P2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 33,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Recta tangente a una circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A3",
+        "evidence": "A3.2",
+        "evidence_desc": "Determina si una recta dada gráfica o algebraicamente es secante, tangente o exterior a una circunferencia en diversos contextos."
+      },
+      "stem": "En la gráfica adjunta, la recta L rosa el borde de la circunferencia c de centro O(0,0) exactamente en el punto P(0, 4): [imagen]. ¿Cuál es la ecuación algebraica de la recta L?",
+      "options": {
+        "A": "y = 4",
+        "B": "x = 4",
+        "C": "y = -4",
+        "D": "x = -4"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La recta toca a la circunferencia en un único punto P(0, 4) en el eje y.",
+        "Es una recta horizontal perpendicular al radio vertical OP.",
+        "Toda recta horizontal que pasa por y = 4 tiene la ecuación y = 4."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Circunferencia centrada en (0,0) con recta tangente horizontal en P(0,4).",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -5,
+              5
+            ],
+            "y": [
+              -5,
+              6
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                0,
+                0
+              ],
+              "radius": 4,
+              "stroke": "black"
+            },
+            {
+              "type": "line",
+              "from": [
+                -5,
+                4
+              ],
+              "to": [
+                5,
+                4
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                4
+              ],
+              "label": "P(0,4)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 34,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Rectas secantes, tangentes y exteriores",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A3",
+        "evidence": "A3.3",
+        "evidence_desc": "Determina gráfica o algebraicamente rectas secantes, tangentes y exteriores a una circunferencia, en diversos contextos."
+      },
+      "stem": "Considere la circunferencia (x - 2)^2 + (y + 1)^2 = 16 representada en la gráfica adjunta, con centro en (2, -1) y radio 4. Analice las rectas L1: x = 6 y L2: y = 4: [imagen]. ¿Cuál de las siguientes afirmaciones es VERDADERA?",
+      "options": {
+        "A": "L1 es tangente y L2 es exterior a la circunferencia.",
+        "B": "L1 es secante y L2 es tangente a la circunferencia.",
+        "C": "Ambas rectas L1 y L2 son tangentes a la circunferencia.",
+        "D": "Ambas rectas L1 y L2 son exteriores a la circunferencia."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Centro de la circunferencia C(2, -1), radio r = 4.",
+        "Para L1: x = 6, la distancia al centro es |6 - 2| = 4. Como d = r = 4, L1 es tangente.",
+        "Para L2: y = 4, la distancia al centro es |4 - (-1)| = 5. Como d = 5 > r = 4, L2 es exterior.",
+        "Por lo tanto, L1 es tangente y L2 es exterior."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Circunferencia en (2,-1) r=4 con recta vertical x=6 y recta horizontal y=4.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -3,
+              8
+            ],
+            "y": [
+              -6,
+              6
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                2,
+                -1
+              ],
+              "radius": 4,
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                2,
+                -1
+              ],
+              "label": "C(2,-1)"
+            },
+            {
+              "type": "line",
+              "from": [
+                6,
+                -6
+              ],
+              "to": [
+                6,
+                6
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "line",
+              "from": [
+                -3,
+                4
+              ],
+              "to": [
+                8,
+                4
+              ],
+              "stroke": "gray"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 35,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Posición relativa entre rectas",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A3",
+        "evidence": "A3.4",
+        "evidence_desc": "Determina geométrica o algebraicamente la posición relativa entre rectas en el plano desde el punto de vista del paralelismo o la perpendicularidad, en diversos contextos."
+      },
+      "stem": "Considere las rectas L1: y = 2x + 3 y L2: y = -1/2 x + 1 graficadas a continuación en el plano cartesiano: [imagen]. ¿Cuál es la relación de posición relativa entre L1 y L2?",
+      "options": {
+        "A": "Son perpendiculares.",
+        "B": "Son paralelas no coincidentes.",
+        "C": "Son coincidentes.",
+        "D": "Son oblicuas no perpendiculares."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La pendiente de L1 es m1 = 2.",
+        "La pendiente de L2 es m2 = -1/2.",
+        "El producto de sus pendientes es m1 * m2 = 2 * (-1/2) = -1.",
+        "Cuando el producto de las pendientes es -1, las rectas son perpendiculares."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Gráfica de dos rectas L1 y L2 que se intersecan formando un ángulo recto.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -4,
+              4
+            ],
+            "y": [
+              -2,
+              6
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "line",
+              "from": [
+                -3.5,
+                -4
+              ],
+              "to": [
+                1.5,
+                6
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "line",
+              "from": [
+                -4,
+                3
+              ],
+              "to": [
+                4,
+                -1
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -0.8,
+                1.4
+              ],
+              "label": "P"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 36,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Propiedad de la recta tangente y el radio",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A3",
+        "evidence": "A3.5",
+        "evidence_desc": "Determina elementos relacionados con la propiedad que establece que una recta tangente a una circunferencia es perpendicular al radio de la circunferencia en el punto de tangencia en diversos contextos."
+      },
+      "stem": "En la figura adjunta, la recta L es tangente a la circunferencia de centro O(0,0) en el punto T(6, 0). Si el punto P(6, 8) pertenece a la recta L y la distancia de O a T es el radio (6 cm): [imagen], ¿cuál es la medida en centímetros de la hipotenusa OP del triángulo rectángulo OTP?",
+      "options": {
+        "A": "10 cm",
+        "B": "12 cm",
+        "C": "14 cm",
+        "D": "100 cm"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Por la propiedad de la tangente, la recta L es perpendicular al radio OT en el punto de tangencia T, formando un triángulo rectángulo OTP en T.",
+        "Los catetos miden OT = 6 cm y TP = 8 cm.",
+        "Aplicando el teorema de Pitágoras: OP^2 = OT^2 + TP^2 = 6^2 + 8^2 = 36 + 64 = 100.",
+        "OP = sqrt(100) = 10 cm."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Triángulo rectángulo OTP formado por el radio OT (6 cm), la tangente TP (8 cm) y la hipotenusa OP.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -2,
+              9
+            ],
+            "y": [
+              -2,
+              10
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                0,
+                0
+              ],
+              "radius": 6,
+              "stroke": "black"
+            },
+            {
+              "type": "line",
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                6,
+                0
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "line",
+              "from": [
+                6,
+                -1
+              ],
+              "to": [
+                6,
+                9
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "line",
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                6,
+                8
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                0
+              ],
+              "label": "O"
+            },
+            {
+              "type": "point",
+              "coords": [
+                6,
+                0
+              ],
+              "label": "T(6,0)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                6,
+                8
+              ],
+              "label": "P(6,8)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 37,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Polígonos regulares",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A4",
+        "evidence": "A4.1",
+        "evidence_desc": "Determina elementos de los polígonos regulares para la obtención de perímetros o áreas de estos en diversos contextos."
+      },
+      "stem": "Un quiosco de parque tiene forma de hexágono regular. Si la apotema del hexágono mide 4\\sqrt{3} metros, ¿cuál es el área total del piso del quiosco en metros cuadrados?",
+      "options": {
+        "A": "96\\sqrt{3} m^2",
+        "B": "48\\sqrt{3} m^2",
+        "C": "192\\sqrt{3} m^2",
+        "D": "144 m^2"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "En un hexágono regular, la apotema 'a' se relaciona con el lado 'L' mediante a = L * sqrt(3) / 2.",
+        "Dado a = 4*sqrt(3): 4*sqrt(3) = L * sqrt(3) / 2 => L = 8 metros.",
+        "El perímetro P de un hexágono regular es 6 * L = 6 * 8 = 48 metros.",
+        "El área es A = (P * a) / 2 = (48 * 4*sqrt(3)) / 2 = 96*sqrt(3) m^2."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Hexágono regular con indicación de su apotema.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -10,
+              10
+            ],
+            "y": [
+              -10,
+              10
+            ]
+          },
+          "grid": false,
+          "children": [
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  8,
+                  0
+                ],
+                [
+                  4,
+                  6.93
+                ],
+                [
+                  -4,
+                  6.93
+                ],
+                [
+                  -8,
+                  0
+                ],
+                [
+                  -4,
+                  -6.93
+                ],
+                [
+                  4,
+                  -6.93
+                ]
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "line",
+              "from": [
+                0,
+                0
+              ],
+              "to": [
+                0,
+                6.93
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                0
+              ],
+              "label": "O"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                6.93
+              ],
+              "label": "a=4√3"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 38,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Polígonos regulares",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A4",
+        "evidence": "A4.1",
+        "evidence_desc": "Determina elementos de los polígonos regulares para la obtención de perímetros o áreas de estos en diversos contextos."
+      },
+      "stem": "Un diseñador crea una mesa con forma de octágono regular donde cada lado mide 12 cm. ¿Cuál es el perímetro total de la mesa?",
+      "options": {
+        "A": "96 cm",
+        "B": "80 cm",
+        "C": "64 cm",
+        "D": "48 cm"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Un octágono regular tiene n = 8 lados de igual longitud.",
+        "Perímetro P = n * L = 8 * 12 cm = 96 cm."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Octágono regular de lado 12 cm.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -6,
+              6
+            ],
+            "y": [
+              -6,
+              6
+            ]
+          },
+          "grid": false,
+          "children": [
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  2,
+                  4.83
+                ],
+                [
+                  4.83,
+                  2
+                ],
+                [
+                  4.83,
+                  -2
+                ],
+                [
+                  2,
+                  -4.83
+                ],
+                [
+                  -2,
+                  -4.83
+                ],
+                [
+                  -4.83,
+                  -2
+                ],
+                [
+                  -4.83,
+                  2
+                ],
+                [
+                  -2,
+                  4.83
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 39,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Perímetros y áreas en plano cartesiano",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A4",
+        "evidence": "A4.2",
+        "evidence_desc": "Determina perímetros o áreas de polígonos no regulares mediante un sistema de coordenadas rectangulares en diversos contextos."
+      },
+      "stem": "Considere el polígono rectangular ABCD con vértices en A(1, 1), B(5, 1), C(5, 4) y D(1, 4) mostrado en el plano cartesiano adjunto: [imagen]. ¿Cuál es el área de dicho polígono?",
+      "options": {
+        "A": "12 unidades cuadradas",
+        "B": "14 unidades cuadradas",
+        "C": "16 unidades cuadradas",
+        "D": "20 unidades cuadradas"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Base de la figura = x_B - x_A = 5 - 1 = 4 unidades.",
+        "Altura de la figura = y_D - y_A = 4 - 1 = 3 unidades.",
+        "Área = Base * Altura = 4 * 3 = 12 unidades cuadradas."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Polígono ABCD en el plano cartesiano con A(1,1), B(5,1), C(5,4), D(1,4).",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              0,
+              7
+            ],
+            "y": [
+              0,
+              6
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  5,
+                  1
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  1,
+                  4
+                ]
+              ],
+              "labels": [
+                "A",
+                "B",
+                "C",
+                "D"
+              ]
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                1
+              ],
+              "label": "A(1,1)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                5,
+                1
+              ],
+              "label": "B(5,1)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                5,
+                4
+              ],
+              "label": "C(5,4)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                4
+              ],
+              "label": "D(1,4)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 40,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Perímetros y áreas en plano cartesiano",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A4",
+        "evidence": "A4.2",
+        "evidence_desc": "Determina perímetros o áreas de polígonos no regulares mediante un sistema de coordenadas rectangulares en diversos contextos."
+      },
+      "stem": "Un terreno triangular PQR tiene sus vértices representados en el plano cartesiano en P(0, 0), Q(6, 0) y R(2, 4): [imagen]. ¿Cuál es el área del terreno en unidades cuadradas?",
+      "options": {
+        "A": "12 unidades cuadradas",
+        "B": "24 unidades cuadradas",
+        "C": "10 unidades cuadradas",
+        "D": "16 unidades cuadradas"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La base sobre el eje x es la distancia PQ = |6 - 0| = 6 unidades.",
+        "La altura h correspondiente a R(2, 4) es la coordenada y = 4 unidades.",
+        "Área del triángulo = (base * altura) / 2 = (6 * 4) / 2 = 12 unidades cuadradas."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Triángulo PQR en plano cartesiano con P(0,0), Q(6,0), R(2,4).",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -1,
+              8
+            ],
+            "y": [
+              -1,
+              6
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  0
+                ],
+                [
+                  2,
+                  4
+                ]
+              ],
+              "labels": [
+                "P",
+                "Q",
+                "R"
+              ]
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                0
+              ],
+              "label": "P(0,0)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                6,
+                0
+              ],
+              "label": "Q(6,0)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                2,
+                4
+              ],
+              "label": "R(2,4)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 41,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Área de figuras no poligonales",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A4",
+        "evidence": "A4.3",
+        "evidence_desc": "Estima perímetros o áreas de figuras planas no poligonales mediante un sistema de coordenadas rectangulares en diversos contextos."
+      },
+      "stem": "La figura adjunta ilustra la silueta de un lago artificial en un mapa en cuadrícula, donde cada cuadrícula equivale a 1 km^2: [imagen]. Estimando el área del lago por método de cuadrículas, su superficie se encuentra en el rango de",
+      "options": {
+        "A": "entre 18 y 22 km^2.",
+        "B": "entre 30 y 35 km^2.",
+        "C": "menor que 10 km^2.",
+        "D": "mayor que 45 km^2."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Contando los cuadrados enteros contenidos totalmente en el interior de la curva se obtienen aproximadamente 15 km^2.",
+        "Añadiendo las fracciones de los cuadrados parciales bordeados por la curva se estiman entre 4 y 5 km^2 adicionales.",
+        "El área total estimada se sitúa entre 18 y 22 km^2."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Región curva no poligonal representando un lago sobre una cuadrícula.",
+        "visual": {
+          "type": "curve_region",
+          "domain": {
+            "x": [
+              0,
+              8
+            ],
+            "y": [
+              0,
+              6
+            ]
+          },
+          "grid": true,
+          "path": {
+            "points": [
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                4.5
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                7,
+                3.5
+              ],
+              [
+                6,
+                1.5
+              ],
+              [
+                3.5,
+                1
+              ]
+            ],
+            "label": "lago"
+          },
+          "straight_segments": [],
+          "base": {
+            "from": [
+              0,
+              0
+            ],
+            "to": [
+              8,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 42,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Visualización espacial - Cilindro",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A5",
+        "evidence": "A5.1",
+        "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el diámetro de un cilindro circular recto en diversos contextos."
+      },
+      "stem": "Un tanque cilíndrico de almacenamiento de agua tiene una altura de 15 metros y el diámetro de su base mide 8 metros. ¿Cuál es la medida del radio basal de dicho tanque?",
+      "options": {
+        "A": "4 metros",
+        "B": "8 metros",
+        "C": "16 metros",
+        "D": "30 metros"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El radio 'r' es la mitad de la medida del diámetro 'd'.",
+        "r = d / 2 = 8 / 2 = 4 metros."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 43,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Visualización espacial - Secciones planas",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A5",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+      },
+      "stem": "Si un plano interseca a un cilindro circular recto de manera completamente paralela a sus bases circulares, la figura geométrica que se obtiene en la sección plana corresponde a una",
+      "options": {
+        "A": "circunferencia.",
+        "B": "elipse no circular.",
+        "C": "rectángulo.",
+        "D": "parábola."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Un corte paralelo a la base de un cilindro circular recto produce una sección congruente a sus bases.",
+        "Por lo tanto, la figura obtenida es una circunferencia."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 44,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Visualización espacial - Esfera",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A5",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+      },
+      "stem": "Una esfera sólida de madera tiene un radio de 10 cm. Se realiza un corte plano a una distancia de 6 cm del centro de la esfera. ¿Cuál es el radio de la sección plana circular resultante?",
+      "options": {
+        "A": "8 cm",
+        "B": "4 cm",
+        "C": "12 cm",
+        "D": "16 cm"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El radio de la esfera R = 10 cm, la distancia del centro al plano d = 6 cm.",
+        "La relación métrica en la sección es R^2 = d^2 + r^2, donde 'r' es el radio de la sección plana.",
+        "10^2 = 6^2 + r^2 => 100 = 36 + r^2 => r^2 = 64.",
+        "r = sqrt(64) = 8 cm."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 45,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Simetría axial",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A6",
+        "evidence": "A6.1",
+        "evidence_desc": "Determina ejes de simetría en figuras simétricas en diversos contextos."
+      },
+      "stem": "Considere el rectángulo ABCD representado en el plano cartesiano con vértices A(-3, 2), B(3, 2), C(3, -2) y D(-3, -2): [imagen]. ¿Cuál de las siguientes rectas corresponde a un eje de simetría del rectángulo?",
+      "options": {
+        "A": "El eje y (recta x = 0)",
+        "B": "La recta y = x",
+        "C": "La recta y = 2",
+        "D": "La recta x = 3"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El rectángulo está centrado en el origen (0,0).",
+        "Reflejar respecto al eje y (x = 0) envía A(-3, 2) a B(3, 2) y D(-3, -2) a C(3, -2).",
+        "Por lo tanto, la recta x = 0 (eje y) es un eje de simetría axial para la figura."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Rectángulo ABCD centrado en el origen del plano cartesiano.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -5,
+              5
+            ],
+            "y": [
+              -4,
+              4
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  -3,
+                  2
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  -2
+                ],
+                [
+                  -3,
+                  -2
+                ]
+              ],
+              "labels": [
+                "A",
+                "B",
+                "C",
+                "D"
+              ]
+            },
+            {
+              "type": "point",
+              "coords": [
+                -3,
+                2
+              ],
+              "label": "A(-3,2)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                2
+              ],
+              "label": "B(3,2)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                -2
+              ],
+              "label": "C(3,-2)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -3,
+                -2
+              ],
+              "label": "D(-3,-2)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 46,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Simetría axial",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A6",
+        "evidence": "A6.2",
+        "evidence_desc": "Identifica elementos homólogos en figuras que presentan simetría axial en diversos contextos."
+      },
+      "stem": "En el plano cartesiano adjunto, los triángulos ABC y A'B'C' presentan simetría axial respecto al eje y: [imagen]. Si el punto A se ubica en (-3, 4), ¿cuáles son las coordenadas de su punto homólogo A'?",
+      "options": {
+        "A": "(3, 4)",
+        "B": "(-3, -4)",
+        "C": "(3, -4)",
+        "D": "(4, -3)"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La reflexión con respecto al eje y cambia el signo de la coordenada x manteniendo la coordenada y: (x, y) -> (-x, y).",
+        "Para A(-3, 4): A' = (-(-3), 4) = (3, 4)."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Triángulos ABC y A'B'C' simétricos respecto al eje y.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -5,
+              5
+            ],
+            "y": [
+              -1,
+              6
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  -3,
+                  4
+                ],
+                [
+                  -4,
+                  1
+                ],
+                [
+                  -1,
+                  1
+                ]
+              ],
+              "labels": [
+                "A",
+                "B",
+                "C"
+              ]
+            },
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  3,
+                  4
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "labels": [
+                "A'",
+                "B'",
+                "C'"
+              ]
+            },
+            {
+              "type": "point",
+              "coords": [
+                -3,
+                4
+              ],
+              "label": "A(-3,4)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                4
+              ],
+              "label": "A'(3,4)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 47,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Transformaciones en el plano - Homotecia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A7",
+        "evidence": "A7.1",
+        "evidence_desc": "Reconoce las figuras obtenidas a partir del concepto de transformación (traslación, homotecia, reflexión o rotación) a figuras dadas, en diversos contextos."
+      },
+      "stem": "Al aplicar una homotecia de centro en el origen O(0,0) y razón de homotecia k = 3 al segmento AB de longitud 4 cm representado en la figura: [imagen], ¿cuál es la medida de la longitud del segmento transformado A'B'?",
+      "options": {
+        "A": "12 cm",
+        "B": "7 cm",
+        "C": "4 cm",
+        "D": "1 cm"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "En una homotecia de razón k, la longitud de todo segmento transformado se multiplica por |k|.",
+        "Longitud de A'B' = |k| * (Longitud de AB) = 3 * 4 cm = 12 cm."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Segmento AB y su homotético A'B' desde el origen con k=3.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -1,
+              8
+            ],
+            "y": [
+              -1,
+              15
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "line",
+              "from": [
+                1,
+                1
+              ],
+              "to": [
+                1,
+                5
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "line",
+              "from": [
+                3,
+                3
+              ],
+              "to": [
+                3,
+                15
+              ],
+              "stroke": "black"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                1
+              ],
+              "label": "A"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                5
+              ],
+              "label": "B"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                3
+              ],
+              "label": "A'"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                15
+              ],
+              "label": "B'"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 48,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Transformaciones en el plano - Reflexión",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A7",
+        "evidence": "A7.1",
+        "evidence_desc": "Reconoce las figuras obtenidas a partir del concepto de transformación (traslación, homotecia, reflexión o rotación) a figuras dadas, en diversos contextos."
+      },
+      "stem": "Considere el triángulo con vértices P(1, 2), Q(4, 2) y R(1, 5) ilustrado en el plano cartesiano adjunto: [imagen]. Si al triángulo se le aplica una reflexión sobre el eje x, ¿cuáles son las coordenadas del vértice resultante R'?",
+      "options": {
+        "A": "(1, -5)",
+        "B": "(-1, 5)",
+        "C": "(-1, -5)",
+        "D": "(5, 1)"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La reflexión con respecto al eje x cambia el signo de la coordenada y: (x, y) -> (x, -y).",
+        "Para R(1, 5), se obtiene R'(1, -5)."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Triángulo PQR y su reflejado P'Q'R' respecto al eje x.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -1,
+              6
+            ],
+            "y": [
+              -6,
+              6
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  1,
+                  5
+                ]
+              ],
+              "labels": [
+                "P",
+                "Q",
+                "R"
+              ]
+            },
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  1,
+                  -2
+                ],
+                [
+                  4,
+                  -2
+                ],
+                [
+                  1,
+                  -5
+                ]
+              ],
+              "labels": [
+                "P'",
+                "Q'",
+                "R'"
+              ]
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                5
+              ],
+              "label": "R(1,5)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                -5
+              ],
+              "label": "R'(1,-5)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 49,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Transformaciones en el plano - Invariantes",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A7",
+        "evidence": "A7.2",
+        "evidence_desc": "Identifica elementos de las figuras geométricas que aparecen invariantes bajo reflexiones o rotaciones, en diversos contextos."
+      },
+      "stem": "Cuando se le aplica una rotación de 90° con centro en el origen a cualquier polígono en el plano cartesiano, ¿cuál de las siguientes propiedades permanece invariante (se conserva exactamente igual)?",
+      "options": {
+        "A": "La medida de sus ángulos internos y la longitud de sus lados.",
+        "B": "Las coordenadas de todos sus vértices.",
+        "C": "La posición espacial del centroide del polígono.",
+        "D": "La orientación de las pendientes de sus lados respecto a los ejes."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Las rotaciones son transformaciones rígidas (isometrías).",
+        "Las isometrías conservan las distancias (longitud de lados) y las medidas de los ángulos internos."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 50,
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Transformaciones en el plano - Rotación",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A7",
+        "evidence": "A7.3",
+        "evidence_desc": "Determina el punto imagen de puntos dados mediante una transformación en diversos contextos."
+      },
+      "stem": "Al aplicar una rotación de 180° alrededor del origen (0,0) al punto P(-2, 5) mostrado en la figura: [imagen], ¿cuáles corresponden a las coordenadas del punto imagen P'?",
+      "options": {
+        "A": "(2, -5)",
+        "B": "(5, -2)",
+        "C": "(-5, 2)",
+        "D": "(2, 5)"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Una rotación de 180° con centro en (0,0) transforma el punto (x, y) en (-x, -y).",
+        "Para P(-2, 5): P' = (-(-2), -5) = (2, -5)."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Punto P(-2, 5) y su imagen P'(2, -5) tras una rotación de 180°.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -4,
+              4
+            ],
+            "y": [
+              -7,
+              7
+            ]
+          },
+          "grid": true,
+          "children": [
+            {
+              "type": "point",
+              "coords": [
+                -2,
+                5
+              ],
+              "label": "P(-2,5)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                2,
+                -5
+              ],
+              "label": "P'(2,-5)"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                0
+              ],
+              "label": "(0,0)"
+            },
+            {
+              "type": "line",
+              "from": [
+                -2,
+                5
+              ],
+              "to": [
+                2,
+                -5
+              ],
+              "stroke": "gray"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 51,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Concepto de función y de gráfica de una función",
@@ -1672,7 +3806,7 @@
       }
     },
     {
-      "id": 25,
+      "id": 52,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Composición de funciones",
@@ -1703,7 +3837,7 @@
       "visual_spec": null
     },
     {
-      "id": 26,
+      "id": 53,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Análisis de gráficas de funciones",
@@ -1732,7 +3866,7 @@
       "visual_spec": null
     },
     {
-      "id": 27,
+      "id": 54,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Análisis de gráficas de funciones",
@@ -1761,7 +3895,7 @@
       "visual_spec": null
     },
     {
-      "id": 28,
+      "id": 55,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función lineal",
@@ -1793,7 +3927,7 @@
       "visual_spec": null
     },
     {
-      "id": 29,
+      "id": 56,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función cuadrática",
@@ -1877,7 +4011,7 @@
       }
     },
     {
-      "id": 30,
+      "id": 57,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función lineal",
@@ -1908,7 +4042,7 @@
       "visual_spec": null
     },
     {
-      "id": 31,
+      "id": 58,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función lineal — modelado",
@@ -1938,7 +4072,7 @@
       "visual_spec": null
     },
     {
-      "id": 32,
+      "id": 59,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función lineal — modelado",
@@ -1970,7 +4104,7 @@
       "visual_spec": null
     },
     {
-      "id": 33,
+      "id": 60,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Sistemas de dos ecuaciones lineales con dos incógnitas",
@@ -2004,7 +4138,7 @@
       "visual_spec": null
     },
     {
-      "id": 34,
+      "id": 61,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Sistemas de dos ecuaciones lineales con dos incógnitas",
@@ -2036,7 +4170,7 @@
       "visual_spec": null
     },
     {
-      "id": 35,
+      "id": 62,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función inversa",
@@ -2066,7 +4200,7 @@
       "visual_spec": null
     },
     {
-      "id": 36,
+      "id": 63,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función cuadrática — inversa",
@@ -2145,7 +4279,7 @@
       }
     },
     {
-      "id": 37,
+      "id": 64,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Inversa de la función lineal",
@@ -2177,7 +4311,7 @@
       "visual_spec": null
     },
     {
-      "id": 38,
+      "id": 65,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Transformaciones de la gráfica de la función f(x) = a√x + b + c",
@@ -2207,7 +4341,7 @@
       "visual_spec": null
     },
     {
-      "id": 39,
+      "id": 66,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función inversa — representación gráfica",
@@ -2505,7 +4639,7 @@
       }
     },
     {
-      "id": 40,
+      "id": 67,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función exponencial",
@@ -2538,7 +4672,7 @@
       "visual_spec": null
     },
     {
-      "id": 41,
+      "id": 68,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función raíz cuadrada",
@@ -2569,7 +4703,7 @@
       "visual_spec": null
     },
     {
-      "id": 42,
+      "id": 69,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función logarítmica",
@@ -2600,7 +4734,7 @@
       "visual_spec": null
     },
     {
-      "id": 43,
+      "id": 70,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función exponencial y logarítmica",
@@ -2629,7 +4763,7 @@
       "visual_spec": null
     },
     {
-      "id": 44,
+      "id": 71,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Ecuaciones exponenciales",
@@ -2662,7 +4796,7 @@
       "visual_spec": null
     },
     {
-      "id": 45,
+      "id": 72,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función exponencial — modelado",
@@ -2692,7 +4826,7 @@
       "visual_spec": null
     },
     {
-      "id": 46,
+      "id": 73,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función lineal — modelado",
@@ -2722,7 +4856,7 @@
       "visual_spec": null
     },
     {
-      "id": 47,
+      "id": 74,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función cuadrática — modelado",
@@ -2752,7 +4886,7 @@
       "visual_spec": null
     },
     {
-      "id": 48,
+      "id": 75,
       "area": "Relaciones y Álgebra",
       "area_id": "functions",
       "topic": "Función logarítmica — modelado",
@@ -2782,7 +4916,7 @@
       "visual_spec": null
     },
     {
-      "id": 49,
+      "id": 76,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Medidas de posición",
@@ -2841,7 +4975,7 @@
       }
     },
     {
-      "id": 50,
+      "id": 77,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Medidas de posición",
@@ -2902,7 +5036,7 @@
       }
     },
     {
-      "id": 51,
+      "id": 78,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Medidas de posición",
@@ -2957,7 +5091,7 @@
       }
     },
     {
-      "id": 52,
+      "id": 79,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Medidas de variabilidad",
@@ -3007,7 +5141,7 @@
       }
     },
     {
-      "id": 53,
+      "id": 80,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Eventos y probabilidades",
@@ -3036,7 +5170,7 @@
       "visual_spec": null
     },
     {
-      "id": 54,
+      "id": 81,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Eventos y probabilidades",
@@ -3065,7 +5199,7 @@
       "visual_spec": null
     },
     {
-      "id": 55,
+      "id": 82,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Eventos y probabilidades",
@@ -3094,7 +5228,7 @@
       "visual_spec": null
     },
     {
-      "id": 56,
+      "id": 83,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Eventos y probabilidades",
@@ -3122,7 +5256,7 @@
       "visual_spec": null
     },
     {
-      "id": 57,
+      "id": 84,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Medidas de posición",
@@ -3151,7 +5285,7 @@
       "visual_spec": null
     },
     {
-      "id": 58,
+      "id": 85,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Medidas de variabilidad",
@@ -3180,7 +5314,7 @@
       "visual_spec": null
     },
     {
-      "id": 59,
+      "id": 86,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Medidas de variabilidad",
@@ -3211,7 +5345,7 @@
       "visual_spec": null
     },
     {
-      "id": 60,
+      "id": 87,
       "area": "Estadística y Probabilidad",
       "area_id": "statistics",
       "topic": "Medidas de variabilidad",
