@@ -85,15 +85,13 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
   useEffect(() => {
     let pool: Item[] = [];
     if (config.mode === 'simulation') {
-      pool = dataService.getAllItems();
-    } else if (config.area && config.area !== 'all') {
-      pool = dataService.getItemsByArea(config.area);
+      pool = dataService.getSimulationItems(config.setId || 'set_1');
+    } else if (config.mode === 'area' && config.area && config.area !== 'all') {
+      pool = dataService.getItemsByArea(config.area, config.setId);
+    } else if (config.mode === 'topic' && config.topic && config.topic !== 'all') {
+      pool = dataService.getItemsByTopic(config.topic, config.setId);
     } else {
-      pool = dataService.getAllItems();
-    }
-
-    if (config.mode === 'topic' && config.topic && config.topic !== 'all') {
-      pool = pool.filter((item) => item.topic === config.topic);
+      pool = dataService.getItemsBySet(config.setId || 'all');
     }
 
     if (config.itemCount !== 'all') {

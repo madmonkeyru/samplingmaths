@@ -1,4 +1,4 @@
-import { Item, Group, QuestionBankData, GroupBankData, DomainArea } from '../types';
+import { Item, Group, QuestionBankData, GroupBankData, DomainArea, SetInfo } from '../types';
 import questionsJson from '../../content/questions.json';
 import groupsJson from '../../content/groups.json';
 
@@ -23,6 +23,23 @@ class DataService {
     return this.questionsData.items || [];
   }
 
+  public getSets(): SetInfo[] {
+    return this.questionsData.sets || [];
+  }
+
+  public getSetById(setId: string): SetInfo | undefined {
+    return this.getSets().find((s) => s.id === setId);
+  }
+
+  public getItemsBySet(setId: string): Item[] {
+    if (!setId || setId === 'all') return this.getAllItems();
+    return this.getAllItems().filter((item) => (item.set_id || 'set_1') === setId);
+  }
+
+  public getSimulationItems(setId: string = 'set_1'): Item[] {
+    return this.getItemsBySet(setId);
+  }
+
   public getItemById(id: number): Item | undefined {
     return this.getAllItems().find((item) => item.id === id);
   }
@@ -31,18 +48,20 @@ class DataService {
     return this.groupsMap.get(groupId);
   }
 
-  public getItemsByArea(area: DomainArea): Item[] {
-    return this.getAllItems().filter(
+  public getItemsByArea(area: DomainArea, setId?: string): Item[] {
+    const baseItems = setId && setId !== 'all' ? this.getItemsBySet(setId) : this.getAllItems();
+    return baseItems.filter(
       (item) => item.area_id === area || item.area?.toLowerCase().includes(area)
     );
   }
 
-  public getItemsByTopic(topic: string): Item[] {
-    return this.getAllItems().filter((item) => item.topic === topic);
+  public getItemsByTopic(topic: string, setId?: string): Item[] {
+    const baseItems = setId && setId !== 'all' ? this.getItemsBySet(setId) : this.getAllItems();
+    return baseItems.filter((item) => item.topic === topic);
   }
 
-  public getTopicsByArea(area?: DomainArea): string[] {
-    const items = area ? this.getItemsByArea(area) : this.getAllItems();
+  public getTopicsByArea(area?: DomainArea, setId?: string): string[] {
+    const items = area ? this.getItemsByArea(area, setId) : (setId && setId !== 'all' ? this.getItemsBySet(setId) : this.getAllItems());
     const topicsSet = new Set<string>();
     items.forEach((item) => {
       if (item.topic) {
@@ -57,6 +76,7 @@ class DataService {
       exam: this.questionsData.exam,
       convocatoria: this.questionsData.convocatoria,
       totalItems: this.questionsData.total_items,
+      sets: this.questionsData.sets,
       sections: this.questionsData.sections,
     };
   }

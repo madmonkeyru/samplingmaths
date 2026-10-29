@@ -44,8 +44,16 @@ export interface SolutionStep {
   explanation: string;
 }
 
+export interface SetInfo {
+  id: string;
+  name: string;
+  description: string;
+  total_items: number;
+}
+
 export interface Item {
   id: number;
+  set_id?: string;
   area: string;
   area_id: DomainArea;
   topic: string;
@@ -84,6 +92,7 @@ export interface QuestionBankData {
   specification: string;
   solucionario_verified: boolean;
   total_items: number;
+  sets?: SetInfo[];
   sections: Array<{
     id: string;
     name: string;
@@ -109,6 +118,7 @@ export interface ItemResponse {
 
 export interface PracticeConfig {
   mode: 'simulation' | 'area' | 'topic';
+  setId?: string | 'all';
   area?: DomainArea | 'all';
   topic?: string | 'all';
   itemCount: number | 'all';
