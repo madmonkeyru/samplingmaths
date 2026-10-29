@@ -2,14 +2,20 @@ import { describe, it, expect } from 'vitest';
 import { knowledgeService } from './knowledgeService';
 
 describe('knowledgeService', () => {
-  it('returns non-empty specification blocks with affirmations and evidences', () => {
+  it('returns non-empty specification blocks matching the official 60-item distribution', () => {
     const blocks = knowledgeService.getSpecificationBlocks();
     expect(blocks).toHaveLength(3);
 
     const geomBlock = blocks.find((b) => b.id === 'geometry');
-    expect(geomBlock).toBeDefined();
-    expect(geomBlock?.totalPoints).toBeGreaterThan(0);
-    expect(geomBlock?.affirmations.length).toBeGreaterThan(0);
+    const funcBlock = blocks.find((b) => b.id === 'functions');
+    const statBlock = blocks.find((b) => b.id === 'statistics');
+
+    expect(geomBlock?.totalPoints).toBe(23);
+    expect(funcBlock?.totalPoints).toBe(25);
+    expect(statBlock?.totalPoints).toBe(12);
+
+    const grandTotal = blocks.reduce((s, b) => s + b.totalPoints, 0);
+    expect(grandTotal).toBe(60);
 
     const firstAff = geomBlock?.affirmations[0];
     expect(firstAff?.evidences.length).toBeGreaterThan(0);

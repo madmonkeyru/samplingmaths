@@ -12,12 +12,15 @@ import { dataService } from './dataService';
 
 class KnowledgeService {
   /**
-   * Generates dynamic Specs Table derived directly from the full question bank items
+   * Generates dynamic Specs Table derived directly from question specifications.
+   * `setIdFilter` controls which set determines the official item/points count.
+   * By default, `setIdFilter = 'set_1'` gives the official 60-item simulation count (23 Geometría, 25 Relaciones y Álgebra, 12 Estadística).
+   * Passing `'all'` gives the grand total across the entire question bank.
    */
-  getSpecificationBlocks(): SpecBlock[] {
-    const items = dataService.getAllItems();
+  getSpecificationBlocks(setIdFilter: string | 'all' = 'set_1'): SpecBlock[] {
+    const allItems = dataService.getAllItems();
 
-    // Map by evidence code
+    // Map by domain area + evidence code
     const evidenceMap: Record<
       string,
       {
@@ -26,24 +29,35 @@ class KnowledgeService {
         block: string;
         affirmation: string;
         affirmation_desc: string | null;
+        points: number;
         item_ids: number[];
       }
     > = {};
 
-    items.forEach((item) => {
+    allItems.forEach((item) => {
       if (!item.spec || !item.spec.evidence) return;
       const evCode = item.spec.evidence;
-      if (!evidenceMap[evCode]) {
-        evidenceMap[evCode] = {
+      const blockName = item.spec.block || item.area || 'Geometría';
+      const mapKey = `${blockName}_${evCode}`;
+
+      const matchesSet = setIdFilter === 'all' || (item.set_id || 'set_1') === setIdFilter;
+
+      if (!evidenceMap[mapKey]) {
+        evidenceMap[mapKey] = {
           evidence: evCode,
           evidence_desc: item.spec.evidence_desc || '',
-          block: item.spec.block || 'Geometría',
+          block: blockName,
           affirmation: item.spec.affirmation || 'A1',
           affirmation_desc: item.spec.affirmation_desc || null,
+          points: 0,
           item_ids: [],
         };
       }
-      evidenceMap[evCode].item_ids.push(item.id);
+
+      if (matchesSet) {
+        evidenceMap[mapKey].points += 1;
+      }
+      evidenceMap[mapKey].item_ids.push(item.id);
     });
 
     // Group into domain blocks
@@ -71,24 +85,33 @@ class KnowledgeService {
           };
         }
 
-        // Check if evidence already added
         const existing = affirmationMap[affCode].evidences.find((e) => e.evidence === ev.evidence);
         if (!existing) {
+          // If filtering by set_1 and this evidence has 0 points in set_1, only keep if it has items or filter
           affirmationMap[affCode].evidences.push({
             evidence: ev.evidence,
             evidence_desc: ev.evidence_desc,
-            points: ev.item_ids.length,
+            points: ev.points,
             item_ids: ev.item_ids,
           });
         }
       });
 
-      // Sort affirmations
-      const sortedAffirmations = Object.values(affirmationMap).sort((a, b) =>
-        a.affirmation.localeCompare(b.affirmation, undefined, { numeric: true })
-      );
+      // Filter out evidences with 0 points if filtering by specific set (unless 'all')
+      if (setIdFilter !== 'all') {
+        Object.keys(affirmationMap).forEach((affKey) => {
+          affirmationMap[affKey].evidences = affirmationMap[affKey].evidences.filter(
+            (e) => e.points > 0
+          );
+        });
+      }
 
-      // Calculate total points
+      // Sort affirmations
+      const sortedAffirmations = Object.values(affirmationMap)
+        .filter((aff) => aff.evidences.length > 0)
+        .sort((a, b) => a.affirmation.localeCompare(b.affirmation, undefined, { numeric: true }));
+
+      // Calculate total points for this block
       const totalPoints = sortedAffirmations.reduce(
         (sum, aff) => sum + aff.evidences.reduce((evSum, ev) => evSum + ev.points, 0),
         0
