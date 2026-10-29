@@ -54,4 +54,45 @@ describe('Statistics Composite Components', () => {
     expect(screen.getByText('Pintura')).toBeInTheDocument();
     expect(screen.getByText('Ballet')).toBeInTheDocument();
   });
+
+  it('renders TableComponent from content-shape columns and total_row', () => {
+    render(
+      <TableComponent
+        columns={['Kilómetros', 'Estudiantes']}
+        rows={[['0 - 10', 50], ['10 - 20', 30]]}
+        total_row={['Total', 80]}
+      />
+    );
+
+    expect(screen.getByText('Kilómetros')).toBeInTheDocument();
+    expect(screen.getByText('Total')).toBeInTheDocument();
+    expect(screen.getByText('80')).toBeInTheDocument();
+  });
+
+  it('renders BoxPlotComponent from content-shape group labels', () => {
+    render(
+      <BoxPlotComponent
+        groups={[
+          { label: 'Empresa A', min: 23, q1: 30, median: 38, q3: 45, max: 52 },
+          { label: 'Empresa B', min: 19, q1: 25, median: 33, q3: 40, max: 52 },
+        ]}
+      />
+    );
+
+    expect(screen.getByText('Empresa A')).toBeInTheDocument();
+    expect(screen.getByText('Empresa B')).toBeInTheDocument();
+  });
+
+  it('renders VennDiagramComponent with string sets and region values', () => {
+    const { container } = render(
+      <VennDiagramComponent
+        sets={['Música', 'Pintura', 'Ballet']}
+        region_values={{ A_only: 8, B_only: 11, C_only: 17, A_B_C: 0 }}
+      />
+    );
+
+    expect(screen.getByText('Música')).toBeInTheDocument();
+    expect(screen.getByText('8')).toBeInTheDocument();
+    expect(container.querySelectorAll('circle').length).toBe(3);
+  });
 });

@@ -222,6 +222,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
 
   const answeredCount = Object.keys(responses).length;
   const progressPct = Math.round((answeredCount / items.length) * 100);
+  const flaggedCount = Object.values(flaggedItems).filter(Boolean).length;
 
   const formatTimer = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -578,6 +579,23 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>
+
+          {/* Keyboard Shortcuts Hint Bar */}
+          <div className="hidden sm:flex items-center justify-center gap-4 pt-3 text-[11px] text-slate-400 font-medium">
+            <span className="flex items-center gap-1.5">
+              <kbd className="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded text-slate-600 text-[10px] font-bold">A–D</kbd>
+              responder
+            </span>
+            <span className="flex items-center gap-1.5">
+              <kbd className="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded text-slate-600 text-[10px] font-bold">F</kbd>
+              marcar revisión
+            </span>
+            <span className="flex items-center gap-1.5">
+              <kbd className="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded text-slate-600 text-[10px] font-bold">←</kbd>
+              <kbd className="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded text-slate-600 text-[10px] font-bold">→</kbd>
+              navegar
+            </span>
+          </div>
         </main>
       </div>
 
@@ -656,7 +674,9 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
                 </h4>
                 <div className="grid sm:grid-cols-2 gap-3 text-xs">
                   <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
-                    <span className="font-semibold block text-slate-800">Media Aritmética ($\bar{x}$):</span>
+                    <span className="font-semibold block text-slate-800">
+                      Media Aritmética (<TextRenderer inline content="$\bar{x}$" />):
+                    </span>
                     <TextRenderer content="$\bar{x} = \frac{\sum x_i}{n}$" />
                   </div>
                   <div className="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-1">
@@ -697,6 +717,11 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
                 {items.length - answeredCount > 0 && (
                   <span className="block text-amber-600 font-semibold mt-1">
                     Atención: Quedan {items.length - answeredCount} preguntas sin responder.
+                  </span>
+                )}
+                {flaggedCount > 0 && (
+                  <span className="block text-slate-600 mt-1">
+                    Tienes {flaggedCount} pregunta{flaggedCount === 1 ? '' : 's'} marcada{flaggedCount === 1 ? '' : 's'} para revisión.
                   </span>
                 )}
               </p>
