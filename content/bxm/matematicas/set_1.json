@@ -455,38 +455,21 @@
                     "label": "O"
                   },
                   {
-                    "type": "label",
+                    "type": "point",
                     "coords": [
-                      1.8,
-                      7.2
-                    ],
-                    "text": "d"
-                  },
-                  {
-                    "type": "line",
-                    "p1": [
                       0,
                       6
                     ],
-                    "p2": [
+                    "label": "6",
+                    "label_position": "left"
+                  },
+                  {
+                    "type": "dashed_projection",
+                    "from": [
                       0,
                       6
                     ],
-                    "dashed": true,
-                    "color": "#64748b"
-                  },
-                  {
-                    "type": "line",
-                    "p1": [
-                      -2,
-                      6
-                    ],
-                    "p2": [
-                      2,
-                      6
-                    ],
-                    "dashed": true,
-                    "color": "#64748b"
+                    "to_axis": "y"
                   }
                 ]
               }
@@ -524,12 +507,40 @@
                     "label": "O"
                   },
                   {
-                    "type": "label",
+                    "type": "point",
                     "coords": [
-                      1.8,
-                      1.8
+                      2,
+                      0
                     ],
-                    "text": "d"
+                    "label": "2",
+                    "label_position": "bottom"
+                  },
+                  {
+                    "type": "-2",
+                    "coords": [
+                      -2,
+                      0
+                    ],
+                    "label": "-2",
+                    "label_position": "bottom"
+                  },
+                  {
+                    "type": "point",
+                    "coords": [
+                      0,
+                      2
+                    ],
+                    "label": "2",
+                    "label_position": "left"
+                  },
+                  {
+                    "type": "point",
+                    "coords": [
+                      0,
+                      -2
+                    ],
+                    "label": "-2",
+                    "label_position": "left"
                   }
                 ]
               }
@@ -567,12 +578,22 @@
                     "label": "O"
                   },
                   {
-                    "type": "label",
+                    "type": "point",
                     "coords": [
-                      3.8,
-                      4.2
+                      2,
+                      0
                     ],
-                    "text": "d"
+                    "label": "2",
+                    "label_position": "bottom"
+                  },
+                  {
+                    "type": "point",
+                    "coords": [
+                      0,
+                      3
+                    ],
+                    "label": "3",
+                    "label_position": "left"
                   },
                   {
                     "type": "line",
@@ -622,52 +643,44 @@
                   {
                     "type": "circle",
                     "center": [
-                      3,
-                      3
+                      0,
+                      2
                     ],
                     "radius": 2
                   },
                   {
                     "type": "point",
                     "coords": [
-                      3,
-                      3
+                      0,
+                      2
                     ],
                     "label": "O"
                   },
                   {
-                    "type": "label",
+                    "type": "point",
                     "coords": [
-                      4.8,
-                      4.2
-                    ],
-                    "text": "d"
-                  },
-                  {
-                    "type": "line",
-                    "p1": [
-                      3,
-                      0
-                    ],
-                    "p2": [
-                      3,
-                      3
-                    ],
-                    "dashed": true,
-                    "color": "#64748b"
-                  },
-                  {
-                    "type": "line",
-                    "p1": [
                       0,
-                      3
+                      2
                     ],
-                    "p2": [
-                      3,
-                      3
+                    "label": "2",
+                    "label_position": "left"
+                  },
+                  {
+                    "type": "point",
+                    "coords": [
+                      0,
+                      6
                     ],
-                    "dashed": true,
-                    "color": "#64748b"
+                    "label": "6",
+                    "label_position": "left"
+                  },
+                  {
+                    "type": "dashed_projection",
+                    "from": [
+                      0,
+                      2
+                    ],
+                    "to_axis": "y"
                   }
                 ]
               }
@@ -768,17 +781,17 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Circunferencia con centro en O(5, 0) y radio 4 en un plano cartesiano con dispositivos P, Q, R, S.",
+        "alt": "Sistema de coordenadas con centro en O, punto (5,4) y proyecciones punteadas.",
         "visual": {
           "type": "cartesian_2d",
           "domain": {
             "x": [
-              0,
-              10
+              -6,
+              7
             ],
             "y": [
-              -5,
-              5
+              -2,
+              7
             ]
           },
           "grid": false,
@@ -786,7 +799,7 @@
             {
               "type": "circle",
               "center": [
-                5,
+                0,
                 0
               ],
               "radius": 4
@@ -794,7 +807,7 @@
             {
               "type": "point",
               "coords": [
-                5,
+                0,
                 0
               ],
               "label": "O"
@@ -802,10 +815,19 @@
             {
               "type": "point",
               "coords": [
+                -4,
+                0
+              ],
+              "label": "-4",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
                 5,
                 4
               ],
-              "label": "4"
+              "radius": 4
             },
             {
               "type": "dashed_projection",
@@ -813,55 +835,25 @@
                 5,
                 4
               ],
-              "to_axis": "y"
+              "to_axis": "both"
             },
             {
               "type": "point",
               "coords": [
                 5,
-                -4
+                0
               ],
-              "label": "-4"
-            },
-            {
-              "type": "dashed_projection",
-              "from": [
-                5,
-                -4
-              ],
-              "to_axis": "y"
+              "label": "5",
+              "label_position": "bottom"
             },
             {
               "type": "point",
               "coords": [
-                5,
-                2
-              ],
-              "label": "P"
-            },
-            {
-              "type": "point",
-              "coords": [
-                4,
-                1
-              ],
-              "label": "Q"
-            },
-            {
-              "type": "point",
-              "coords": [
-                6,
-                1
-              ],
-              "label": "R"
-            },
-            {
-              "type": "point",
-              "coords": [
-                8,
+                0,
                 4
               ],
-              "label": "S"
+              "label": "4",
+              "label_position": "left"
             }
           ]
         }
@@ -1065,101 +1057,173 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Perfil lateral de una rampa de acceso (curva ascendente) sobre un plano cartesiano.",
+        "alt": "Perfil lateral de la rampa de acceso del puente con curva entre (1,2), (3,4) y (5,7).",
         "visual": {
-          "type": "curve_region",
+          "type": "cartesian_2d",
           "domain": {
             "x": [
               0,
-              9
+              7
             ],
             "y": [
               0,
-              7
+              8
             ]
           },
           "grid": false,
-          "path": {
-            "points": [
-              [
-                2,
+          "children": [
+            {
+              "type": "path",
+              "points": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  5,
+                  7
+                ]
+              ],
+              "color": "indigo-600",
+              "strokeWidth": 2.5
+            },
+            {
+              "type": "line",
+              "p1": [
+                1,
+                0
+              ],
+              "p2": [
+                1,
                 2
               ],
-              [
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
                 3,
-                3.5
+                0
               ],
-              [
-                4,
-                4.5
+              "p2": [
+                3,
+                4
               ],
-              [
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
                 5,
-                5.2
-              ],
-              [
-                6,
-                5.7
-              ],
-              [
-                7,
-                6
-              ]
-            ],
-            "label": "rampa"
-          },
-          "straight_segments": [
-            {
-              "from": [
-                2,
                 0
               ],
-              "to": [
-                2,
-                2
-              ]
-            },
-            {
-              "from": [
-                7,
-                0
+              "p2": [
+                5,
+                7
               ],
-              "to": [
-                7,
-                6
-              ]
+              "dashed": true,
+              "color": "#64748b"
             },
             {
-              "from": [
+              "type": "line",
+              "p1": [
+                0,
+                7
+              ],
+              "p2": [
+                5,
+                7
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                4
+              ],
+              "p2": [
+                3,
+                4
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
                 0,
                 2
               ],
-              "to": [
-                2,
+              "p2": [
+                1,
                 2
-              ]
+              ],
+              "dashed": true,
+              "color": "#64748b"
             },
             {
-              "from": [
+              "type": "point",
+              "coords": [
                 0,
-                6
+                7
               ],
-              "to": [
-                7,
-                6
-              ]
+              "label": "7",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                4
+              ],
+              "label": "4",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                2
+              ],
+              "label": "2",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                0
+              ],
+              "label": "1",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                0
+              ],
+              "label": "3",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                5,
+                0
+              ],
+              "label": "5",
+              "label_position": "bottom"
             }
-          ],
-          "base": {
-            "from": [
-              2,
-              0
-            ],
-            "to": [
-              7,
-              0
-            ]
-          }
+          ]
         }
       },
       "set_id": "set_1"
@@ -1343,13 +1407,13 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Polígono QRPS en un plano cartesiano con líneas punteadas.",
+        "alt": "Polígono QRPS en un plano cartesiano.",
         "visual": {
           "type": "cartesian_2d",
           "domain": {
             "x": [
               0,
-              6
+              7
             ],
             "y": [
               0,
@@ -1383,13 +1447,14 @@
                 "R",
                 "P",
                 "S"
-              ]
+              ],
+              "fill": "rgba(99, 102, 241, 0.15)"
             },
             {
               "type": "line",
               "p1": [
-                3,
-                0
+                0,
+                7
               ],
               "p2": [
                 3,
@@ -1407,19 +1472,6 @@
               "p2": [
                 5,
                 4
-              ],
-              "dashed": true,
-              "color": "#64748b"
-            },
-            {
-              "type": "line",
-              "p1": [
-                0,
-                7
-              ],
-              "p2": [
-                3,
-                7
               ],
               "dashed": true,
               "color": "#64748b"
@@ -1453,6 +1505,19 @@
             {
               "type": "line",
               "p1": [
+                3,
+                0
+              ],
+              "p2": [
+                3,
+                7
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
                 5,
                 0
               ],
@@ -1469,7 +1534,8 @@
                 0,
                 7
               ],
-              "label": "7"
+              "label": "7",
+              "label_position": "left"
             },
             {
               "type": "point",
@@ -1477,7 +1543,8 @@
                 0,
                 4
               ],
-              "label": "4"
+              "label": "4",
+              "label_position": "left"
             },
             {
               "type": "point",
@@ -1485,7 +1552,8 @@
                 0,
                 1
               ],
-              "label": "1"
+              "label": "1",
+              "label_position": "left"
             },
             {
               "type": "point",
@@ -1493,7 +1561,8 @@
                 1,
                 0
               ],
-              "label": "1"
+              "label": "1",
+              "label_position": "bottom"
             },
             {
               "type": "point",
@@ -1501,7 +1570,8 @@
                 3,
                 0
               ],
-              "label": "3"
+              "label": "3",
+              "label_position": "bottom"
             },
             {
               "type": "point",
@@ -1509,7 +1579,8 @@
                 5,
                 0
               ],
-              "label": "5"
+              "label": "5",
+              "label_position": "bottom"
             }
           ]
         }
@@ -1544,7 +1615,7 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Polígono DEFGHIJ en un plano cartesiano con líneas punteadas.",
+        "alt": "Polígono DEFGHIJ en un plano cartesiano.",
         "visual": {
           "type": "cartesian_2d",
           "domain": {
@@ -1599,7 +1670,8 @@
                 "H",
                 "I",
                 "J"
-              ]
+              ],
+              "fill": "rgba(99, 102, 241, 0.15)"
             },
             {
               "type": "line",
@@ -1685,7 +1757,8 @@
                 0,
                 8
               ],
-              "label": "8"
+              "label": "8",
+              "label_position": "left"
             },
             {
               "type": "point",
@@ -1693,7 +1766,8 @@
                 0,
                 5
               ],
-              "label": "5"
+              "label": "5",
+              "label_position": "left"
             },
             {
               "type": "point",
@@ -1701,7 +1775,8 @@
                 0,
                 2
               ],
-              "label": "2"
+              "label": "2",
+              "label_position": "left"
             },
             {
               "type": "point",
@@ -1709,7 +1784,8 @@
                 -4,
                 0
               ],
-              "label": "-4"
+              "label": "-4",
+              "label_position": "bottom"
             },
             {
               "type": "point",
@@ -1717,7 +1793,8 @@
                 -2,
                 0
               ],
-              "label": "-2"
+              "label": "-2",
+              "label_position": "bottom"
             },
             {
               "type": "point",
@@ -1725,7 +1802,8 @@
                 2,
                 0
               ],
-              "label": "2"
+              "label": "2",
+              "label_position": "bottom"
             },
             {
               "type": "point",
@@ -1733,7 +1811,8 @@
                 4,
                 0
               ],
-              "label": "4"
+              "label": "4",
+              "label_position": "bottom"
             }
           ]
         }
@@ -1767,7 +1846,113 @@
         "Opción correcta: D."
       ],
       "group_id": "g_transformations",
-      "visual_spec": null,
+      "visual_spec": {
+        "alt": "Cuatro polígonos (#1, #2, #3, #4) en un plano cartesiano.",
+        "visual": {
+          "type": "transformation_overlay",
+          "domain": {
+            "x": [
+              -5,
+              7
+            ],
+            "y": [
+              -6,
+              6
+            ]
+          },
+          "grid": false,
+          "figures": [
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  -1,
+                  1
+                ],
+                [
+                  -2,
+                  1
+                ],
+                [
+                  -2,
+                  4
+                ],
+                [
+                  -1,
+                  3
+                ]
+              ],
+              "label": "#1"
+            },
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  1,
+                  3
+                ]
+              ],
+              "label": "#2"
+            },
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  2,
+                  -1
+                ],
+                [
+                  4,
+                  -1
+                ],
+                [
+                  4,
+                  -4
+                ],
+                [
+                  2,
+                  -3
+                ]
+              ],
+              "label": "#3"
+            },
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  -2,
+                  -2
+                ],
+                [
+                  -4,
+                  -2
+                ],
+                [
+                  -4,
+                  -8
+                ],
+                [
+                  -2,
+                  -6
+                ]
+              ],
+              "label": "#4"
+            }
+          ]
+        }
+      },
       "flags": [
         "polygon_vertices_need_pdf_verification"
       ],
@@ -1801,7 +1986,113 @@
         "Opción correcta: B."
       ],
       "group_id": "g_transformations",
-      "visual_spec": null,
+      "visual_spec": {
+        "alt": "Cuatro polígonos (#1, #2, #3, #4) en un plano cartesiano.",
+        "visual": {
+          "type": "transformation_overlay",
+          "domain": {
+            "x": [
+              -5,
+              7
+            ],
+            "y": [
+              -6,
+              6
+            ]
+          },
+          "grid": false,
+          "figures": [
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  -1,
+                  1
+                ],
+                [
+                  -2,
+                  1
+                ],
+                [
+                  -2,
+                  4
+                ],
+                [
+                  -1,
+                  3
+                ]
+              ],
+              "label": "#1"
+            },
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  1,
+                  3
+                ]
+              ],
+              "label": "#2"
+            },
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  2,
+                  -1
+                ],
+                [
+                  4,
+                  -1
+                ],
+                [
+                  4,
+                  -4
+                ],
+                [
+                  2,
+                  -3
+                ]
+              ],
+              "label": "#3"
+            },
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  -2,
+                  -2
+                ],
+                [
+                  -4,
+                  -2
+                ],
+                [
+                  -4,
+                  -8
+                ],
+                [
+                  -2,
+                  -6
+                ]
+              ],
+              "label": "#4"
+            }
+          ]
+        }
+      },
       "flags": [
         "polygon_vertices_need_pdf_verification"
       ],
@@ -1834,7 +2125,113 @@
         "Opción correcta: A."
       ],
       "group_id": "g_transformations",
-      "visual_spec": null,
+      "visual_spec": {
+        "alt": "Cuatro polígonos (#1, #2, #3, #4) en un plano cartesiano.",
+        "visual": {
+          "type": "transformation_overlay",
+          "domain": {
+            "x": [
+              -5,
+              7
+            ],
+            "y": [
+              -6,
+              6
+            ]
+          },
+          "grid": false,
+          "figures": [
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  -1,
+                  1
+                ],
+                [
+                  -2,
+                  1
+                ],
+                [
+                  -2,
+                  4
+                ],
+                [
+                  -1,
+                  3
+                ]
+              ],
+              "label": "#1"
+            },
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  1,
+                  3
+                ]
+              ],
+              "label": "#2"
+            },
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  2,
+                  -1
+                ],
+                [
+                  4,
+                  -1
+                ],
+                [
+                  4,
+                  -4
+                ],
+                [
+                  2,
+                  -3
+                ]
+              ],
+              "label": "#3"
+            },
+            {
+              "type": "polygon",
+              "vertices": [
+                [
+                  -2,
+                  -2
+                ],
+                [
+                  -4,
+                  -2
+                ],
+                [
+                  -4,
+                  -8
+                ],
+                [
+                  -2,
+                  -6
+                ]
+              ],
+              "label": "#4"
+            }
+          ]
+        }
+      },
       "flags": [
         "polygon_vertices_need_pdf_verification"
       ],
@@ -2125,7 +2522,285 @@
         "Respuesta: C."
       ],
       "group_id": "g_fuel_price",
-      "visual_spec": null,
+      "visual_spec": {
+        "alt": "Gráfica del precio por litro de combustible p(x) en colones según la semana x.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              0,
+              26
+            ],
+            "y": [
+              0,
+              1000
+            ]
+          },
+          "grid": false,
+          "axes": {
+            "arrows": true
+          },
+          "x_label": "x",
+          "y_label": "p(x)",
+          "children": [
+            {
+              "type": "polyline",
+              "points": [
+                [
+                  0,
+                  500
+                ],
+                [
+                  4,
+                  500
+                ],
+                [
+                  8,
+                  600
+                ],
+                [
+                  12,
+                  750
+                ],
+                [
+                  16,
+                  900
+                ],
+                [
+                  20,
+                  750
+                ],
+                [
+                  24,
+                  600
+                ]
+              ],
+              "color": "indigo-600",
+              "strokeWidth": 2.5
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                500
+              ],
+              "p2": [
+                4,
+                500
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                600
+              ],
+              "p2": [
+                8,
+                600
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                750
+              ],
+              "p2": [
+                12,
+                750
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                900
+              ],
+              "p2": [
+                16,
+                900
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                4,
+                0
+              ],
+              "p2": [
+                4,
+                500
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                8,
+                0
+              ],
+              "p2": [
+                8,
+                600
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                12,
+                0
+              ],
+              "p2": [
+                12,
+                750
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                16,
+                0
+              ],
+              "p2": [
+                16,
+                900
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                20,
+                0
+              ],
+              "p2": [
+                20,
+                750
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                24,
+                0
+              ],
+              "p2": [
+                24,
+                600
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                500
+              ],
+              "label": "500",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                600
+              ],
+              "label": "600",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                750
+              ],
+              "label": "750",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                900
+              ],
+              "label": "900",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                4,
+                0
+              ],
+              "label": "4",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                8,
+                0
+              ],
+              "label": "8",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                12,
+                0
+              ],
+              "label": "12",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                16,
+                0
+              ],
+              "label": "16",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                20,
+                0
+              ],
+              "label": "20",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                24,
+                0
+              ],
+              "label": "24",
+              "label_position": "bottom"
+            }
+          ]
+        }
+      },
       "set_id": "set_1"
     },
     {
@@ -2155,7 +2830,285 @@
         "Respuesta: B."
       ],
       "group_id": "g_fuel_price",
-      "visual_spec": null,
+      "visual_spec": {
+        "alt": "Gráfica del precio por litro de combustible p(x) en colones según la semana x.",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              0,
+              26
+            ],
+            "y": [
+              0,
+              1000
+            ]
+          },
+          "grid": false,
+          "axes": {
+            "arrows": true
+          },
+          "x_label": "x",
+          "y_label": "p(x)",
+          "children": [
+            {
+              "type": "polyline",
+              "points": [
+                [
+                  0,
+                  500
+                ],
+                [
+                  4,
+                  500
+                ],
+                [
+                  8,
+                  600
+                ],
+                [
+                  12,
+                  750
+                ],
+                [
+                  16,
+                  900
+                ],
+                [
+                  20,
+                  750
+                ],
+                [
+                  24,
+                  600
+                ]
+              ],
+              "color": "indigo-600",
+              "strokeWidth": 2.5
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                500
+              ],
+              "p2": [
+                4,
+                500
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                600
+              ],
+              "p2": [
+                8,
+                600
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                750
+              ],
+              "p2": [
+                12,
+                750
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                900
+              ],
+              "p2": [
+                16,
+                900
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                4,
+                0
+              ],
+              "p2": [
+                4,
+                500
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                8,
+                0
+              ],
+              "p2": [
+                8,
+                600
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                12,
+                0
+              ],
+              "p2": [
+                12,
+                750
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                16,
+                0
+              ],
+              "p2": [
+                16,
+                900
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                20,
+                0
+              ],
+              "p2": [
+                20,
+                750
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                24,
+                0
+              ],
+              "p2": [
+                24,
+                600
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                500
+              ],
+              "label": "500",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                600
+              ],
+              "label": "600",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                750
+              ],
+              "label": "750",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                900
+              ],
+              "label": "900",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                4,
+                0
+              ],
+              "label": "4",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                8,
+                0
+              ],
+              "label": "8",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                12,
+                0
+              ],
+              "label": "12",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                16,
+                0
+              ],
+              "label": "16",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                20,
+                0
+              ],
+              "label": "20",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                24,
+                0
+              ],
+              "label": "24",
+              "label_position": "bottom"
+            }
+          ]
+        }
+      },
       "set_id": "set_1"
     },
     {
@@ -2219,21 +3172,9 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Parábola g que abre hacia abajo, vértice en (−1, 5) y raíces en −4 y 2, en un plano cartesiano.",
+        "alt": "Representación gráfica de la función parábola g(x) con intersecciones x en -4 y 2, y vértice en (-1, 5).",
         "visual": {
-          "type": "function_plot",
-          "form": "quadratic",
-          "params": {
-            "vertex": [
-              -1,
-              5
-            ],
-            "roots": [
-              -4,
-              2
-            ],
-            "opens": "down"
-          },
+          "type": "cartesian_2d",
           "domain": {
             "x": [
               -6,
@@ -2245,33 +3186,97 @@
             ]
           },
           "grid": false,
-          "axes": {
-            "arrows": true
-          },
-          "x_label": "x",
-          "y_label": "y",
-          "function_label": "g",
-          "annotations": {
-            "vertex": {
-              "show": true,
+          "children": [
+            {
+              "type": "path",
+              "points": [
+                [
+                  -4,
+                  0
+                ],
+                [
+                  -1,
+                  5
+                ],
+                [
+                  2,
+                  0
+                ]
+              ],
+              "color": "indigo-600",
+              "strokeWidth": 2.5
+            },
+            {
+              "type": "line",
+              "p1": [
+                -1,
+                0
+              ],
+              "p2": [
+                -1,
+                5
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                5
+              ],
+              "p2": [
+                -1,
+                5
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -4,
+                0
+              ],
+              "label": "-4",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                2,
+                0
+              ],
+              "label": "2",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -1,
+                0
+              ],
+              "label": "-1",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                5
+              ],
               "label": "5",
-              "project_to": [
-                "y"
-              ]
+              "label_position": "right"
             },
-            "roots": {
-              "show": true,
-              "labels": [
-                "-4",
-                "2"
-              ]
-            },
-            "axis_of_symmetry": {
-              "show": true,
-              "x_label": "-1"
+            {
+              "type": "label",
+              "coords": [
+                -3.5,
+                3.5
+              ],
+              "text": "g"
             }
-          },
-          "function_label_position": "left"
+          ]
         }
       },
       "set_id": "set_1"
@@ -2501,52 +3506,84 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Parábola h(x) = x² − 4, vértice en (0, −4) y raíces en −2 y 2, en un plano cartesiano.",
+        "alt": "Gráfica de la función h(x) = x^2 - 4 con intersecciones x en -2 y 2, y mínimo en (0, -4).",
         "visual": {
-          "type": "function_plot",
-          "form": "quadratic",
-          "params": {
-            "vertex": [
-              0,
-              -4
-            ],
-            "roots": [
-              -2,
-              2
-            ],
-            "opens": "up",
-            "expression": "x^2 - 4"
-          },
+          "type": "cartesian_2d",
           "domain": {
             "x": [
-              -5,
-              5
+              -4,
+              4
             ],
             "y": [
               -6,
-              4
+              3
             ]
           },
           "grid": false,
-          "axes": {
-            "arrows": true
-          },
-          "x_label": "x",
-          "y_label": "y",
-          "function_label": "h",
-          "annotations": {
-            "vertex": {
-              "show": true,
-              "label": "-4"
+          "children": [
+            {
+              "type": "path",
+              "points": [
+                [
+                  -3,
+                  5
+                ],
+                [
+                  -2,
+                  0
+                ],
+                [
+                  0,
+                  -4
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  5
+                ]
+              ],
+              "color": "indigo-600",
+              "strokeWidth": 2.5
             },
-            "roots": {
-              "show": true,
-              "labels": [
-                "-2",
-                "2"
-              ]
+            {
+              "type": "point",
+              "coords": [
+                -2,
+                0
+              ],
+              "label": "-2",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                2,
+                0
+              ],
+              "label": "2",
+              "label_position": "bottom"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                -4
+              ],
+              "label": "-4",
+              "label_position": "left"
+            },
+            {
+              "type": "label",
+              "coords": [
+                1.8,
+                2.5
+              ],
+              "text": "h"
             }
-          }
+          ]
         }
       },
       "set_id": "set_1"
@@ -2644,270 +3681,64 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Cuadrícula de 4 gráficas en planos cartesianos.",
+        "alt": "Representación gráfica de la función p.",
         "visual": {
-          "type": "multi_view_grid",
-          "layout": {
-            "original": true,
-            "rows": 2,
-            "cols": 2
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -5,
+              8
+            ],
+            "y": [
+              -2,
+              8
+            ]
           },
-          "original": {
-            "label": "p",
-            "visual": {
-              "type": "cartesian_2d",
-              "domain": {
-                "x": [
-                  -4,
-                  8
-                ],
-                "y": [
-                  -4,
-                  7
-                ]
-              },
-              "grid": false,
-              "axes": {
-                "arrows": true
-              },
-              "children": [
-                {
-                  "type": "line",
-                  "through": [
-                    [
-                      0,
-                      -3
-                    ],
-                    [
-                      6,
-                      0
-                    ]
-                  ],
-                  "label": "p"
-                },
-                {
-                  "type": "point",
-                  "coords": [
-                    0,
-                    -3
-                  ],
-                  "label": "−3"
-                },
-                {
-                  "type": "point",
-                  "coords": [
-                    6,
-                    0
-                  ],
-                  "label": "6"
-                }
-              ]
-            }
+          "grid": false,
+          "axes": {
+            "arrows": true
           },
-          "views": [
+          "x_label": "x",
+          "y_label": "y",
+          "children": [
             {
-              "label": "A",
-              "visual": {
-                "type": "cartesian_2d",
-                "domain": {
-                  "x": [
-                    -5,
-                    3
-                  ],
-                  "y": [
-                    -2,
-                    8
-                  ]
-                },
-                "grid": false,
-                "axes": {
-                  "arrows": true
-                },
-                "children": [
-                  {
-                    "type": "line",
-                    "through": [
-                      [
-                        -3,
-                        0
-                      ],
-                      [
-                        0,
-                        6
-                      ]
-                    ]
-                  },
-                  {
-                    "type": "point",
-                    "coords": [
-                      -3,
-                      0
-                    ],
-                    "label": "−3"
-                  },
-                  {
-                    "type": "point",
-                    "coords": [
-                      0,
-                      6
-                    ],
-                    "label": "6"
-                  }
-                ]
-              }
+              "type": "line",
+              "p1": [
+                -3,
+                0
+              ],
+              "p2": [
+                0,
+                6
+              ],
+              "color": "indigo-600",
+              "strokeWidth": 2.5
             },
             {
-              "label": "B",
-              "visual": {
-                "type": "cartesian_2d",
-                "domain": {
-                  "x": [
-                    -2,
-                    5
-                  ],
-                  "y": [
-                    -2,
-                    8
-                  ]
-                },
-                "grid": false,
-                "axes": {
-                  "arrows": true
-                },
-                "children": [
-                  {
-                    "type": "line",
-                    "through": [
-                      [
-                        0,
-                        6
-                      ],
-                      [
-                        3,
-                        0
-                      ]
-                    ]
-                  },
-                  {
-                    "type": "point",
-                    "coords": [
-                      0,
-                      6
-                    ],
-                    "label": "6"
-                  },
-                  {
-                    "type": "point",
-                    "coords": [
-                      3,
-                      0
-                    ],
-                    "label": "3"
-                  }
-                ]
-              }
+              "type": "point",
+              "coords": [
+                -3,
+                0
+              ],
+              "label": "-3",
+              "label_position": "bottom"
             },
             {
-              "label": "C",
-              "visual": {
-                "type": "cartesian_2d",
-                "domain": {
-                  "x": [
-                    -8,
-                    2
-                  ],
-                  "y": [
-                    -2,
-                    5
-                  ]
-                },
-                "grid": false,
-                "axes": {
-                  "arrows": true
-                },
-                "children": [
-                  {
-                    "type": "line",
-                    "through": [
-                      [
-                        -6,
-                        0
-                      ],
-                      [
-                        0,
-                        3
-                      ]
-                    ]
-                  },
-                  {
-                    "type": "point",
-                    "coords": [
-                      -6,
-                      0
-                    ],
-                    "label": "−6"
-                  },
-                  {
-                    "type": "point",
-                    "coords": [
-                      0,
-                      3
-                    ],
-                    "label": "3"
-                  }
-                ]
-              }
+              "type": "point",
+              "coords": [
+                0,
+                6
+              ],
+              "label": "6",
+              "label_position": "left"
             },
             {
-              "label": "D",
-              "visual": {
-                "type": "cartesian_2d",
-                "domain": {
-                  "x": [
-                    -2,
-                    8
-                  ],
-                  "y": [
-                    -2,
-                    5
-                  ]
-                },
-                "grid": false,
-                "axes": {
-                  "arrows": true
-                },
-                "children": [
-                  {
-                    "type": "line",
-                    "through": [
-                      [
-                        0,
-                        3
-                      ],
-                      [
-                        6,
-                        0
-                      ]
-                    ]
-                  },
-                  {
-                    "type": "point",
-                    "coords": [
-                      0,
-                      3
-                    ],
-                    "label": "3"
-                  },
-                  {
-                    "type": "point",
-                    "coords": [
-                      6,
-                      0
-                    ],
-                    "label": "6"
-                  }
-                ]
-              }
+              "type": "label",
+              "coords": [
+                -1.8,
+                3.5
+              ],
+              "text": "p"
             }
           ]
         }
@@ -3349,31 +4180,14 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Curva de distribución de frecuencias asimétrica.",
+        "alt": "Curva de distribución con asimetría que muestra valores 80 y 85.",
         "visual": {
           "type": "distribution_curve",
-          "skew": "negative",
-          "x_axis": {
-            "label": "Calificación",
-            "ticks": [
-              80,
-              85
-            ]
-          },
-          "markers": [
-            {
-              "value": 80,
-              "label": "80",
-              "dashed": true,
-              "dashed_to_axis": "x"
-            },
-            {
-              "value": 85,
-              "label": "85",
-              "dashed": true,
-              "dashed_to_axis": "x"
-            }
-          ]
+          "skew": "left",
+          "mean": 75,
+          "median": 80,
+          "mode": 85,
+          "show_stats": true
         }
       },
       "set_id": "set_1"
@@ -3620,7 +4434,7 @@
         "evidence": "A3.3",
         "evidence_desc": "Aplica estandarización y el coeficiente de variación para la comparación de la posición o variabilidad de dos o más grupos de datos, en diversos contextos."
       },
-      "stem": "La siguiente tabla muestra la información relacionada con las horas mensuales dedicadas por cuatro grupos de personas voluntarias:\n\n| Grupo | Media aritmética | Desviación estándar |\n| :--- | :---: | :---: |\n| H | 15 | 4,4 |\n| Q | 16 | 4,5 |\n| S | 18 | 5,3 |\n| P | 17 | 5,0 |\n\nSofía pertenece al Grupo H y dedica 15 horas mensualmente al trabajo de voluntariado.\nMaría pertenece al Grupo Q y dedica 17 horas mensualmente al trabajo de voluntariado.\nAndrés pertenece al Grupo S y dedica 19 horas mensualmente al trabajo de voluntariado.\nRosa pertenece al Grupo P y dedica 16 horas mensuales al trabajo de voluntariado.\n\nEl grupo que presenta menor variabilidad relativa corresponde al",
+      "stem": "El grupo que presenta menor variabilidad relativa corresponde al",
       "options": {
         "A": "H",
         "B": "Q",
@@ -3638,7 +4452,8 @@
       ],
       "group_id": "g_volunteer",
       "visual_spec": null,
-      "set_id": "set_1"
+      "set_id": "set_1",
+      "context": "Para responder los ítems 59 y 60 considere la siguiente información:\n\nLa siguiente tabla muestra la información relacionada con las horas mensuales dedicadas por cuatro grupos de personas voluntarias para colaborar con las diferentes actividades que se brindan en el hogar para adultos mayores de su comunidad:\n\n| Grupo | Media aritmética | Desviación estándar |\n|---|---|---|\n| H | 15 | 4,4 |\n| Q | 16 | 4,5 |\n| S | 18 | 5,3 |\n| P | 17 | 5,0 |\n\nSofía pertenece al Grupo H y dedica 15 horas mensualmente al trabajo de voluntariado.\nMaría pertenece al Grupo Q y dedica 17 horas mensualmente al trabajo de voluntariado.\nAndrés pertenece al Grupo S y dedica 19 horas mensualmente al trabajo de voluntariado.\nRosa pertenece al Grupo P y dedica 16 horas mensuales al trabajo de voluntariado."
     },
     {
       "id": 87,
@@ -3652,7 +4467,7 @@
         "evidence": "A3.3",
         "evidence_desc": "Aplica estandarización y el coeficiente de variación para la comparación de la posición o variabilidad de dos o más grupos de datos, en diversos contextos."
       },
-      "stem": "La siguiente tabla muestra la información relacionada con las horas mensuales dedicadas por cuatro grupos de personas voluntarias:\n\n| Grupo | Media aritmética | Desviación estándar |\n| :--- | :---: | :---: |\n| H | 15 | 4,4 |\n| Q | 16 | 4,5 |\n| S | 18 | 5,3 |\n| P | 17 | 5,0 |\n\nSofía pertenece al Grupo H y dedica 15 horas mensualmente al trabajo de voluntariado.\nMaría pertenece al Grupo Q y dedica 17 horas mensualmente al trabajo de voluntariado.\nAndrés pertenece al Grupo S y dedica 19 horas mensualmente al trabajo de voluntariado.\nRosa pertenece al Grupo P y dedica 16 horas mensuales al trabajo de voluntariado.\n\nEn términos relativos y con respecto a su grupo de referencia, la persona que presenta el mejor desempeño en cuanto a la cantidad de horas dedicadas al voluntariado corresponde a",
+      "stem": "En términos relativos y con respecto a su grupo de referencia, la persona que presenta la mayor posición relativa corresponde a",
       "options": {
         "A": "Andrés.",
         "B": "Sofía.",
@@ -3670,7 +4485,8 @@
       ],
       "group_id": "g_volunteer",
       "visual_spec": null,
-      "set_id": "set_1"
+      "set_id": "set_1",
+      "context": "Para responder los ítems 59 y 60 considere la siguiente información:\n\nLa siguiente tabla muestra la información relacionada con las horas mensuales dedicadas por cuatro grupos de personas voluntarias para colaborar con las diferentes actividades que se brindan en el hogar para adultos mayores de su comunidad:\n\n| Grupo | Media aritmética | Desviación estándar |\n|---|---|---|\n| H | 15 | 4,4 |\n| Q | 16 | 4,5 |\n| S | 18 | 5,3 |\n| P | 17 | 5,0 |\n\nSofía pertenece al Grupo H y dedica 15 horas mensualmente al trabajo de voluntariado.\nMaría pertenece al Grupo Q y dedica 17 horas mensualmente al trabajo de voluntariado.\nAndrés pertenece al Grupo S y dedica 19 horas mensualmente al trabajo de voluntariado.\nRosa pertenece al Grupo P y dedica 16 horas mensuales al trabajo de voluntariado."
     }
   ]
 }
