@@ -37,6 +37,35 @@ describe('Content visual spec integration', () => {
     }
   });
 
+  it('verifies updated geometry visual specs for items 6, 9, 13, and 21', () => {
+    const items = (set1Json as any).items || [];
+    const item6 = items.find((i: any) => i.id === 6);
+    const item9 = items.find((i: any) => i.id === 9);
+    const item13 = items.find((i: any) => i.id === 13);
+    const item21 = items.find((i: any) => i.id === 21);
+
+    // Question 6: option D circle center at (3,2)
+    const optD = item6.visual_spec.visual.views.find((v: any) => v.label === 'D');
+    const circleD = optD.visual.children.find((c: any) => c.type === 'circle');
+    expect(circleD.center).toEqual([3, 2]);
+
+    // Question 9: center at (5,0)
+    const circle9 = item9.visual_spec.visual.children.find((c: any) => c.type === 'circle');
+    expect(circle9.center).toEqual([5, 0]);
+    expect(circle9.radius).toBe(4);
+
+    // Question 13: ramp curve path points
+    const path13 = item13.visual_spec.visual.children.find((c: any) => c.type === 'path');
+    expect(path13.points).toEqual([[2, 2], [4, 4.8], [6, 5.8], [7, 6]]);
+
+    // Question 21: updated polygon vertices
+    const polygons21 = item21.visual_spec.visual.children.filter((c: any) => c.type === 'polygon');
+    expect(polygons21[0].vertices).toEqual([[0, 0], [-2, 0], [-1, 3], [0, 3]]);
+    expect(polygons21[1].vertices).toEqual([[2, 1], [3, 1], [3, 4], [1, 4]]);
+    expect(polygons21[2].vertices).toEqual([[4, -1], [5, -1], [5, -4], [3, -4]]);
+    expect(polygons21[3].vertices).toEqual([[-3, -1], [-2, -1], [-1, -4], [-3, -4]]);
+  });
+
   it('renders every group visual_spec without falling back', () => {
     const groups: Group[] = (groupsJson as any).groups || [];
     const withVisuals = groups.filter((g) => g.visual_spec);

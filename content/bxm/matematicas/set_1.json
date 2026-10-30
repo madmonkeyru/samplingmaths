@@ -635,7 +635,7 @@
                   ],
                   "y": [
                     -1,
-                    6
+                    5
                   ]
                 },
                 "grid": false,
@@ -643,18 +643,27 @@
                   {
                     "type": "circle",
                     "center": [
-                      0,
+                      3,
                       2
                     ],
-                    "radius": 2
+                    "radius": 1
                   },
                   {
                     "type": "point",
                     "coords": [
-                      0,
+                      3,
                       2
                     ],
                     "label": "O"
+                  },
+                  {
+                    "type": "point",
+                    "coords": [
+                      3,
+                      0
+                    ],
+                    "label": "3",
+                    "label_position": "bottom"
                   },
                   {
                     "type": "point",
@@ -666,21 +675,12 @@
                     "label_position": "left"
                   },
                   {
-                    "type": "point",
-                    "coords": [
-                      0,
-                      6
-                    ],
-                    "label": "6",
-                    "label_position": "left"
-                  },
-                  {
                     "type": "dashed_projection",
                     "from": [
-                      0,
+                      3,
                       2
                     ],
-                    "to_axis": "y"
+                    "to_axis": "both"
                   }
                 ]
               }
@@ -781,17 +781,17 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Sistema de coordenadas con centro en O, punto (5,4) y proyecciones punteadas.",
+        "alt": "Circunferencia con centro en O(5,0), radio 4, y proyecciones a y=4 y y=-4.",
         "visual": {
           "type": "cartesian_2d",
           "domain": {
             "x": [
-              -6,
-              7
+              -2,
+              10
             ],
             "y": [
-              -2,
-              7
+              -6,
+              6
             ]
           },
           "grid": false,
@@ -799,7 +799,7 @@
             {
               "type": "circle",
               "center": [
-                0,
+                5,
                 0
               ],
               "radius": 4
@@ -807,35 +807,11 @@
             {
               "type": "point",
               "coords": [
-                0,
+                5,
                 0
               ],
-              "label": "O"
-            },
-            {
-              "type": "point",
-              "coords": [
-                -4,
-                0
-              ],
-              "label": "-4",
-              "label_position": "bottom"
-            },
-            {
-              "type": "point",
-              "coords": [
-                5,
-                4
-              ],
-              "radius": 4
-            },
-            {
-              "type": "dashed_projection",
-              "from": [
-                5,
-                4
-              ],
-              "to_axis": "both"
+              "label": "O",
+              "label_position": "top-left"
             },
             {
               "type": "point",
@@ -844,7 +820,60 @@
                 0
               ],
               "label": "5",
-              "label_position": "bottom"
+              "label_position": "bottom-right"
+            },
+            {
+              "type": "point",
+              "coords": [
+                5,
+                4
+              ]
+            },
+            {
+              "type": "point",
+              "coords": [
+                5,
+                -4
+              ]
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                4
+              ],
+              "p2": [
+                5,
+                4
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                -4
+              ],
+              "p2": [
+                5,
+                -4
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                5,
+                -4
+              ],
+              "p2": [
+                5,
+                4
+              ],
+              "dashed": true,
+              "color": "#64748b"
             },
             {
               "type": "point",
@@ -853,6 +882,15 @@
                 4
               ],
               "label": "4",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                -4
+              ],
+              "label": "-4",
               "label_position": "left"
             }
           ]
@@ -1057,16 +1095,16 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Perfil lateral de la rampa de acceso del puente con curva entre (1,2), (3,4) y (5,7).",
+        "alt": "Perfil lateral de la rampa de acceso del puente entre x=2 e x=7.",
         "visual": {
           "type": "cartesian_2d",
           "domain": {
             "x": [
-              0,
-              7
+              -1,
+              9
             ],
             "y": [
-              0,
+              -1,
               8
             ]
           },
@@ -1076,85 +1114,50 @@
               "type": "path",
               "points": [
                 [
-                  1,
+                  2,
                   2
                 ],
                 [
-                  3,
-                  4
+                  4,
+                  4.8
                 ],
                 [
-                  5,
-                  7
+                  6,
+                  5.8
+                ],
+                [
+                  7,
+                  6
                 ]
               ],
-              "color": "indigo-600",
+              "color": "stone-900",
               "strokeWidth": 2.5
             },
             {
               "type": "line",
               "p1": [
-                1,
+                2,
                 0
               ],
               "p2": [
-                1,
+                2,
                 2
               ],
-              "dashed": true,
-              "color": "#64748b"
+              "strokeWidth": 2.5,
+              "color": "stone-900"
             },
             {
               "type": "line",
               "p1": [
-                3,
+                7,
                 0
               ],
               "p2": [
-                3,
-                4
+                7,
+                6
               ],
-              "dashed": true,
-              "color": "#64748b"
-            },
-            {
-              "type": "line",
-              "p1": [
-                5,
-                0
-              ],
-              "p2": [
-                5,
-                7
-              ],
-              "dashed": true,
-              "color": "#64748b"
-            },
-            {
-              "type": "line",
-              "p1": [
-                0,
-                7
-              ],
-              "p2": [
-                5,
-                7
-              ],
-              "dashed": true,
-              "color": "#64748b"
-            },
-            {
-              "type": "line",
-              "p1": [
-                0,
-                4
-              ],
-              "p2": [
-                3,
-                4
-              ],
-              "dashed": true,
-              "color": "#64748b"
+              "strokeWidth": 2.5,
+              "color": "stone-900"
             },
             {
               "type": "line",
@@ -1163,29 +1166,24 @@
                 2
               ],
               "p2": [
-                1,
+                2,
                 2
               ],
               "dashed": true,
               "color": "#64748b"
             },
             {
-              "type": "point",
-              "coords": [
+              "type": "line",
+              "p1": [
                 0,
-                7
+                6
               ],
-              "label": "7",
-              "label_position": "left"
-            },
-            {
-              "type": "point",
-              "coords": [
-                0,
-                4
+              "p2": [
+                7,
+                6
               ],
-              "label": "4",
-              "label_position": "left"
+              "dashed": true,
+              "color": "#64748b"
             },
             {
               "type": "point",
@@ -1199,28 +1197,28 @@
             {
               "type": "point",
               "coords": [
-                1,
+                0,
+                6
+              ],
+              "label": "6",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                2,
                 0
               ],
-              "label": "1",
+              "label": "2",
               "label_position": "bottom"
             },
             {
               "type": "point",
               "coords": [
-                3,
+                7,
                 0
               ],
-              "label": "3",
-              "label_position": "bottom"
-            },
-            {
-              "type": "point",
-              "coords": [
-                5,
-                0
-              ],
-              "label": "5",
+              "label": "7",
               "label_position": "bottom"
             }
           ]
@@ -1847,108 +1845,292 @@
       ],
       "group_id": "g_transformations",
       "visual_spec": {
-        "alt": "Cuatro polígonos (#1, #2, #3, #4) en un plano cartesiano.",
+        "alt": "Cuatro polígonos (#1, #2, #3, #4) en un plano cartesiano con cuadrícula.",
         "visual": {
-          "type": "transformation_overlay",
+          "type": "cartesian_2d",
           "domain": {
             "x": [
-              -5,
-              7
+              -4.5,
+              6.5
             ],
             "y": [
-              -6,
-              6
+              -5.5,
+              4.5
             ]
           },
-          "grid": false,
-          "figures": [
+          "grid": true,
+          "children": [
             {
               "type": "polygon",
               "vertices": [
                 [
-                  -1,
-                  1
+                  0,
+                  0
                 ],
                 [
                   -2,
-                  1
-                ],
-                [
-                  -2,
-                  4
+                  0
                 ],
                 [
                   -1,
                   3
+                ],
+                [
+                  0,
+                  3
                 ]
               ],
-              "label": "#1"
+              "color": "stone-900",
+              "fill": "none",
+              "strokeWidth": 2
             },
             {
-              "type": "polygon",
-              "vertices": [
-                [
-                  1,
-                  1
-                ],
-                [
-                  2,
-                  1
-                ],
-                [
-                  2,
-                  4
-                ],
-                [
-                  1,
-                  3
-                ]
+              "type": "label",
+              "coords": [
+                -0.75,
+                1.5
               ],
-              "label": "#2"
+              "text": "#1"
             },
             {
               "type": "polygon",
               "vertices": [
                 [
                   2,
-                  -1
+                  1
                 ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  4
+                ],
+                [
+                  1,
+                  4
+                ]
+              ],
+              "color": "stone-900",
+              "fill": "none",
+              "strokeWidth": 2
+            },
+            {
+              "type": "label",
+              "coords": [
+                2.25,
+                2.5
+              ],
+              "text": "#2"
+            },
+            {
+              "type": "polygon",
+              "vertices": [
                 [
                   4,
                   -1
                 ],
                 [
-                  4,
+                  5,
+                  -1
+                ],
+                [
+                  5,
                   -4
                 ],
                 [
-                  2,
-                  -3
+                  3,
+                  -4
                 ]
               ],
-              "label": "#3"
+              "color": "stone-900",
+              "fill": "none",
+              "strokeWidth": 2
+            },
+            {
+              "type": "label",
+              "coords": [
+                4.25,
+                -2.5
+              ],
+              "text": "#3"
             },
             {
               "type": "polygon",
               "vertices": [
                 [
-                  -2,
-                  -2
-                ],
-                [
-                  -4,
-                  -2
-                ],
-                [
-                  -4,
-                  -8
+                  -3,
+                  -1
                 ],
                 [
                   -2,
-                  -6
+                  -1
+                ],
+                [
+                  -1,
+                  -4
+                ],
+                [
+                  -3,
+                  -4
                 ]
               ],
-              "label": "#4"
+              "color": "stone-900",
+              "fill": "none",
+              "strokeWidth": 2
+            },
+            {
+              "type": "label",
+              "coords": [
+                -2.25,
+                -2.5
+              ],
+              "text": "#4"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                0
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -2,
+                0
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -1,
+                3
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                3
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                2,
+                1
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                1
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                4
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                1,
+                4
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                4,
+                -1
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                5,
+                -1
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                5,
+                -4
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                3,
+                -4
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -3,
+                -1
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -2,
+                -1
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -1,
+                -4
+              ],
+              "radius": 3,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                -3,
+                -4
+              ],
+              "radius": 3,
+              "color": "stone-900"
             }
           ]
         }
