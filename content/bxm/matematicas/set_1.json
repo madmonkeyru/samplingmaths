@@ -141,7 +141,7 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Circunferencia con centro en (0, 2) y radio 3 en un plano cartesiano.",
+        "alt": "Circunferencia c con centro en O(0, 2) y radio 3 en un plano cartesiano.",
         "visual": {
           "type": "cartesian_2d",
           "domain": {
@@ -162,8 +162,7 @@
                 0,
                 2
               ],
-              "radius": 3,
-              "label": "c"
+              "radius": 3
             },
             {
               "type": "point",
@@ -172,6 +171,14 @@
                 2
               ],
               "label": "O"
+            },
+            {
+              "type": "label",
+              "coords": [
+                2.2,
+                4.2
+              ],
+              "text": "c"
             },
             {
               "type": "point",
@@ -269,7 +276,7 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Circunferencia con centro en (4, 0) y radio 3 en un plano cartesiano.",
+        "alt": "Circunferencia d con centro en O(4, 0) y radio 3 en un plano cartesiano.",
         "visual": {
           "type": "cartesian_2d",
           "domain": {
@@ -290,8 +297,7 @@
                 4,
                 0
               ],
-              "radius": 3,
-              "label": "d"
+              "radius": 3
             },
             {
               "type": "point",
@@ -302,36 +308,76 @@
               "label": "O"
             },
             {
+              "type": "label",
+              "coords": [
+                6.2,
+                2.2
+              ],
+              "text": "d"
+            },
+            {
+              "type": "line",
+              "p1": [
+                4,
+                -3
+              ],
+              "p2": [
+                4,
+                3
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                3
+              ],
+              "p2": [
+                4,
+                3
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                -3
+              ],
+              "p2": [
+                4,
+                -3
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
               "type": "point",
               "coords": [
-                4,
+                0,
                 3
               ],
               "label": "3"
             },
             {
-              "type": "dashed_projection",
-              "from": [
-                4,
-                3
-              ],
-              "to_axis": "y"
-            },
-            {
               "type": "point",
               "coords": [
-                4,
+                0,
                 -3
               ],
               "label": "-3"
             },
             {
-              "type": "dashed_projection",
-              "from": [
+              "type": "point",
+              "coords": [
                 4,
-                -3
+                0
               ],
-              "to_axis": "y"
+              "label": "4",
+              "label_position": "bottom"
             }
           ]
         }
@@ -368,7 +414,7 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Cuadrícula de 4 gráficas en planos cartesianos.",
+        "alt": "Opciones A, B, C y D para la representación de la circunferencia d.",
         "visual": {
           "type": "multi_view_grid",
           "layout": {
@@ -382,12 +428,12 @@
                 "type": "cartesian_2d",
                 "domain": {
                   "x": [
-                    -3,
-                    3
+                    -4,
+                    4
                   ],
                   "y": [
-                    2,
-                    10
+                    -1,
+                    9
                   ]
                 },
                 "grid": false,
@@ -398,8 +444,7 @@
                       0,
                       6
                     ],
-                    "radius": 2,
-                    "label": "d"
+                    "radius": 2
                   },
                   {
                     "type": "point",
@@ -408,6 +453,40 @@
                       6
                     ],
                     "label": "O"
+                  },
+                  {
+                    "type": "label",
+                    "coords": [
+                      1.8,
+                      7.2
+                    ],
+                    "text": "d"
+                  },
+                  {
+                    "type": "line",
+                    "p1": [
+                      0,
+                      6
+                    ],
+                    "p2": [
+                      0,
+                      6
+                    ],
+                    "dashed": true,
+                    "color": "#64748b"
+                  },
+                  {
+                    "type": "line",
+                    "p1": [
+                      -2,
+                      6
+                    ],
+                    "p2": [
+                      2,
+                      6
+                    ],
+                    "dashed": true,
+                    "color": "#64748b"
                   }
                 ]
               }
@@ -434,8 +513,23 @@
                       0,
                       0
                     ],
-                    "radius": 2,
-                    "label": "d"
+                    "radius": 2
+                  },
+                  {
+                    "type": "point",
+                    "coords": [
+                      0,
+                      0
+                    ],
+                    "label": "O"
+                  },
+                  {
+                    "type": "label",
+                    "coords": [
+                      1.8,
+                      1.8
+                    ],
+                    "text": "d"
                   }
                 ]
               }
@@ -446,11 +540,11 @@
                 "type": "cartesian_2d",
                 "domain": {
                   "x": [
-                    -2,
-                    6
+                    -1,
+                    5
                   ],
                   "y": [
-                    0,
+                    -1,
                     6
                   ]
                 },
@@ -462,8 +556,49 @@
                       2,
                       3
                     ],
-                    "radius": 2,
-                    "label": "d"
+                    "radius": 2
+                  },
+                  {
+                    "type": "point",
+                    "coords": [
+                      2,
+                      3
+                    ],
+                    "label": "O"
+                  },
+                  {
+                    "type": "label",
+                    "coords": [
+                      3.8,
+                      4.2
+                    ],
+                    "text": "d"
+                  },
+                  {
+                    "type": "line",
+                    "p1": [
+                      2,
+                      0
+                    ],
+                    "p2": [
+                      2,
+                      3
+                    ],
+                    "dashed": true,
+                    "color": "#64748b"
+                  },
+                  {
+                    "type": "line",
+                    "p1": [
+                      0,
+                      3
+                    ],
+                    "p2": [
+                      2,
+                      3
+                    ],
+                    "dashed": true,
+                    "color": "#64748b"
                   }
                 ]
               }
@@ -474,11 +609,11 @@
                 "type": "cartesian_2d",
                 "domain": {
                   "x": [
-                    -2,
+                    -1,
                     6
                   ],
                   "y": [
-                    0,
+                    -1,
                     6
                   ]
                 },
@@ -490,8 +625,49 @@
                       3,
                       3
                     ],
-                    "radius": 2,
-                    "label": "d"
+                    "radius": 2
+                  },
+                  {
+                    "type": "point",
+                    "coords": [
+                      3,
+                      3
+                    ],
+                    "label": "O"
+                  },
+                  {
+                    "type": "label",
+                    "coords": [
+                      4.8,
+                      4.2
+                    ],
+                    "text": "d"
+                  },
+                  {
+                    "type": "line",
+                    "p1": [
+                      3,
+                      0
+                    ],
+                    "p2": [
+                      3,
+                      3
+                    ],
+                    "dashed": true,
+                    "color": "#64748b"
+                  },
+                  {
+                    "type": "line",
+                    "p1": [
+                      0,
+                      3
+                    ],
+                    "p2": [
+                      3,
+                      3
+                    ],
+                    "dashed": true,
+                    "color": "#64748b"
                   }
                 ]
               }
@@ -592,7 +768,7 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Circunferencia con centro en (5, 0) y radio 4 en un plano cartesiano.",
+        "alt": "Circunferencia con centro en O(5, 0) y radio 4 en un plano cartesiano con dispositivos P, Q, R, S.",
         "visual": {
           "type": "cartesian_2d",
           "domain": {
@@ -613,8 +789,7 @@
                 5,
                 0
               ],
-              "radius": 4,
-              "label": "cobertura"
+              "radius": 4
             },
             {
               "type": "point",
@@ -895,15 +1070,15 @@
           "type": "curve_region",
           "domain": {
             "x": [
-              1,
-              8
+              0,
+              9
             ],
             "y": [
-              1,
+              0,
               7
             ]
           },
-          "grid": true,
+          "grid": false,
           "path": {
             "points": [
               [
@@ -948,6 +1123,26 @@
               "from": [
                 7,
                 0
+              ],
+              "to": [
+                7,
+                6
+              ]
+            },
+            {
+              "from": [
+                0,
+                2
+              ],
+              "to": [
+                2,
+                2
+              ]
+            },
+            {
+              "from": [
+                0,
+                6
               ],
               "to": [
                 7,
@@ -1148,7 +1343,7 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Polígono en un plano cartesiano.",
+        "alt": "Polígono QRPS en un plano cartesiano con líneas punteadas.",
         "visual": {
           "type": "cartesian_2d",
           "domain": {
@@ -1161,7 +1356,7 @@
               8
             ]
           },
-          "grid": true,
+          "grid": false,
           "children": [
             {
               "type": "polygon",
@@ -1191,36 +1386,130 @@
               ]
             },
             {
-              "type": "point",
-              "coords": [
+              "type": "line",
+              "p1": [
+                3,
+                0
+              ],
+              "p2": [
                 3,
                 7
               ],
-              "label": "Q"
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                4
+              ],
+              "p2": [
+                5,
+                4
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                7
+              ],
+              "p2": [
+                3,
+                7
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                0,
+                1
+              ],
+              "p2": [
+                3,
+                1
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                1,
+                0
+              ],
+              "p2": [
+                1,
+                4
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                5,
+                0
+              ],
+              "p2": [
+                5,
+                4
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                7
+              ],
+              "label": "7"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                4
+              ],
+              "label": "4"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                1
+              ],
+              "label": "1"
             },
             {
               "type": "point",
               "coords": [
                 1,
-                4
+                0
               ],
-              "label": "R"
+              "label": "1"
             },
             {
               "type": "point",
               "coords": [
                 3,
-                1
+                0
               ],
-              "label": "P"
+              "label": "3"
             },
             {
               "type": "point",
               "coords": [
                 5,
-                4
+                0
               ],
-              "label": "S"
+              "label": "5"
             }
           ]
         }
@@ -1255,7 +1544,7 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Polígono en un plano cartesiano.",
+        "alt": "Polígono DEFGHIJ en un plano cartesiano con líneas punteadas.",
         "visual": {
           "type": "cartesian_2d",
           "domain": {
@@ -1268,7 +1557,7 @@
               9
             ]
           },
-          "grid": true,
+          "grid": false,
           "children": [
             {
               "type": "polygon",
@@ -1313,60 +1602,138 @@
               ]
             },
             {
+              "type": "line",
+              "p1": [
+                -4,
+                0
+              ],
+              "p2": [
+                -4,
+                5
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                -2,
+                0
+              ],
+              "p2": [
+                -2,
+                5
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                2,
+                0
+              ],
+              "p2": [
+                2,
+                5
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                4,
+                0
+              ],
+              "p2": [
+                4,
+                5
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                -4,
+                5
+              ],
+              "p2": [
+                4,
+                5
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
+              "type": "line",
+              "p1": [
+                -2,
+                2
+              ],
+              "p2": [
+                2,
+                2
+              ],
+              "dashed": true,
+              "color": "#64748b"
+            },
+            {
               "type": "point",
               "coords": [
                 0,
                 8
               ],
-              "label": "D"
+              "label": "8"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                5
+              ],
+              "label": "5"
+            },
+            {
+              "type": "point",
+              "coords": [
+                0,
+                2
+              ],
+              "label": "2"
             },
             {
               "type": "point",
               "coords": [
                 -4,
-                5
+                0
               ],
-              "label": "E"
+              "label": "-4"
             },
             {
               "type": "point",
               "coords": [
                 -2,
-                5
+                0
               ],
-              "label": "F"
-            },
-            {
-              "type": "point",
-              "coords": [
-                -2,
-                2
-              ],
-              "label": "G"
+              "label": "-2"
             },
             {
               "type": "point",
               "coords": [
                 2,
-                2
+                0
               ],
-              "label": "H"
-            },
-            {
-              "type": "point",
-              "coords": [
-                2,
-                5
-              ],
-              "label": "I"
+              "label": "2"
             },
             {
               "type": "point",
               "coords": [
                 4,
-                5
+                0
               ],
-              "label": "J"
+              "label": "4"
             }
           ]
         }
@@ -1502,7 +1869,7 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Cuadrícula de 4 gráficas en planos cartesianos.",
+        "alt": "Representación de cuatro relaciones A, B, C y D para determinar cuál es una función.",
         "visual": {
           "type": "multi_view_grid",
           "layout": {
@@ -1516,12 +1883,12 @@
                 "type": "cartesian_2d",
                 "domain": {
                   "x": [
-                    -5,
-                    5
+                    -4,
+                    4
                   ],
                   "y": [
-                    -5,
-                    5
+                    -4,
+                    4
                   ]
                 },
                 "grid": false,
@@ -1533,27 +1900,26 @@
                     "type": "path",
                     "points": [
                       [
-                        -4,
-                        -1
+                        -3,
+                        -2
                       ],
                       [
-                        -2,
-                        1
+                        -1.5,
+                        2
                       ],
                       [
                         0,
-                        0.5
+                        0
                       ],
                       [
-                        2,
-                        -0.5
+                        1.5,
+                        -2
                       ],
                       [
-                        4,
-                        1
+                        3,
+                        2
                       ]
-                    ],
-                    "description": "curva suave tipo onda que pasa la prueba de la recta vertical"
+                    ]
                   }
                 ]
               }
@@ -1564,12 +1930,12 @@
                 "type": "cartesian_2d",
                 "domain": {
                   "x": [
-                    -5,
+                    -2,
                     5
                   ],
                   "y": [
-                    -5,
-                    5
+                    -4,
+                    4
                   ]
                 },
                 "grid": false,
@@ -1609,12 +1975,12 @@
                 "type": "cartesian_2d",
                 "domain": {
                   "x": [
-                    -5,
-                    5
+                    -4,
+                    4
                   ],
                   "y": [
-                    -5,
-                    5
+                    -4,
+                    4
                   ]
                 },
                 "grid": false,
@@ -1626,27 +1992,26 @@
                     "type": "path",
                     "points": [
                       [
-                        -4,
-                        -1
+                        -2,
+                        -3
                       ],
                       [
-                        -2,
-                        2
+                        -3,
+                        0
                       ],
                       [
                         0,
+                        2
+                      ],
+                      [
+                        3,
                         0
                       ],
                       [
                         2,
-                        -2
-                      ],
-                      [
-                        4,
-                        1
+                        -3
                       ]
-                    ],
-                    "description": "curva en forma de S acostada (falla la prueba de la recta vertical)"
+                    ]
                   }
                 ]
               }
@@ -1657,12 +2022,12 @@
                 "type": "cartesian_2d",
                 "domain": {
                   "x": [
-                    -5,
-                    5
+                    -4,
+                    4
                   ],
                   "y": [
-                    -5,
-                    5
+                    -4,
+                    4
                   ]
                 },
                 "grid": false,
@@ -1891,7 +2256,6 @@
               "show": true,
               "label": "5",
               "project_to": [
-                "x",
                 "y"
               ]
             },
@@ -1906,7 +2270,8 @@
               "show": true,
               "x_label": "-1"
             }
-          }
+          },
+          "function_label_position": "left"
         }
       },
       "set_id": "set_1"
@@ -2984,7 +3349,7 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Curva de distribución de frecuencias.",
+        "alt": "Curva de distribución de frecuencias asimétrica.",
         "visual": {
           "type": "distribution_curve",
           "skew": "negative",
@@ -2998,13 +3363,13 @@
           "markers": [
             {
               "value": 80,
-              "label": "Mediana",
+              "label": "80",
               "dashed": true,
               "dashed_to_axis": "x"
             },
             {
               "value": 85,
-              "label": "Moda",
+              "label": "85",
               "dashed": true,
               "dashed_to_axis": "x"
             }
@@ -3255,7 +3620,7 @@
         "evidence": "A3.3",
         "evidence_desc": "Aplica estandarización y el coeficiente de variación para la comparación de la posición o variabilidad de dos o más grupos de datos, en diversos contextos."
       },
-      "stem": "La siguiente tabla muestra la información relacionada con las horas mensuales dedicadas por cuatro grupos de personas voluntarias:\n\n[Ver tabla de grupos]\n\nEl grupo que presenta menor variabilidad relativa corresponde al",
+      "stem": "La siguiente tabla muestra la información relacionada con las horas mensuales dedicadas por cuatro grupos de personas voluntarias:\n\n| Grupo | Media aritmética | Desviación estándar |\n| :--- | :---: | :---: |\n| H | 15 | 4,4 |\n| Q | 16 | 4,5 |\n| S | 18 | 5,3 |\n| P | 17 | 5,0 |\n\nSofía pertenece al Grupo H y dedica 15 horas mensualmente al trabajo de voluntariado.\nMaría pertenece al Grupo Q y dedica 17 horas mensualmente al trabajo de voluntariado.\nAndrés pertenece al Grupo S y dedica 19 horas mensualmente al trabajo de voluntariado.\nRosa pertenece al Grupo P y dedica 16 horas mensuales al trabajo de voluntariado.\n\nEl grupo que presenta menor variabilidad relativa corresponde al",
       "options": {
         "A": "H",
         "B": "Q",
@@ -3287,7 +3652,7 @@
         "evidence": "A3.3",
         "evidence_desc": "Aplica estandarización y el coeficiente de variación para la comparación de la posición o variabilidad de dos o más grupos de datos, en diversos contextos."
       },
-      "stem": "La siguiente tabla muestra la información relacionada con las horas mensuales dedicadas por cuatro grupos de personas voluntarias:\n\n[Ver tabla de grupos]\n\nSofía pertenece al Grupo H y dedica 15 horas mensualmente al trabajo de voluntariado.\nMaría pertenece al Grupo Q y dedica 17 horas mensualmente al trabajo de voluntariado.\nAndrés pertenece al Grupo S y dedica 19 horas mensualmente al trabajo de voluntariado.\nRosa pertenece al Grupo P y dedica 16 horas mensuales al trabajo de voluntariado.\n\nEn términos relativos y con respecto a su grupo de referencia, la persona que presenta el mejor desempeño en cuanto a la cantidad de horas dedicadas al voluntariado corresponde a",
+      "stem": "La siguiente tabla muestra la información relacionada con las horas mensuales dedicadas por cuatro grupos de personas voluntarias:\n\n| Grupo | Media aritmética | Desviación estándar |\n| :--- | :---: | :---: |\n| H | 15 | 4,4 |\n| Q | 16 | 4,5 |\n| S | 18 | 5,3 |\n| P | 17 | 5,0 |\n\nSofía pertenece al Grupo H y dedica 15 horas mensualmente al trabajo de voluntariado.\nMaría pertenece al Grupo Q y dedica 17 horas mensualmente al trabajo de voluntariado.\nAndrés pertenece al Grupo S y dedica 19 horas mensualmente al trabajo de voluntariado.\nRosa pertenece al Grupo P y dedica 16 horas mensuales al trabajo de voluntariado.\n\nEn términos relativos y con respecto a su grupo de referencia, la persona que presenta el mejor desempeño en cuanto a la cantidad de horas dedicadas al voluntariado corresponde a",
       "options": {
         "A": "Andrés.",
         "B": "Sofía.",
