@@ -12,9 +12,11 @@ import {
 import manifestJson from '../../content/manifest.json';
 import set1Json from '../../content/bxm/matematicas/set_1.json';
 import set2Json from '../../content/bxm/matematicas/set_2.json';
+import set3Json from '../../content/bxm/matematicas/set_3.json';
+import set4Json from '../../content/bxm/matematicas/set_4.json';
 import groupsJson from '../../content/bxm/matematicas/groups.json';
 
-// Glob import all json files in content directory for Vite compatibility
+// Glob import all json files in content directory for Vite dynamic loading
 const contentModules = import.meta.glob('../../content/**/*.json');
 
 class DataService {
@@ -46,12 +48,16 @@ class DataService {
       this.activeSets = defaultSubject.sets;
     }
 
-    // Populate default sets (set_1 & set_2)
+    // Populate default sets (set_1, set_2, set_3 & set_4)
     const set1Data = set1Json as unknown as QuestionSetData;
     const set2Data = set2Json as unknown as QuestionSetData;
+    const set3Data = set3Json as unknown as QuestionSetData;
+    const set4Data = set4Json as unknown as QuestionSetData;
 
     this.itemsMap.set('set_1', set1Data.items || []);
     this.itemsMap.set('set_2', set2Data.items || []);
+    this.itemsMap.set('set_3', set3Data.items || []);
+    this.itemsMap.set('set_4', set4Data.items || []);
 
     const groupData = groupsJson as unknown as GroupBankData;
     if (groupData && Array.isArray(groupData.groups)) {

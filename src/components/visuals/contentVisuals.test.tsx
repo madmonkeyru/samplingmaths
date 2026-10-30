@@ -4,12 +4,19 @@ import { VisualRenderer } from './VisualRenderer';
 import { GroupVisual } from './GroupVisual';
 import set1Json from '../../../content/bxm/matematicas/set_1.json';
 import set2Json from '../../../content/bxm/matematicas/set_2.json';
+import set3Json from '../../../content/bxm/matematicas/set_3.json';
+import set4Json from '../../../content/bxm/matematicas/set_4.json';
 import groupsJson from '../../../content/bxm/matematicas/groups.json';
 import type { Group } from '../../types';
 
 describe('Content visual spec integration', () => {
   it('renders every per-item visual_spec without falling back', () => {
-    const items = [...((set1Json as any).items || []), ...((set2Json as any).items || [])];
+    const items = [
+      ...((set1Json as any).items || []),
+      ...((set2Json as any).items || []),
+      ...((set3Json as any).items || []),
+      ...((set4Json as any).items || []),
+    ];
     const withVisuals = items.filter((item: any) => item.visual_spec);
 
     expect(withVisuals.length).toBeGreaterThan(0);

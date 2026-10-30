@@ -1,0 +1,882 @@
+{
+  "schema_version": "1.0",
+  "exam": "Bachillerato por Madurez Suficiente (BXM)",
+  "convocatoria": "Convocatoria 02-2026",
+  "language": "es",
+  "source": "MEP - Prácticas de Refuerzo de Matemáticas",
+  "specification": "Tabla de Especificaciones BXM 2026",
+  "solucionario_verified": true,
+  "set_info": {
+    "id": "set_3",
+    "name": "Práctica de Refuerzo Intensivo (Set de Refuerzo BXM)",
+    "description": "Práctica enfocada en la consolidación de conceptos clave con apoyo técnico y visual de Geometría, Funciones y Estadística.",
+    "total_items": 20,
+    "file": "bxm/matematicas/set_3.json"
+  },
+  "total_items": 20,
+  "sections": [],
+  "notes": [
+    "Diseñado para refuerzo dinámico y práctico."
+  ],
+  "items": [
+    {
+      "id": 131,
+      "set_id": "set_3",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A1",
+        "affirmation_desc": null,
+        "evidence": "A1.1",
+        "evidence_desc": "Representa gráficamente una circunferencia dada su ecuación o centro y radio."
+      },
+      "stem": "Considere la circunferencia $C$ dada por la ecuación $(x - 3)^2 + (y + 2)^2 = 16$. ¿Cuál es la ubicación del punto $P(6, 2)$ con respecto a la circunferencia $C$?",
+      "options": {
+        "A": "Punto interior",
+        "B": "Punto frontera (sobre la circunferencia)",
+        "C": "Punto exterior",
+        "D": "El centro de la circunferencia"
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "El centro de $C$ es $(h,k) = (3, -2)$ y su radio es $r = \\sqrt{16} = 4$.",
+        "Calculamos la distancia $d$ entre el centro $(3, -2)$ y el punto $P(6, 2)$: $d = \\sqrt{(6-3)^2 + (2 - (-2))^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+        "Dado que la distancia $d = 5$ es mayor que el radio $r = 4$, el punto $P(6, 2)$ se ubica en el exterior de la circunferencia $C$.",
+        "Por lo tanto, la opción correcta es C."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Circunferencia C centrada en (3, -2) con radio 4 y punto P(6, 2) exterior",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -2,
+              8
+            ],
+            "y": [
+              -7,
+              4
+            ]
+          },
+          "grid": true,
+          "axes": {
+            "arrows": true
+          },
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                3,
+                -2
+              ],
+              "radius": 4,
+              "stroke": "indigo-600",
+              "strokeWidth": 2,
+              "fill": "indigo-50/20"
+            },
+            {
+              "type": "point",
+              "x": 3,
+              "y": -2,
+              "label": "C(3,-2)",
+              "color": "stone-800"
+            },
+            {
+              "type": "point",
+              "x": 6,
+              "y": 2,
+              "label": "P(6,2)",
+              "color": "indigo-600"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 132,
+      "set_id": "set_3",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A1",
+        "affirmation_desc": null,
+        "evidence": "A1.3",
+        "evidence_desc": "Determina si una recta dada es secante, tangente o exterior a una circunferencia."
+      },
+      "stem": "Considere la circunferencia $C: x^2 + y^2 = 25$ y la recta $L: y = 3$. La recta $L$ con respecto a $C$ es",
+      "options": {
+        "A": "Secante",
+        "B": "Tangente",
+        "C": "Exterior",
+        "D": "Perpendicular al eje x"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El centro de $C$ es $(0,0)$ y su radio es $r = 5$.",
+        "La distancia desde el centro $(0,0)$ a la recta horizontal $y = 3$ es $d = |3 - 0| = 3$.",
+        "Como la distancia $d = 3$ es estrictamente menor que el radio $r = 5$, la recta interseca a la circunferencia en dos puntos distintos, por lo que es SECANTE."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Circunferencia centrada en el origen con radio 5 y recta horizontal y = 3 secante",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -6,
+              6
+            ],
+            "y": [
+              -6,
+              6
+            ]
+          },
+          "grid": true,
+          "axes": {
+            "arrows": true
+          },
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                0,
+                0
+              ],
+              "radius": 5,
+              "stroke": "indigo-600",
+              "strokeWidth": 2
+            },
+            {
+              "type": "line",
+              "x1": -6,
+              "y1": 3,
+              "x2": 6,
+              "y2": 3,
+              "stroke": "indigo-500",
+              "strokeWidth": 2,
+              "label": "y = 3"
+            },
+            {
+              "type": "point",
+              "x": -4,
+              "y": 3,
+              "label": "A(-4,3)",
+              "color": "stone-800"
+            },
+            {
+              "type": "point",
+              "x": 4,
+              "y": 3,
+              "label": "B(4,3)",
+              "color": "stone-800"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 133,
+      "set_id": "set_3",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Polígonos",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A2",
+        "affirmation_desc": null,
+        "evidence": "A2.1",
+        "evidence_desc": "Calcula el perímetro y el área de polígonos regulares e irregulares."
+      },
+      "stem": "Un polígono regular tiene un ángulo interno cuya medida es $135^\\circ$. Si la medida de cada uno de sus lados es $6\\text{ cm}$, ¿cuál es el número total de lados $n$ de dicho polígono y su perímetro?",
+      "options": {
+        "A": "$n = 6$, Perímetro = $36\\text{ cm}$",
+        "B": "$n = 8$, Perímetro = $48\\text{ cm}$",
+        "C": "$n = 10$, Perímetro = $60\\text{ cm}$",
+        "D": "$n = 12$, Perímetro = $72\\text{ cm}$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La medida de un ángulo interno de un polígono regular de $n$ lados es $i = \\frac{180^\\circ(n-2)}{n}$.",
+        "Igualando $135^\\circ = \\frac{180(n-2)}{n} \\implies 135n = 180n - 360 \\implies 45n = 360 \\implies n = 8$ (Octágono regular).",
+        "El perímetro de un octágono regular con lado $l = 6\\text{ cm}$ es $P = n \\cdot l = 8 \\cdot 6 = 48\\text{ cm}$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 134,
+      "set_id": "set_3",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Transformaciones",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A3",
+        "affirmation_desc": null,
+        "evidence": "A3.1",
+        "evidence_desc": "Aplica traslaciones, reflexiones, rotaciones y homotecias a figuras geométricas en el plano cartesiano."
+      },
+      "stem": "Al aplicar una traslación al punto $A(-2, 5)$ según el vector de traslación $\\vec{v} = (4, -3)$, se obtiene el punto imagen $A’$. Las coordenadas de $A’$ corresponden a",
+      "options": {
+        "A": "$(2, 2)$",
+        "B": "$(-6, 8)$",
+        "C": "$(2, -2)$",
+        "D": "$(-2, 2)$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Para trasladar un punto $A(x,y)$ con un vector $\\vec{v} = (a, b)$, sumamos componente a componente: $A’ = (x + a, y + b)$.",
+        "Sustituyendo $A(-2, 5)$ y $\\vec{v} = (4, -3)$: $A’ = (-2 + 4, 5 + (-3)) = (2, 2)$.",
+        "Por lo tanto, la opción correcta es A."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Traslación del punto A(-2,5) al punto A*(2,2) mediante vector (4,-3)",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -4,
+              5
+            ],
+            "y": [
+              -1,
+              7
+            ]
+          },
+          "grid": true,
+          "axes": {
+            "arrows": true
+          },
+          "children": [
+            {
+              "type": "point",
+              "x": -2,
+              "y": 5,
+              "label": "A(-2,5)",
+              "color": "stone-800"
+            },
+            {
+              "type": "point",
+              "x": 2,
+              "y": 2,
+              "label": "A*(2,2)",
+              "color": "indigo-600"
+            },
+            {
+              "type": "arrow",
+              "x1": -2,
+              "y1": 5,
+              "x2": 2,
+              "y2": 2,
+              "stroke": "indigo-500",
+              "strokeWidth": 2,
+              "label": "v=(4,-3)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 135,
+      "set_id": "set_3",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Esfera y Cilindro",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A4",
+        "affirmation_desc": null,
+        "evidence": "A4.1",
+        "evidence_desc": "Resuelve problemas que involucran la intersección de planos con esferas y cilindros rectos."
+      },
+      "stem": "Una esfera de radio $R = 10\\text{ cm}$ es cortada por un plano a una distancia $d = 6\\text{ cm}$ de su centro. La sección transversal producida por dicha intersección es un círculo cuyo radio $r$ mide",
+      "options": {
+        "A": "$4\\text{ cm}$",
+        "B": "$8\\text{ cm}$",
+        "C": "$12\\text{ cm}$",
+        "D": "$16\\text{ cm}$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La intersección de un plano con una esfera genera una sección circular cuya relación de radio $r$, distancia al centro $d$ y radio esférico $R$ cumple el Teorema de Pitágoras: $r^2 + d^2 = R^2$.",
+        "Sustituyendo $d = 6$ y $R = 10$: $r^2 + 6^2 = 10^2 \\implies r^2 + 36 = 100 \\implies r^2 = 64$.",
+        "Por lo tanto, $r = \\sqrt{64} = 8\\text{ cm}$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 136,
+      "set_id": "set_3",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A1",
+        "affirmation_desc": null,
+        "evidence": "A1.2",
+        "evidence_desc": "Reconoce la representación algebraica de una circunferencia."
+      },
+      "stem": "Si el centro de una circunferencia se encuentra en $C(-1, 4)$ y pasa por el origen $(0,0)$, la ecuación de la circunferencia es",
+      "options": {
+        "A": "$(x - 1)^2 + (y + 4)^2 = 17$",
+        "B": "$(x + 1)^2 + (y - 4)^2 = 17$",
+        "C": "$(x + 1)^2 + (y - 4)^2 = 25$",
+        "D": "$(x - 1)^2 + (y + 4)^2 = 25$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "El radio $r$ es la distancia entre el centro $C(-1, 4)$ y el punto por el que pasa $(0,0)$.",
+        "$r^2 = (0 - (-1))^2 + (0 - 4)^2 = 1^2 + (-4)^2 = 1 + 16 = 17$.",
+        "La ecuación con centro $(-1, 4)$ y $r^2 = 17$ es $(x - (-1))^2 + (y - 4)^2 = 17 \\implies (x + 1)^2 + (y - 4)^2 = 17$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 137,
+      "set_id": "set_3",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Transformaciones",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A3",
+        "affirmation_desc": null,
+        "evidence": "A3.2",
+        "evidence_desc": "Reconoce simetrías respecto a los ejes de coordenadas."
+      },
+      "stem": "Al reflejar el punto $P(3, -5)$ con respecto al eje y ($y$-axis), las coordenadas de su punto imagen $P’$ son",
+      "options": {
+        "A": "$(-3, -5)$",
+        "B": "$(3, 5)$",
+        "C": "$(-3, 5)$",
+        "D": "$(-5, 3)$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La reflexión respecto al eje $y$ cambia el signo de la coordenada $x$ manteniendo la coordenada $y$ intacta: $(x, y) \\to (-x, y)$.",
+        "Sustituyendo $P(3, -5)$: $P’ = (-3, -5)$.",
+        "Por lo tanto, la respuesta correcta es A."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 138,
+      "set_id": "set_3",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función Lineal",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A5",
+        "affirmation_desc": null,
+        "evidence": "A5.1",
+        "evidence_desc": "Determina la pendiente, intersecciones con los ejes y criterio de una función lineal."
+      },
+      "stem": "Una función lineal $f(x) = mx + b$ pasa por los puntos $(1, 4)$ y $(3, 10)$. ¿Cuál es el criterio de la función $f(x)$?",
+      "options": {
+        "A": "$f(x) = 3x + 1$",
+        "B": "$f(x) = 2x + 2$",
+        "C": "$f(x) = 3x + 4$",
+        "D": "$f(x) = 4x - 2$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Calculamos la pendiente $m$: $m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{10 - 4}{3 - 1} = \\frac{6}{2} = 3$.",
+        "Calculamos la intersección $b$ con la fórmula $b = y - mx$ usando $(1,4)$: $b = 4 - (3)(1) = 1$.",
+        "El criterio de la función es $f(x) = 3x + 1$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Gráfica de la función lineal f(x) = 3x + 1 pasando por (1,4) y (3,10)",
+        "visual": {
+          "type": "function_plot",
+          "form": "linear",
+          "params": {
+            "m": 3,
+            "b": 1
+          },
+          "domain": {
+            "x": [
+              -1,
+              4
+            ],
+            "y": [
+              -1,
+              12
+            ]
+          },
+          "annotations": {
+            "points": [
+              {
+                "x": 1,
+                "y": 4,
+                "label": "(1,4)"
+              },
+              {
+                "x": 3,
+                "y": 10,
+                "label": "(3,10)"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 139,
+      "set_id": "set_3",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función Cuadrática",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A6",
+        "affirmation_desc": null,
+        "evidence": "A6.1",
+        "evidence_desc": "Identifica el vértice, concavidad, eje de simetría e intersecciones de una función cuadrática."
+      },
+      "stem": "Dada la función cuadrática $f(x) = -x^2 + 4x + 5$, ¿cuáles son las coordenadas del vértice de la parábola y su concavidad?",
+      "options": {
+        "A": "Vértice $(2, 9)$, Cóncava hacia abajo",
+        "B": "Vértice $(-2, 9)$, Cóncava hacia arriba",
+        "C": "Vértice $(2, 5)$, Cóncava hacia abajo",
+        "D": "Vértice $(4, 5)$, Cóncava hacia arriba"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Identificamos coeficientes: $a = -1$, $b = 4$, $c = 5$. Dado que $a = -1 < 0$, la parábola es cóncava hacia abajo.",
+        "La coordenada $x$ del vértice es $h = -\\frac{b}{2a} = -\\frac{4}{2(-1)} = 2$.",
+        "La coordenada $y$ del vértice es $k = f(2) = -(2)^2 + 4(2) + 5 = -4 + 8 + 5 = 9$.",
+        "Por lo tanto, el vértice es $(2, 9)$ y la concavidad es hacia abajo."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Parábola cóncava hacia abajo f(x) = -x^2 + 4x + 5 con vértice en (2,9)",
+        "visual": {
+          "type": "function_plot",
+          "form": "quadratic",
+          "params": {
+            "a": -1,
+            "b": 4,
+            "c": 5
+          },
+          "domain": {
+            "x": [
+              -2,
+              6
+            ],
+            "y": [
+              -2,
+              10
+            ]
+          },
+          "annotations": {
+            "vertex": {
+              "x": 2,
+              "y": 9,
+              "label": "V(2,9)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 140,
+      "set_id": "set_3",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función Exponencial",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A7",
+        "affirmation_desc": null,
+        "evidence": "A7.1",
+        "evidence_desc": "Analiza las propiedades de la función exponencial y logarítmica."
+      },
+      "stem": "Considere la función exponencial $f(x) = 2^{x - 1} + 3$. La asíntota horizontal de la gráfica de $f(x)$ corresponde a la recta",
+      "options": {
+        "A": "$y = 0$",
+        "B": "$y = 1$",
+        "C": "$y = 3$",
+        "D": "$x = 3$"
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "Para una función exponencial de la forma $f(x) = a^{x - h} + k$ con $a > 0, a \\neq 1$, cuando $x \\to -\\infty$, $a^{x-h} \\to 0$.",
+        "Por ende, $f(x) \\to k$. La asíntota horizontal de la gráfica es la recta $y = k$.",
+        "En $f(x) = 2^{x - 1} + 3$, el valor de $k$ es $3$, por lo que la asíntota horizontal es $y = 3$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 141,
+      "set_id": "set_3",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función Logarítmica",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A7",
+        "affirmation_desc": null,
+        "evidence": "A7.2",
+        "evidence_desc": "Resuelve ecuaciones exponenciales y logarítmicas en contextos matemáticos y cotidianos."
+      },
+      "stem": "El valor de $x$ que satisface la ecuación logarítmica $\\log_3(2x - 1) = 2$ es",
+      "options": {
+        "A": "$x = 3.5$",
+        "B": "$x = 5$",
+        "C": "$x = 4.5$",
+        "D": "$x = 8$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Convertimos la ecuación logarítmica a su forma exponencial equivalente: $\\log_b(A) = c \\iff b^c = A$.",
+        "Así, $3^2 = 2x - 1 \\implies 9 = 2x - 1$.",
+        "Sumamos 1 a ambos lados: $2x = 10 \\implies x = 5$.",
+        "Verificamos que el argumento $2(5) - 1 = 9 > 0$, lo cual es válido."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 142,
+      "set_id": "set_3",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función Inversa",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A8",
+        "affirmation_desc": null,
+        "evidence": "A8.1",
+        "evidence_desc": "Determina el criterio de la función inversa de una función biyectiva dada."
+      },
+      "stem": "Dada la función biyectiva $f(x) = 4x - 5$, el criterio de su función inversa $f^{-1}(x)$ corresponde a",
+      "options": {
+        "A": "$f^{-1}(x) = \\frac{x + 5}{4}$",
+        "B": "$f^{-1}(x) = \\frac{x - 5}{4}$",
+        "C": "$f^{-1}(x) = 5x - 4$",
+        "D": "$f^{-1}(x) = \\frac{4}{x + 5}$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Hacemos $y = f(x) \\implies y = 4x - 5$.",
+        "Despejamos la variable $x$ en términos de $y$: $y + 5 = 4x \\implies x = \\frac{y + 5}{4}$.",
+        "Intercambiamos variables $x$ e $y$ para obtener la función inversa: $f^{-1}(x) = \\frac{x + 5}{4}$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 143,
+      "set_id": "set_3",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Sistemas de Ecuaciones",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A9",
+        "affirmation_desc": null,
+        "evidence": "A9.1",
+        "evidence_desc": "Resuelve sistemas de dos ecuaciones lineales con dos incógnitas."
+      },
+      "stem": "En una tienda se compraron 2 cuadernos y 3 lápices por $\\mathbb{C}3\\,100$. En otra compra se adquirieron 4 cuadernos y 1 lápiz del mismo tipo por $\\mathbb{C}4\\,700$. ¿Cuál es el precio de un cuaderno?",
+      "options": {
+        "A": "$\\mathbb{C}500$",
+        "B": "$\\mathbb{C}1\\,000$",
+        "C": "$\\mathbb{C}1\\,100$",
+        "D": "$\\mathbb{C}700$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Planteamos el sistema de ecuaciones donde $x$ es el precio del cuaderno e $y$ el del lápiz:",
+        "(1) $2x + 3y = 3100$",
+        "(2) $4x + y = 4700 \\implies y = 4700 - 4x$",
+        "Sustituimos $y$ en (1): $2x + 3(4700 - 4x) = 3100 \\implies 2x + 14100 - 12x = 3100$.",
+        "$-10x = 3100 - 14100 \\implies -10x = -11000 \\implies x = 1000$.",
+        "El precio de un cuaderno es $\\mathbb{C}1\\,000$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 144,
+      "set_id": "set_3",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función Cuadrática",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A6",
+        "affirmation_desc": null,
+        "evidence": "A6.2",
+        "evidence_desc": "Resuelve problemas de optimización utilizando funciones cuadráticas."
+      },
+      "stem": "La altura $h(t)$ en metros que alcanza un proyectil $t$ segundos después del lanzamiento está dada por $h(t) = -5t^2 + 30t$. La altura máxima que alcanza el proyectil es",
+      "options": {
+        "A": "$3\\text{ metros}$",
+        "B": "$30\\text{ metros}$",
+        "C": "$45\\text{ metros}$",
+        "D": "$60\\text{ metros}$"
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "Dado que la función cuadrática $h(t) = -5t^2 + 30t$ tiene $a = -5 < 0$, su valor máximo ocurre en la coordenada $y$ del vértice.",
+        "Calculamos el tiempo en el vértice $t_v = -\\frac{b}{2a} = -\\frac{30}{2(-5)} = 3\\text{ segundos}$.",
+        "Evaluamos la altura máxima $h(3) = -5(3)^2 + 30(3) = -5(9) + 90 = -45 + 90 = 45\\text{ metros}$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 145,
+      "set_id": "set_3",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Medidas de Posición",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A10",
+        "affirmation_desc": null,
+        "evidence": "A10.1",
+        "evidence_desc": "Interpreta medidas de posición central y no central (cuartiles, mínimo, máximo, mediana)."
+      },
+      "stem": "Considere los siguientes datos sobre el número de tardanzas de un grupo de estudiantes en un mes: $1, 2, 2, 3, 5, 7, 8, 10, 12$. El primer cuartil ($Q_1$) y la mediana ($Q_2$) corresponden a",
+      "options": {
+        "A": "$Q_1 = 2$, Mediana = $5$",
+        "B": "$Q_1 = 2.5$, Mediana = $5$",
+        "C": "$Q_1 = 2$, Mediana = $7$",
+        "D": "$Q_1 = 3$, Mediana = $5$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Los datos ya están ordenados de menor a mayor (9 datos en total, $n=9$).",
+        "La mediana ($Q_2$) es el dato central en la posición $\\frac{9+1}{2} = 5^\\circ$ dato, el cual es $5$.",
+        "La mitad inferior comprende los datos $1, 2, 2, 3$. El primer cuartil ($Q_1$) es la mediana de esta mitad: entre el 2° y 3° dato, $Q_1 = \\frac{2 + 2}{2} = 2$.",
+        "Por lo tanto, $Q_1 = 2$ y la Mediana = $5$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Diagrama de caja para los datos de tardanzas mostrando Q1=2, Mediana=5, Q3=8",
+        "visual": {
+          "type": "box_plot",
+          "groups": [
+            {
+              "name": "Tardanzas",
+              "min": 1,
+              "q1": 2,
+              "median": 5,
+              "q3": 8,
+              "max": 12
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 146,
+      "set_id": "set_3",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Medidas de Variabilidad",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A10",
+        "affirmation_desc": null,
+        "evidence": "A10.2",
+        "evidence_desc": "Calcula e interpreta el recorrido y el recorrido intercuartílico."
+      },
+      "stem": "Un resumen de cinco números para un conjunto de salarios (en miles de colones) arrojó: $\\text{Mín} = 350$, $Q_1 = 420$, $\\text{Mediana} = 500$, $Q_3 = 680$, $\\text{Máx} = 950$. El recorrido intercuartílico (RIC) de este conjunto de salarios es",
+      "options": {
+        "A": "$600\\text{ mil colones}$",
+        "B": "$260\\text{ mil colones}$",
+        "C": "$180\\text{ mil colones}$",
+        "D": "$330\\text{ mil colones}$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "El Recorrido Intercuartílico (RIC) se calcula mediante la fórmula $\\text{RIC} = Q_3 - Q_1$.",
+        "Sustituyendo los valores de $Q_3 = 680$ y $Q_1 = 420$: $\\text{RIC} = 680 - 420 = 260\\text{ mil colones}$.",
+        "Por lo tanto, la opción correcta es B."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 147,
+      "set_id": "set_3",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Diagrama de Caja",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A10",
+        "affirmation_desc": null,
+        "evidence": "A10.3",
+        "evidence_desc": "Compara distribuciones de datos mediante diagramas de caja."
+      },
+      "stem": "Considere la siguiente información representada en una tabla comparativa de notas de dos secciones de secundaria A y B:\n\n| Sección | Mínimo | Q1 | Mediana | Q3 | Máximo |\n| :--- | :---: | :---: | :---: | :---: | :---: |\n| Sección A | 45 | 60 | 75 | 85 | 98 |\n| Sección B | 55 | 70 | 80 | 90 | 100 |\n\n¿Cuál de las siguientes afirmaciones es CORRECTA?",
+      "options": {
+        "A": "Al menos el 50% de los estudiantes de la Sección B obtuvo una nota mayor o igual a 80.",
+        "B": "El recorrido total de las notas en la Sección A es menor que en la Sección B.",
+        "C": "El 25% superior de la Sección A obtuvo notas mayores a 90.",
+        "D": "La mediana de la Sección A es mayor que la mediana de la Sección B."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Evaluamos la opción A: En la Sección B, la mediana es 80. Por definición de la mediana, el 50% de los datos es mayor o igual a 80. La afirmación A es CORRECTA.",
+        "Evaluamos la opción B: Recorrido A = 98 - 45 = 53. Recorrido B = 100 - 55 = 45. El recorrido de A (53) es MAYOR que el de B (45), por lo que B es falsa.",
+        "Evaluamos la opción C: El $Q_3$ de A es 85, por lo que el 25% superior sacó más de 85, no de 90 (falsa).",
+        "Evaluamos la opción D: Mediana A (75) < Mediana B (80) (falsa)."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Tabla comparativa de calificaciones secciones A y B",
+        "visual": {
+          "type": "table",
+          "variant": "summary",
+          "headers": [
+            "Sección",
+            "Mínimo",
+            "Q1",
+            "Mediana",
+            "Q3",
+            "Máximo"
+          ],
+          "rows": [
+            [
+              "Sección A",
+              "45",
+              "60",
+              "75",
+              "85",
+              "98"
+            ],
+            [
+              "Sección B",
+              "55",
+              "70",
+              "80",
+              "90",
+              "100"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": 148,
+      "set_id": "set_3",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Probabilidad Regla de Laplace",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A11",
+        "affirmation_desc": null,
+        "evidence": "A11.1",
+        "evidence_desc": "Calcula probabilidades simples empleando la regla de Laplace."
+      },
+      "stem": "En una urna hay 8 bolas rojas, 5 bolas azules y 7 bolas verdes, todas de igual tamaño. Si se extrae una bola al azar, ¿cuál es la probabilidad de que la bola extraída NO sea azul?",
+      "options": {
+        "A": "$\\frac{1}{4}$",
+        "B": "$\\frac{3}{4}$",
+        "C": "$\\frac{2}{5}$",
+        "D": "$\\frac{3}{5}$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "El número total de bolas en la urna es $8 + 5 + 7 = 20$.",
+        "Las bolas que NO son azules son las rojas y verdes: $8 + 7 = 15$.",
+        "La probabilidad es $P(\\text{No Azul}) = \\frac{15}{20} = \\frac{3}{4} = 0.75$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 149,
+      "set_id": "set_3",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Probabilidad Eventos",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A11",
+        "affirmation_desc": null,
+        "evidence": "A11.2",
+        "evidence_desc": "Identifica eventos mutuamente excluyentes y complementarios."
+      },
+      "stem": "Considere el experimento de lanzar un dado transparente estándar de seis caras numeradas del 1 al 6. Sean los eventos $E_1$: obtener un número par y $E_2$: obtener un número impar. ¿Cómo se clasifican los eventos $E_1$ y $E_2$?",
+      "options": {
+        "A": "Eventos independientes únicamente",
+        "B": "Eventos mutuamente excluyentes y complementarios",
+        "C": "Eventos imposibles",
+        "D": "Eventos seguros"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Espacio muestral $S = \\{1, 2, 3, 4, 5, 6\\}$.",
+        "$E_1 = \\{2, 4, 6\\}$ y $E_2 = \\{1, 3, 5\\}$.",
+        "Dado que $E_1 \\cap E_2 = \\emptyset$, los eventos no tienen elementos en común, por lo que son MUTUAMENTE EXCLUYENTES.",
+        "Dado que $E_1 \\cup E_2 = S$, la unión de ambos cubre todo el espacio muestral, por lo que son COMPLEMENTARIOS."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 150,
+      "set_id": "set_3",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Diagrama de Venn",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A11",
+        "affirmation_desc": null,
+        "evidence": "A11.3",
+        "evidence_desc": "Resuelve problemas de conteo y probabilidades utilizando diagramas de Venn."
+      },
+      "stem": "En un grupo de 50 estudiantes, 30 estudian Inglés, 20 estudian Francés y 8 estudian ambos idiomas. Si se selecciona un estudiante al azar, ¿cuál es la probabilidad de que estudie al menos uno de los dos idiomas?",
+      "options": {
+        "A": "$\\frac{42}{50} = \\frac{21}{25}$",
+        "B": "$\\frac{50}{50} = 1$",
+        "C": "$\\frac{38}{50} = \\frac{19}{25}$",
+        "D": "$\\frac{8}{50} = \\frac{4}{25}$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Utilizamos la regla de la adición de conjuntos: $N(I \\cup F) = N(I) + N(F) - N(I \\cap F)$.",
+        "$N(I \\cup F) = 30 + 20 - 8 = 42$ estudiantes estudian al menos un idioma.",
+        "La probabilidad es $P(I \\cup F) = \\frac{42}{50} = \\frac{21}{25} = 0.84$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Diagrama de Venn mostrando estudiantes de Inglés (30) y Francés (20) con intersección 8",
+        "visual": {
+          "type": "venn_diagram",
+          "sets": [
+            "Inglés",
+            "Francés"
+          ],
+          "region_values": {
+            "only_A": 22,
+            "only_B": 12,
+            "both": 8,
+            "neither": 8
+          }
+        }
+      }
+    }
+  ]
+}

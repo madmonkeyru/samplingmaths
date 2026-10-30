@@ -55,6 +55,20 @@
               "description": "Banco ampliado con 70 preguntas adicionales ricas en componentes visuales interactivos para refuerzo.",
               "file": "bxm/matematicas/set_2.json",
               "total_items": 70
+            },
+            {
+              "id": "set_3",
+              "name": "Práctica de Refuerzo Intensivo (Set de Refuerzo BXM)",
+              "description": "Práctica enfocada en la consolidación de conceptos clave con apoyo técnico y visual de Geometría, Funciones y Estadística.",
+              "file": "bxm/matematicas/set_3.json",
+              "total_items": 20
+            },
+            {
+              "id": "set_4",
+              "name": "Práctica de Dominio Avanzado y Contextos Reales (Set de Reto BXM)",
+              "description": "Práctica de reto de alto nivel con problemas contextualizados, gráficas detalladas y explicaciones paso a paso en las tres áreas oficiales.",
+              "file": "bxm/matematicas/set_4.json",
+              "total_items": 20
             }
           ]
         }
