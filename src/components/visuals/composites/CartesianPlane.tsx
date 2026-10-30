@@ -17,6 +17,9 @@ export interface CartesianCanvasProps {
   y_range?: [number, number];
   grid?: boolean;
   axes?: { arrows?: boolean };
+  show_ticks?: boolean;
+  show_tick_labels?: boolean;
+  show_numbers?: boolean;
   x_label?: string;
   y_label?: string;
   children?: any[];
@@ -150,20 +153,25 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
         'down-vertical': [0, -1],
       };
       const [dx, dy] = dirMap[direction] || [1, 1];
-      const span = Math.max(
+      const span = child.length || Math.max(
         transform.xDomain[1] - transform.xDomain[0],
         transform.yDomain[1] - transform.yDomain[0]
       );
       const end: [number, number] = [origin[0] + dx * span, origin[1] + dy * span];
+      const pt1 = transform.toPixel(origin[0], origin[1]);
+      const pt2 = transform.toPixel(end[0], end[1]);
+      const markerEnd = child.arrow !== false ? 'url(#curve-arrow)' : undefined;
       return (
         <React.Fragment key={key}>
-          <Line
-            p1={origin}
-            p2={end}
-            color={resolveColor(child, 'currentColor')}
+          <line
+            x1={pt1.px}
+            y1={pt1.py}
+            x2={pt2.px}
+            y2={pt2.py}
+            stroke={resolveColor(child, 'currentColor')}
             strokeWidth={resolveWidth(child, 2)}
-            dashed={child.dashed}
-            transform={transform}
+            strokeDasharray={child.dashed ? '4,4' : undefined}
+            markerEnd={markerEnd}
           />
           {child.label && <Point coords={origin} label={child.label} transform={transform} color={resolveColor(child, 'currentColor')} />}
         </React.Fragment>
@@ -186,6 +194,8 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
       const points: [number, number][] = child.points || [];
       if (points.length === 0) return null;
       const d = smoothPath(points, transform);
+      const markerEnd = child.arrow === 'end' || child.arrow === 'both' || child.arrow === true ? 'url(#curve-arrow)' : undefined;
+      const markerStart = child.arrow === 'start' || child.arrow === 'both' ? 'url(#curve-arrow-start)' : undefined;
       return (
         <path
           key={key}
@@ -196,6 +206,8 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
           strokeDasharray={child.dashed ? '4,4' : undefined}
           strokeLinejoin="round"
           strokeLinecap="round"
+          markerEnd={markerEnd}
+          markerStart={markerStart}
         />
       );
     }
@@ -267,23 +279,27 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
   }
 }
 
-export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
-  domain,
-  x_range,
-  y_range,
-  grid = false,
-  axes = { arrows: true },
-  x_label = 'x',
-  y_label = 'y',
-  children,
-  elements,
-  width = 400,
-  height = 300,
-  maxWidth,
-  padding = 24,
-  preserveAspect,
-  overlay,
-}) => {
+export const CartesianCanvas: React.FC<CartesianCanvasProps> = (props) => {
+  const {
+    domain,
+    x_range,
+    y_range,
+    grid = false,
+    axes = { arrows: true },
+    show_ticks,
+    show_tick_labels,
+    show_numbers,
+    x_label = 'x',
+    y_label = 'y',
+    children,
+    elements,
+    width = 400,
+    height = 300,
+    maxWidth,
+    padding = 24,
+    preserveAspect,
+    overlay,
+  } = props;
   const effectiveMaxWidth = maxWidth
     ? typeof maxWidth === 'number'
       ? `${maxWidth}px`
@@ -327,7 +343,12 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
   const xTicks = niceTicks(xMin, xMax, width < 300 ? 6 : 8);
   const yTicks = niceTicks(yMin, yMax, height < 240 ? 5 : 7);
 
-  const showTickLabels = width >= 220;
+  const ticksVisible = (props as any).show_ticks !== false;
+  const showTickLabels =
+    ticksVisible &&
+    (props as any).show_tick_labels !== false &&
+    (props as any).show_numbers !== false &&
+    width >= 220;
 
   return (
     <div className="w-full flex justify-center items-center my-3 max-w-full overflow-hidden">
@@ -347,6 +368,28 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
           <clipPath id={clipId}>
             <rect x={plotLeft} y={plotTop} width={transform.plotWidth} height={transform.plotHeight} />
           </clipPath>
+          <marker
+            id="curve-arrow"
+            viewBox="0 0 10 10"
+            refX="6"
+            refY="5"
+            markerWidth="5"
+            markerHeight="5"
+            orient="auto"
+          >
+            <path d="M 0 1 L 8 5 L 0 9 z" fill="var(--visual-axis, currentColor)" />
+          </marker>
+          <marker
+            id="curve-arrow-start"
+            viewBox="0 0 10 10"
+            refX="2"
+            refY="5"
+            markerWidth="5"
+            markerHeight="5"
+            orient="auto-start-reverse"
+          >
+            <path d="M 0 1 L 8 5 L 0 9 z" fill="var(--visual-axis, currentColor)" />
+          </marker>
         </defs>
 
         {/* Grid Lines */}
@@ -386,56 +429,58 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
         )}
 
         {/* Tick marks and labels */}
-        <g stroke={TICK_COLOR} strokeWidth={1.25}>
-          {xTicks.map((val, i) => {
-            const px = transform.toPixelX(val);
-            return (
-              <React.Fragment key={`xt-${i}`}>
-                <line x1={px} y1={xAxisPy - 4} x2={px} y2={xAxisPy + 4} />
-                {showTickLabels && Math.abs(val) > 1e-9 && (
-                  <text
-                    x={px}
-                    y={xAxisPy + 14}
-                    fontSize={10}
-                    fontWeight="bold"
-                    fill="var(--visual-text, currentColor)"
-                    stroke="var(--visual-halo, rgba(255, 255, 255, 0.92))"
-                    strokeWidth="3px"
-                    paintOrder="stroke fill"
-                    strokeLinejoin="round"
-                    textAnchor="middle"
-                  >
-                    {val}
-                  </text>
-                )}
-              </React.Fragment>
-            );
-          })}
-          {yTicks.map((val, i) => {
-            const py = transform.toPixelY(val);
-            return (
-              <React.Fragment key={`yt-${i}`}>
-                <line x1={yAxisPx - 4} y1={py} x2={yAxisPx + 4} y2={py} />
-                {showTickLabels && Math.abs(val) > 1e-9 && (
-                  <text
-                    x={yAxisPx - 7}
-                    y={py + 3.5}
-                    fontSize={10}
-                    fontWeight="bold"
-                    fill="var(--visual-text, currentColor)"
-                    stroke="var(--visual-halo, rgba(255, 255, 255, 0.92))"
-                    strokeWidth="3px"
-                    paintOrder="stroke fill"
-                    strokeLinejoin="round"
-                    textAnchor="end"
-                  >
-                    {val}
-                  </text>
-                )}
-              </React.Fragment>
-            );
-          })}
-        </g>
+        {ticksVisible && (
+          <g stroke={TICK_COLOR} strokeWidth={1.25}>
+            {xTicks.map((val, i) => {
+              const px = transform.toPixelX(val);
+              return (
+                <React.Fragment key={`xt-${i}`}>
+                  <line x1={px} y1={xAxisPy - 4} x2={px} y2={xAxisPy + 4} />
+                  {showTickLabels && Math.abs(val) > 1e-9 && (
+                    <text
+                      x={px}
+                      y={xAxisPy + 14}
+                      fontSize={10}
+                      fontWeight="bold"
+                      fill="var(--visual-text, currentColor)"
+                      stroke="var(--visual-halo, rgba(255, 255, 255, 0.92))"
+                      strokeWidth="3px"
+                      paintOrder="stroke fill"
+                      strokeLinejoin="round"
+                      textAnchor="middle"
+                    >
+                      {val}
+                    </text>
+                  )}
+                </React.Fragment>
+              );
+            })}
+            {yTicks.map((val, i) => {
+              const py = transform.toPixelY(val);
+              return (
+                <React.Fragment key={`yt-${i}`}>
+                  <line x1={yAxisPx - 4} y1={py} x2={yAxisPx + 4} y2={py} />
+                  {showTickLabels && Math.abs(val) > 1e-9 && (
+                    <text
+                      x={yAxisPx - 7}
+                      y={py + 3.5}
+                      fontSize={10}
+                      fontWeight="bold"
+                      fill="var(--visual-text, currentColor)"
+                      stroke="var(--visual-halo, rgba(255, 255, 255, 0.92))"
+                      strokeWidth="3px"
+                      paintOrder="stroke fill"
+                      strokeLinejoin="round"
+                      textAnchor="end"
+                    >
+                      {val}
+                    </text>
+                  )}
+                </React.Fragment>
+              );
+            })}
+          </g>
+        )}
 
         {/* Axis Labels */}
         <text
