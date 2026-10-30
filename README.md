@@ -1,19 +1,24 @@
-# MEP-EA-01 — Bachillerato por Madurez Suficiente (BXM) Mathematics Test Simulator
+# MEP-EA-01 — Costa Rican Educación Abierta Test Simulator & Practice Platform
 
-**MEP-EA-01** is a high-fidelity web-based mathematics test simulator designed for students preparing for the Costa Rican *Bachillerato por Madurez Suficiente* (BXM) exam (Convocatoria 02-2026).
+**MEP-EA-01** is a high-fidelity web-based test simulator and learning practice platform designed for students preparing for the Costa Rican *Bachillerato por Madurez Suficiente* (BXM) exam (Convocatoria 02-2026) and the broader *Educación Abierta* framework (CICO, III Ciclo, EDAD, BXM).
 
 ---
 
 ## 🚀 Key Features
 
-- **Full Exam Simulation**: 60-item timed simulation with realistic topic distributions (Geometry, Functions & Algebra, Statistics & Probability).
-- **Modular Practice Mode**: Filter practice sessions by specific Domain Area (Geometry, Functions, Statistics) or Topic, with configurable item counts and optional timers.
-- **Dynamic Math & Visual Rendering**:
-  - LaTeX mathematical equations rendered via **KaTeX**.
-  - Interactive and vector-based 2D/3D visualizations (Cartesian planes, circles, transformations, function graphs, box plots, frequency tables, Venn diagrams) powered by custom SVG components.
-- **Answer Capture & Instant Scoring**: Single-choice selection, automatic scoring upon test submission, and persistent attempt history.
-- **Detailed Step-by-Step Solutions**: Explanations and solucionario review for every question.
-- **Performance Analytics**: Longitudinal performance tracking with visual indicator trends (green-to-red performance score).
+- **Full Exam Simulation**: 60-item timed simulation following official MEP specifications and distributions across Geometry, Functions & Algebra, and Statistics & Probability.
+- **Modular Practice Engine**: Filter practice sessions by specific Domain Area (Geometry, Functions, Statistics) or Topic across **170 high-quality question items** distributed in 4 specialized sets (`set_1` through `set_4`), with configurable item counts and optional timers.
+- **Multi-Program Content Architecture**:
+  - Centralized content manifest registry (`content/manifest.json`) supporting the four MEP Educación Abierta programs: **I&II CICO**, **III Ciclo**, **EDAD**, and **BXM**.
+  - Subject-modular question bank management with set-specific metadata, dedicated group files (`groups.json`), and schema validation (`schema.json`).
+  - Dynamic asynchronous loading via Vite `import.meta.glob` combined with instant synchronous preloading for seamless user navigation.
+- **Dynamic Math & Visual Rendering Engine**:
+  - LaTeX mathematical equations rendered via **KaTeX** with inline (`$...$`) and block (`$$...$$`) support.
+  - Interactive and vector-based 2D/3D visualizations (Cartesian planes, circles, transformations, function graphs, box plots, frequency/contingency tables, Venn diagrams) powered by custom SVG composite components.
+- **Resource & Knowledge Library**:
+  - Official Table of Specifications (Affirmations, Evidences, Points per block).
+  - Searchable Terms Dictionary and Formula Sheets with KaTeX LaTeX rendering and collapsible accordion sections.
+- **Answer Capture, Instant Scoring & Analytics**: Single-choice selection, question flag/review grid, automatic scoring upon submission, step-by-step solutions, and longitudinal attempt history with green-to-red performance indicator trends.
 
 ---
 
@@ -94,25 +99,31 @@ npm run lint
 ## 📂 Project Structure
 
 ```
-├── content/              # Question bank and group data (JSON schema)
-│   ├── questions.json
-│   ├── groups.json
-│   └── schema.json
-├── project_docs/         # Requirements, SRS, architecture specs
+├── content/                     # Question bank and manifest registry
+│   ├── manifest.json            # Central registry mapping programs, subjects, sets, schemas
+│   └── bxm/
+│       └── matematicas/         # BXM Mathematics subject content
+│           ├── set_1.json       # Official Simulation Set (60 items)
+│           ├── set_2.json       # Additional Practice Expansion Set (70 items)
+│           ├── set_3.json       # Intensive Practice Refinement Set (20 items)
+│           ├── set_4.json       # Advanced Mastery & Real-world Contexts Set (20 items)
+│           ├── groups.json      # Shared context stimulus items
+│           └── schema.json      # Subject JSON schema validator
+├── project_docs/                # Requirements, SRS, architecture specs
 │   ├── SRS.md
 │   └── ...
 ├── src/
-│   ├── components/       # UI components (common, layout, pages, practice, results, test, visuals)
-│   ├── services/         # Data services (questions loader, localStorage persistence)
-│   ├── types/            # TypeScript interfaces and domain types
-│   ├── utils/            # Math and coordinate transformation helpers
+│   ├── components/              # UI components (common, knowledge, layout, pages, practice, test, visuals)
+│   ├── services/                # Services (dataService, storageService, knowledgeService)
+│   ├── types/                   # TypeScript interfaces and domain types
+│   ├── utils/                   # Math, coordinate transform, and tick helpers
 │   ├── App.tsx
 │   └── main.tsx
-└── vitest.config.ts      # Vitest configuration
+└── vitest.config.ts             # Vitest configuration
 ```
 
 ---
 
 ## 📄 License
 
-This project is developed for educational purposes supporting student preparation for MEP BXM Mathematics exams.
+This project is developed for educational purposes supporting student preparation for MEP Educación Abierta exams.
