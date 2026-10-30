@@ -3025,12 +3025,12 @@
         "evidence": "A1.4",
         "evidence_desc": "Determina las condiciones necesarias y suficientes para que se defina la composición de dos funciones en diversos contextos."
       },
-      "stem": "Considere las siguientes funciones f, g y p con sus respectivos dominios y ámbitos:\n• f: [0, 4] → [1, 5]\n• g: [2, 6] → [1, 4]\n• p: [2, 6] → [0, 4]\n¿Cuál de las siguientes composiciones de funciones está bien definida?",
+      "stem": "Considere las siguientes funciones $f$, $g$ y $p$ con sus respectivos dominios y ámbitos:\n• $f: [0, 4] \\to [1, 5]$\n• $g: [2, 6] \\to [1, 4]$\n• $p: [2, 6] \\to [0, 4]$\n\n¿Cuál de las siguientes composiciones de funciones está bien definida?",
       "options": {
-        "A": "(g ° f)(x)",
-        "B": "(p ° f)(x)",
-        "C": "(f ° p)(x)",
-        "D": "(g ° p)(x)"
+        "A": "$(g \\circ f)(x)$",
+        "B": "$(p \\circ f)(x)$",
+        "C": "$(f \\circ p)(x)$",
+        "D": "$(g \\circ p)(x)"
       },
       "correct_answer": "C",
       "solution_steps": [
@@ -3785,7 +3785,7 @@
         "evidence": "A2.4",
         "evidence_desc": "Determina la ecuación de una recta utilizando datos relacionados con ella en diversos contextos."
       },
-      "stem": "Sea la función g cuyo criterio está definido por g(x) = mx + 4. Si el punto (3, 19) pertenece a la gráfica de g, entonces, ¿cuál es la pendiente de g?",
+      "stem": "Sea la función $g$ cuyo criterio está definido por $g(x) = mx + 4$. Si el punto $(3, 19)$ pertenece a la gráfica de $g$, entonces, ¿cuál es la pendiente de $g$?",
       "options": {
         "A": "3",
         "B": "5",
@@ -3818,7 +3818,7 @@
         "evidence": "A2.5",
         "evidence_desc": "Determina elementos o propiedades de la función cuadrática con criterio dado por f(x) = ax² + bx + c, a ≠ 0, en su representación gráfica o algebraica, en diversos contextos."
       },
-      "stem": "Considere la siguiente representación gráfica de la función g, definida por g(x) = ax² + bx + c, con a < 0:\n[gráfica de parábola que abre hacia abajo, con vértice en (−1, 5) y raíces en −4 y 2]\n¿En cuál valor de “x” alcanza “g” su valor máximo?",
+      "stem": "Considere la siguiente representación gráfica de la función $g$, definida por $g(x) = ax^2 + bx + c$, con $a < 0$:\n\n[gráfica de parábola que abre hacia abajo, con vértice en (−1, 5) y raíces en −4 y 2]\n\n¿En cuál valor de “x” alcanza “g” su valor máximo?",
       "options": {
         "A": "2",
         "B": "5",
@@ -3955,12 +3955,12 @@
         "evidence": "A2.3",
         "evidence_desc": "Determina la pendiente, la intersección con el eje de las ordenadas o de las abscisas de una recta dada en forma gráfica o algebraica en diversos contextos."
       },
-      "stem": "Dada la ecuación de la recta y = 2x + b, y sabiendo que el punto (−2, 1) pertenece a ella, ¿cuáles son las coordenadas del punto de intersección con el eje y?",
+      "stem": "Dada la ecuación de la recta $y = 2x + b$, y sabiendo que el punto (−2, 1) pertenece a ella, ¿cuáles son las coordenadas del punto de intersección con el eje $y$?",
       "options": {
-        "A": "(0, −3)",
-        "B": "(−3, 0)",
-        "C": "(5, 0)",
-        "D": "(0, 5)"
+        "A": "$(0, -3)$",
+        "B": "$(-3, 0)$",
+        "C": "$(5, 0)$",
+        "D": "$(0, 5)$"
       },
       "correct_answer": "D",
       "solution_steps": [
@@ -4018,7 +4018,7 @@
         "evidence": "A3.1",
         "evidence_desc": "Resuelve problemas en contextos reales utilizando las funciones lineales y cuadráticas."
       },
-      "stem": "Luis llama por teléfono a Ana y le comenta que la temperatura en su ciudad es de 41 °F. Si se sabe que la relación entre la temperatura en grados Fahrenheit (°F) y en grados Celsius (°C) está asociada mediante la función F(C) = (9/5)C + 32, entonces, ¿a cuántos grados Celsius equivale la temperatura comentada?",
+      "stem": "Luis llama por teléfono a Ana y le comenta que la temperatura en su ciudad es de 41 °F. Si se sabe que la relación entre la temperatura en grados Fahrenheit (°F) y en grados Celsius (°C) está asociada mediante la función $F(C) = \\frac{9}{5}C + 32$, entonces, ¿a cuántos grados Celsius equivale la temperatura comentada?",
       "options": {
         "A": "5",
         "B": "9",
@@ -4150,12 +4150,12 @@
         "evidence": "A4.3",
         "evidence_desc": "Determina intervalos en los cuales una función representada gráficamente tiene inversa en diversos contextos."
       },
-      "stem": "Una posible gráfica de la función h(x) = x² − 4; x ∈ ℝ es la siguiente:\n[gráfica de parábola que abre hacia arriba, vértice en (0, −4), raíces en −2 y 2]\nSi se desea que h tenga inversa, entonces, un posible dominio para h corresponde a",
+      "stem": "Una posible gráfica de la función $h(x) = x^2 - 4$; $x \\in \\mathbb{R}$ es la siguiente:\n\n[gráfica de parábola que abre hacia arriba, vértice en (0, −4), raíces en −2 y 2]\n\nSi se desea que $h$ tenga inversa, entonces, un posible dominio para $h$ corresponde a",
       "options": {
-        "A": "[−2, 2]",
-        "B": "] −∞, 2]",
-        "C": "[0, +∞[",
-        "D": "[−2, +∞["
+        "A": "$[-2, 2]$",
+        "B": "$]-\\infty, 2]$",
+        "C": "$[0, +\\infty[$",
+        "D": "$[-2, +\\infty[$"
       },
       "correct_answer": "C",
       "solution_steps": [
@@ -4262,12 +4262,12 @@
         "evidence": "A4.4",
         "evidence_desc": "Determina la función inversa de f(x) = mx + b, m ≠ 0, en diversos contextos."
       },
-      "stem": "Si la inversa de la función r dada por r(x) = (6 − 2x)/8 es de la forma r⁻¹(x) = ax + b, entonces, se cumple que",
+      "stem": "Si la inversa de la función $r$ dada por $r(x) = \\frac{6 - 2x}{8}$ es de la forma $r^{-1}(x) = ax + b$, entonces, se cumple que",
       "options": {
-        "A": "a = −4 y b = −3",
-        "B": "a = −4 y b = 3",
-        "C": "a = −8 y b = 6",
-        "D": "a = 4 y b = 3"
+        "A": "$a = -4$ y $b = -3$",
+        "B": "$a = -4$ y $b = 3$",
+        "C": "$a = -8$ y $b = 6$",
+        "D": "$a = 4$ y $b = 3$"
       },
       "correct_answer": "B",
       "solution_steps": [
@@ -4295,12 +4295,12 @@
         "evidence": "A4.5",
         "evidence_desc": "Determina la transformación de la gráfica de la función dada por f(x) = a√x + b + c, en diversos contextos."
       },
-      "stem": "Sea la función f definida por f(x) = √x. Si su gráfica original se traslada verticalmente tres unidades hacia abajo para obtener la función h, entonces, ¿cuál es el criterio de h(x)?",
+      "stem": "Sea la función $f$ definida por $f(x) = \\sqrt{x}$. Si su gráfica original se traslada verticalmente tres unidades hacia abajo para obtener la función $h$, entonces, ¿cuál es el criterio de $h(x)$?",
       "options": {
-        "A": "√(x − 3)",
-        "B": "√x + 3",
-        "C": "√(x + 3)",
-        "D": "√x − 3"
+        "A": "$\\sqrt{x - 3}$",
+        "B": "$\\sqrt{x} + 3$",
+        "C": "$\\sqrt{x + 3}$",
+        "D": "$\\sqrt{x} - 3$"
       },
       "correct_answer": "D",
       "solution_steps": [
@@ -4419,7 +4419,7 @@
         "evidence": "A5.4",
         "evidence_desc": "Resuelve problemas en contextos reales utilizando ecuaciones exponenciales."
       },
-      "stem": "Si la población “p(x)” de una comunidad se estima mediante p(x) = 2000 • 2^(x/5), donde “x” representa los años transcurridos a partir de 2025, entonces, ¿cuántos años deben transcurrir para que la población sea de 16 000 individuos?",
+      "stem": "Si la población “p(x)” de una comunidad se estima mediante $p(x) = 2000 \\cdot 2^{x/5}$, donde “x” representa los años transcurridos a partir de 2025, entonces, ¿cuántos años deben transcurrir para que la población sea de 16 000 individuos?",
       "options": {
         "A": "10",
         "B": "15",
@@ -4453,7 +4453,7 @@
         "evidence": "A4.6",
         "evidence_desc": "Resuelve problemas de diversos contextos (reales), relacionados con las funciones de la forma f(x) = a√x + b + c."
       },
-      "stem": "El tiempo T(v), en minutos, que tarda un video corto en volverse viral se modela mediante la función T(v) = 5 • √v, donde “v” representa la cantidad de veces que se ha compartido (en miles). Si el video se tardó 20 minutos en viralizarse, entonces, ¿cuántas miles de veces se compartió?",
+      "stem": "El tiempo $T(v)$, en minutos, que tarda un video corto en volverse viral se modela mediante la función $T(v) = 5\\sqrt{v}$, donde “v” representa la cantidad de veces que se ha compartido (en miles). Si el video se tardó 20 minutos en viralizarse, entonces, ¿cuántas miles de veces se compartió?",
       "options": {
         "A": "4",
         "B": "16",
@@ -4485,7 +4485,7 @@
         "evidence": "A5.7",
         "evidence_desc": "Resuelve problemas en contextos reales utilizando ecuaciones logarítmicas."
       },
-      "stem": "La escala de pH de una solución química especial está dada por la función p(x) = 2log₃(x), donde “x” representa la concentración de ciertos iones en la mezcla con 3 ≤ x ≤ 81. Si la concentración detectada es de 27 unidades, entonces, ¿cuál es el valor del pH obtenido?",
+      "stem": "La escala de pH de una solución química especial está dada por la función $p(x) = 2\\log_3(x)$, donde “x” representa la concentración de ciertos iones en la mezcla con $3 \\le x \\le 81$. Si la concentración detectada es de 27 unidades, entonces, ¿cuál es el valor del pH obtenido?",
       "options": {
         "A": "6",
         "B": "9",
@@ -4517,12 +4517,12 @@
         "evidence": "A5.1",
         "evidence_desc": "Identifica la función logarítmica como la inversa de la función exponencial en diversos contextos."
       },
-      "stem": "¿Cuál de las siguientes funciones es inversa con la función f(x) = 2^x?",
+      "stem": "¿Cuál de las siguientes funciones es inversa con la función $f(x) = 2^x$?",
       "options": {
-        "A": "g(x) = (1/2)^x",
-        "B": "t(x) = log₂(x)",
-        "C": "h(x) = log₁(x)",
-        "D": "r(x) = 2log(x)"
+        "A": "$g(x) = (1/2)^x$",
+        "B": "$t(x) = \\log_2(x)$",
+        "C": "$h(x) = \\log_1(x)$",
+        "D": "$r(x) = 2\\log(x)$"
       },
       "correct_answer": "B",
       "solution_steps": [
@@ -4547,7 +4547,7 @@
         "evidence": "A5.8",
         "evidence_desc": "Resuelve ecuaciones exponenciales de la forma a^(f(x)) = b^(g(x)), (a, b números reales positivos y distintos de 1, f, g polinomios de grado menor que 3) mediante la utilización de logaritmos, en diversos contextos."
       },
-      "stem": "En un centro de investigación, dos bacterias clónicas se reproducen en laboratorios con ambientes distintos. La cantidad de bacterias del primer tipo se comporta según la expresión 3^(x+8), mientras que la del segundo tipo sigue la expresión 9^(x+1), donde “x” representa el tiempo transcurrido en horas. ¿Qué valor debe tomar la variable x para que ambos laboratorios tengan exactamente la misma cantidad de bacterias?",
+      "stem": "En un centro de investigación, dos bacterias clónicas se reproducen en laboratorios con ambientes distintos. La cantidad de bacterias del primer tipo se comporta según la expresión $3^{x+8}$, mientras que la del segundo tipo sigue la expresión $9^{x+1}$, donde “x” representa el tiempo transcurrido en horas. ¿Qué valor debe tomar la variable x para que ambos laboratorios tengan exactamente la misma cantidad de bacterias?",
       "options": {
         "A": "6",
         "B": "7",
@@ -4581,12 +4581,12 @@
         "evidence": "A6.1",
         "evidence_desc": "Identifica modelos matemáticos que involucran las funciones exponenciales en diversos contextos."
       },
-      "stem": "Una persona abre una cuenta de ahorros especial que duplica el dinero depositado cada año que pasa. Si la cantidad inicial depositada fue de $250, entonces, ¿cuál es el criterio del modelo matemático D(t) que explica la cantidad de dinero acumulado en función de los años t?",
+      "stem": "Una persona abre una cuenta de ahorros especial que duplica el dinero depositado cada año que pasa. Si la cantidad inicial depositada fue de $250, entonces, ¿cuál es el criterio del modelo matemático $D(t)$ que explica la cantidad de dinero acumulado en función de los años t?",
       "options": {
-        "A": "250 + 2t",
-        "B": "250 • 2t",
-        "C": "250 + 2^t",
-        "D": "250 • 2^t"
+        "A": "$250 + 2t$",
+        "B": "$250 \\cdot 2t$",
+        "C": "$250 + 2^t$",
+        "D": "$250 \\cdot 2^t$"
       },
       "correct_answer": "D",
       "solution_steps": [
