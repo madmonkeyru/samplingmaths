@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "default_program": "bxm",
+  "default_subject": "matematicas",
+  "programs": [
+    {
+      "id": "cico",
+      "name": "I y II Ciclo CICO",
+      "description": "Educación General Básica I y II Ciclo",
+      "subjects": []
+    },
+    {
+      "id": "iii_ciclo",
+      "name": "III Ciclo",
+      "description": "Educación General Básica III Ciclo (7°, 8°, 9°)",
+      "subprograms": [
+        "III_CICLO_7",
+        "III_CICLO_8",
+        "III_CICLO_9"
+      ],
+      "subjects": []
+    },
+    {
+      "id": "edad",
+      "name": "EDAD",
+      "description": "Educación Diversificada a Distancia",
+      "subprograms": [
+        "EDAD_1",
+        "EDAD_2"
+      ],
+      "subjects": []
+    },
+    {
+      "id": "bxm",
+      "name": "Bachillerato por Madurez Suficiente (BXM)",
+      "description": "Programa de Bachillerato por Madurez Suficiente MEP",
+      "subjects": [
+        {
+          "id": "matematicas",
+          "name": "Matemáticas",
+          "description": "Prácticas y simulaciones de Matemáticas BXM",
+          "schema": "bxm/matematicas/schema.json",
+          "groups": "bxm/matematicas/groups.json",
+          "sets": [
+            {
+              "id": "set_1",
+              "name": "Prueba Oficial Convocatoria 02-2026 (Simulación)",
+              "description": "Examen oficial de simulación completa con 60 ítems (23 Geometría, 25 Relaciones y Álgebra, 12 Estadística).",
+              "file": "bxm/matematicas/set_1.json",
+              "total_items": 60
+            },
+            {
+              "id": "set_2",
+              "name": "Banco de Práctica Adicional (Set de Expansión)",
+              "description": "Banco ampliado con 70 preguntas adicionales ricas en componentes visuales interactivos para refuerzo.",
+              "file": "bxm/matematicas/set_2.json",
+              "total_items": 70
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
