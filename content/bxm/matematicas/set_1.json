@@ -5075,9 +5075,9 @@
       },
       "correct_answer": "B",
       "solution_steps": [
-        "A) Falso: el valor máximo de ambas empresas es 52, por lo que el empleado de mayor edad podría pertenecer a cualquiera de las dos.",
-        "B) Verdadero: la mediana de la empresa A es 38 (≥ 33) y la mediana de la empresa B es 33 (≥ 33); por lo tanto, al menos el 50 % de los empleados de cada empresa tiene 33 años o más.",
-        "C) Falso: en la empresa B, Q1 = 25, por lo que solo el 75 % tiene 25 años o más, no 38.",
+        "A) Falso: el valor máximo de ambas empresas es 45, por lo que el empleado de mayor edad podría pertenecer a cualquiera de las dos.",
+        "B) Verdadero: la mediana de la empresa A es 33 (≥ 33) y la mediana de la empresa B es 33 (≥ 33); por lo tanto, al menos el 50 % de los empleados de cada empresa tiene 33 años o más.",
+        "C) Falso: en la empresa B, Q3 = 38, lo que indica que a lo sumo el 25 % tiene 38 años o más.",
         "D) Falso: no se puede garantizar que exista un empleado con exactamente 33 años en ambas empresas."
       ],
       "group_id": "g_emp_ages",

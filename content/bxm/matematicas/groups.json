@@ -743,25 +743,25 @@
           "groups": [
             {
               "name": "Empresa A",
-              "min": 19,
-              "q1": 23,
-              "median": 33,
-              "q3": 38,
-              "max": 45
-            },
-            {
-              "name": "Empresa B",
               "min": 23,
               "q1": 29,
               "median": 33,
               "q3": 40,
+              "max": 45
+            },
+            {
+              "name": "Empresa B",
+              "min": 19,
+              "q1": 23,
+              "median": 33,
+              "q3": 38,
               "max": 45
             }
           ]
         }
       },
       "notes": [
-        "Valores inferidos a partir del solucionario; la figura original del PDF (páginas 7–8) tenía extracción corrupta y debe re-verificarse."
+        "Valores verificados a partir de la figura original del examen (ítems 57 y 58 de la prueba física MEP)."
       ]
     },
     {

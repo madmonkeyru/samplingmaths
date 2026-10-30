@@ -76,6 +76,13 @@ describe('Content visual spec integration', () => {
     expect(groupPolys[1].vertices).toEqual([[2, 1], [3, 1], [3, 4], [1, 4]]);
     expect(groupPolys[2].vertices).toEqual([[4, -1], [5, -1], [5, -4], [3, -4]]);
     expect(groupPolys[3].vertices).toEqual([[-3, -1], [-2, -1], [-1, -4], [-3, -4]]);
+
+    // g_emp_ages: verified 5-number summaries for Empresa A and Empresa B
+    const gEmpAges = groups.find((g: any) => g.group_id === 'g_emp_ages');
+    expect(gEmpAges.visual_spec.visual.groups).toEqual([
+      { name: 'Empresa A', min: 23, q1: 29, median: 33, q3: 40, max: 45 },
+      { name: 'Empresa B', min: 19, q1: 23, median: 33, q3: 38, max: 45 },
+    ]);
   });
 
   it('renders every group visual_spec without falling back', () => {
