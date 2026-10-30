@@ -3102,11 +3102,11 @@
                 ],
                 [
                   4,
-                  500
+                  600
                 ],
                 [
                   8,
-                  600
+                  750
                 ],
                 [
                   12,
@@ -3118,11 +3118,11 @@
                 ],
                 [
                   20,
-                  750
+                  600
                 ],
                 [
                   24,
-                  600
+                  500
                 ]
               ],
               "color": "indigo-600",
@@ -3135,7 +3135,7 @@
                 500
               ],
               "p2": [
-                4,
+                24,
                 500
               ],
               "dashed": true,
@@ -3148,7 +3148,7 @@
                 600
               ],
               "p2": [
-                8,
+                20,
                 600
               ],
               "dashed": true,
@@ -3188,7 +3188,7 @@
               ],
               "p2": [
                 4,
-                500
+                600
               ],
               "dashed": true,
               "color": "#64748b"
@@ -3201,7 +3201,7 @@
               ],
               "p2": [
                 8,
-                600
+                750
               ],
               "dashed": true,
               "color": "#64748b"
@@ -3240,7 +3240,7 @@
               ],
               "p2": [
                 20,
-                750
+                600
               ],
               "dashed": true,
               "color": "#64748b"
@@ -3253,7 +3253,7 @@
               ],
               "p2": [
                 24,
-                600
+                500
               ],
               "dashed": true,
               "color": "#64748b"
@@ -3264,8 +3264,64 @@
                 0,
                 500
               ],
+              "radius": 4,
+              "color": "stone-900",
               "label": "500",
               "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                4,
+                600
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                8,
+                750
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                12,
+                750
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                16,
+                900
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                20,
+                600
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                24,
+                500
+              ],
+              "radius": 4,
+              "color": "stone-900"
             },
             {
               "type": "point",
@@ -3410,11 +3466,11 @@
                 ],
                 [
                   4,
-                  500
+                  600
                 ],
                 [
                   8,
-                  600
+                  750
                 ],
                 [
                   12,
@@ -3426,11 +3482,11 @@
                 ],
                 [
                   20,
-                  750
+                  600
                 ],
                 [
                   24,
-                  600
+                  500
                 ]
               ],
               "color": "indigo-600",
@@ -3443,7 +3499,7 @@
                 500
               ],
               "p2": [
-                4,
+                24,
                 500
               ],
               "dashed": true,
@@ -3456,7 +3512,7 @@
                 600
               ],
               "p2": [
-                8,
+                20,
                 600
               ],
               "dashed": true,
@@ -3496,7 +3552,7 @@
               ],
               "p2": [
                 4,
-                500
+                600
               ],
               "dashed": true,
               "color": "#64748b"
@@ -3509,7 +3565,7 @@
               ],
               "p2": [
                 8,
-                600
+                750
               ],
               "dashed": true,
               "color": "#64748b"
@@ -3548,7 +3604,7 @@
               ],
               "p2": [
                 20,
-                750
+                600
               ],
               "dashed": true,
               "color": "#64748b"
@@ -3561,7 +3617,7 @@
               ],
               "p2": [
                 24,
-                600
+                500
               ],
               "dashed": true,
               "color": "#64748b"
@@ -3572,8 +3628,64 @@
                 0,
                 500
               ],
+              "radius": 4,
+              "color": "stone-900",
               "label": "500",
               "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                4,
+                600
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                8,
+                750
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                12,
+                750
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                16,
+                900
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                20,
+                600
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                24,
+                500
+              ],
+              "radius": 4,
+              "color": "stone-900"
             },
             {
               "type": "point",

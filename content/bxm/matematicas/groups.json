@@ -39,11 +39,11 @@
                 ],
                 [
                   4,
-                  500
+                  600
                 ],
                 [
                   8,
-                  600
+                  750
                 ],
                 [
                   12,
@@ -55,11 +55,11 @@
                 ],
                 [
                   20,
-                  750
+                  600
                 ],
                 [
                   24,
-                  600
+                  500
                 ]
               ],
               "color": "indigo-600",
@@ -72,7 +72,7 @@
                 500
               ],
               "p2": [
-                4,
+                24,
                 500
               ],
               "dashed": true,
@@ -85,7 +85,7 @@
                 600
               ],
               "p2": [
-                8,
+                20,
                 600
               ],
               "dashed": true,
@@ -125,7 +125,7 @@
               ],
               "p2": [
                 4,
-                500
+                600
               ],
               "dashed": true,
               "color": "#64748b"
@@ -138,7 +138,7 @@
               ],
               "p2": [
                 8,
-                600
+                750
               ],
               "dashed": true,
               "color": "#64748b"
@@ -177,7 +177,7 @@
               ],
               "p2": [
                 20,
-                750
+                600
               ],
               "dashed": true,
               "color": "#64748b"
@@ -190,7 +190,7 @@
               ],
               "p2": [
                 24,
-                600
+                500
               ],
               "dashed": true,
               "color": "#64748b"
@@ -201,7 +201,64 @@
                 0,
                 500
               ],
-              "label": "500"
+              "radius": 4,
+              "color": "stone-900",
+              "label": "500",
+              "label_position": "left"
+            },
+            {
+              "type": "point",
+              "coords": [
+                4,
+                600
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                8,
+                750
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                12,
+                750
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                16,
+                900
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                20,
+                600
+              ],
+              "radius": 4,
+              "color": "stone-900"
+            },
+            {
+              "type": "point",
+              "coords": [
+                24,
+                500
+              ],
+              "radius": 4,
+              "color": "stone-900"
             },
             {
               "type": "point",
@@ -209,7 +266,8 @@
                 0,
                 600
               ],
-              "label": "600"
+              "label": "600",
+              "label_position": "left"
             },
             {
               "type": "point",
@@ -217,7 +275,8 @@
                 0,
                 750
               ],
-              "label": "750"
+              "label": "750",
+              "label_position": "left"
             },
             {
               "type": "point",
@@ -225,7 +284,8 @@
                 0,
                 900
               ],
-              "label": "900"
+              "label": "900",
+              "label_position": "left"
             },
             {
               "type": "point",
@@ -233,7 +293,8 @@
                 4,
                 0
               ],
-              "label": "4"
+              "label": "4",
+              "label_position": "bottom"
             },
             {
               "type": "point",
@@ -241,7 +302,8 @@
                 8,
                 0
               ],
-              "label": "8"
+              "label": "8",
+              "label_position": "bottom"
             },
             {
               "type": "point",
@@ -249,7 +311,8 @@
                 12,
                 0
               ],
-              "label": "12"
+              "label": "12",
+              "label_position": "bottom"
             },
             {
               "type": "point",
@@ -257,7 +320,8 @@
                 16,
                 0
               ],
-              "label": "16"
+              "label": "16",
+              "label_position": "bottom"
             },
             {
               "type": "point",
@@ -265,7 +329,8 @@
                 20,
                 0
               ],
-              "label": "20"
+              "label": "20",
+              "label_position": "bottom"
             },
             {
               "type": "point",
@@ -273,7 +338,8 @@
                 24,
                 0
               ],
-              "label": "24"
+              "label": "24",
+              "label_position": "bottom"
             }
           ]
         }
