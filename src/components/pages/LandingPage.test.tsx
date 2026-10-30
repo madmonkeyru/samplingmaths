@@ -16,7 +16,7 @@ describe('LandingPage', () => {
     );
 
     // Header title
-    expect(screen.getByText('Preparación Oficial de Matemáticas MEP')).toBeInTheDocument();
+    expect(screen.getByText('Practicas y Simulaciones de Matemáticas BXM 2026 Convocatoria #2')).toBeInTheDocument();
 
     // Segmented tab buttons
     expect(screen.getByRole('button', { name: /^Simulación$/i })).toBeInTheDocument();
@@ -24,7 +24,7 @@ describe('LandingPage', () => {
     expect(screen.getByRole('button', { name: /^Por Tema$/i })).toBeInTheDocument();
 
     // Stacked Widget elements
-    expect(screen.getByText('Indicador de Rendimiento')).toBeInTheDocument();
+    expect(screen.getByText('Rendimiento')).toBeInTheDocument();
     expect(screen.getByText('Historial Reciente')).toBeInTheDocument();
 
     // Default active tab is simulation

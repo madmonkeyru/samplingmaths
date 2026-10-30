@@ -49,6 +49,31 @@ export interface SetInfo {
   name: string;
   description: string;
   total_items: number;
+  file?: string;
+}
+
+export interface SubjectInfo {
+  id: string;
+  name: string;
+  description: string;
+  schema?: string;
+  groups?: string;
+  sets: SetInfo[];
+}
+
+export interface ProgramInfo {
+  id: string;
+  name: string;
+  description: string;
+  subprograms?: string[];
+  subjects: SubjectInfo[];
+}
+
+export interface ContentManifest {
+  schema_version: string;
+  default_program: string;
+  default_subject: string;
+  programs: ProgramInfo[];
 }
 
 export interface Item {
@@ -81,6 +106,26 @@ export interface Group {
   title?: string;
   context_text?: string;
   visual_spec?: VisualSpec;
+}
+
+export interface QuestionSetData {
+  schema_version: string;
+  exam: string;
+  convocatoria: string;
+  language?: string;
+  source?: string;
+  specification?: string;
+  solucionario_verified?: boolean;
+  set_info?: SetInfo;
+  total_items: number;
+  sections?: Array<{
+    id: string;
+    name: string;
+    item_range: [number, number];
+    total_items: number;
+  }>;
+  notes?: string[];
+  items: Item[];
 }
 
 export interface QuestionBankData {

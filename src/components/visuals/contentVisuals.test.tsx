@@ -2,13 +2,14 @@ import { render } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { VisualRenderer } from './VisualRenderer';
 import { GroupVisual } from './GroupVisual';
-import questionsJson from '../../../content/questions.json';
-import groupsJson from '../../../content/groups.json';
+import set1Json from '../../../content/bxm/matematicas/set_1.json';
+import set2Json from '../../../content/bxm/matematicas/set_2.json';
+import groupsJson from '../../../content/bxm/matematicas/groups.json';
 import type { Group } from '../../types';
 
 describe('Content visual spec integration', () => {
   it('renders every per-item visual_spec without falling back', () => {
-    const items = (questionsJson as any).items || [];
+    const items = [...((set1Json as any).items || []), ...((set2Json as any).items || [])];
     const withVisuals = items.filter((item: any) => item.visual_spec);
 
     expect(withVisuals.length).toBeGreaterThan(0);
