@@ -40,11 +40,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             Bachillerato por Madurez Suficiente — Convocatoria 02-2026
           </span>
           <h2 className="text-xl sm:text-3xl font-black tracking-tight uppercase leading-tight text-stone-100">
-            Preparación Oficial de Matemáticas MEP
+            Practicas y Simulaciones de Matemáticas BXM 2026 Convocatoria #2
           </h2>
-          <p className="text-xs sm:text-sm text-stone-300 font-medium mt-2">
-            Simulador interactivo con ítems oficiales de evaluación, hoja de fórmulas y análisis de desempeño.
-          </p>
         </div>
       </div>
 
@@ -111,7 +108,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                       Prueba de Simulación Oficial
                     </h3>
                     <p className="text-xs text-stone-600 dark:text-slate-400 leading-relaxed font-medium mt-1">
-                      Examen completo de 60 ítems cronometrado a 150 minutos. Diseñado con las proporciones oficiales exactas del MEP para simular la prueba real BXM.
+                      Examen completo de 60 ítems (preguntas) cronometrado a 150 minutos (2 horas y media).
                     </p>
                   </div>
                 </div>
@@ -210,7 +207,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             <div className="flex items-center justify-between gap-2 pb-3 border-b-2 border-stone-200 dark:border-slate-800 mb-3.5">
               <span className="text-xs font-black uppercase tracking-wider text-stone-700 dark:text-slate-300 flex items-center gap-2">
                 <Award className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
-                Indicador de Rendimiento
+                Rendimiento
               </span>
 
               {attempts.length > 0 && (
