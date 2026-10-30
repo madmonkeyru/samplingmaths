@@ -4842,14 +4842,24 @@
       ],
       "group_id": null,
       "visual_spec": {
-        "alt": "Curva de distribución con asimetría que muestra valores 80 y 85.",
+        "alt": "Curva de distribución asimétrica con valores 80 y 85.",
         "visual": {
           "type": "distribution_curve",
-          "skew": "left",
-          "mean": 75,
+          "skew": "negative",
           "median": 80,
           "mode": 85,
-          "show_stats": true
+          "markers": [
+            {
+              "label": "80",
+              "value": 80,
+              "dashed": true
+            },
+            {
+              "label": "85",
+              "value": 85,
+              "dashed": true
+            }
+          ]
         }
       },
       "set_id": "set_1"

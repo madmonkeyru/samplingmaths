@@ -225,30 +225,57 @@ export const BoxPlotComponent: React.FC<BoxPlotProps> = ({
 };
 
 export interface DistributionCurveProps {
-  skew?: 'negative' | 'positive' | 'symmetric';
-  markers?: Array<{ label: string; value: number; dashed?: boolean; dashed_to_axis?: string }>;
-  x_axis?: { label?: string; ticks?: number[] };
+  skew?: 'negative' | 'positive' | 'symmetric' | 'left' | 'right';
+  mean?: number;
+  median?: number;
+  mode?: number;
+  markers?: Array<{ label: string; value: number; dashed?: boolean; dashed_to_axis?: string; color?: string }>;
+  x_axis?: { label?: string; ticks?: number[]; arrows?: boolean };
   width?: number;
   height?: number;
 }
 
 export const DistributionCurveComponent: React.FC<DistributionCurveProps> = ({
   skew = 'negative',
-  markers = [
-    { label: 'Mediana (80)', value: 80 },
-    { label: 'Moda (85)', value: 85 },
-  ],
+  mean,
+  median,
+  mode,
+  markers: inputMarkers,
   x_axis,
   width = 400,
   height = 190,
 }) => {
-  const markerValues = markers.map((m) => m.value);
+  const normSkew: 'negative' | 'positive' | 'symmetric' =
+    skew === 'left' || skew === 'negative'
+      ? 'negative'
+      : skew === 'right' || skew === 'positive'
+      ? 'positive'
+      : 'symmetric';
+
+  const defaultMarkers = [
+    { label: '80', value: 80, dashed: true },
+    { label: '85', value: 85, dashed: true },
+  ];
+
+  let resolvedMarkers = inputMarkers;
+  if (!resolvedMarkers || resolvedMarkers.length === 0) {
+    if (median !== undefined && mode !== undefined) {
+      resolvedMarkers = [
+        { label: String(median), value: median, dashed: true },
+        { label: String(mode), value: mode, dashed: true },
+      ];
+    } else {
+      resolvedMarkers = defaultMarkers;
+    }
+  }
+
+  const markerValues = resolvedMarkers.map((m) => m.value);
   const tickValues = x_axis?.ticks || [];
   const allKnown = [...markerValues, ...tickValues];
   const dataMin = allKnown.length ? Math.min(...allKnown) : 70;
   const dataMax = allKnown.length ? Math.max(...allKnown) : 95;
 
-  const pad = Math.max((dataMax - dataMin) * 0.3, 6);
+  const pad = Math.max((dataMax - dataMin) * 0.45, 8);
   const xMin = dataMin - pad;
   const xMax = dataMax + pad;
 
@@ -259,18 +286,31 @@ export const DistributionCurveComponent: React.FC<DistributionCurveProps> = ({
 
   const toPx = (v: number) => left + ((v - xMin) / (xMax - xMin)) * (right - left);
 
+  // Peak of distribution curve is at mode
   const peakValue =
-    skew === 'negative' ? dataMax : skew === 'positive' ? dataMin : (dataMin + dataMax) / 2;
-  const sigmaLeft = (xMax - xMin) * (skew === 'positive' ? 0.32 : 0.2);
-  const sigmaRight = (xMax - xMin) * (skew === 'negative' ? 0.32 : 0.2);
+    mode !== undefined
+      ? mode
+      : normSkew === 'negative'
+      ? dataMax
+      : normSkew === 'positive'
+      ? dataMin
+      : (dataMin + dataMax) / 2;
+
+  // In negative skew (skewed to left), left tail is longer/wider (larger sigmaLeft) and right is steeper (smaller sigmaRight)
+  const sigmaLeft = (xMax - xMin) * (normSkew === 'negative' ? 0.28 : normSkew === 'positive' ? 0.12 : 0.2);
+  const sigmaRight = (xMax - xMin) * (normSkew === 'negative' ? 0.12 : normSkew === 'positive' ? 0.28 : 0.2);
+
+  const getYAt = (val: number) => {
+    const sigma = val < peakValue ? sigmaLeft : sigmaRight;
+    const gauss = Math.exp(-0.5 * Math.pow((val - peakValue) / sigma, 2));
+    return baseline - amplitude * gauss;
+  };
 
   const points: [number, number][] = [];
   const steps = 80;
   for (let i = 0; i <= steps; i++) {
     const v = xMin + ((xMax - xMin) * i) / steps;
-    const sigma = v < peakValue ? sigmaLeft : sigmaRight;
-    const gauss = Math.exp(-0.5 * Math.pow((v - peakValue) / sigma, 2));
-    points.push([v, baseline - amplitude * gauss]);
+    points.push([v, getYAt(v)]);
   }
 
   const curveD = smoothPath(points, {
@@ -279,7 +319,7 @@ export const DistributionCurveComponent: React.FC<DistributionCurveProps> = ({
 
   const fillD = `${curveD} L ${toPx(xMax)} ${baseline} L ${toPx(xMin)} ${baseline} Z`;
 
-  const ticks = x_axis?.ticks || niceTicks(dataMin, dataMax, 5);
+  const ticks = x_axis?.ticks;
 
   return (
     <svg
@@ -294,8 +334,30 @@ export const DistributionCurveComponent: React.FC<DistributionCurveProps> = ({
       }}
       className="distribution-curve rounded-2xl border-2 border-zinc-900 dark:border-zinc-700 shadow-xs text-zinc-900 dark:text-zinc-100 transition-colors"
     >
+      <defs>
+        <marker
+          id="dist-arrow"
+          viewBox="0 0 10 10"
+          refX="6"
+          refY="5"
+          markerWidth="6"
+          markerHeight="6"
+          orient="auto-start-reverse"
+        >
+          <path d="M 0 1 L 8 5 L 0 9 z" fill="var(--visual-axis, currentColor)" />
+        </marker>
+      </defs>
+
       {/* Axis */}
-      <line x1={left} y1={baseline} x2={right} y2={baseline} stroke="var(--visual-axis, currentColor)" strokeWidth={1.5} />
+      <line
+        x1={left - 8}
+        y1={baseline}
+        x2={right + 8}
+        y2={baseline}
+        stroke="var(--visual-axis, currentColor)"
+        strokeWidth={1.5}
+        markerEnd="url(#dist-arrow)"
+      />
 
       {x_axis?.label && (
         <text
@@ -310,43 +372,47 @@ export const DistributionCurveComponent: React.FC<DistributionCurveProps> = ({
         </text>
       )}
 
-      {/* Ticks */}
-      {ticks.map((v, i) => {
-        const px = toPx(v);
-        return (
-          <g key={`tick-${i}`}>
-            <line x1={px} y1={baseline - 3} x2={px} y2={baseline + 3} stroke="var(--visual-tick, #64748b)" strokeWidth={1} />
-            <text x={px} y={baseline + 14} fontSize={10} fontWeight="600" fill="var(--visual-tick, #64748b)" textAnchor="middle">
-              {v}
-            </text>
-          </g>
-        );
-      })}
+      {/* Ticks if specified */}
+      {ticks &&
+        ticks.map((v, i) => {
+          const px = toPx(v);
+          return (
+            <g key={`tick-${i}`}>
+              <line x1={px} y1={baseline - 3} x2={px} y2={baseline + 3} stroke="var(--visual-tick, #64748b)" strokeWidth={1} />
+              <text x={px} y={baseline + 14} fontSize={10} fontWeight="600" fill="var(--visual-tick, #64748b)" textAnchor="middle">
+                {v}
+              </text>
+            </g>
+          );
+        })}
 
       {/* Curve */}
-      <path d={fillD} fill="rgba(37, 99, 235, 0.15)" stroke="none" />
-      <path d={curveD} fill="none" stroke="var(--visual-primary, #2563eb)" strokeWidth={2.5} strokeLinejoin="round" />
+      <path d={fillD} fill="rgba(37, 99, 235, 0.12)" stroke="none" />
+      <path d={curveD} fill="none" stroke="var(--visual-primary, #2563eb)" strokeWidth={2} strokeLinejoin="round" />
 
       {/* Markers */}
-      {markers.map((m, i) => {
+      {resolvedMarkers.map((m, i) => {
         const posX = toPx(m.value);
+        const curveY = getYAt(m.value);
         return (
           <g key={i}>
             <line
               x1={posX}
-              y1={baseline - amplitude * 0.6}
+              y1={curveY}
               x2={posX}
               y2={baseline}
-              stroke="var(--visual-annotation, #e11d48)"
-              strokeDasharray={m.dashed ? '4,4' : undefined}
+              stroke="var(--visual-annotation, #475569)"
+              strokeDasharray={m.dashed !== false ? '4,3' : undefined}
               strokeWidth={1.5}
             />
+            {/* Tick mark on baseline */}
+            <line x1={posX} y1={baseline - 3} x2={posX} y2={baseline + 3} stroke="var(--visual-axis, currentColor)" strokeWidth={1.5} />
             <text
               x={posX}
-              y={baseline - amplitude * 0.6 - 6}
-              fontSize={11}
+              y={baseline + 16}
+              fontSize={12}
               fontWeight="bold"
-              fill="var(--visual-annotation, #e11d48)"
+              fill="var(--visual-text, currentColor)"
               stroke="var(--visual-halo, rgba(255, 255, 255, 0.92))"
               strokeWidth="3px"
               paintOrder="stroke fill"
@@ -355,7 +421,6 @@ export const DistributionCurveComponent: React.FC<DistributionCurveProps> = ({
             >
               {m.label}
             </text>
-            <circle cx={posX} cy={baseline} r={3.5} fill="var(--visual-annotation, #e11d48)" />
           </g>
         );
       })}
