@@ -1,0 +1,881 @@
+{
+  "schema_version": "1.0",
+  "exam": "Bachillerato por Madurez Suficiente (BXM)",
+  "convocatoria": "Convocatoria 02-2026",
+  "language": "es",
+  "source": "MEP - Banco de Dominio Avanzado y Contextos Reales",
+  "specification": "Tabla de Especificaciones BXM 2026",
+  "solucionario_verified": true,
+  "set_info": {
+    "id": "set_4",
+    "name": "Práctica de Dominio Avanzado y Contextos Reales (Set de Reto BXM)",
+    "description": "Práctica de reto de alto nivel con problemas contextualizados, gráficas detalladas y explicaciones paso a paso en las tres áreas oficiales.",
+    "total_items": 20,
+    "file": "bxm/matematicas/set_4.json"
+  },
+  "total_items": 20,
+  "sections": [],
+  "notes": [
+    "Diseñado para evaluación de reto y maestría temática."
+  ],
+  "items": [
+    {
+      "id": 151,
+      "set_id": "set_4",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A1",
+        "evidence": "A1.4",
+        "evidence_desc": "Resuelve problemas del entorno aplicando propiedades de la circunferencia."
+      },
+      "stem": "Un radar de cobertura circular centrado en la ciudad $C(1, 2)$ detecta señales en un radio de $8\\text{ km}$. Si un dron se desplaza a la posición $D(6, -3)$, determine la ecuación del borde del radar y si el dron está dentro de su alcance.",
+      "options": {
+        "A": "Ecuación: $(x - 1)^2 + (y - 2)^2 = 64$; el dron está DENTRO del alcance.",
+        "B": "Ecuación: $(x + 1)^2 + (y + 2)^2 = 64$; el dron está FUERA del alcance.",
+        "C": "Ecuación: $(x - 1)^2 + (y - 2)^2 = 64$; el dron está FUERA del alcance.",
+        "D": "Ecuación: $(x - 1)^2 + (y - 2)^2 = 16$; el dron está DENTRO del alcance."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La ecuación del alcance con centro $(1, 2)$ y radio $r = 8$ es $(x - 1)^2 + (y - 2)^2 = 8^2 = 64$.",
+        "Calculamos la distancia $d$ entre $C(1,2)$ y $D(6,-3)$: $d^2 = (6-1)^2 + (-3-2)^2 = 5^2 + (-5)^2 = 25 + 25 = 50$.",
+        "Como $d = \\sqrt{50} \\approx 7.07\\text{ km}$, que es menor que el radio de $8\\text{ km}$ ($d^2 = 50 < 64$), el dron está DENTRO del alcance."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Radar circular con centro en C(1,2) y dron D(6,-3) dentro de la zona de cobertura",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -8,
+              10
+            ],
+            "y": [
+              -7,
+              11
+            ]
+          },
+          "grid": true,
+          "axes": {
+            "arrows": true
+          },
+          "children": [
+            {
+              "type": "circle",
+              "center": [
+                1,
+                2
+              ],
+              "radius": 8,
+              "stroke": "indigo-600",
+              "strokeWidth": 2,
+              "fill": "indigo-50/20"
+            },
+            {
+              "type": "point",
+              "x": 1,
+              "y": 2,
+              "label": "C(1,2)",
+              "color": "stone-800"
+            },
+            {
+              "type": "point",
+              "x": 6,
+              "y": -3,
+              "label": "D(6,-3)",
+              "color": "indigo-600"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 152,
+      "set_id": "set_4",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A1",
+        "evidence": "A1.3",
+        "evidence_desc": "Determina la posición relativa de rectas respecto a circunferencias."
+      },
+      "stem": "Dada la circunferencia $x^2 + y^2 = 16$ y la recta $L: y = x + 6$, determine la posición relativa de la recta $L$ respecto a la circunferencia.",
+      "options": {
+        "A": "Secante",
+        "B": "Tangente",
+        "C": "Exterior",
+        "D": "Coincidente con el diámetro"
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "Sustituimos $y = x + 6$ en la ecuación de la circunferencia: $x^2 + (x + 6)^2 = 16$.",
+        "Desarrollamos: $x^2 + x^2 + 12x + 36 = 16 \\implies 2x^2 + 12x + 20 = 0 \\implies x^2 + 6x + 10 = 0$.",
+        "Calculamos el discriminante $\\Delta = b^2 - 4ac = 6^2 - 4(1)(10) = 36 - 40 = -4$.",
+        "Dado que $\\Delta < 0$, la ecuación no tiene soluciones reales y la recta es EXTERIOR a la circunferencia."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 153,
+      "set_id": "set_4",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Polígonos",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A2",
+        "evidence": "A2.2",
+        "evidence_desc": "Calcula áreas de polígonos irregulares mediante descomposición en triángulos y rectángulos."
+      },
+      "stem": "Un terreno con forma de pentágono irregular tiene sus vértices situados en $A(0,0)$, $B(6,0)$, $C(6,4)$, $D(3,7)$ y $E(0,4)$. ¿Cuál es el área total del terreno en metros cuadrados?",
+      "options": {
+        "A": "$33\\text{ m}^2$",
+        "B": "$30\\text{ m}^2$",
+        "C": "$36\\text{ m}^2$",
+        "D": "$27\\text{ m}^2$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Descomponemos el pentágono en dos figuras conocidas: un rectángulo base $ABCE$ de ancho 6 y alto 4, y un triángulo superior $ECD$ de base $EC = 6$ (de $(0,4)$ a $(6,4)$) y altura $h = 7 - 4 = 3$.",
+        "Área del rectángulo $ABCE = \\text{base} \\cdot \\text{altura} = 6 \\cdot 4 = 24\\text{ m}^2$.",
+        "Área del triángulo $ECD = \\frac{\\text{base} \\cdot \\text{altura}}{2} = \\frac{6 \\cdot 3}{2} = 9\\text{ m}^2$.",
+        "Área total = $24 + 9 = 33\\text{ m}^2$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Pentágono irregular descompuesto en un rectángulo y un triángulo superior",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -1,
+              7
+            ],
+            "y": [
+              -1,
+              8
+            ]
+          },
+          "grid": true,
+          "axes": {
+            "arrows": true
+          },
+          "children": [
+            {
+              "type": "polygon",
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  6,
+                  0
+                ],
+                [
+                  6,
+                  4
+                ],
+                [
+                  3,
+                  7
+                ],
+                [
+                  0,
+                  4
+                ]
+              ],
+              "stroke": "indigo-600",
+              "fill": "indigo-50/30",
+              "strokeWidth": 2
+            },
+            {
+              "type": "line",
+              "x1": 0,
+              "y1": 4,
+              "x2": 6,
+              "y2": 4,
+              "stroke": "stone-400",
+              "strokeWidth": 1.5
+            },
+            {
+              "type": "point",
+              "x": 0,
+              "y": 0,
+              "label": "A(0,0)"
+            },
+            {
+              "type": "point",
+              "x": 6,
+              "y": 0,
+              "label": "B(6,0)"
+            },
+            {
+              "type": "point",
+              "x": 6,
+              "y": 4,
+              "label": "C(6,4)"
+            },
+            {
+              "type": "point",
+              "x": 3,
+              "y": 7,
+              "label": "D(3,7)"
+            },
+            {
+              "type": "point",
+              "x": 0,
+              "y": 4,
+              "label": "E(0,4)"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 154,
+      "set_id": "set_4",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Transformaciones",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A3",
+        "evidence": "A3.3",
+        "evidence_desc": "Aplica homotecias en el plano cartesiano."
+      },
+      "stem": "Al aplicar una homotecia centrada en el origen $(0,0)$ con razón de homotecia $k = -2$ al triángulo con vértice $V(3, -2)$, las coordenadas del vértice homólogo $V’$ corresponden a",
+      "options": {
+        "A": "$(-6, 4)$",
+        "B": "$(6, -4)$",
+        "C": "$(-1.5, 1)$",
+        "D": "$(-6, -4)$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Para una homotecia con centro en el origen y razón $k$, la coordenada del punto imagen se calcula multiplicando cada componente por $k$: $V’ = (k \\cdot x, k \\cdot y)$.",
+        "Sustituyendo $V(3, -2)$ y $k = -2$: $V’ = (-2 \\cdot 3, -2 \\cdot (-2)) = (-6, 4)$.",
+        "Por ende, las coordenadas de $V’$ son $(-6, 4)$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 155,
+      "set_id": "set_4",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Cilindro",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A4",
+        "evidence": "A4.2",
+        "evidence_desc": "Calcula áreas y volúmenes de cilindros rectos."
+      },
+      "stem": "Un tanque cilíndrico cerrado tiene un radio de base $r = 3\\text{ m}$ y una altura $h = 5\\text{ m}$. El área total del cilindro (en metros cuadrados) es igual a",
+      "options": {
+        "A": "$48\\pi\\text{ m}^2$",
+        "B": "$30\\pi\\text{ m}^2$",
+        "C": "$18\\pi\\text{ m}^2$",
+        "D": "$45\\pi\\text{ m}^2$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El área total de un cilindro recto cerrado de radio $r$ y altura $h$ es $A_T = 2\\pi r h + 2\\pi r^2 = 2\\pi r (h + r)$.",
+        "Sustituyendo $r = 3$ y $h = 5$: $A_T = 2\\pi(3)(5 + 3) = 6\\pi(8) = 48\\pi\\text{ m}^2$.",
+        "Por lo tanto, la respuesta correcta es A."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 156,
+      "set_id": "set_4",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Circunferencia",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A1",
+        "evidence": "A1.1",
+        "evidence_desc": "Identifica traslaciones de circunferencias."
+      },
+      "stem": "La circunferencia $C_1: (x - 2)^2 + (y + 1)^2 = 9$ se traslada 4 unidades hacia la izquierda y 3 unidades hacia arriba. La nueva ecuación $C_2$ es",
+      "options": {
+        "A": "$(x + 2)^2 + (y - 2)^2 = 9$",
+        "B": "$(x - 6)^2 + (y + 4)^2 = 9$",
+        "C": "$(x + 2)^2 + (y + 2)^2 = 9$",
+        "D": "$(x - 2)^2 + (y + 2)^2 = 9$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El centro original es $O_1(2, -1)$.",
+        "Trasladar 4 unidades a la izquierda reduce $x$ en 4: $2 - 4 = -2$.",
+        "Trasladar 3 unidades hacia arriba aumenta $y$ en 3: $-1 + 3 = 2$.",
+        "El nuevo centro es $O_2(-2, 2)$ y el radio se mantiene constante ($r^2 = 9$). La ecuación es $(x + 2)^2 + (y - 2)^2 = 9$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 157,
+      "set_id": "set_4",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Polígonos",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A2",
+        "evidence": "A2.3",
+        "evidence_desc": "Calcula diagonales y suma de ángulos de polígonos."
+      },
+      "stem": "El número total de diagonales que se pueden trazar en un polígono convexo de 10 lados (decágono) es",
+      "options": {
+        "A": "35",
+        "B": "45",
+        "C": "20",
+        "D": "50"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La fórmula para el número total de diagonales de un polígono de $n$ lados es $D = \\frac{n(n - 3)}{2}$.",
+        "Para $n = 10$: $D = \\frac{10(10 - 3)}{2} = \\frac{10 \\cdot 7}{2} = \\frac{70}{2} = 35$.",
+        "Por lo tanto, se pueden trazar 35 diagonales."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 158,
+      "set_id": "set_4",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función Lineal",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A5",
+        "evidence": "A5.2",
+        "evidence_desc": "Resuelve problemas del entorno mediante modelos de funciones lineales."
+      },
+      "stem": "Un servicio de taxi cobra una tarifa fija de $\\mathbb{C}800$ más $\\mathbb{C}650$ por cada kilómetro recorrido. Si una persona pagó $\\mathbb{C}8\\,600$ por un viaje, ¿cuántos kilómetros recorrió el taxi?",
+      "options": {
+        "A": "$12\\text{ km}$",
+        "B": "$10\\text{ km}$",
+        "C": "$14\\text{ km}$",
+        "D": "$15\\text{ km}$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Planteamos la función lineal de costo $C(x) = 650x + 800$, donde $x$ es la cantidad de kilómetros.",
+        "Igualamos al monto pagado: $650x + 800 = 8600$.",
+        "Restamos $800$: $650x = 7800$.",
+        "Dividimos entre $650$: $x = \\frac{7800}{650} = 12\\text{ km}$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 159,
+      "set_id": "set_4",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función Cuadrática",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A6",
+        "evidence": "A6.3",
+        "evidence_desc": "Calcula intersecciones de funciones cuadráticas con los ejes."
+      },
+      "stem": "Las intersecciones con el eje $x$ de la función $f(x) = x^2 - 7x + 12$ se ubican en los puntos",
+      "options": {
+        "A": "$(3, 0)$ y $(4, 0)$",
+        "B": "$(-3, 0)$ y $(-4, 0)$",
+        "C": "$(12, 0)$ y $(1, 0)$",
+        "D": "$(0, 3)$ y $(0, 4)$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Para hallar intersecciones con el eje $x$, hacemos $f(x) = 0 \\implies x^2 - 7x + 12 = 0$.",
+        "Factorizamos el trinomio buscando dos números que multiplicados den 12 y sumados $-7$: $(x - 3)(x - 4) = 0$.",
+        "Las soluciones son $x_1 = 3$ y $x_2 = 4$.",
+        "Por lo tanto, las intersecciones con el eje $x$ son $(3, 0)$ y $(4, 0)$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Gráfica de f(x) = x^2 - 7x + 12 intersecando al eje x en 3 y 4",
+        "visual": {
+          "type": "function_plot",
+          "form": "quadratic",
+          "params": {
+            "a": 1,
+            "b": -7,
+            "c": 12
+          },
+          "domain": {
+            "x": [
+              1,
+              6
+            ],
+            "y": [
+              -2,
+              5
+            ]
+          },
+          "annotations": {
+            "points": [
+              {
+                "x": 3,
+                "y": 0,
+                "label": "(3,0)"
+              },
+              {
+                "x": 4,
+                "y": 0,
+                "label": "(4,0)"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 160,
+      "set_id": "set_4",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función Exponencial",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A7",
+        "evidence": "A7.3",
+        "evidence_desc": "Resuelve problemas de crecimiento y decrecimiento exponencial."
+      },
+      "stem": "Una población de bacterias se duplica cada hora según el modelo $P(t) = 500 \\cdot 2^t$, donde $t$ es el tiempo en horas. ¿Cuántas horas deben transcurrir para que la población alcance $8\\,000$ bacterias?",
+      "options": {
+        "A": "4 horas",
+        "B": "3 horas",
+        "C": "5 horas",
+        "D": "16 horas"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Igualamos la función al valor objetivo: $500 \\cdot 2^t = 8000$.",
+        "Dividimos entre 500: $2^t = \\frac{8000}{500} = 16$.",
+        "Expresamos 16 como potencia de 2: $2^t = 2^4 \\implies t = 4$ horas."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 161,
+      "set_id": "set_4",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función Logarítmica",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A7",
+        "evidence": "A7.1",
+        "evidence_desc": "Analiza las propiedades del dominio y ámbito de funciones logarítmicas."
+      },
+      "stem": "El dominio de la función logarítmica $g(x) = \\log_2(3x - 6)$ corresponde al intervalo",
+      "options": {
+        "A": "$]2, +\\infty[$",
+        "B": "$[2, +\\infty[$",
+        "C": "$]0, +\\infty[$",
+        "D": "$]-\\infty, 2[$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El argumento de una función logarítmica debe ser estrictamente mayor que cero: $3x - 6 > 0$.",
+        "Despejamos $x$: $3x > 6 \\implies x > 2$.",
+        "En notación de intervalos, el dominio es $]2, +\\infty[$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 162,
+      "set_id": "set_4",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Función Inversa",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A8",
+        "evidence": "A8.2",
+        "evidence_desc": "Reconoce propiedades de la función inversa respecto a la simetría con la recta y = x."
+      },
+      "stem": "Si el punto $(2, 7)$ pertenece a la gráfica de una función biyectiva $f$, ¿cuál punto pertenece con certeza a la gráfica de su función inversa $f^{-1}$?",
+      "options": {
+        "A": "$(7, 2)$",
+        "B": "$(-2, -7)$",
+        "C": "$(-7, -2)$",
+        "D": "$(2, -7)$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Por definición de función inversa, si $f(a) = b$, entonces $f^{-1}(b) = a$.",
+        "Dado que el par ordenado $(2,7)$ pertenece a $f$, el par ordenado invertido $(7,2)$ pertenece a $f^{-1}$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 163,
+      "set_id": "set_4",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Composición de Funciones",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A8",
+        "evidence": "A8.3",
+        "evidence_desc": "Evalúa composiciones de funciones."
+      },
+      "stem": "Dadas las funciones $f(x) = 2x + 1$ y $g(x) = x^2 - 3$, el valor de $(f \\circ g)(3)$ es",
+      "options": {
+        "A": "13",
+        "B": "14",
+        "C": "15",
+        "D": "16"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Por definición de composición, $(f \\circ g)(3) = f(g(3))$.",
+        "Evaluamos primero $g(3) = 3^2 - 3 = 9 - 3 = 6$.",
+        "Evaluamos luego $f(6) = 2(6) + 1 = 12 + 1 = 13$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 164,
+      "set_id": "set_4",
+      "area": "Relaciones y Álgebra",
+      "area_id": "functions",
+      "topic": "Sistemas de Ecuaciones",
+      "spec": {
+        "block": "2. Relaciones y Álgebra",
+        "affirmation": "A9",
+        "evidence": "A9.2",
+        "evidence_desc": "Interpreta gráficamente la solución de un sistema de ecuaciones lineales."
+      },
+      "stem": "El punto de intersección entre las rectas $L_1: y = 2x - 1$ y $L_2: y = -x + 5$ corresponde a",
+      "options": {
+        "A": "$(2, 3)$",
+        "B": "$(3, 2)$",
+        "C": "$(1, 1)$",
+        "D": "$(2, 5)$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Igualamos los criterios de $y$: $2x - 1 = -x + 5$.",
+        "Sumamos $x$ y restamos $-1$: $3x = 6 \\implies x = 2$.",
+        "Sustituimos $x = 2$ en $L_1$: $y = 2(2) - 1 = 3$.",
+        "El punto de intersección es $(2, 3)$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Intersección de las rectas y = 2x - 1 e y = -x + 5 en el punto (2,3)",
+        "visual": {
+          "type": "cartesian_2d",
+          "domain": {
+            "x": [
+              -1,
+              5
+            ],
+            "y": [
+              -2,
+              6
+            ]
+          },
+          "grid": true,
+          "axes": {
+            "arrows": true
+          },
+          "children": [
+            {
+              "type": "line",
+              "x1": -0.5,
+              "y1": -2,
+              "x2": 3.5,
+              "y2": 6,
+              "stroke": "indigo-600",
+              "strokeWidth": 2,
+              "label": "L1"
+            },
+            {
+              "type": "line",
+              "x1": -1,
+              "y1": 6,
+              "x2": 6,
+              "y2": -1,
+              "stroke": "amber-600",
+              "strokeWidth": 2,
+              "label": "L2"
+            },
+            {
+              "type": "point",
+              "x": 2,
+              "y": 3,
+              "label": "(2,3)",
+              "color": "stone-900"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 165,
+      "set_id": "set_4",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Estadística Descriptiva",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A10",
+        "evidence": "A10.4",
+        "evidence_desc": "Calcula la media ponderada e interpreta promedios."
+      },
+      "stem": "Un estudiante obtuvo las siguientes calificaciones en sus evaluaciones de matemática: Examen 1 (30%): 80, Examen 2 (40%): 90, Tareas (30%): 70. Su nota final en la asignatura es",
+      "options": {
+        "A": "81",
+        "B": "80",
+        "C": "83",
+        "D": "85"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Calculamos la media ponderada multiplicando cada nota por su porcentaje:",
+        "Nota = $(80 \\cdot 0.30) + (90 \\cdot 0.40) + (70 \\cdot 0.30)$.",
+        "Nota = $24 + 36 + 21 = 81$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Tabla de ponderación de calificaciones",
+        "visual": {
+          "type": "table",
+          "variant": "weighted",
+          "headers": [
+            "Evaluación",
+            "Porcentaje",
+            "Nota Obtenida"
+          ],
+          "rows": [
+            [
+              "Examen 1",
+              "30%",
+              "80"
+            ],
+            [
+              "Examen 2",
+              "40%",
+              "90"
+            ],
+            [
+              "Tareas",
+              "30%",
+              "70"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": 166,
+      "set_id": "set_4",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Diagrama de Caja",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A10",
+        "evidence": "A10.3",
+        "evidence_desc": "Compara variabilidad utilizando diagramas de caja."
+      },
+      "stem": "Considere la siguiente información sobre los tiempos de espera (en minutos) en dos sucursales bancarias S1 y S2:\n\n- Sucursal S1: $Q_1 = 10$, $\\text{Mediana} = 15$, $Q_3 = 22$, $\\text{RIC} = 12$.\n- Sucursal S2: $Q_1 = 12$, $\\text{Mediana} = 18$, $Q_3 = 30$, $\\text{RIC} = 18$.\n\n¿En cuál sucursal existe una MAYOR dispersión o variabilidad en el 50% central de los tiempos de espera?",
+      "options": {
+        "A": "En la Sucursal S2, porque su RIC es 18 frente a 12 de S1.",
+        "B": "En la Sucursal S1, porque su mediana es menor.",
+        "C": "En ambas por igual.",
+        "D": "No se puede determinar sin conocer el mínimo y el máximo."
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El Recorrido Intercuartílico (RIC) mide la dispersión del 50% central de los datos.",
+        "Dado que $\\text{RIC}_{S2} = 18 > \\text{RIC}_{S1} = 12$, el 50% central de los tiempos de espera en la Sucursal S2 presenta una mayor variabilidad."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 167,
+      "set_id": "set_4",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Coeficiente de Variación",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A10",
+        "evidence": "A10.5",
+        "evidence_desc": "Calcula e interpreta el coeficiente de variación relativo."
+      },
+      "stem": "Un grupo de adultos tiene una media de edad de $\\bar{x} = 40\\text{ años}$ con una desviación estándar $s = 8\\text{ años}$. El coeficiente de variación ($CV$) de este grupo corresponde a",
+      "options": {
+        "A": "$20\\%$",
+        "B": "$25\\%$",
+        "C": "$15\\%$",
+        "D": "$30\\%$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El coeficiente de variación se calcula mediante $CV = \\frac{s}{\\bar{x}} \\cdot 100\\%$.",
+        "Sustituyendo $s = 8$ y $\\bar{x} = 40$: $CV = \\frac{8}{40} \\cdot 100\\% = 0.20 \\cdot 100\\% = 20\\%$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 168,
+      "set_id": "set_4",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Probabilidad Condicional",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A11",
+        "evidence": "A11.4",
+        "evidence_desc": "Calcula probabilidades a partir de tablas de contingencia."
+      },
+      "stem": "Considere la siguiente tabla de contingencia sobre las preferencias de deporte según género en un club deportivo:\n\n| Género | Fútbol | Tenis | Total |\n| :--- | :---: | :---: | :---: |\n| Hombres | 30 | 10 | 40 |\n| Mujeres | 20 | 20 | 40 |\n| Total | 50 | 30 | 80 |\n\nSi se elige una persona al azar y resulta ser mujer, ¿cuál es la probabilidad de que prefiera el Tenis?",
+      "options": {
+        "A": "$\\frac{20}{40} = 0.50$",
+        "B": "$\\frac{20}{80} = 0.25$",
+        "C": "$\\frac{20}{30} \\approx 0.67$",
+        "D": "$\\frac{30}{80} = 0.375$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Se trata de una probabilidad condicional $P(\\text{Tenis} \\mid \\text{Mujer})$.",
+        "El espacio muestral reducido a las mujeres es de 40 personas.",
+        "De las 40 mujeres, 20 prefieren Tenis.",
+        "Por lo tanto, $P(\\text{Tenis} \\mid \\text{Mujer}) = \\frac{20}{40} = 0.50$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Tabla de contingencia género vs deporte",
+        "visual": {
+          "type": "table",
+          "variant": "contingency",
+          "headers": [
+            "Género",
+            "Fútbol",
+            "Tenis",
+            "Total"
+          ],
+          "rows": [
+            [
+              "Hombres",
+              "30",
+              "10",
+              "40"
+            ],
+            [
+              "Mujeres",
+              "20",
+              "20",
+              "40"
+            ],
+            [
+              "Total",
+              "50",
+              "30",
+              "80"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": 169,
+      "set_id": "set_4",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Probabilidad Regla de Laplace",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A11",
+        "evidence": "A11.1",
+        "evidence_desc": "Calcula la probabilidad de la unión de eventos."
+      },
+      "stem": "Se lanza un dado regular de 6 caras. Sean los eventos $A$: obtener un número par y $B$: obtener un número mayor que 4. La probabilidad de que ocurra $A$ o $B$ ($P(A \\cup B)$) es",
+      "options": {
+        "A": "$\\frac{4}{6} = \\frac{2}{3}$",
+        "B": "$\\frac{5}{6}$",
+        "C": "$\\frac{3}{6} = \\frac{1}{2}$",
+        "D": "$\\frac{1}{6}$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Espacio muestral $S = \\{1, 2, 3, 4, 5, 6\\}$.",
+        "Evento $A$ (pares): $\\{2, 4, 6\\}$.",
+        "Evento $B$ (>4): $\\{5, 6\\}$.",
+        "Unión $A \\cup B = \\{2, 4, 5, 6\\}$, que consta de 4 elementos.",
+        "La probabilidad es $P(A \\cup B) = \\frac{4}{6} = \\frac{2}{3}$."
+      ],
+      "group_id": null,
+      "visual_spec": null
+    },
+    {
+      "id": 170,
+      "set_id": "set_4",
+      "area": "Estadística y Probabilidad",
+      "area_id": "statistics",
+      "topic": "Diagrama de Caja",
+      "spec": {
+        "block": "3. Estadística y Probabilidad",
+        "affirmation": "A10",
+        "evidence": "A10.1",
+        "evidence_desc": "Interpreta diagramas de caja en el contexto de notas escolares."
+      },
+      "stem": "El diagrama de caja de las notas de un grupo muestra: $\\text{Mínimo} = 50$, $Q_1 = 65$, $\\text{Mediana} = 78$, $Q_3 = 88$, $\\text{Máximo} = 100$. ¿Qué porcentaje de estudiantes obtuvo una nota entre 65 y 88?",
+      "options": {
+        "A": "$50\\%$",
+        "B": "$25\\%$",
+        "C": "$75\\%$",
+        "D": "$40\\%$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Entre $Q_1 = 65$ y $Q_3 = 88$ se encuentra la caja central de la distribución.",
+        "Por definición de cuartiles, exactamente el $50\\%$ de los datos está comprendido en el intervalo $[Q_1, Q_3]$.",
+        "Por lo tanto, la respuesta correcta es el $50\\%$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Diagrama de caja de notas escolares mostrando Q1=65, Mediana=78, Q3=88",
+        "visual": {
+          "type": "box_plot",
+          "groups": [
+            {
+              "name": "Notas",
+              "min": 50,
+              "q1": 65,
+              "median": 78,
+              "q3": 88,
+              "max": 100
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
