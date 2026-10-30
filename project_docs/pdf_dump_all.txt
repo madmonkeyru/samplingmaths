@@ -1,0 +1,1783 @@
+=== DUMPING PDF QUESTION TEXTS ===
+--- PAGE 4 ---
+3
+
+3)
+Considere la siguiente representación gráfica de la circunferencia “c”, de centro “O”:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+De acuerdo con la información dada la ecuación de “c” corresponde a
+
+A)
+x2 + (y – 2)2 = 6
+B)
+x2 + (y + 2)2 = 9
+C)
+x2 + (y – 2)2 = 9
+D)
+x2 + (y + 2)2 = 6
+
+
+
+4)
+Un faro de luz direccional emite una señal que cubre una zona circular en el mar. El
+borde de la zona iluminada está delimitado por la circunferencia “c” dada por la
+ecuación (x + 2)2 + (y – 7) = 49. ¿Cuál es el alcance máximo del haz de luz del faro?
+
+A)
+7 m
+B)
+14 m
+C)
+49 m
+D)
+98 m
+
+
+
+
+
+
+
+
+c
+x
+y
+
+5
+2
+– 1
+O
+
+
+
+
+--- PAGE 5 ---
+4
+
+5)
+Considere la siguiente representación de la circunferencia “d” de centro O:
+
+
+
+
+
+
+
+
+Si a “d” se le aplica una trasladación de cinco unidades a la izquierda (paralela al eje x) y
+tres unidades hacia abajo (paralela al eje y), entonces, se obtiene una circunferencia cuya
+ecuación corresponde a
+
+A)
+(x + 1)2 + (y – 3)2 = 9
+
+B)
+(x – 1)2 + (y – 3)2 = 9
+
+C)
+(x + 1)2 + (y + 3)2 = 9
+
+D)
+(x – 1)2 + (y + 3)2 = 9
+
+
+
+
+
+
+
+
+
+
+
+
+x
+y
+O
+–3
+d
+4
+3
+●
+●
+●
+
+--- PAGE 6 ---
+5
+
+6)
+Sea “c” la circunferencia dada por c:(x – 2)2 + (y – 3)2 = 4. Al trasladar a “c” dos unidades
+hacia la izquierda (paralela al eje x) y tres unidades hacia arriba (paralela al eje y), se
+obtiene la circunferencia “d” de centro O. ¿Cuál de las siguientes opciones corresponde
+a la representación de “d”?
+
+
+
+
+
+
+A)
+                                                               B)
+
+
+
+
+
+
+
+
+
+C)                                                                          D)
+
+
+
+
+
+
+
+
+
+7)
+Sea “c” la circunferencia dada por c:(x + 2)2 + y2 = 6. Si se traslada “c” y se obtiene
+d:x 2 + (y +3)2 = 6, entonces, la traslación aplicada corresponde a dos unidades hacia la
+
+
+A)
+izquierda paralela al eje x y tres unidades hacia abajo paralela al eje y.
+B)
+izquierda paralela al eje x y tres unidades hacia arriba paralela al eje y.
+C)
+derecha paralela al eje x y tres unidades hacia arriba paralela al eje y.
+D)
+derecha paralela al eje x y tres unidades hacia abajo paralela al eje y.
+x
+2
+●
+y
+
+3
+O
+●
+
+●
+x
+y
+
+– 2
+2
+O
+●
+●
+– 2
+2
+●
+●
+x
+3
+●
+y
+
+2
+O
+ ●
+y
+ ●
+●
+2
+6
+x
+O
+
+--- PAGE 7 ---
+6
+
+8)
+¿Cuál opción contiene las coordenadas de un punto interior a la circunferencia dada por
+(x–2)2 + y2 = 5?
+
+A)
+(0, 2)
+B)
+(1, 0)
+C)
+(2, 3)
+D)
+(3, 3)
+
+
+9)
+Un radar de ciberseguridad monitorea una red local. El servidor central está ubicado en
+el punto O y su zona de cobertura abarca un radio de 4 km, tal como se ilustra con el
+siguiente sistema de coordenadas:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Considere las coordenadas de ubicación de cuatro dispositivos conectados:
+
+•
+P (5, 2)
+
+•
+Q (4, 1)
+
+•
+R (6, 1)
+
+•
+S (8, 4)
+
+¿Cuál de los dispositivos se encuentra fuera del área de cobertura?
+
+A)
+P
+B)
+Q
+C)
+R
+D)
+S
+
+x
+y
+O
+–4
+ 5
+4
+●
+●
+●
+
+--- PAGE 8 ---
+7
+
+10) ¿Cuál opción contiene una recta secante a la circunferencia dada por (x – 2)2 + y2 = 4?
+
+A)
+x = 5
+B)
+y = 3
+C)
+x = 1
+D)
+y = –2
+
+
+
+11) ¿Cuál opción
+contiene una
+recta
+tangente
+a
+la
+circunferencia dada
+por
+(x – 3)2 + (y + 2)2 = 1?
+
+A)
+y = 0
+B)
+x = 1
+C)
+y = –1
+D)
+x = –2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- PAGE 9 ---
+8
+
+12) La siguiente representación gráfica corresponde al diseño de una pieza de metal para el
+logotipo de una empresa automotriz, cuyas dimensiones están dadas en centímetros:
+
+
+
+De acuerdo con la información anterior, el área en centímetros cuadrados de esa pieza
+de metal es mayor que:
+
+A)
+2200 pero menor que 2600.
+B)
+2600 pero menor que 2900.
+C)
+2900 pero menor que 3300.
+D)
+3300 pero menor que 3800.
+
+
+
+
+
+
+
+
+
+--- PAGE 10 ---
+9
+
+13) La siguiente representación gráfica ilustra el perfil lateral de una rampa de acceso para
+un puente colgante, la cual asciende de forma curva desde el pilar lateral del soporte
+hasta alcanzar la torre central de suspensión, cuyas dimensiones de los ejes están en
+metros:
+
+
+
+De acuerdo con la información anterior, el área de la superficie lateral bajo esta sección
+del puente en metros cuadrados es
+
+A)
+mayor que 20.
+B)
+mayor que 30.
+C)
+menor que 18.
+D)
+menor que 15.
+
+
+
+14) Si la medida del ángulo interno de un polígono regular es 120° y la apotema 2 3 ,
+entonces, ¿cuál es el perímetro de dicho polígono?
+
+A)
+12
+B)
+15
+C)
+20
+D)
+24
+
+
+r 3
+a
+2
+
+o
+180 (n
+2)
+m )  i
+n
+
+--- PAGE 11 ---
+10
+
+15) Si la medida del radio de un polígono regular es 3 2 y la de su ángulo externo 90°,
+entonces, ¿cuál es el área de ese polígono?
+
+A) 36
+B) 24
+C) 18
+D) 12
+
+
+
+16) Un florero artesanal se fabricó a partir de una pieza esférica de porcelana de 13 cm de
+radio, a la cual se le realizó un corte para su abertura (boca). Si el centro de dicha abertura
+quedó a 12 cm del centro de la esfera, entonces, ¿de cuántos centímetros es el perímetro
+(aproximadamente) de la abertura de ese florero?
+
+A)
+15,7
+B)
+31,4
+C)
+25,0
+D)
+39,2
+
+
+
+17) Si el radio de una esfera mide 25 y esta se interseca con una sección plana de radio 24,
+entonces, ¿a qué distancia del centro de la esfera se encuentra dicha sección?
+
+A)
+7
+B)
+12
+C)
+14
+
+D)
+49
+
+
+
+
+
+
+
+
+o
+360
+m )  e
+n
+
+--- PAGE 12 ---
+11
+
+18) Un bloque de queso industrial con forma de cilindro circular recto de 40 cm de altura y
+15 cm de radio en sus bases se corta con un cuchillo de manera perpendicular a ellas,
+pasando por los centros de ambas. ¿Cuál es el área, en centímetros cuadrados, de la
+superficie del corte?
+
+A)
+300
+B)
+600
+C)
+1200
+D)
+2400
+
+
+
+19) Considere el siguiente polígono QRPS:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+De acuerdo con la información de la gráfica, ¿cuál es la cantidad total de ejes de simetría
+que se le pueden trazar al polígono QRPS?
+
+A)
+4
+B)
+3
+C)
+2
+D)
+1
+
+7
+Q
+
+R
+4
+
+
+S
+1
+   P
+5
+y
+x
+3
+1
+
+--- PAGE 13 ---
+12
+
+20) Considere el siguiente polígono DEFGHIJ:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+De acuerdo con la información de la gráfica, ¿cuál punto corresponde a la imagen de J
+con respecto al eje y?
+
+A)
+F
+B)
+E
+C)
+G
+D)
+H
+
+
+Para responder los ítems 21, 22 y 23 considere la siguiente información:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D
+
+E
+5
+   J
+2
+
+G
+2
+–4
+–2
+F
+8
+I
+   H
+
+
+x
+y
+– 2
+y
+x
+4
+3
+2
+1
+#1
+#2
+1
+2
+3
+4
+5
+6
+– 4 – 3
+– 1
+– 2
+#3
+#4
+– 3
+– 4
+– 5
+– 1
+  4
+
+--- PAGE 14 ---
+13
+
+21)
+Si se aplica una homotecia centrada en (0,0) al polígono #2 para obtener el #4, entonces,
+con certeza el valor de la razón de la homotecia corresponde a
+
+A)
+0
+B)
+1
+C)
+2
+D)
+– 1
+
+
+
+22)
+Una forma de obtener el polígono #3 es aplicándole al polígono #4 una reflexión sobre
+
+A)
+y = 1
+B)
+x = 1
+C)
+y = 2
+D)
+x = 2
+
+
+
+23)
+Si al polígono #1 se le aplica una rotación de 270º en sentido horario y con centro en el
+punto (0, 0), entonces, ¿cuál es el punto imagen de (– 1, 3)?
+
+A)
+(– 3, – 1)
+B)
+(– 3, 1)
+C)
+(3, – 1)
+
+D)
+(3, 1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- PAGE 15 ---
+14
+
+24) En las siguientes relaciones “x” representa la variable independiente y “y” la dependiente.
+¿Cuál de ellas corresponde a una función?
+
+
+
+
+
+
+A)
+                                                                        B)
+
+
+
+
+
+
+
+
+
+
+
+
+
+C)                                                                               D)
+
+
+
+
+
+
+
+25) Considere las siguientes funciones f, g y p con sus respectivos dominios y ámbitos:
+
+•
+f: [ 0, 4] → [ 1, 5]
+•
+g: [ 2, 6] → [ 1, 4]
+•
+p: [ 2, 6] → [ 0, 4]
+
+¿Cuál de las siguientes composiciones de funciones está bien definida?
+
+A)
+(g ◦ f)(x)
+B)
+(p ◦ f)(x)
+C)
+(f ◦ p)(x)
+D)
+(g ◦ p)(x)
+
+y
+x
+y
+x
+y
+x
+y
+x
+
+--- PAGE 16 ---
+15
+
+Para responder los ítems 26 y 27 considere la siguiente información:
+
+La siguiente representación gráfica muestra el precio p(x) por litro de combustible, en colones,
+en función del tiempo “t” en semanas con 0 ≤ x ≤ 24:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+26) ¿Cuál fue el precio del litro de combustible, en colones, en la semana 10?
+
+A)
+600
+B)
+650
+C)
+750
+D)
+900
+
+
+27) ¿En cuál semana se registró el precio más alto de todo el periodo?
+
+A)
+18
+B)
+16
+C)
+20
+D)
+24
+p(x)
+x
+750
+900
+500
+600
+4
+12
+16
+20
+24
+8
+
+--- PAGE 17 ---
+16
+
+28) Sea la función g cuyo criterio está definido por g(x) = mx + 4. Si el punto (3,19) pertenece
+a la gráfica de g, entonces, ¿cuál es la pendiente de g?
+
+
+A)
+3
+B)
+5
+C)
+8
+D)
+15
+
+
+
+29) Considere la siguiente representación gráfica de la función g, definida por
+g(x) = ax2 + bx + c, con a < 0:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+¿En cuál valor de “x” alcanza “g” su valor máximo?
+
+A)
+2
+B)
+5
+C)
+–1
+D)
+– 4
+
+
+
+
+
+
+
+
+– 4
+2
+y
+g
+x
+
+5
+– 1
+
+--- PAGE 18 ---
+17
+
+30) Dada la ecuación de la recta y = 2x + b, y sabiendo que el punto (–2, 1) pertenece a ella,
+¿cuáles son las coordenadas del punto de intersección con el eje y?
+
+A)
+(0, –3)
+B)
+(– 3, 0)
+C)
+(5, 0)
+D)
+(0, 5)
+
+
+
+31) Un gimnasio ofrece un paquete de entrenamiento personalizado para un mes. Toda
+persona que desee inscribirse debe pagar una cuota única de inscripción de ₡25 000 y
+luego ₡ 4000 por cada clase asistida con el entrenador. Si un cliente reservó espacio
+para 15 clases durante el último mes, pero al final asistió solamente a 12 clases,
+entonces, ¿cuánto pagó en total?
+
+A)
+₡85 000
+B)
+₡73 000
+C)
+₡60 000
+D)
+₡48 000
+
+
+
+32)
+Luis llama por teléfono a Ana y le comenta que la temperatura en su ciudad es de 41 °F.
+Si se sabe que la relación entre la temperatura en grados Fahrenheit (°F) y en grados
+Celsius (°C) está asociada mediante la función
+9
+F(C)
+C
+32
+5
+, entonces, ¿a cuántos
+grados Celsius equivale la temperatura comentada?
+
+A)
+5
+B)
+9
+C)
+22,8
+D)
+40,5
+
+
+
+
+
+--- PAGE 19 ---
+18
+
+33) En una pastelería se producen únicamente queques de chocolate y galletas de avena.
+Cada queque requiere 4 h de horneado y 2 h de decoración; mientras que cada paquete
+de galletas requiere 3 h de horneado y 1 h de decoración. Si en total se utilizaron 110 h
+para horneado y 50 h para decoración, entonces, ¿cuántos queques de chocolate se
+produjeron?
+
+A)
+30
+B)
+20
+C)
+15
+D)
+5
+
+
+
+34) Roy y Rosa fueron de compras. Él compró 5 kg de zanahoria y 3 kg de brócoli y por esa
+compra pagó ₡4650 en total; mientras que ella compró 3 kg de zanahoria y 5 kg de
+brócoli y pagó ₡5350 en total.
+
+Si ambos compraron a los mismos precios, entonces, ¿cuánto costó el kilogramo de
+brócoli?
+
+A)
+₡700
+B)
+₡800
+C)
+₡625
+D)
+₡900
+
+
+
+35) Sea una función f con dominio A y codominio B (considere el codominio igual al ámbito).
+¿Cuál de las siguientes condiciones es necesaria y suficiente para garantizar la existencia
+de su función inversa?
+
+A)
+Que la función sea lineal.
+B)
+Que la gráfica de la función no pase por el origen (0, 0).
+C)
+Que la función posea únicamente números positivos en su dominio.
+D)
+Que elementos distintos del dominio A tengan imágenes distintas en el
+codominio B.
+
+
+
+
+--- PAGE 20 ---
+19
+
+36) Una posible gráfica de la función h(x) = x2 – 4; x ∈ ℝ es la siguiente:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Si se desea que h tenga inversa, entonces, un posible dominio para h corresponde a
+
+A)
+[– 2, 2]
+B)
+] – , 2]
+C)
+[0, +  [
+D)
+[ – 2, +  [
+
+
+
+37) Si la inversa de la función r dada por r(x) = 6
+2x
+8
+ es de la forma r – 1(x) = ax + b,
+entonces, se cumple que
+
+A)
+a = – 4  y  b = –3
+B)
+a = – 4  y  b = 3
+C)
+a = – 8  y  b = 6
+D)
+a = 4  y  b = 3
+
+
+
+
+
+
+– 2
+2
+y
+h
+x
+
+– 4
+
+--- PAGE 21 ---
+20
+
+38) Sea la función f definida por f(x)
+x . Si su gráfica original se traslada verticalmente
+tres unidades hacia abajo para obtener la función h, entonces, ¿cuál es el criterio de h(x)?
+
+A)
+x
+3
+B)
+x
+3
+C)
+x
+3
+D)
+x
+3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- PAGE 22 ---
+21
+
+39)
+Considere la representación gráfica de una función p:
+
+
+
+
+
+
+
+
+Con base en la información dada, ¿cuál es la representación gráfica de la función inversa
+de p?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p
+y
+6
+x
+– 3
+A)
+y
+6
+x
+– 3
+B)
+y
+6
+x
+3
+C)
+y
+–6
+x
+3
+y
+6
+x
+3
+D)
+
+--- PAGE 23 ---
+22
+
+40) Si la población “p(x)” de una comunidad se estima mediante p(x) = 2000 •
+x
+5
+2
+, donde
+“x” representa los años transcurridos a partir de 2025, entonces, ¿cuántos años deben
+transcurrir para que la población sea de 16 000 individuos?
+
+A)
+10
+B)
+15
+C)
+8
+D)
+3
+
+
+
+41) El tiempo T(v), en minutos, que tarda un video corto en volverse viral se modela mediante
+la función  T(v)
+5
+v, donde “v” representa la cantidad de veces que se ha
+compartido (en miles). Si el video se tardó 20 minutos en viralizarse, entonces, ¿cuántas
+miles de veces se compartió?
+
+A)
+4
+B)
+16
+C)
+25
+D)
+80
+
+
+
+42) La escala de pH de una solución química especial pH está dada por la función
+3
+p(x)
+2log (x), donde “x” representa la concentración de ciertos iones en la mezcla con
+3 ≤ x ≤ 81. Si la concentración detectada es de 27 unidades, entonces, ¿cuál es el valor
+del pH obtenido?
+
+A)
+6
+B)
+9
+C)
+18
+D)
+54
+
+
+
+
+
+--- PAGE 24 ---
+23
+
+43) ¿Cuál de las siguientes funciones es inversa con la función f(x) = 2X?
+
+A)
+x
+1
+g(x)
+2
+
+B)
+2
+t(x)
+log (x)
+C)
+1
+2
+h(x)
+log (x)
+D)
+r(x)
+2log(x)
+
+
+
+44) En un centro de investigación, dos bacterias clónicas se reproducen en laboratorios con
+ambientes distintos. La cantidad de bacterias del primer tipo se comportan según la
+expresión
+x
+8
+3
+, mientras que la del segundo tipo siguen la expresión
+x
+1
+9
+, donde “x”
+representa el tiempo transcurrido en horas. ¿Qué valor debe tomar la variable x para que
+ambos laboratorios tengan exactamente la misma cantidad de bacterias?
+
+A)
+6
+B)
+7
+C)
+4
+D)
+10
+
+
+
+45) Una persona abre una cuenta de ahorros especial que duplica el dinero depositado cada
+año que pasa. Si la cantidad inicial depositada fue de $250, entonces, ¿cuál es el criterio
+del modelo matemático D(t) que explica la cantidad de dinero acumulado en la función
+de los años t?
+
+A)
+250 + 2t
+B)
+250 • 2t
+C)
+250 + 2t
+D)
+250 • 2t
+
+
+--- PAGE 25 ---
+24
+
+46) Una aplicación de transporte cobra una tarifa por viaje de ₡1500 por seguro de vida más
+1000 por kilómetro del recorrido. Si x representa la cantidad de kilómetros recorrido y C(x)
+el costo total en colones, entonces, ¿cuál es el criterio de la función C(x) que describe la
+situación anterior?
+
+A)
+500x
+B)
+2500x
+C)
+1000x + 1500
+D)
+1500x + 1000
+
+
+47) En el diseño de la pantalla de un nuevo teléfono inteligente, el largo de la pantalla mide
+el triple de su ancho. Si el área total de la pantalla se calcula en milímetros cuadrados,
+entonces, ¿cuál es el criterio que modela correctamente el área A(x) de la pantalla en
+función de su ancho denotado con “x”?
+
+A)
+9x2
+B)
+3x2
+C)
+2
+1 x
+3
+
+D)
+2
+1 x
+9
+
+
+
+48) Un biólogo determina que el crecimiento C(t) de una colonia de hongos se comporta
+según un modelo logarítmico que depende del tiempo (t) en días. Si a los 8 días el
+crecimiento registra un valor exacto de 3, entonces, ¿cuál es criterio de C(t) que modela
+correctamente esta situación?
+
+A)
+2
+log (t)
+B)
+3
+log (t)
+C)
+5
+log (t)
+D)
+8
+log (t)
+
+--- PAGE 26 ---
+25
+
+49) Se realizó un estudio para determinar la cantidad de kilómetros diarios que recorren   100
+estudiantes para asistir al centro educativo. A continuación, se muestran los resultados
+obtenidos:
+
+Cantidad de kilómetros diarios que recorren los
+estudiantes para llegar al centro educativo
+Kilómetros
+Cantidad de estudiantes
+De 0 a menos de 10
+50
+De 10 a menos de 20
+30
+  De 20 a menos de 30
+20
+
+¿Cuál es el promedio de kilómetros diarios que recorre cada estudiante para llegar al
+centro educativo?
+
+A)
+8
+B)
+12
+C)
+15
+D)
+20
+
+
+50)
+El siguiente cuadro muestra las calificaciones obtenidas por un estudiante en el curso
+universitario de Química Orgánica, así como el valor porcentual de cada rubro calificado.
+La nota final se obtiene a partir de la sumatoria de los porcentajes obtenidos:
+
+
+Rubro
+I Parcial
+II Parcial
+Quices y tareas
+Laboratorio
+Valor porcentual
+30%
+35%
+15%
+20%
+Calificación obtenida
+70
+80
+90
+85
+
+¿Cuál fue la nota final que obtuvo el estudiante en el curso de Química?
+
+A)
+78,50
+B)
+79,50
+C)
+81,25
+D)
+82,50
+
+--- PAGE 27 ---
+26
+
+51) La distribución de los datos correspondientes a las calificaciones de un examen de
+admisión universitario presenta una asimetría. De acuerdo con el reporte del
+departamento de registro, se determinó que 80 puntos representan a la mediana de esos
+datos y 85 puntos representan a la moda.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Con certeza, la calificación promedio de los estudiantes en ese examen fue:
+
+A)
+igual que 85.
+B)
+menor que 80.
+C)
+mayor que 85.
+D)
+mayor que 80 y menor que 85.
+
+
+
+52) Considere la siguiente información referida a la duración (en horas continuas) de las
+baterías de una marca de teléfonos inteligentes:
+
+
+
+
+
+Con base en la información anterior, se cumple con certeza que al menos el 50 % de las
+baterías tienen una duración entre
+
+A)
+12 y 16 horas.
+B)
+16 y 22 horas.
+C)
+16 y 28 horas.
+D)
+12 y 28 horas
+Mín
+Q1
+Me
+Q3
+Máx
+12
+16
+20
+22
+28
+ 85
+  80
+
+--- PAGE 28 ---
+27
+
+Para responder los ítems 53 y 54 considere la siguiente distribución de los pedidos de
+desayuno realizados en una cafetería durante una mañana, según el tipo de bebida y el
+acompañamiento elegido:
+
+Acompañamiento /
+Bebida
+Café
+negro
+Café con
+leche
+Jugo
+natural
+Total
+Repostería dulce
+8
+15
+12
+35
+Repostería salada
+15
+16
+14
+45
+Total
+23
+31
+26
+80
+
+Con base en la información dada, se establecen los siguientes eventos al elegir al azar
+para control de calidad:
+
+E: Que la orden incluya una repostería dulce con café negro.
+F: Que la orden incluya una repostería salada con café negro.
+G: Que la orden incluya una repostería salada con un café con leche o jugo natural.
+H: Que la orden sea de repostería dulce o salada acompañado de jugo natural.
+
+
+53) ¿Cuál es la probabilidad de que ocurra el evento E U F?
+
+A)
+1
+80
+
+B)
+7
+80
+
+C)
+23
+80
+
+D)
+57
+80
+
+
+
+54) ¿Cuál evento es imposible que ocurra?
+
+A)
+FC  U GC
+B)
+FC  ∩ GC
+C)
+F ∩ G
+D)
+F U G
+
+--- PAGE 29 ---
+28
+
+Para responder los ítems 55 y 56 considere la siguiente información:
+
+En una academia de artes se imparte música, pintura y ballet. El siguiente diagrama muestra
+la cantidad de estudiantes matriculados en esas disciplinas:
+
+
+
+
+
+
+
+
+
+
+
+
+55) Si se selecciona al azar un estudiante de esa academia, entonces, la probabilidad de
+que esté matriculado en las tres disciplinas corresponde a
+
+A)
+36
+43
+
+B)
+18
+43
+
+C)
+0
+D)
+1
+
+
+
+56) Si se selecciona al azar un estudiante de esa academia, entonces, la probabilidad de
+que esté matriculado en dos de esas disciplinas corresponde a
+
+A)
+7
+43
+
+B)
+14
+43
+
+C)
+15
+43
+
+D)
+20
+43
+
+
+8
+4
+17
+11
+3
+Música
+Pintura
+Ballet
+
+--- PAGE 30 ---
+29
+
+Para responder los ítems 57 y 58 considere la siguiente información:
+
+El siguiente diagrama de cajas representa información de un estudio acerca de la edad, en
+años cumplidos, de los empleados de las empresas A y B:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+57) Entre ambas empresas, ¿cuántos años tiene el empleado de menor edad?
+
+A)
+45
+B)
+33
+C)
+23
+D)
+19
+
+
+
+58) ¿Cuál de las siguientes afirmaciones es verdadera?
+
+A)
+El empleado de mayor edad pertenece únicamente a la empresa A.
+
+B)
+En ambas empresas al menos un 50% de sus empleados tienen 33 años o más.
+
+C)
+En la empresa B al menos el 75% de sus empleados tiene 38 años cumplidos o
+más.
+
+D)
+Con certeza en ambas empresas hay al menos un empleado con una edad de 33
+años cumplidos.
+
+Empresa A
+
+
+19
+23
+33
+38
+45
+Empresa B
+Mín
+Q1
+Me
+Máx
+Q3
+40
+29
+23
+33
+45
+Mín
+Q1
+Me
+Q3
+Máx
+
+
+
+--- PAGE 31 ---
+30
+
+Para responder los ítems 59 y 60 considere la siguiente información:
+
+La siguiente tabla muestra la información relacionada con las horas mensuales dedicadas por
+cuatro grupos de personas voluntarias para colaborar con las diferentes actividades que se
+brindan en el hogar para adultos mayores de su comunidad:
+
+Grupo
+Media aritmética
+Desviación estándar
+H
+15
+4,4
+Q
+16
+4,5
+S
+18
+5,3
+P
+17
+5,0
+
+Sofía pertenece al Grupo H y dedica 15 horas mensualmente al trabajo de voluntariado.
+María pertenece al Grupo Q y dedica 17 horas mensualmente al trabajo de voluntariado.
+Andrés pertenece al Grupo S y dedica 19 horas mensualmente al trabajo de voluntariado.
+
+Rosa pertenece al Grupo P y dedica 16 horas mensuales al trabajo de voluntariado.
+
+
+
+
+
+
+
+
+
+
+
+59) El grupo que presenta menor variabilidad relativa corresponde al
+
+A)
+H
+B)
+Q
+C)
+S
+D)
+P
+
+
+
+Fórmulas:
+
+Coeficiente de variación (Cv):
+
+Posición relativa (Pr) de un dato:
+
+v
+Desviación  estándar
+C
+ 100
+Media aritmética
+r
+Dato
+Media aritmética
+P
+Desviación  estándar
+
+--- PAGE 32 ---
+31
+
+60) En términos relativos y con respecto a su grupo de referencia, la persona que presenta
+el mejor desempeño en cuanto a la cantidad de horas dedicadas al voluntariado
+corresponde a
+
+
+A)
+Andrés.
+B)
+Sofía.
+C)
+María.
+D)
+Rosa

@@ -1,0 +1,732 @@
+=== PAGE 15 ===
+14
+
+24) En las siguientes relaciones “x” representa la variable independiente y “y” la dependiente.
+¿Cuál de ellas corresponde a una función?
+
+
+
+
+
+
+A)
+                                                                        B)
+
+
+
+
+
+
+
+
+
+
+
+
+
+C)                                                                               D)
+
+
+
+
+
+
+
+25) Considere las siguientes funciones f, g y p con sus respectivos dominios y ámbitos:
+
+•
+f: [ 0, 4] → [ 1, 5]
+•
+g: [ 2, 6] → [ 1, 4]
+•
+p: [ 2, 6] → [ 0, 4]
+
+¿Cuál de las siguientes composiciones de funciones está bien definida?
+
+A)
+(g ◦ f)(x)
+B)
+(p ◦ f)(x)
+C)
+(f ◦ p)(x)
+D)
+(g ◦ p)(x)
+
+y
+x
+y
+x
+y
+x
+y
+x
+
+=== PAGE 16 ===
+15
+
+Para responder los ítems 26 y 27 considere la siguiente información:
+
+La siguiente representación gráfica muestra el precio p(x) por litro de combustible, en colones,
+en función del tiempo “t” en semanas con 0 ≤ x ≤ 24:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+26) ¿Cuál fue el precio del litro de combustible, en colones, en la semana 10?
+
+A)
+600
+B)
+650
+C)
+750
+D)
+900
+
+
+27) ¿En cuál semana se registró el precio más alto de todo el periodo?
+
+A)
+18
+B)
+16
+C)
+20
+D)
+24
+p(x)
+x
+750
+900
+500
+600
+4
+12
+16
+20
+24
+8
+
+=== PAGE 17 ===
+16
+
+28) Sea la función g cuyo criterio está definido por g(x) = mx + 4. Si el punto (3,19) pertenece
+a la gráfica de g, entonces, ¿cuál es la pendiente de g?
+
+
+A)
+3
+B)
+5
+C)
+8
+D)
+15
+
+
+
+29) Considere la siguiente representación gráfica de la función g, definida por
+g(x) = ax2 + bx + c, con a < 0:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+¿En cuál valor de “x” alcanza “g” su valor máximo?
+
+A)
+2
+B)
+5
+C)
+–1
+D)
+– 4
+
+
+
+
+
+
+
+
+– 4
+2
+y
+g
+x
+
+5
+– 1
+
+=== PAGE 18 ===
+17
+
+30) Dada la ecuación de la recta y = 2x + b, y sabiendo que el punto (–2, 1) pertenece a ella,
+¿cuáles son las coordenadas del punto de intersección con el eje y?
+
+A)
+(0, –3)
+B)
+(– 3, 0)
+C)
+(5, 0)
+D)
+(0, 5)
+
+
+
+31) Un gimnasio ofrece un paquete de entrenamiento personalizado para un mes. Toda
+persona que desee inscribirse debe pagar una cuota única de inscripción de ₡25 000 y
+luego ₡ 4000 por cada clase asistida con el entrenador. Si un cliente reservó espacio
+para 15 clases durante el último mes, pero al final asistió solamente a 12 clases,
+entonces, ¿cuánto pagó en total?
+
+A)
+₡85 000
+B)
+₡73 000
+C)
+₡60 000
+D)
+₡48 000
+
+
+
+32)
+Luis llama por teléfono a Ana y le comenta que la temperatura en su ciudad es de 41 °F.
+Si se sabe que la relación entre la temperatura en grados Fahrenheit (°F) y en grados
+Celsius (°C) está asociada mediante la función
+9
+F(C)
+C
+32
+5
+, entonces, ¿a cuántos
+grados Celsius equivale la temperatura comentada?
+
+A)
+5
+B)
+9
+C)
+22,8
+D)
+40,5
+
+
+
+
+
+=== PAGE 19 ===
+18
+
+33) En una pastelería se producen únicamente queques de chocolate y galletas de avena.
+Cada queque requiere 4 h de horneado y 2 h de decoración; mientras que cada paquete
+de galletas requiere 3 h de horneado y 1 h de decoración. Si en total se utilizaron 110 h
+para horneado y 50 h para decoración, entonces, ¿cuántos queques de chocolate se
+produjeron?
+
+A)
+30
+B)
+20
+C)
+15
+D)
+5
+
+
+
+34) Roy y Rosa fueron de compras. Él compró 5 kg de zanahoria y 3 kg de brócoli y por esa
+compra pagó ₡4650 en total; mientras que ella compró 3 kg de zanahoria y 5 kg de
+brócoli y pagó ₡5350 en total.
+
+Si ambos compraron a los mismos precios, entonces, ¿cuánto costó el kilogramo de
+brócoli?
+
+A)
+₡700
+B)
+₡800
+C)
+₡625
+D)
+₡900
+
+
+
+35) Sea una función f con dominio A y codominio B (considere el codominio igual al ámbito).
+¿Cuál de las siguientes condiciones es necesaria y suficiente para garantizar la existencia
+de su función inversa?
+
+A)
+Que la función sea lineal.
+B)
+Que la gráfica de la función no pase por el origen (0, 0).
+C)
+Que la función posea únicamente números positivos en su dominio.
+D)
+Que elementos distintos del dominio A tengan imágenes distintas en el
+codominio B.
+
+
+
+
+=== PAGE 20 ===
+19
+
+36) Una posible gráfica de la función h(x) = x2 – 4; x ∈ ℝ es la siguiente:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Si se desea que h tenga inversa, entonces, un posible dominio para h corresponde a
+
+A)
+[– 2, 2]
+B)
+] – , 2]
+C)
+[0, +  [
+D)
+[ – 2, +  [
+
+
+
+37) Si la inversa de la función r dada por r(x) = 6
+2x
+8
+ es de la forma r – 1(x) = ax + b,
+entonces, se cumple que
+
+A)
+a = – 4  y  b = –3
+B)
+a = – 4  y  b = 3
+C)
+a = – 8  y  b = 6
+D)
+a = 4  y  b = 3
+
+
+
+
+
+
+– 2
+2
+y
+h
+x
+
+– 4
+
+=== PAGE 21 ===
+20
+
+38) Sea la función f definida por f(x)
+x . Si su gráfica original se traslada verticalmente
+tres unidades hacia abajo para obtener la función h, entonces, ¿cuál es el criterio de h(x)?
+
+A)
+x
+3
+B)
+x
+3
+C)
+x
+3
+D)
+x
+3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=== PAGE 22 ===
+21
+
+39)
+Considere la representación gráfica de una función p:
+
+
+
+
+
+
+
+
+Con base en la información dada, ¿cuál es la representación gráfica de la función inversa
+de p?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p
+y
+6
+x
+– 3
+A)
+y
+6
+x
+– 3
+B)
+y
+6
+x
+3
+C)
+y
+–6
+x
+3
+y
+6
+x
+3
+D)
+
+=== PAGE 23 ===
+22
+
+40) Si la población “p(x)” de una comunidad se estima mediante p(x) = 2000 •
+x
+5
+2
+, donde
+“x” representa los años transcurridos a partir de 2025, entonces, ¿cuántos años deben
+transcurrir para que la población sea de 16 000 individuos?
+
+A)
+10
+B)
+15
+C)
+8
+D)
+3
+
+
+
+41) El tiempo T(v), en minutos, que tarda un video corto en volverse viral se modela mediante
+la función  T(v)
+5
+v, donde “v” representa la cantidad de veces que se ha
+compartido (en miles). Si el video se tardó 20 minutos en viralizarse, entonces, ¿cuántas
+miles de veces se compartió?
+
+A)
+4
+B)
+16
+C)
+25
+D)
+80
+
+
+
+42) La escala de pH de una solución química especial pH está dada por la función
+3
+p(x)
+2log (x), donde “x” representa la concentración de ciertos iones en la mezcla con
+3 ≤ x ≤ 81. Si la concentración detectada es de 27 unidades, entonces, ¿cuál es el valor
+del pH obtenido?
+
+A)
+6
+B)
+9
+C)
+18
+D)
+54
+
+
+
+
+
+=== PAGE 24 ===
+23
+
+43) ¿Cuál de las siguientes funciones es inversa con la función f(x) = 2X?
+
+A)
+x
+1
+g(x)
+2
+
+B)
+2
+t(x)
+log (x)
+C)
+1
+2
+h(x)
+log (x)
+D)
+r(x)
+2log(x)
+
+
+
+44) En un centro de investigación, dos bacterias clónicas se reproducen en laboratorios con
+ambientes distintos. La cantidad de bacterias del primer tipo se comportan según la
+expresión
+x
+8
+3
+, mientras que la del segundo tipo siguen la expresión
+x
+1
+9
+, donde “x”
+representa el tiempo transcurrido en horas. ¿Qué valor debe tomar la variable x para que
+ambos laboratorios tengan exactamente la misma cantidad de bacterias?
+
+A)
+6
+B)
+7
+C)
+4
+D)
+10
+
+
+
+45) Una persona abre una cuenta de ahorros especial que duplica el dinero depositado cada
+año que pasa. Si la cantidad inicial depositada fue de $250, entonces, ¿cuál es el criterio
+del modelo matemático D(t) que explica la cantidad de dinero acumulado en la función
+de los años t?
+
+A)
+250 + 2t
+B)
+250 • 2t
+C)
+250 + 2t
+D)
+250 • 2t
+
+
+=== PAGE 25 ===
+24
+
+46) Una aplicación de transporte cobra una tarifa por viaje de ₡1500 por seguro de vida más
+1000 por kilómetro del recorrido. Si x representa la cantidad de kilómetros recorrido y C(x)
+el costo total en colones, entonces, ¿cuál es el criterio de la función C(x) que describe la
+situación anterior?
+
+A)
+500x
+B)
+2500x
+C)
+1000x + 1500
+D)
+1500x + 1000
+
+
+47) En el diseño de la pantalla de un nuevo teléfono inteligente, el largo de la pantalla mide
+el triple de su ancho. Si el área total de la pantalla se calcula en milímetros cuadrados,
+entonces, ¿cuál es el criterio que modela correctamente el área A(x) de la pantalla en
+función de su ancho denotado con “x”?
+
+A)
+9x2
+B)
+3x2
+C)
+2
+1 x
+3
+
+D)
+2
+1 x
+9
+
+
+
+48) Un biólogo determina que el crecimiento C(t) de una colonia de hongos se comporta
+según un modelo logarítmico que depende del tiempo (t) en días. Si a los 8 días el
+crecimiento registra un valor exacto de 3, entonces, ¿cuál es criterio de C(t) que modela
+correctamente esta situación?
+
+A)
+2
+log (t)
+B)
+3
+log (t)
+C)
+5
+log (t)
+D)
+8
+log (t)
+
+=== PAGE 26 ===
+25
+
+49) Se realizó un estudio para determinar la cantidad de kilómetros diarios que recorren   100
+estudiantes para asistir al centro educativo. A continuación, se muestran los resultados
+obtenidos:
+
+Cantidad de kilómetros diarios que recorren los
+estudiantes para llegar al centro educativo
+Kilómetros
+Cantidad de estudiantes
+De 0 a menos de 10
+50
+De 10 a menos de 20
+30
+  De 20 a menos de 30
+20
+
+¿Cuál es el promedio de kilómetros diarios que recorre cada estudiante para llegar al
+centro educativo?
+
+A)
+8
+B)
+12
+C)
+15
+D)
+20
+
+
+50)
+El siguiente cuadro muestra las calificaciones obtenidas por un estudiante en el curso
+universitario de Química Orgánica, así como el valor porcentual de cada rubro calificado.
+La nota final se obtiene a partir de la sumatoria de los porcentajes obtenidos:
+
+
+Rubro
+I Parcial
+II Parcial
+Quices y tareas
+Laboratorio
+Valor porcentual
+30%
+35%
+15%
+20%
+Calificación obtenida
+70
+80
+90
+85
+
+¿Cuál fue la nota final que obtuvo el estudiante en el curso de Química?
+
+A)
+78,50
+B)
+79,50
+C)
+81,25
+D)
+82,50
