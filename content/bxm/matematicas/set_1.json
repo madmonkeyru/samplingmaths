@@ -912,10 +912,10 @@
       },
       "stem": "¿Cuál opción contiene una recta secante a la circunferencia dada por (x − 2)^2 + y^2 = 4?",
       "options": {
-        "A": "x = 5",
-        "B": "y = 3",
-        "C": "x = 1",
-        "D": "y = −2"
+        "A": "$x = 5$",
+        "B": "$y = 3$",
+        "C": "$x = 1$",
+        "D": "$y = -2$"
       },
       "correct_answer": "C",
       "solution_steps": [
@@ -945,10 +945,10 @@
       },
       "stem": "¿Cuál opción contiene una recta tangente a la circunferencia dada por (x − 3)^2 + (y + 2)^2 = 1?",
       "options": {
-        "A": "y = 0",
-        "B": "x = 1",
-        "C": "y = −1",
-        "D": "x = −2"
+        "A": "$y = 0$",
+        "B": "$x = 1$",
+        "C": "$y = -1$",
+        "D": "$x = -2$"
       },
       "correct_answer": "C",
       "solution_steps": [
@@ -1238,7 +1238,7 @@
         "evidence": "A4.1",
         "evidence_desc": "Determina elementos de los polígonos regulares para la obtención de perímetros o áreas de estos en diversos contextos."
       },
-      "stem": "Si la medida del ángulo interno de un polígono regular es 120° y la apotema 2√3, entonces, ¿cuál es el perímetro de dicho polígono?",
+      "stem": "Si la medida del ángulo interno de un polígono regular es $120^\\circ$ y la apotema $2\\sqrt{3}$, entonces, ¿cuál es el perímetro de dicho polígono?",
       "options": {
         "A": "12",
         "B": "15",
@@ -1269,7 +1269,7 @@
         "evidence": "A4.1",
         "evidence_desc": "Determina elementos de los polígonos regulares para la obtención de perímetros o áreas de estos en diversos contextos."
       },
-      "stem": "Si la medida del radio de un polígono regular es 3√2 y la de su ángulo externo 90°, entonces, ¿cuál es el área de ese polígono?",
+      "stem": "Si la medida del radio de un polígono regular es $3\\sqrt{2}$ y la de su ángulo externo $90^\\circ$, entonces, ¿cuál es el área de ese polígono?",
       "options": {
         "A": "36",
         "B": "24",
@@ -2476,12 +2476,12 @@
         "evidence": "A7.3",
         "evidence_desc": "Determina el punto imagen de puntos dados mediante una transformación en diversos contextos."
       },
-      "stem": "Si al polígono #1 se le aplica una rotación de 270º en sentido horario y con centro en el punto (0, 0), entonces, ¿cuál es el punto imagen de (−1, 3)?",
+      "stem": "Si al polígono #1 se le aplica una rotación de $270^\\circ$ en sentido horario y con centro en el punto $(0, 0)$, entonces, ¿cuál es el punto imagen de $(-1, 3)$?",
       "options": {
-        "A": "(-3, -1)",
-        "B": "(-3, 1)",
-        "C": "(3, -1)",
-        "D": "(3, 1)"
+        "A": "$(-3, -1)$",
+        "B": "$(-3, 1)$",
+        "C": "$(3, -1)$",
+        "D": "$(3, 1)$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -3070,7 +3070,7 @@
         "A": "$(g \\circ f)(x)$",
         "B": "$(p \\circ f)(x)$",
         "C": "$(f \\circ p)(x)$",
-        "D": "$(g \\circ p)(x)"
+        "D": "$(g \\circ p)(x)$"
       },
       "correct_answer": "C",
       "solution_steps": [
@@ -4368,10 +4368,10 @@
       },
       "stem": "Considere la representación gráfica de una función p:\n[recta que pasa por (0, −3) y (6, 0)]\nCon base en la información dada, ¿cuál es la representación gráfica de la función inversa de p?",
       "options": {
-        "A": "Recta que pasa por (−3, 0) y (0, 6)",
-        "B": "Recta que pasa por (0, 6) y (3, 0)",
-        "C": "Recta que pasa por (−6, 0) y (0, 3)",
-        "D": "Recta que pasa por (0, 3) y (6, 0)"
+        "A": "Recta que pasa por $(-3, 0)$ y $(0, 6)$",
+        "B": "Recta que pasa por $(0, 6)$ y $(3, 0)$",
+        "C": "Recta que pasa por $(-6, 0)$ y $(0, 3)$",
+        "D": "Recta que pasa por $(0, 3)$ y $(6, 0)$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -4621,7 +4621,7 @@
         "evidence": "A6.1",
         "evidence_desc": "Identifica modelos matemáticos que involucran las funciones exponenciales en diversos contextos."
       },
-      "stem": "Una persona abre una cuenta de ahorros especial que duplica el dinero depositado cada año que pasa. Si la cantidad inicial depositada fue de $250, entonces, ¿cuál es el criterio del modelo matemático $D(t)$ que explica la cantidad de dinero acumulado en función de los años t?",
+      "stem": "Una persona abre una cuenta de ahorros especial que duplica el dinero depositado cada año que pasa. Si la cantidad inicial depositada fue de 250 colones, entonces, ¿cuál es el criterio del modelo matemático $D(t)$ que explica la cantidad de dinero acumulado en función de los años t?",
       "options": {
         "A": "$250 + 2t$",
         "B": "$250 \\cdot 2t$",
@@ -4685,10 +4685,10 @@
       },
       "stem": "En el diseño de la pantalla de un nuevo teléfono inteligente, el largo de la pantalla mide el triple de su ancho. Si el área total de la pantalla se calcula en milímetros cuadrados, entonces, ¿cuál es el criterio que modela correctamente el área A(x) de la pantalla en función de su ancho denotado con “x”?",
       "options": {
-        "A": "9x²",
-        "B": "3x²",
-        "C": "(1/3)x²",
-        "D": "(1/9)x²"
+        "A": "$9x^2$",
+        "B": "$3x^2$",
+        "C": "$\\frac{1}{3}x^2$",
+        "D": "$\\frac{1}{9}x^2$"
       },
       "correct_answer": "B",
       "solution_steps": [
@@ -4716,10 +4716,10 @@
       },
       "stem": "Un biólogo determina que el crecimiento C(t) de una colonia de hongos se comporta según un modelo logarítmico que depende del tiempo (t) en días. Si a los 8 días el crecimiento registra un valor exacto de 3, entonces, ¿cuál es el criterio de C(t) que modela correctamente esta situación?",
       "options": {
-        "A": "log₂(t)",
-        "B": "log₃(t)",
-        "C": "log₅(t)",
-        "D": "log₈(t)"
+        "A": "$\\log_2(t)$",
+        "B": "$\\log_3(t)$",
+        "C": "$\\log_5(t)$",
+        "D": "$\\log_8(t)$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -4967,12 +4967,12 @@
         "evidence": "A2.4",
         "evidence_desc": "Resuelve problemas de diversos contextos relacionados con probabilidades obtenidas mediante axiomas o propiedades básicas."
       },
-      "stem": "Con base en la información dada en la tabla de contingencia, se establecen los siguientes eventos al elegir al azar para control de calidad:\n\nE: Que la orden incluya una repostería dulce con café negro.\nF: Que la orden incluya una repostería salada con café negro.\nG: Que la orden incluya una repostería salada con un café con leche o jugo natural.\nH: Que la orden sea de repostería dulce o salada acompañado de jugo natural.\n\n¿Cuál es la probabilidad de que ocurra el evento E ∪ F?",
+      "stem": "Con base en la información dada en la tabla de contingencia, se establecen los siguientes eventos al elegir al azar para control de calidad:\n\n• E: Que la orden incluya una repostería dulce con café negro.\n\n• F: Que la orden incluya una repostería salada con café negro.\n\n• G: Que la orden incluya una repostería salada con un café con leche o jugo natural.\n\n• H: Que la orden sea de repostería dulce o salada acompañado de jugo natural.\n\n¿Cuál es la probabilidad de que ocurra el evento $E \\cup F$?",
       "options": {
-        "A": "1/80",
-        "B": "7/80",
-        "C": "23/80",
-        "D": "57/80"
+        "A": "$1/80$",
+        "B": "$7/80$",
+        "C": "$23/80$",
+        "D": "$57/80$"
       },
       "correct_answer": "C",
       "solution_steps": [
@@ -4997,12 +4997,12 @@
         "evidence": "A2.3",
         "evidence_desc": "Reconoce eventos aleatorios mutuamente excluyentes, en diversos contextos."
       },
-      "stem": "Con base en la información dada en la tabla de contingencia, se establecen los siguientes eventos al elegir al azar para control de calidad:\n\nE: Que la orden incluya una repostería dulce con café negro.\nF: Que la orden incluya una repostería salada con café negro.\nG: Que la orden incluya una repostería salada con un café con leche o jugo natural.\nH: Que la orden sea de repostería dulce o salada acompañado de jugo natural.\n\n¿Cuál evento es imposible que ocurra?",
+      "stem": "Con base en la información dada en la tabla de contingencia, se establecen los siguientes eventos al elegir al azar para control de calidad:\n\n• E: Que la orden incluya una repostería dulce con café negro.\n\n• F: Que la orden incluya una repostería salada con café negro.\n\n• G: Que la orden incluya una repostería salada con un café con leche o jugo natural.\n\n• H: Que la orden sea de repostería dulce o salada acompañado de jugo natural.\n\n¿Cuál evento es imposible que ocurra?",
       "options": {
-        "A": "F° ∪ G°",
-        "B": "F° ∩ G°",
-        "C": "F ∩ G",
-        "D": "F ∪ G"
+        "A": "$F^c \\cup G^c$",
+        "B": "$F^c \\cap G^c$",
+        "C": "$F \\cap G$",
+        "D": "$F \\cup G$"
       },
       "correct_answer": "C",
       "solution_steps": [
@@ -5029,10 +5029,10 @@
       },
       "stem": "En una academia de artes se imparte música, pintura y ballet. El siguiente diagrama muestra la cantidad de estudiantes matriculados en esas disciplinas:\n\n[Ver diagrama de Venn]\n\nSi se selecciona al azar un estudiante de esa academia, entonces, la probabilidad de que esté matriculado en las tres disciplinas corresponde a",
       "options": {
-        "A": "36/43",
-        "B": "18/43",
-        "C": "0",
-        "D": "1"
+        "A": "$36/43$",
+        "B": "$18/43$",
+        "C": "$0$",
+        "D": "$1$"
       },
       "correct_answer": "C",
       "solution_steps": [
