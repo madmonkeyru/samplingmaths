@@ -38,6 +38,17 @@ describe('LandingPage', () => {
     const areaTab = screen.getByRole('button', { name: /^Por Área$/i });
     fireEvent.click(areaTab);
 
-    expect(screen.getByRole('button', { name: /Configurar Práctica por Área/i })).toBeInTheDocument();
+    // Integrated evaluation modules widget offers direct configuration and start
+    const startPracticeButton = screen.getByRole('button', { name: /Iniciar Práctica por Área/i });
+    expect(startPracticeButton).toBeInTheDocument();
+
+    fireEvent.click(startPracticeButton);
+    expect(onStartPractice).toHaveBeenCalledTimes(1);
+    expect(onStartPractice).toHaveBeenCalledWith(
+      expect.objectContaining({
+        mode: 'area',
+        area: 'geometry',
+      })
+    );
   });
 });
