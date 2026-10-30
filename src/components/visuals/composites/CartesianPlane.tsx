@@ -33,8 +33,23 @@ const AXIS_COLOR = 'var(--visual-axis, currentColor)';
 const GRID_COLOR = 'var(--visual-grid, #e2e8f0)';
 const TICK_COLOR = 'var(--visual-tick, #64748b)';
 
-const resolveColor = (child: any, fallback: string) =>
-  child.color || child.stroke || fallback;
+const COLOR_MAP: Record<string, string> = {
+  'indigo-600': 'var(--visual-primary, #4f46e5)',
+  'indigo-500': 'var(--visual-primary, #6366f1)',
+  'indigo-700': 'var(--visual-primary, #4338ca)',
+  'indigo-50/20': 'rgba(99, 102, 241, 0.12)',
+  'indigo-50/30': 'rgba(99, 102, 241, 0.18)',
+  'stone-800': 'var(--visual-text, #27272a)',
+  'stone-900': 'var(--visual-text, #18181b)',
+  'stone-400': '#a1a1aa',
+  'amber-600': '#d97706',
+};
+
+const resolveColor = (child: any, fallback: string) => {
+  const raw = child.color || child.stroke || fallback;
+  return COLOR_MAP[raw] || raw;
+};
+
 const resolveWidth = (child: any, fallback: number) =>
   child.strokeWidth ?? child.width ?? fallback;
 
@@ -50,7 +65,7 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
             center={child.center || [0, 0]}
             radius={child.radius || 1}
             color={resolveColor(child, 'var(--visual-primary, #2563eb)')}
-            fill={child.fill || 'none'}
+            fill={COLOR_MAP[child.fill] || child.fill || 'none'}
             strokeWidth={resolveWidth(child, 2)}
             dashed={child.dashed}
             transform={transform}
@@ -160,7 +175,7 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
         <PolylinePrimitive
           key={key}
           points={child.points || []}
-            color={resolveColor(child, 'var(--visual-primary, #2563eb)')}
+          color={resolveColor(child, 'var(--visual-primary, #2563eb)')}
           strokeWidth={resolveWidth(child, 2)}
           dashed={child.dashed}
           transform={transform}
@@ -202,7 +217,7 @@ export function renderPrimitive(child: any, transform: CoordinateTransform, key:
           <PolygonPrimitive
             points={points}
             color={resolveColor(child, 'var(--visual-primary, #2563eb)')}
-            fill={child.fill || 'rgba(37, 99, 235, 0.15)'}
+            fill={COLOR_MAP[child.fill] || child.fill || 'rgba(37, 99, 235, 0.15)'}
             strokeWidth={resolveWidth(child, 2)}
             transform={transform}
           />
@@ -347,8 +362,6 @@ export const CartesianCanvas: React.FC<CartesianCanvasProps> = ({
             })}
           </g>
         )}
-
-        {/* Note: Automatic plot border <rect> removed to prevent unwanted bounding squares when 0,0 is out of domain (e.g. Question ID 6 Option A). */}
 
         {/* Axes */}
         {yInDomain && (
