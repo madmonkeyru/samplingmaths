@@ -48,6 +48,8 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
   const totalItems = items.length;
   const scorePercentage = totalItems > 0 ? Math.round((correctCount / totalItems) * 100) : 0;
 
+  const [attempts, setAttempts] = useState<Attempt[]>(() => storageService.getAttempts());
+
   // Persist attempt on load
   useEffect(() => {
     const attempt: Attempt = {
@@ -67,9 +69,8 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
     };
 
     storageService.saveAttempt(attempt);
+    setAttempts(storageService.getAttempts());
   }, []);
-
-  const attempts = storageService.getAttempts();
 
   const toggleSolution = (itemId: number) => {
     setExpandedSolutions((prev) => ({
@@ -168,23 +169,50 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
       {/* Performance Graph */}
       {attempts.length >= 2 && (
         <div className="bg-white dark:bg-zinc-900 border-2 border-zinc-900 dark:border-zinc-800 rounded-2xl p-6 shadow-xs">
-          <div className="flex items-center gap-2 mb-4 pb-2 border-b-2 border-zinc-900 dark:border-zinc-800">
-            <TrendingUp className="w-5 h-5 stroke-[2.5]" />
-            <h3 className="text-base font-black uppercase">Tendencia de Desempeño</h3>
+          <div className="flex items-center justify-between mb-4 pb-2 border-b-2 border-zinc-900 dark:border-zinc-800">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 stroke-[2.5] text-indigo-600 dark:text-indigo-400" />
+              <h3 className="text-base font-black uppercase tracking-tight">Tendencia de Desempeño</h3>
+            </div>
+            <span className="text-xs font-bold text-zinc-500 dark:text-zinc-400">
+              Últimos {Math.min(attempts.length, 10)} intentos
+            </span>
           </div>
-          <div className="h-32 flex items-end gap-3 pt-6 border-b-2 border-zinc-900 dark:border-zinc-800 pb-2">
-            {attempts.slice(0, 10).reverse().map((att, idx) => (
-              <div key={att.id} className="flex-1 flex flex-col items-center gap-1 group">
-                <div className="text-[10px] font-black opacity-0 group-hover:opacity-100 transition">
-                  {att.scorePercentage}%
+
+          <div className="h-44 flex items-end gap-2.5 sm:gap-3 pt-6 border-b-2 border-zinc-900 dark:border-zinc-800 pb-2">
+            {attempts.slice(0, 10).reverse().map((att, idx) => {
+              const score = att.scorePercentage;
+              const barColor =
+                score >= 80
+                  ? 'bg-emerald-600 dark:bg-emerald-500'
+                  : score >= 65
+                  ? 'bg-indigo-600 dark:bg-indigo-500'
+                  : score >= 50
+                  ? 'bg-amber-600 dark:bg-amber-500'
+                  : 'bg-rose-600 dark:bg-rose-500';
+
+              return (
+                <div key={att.id || idx} className="flex-1 h-full flex flex-col justify-end items-center group">
+                  {/* Score badge above bar */}
+                  <span className="text-[10px] sm:text-[11px] font-black text-zinc-700 dark:text-zinc-300 opacity-80 group-hover:opacity-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition mb-1 shrink-0">
+                    {score}%
+                  </span>
+
+                  {/* Relative bar track */}
+                  <div className="w-full flex-1 flex items-end justify-center">
+                    <div
+                      className={`w-full max-w-[48px] ${barColor} rounded-t-md transition-all duration-300 group-hover:brightness-110 border-x-2 border-t-2 border-zinc-900 dark:border-zinc-700 shadow-2xs`}
+                      style={{ height: `${Math.max(8, score)}%` }}
+                    />
+                  </div>
+
+                  {/* Attempt label */}
+                  <span className="text-[10px] sm:text-[11px] text-zinc-700 dark:text-zinc-400 font-extrabold mt-1.5 shrink-0">
+                    #{idx + 1}
+                  </span>
                 </div>
-                <div
-                  className="w-full bg-zinc-950 dark:bg-zinc-100 rounded-t-sm transition-all hover:bg-zinc-800 dark:hover:bg-zinc-300 border-x-2 border-t-2 border-zinc-900 dark:border-zinc-700"
-                  style={{ height: `${Math.max(10, att.scorePercentage)}%` }}
-                />
-                <span className="text-[10px] text-zinc-700 dark:text-zinc-400 font-bold">#{idx + 1}</span>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       )}
