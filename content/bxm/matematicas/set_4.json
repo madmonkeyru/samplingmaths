@@ -755,7 +755,7 @@
         "evidence": "A11.4",
         "evidence_desc": "Calcula probabilidades a partir de tablas de contingencia."
       },
-      "stem": "Considere la siguiente tabla de contingencia sobre las preferencias de deporte según género en un club deportivo:\n\n| Género | Fútbol | Tenis | Total |\n| :--- | :---: | :---: | :---: |\n| Hombres | 30 | 10 | 40 |\n| Mujeres | 20 | 20 | 40 |\n| Total | 50 | 30 | 80 |\n\nSi se elige una persona al azar y resulta ser mujer, ¿cuál es la probabilidad de que prefiera el Tenis?",
+      "stem": "Considere la siguiente tabla de contingencia sobre las preferencias de deporte según género en un club deportivo: Si se elige una persona al azar y resulta ser mujer, ¿cuál es la probabilidad de que prefiera el Tenis?",
       "options": {
         "A": "$\\frac{20}{40} = 0.50$",
         "B": "$\\frac{20}{80} = 0.25$",
