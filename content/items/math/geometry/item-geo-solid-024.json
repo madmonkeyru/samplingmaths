@@ -1,0 +1,60 @@
+{
+  "id": "item-geo-solid-024",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Cálculo de volumen a partir de sección transversal",
+  "cognitive_level": "Aplicación",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+  },
+  "stem": "Un prisma rectangular recto tiene una base de $8\\text{ cm}$ de largo y $5\\text{ cm}$ de ancho. Si un corte plano paralelo a la base genera un rectángulo de $40\\text{ cm}^2$ y la altura del prisma es de $10\\text{ cm}$, ¿cuál es el volumen del prisma?",
+  "options": {
+    "A": "$400\\text{ cm}^3$",
+    "B": "$200\\text{ cm}^3$",
+    "C": "$160\\text{ cm}^3$",
+    "D": "$130\\text{ cm}^3$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Cualquier corte paralelo a la base de un prisma rectangular tiene un área idéntica a la base: $A_{base} = 8 \\times 5 = 40\\text{ cm}^2$.",
+    "El volumen de un prisma recto es $V = A_{base} \\times h$.",
+    "$V = 40 \\times 10 = 400\\text{ cm}^3$."
+  ],
+  "visual_spec": {
+    "alt": "Prisma rectangular recto con corte paralelo a la base",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "prism",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "width": 105,
+        "height": 85,
+        "depth": 55,
+        "hatchCrossSection": true
+      },
+      "labels": {
+        "width": "8",
+        "depth": "5",
+        "height": "10"
+      },
+      "referenceBox": {
+        "lines": [
+          "Prisma rectangular",
+          "Corte paralelo a la base",
+          "Área basal = 40 cm²"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

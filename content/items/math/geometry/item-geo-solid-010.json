@@ -1,0 +1,59 @@
+{
+  "id": "item-geo-solid-010",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Identificación de elementos métricos del cilindro",
+  "cognitive_level": "Comprensión",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.1",
+    "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el diámetro de un cilindro circular recto en diversos contextos."
+  },
+  "stem": "¿Cuál de las siguientes relaciones métricas es correcta para cualquier cilindro circular recto donde $h$ es la altura, $r$ el radio y $g$ la generatriz?",
+  "options": {
+    "A": "$g = h$",
+    "B": "$g = 2r$",
+    "C": "$g = \\sqrt{r^2 + h^2}$",
+    "D": "$g = \\frac{h}{2}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "En un cilindro circular recto, las generatrices son perpendiculares a las bases y paralelas al eje central.",
+    "Por esta razón geométrica, la longitud de la generatriz $g$ siempre es idéntica a la altura $h$ ($g = h$)."
+  ],
+  "visual_spec": {
+    "alt": "Elementos y generatriz de un cilindro circular recto",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cylinder",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 65,
+        "height": 120,
+        "showAxis": true
+      },
+      "labels": {
+        "topCenter": "B_1",
+        "bottomCenter": "B_2",
+        "height": "h",
+        "topRight": "g"
+      },
+      "referenceBox": {
+        "lines": [
+          "Cilindro circular recto",
+          "g: generatriz lateral",
+          "g = h"
+        ]
+      },
+      "showCrossSection": false,
+      "showAxes": true
+    }
+  }
+}

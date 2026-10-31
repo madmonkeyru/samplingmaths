@@ -1,0 +1,63 @@
+{
+  "id": "item-geo-solid-009",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Cálculo del radio a partir de una sección axial cuadrada",
+  "cognitive_level": "Aplicación",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+  },
+  "stem": "La sección axial de un cilindro circular recto es un cuadrado cuya área es de $64\\text{ cm}^2$. ¿Cuál es la medida del radio de las bases de dicho cilindro?",
+  "options": {
+    "A": "$2\\text{ cm}$",
+    "B": "$4\\text{ cm}$",
+    "C": "$8\\text{ cm}$",
+    "D": "$16\\text{ cm}$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Al ser un cuadrado de área $64\\text{ cm}^2$, cada lado mide $l = \\sqrt{64} = 8\\text{ cm}$.",
+    "La base del cuadrado de la sección axial corresponde al diámetro de la base del cilindro: $2r = 8\\text{ cm}$.",
+    "Por lo tanto, el radio de la base es $r = \\frac{8}{2} = 4\\text{ cm}$."
+  ],
+  "visual_spec": {
+    "alt": "Cilindro equilátero con sección axial cuadrada",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cylinder",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 55,
+        "height": 110,
+        "crossSectionType": "axial",
+        "showAxis": true
+      },
+      "labels": {
+        "topLeft": "P",
+        "topCenter": "O_1",
+        "topRight": "Q",
+        "bottomLeft": "S",
+        "bottomCenter": "O_2",
+        "bottomRight": "R"
+      },
+      "referenceBox": {
+        "lines": [
+          "Sección axial PQRS cuadrada",
+          "Área = 64 cm²",
+          "O_1 y O_2: centros"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

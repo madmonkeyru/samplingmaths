@@ -1,0 +1,63 @@
+{
+  "id": "item-geo-solid-012",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Relación entre altura, radio y generatriz del cono",
+  "cognitive_level": "Comprensión",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+  },
+  "stem": "Un cono circular recto tiene un diámetro de base de $16\\text{ cm}$ y una generatriz de $17\\text{ cm}$. ¿Cuánto mide la altura del cono?",
+  "options": {
+    "A": "$8\\text{ cm}$",
+    "B": "$15\\text{ cm}$",
+    "C": "$23\\text{ cm}$",
+    "D": "$\\sqrt{353}\\text{ cm}$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "El radio de la base es $r = \\frac{16}{2} = 8\\text{ cm}$.",
+    "El triángulo axial rectángulo formado por la altura $h$, el radio $r$ y la generatriz $g$ cumple: $g^2 = h^2 + r^2$.",
+    "$17^2 = h^2 + 8^2 \\implies 289 = h^2 + 64 \\implies h^2 = 225$.",
+    "$h = \\sqrt{225} = 15\\text{ cm}$."
+  ],
+  "visual_spec": {
+    "alt": "Triángulo axial generatriz-radio-altura en cono",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cone",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 70,
+        "height": 130,
+        "showAxis": true,
+        "showRightAngle": true
+      },
+      "labels": {
+        "apex": "V",
+        "baseCenter": "O",
+        "baseRight": "A",
+        "slant": "g = 17",
+        "radius": "r = 8"
+      },
+      "referenceBox": {
+        "lines": [
+          "V: vértice",
+          "O: centro base",
+          "g² = h² + r²"
+        ]
+      },
+      "showCrossSection": false,
+      "showAxes": true
+    }
+  }
+}

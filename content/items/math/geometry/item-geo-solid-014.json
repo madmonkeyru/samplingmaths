@@ -1,0 +1,60 @@
+{
+  "id": "item-geo-solid-014",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Área de la sección plana en un cono",
+  "cognitive_level": "Aplicación",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+  },
+  "stem": "Un cono de altura $10\\text{ cm}$ y radio basal $6\\text{ cm}$ es cortado por un plano paralelo a la base a una distancia de $5\\text{ cm}$ de la cúspide. ¿Cuál es el área de la sección circular producida?",
+  "options": {
+    "A": "$3\\pi\\text{ cm}^2$",
+    "B": "$6\\pi\\text{ cm}^2$",
+    "C": "$9\\pi\\text{ cm}^2$",
+    "D": "$18\\pi\\text{ cm}^2$"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "La razón de alturas es $\\frac{h'}{h} = \\frac{5}{10} = \\frac{1}{2}$.",
+    "El radio de la sección es $r' = \\frac{1}{2} \\times r = \\frac{1}{2} \\times 6 = 3\\text{ cm}$.",
+    "El área del círculo es $A = \\pi (r')^2 = \\pi (3)^2 = 9\\pi\\text{ cm}^2$."
+  ],
+  "visual_spec": {
+    "alt": "Sección circular a media altura en cono",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cone",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 70,
+        "height": 130,
+        "cutHeightFraction": 0.5,
+        "showAxis": true
+      },
+      "labels": {
+        "apex": "V",
+        "baseCenter": "O",
+        "cutCenter": "C"
+      },
+      "referenceBox": {
+        "lines": [
+          "h = 10, h' = 5",
+          "r = 6",
+          "Círculo sección r' = 3"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

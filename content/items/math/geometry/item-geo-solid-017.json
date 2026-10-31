@@ -1,0 +1,60 @@
+{
+  "id": "item-geo-solid-017",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Generatriz de un tronco de cono",
+  "cognitive_level": "Comprensión",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+  },
+  "stem": "En un tronco de cono, los radios de las bases miden $r = 4\\text{ cm}$ y $R = 9\\text{ cm}$, y la altura mide $h = 12\\text{ cm}$. ¿Cuál es la longitud de la generatriz $g$?",
+  "options": {
+    "A": "$5\\text{ cm}$",
+    "B": "$13\\text{ cm}$",
+    "C": "$15\\text{ cm}$",
+    "D": "$\\sqrt{153}\\text{ cm}$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "En la sección axial trapecial, trazamos la altura perpendicular desde el extremo del radio menor al radio mayor, formando un triángulo rectángulo con catetos $h$ y $(R - r)$.",
+    "Diferencia de radios: $R - r = 9 - 4 = 5\\text{ cm}$.",
+    "Por Pitágoras: $g = \\sqrt{h^2 + (R - r)^2} = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13\\text{ cm}$."
+  ],
+  "visual_spec": {
+    "alt": "Relación pitagórica de generatriz en tronco de cono",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "frustum",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "topRadius": 45,
+        "bottomRadius": 80,
+        "height": 115,
+        "showAxis": true
+      },
+      "labels": {
+        "topCenter": "O_1",
+        "bottomCenter": "O_2",
+        "height": "12",
+        "slant": "g"
+      },
+      "referenceBox": {
+        "lines": [
+          "r = 4, R = 9, h = 12",
+          "g² = h² + (R - r)²"
+        ]
+      },
+      "showCrossSection": false,
+      "showAxes": true
+    }
+  }
+}

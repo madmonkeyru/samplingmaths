@@ -1,27 +1,21 @@
 {
-  "id": "item-math-geo-solids-001",
-  "code": "item-geo-solid-001",
-  "area": "Geometría",
+  "id": "item-geo-solid-001",
+  "area": "GEOMETRÍA",
   "area_id": "geometry",
-  "topic": "Secciones planas en figuras tridimensionales (Esfera)",
+  "topic": "Secciones planas en la esfera",
+  "cognitive_level": "Comprensión",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
   "spec": {
-    "block": "1. Geometría",
-    "affirmation": "A5",
-    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
     "evidence": "A5.3",
     "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
   },
-  "linked_concepts": [
-    "mep-geo-esfera-01",
-    "mep-geo-seccion-plana-02"
-  ],
-  "program_applicability": [
-    "EDAD_PARTE_1",
-    "BXM"
-  ],
-  "calculator_allowed": true,
-  "cognitive_level": "conexion",
-  "stem": "Considere la siguiente figura que ilustra una sección plana producto de la intersección de un plano con una esfera. Además, considere que $MN = 10$ y $PN = 12$: ¿Cuál es la longitud de la circunferencia de la sección plana?",
+  "stem": "Considere la siguiente figura que ilustra una sección plana producto de la intersección de un plano con una esfera. Además, considere que $MN = 10$ y $PN = 12$:\n\n¿Cuál es la longitud de la circunferencia de la sección plana?",
   "options": {
     "A": "$10\\pi$",
     "B": "$12\\pi$",
@@ -30,40 +24,39 @@
   },
   "correct_answer": "B",
   "solution_steps": [
-    "La sección plana que se obtiene al cortar una esfera con un plano es un círculo de centro $O$ y diámetro $PN$.",
-    "El enunciado indica que el diámetro de la sección plana es $PN = 12$. Por lo tanto, su radio es $r = \\frac{12}{2} = 6$.",
-    "La longitud de la circunferencia de dicha sección plana se calcula con la fórmula $C = 2\\pi r = 2\\pi(6) = 12\\pi$ (o equivalentemente $C = \\pi \\cdot \\text{diámetro} = 12\\pi$).",
-    "Por consiguiente, la opción correcta es la B."
+    "El segmento $PN$ corresponde al diámetro de la sección plana circular obtenida por el corte con el plano, por lo que $PN = 2r = 12$.",
+    "El radio de la sección plana es $r = \\frac{12}{2} = 6$.",
+    "La longitud de la circunferencia de dicha sección plana viene dada por $C = 2\\pi r = 2\\pi(6) = 12\\pi$."
   ],
-  "group_id": null,
   "visual_spec": {
-    "alt": "Esfera intersecada por un plano con sección plana circular de diámetro PN y centro O, radio de esfera MN",
+    "alt": "Sección plana circular en una esfera",
     "visual": {
       "type": "solid_3d",
       "shape": "sphere",
       "width": 380,
-      "height": 260,
+      "height": 280,
       "parameters": {
-        "radius": 75,
-        "distance": 38,
-        "showPlaneRadius": true,
+        "radius": 85,
+        "distance": 32,
+        "showCenter": true,
+        "showAxis": true,
         "showRightAngle": true
       },
-      "showCrossSection": true,
-      "crossSectionHatched": true,
       "labels": {
-        "sphereCenter": "M",
-        "planeCenter": "O",
-        "planeLeft": "P",
-        "planeRight": "N"
+        "center": "M",
+        "sectionCenter": "O",
+        "sectionLeft": "P",
+        "sectionRight": "N"
       },
       "referenceBox": {
-        "title": "P — O — N",
         "lines": [
+          "P — O — N",
           "M: centro de la esfera",
           "O: centro de la sección plana"
         ]
-      }
+      },
+      "showCrossSection": true,
+      "showAxes": true
     }
   }
 }

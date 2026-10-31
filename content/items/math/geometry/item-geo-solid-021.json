@@ -1,0 +1,60 @@
+{
+  "id": "item-geo-solid-021",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección plana diagonal en un prisma recto (cubo)",
+  "cognitive_level": "Comprensión",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+  },
+  "stem": "En un cubo cuya arista mide $6\\text{ cm}$, se realiza un corte plano que pasa por dos aristas opuestas no coplanares (sección diagonal). ¿Cuál es el área de la sección rectangular sombreada resultante?",
+  "options": {
+    "A": "$36\\text{ cm}^2$",
+    "B": "$36\\sqrt{2}\\text{ cm}^2$",
+    "C": "$72\\text{ cm}^2$",
+    "D": "$72\\sqrt{2}\\text{ cm}^2$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La sección diagonal que pasa por dos aristas opuestas de un cubo es un rectángulo cuyas dimensiones son una arista del cubo $a$ y la diagonal de una de las caras $d_{cara}$.",
+    "Para un cubo de arista $a=6$: $d_{cara} = a\\sqrt{2} = 6\\sqrt{2}\\text{ cm}$.",
+    "El área del rectángulo es $A = a \\times d_{cara} = 6 \\times 6\\sqrt{2} = 36\\sqrt{2}\\text{ cm}^2$."
+  ],
+  "visual_spec": {
+    "alt": "Sección diagonal sombreada en un cubo",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "prism",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "width": 90,
+        "height": 90,
+        "depth": 55,
+        "hatchCrossSection": true
+      },
+      "labels": {
+        "width": "6",
+        "height": "6",
+        "depth": "6"
+      },
+      "referenceBox": {
+        "lines": [
+          "Cubo de arista a = 6",
+          "Corte plano diagonal",
+          "Sección rectangular"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

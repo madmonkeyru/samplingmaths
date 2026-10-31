@@ -1,75 +1,61 @@
 {
-  "id": "item-math-geo-solids-003",
-  "code": "item-geo-solid-003",
-  "area": "Geometría",
+  "id": "item-geo-solid-003",
+  "area": "GEOMETRÍA",
   "area_id": "geometry",
-  "topic": "Elementos del cono circular recto",
-  "spec": {
-    "block": "1. Geometría",
-    "affirmation": "A5",
-    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
-    "evidence": "A5.1",
-    "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el diámetro en figuras tridimensionales."
-  },
-  "linked_concepts": [
-    "mep-geo-cono-01"
-  ],
-  "program_applicability": [
-    "EDAD_PARTE_1",
-    "BXM"
-  ],
+  "topic": "Sección máxima o ecuatorial en una esfera",
+  "cognitive_level": "Comprensión",
   "calculator_allowed": true,
-  "cognitive_level": "reproduccion",
-  "stem": "Con base en la información de la figura referida a un cono circular recto y una sección plana circular paralela a la base: ¿Cuál segmento representa el diámetro del cono de centro $D$?",
-  "options": {
-    "A": "$\\overline{AC}$",
-    "B": "$\\overline{EC}$",
-    "C": "$\\overline{GC}$",
-    "D": "$\\overline{HC}$"
-  },
-  "correct_answer": "A",
-  "solution_steps": [
-    "La base del cono tiene como centro el punto $D$.",
-    "Los puntos $A$ y $C$ pertenecen a la circunferencia de la base y están alineados con el centro ($A - D - C$).",
-    "El segmento que pasa por el centro $D$ y une dos puntos de la circunferencia de la base es $\\overline{AC}$, el cual corresponde al diámetro de la base del cono.",
-    "Por lo tanto, la respuesta correcta es $\\overline{AC}$."
+  "program_applicability": [
+    "bxm",
+    "edad"
   ],
-  "group_id": null,
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+  },
+  "stem": "Si un plano corta a una esfera pasando exactamente por su centro, ¿qué nombre recibe la sección plana obtenida y cuál es el área si el radio de la esfera es $5\\text{ cm}$?",
+  "options": {
+    "A": "Círculo menor de área $10\\pi\\text{ cm}^2$",
+    "B": "Círculo máximo de área $25\\pi\\text{ cm}^2$",
+    "C": "Elipse de área $25\\pi\\text{ cm}^2$",
+    "D": "Corona circular de área $50\\pi\\text{ cm}^2$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Toda sección plana que pasa por el centro de una esfera es un círculo máximo (o sección ecuatorial).",
+    "El radio de la sección es exactamente igual al radio de la esfera: $r = R = 5\\text{ cm}$.",
+    "El área del círculo es $A = \\pi r^2 = \\pi (5)^2 = 25\\pi\\text{ cm}^2$."
+  ],
   "visual_spec": {
-    "alt": "Cono circular recto con base de centro D y sección plana paralela con centro H",
+    "alt": "Corte ecuatorial o círculo máximo en una esfera",
     "visual": {
       "type": "solid_3d",
-      "shape": "cone",
+      "shape": "sphere",
       "width": 380,
-      "height": 260,
+      "height": 280,
       "parameters": {
-        "radius": 75,
-        "height": 125,
-        "cutHeightFraction": 0.48,
-        "showBaseDiameter": true
+        "radius": 85,
+        "distance": 0,
+        "showEquator": true,
+        "showCenter": true
       },
-      "showCrossSection": true,
-      "crossSectionType": "parallel",
-      "crossSectionHatched": false,
       "labels": {
-        "apex": "B",
-        "baseCenter": "D",
-        "baseLeft": "A",
-        "baseRight": "C",
-        "cutCenter": "H",
-        "cutLeft": "G",
-        "cutRight": "E"
+        "center": "O",
+        "sectionCenter": "O",
+        "sectionRight": "B",
+        "radius": "R = 5"
       },
       "referenceBox": {
         "lines": [
-          "A — G — B",
-          "A — D — C",
-          "C — E — B",
-          "G — H — E",
-          "D: centro de la base",
-          "H: centro de la sección"
+          "Plano secante diametral",
+          "O: centro de la esfera",
+          "Círculo máximo"
         ]
-      }
+      },
+      "showCrossSection": true,
+      "showAxes": true
     }
   }
 }

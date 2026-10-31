@@ -1,60 +1,65 @@
 {
-  "id": "item-math-geo-solids-006",
-  "code": "item-geo-solid-006",
-  "area": "Geometría",
+  "id": "item-geo-solid-006",
+  "area": "GEOMETRÍA",
   "area_id": "geometry",
-  "topic": "Prisma recto y cálculo de aristas y áreas",
-  "spec": {
-    "block": "1. Geometría",
-    "affirmation": "A5",
-    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
-    "evidence": "A5.1",
-    "evidence_desc": "Identifica características métricas en figuras tridimensionales (cubos, prismas)."
-  },
-  "linked_concepts": [
-    "mep-geo-prisma-01"
-  ],
-  "program_applicability": [
-    "EDAD_PARTE_1",
-    "BXM"
-  ],
+  "topic": "Sección axial de un cilindro circular recto",
+  "cognitive_level": "Comprensión",
   "calculator_allowed": true,
-  "cognitive_level": "conexion",
-  "stem": "Considere el prisma rectangular recto mostrado en la figura, cuyas dimensiones de base son largo $l = 10$, ancho $a = 6$ y altura $h = 4$: ¿Cuál es el área total de dicho prisma rectangular?",
-  "options": {
-    "A": "248",
-    "B": "124",
-    "C": "240",
-    "D": "180"
-  },
-  "correct_answer": "A",
-  "solution_steps": [
-    "La fórmula del área total de un prisma rectangular (ortoedro) es $\\text{Área Total} = 2(l \\cdot a + l \\cdot h + a \\cdot h)$.",
-    "Calculando el área de cada par de caras opuestas: base y tapa $2(10 \\times 6) = 120$; caras frontal y posterior $2(10 \\times 4) = 80$; caras laterales $2(6 \\times 4) = 48$.",
-    "Sumando las áreas: $120 + 80 + 48 = 248$.",
-    "Por lo tanto, la opción correcta es 248."
+  "program_applicability": [
+    "bxm",
+    "edad"
   ],
-  "group_id": null,
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+  },
+  "stem": "Considere la figura del cilindro circular recto donde $A-B-C$ y $D-E-F$ representan los diámetros de las bases superior e inferior. Si el radio de la base mide $4\\text{ cm}$ y la altura del cilindro mide $10\\text{ cm}$, ¿cuál es el área de la sección axial $ACFD$?",
+  "options": {
+    "A": "$40\\text{ cm}^2$",
+    "B": "$80\\text{ cm}^2$",
+    "C": "$80\\pi\\text{ cm}^2$",
+    "D": "$160\\text{ cm}^2$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La sección axial de un cilindro circular recto que contiene al eje central es un rectángulo cuyos lados son el diámetro de la base y la altura del cilindro.",
+    "Diámetro de la base: $AC = 2r = 2(4) = 8\\text{ cm}$.",
+    "Altura del cilindro: $h = CF = 10\\text{ cm}$.",
+    "Área del rectángulo de la sección: $\\text{Área} = \\text{base} \\times \\text{altura} = 8 \\times 10 = 80\\text{ cm}^2$."
+  ],
   "visual_spec": {
-    "alt": "Prisma rectangular recto con base sombreada y dimensiones de largo, ancho y altura",
+    "alt": "Sección axial rectangular en un cilindro circular recto",
     "visual": {
       "type": "solid_3d",
-      "shape": "prism",
+      "shape": "cylinder",
       "width": 380,
-      "height": 260,
+      "height": 280,
       "parameters": {
-        "boxWidth": 120,
-        "boxHeight": 70,
-        "boxDepth": 55,
-        "projectionAngle": 35
+        "radius": 65,
+        "height": 115,
+        "crossSectionType": "axial",
+        "showAxis": true
+      },
+      "labels": {
+        "topLeft": "A",
+        "topCenter": "B",
+        "topRight": "C",
+        "bottomLeft": "D",
+        "bottomCenter": "E",
+        "bottomRight": "F",
+        "height": "h"
+      },
+      "referenceBox": {
+        "lines": [
+          "A — B — C",
+          "D — E — F",
+          "B y E: centros de las bases"
+        ]
       },
       "showCrossSection": true,
-      "crossSectionHatched": true,
-      "labels": {
-        "width": "l = 10",
-        "height": "h = 4",
-        "depth": "a = 6"
-      }
+      "showAxes": true
     }
   }
 }

@@ -37,9 +37,21 @@
       "calculatorAllowed": true,
       "passingScore": 65,
       "subprograms": [
-        { "id": "III_CICLO_7", "name": "7° Año", "description": "Séptimo Año III Ciclo" },
-        { "id": "III_CICLO_8", "name": "8° Año", "description": "Octavo Año III Ciclo" },
-        { "id": "III_CICLO_9", "name": "9° Año", "description": "Noveno Año III Ciclo" }
+        {
+          "id": "III_CICLO_7",
+          "name": "7° Año",
+          "description": "Séptimo Año III Ciclo"
+        },
+        {
+          "id": "III_CICLO_8",
+          "name": "8° Año",
+          "description": "Octavo Año III Ciclo"
+        },
+        {
+          "id": "III_CICLO_9",
+          "name": "9° Año",
+          "description": "Noveno Año III Ciclo"
+        }
       ],
       "subjects": [
         {
@@ -61,8 +73,16 @@
       "calculatorAllowed": true,
       "passingScore": 70,
       "subprograms": [
-        { "id": "EDAD_1", "name": "Parte 1 (10° Año)", "description": "Geometría, Funciones y Estadística de 10°" },
-        { "id": "EDAD_2", "name": "Parte 2 (11° Año)", "description": "Funciones inversas, exponenciales, logarítmicas y Probabilidad de 11°" }
+        {
+          "id": "EDAD_1",
+          "name": "Parte 1 (10° Año)",
+          "description": "Geometría, Funciones y Estadística de 10°"
+        },
+        {
+          "id": "EDAD_2",
+          "name": "Parte 2 (11° Año)",
+          "description": "Funciones inversas, exponenciales, logarítmicas y Probabilidad de 11°"
+        }
       ],
       "subjects": [
         {
@@ -131,7 +151,7 @@
               "name": "Práctica Especializada: Visualización Espacial 3D (Criterio A5)",
               "description": "Práctica modular con ilustraciones técnicas paramétricas en SVG de sólidos geométricos tridimensionales (esfera, cono, cilindro, tronco de cono y prisma).",
               "file": "bxm/matematicas/set_5.json",
-              "total_items": 5
+              "total_items": 25
             }
           ]
         }

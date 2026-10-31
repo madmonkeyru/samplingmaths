@@ -1,0 +1,57 @@
+{
+  "id": "item-geo-solid-013",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Corte oblicuo a las generatrices del cono (Elipse cónica)",
+  "cognitive_level": "Comprensión",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.4",
+    "evidence_desc": "Reconoce elipses en diferentes contextos."
+  },
+  "stem": "¿Qué curva cónica se obtiene al realizar una sección plana que corta a todas las generatrices del cono de un mismo lado del vértice, sin pasar por dicho vértice ni ser paralela a la base?",
+  "options": {
+    "A": "Una parábola",
+    "B": "Una elipse",
+    "C": "Una hipérbola",
+    "D": "Una circunferencia"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Cuando el plano secante corta todas las generatrices de la superficie cónica con un ángulo mayor que el del ángulo de inclinación de las generatrices (y distinto al plano de la base), la sección plana es una elipse cónica."
+  ],
+  "visual_spec": {
+    "alt": "Corte cónico que genera una elipse",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cone",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 70,
+        "height": 130,
+        "cutHeightFraction": 0.5,
+        "showAxis": true
+      },
+      "labels": {
+        "apex": "V",
+        "baseCenter": "O"
+      },
+      "referenceBox": {
+        "lines": [
+          "Corte plano oblicuo",
+          "Sección cónica",
+          "Frontera: elipse"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

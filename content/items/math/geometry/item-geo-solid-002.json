@@ -1,70 +1,64 @@
 {
-  "id": "item-math-geo-solids-002",
-  "code": "item-geo-solid-002",
-  "area": "Geometría",
+  "id": "item-geo-solid-002",
+  "area": "GEOMETRÍA",
   "area_id": "geometry",
-  "topic": "Secciones planas en figuras tridimensionales (Esfera)",
+  "topic": "Cálculo de la distancia al centro en una esfera",
+  "cognitive_level": "Aplicación",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
   "spec": {
-    "block": "1. Geometría",
-    "affirmation": "A5",
-    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
     "evidence": "A5.3",
     "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
   },
-  "linked_concepts": [
-    "mep-geo-esfera-01",
-    "mep-geo-seccion-plana-02"
-  ],
-  "program_applicability": [
-    "EDAD_PARTE_1",
-    "BXM"
-  ],
-  "calculator_allowed": true,
-  "cognitive_level": "conexion",
-  "stem": "La siguiente figura corresponde a una esfera cuya medida de su diámetro es $12$ y una sección plana obtenida de la intersección de un plano con la esfera, con distancia del centro de la esfera a la sección $SO = 4$: ¿Cuál es la medida del radio de la sección plana de centro $O$?",
+  "stem": "En una esfera de radio $R = 15\\text{ cm}$, se realiza un corte plano cuya sección circular tiene un radio de $12\\text{ cm}$. ¿A qué distancia del centro de la esfera se realizó el corte?",
   "options": {
-    "A": "$2\\sqrt{5}$",
-    "B": "$8\\sqrt{2}$",
-    "C": "$4\\sqrt{10}$",
-    "D": "$4\\sqrt{5}$"
+    "A": "$3\\text{ cm}$",
+    "B": "$8\\text{ cm}$",
+    "C": "$9\\text{ cm}$",
+    "D": "$\\sqrt{369}\\text{ cm}$"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "solution_steps": [
-    "Si el diámetro de la esfera mide $12$, entonces el radio de la esfera es $R = \\frac{12}{2} = 6$.",
-    "La distancia desde el centro de la esfera $S$ hasta el centro de la sección plana $O$ es $d = SO = 4$.",
-    "En el triángulo rectángulo formado por el centro de la esfera, el centro de la sección y un punto del borde de la sección, se cumple el teorema de Pitágoras: $R^2 = d^2 + r^2$.",
-    "Sustituyendo los valores: $6^2 = 4^2 + r^2 \\implies 36 = 16 + r^2 \\implies r^2 = 20$.",
-    "Extrayendo raíz cuadrada: $r = \\sqrt{20} = \\sqrt{4 \\times 5} = 2\\sqrt{5}$."
+    "En la esfera, el radio de la esfera $R$, el radio de la sección plana $r$ y la distancia $d$ del centro de la esfera al plano forman un triángulo rectángulo.",
+    "Por el Teorema de Pitágoras: $R^2 = d^2 + r^2$.",
+    "Sustituyendo los valores conocidos: $15^2 = d^2 + 12^2 \\implies 225 = d^2 + 144$.",
+    "$d^2 = 225 - 144 = 81 \\implies d = \\sqrt{81} = 9\\text{ cm}$."
   ],
-  "group_id": null,
   "visual_spec": {
-    "alt": "Esfera con sección plana de centro O, radio de esfera R y distancia SO=4",
+    "alt": "Cálculo métrico del corte transversal en una esfera",
     "visual": {
       "type": "solid_3d",
       "shape": "sphere",
       "width": 380,
-      "height": 260,
+      "height": 280,
       "parameters": {
-        "radius": 75,
-        "distance": 38,
-        "showPlaneRadius": true,
+        "radius": 85,
+        "distance": 35,
+        "showRadius": true,
+        "showAxis": true,
         "showRightAngle": true
       },
-      "showCrossSection": true,
-      "crossSectionHatched": true,
       "labels": {
-        "sphereCenter": "S",
-        "planeCenter": "O",
-        "planeLeft": "M",
-        "planeRight": "R"
+        "center": "O",
+        "sectionCenter": "C",
+        "sectionRight": "A",
+        "radius": "15",
+        "sectionRadius": "12"
       },
       "referenceBox": {
-        "title": "M — O — R; SO = 4",
         "lines": [
-          "S: centro de la esfera",
-          "O: centro de la sección plana"
+          "O: centro de la esfera",
+          "C: centro de la sección plana",
+          "Radio esfera = 15 cm"
         ]
-      }
+      },
+      "showCrossSection": true,
+      "showAxes": true
     }
   }
 }
