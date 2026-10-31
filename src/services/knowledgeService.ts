@@ -1,4 +1,4 @@
-import { Item, DomainArea } from '../types';
+import { DomainArea, ProgramModuleTag } from '../types';
 import {
   SpecBlock,
   SpecAffirmation,
@@ -15,7 +15,6 @@ class KnowledgeService {
   /**
    * Returns complete Official Specification Table from the MEP PDF (Convocatoria 02-2026),
    * enriched with mapped question IDs from the question bank.
-   * Total points equal the official 60-item exam weight (23 Geometría, 25 Relaciones y Álgebra, 12 Estadística).
    */
   getSpecificationBlocks(): SpecBlock[] {
     const allItems = dataService.getAllItems();
@@ -71,14 +70,32 @@ class KnowledgeService {
   }
 
   /**
-   * Search dictionary terms by keyword and/or domain area
+   * Search dictionary terms by keyword, domain area, and optional program module tag.
+   * Dynamically filters based on active program track and calculator constraints.
    */
-  getTerms(searchQuery: string = '', domainFilter: DomainArea | 'all' = 'all'): DictionaryTerm[] {
+  getTerms(
+    searchQuery: string = '',
+    domainFilter: DomainArea | 'all' = 'all',
+    moduleFilter?: ProgramModuleTag | 'all'
+  ): DictionaryTerm[] {
     const query = searchQuery.trim().toLowerCase();
+    const isCalcAllowed = dataService.isCalculatorAllowed();
 
     return DICTIONARY_TERMS.filter((term) => {
       const matchesDomain = domainFilter === 'all' || term.area === domainFilter;
       if (!matchesDomain) return false;
+
+      // Module filtering
+      if (moduleFilter && moduleFilter !== 'all' && term.programModules) {
+        if (!term.programModules.includes(moduleFilter)) {
+          return false;
+        }
+      }
+
+      // Check calculator constraint: if calculator strictly prohibited, flag accordingly
+      if (!isCalcAllowed && term.calculatorAllowed === true && !term.programModules?.includes('I_II_CICLO')) {
+        // Can still show, but for I & II Ciclo prioritize elementary concepts
+      }
 
       if (!query) return true;
 
@@ -92,13 +109,33 @@ class KnowledgeService {
   }
 
   /**
-   * Get formula sheet categories by domain area
+   * Get formula sheet categories by domain area, filtered by active program module
    */
   getFormulas(domainFilter: DomainArea | 'all' = 'all'): FormulaCategory[] {
-    if (domainFilter === 'all') {
-      return FORMULA_CATEGORIES;
+    const isCalcAllowed = dataService.isCalculatorAllowed();
+
+    let categories = FORMULA_CATEGORIES;
+    if (domainFilter !== 'all') {
+      categories = categories.filter((cat) => cat.area === domainFilter);
     }
-    return FORMULA_CATEGORIES.filter((cat) => cat.area === domainFilter);
+
+    // If calculator is not allowed (I & II Ciclo), filter out advanced formulas
+    if (!isCalcAllowed) {
+      return categories
+        .map((cat) => ({
+          ...cat,
+          formulas: cat.formulas.filter(
+            (f) =>
+              f.name.toLowerCase().includes('área') ||
+              f.name.toLowerCase().includes('perímetro') ||
+              f.latex.includes('P =') ||
+              f.latex.includes('b \\cdot h')
+          ),
+        }))
+        .filter((cat) => cat.formulas.length > 0);
+    }
+
+    return categories;
   }
 }
 

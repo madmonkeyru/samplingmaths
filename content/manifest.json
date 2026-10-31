@@ -1,39 +1,89 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "default_program": "bxm",
   "default_subject": "matematicas",
+  "library": {
+    "math": {
+      "geometry": "library/math/geometry_concepts.json",
+      "algebra": "library/math/algebra_concepts.json",
+      "statistics": "library/math/statistics_concepts.json"
+    }
+  },
+  "items_root": "items/math",
   "programs": [
     {
       "id": "cico",
       "name": "I y II Ciclo CICO",
-      "description": "Educación General Básica I y II Ciclo",
-      "subjects": []
+      "description": "Educación General Básica I y II Ciclo (Examen único sin calculadora)",
+      "calculatorAllowed": false,
+      "passingScore": 65,
+      "subjects": [
+        {
+          "id": "matematicas",
+          "name": "Matemáticas",
+          "description": "Prácticas y simulaciones de Matemáticas I y II Ciclo",
+          "metadata": "programs/i_ii_ciclo/matematica/subject-metadata.json",
+          "convocatorias": [
+            "programs/i_ii_ciclo/matematica/convocatorias/2026-c1.json"
+          ],
+          "sets": []
+        }
+      ]
     },
     {
       "id": "iii_ciclo",
       "name": "III Ciclo",
       "description": "Educación General Básica III Ciclo (7°, 8°, 9°)",
+      "calculatorAllowed": true,
+      "passingScore": 65,
       "subprograms": [
-        "III_CICLO_7",
-        "III_CICLO_8",
-        "III_CICLO_9"
+        { "id": "III_CICLO_7", "name": "7° Año", "description": "Séptimo Año III Ciclo" },
+        { "id": "III_CICLO_8", "name": "8° Año", "description": "Octavo Año III Ciclo" },
+        { "id": "III_CICLO_9", "name": "9° Año", "description": "Noveno Año III Ciclo" }
       ],
-      "subjects": []
+      "subjects": [
+        {
+          "id": "matematicas",
+          "name": "Matemáticas",
+          "description": "Prácticas y simulaciones de Matemáticas III Ciclo",
+          "metadata": "programs/iii_ciclo/matematica/subject-metadata.json",
+          "convocatorias": [
+            "programs/iii_ciclo/matematica/7mo/convocatorias/2026-c1.json"
+          ],
+          "sets": []
+        }
+      ]
     },
     {
       "id": "edad",
       "name": "EDAD",
-      "description": "Educación Diversificada a Distancia",
+      "description": "Educación Diversificada a Distancia (2 módulos: 10° y 11°)",
+      "calculatorAllowed": true,
+      "passingScore": 70,
       "subprograms": [
-        "EDAD_1",
-        "EDAD_2"
+        { "id": "EDAD_1", "name": "Parte 1 (10° Año)", "description": "Geometría, Funciones y Estadística de 10°" },
+        { "id": "EDAD_2", "name": "Parte 2 (11° Año)", "description": "Funciones inversas, exponenciales, logarítmicas y Probabilidad de 11°" }
       ],
-      "subjects": []
+      "subjects": [
+        {
+          "id": "matematicas",
+          "name": "Matemáticas",
+          "description": "Prácticas y simulaciones de Matemáticas EDAD",
+          "metadata": "programs/edad/matematica/subject-metadata.json",
+          "convocatorias": [
+            "programs/edad/matematica/parte-1-10mo/convocatorias/2026-c1.json",
+            "programs/edad/matematica/parte-2-11mo/convocatorias/2026-c1.json"
+          ],
+          "sets": []
+        }
+      ]
     },
     {
       "id": "bxm",
       "name": "Bachillerato por Madurez Suficiente (BXM)",
       "description": "Programa de Bachillerato por Madurez Suficiente MEP",
+      "calculatorAllowed": true,
+      "passingScore": 70,
       "subjects": [
         {
           "id": "matematicas",
@@ -41,13 +91,19 @@
           "description": "Prácticas y simulaciones de Matemáticas BXM",
           "schema": "bxm/matematicas/schema.json",
           "groups": "bxm/matematicas/groups.json",
+          "metadata": "programs/bxm/matematica/subject-metadata.json",
+          "convocatorias": [
+            "programs/bxm/matematica/convocatorias/2026-c1.json",
+            "programs/bxm/matematica/convocatorias/2026-c2.json"
+          ],
           "sets": [
             {
               "id": "set_1",
               "name": "Prueba Oficial Convocatoria 02-2026 (Simulación)",
               "description": "Examen oficial de simulación completa con 60 ítems (23 Geometría, 25 Relaciones y Álgebra, 12 Estadística).",
               "file": "bxm/matematicas/set_1.json",
-              "total_items": 60
+              "total_items": 60,
+              "convocatoria": "2026-c2"
             },
             {
               "id": "set_2",

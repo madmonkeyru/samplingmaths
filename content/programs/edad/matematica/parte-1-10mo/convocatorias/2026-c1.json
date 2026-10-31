@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "convocatoriaId": "2026-c1",
+  "year": 2026,
+  "cycle": 1,
+  "programId": "edad",
+  "subprogramId": "parte-1-10mo",
+  "subjectId": "matematica",
+  "title": "Prueba EDAD Parte 1 (10mo) Convocatoria 01-2026",
+  "description": "Blueprint de examen para EDAD Módulo Parte 1 (10° Año) de la primera convocatoria 2026.",
+  "passingScore": 70,
+  "calculatorAllowed": true,
+  "timeLimitMinutes": 150,
+  "totalItems": 55,
+  "sections": [
+    {
+      "id": "geometry",
+      "name": "Geometría (10°)",
+      "itemRange": [1, 25],
+      "totalItems": 25,
+      "itemIds": ["item-math-geo-circ-001"]
+    },
+    {
+      "id": "functions",
+      "name": "Relaciones y Álgebra (10°)",
+      "itemRange": [26, 45],
+      "totalItems": 20,
+      "itemIds": ["item-math-alg-lin-001"]
+    },
+    {
+      "id": "statistics",
+      "name": "Estadística (10°)",
+      "itemRange": [46, 55],
+      "totalItems": 10,
+      "itemIds": []
+    }
+  ],
+  "itemPool": [
+    "item-math-geo-circ-001",
+    "item-math-alg-lin-001"
+  ]
+}

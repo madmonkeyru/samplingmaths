@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { User, Attempt, PracticeConfig } from '../../types';
+import React, { useState, useEffect } from 'react';
+import { User, Attempt, PracticeConfig, ProgramInfo } from '../../types';
 import { storageService } from '../../services/storageService';
+import { dataService } from '../../services/dataService';
 import { PracticeConfigModal } from '../practice/PracticeConfigModal';
 import { EvaluationModulesWidget } from '../practice/EvaluationModulesWidget';
-import { Award, History, ArrowRight } from 'lucide-react';
+import { Award, History, Calendar } from 'lucide-react';
 
 interface LandingPageProps {
   currentUser: User | null;
@@ -17,21 +18,51 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   onStartPractice,
 }) => {
   const [practiceModalMode, setPracticeModalMode] = useState<'area' | 'topic' | null>(null);
+  const [activeProgram, setActiveProgram] = useState<ProgramInfo | undefined>(dataService.getCurrentProgram());
+  const [convocatoria, setConvocatoria] = useState<string>(dataService.getCurrentConvocatoriaId() || '2026-c2');
+
+  useEffect(() => {
+    const updateActiveInfo = () => {
+      setActiveProgram(dataService.getCurrentProgram());
+      setConvocatoria(dataService.getCurrentConvocatoriaId() || '2026-c2');
+    };
+    updateActiveInfo();
+    const unsubscribe = dataService.subscribe(updateActiveInfo);
+    return unsubscribe;
+  }, []);
 
   const attempts: Attempt[] = storageService.getAttempts();
   const perfLevel = storageService.calculatePerformanceLevel(attempts);
+  const isCalcAllowed = dataService.isCalculatorAllowed();
 
   return (
     <div className="landing-page max-w-7xl 2xl:max-w-[1536px] mx-auto px-3.5 sm:px-6 py-5 sm:py-8 space-y-6 text-stone-900 dark:text-slate-100 transition-colors">
-      {/* Welcome Banner */}
+      {/* Welcome Banner with Dynamic Program Context */}
       <div className="bg-stone-900 dark:bg-slate-900 text-white border-2 border-stone-800 dark:border-slate-800 rounded-2xl p-5 sm:p-8 shadow-md relative overflow-hidden">
         <div className="relative z-10 max-w-2xl">
-          <span className="inline-block px-3 py-1 bg-indigo-950/80 text-indigo-300 text-[10px] sm:text-xs font-bold rounded-full border border-indigo-800/60 mb-2.5 sm:mb-3 uppercase tracking-wider">
-            Bachillerato por Madurez Suficiente — Convocatoria 02-2026
-          </span>
+          <div className="flex flex-wrap items-center gap-2 mb-2.5 sm:mb-3">
+            <span className="inline-block px-3 py-1 bg-indigo-950/80 text-indigo-300 text-[10px] sm:text-xs font-bold rounded-full border border-indigo-800/60 uppercase tracking-wider">
+              {activeProgram?.id === 'bxm' ? 'Bachillerato por Madurez Suficiente — Convocatoria 02-2026' : (activeProgram?.name || 'Educación Abierta')}
+            </span>
+            <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-stone-800 text-stone-300 text-[10px] sm:text-xs font-semibold rounded-full border border-stone-700">
+              <Calendar className="w-3 h-3 text-indigo-400" />
+              <span>Convocatoria {convocatoria === '2026-c1' ? '01-2026' : '02-2026'}</span>
+            </span>
+            {!isCalcAllowed && (
+              <span className="px-2.5 py-1 bg-amber-950/70 text-amber-300 text-[10px] sm:text-xs font-bold rounded-full border border-amber-800">
+                Calculadora Prohibida
+              </span>
+            )}
+          </div>
           <h2 className="text-xl sm:text-3xl font-black tracking-tight uppercase leading-tight text-stone-100">
-            Practicas y Simulaciones de Matemáticas BXM 2026 Convocatoria #2
+            {activeProgram?.id === 'bxm'
+              ? 'Practicas y Simulaciones de Matemáticas BXM 2026 Convocatoria #2'
+              : `Prácticas y Simulaciones de ${activeProgram?.name || 'Matemáticas'}`}
           </h2>
+          <p className="text-xs sm:text-sm text-stone-300 font-medium mt-2">
+            {activeProgram?.description ||
+              'Simulación completa con reactivos alineados a la tabla de especificaciones oficial del MEP.'}
+          </p>
         </div>
       </div>
 

@@ -1,0 +1,32 @@
+{
+  "id": "item-math-est-stat-001",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de Posición Relativa",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A3",
+    "affirmation_desc": "Resuelve problemas relacionados con análisis de medidas de posición o variabilidad.",
+    "evidence": "A3.3",
+    "evidence_desc": "Aplica estandarización y coeficiente de variación."
+  },
+  "linked_concepts": ["mep-est-posicion-relativa-cv-04"],
+  "program_applicability": ["EDAD_PARTE_2", "BXM"],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "stem": "En un grupo de estudiantes, la media en un examen fue $\\bar{x} = 70$ y la desviación estándar fue $\\sigma = 8$. Si Carlos obtuvo una calificación de $86$, ¿cuál es su posición relativa (puntaje estandarizado $z$)?",
+  "options": {
+    "A": "$z = +2.0$",
+    "B": "$z = +1.5$",
+    "C": "$z = -2.0$",
+    "D": "$z = +16$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Identificar los datos del problema: $x = 86$, $\\bar{x} = 70$ y $\\sigma = 8$.",
+    "Aplicar la fórmula de estandarización: $z = \\frac{x - \\bar{x}}{\\sigma}$.",
+    "Sustituir: $z = \\frac{86 - 70}{8} = \\frac{16}{8} = 2.0$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

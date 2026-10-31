@@ -1,0 +1,15 @@
+{
+  "programId": "iii_ciclo",
+  "programName": "III Ciclo de la EGB",
+  "subjectId": "matematica",
+  "subjectName": "Matemáticas",
+  "passingScore": 65,
+  "calculatorAllowed": true,
+  "defaultTimeLimitMinutes": 120,
+  "totalExamQuestions": 55,
+  "subprograms": [
+    { "id": "III_CICLO_7", "name": "7° Año", "description": "Prueba de Matemáticas de 7° Año" },
+    { "id": "III_CICLO_8", "name": "8° Año", "description": "Prueba de Matemáticas de 8° Año" },
+    { "id": "III_CICLO_9", "name": "9° Año", "description": "Prueba de Matemáticas de 9° Año" }
+  ]
+}

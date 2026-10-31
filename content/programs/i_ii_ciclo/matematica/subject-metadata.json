@@ -1,0 +1,11 @@
+{
+  "programId": "i_ii_ciclo",
+  "programName": "I y II Ciclo (CICO)",
+  "subjectId": "matematica",
+  "subjectName": "Matemáticas",
+  "passingScore": 65,
+  "calculatorAllowed": false,
+  "defaultTimeLimitMinutes": 120,
+  "totalExamQuestions": 50,
+  "convocatorias": ["2026-c1", "2026-c2"]
+}

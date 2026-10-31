@@ -1,0 +1,171 @@
+[
+  {
+    "id": "mep-alg-concepto-funcion-01",
+    "term": "Función, Dominio, Ámbito e Imágenes",
+    "domain": "functions",
+    "blockName": "2. Relaciones y Álgebra - Funciones",
+    "definition": "Relación $f: A \\to B$ donde a cada valor $x$ del dominio le corresponde una única imagen $y = f(x)$.",
+    "programModules": ["EDAD_PARTE_1", "EDAD_PARTE_2", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Criterio de Función",
+        "latex": "y = f(x)",
+        "description": "Correspondencia unívoca entre conjuntos."
+      }
+    ],
+    "relatedEvidence": ["A1.1", "A1.2"]
+  },
+  {
+    "id": "mep-alg-composicion-02",
+    "term": "Composición de Funciones",
+    "domain": "functions",
+    "blockName": "2. Relaciones y Álgebra - Funciones",
+    "definition": "Evaluación encadenada $(g \\circ f)(x) = g(f(x))$. Requiere que el ámbito de $f$ esté contenido en el dominio de $g$.",
+    "programModules": ["EDAD_PARTE_2", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Composición",
+        "latex": "(g \\circ f)(x) = g(f(x))",
+        "description": "Aplicación sucesiva de funciones."
+      }
+    ],
+    "relatedEvidence": ["A1.3", "A1.4"]
+  },
+  {
+    "id": "mep-alg-funcion-lineal-03",
+    "term": "Función Lineal y Pendiente de una Recta",
+    "domain": "functions",
+    "blockName": "2. Relaciones y Álgebra - Función Lineal",
+    "definition": "Función de primer grado $f(x) = mx + b$. La pendiente $m$ mide la tasa de variación y el signo determina si es creciente, decreciente o constante.",
+    "programModules": ["III_CICLO_8", "III_CICLO_9", "EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Pendiente de la Recta",
+        "latex": "m = \\frac{y_2 - y_1}{x_2 - x_1}",
+        "description": "Variación vertical sobre horizontal."
+      }
+    ],
+    "relatedEvidence": ["A2.1", "A2.2", "A2.3", "A2.4"]
+  },
+  {
+    "id": "mep-alg-funcion-cuadratica-04",
+    "term": "Función Cuadrática, Vértice y Discriminante",
+    "domain": "functions",
+    "blockName": "2. Relaciones y Álgebra - Función Cuadrática",
+    "definition": "Polinomio de segundo grado $f(x) = ax^2 + bx + c$. Su gráfica es una parábola con vértice $V\\left(-\\frac{b}{2a}, -\\frac{\\Delta}{4a}\\right)$ y discriminante $\\Delta = b^2 - 4ac$.",
+    "programModules": ["III_CICLO_9", "EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Vértice y Discriminante",
+        "latex": "\\Delta = b^2 - 4ac, \\quad V = \\left(-\\frac{b}{2a}, -\\frac{\\Delta}{4a}\\right)",
+        "description": "Puntos extremos y raíces de la parábola."
+      }
+    ],
+    "relatedEvidence": ["A2.5", "A2.6", "A3.1"]
+  },
+  {
+    "id": "mep-alg-sistemas-ecuaciones-05",
+    "term": "Sistemas de Ecuaciones Lineales (2x2)",
+    "domain": "functions",
+    "blockName": "2. Relaciones y Álgebra - Sistemas de Ecuaciones",
+    "definition": "Dos ecuaciones con dos incógnitas. Puede tener solución única, infinitas soluciones o solución vacía.",
+    "programModules": ["III_CICLO_9", "EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Sistema 2x2",
+        "latex": "a_1 x + b_1 y = c_1, \\quad a_2 x + b_2 y = c_2",
+        "description": "Intersección analítica de rectas."
+      }
+    ],
+    "relatedEvidence": ["A3.2", "A3.3"]
+  },
+  {
+    "id": "mep-alg-funcion-inversa-06",
+    "term": "Función Inversa",
+    "domain": "functions",
+    "blockName": "2. Relaciones y Álgebra - Funciones Inversas",
+    "definition": "Función $f^{-1}$ que invierte la relación original, cumpliendo $f^{-1}(f(x)) = x$. Exige biyectividad (o inyectividad restringida).",
+    "programModules": ["EDAD_PARTE_2", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Inversa Lineal",
+        "latex": "f^{-1}(x) = \\frac{x - b}{m}",
+        "description": "Despeje algebraico de la variable independiente."
+      }
+    ],
+    "relatedEvidence": ["A4.1", "A4.2", "A4.3", "A4.4"]
+  },
+  {
+    "id": "mep-alg-funcion-raiz-cuadrada-07",
+    "term": "Función Raíz Cuadrada y sus Transformaciones",
+    "domain": "functions",
+    "blockName": "2. Relaciones y Álgebra - Raíz Cuadrada",
+    "definition": "Criterio de la forma $f(x) = a\\sqrt{x + b} + c$. Su dominio requiere $x + b \\ge 0$.",
+    "programModules": ["EDAD_PARTE_2", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Forma Canónica Raíz Cuadrada",
+        "latex": "f(x) = a\\sqrt{x + b} + c",
+        "description": "Vértice o punto de partida en $(-b, c)$."
+      }
+    ],
+    "relatedEvidence": ["A4.5", "A4.6", "A4.7"]
+  },
+  {
+    "id": "mep-alg-exponencial-logaritmica-08",
+    "term": "Función Exponencial y Logarítmica",
+    "domain": "functions",
+    "blockName": "2. Relaciones y Álgebra - Exponenciales y Logaritmos",
+    "definition": "Funciones inversas $f(x) = a^x$ y $g(x) = \\log_a(x)$ con base $a > 0, a \\neq 1$.",
+    "programModules": ["EDAD_PARTE_2", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Equivalencia Fundamental",
+        "latex": "y = a^x \\iff x = \\log_a(y)",
+        "description": "Definición de logaritmo como exponente."
+      }
+    ],
+    "relatedEvidence": ["A5.1", "A5.2", "A5.3", "A5.5", "A6.1"]
+  },
+  {
+    "id": "mep-alg-propiedades-logaritmos-09",
+    "term": "Propiedades de Logaritmos y Ecuaciones Exponenciales",
+    "domain": "functions",
+    "blockName": "2. Relaciones y Álgebra - Logaritmos",
+    "definition": "Reglas de producto, cociente y potencia para resolver ecuaciones no algebraicas.",
+    "programModules": ["EDAD_PARTE_2", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Propiedades Operativas de Logaritmos",
+        "latex": "\\log_a(uv) = \\log_a u + \\log_a v, \\quad \\log_a(u/v) = \\log_a u - \\log_a v, \\quad \\log_a(u^k) = k\\log_a u",
+        "description": "Leyes fundamentales de simplificación logarítmica."
+      }
+    ],
+    "relatedEvidence": ["A5.4", "A5.6", "A5.7", "A5.8", "A5.9"]
+  },
+  {
+    "id": "mep-alg-primaria-patrones-10",
+    "term": "Sucesiones y Patrones Numéricos",
+    "domain": "functions",
+    "blockName": "Relaciones y Álgebra Elemental",
+    "definition": "Identificación de regularidades numéricas, secuencias aritméticas y tablas de proporcionalidad sin calculadora.",
+    "programModules": ["I_II_CICLO"],
+    "calculatorAllowed": false,
+    "formulas": [
+      {
+        "name": "Patrón Aditivo",
+        "latex": "a_n = a_1 + (n - 1)d",
+        "description": "Constante de adición en sucesiones elementales."
+      }
+    ]
+  }
+]

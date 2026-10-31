@@ -1,28 +1,50 @@
-import React, { useState } from 'react';
-import { DomainArea, PracticeConfig } from '../../types';
+import React, { useState, useEffect } from 'react';
+import { DomainArea, PracticeConfig, ProgramInfo } from '../../types';
 import { dataService } from '../../services/dataService';
-import { Play, Clock, Target, Layers, CheckCircle2, ArrowRight } from 'lucide-react';
+import {
+  Play,
+  Layers,
+  Target,
+  Clock,
+  ArrowRight,
+  CheckCircle2,
+  Calendar,
+  Calculator,
+  Ban,
+} from 'lucide-react';
 
-export interface EvaluationModulesWidgetProps {
+interface EvaluationModulesWidgetProps {
   onStartSimulation: () => void;
   onStartPractice: (config: PracticeConfig) => void;
-  className?: string;
 }
 
 export const EvaluationModulesWidget: React.FC<EvaluationModulesWidgetProps> = ({
   onStartSimulation,
   onStartPractice,
-  className = '',
 }) => {
   const [activeTab, setActiveTab] = useState<'simulation' | 'area' | 'topic'>('simulation');
+  const [activeProgram, setActiveProgram] = useState<ProgramInfo | undefined>(dataService.getCurrentProgram());
 
-  // Practice configuration state
+  // Practice state
   const [selectedSet, setSelectedSet] = useState<string>('all');
   const [selectedArea, setSelectedArea] = useState<DomainArea>('geometry');
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
   const [itemCount, setItemCount] = useState<number | 'all'>(10);
   const [enableTimer, setEnableTimer] = useState<boolean>(true);
   const [timerDuration, setTimerDuration] = useState<number>(30);
+  const [selectedConvocatoria, setSelectedConvocatoria] = useState<string>(
+    dataService.getCurrentConvocatoriaId() || '2026-c2'
+  );
+
+  useEffect(() => {
+    const updateProgram = () => {
+      setActiveProgram(dataService.getCurrentProgram());
+      setSelectedConvocatoria(dataService.getCurrentConvocatoriaId() || '2026-c2');
+    };
+    updateProgram();
+    const unsubscribe = dataService.subscribe(updateProgram);
+    return unsubscribe;
+  }, []);
 
   const sets = dataService.getSets();
   const availableTopics = dataService.getTopicsByArea(selectedArea, selectedSet);
@@ -31,89 +53,140 @@ export const EvaluationModulesWidget: React.FC<EvaluationModulesWidgetProps> = (
   const funcCount = dataService.getItemsByArea('functions', selectedSet).length;
   const statCount = dataService.getItemsByArea('statistics', selectedSet).length;
 
+  const isCalcAllowed = dataService.isCalculatorAllowed();
+  const passingScore = dataService.getPassingScore();
+
   const handleStartPractice = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
+
     const config: PracticeConfig = {
-      mode: activeTab === 'topic' ? 'topic' : 'area',
+      mode: activeTab === 'area' ? 'area' : 'topic',
+      programId: dataService.getCurrentProgramId(),
+      convocatoriaId: selectedConvocatoria,
       setId: selectedSet,
       area: selectedArea,
-      topic: activeTab === 'topic' ? selectedTopic : 'all',
-      itemCount,
-      enableTimer,
+      topic: activeTab === 'topic' && selectedTopic !== 'all' ? selectedTopic : undefined,
+      itemCount: itemCount,
+      enableTimer: enableTimer,
       timerDurationMinutes: timerDuration,
     };
+
     onStartPractice(config);
   };
 
   return (
-    <div
-      className={`lg:col-span-7 bg-[#fefcf8] dark:bg-slate-900 border-2 border-stone-800 dark:border-slate-800 rounded-2xl p-5 sm:p-7 shadow-xs flex flex-col justify-between min-h-[380px] ${className}`}
-    >
+    <div className="lg:col-span-7 bg-[#fefcf8] dark:bg-slate-900 border-2 border-stone-800 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col justify-between">
       <div>
-        <div className="flex items-center justify-between gap-2 mb-4 pb-3 border-b-2 border-stone-200 dark:border-slate-800">
-          <span className="text-xs font-black uppercase tracking-wider text-stone-700 dark:text-slate-300 flex items-center gap-2">
-            <Play className="w-4 h-4 text-indigo-600 dark:text-indigo-400 fill-indigo-600 dark:fill-indigo-400" />
-            Módulos de Evaluación y Práctica
-          </span>
+        {/* Header with Title and Segmented Control */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3.5 border-b-2 border-stone-200 dark:border-slate-800 mb-4">
+          <div className="min-w-0">
+            <h3 className="text-xs font-black uppercase tracking-wider text-stone-700 dark:text-slate-300 truncate">
+              Módulos de Evaluación ({activeProgram?.name || 'BXM'})
+            </h3>
+            <p className="text-[11px] text-stone-500 dark:text-slate-400 font-bold mt-0.5">
+              Simulador oficial y banco modular
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2">
+            {/* Convocatoria Selector */}
+            <div className="flex items-center gap-1 bg-stone-100 dark:bg-slate-800 px-2 py-1 rounded-lg border border-stone-300 dark:border-slate-700 text-[11px] font-bold">
+              <Calendar className="w-3 h-3 text-indigo-500" />
+              <select
+                value={selectedConvocatoria}
+                onChange={(e) => {
+                  setSelectedConvocatoria(e.target.value);
+                  dataService.setConvocatoriaId(e.target.value);
+                }}
+                className="bg-transparent text-stone-800 dark:text-slate-200 focus:outline-none cursor-pointer"
+              >
+                <option value="2026-c2">02-2026</option>
+                <option value="2026-c1">01-2026</option>
+              </select>
+            </div>
+
+            {/* Segmented Control Buttons */}
+            <div className="flex bg-stone-100 dark:bg-slate-800 p-1 rounded-xl border border-stone-300 dark:border-slate-700 gap-1 text-xs font-bold w-full sm:w-auto">
+              <button
+                type="button"
+                onClick={() => setActiveTab('simulation')}
+                className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg text-center transition flex items-center justify-center gap-1.5 min-h-[34px] cursor-pointer ${
+                  activeTab === 'simulation'
+                    ? 'bg-indigo-600 text-white font-black shadow-2xs'
+                    : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white'
+                }`}
+              >
+                <Play className="w-3 h-3 stroke-[2.5]" />
+                <span>Simulación</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setActiveTab('area')}
+                className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg text-center transition flex items-center justify-center gap-1.5 min-h-[34px] cursor-pointer ${
+                  activeTab === 'area'
+                    ? 'bg-indigo-600 text-white font-black shadow-2xs'
+                    : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white'
+                }`}
+              >
+                <Layers className="w-3 h-3 stroke-[2.5]" />
+                <span>Por Área</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setActiveTab('topic')}
+                className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg text-center transition flex items-center justify-center gap-1.5 min-h-[34px] cursor-pointer ${
+                  activeTab === 'topic'
+                    ? 'bg-indigo-600 text-white font-black shadow-2xs'
+                    : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white'
+                }`}
+              >
+                <Target className="w-3 h-3 stroke-[2.5]" />
+                <span>Por Tema</span>
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* Segmented Control Toggle */}
-        <div className="grid grid-cols-3 gap-1.5 p-1.5 bg-stone-200/80 dark:bg-slate-800/80 rounded-xl border-2 border-stone-300 dark:border-slate-700 mb-6">
-          <button
-            onClick={() => setActiveTab('simulation')}
-            className={`py-2 px-2.5 rounded-lg text-xs font-extrabold transition-all flex items-center justify-center gap-1.5 min-h-[40px] cursor-pointer ${
-              activeTab === 'simulation'
-                ? 'bg-indigo-600 text-white shadow-xs border border-indigo-700'
-                : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white hover:bg-stone-100/50 dark:hover:bg-slate-700/50'
-            }`}
-          >
-            <Clock className="w-3.5 h-3.5 shrink-0" />
-            <span className="truncate">Simulación</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab('area')}
-            className={`py-2 px-2.5 rounded-lg text-xs font-extrabold transition-all flex items-center justify-center gap-1.5 min-h-[40px] cursor-pointer ${
-              activeTab === 'area'
-                ? 'bg-indigo-600 text-white shadow-xs border border-indigo-700'
-                : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white hover:bg-stone-100/50 dark:hover:bg-slate-700/50'
-            }`}
-          >
-            <Layers className="w-3.5 h-3.5 shrink-0" />
-            <span className="truncate">Por Área</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab('topic')}
-            className={`py-2 px-2.5 rounded-lg text-xs font-extrabold transition-all flex items-center justify-center gap-1.5 min-h-[40px] cursor-pointer ${
-              activeTab === 'topic'
-                ? 'bg-indigo-600 text-white shadow-xs border border-indigo-700'
-                : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white hover:bg-stone-100/50 dark:hover:bg-slate-700/50'
-            }`}
-          >
-            <Target className="w-3.5 h-3.5 shrink-0" />
-            <span className="truncate">Por Tema</span>
-          </button>
+        {/* Program Constraint Banner */}
+        <div className="flex items-center justify-between bg-stone-100/70 dark:bg-slate-800/40 p-2.5 rounded-xl border border-stone-200 dark:border-slate-700/80 text-[11px] font-bold text-stone-700 dark:text-slate-300 mb-4">
+          <div className="flex items-center gap-2">
+            {isCalcAllowed ? (
+              <Calculator className="w-3.5 h-3.5 text-stone-500" />
+            ) : (
+              <Ban className="w-3.5 h-3.5 text-amber-500" />
+            )}
+            <span>
+              {isCalcAllowed
+                ? 'Uso de calculadora estándar o científica permitido'
+                : 'I y II Ciclo: Uso de calculadora estrictamente prohibido'}
+            </span>
+          </div>
+          <div className="text-indigo-600 dark:text-indigo-400 font-black">
+            Nota mínima: {passingScore}
+          </div>
         </div>
 
-        {/* Dynamic Content Details based on Selected Tab */}
+        {/* Tab Content */}
         {activeTab === 'simulation' && (
           <div className="space-y-4 animate-in fade-in duration-200">
             <div className="flex items-start gap-3.5">
-              <div className="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 border-2 border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 flex items-center justify-center shrink-0">
-                <Clock className="w-6 h-6 stroke-[2.2]" />
+              <div className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 border-2 border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 flex items-center justify-center shrink-0">
+                <Play className="w-5 h-5 stroke-[2.2] fill-current" />
               </div>
               <div>
-                <h3 className="text-base sm:text-lg font-black text-stone-900 dark:text-slate-100">
-                  Prueba de Simulación Oficial
+                <h3 className="text-sm sm:text-base font-black text-stone-900 dark:text-slate-100">
+                  Simulación Oficial MEP ({selectedConvocatoria === '2026-c1' ? '01-2026' : '02-2026'})
                 </h3>
-                <p className="text-xs text-stone-600 dark:text-slate-400 leading-relaxed font-medium mt-1">
-                  Examen completo de 60 ítems (preguntas) cronometrado a 150 minutos (2 horas y media).
+                <p className="text-xs text-stone-600 dark:text-slate-400 leading-relaxed font-medium mt-0.5">
+                  Prueba de 60 reactivos con cronómetro oficial de 150 minutos. Evalúa Geometría,
+                  Funciones y Estadística con los mismos estándares de la convocatoria oficial.
                 </p>
               </div>
             </div>
 
-            <div className="bg-stone-100/80 dark:bg-slate-800/60 rounded-xl p-3.5 border border-stone-200 dark:border-slate-700 text-xs space-y-1.5 text-stone-700 dark:text-slate-300 font-medium">
+            <div className="bg-amber-50/60 dark:bg-slate-800/60 p-3.5 rounded-xl border border-amber-200/70 dark:border-slate-700 space-y-1.5 text-xs text-stone-700 dark:text-slate-300 font-medium">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0" />
                 <span>60 ítems distribuidos entre Geometría, Álgebra y Estadística</span>

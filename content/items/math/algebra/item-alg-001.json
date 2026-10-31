@@ -1,0 +1,32 @@
+{
+  "id": "item-math-alg-lin-001",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función Lineal y Pendiente",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A2",
+    "affirmation_desc": "Resuelve problemas utilizando distintas representaciones de algunas funciones algebraicas.",
+    "evidence": "A2.3",
+    "evidence_desc": "Determina la pendiente de una recta dada en forma gráfica o algebraica."
+  },
+  "linked_concepts": ["mep-alg-funcion-lineal-03"],
+  "program_applicability": ["III_CICLO_8", "III_CICLO_9", "EDAD_PARTE_1", "BXM"],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "stem": "Considere la recta que pasa por los puntos $A(2, 5)$ y $B(6, 13)$. ¿Cuál es el valor de la pendiente $m$ de dicha recta?",
+  "options": {
+    "A": "$m = 2$",
+    "B": "$m = -2$",
+    "C": "$m = \\frac{1}{2}$",
+    "D": "$m = 8$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Identificar los puntos $(x_1, y_1) = (2, 5)$ y $(x_2, y_2) = (6, 13)$.",
+    "Aplicar la fórmula de la pendiente: $m = \\frac{y_2 - y_1}{x_2 - x_1}$.",
+    "Calcular: $m = \\frac{13 - 5}{6 - 2} = \\frac{8}{4} = 2$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}
