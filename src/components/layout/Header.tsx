@@ -8,7 +8,6 @@ import {
   BookOpen,
   User as UserIcon,
   LogOut,
-  Library,
   GraduationCap,
   ChevronDown,
   Calculator,
@@ -19,8 +18,7 @@ interface HeaderProps {
   currentUser: User | null;
   onUserChanged: (user: User | null) => void;
   onNavigateHome: () => void;
-  onNavigateResources?: () => void;
-  currentView?: 'landing' | 'test' | 'results' | 'resources';
+  currentView?: 'welcome' | 'hub' | 'landing' | 'test' | 'results' | 'resources';
   onProgramChange?: (programId: string) => void;
 }
 
@@ -28,7 +26,6 @@ export const Header: React.FC<HeaderProps> = ({
   currentUser,
   onUserChanged,
   onNavigateHome,
-  onNavigateResources,
   currentView,
   onProgramChange,
 }) => {
@@ -77,6 +74,7 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={onNavigateHome}
               className="flex items-center gap-2.5 sm:gap-3 text-left group focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded-lg p-1 min-h-[44px] cursor-pointer"
+              title="Ir a la página de bienvenida"
             >
               <div className="p-2 sm:p-2.5 bg-indigo-600 text-white rounded-xl group-hover:bg-indigo-500 transition font-black shrink-0 shadow-xs">
                 <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
@@ -170,21 +168,6 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
 
           <div className="flex items-center gap-2 shrink-0">
-            {onNavigateResources && !isTestView && (
-              <button
-                onClick={onNavigateResources}
-                className={`px-3 py-2 rounded-xl font-extrabold text-xs flex items-center gap-1.5 transition border-2 border-stone-700 dark:border-slate-700 min-h-[44px] cursor-pointer ${
-                  currentView === 'resources'
-                    ? 'bg-amber-100 text-stone-950 font-black border-amber-300'
-                    : 'bg-stone-800/90 text-stone-200 hover:bg-stone-800 hover:text-white hover:border-indigo-500'
-                }`}
-                title="Tabla de Especificaciones, Diccionario y Fórmulas"
-              >
-                <Library className="w-4 h-4 stroke-[2.5]" />
-                <span className="hidden md:inline">Especificaciones & Recursos</span>
-              </button>
-            )}
-
             <ThemeToggle />
 
             {currentUser ? (

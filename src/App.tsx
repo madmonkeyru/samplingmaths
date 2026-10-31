@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react';
 import { User, PracticeConfig, TestSession } from './types';
 import { storageService } from './services/storageService';
+import { dataService } from './services/dataService';
 import { Header } from './components/layout/Header';
-import { LandingPage } from './components/pages/LandingPage';
+import { WelcomePage } from './components/pages/WelcomePage';
+import { SubjectHubPage } from './components/pages/LandingPage';
 import { TestShell } from './components/test/TestShell';
 import { ResultsPage } from './components/results/ResultsPage';
 
-import { ResourceLibraryPage } from './components/knowledge/ResourceLibraryPage';
-
 export function App() {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
-  const [currentView, setCurrentView] = useState<'landing' | 'test' | 'results' | 'resources'>('landing');
-  const [resourceTab, setResourceTab] = useState<'specs' | 'terms' | 'formulas'>('specs');
+  const [currentView, setCurrentView] = useState<'welcome' | 'hub' | 'test' | 'results'>('welcome');
   const [activeConfig, setActiveConfig] = useState<PracticeConfig | null>(null);
   const [completedSession, setCompletedSession] = useState<TestSession | null>(null);
 
@@ -19,12 +18,24 @@ export function App() {
     setCurrentUser(storageService.getCurrentUser());
   }, []);
 
+  const handleSelectProgram = async (programId: string) => {
+    await dataService.setProgram(programId);
+    setCurrentView('hub');
+  };
+
+  const handleEnterMvpMath = async () => {
+    await dataService.setProgram('bxm');
+    setCurrentView('hub');
+  };
+
   const handleStartSimulation = () => {
     const config: PracticeConfig = {
       mode: 'simulation',
       itemCount: 60,
       enableTimer: true,
       timerDurationMinutes: 150,
+      programId: dataService.getCurrentProgramId(),
+      convocatoriaId: dataService.getCurrentConvocatoriaId() || '2026-c2',
     };
     setActiveConfig(config);
     setCurrentView('test');
@@ -50,7 +61,7 @@ export function App() {
   const handleNewTest = () => {
     setActiveConfig(null);
     setCompletedSession(null);
-    setCurrentView('landing');
+    setCurrentView('hub');
   };
 
   const handleStartPracticeByItems = (itemIds: number[], title: string) => {
@@ -60,6 +71,8 @@ export function App() {
       itemCount: itemIds.length,
       enableTimer: false,
       timerDurationMinutes: 60,
+      programId: dataService.getCurrentProgramId(),
+      convocatoriaId: dataService.getCurrentConvocatoriaId() || '2026-c2',
     };
     setActiveConfig(config);
     setCurrentView('test');
@@ -70,28 +83,32 @@ export function App() {
       <Header
         currentUser={currentUser}
         onUserChanged={setCurrentUser}
-        onNavigateHome={() => setCurrentView('landing')}
-        onNavigateResources={() => {
-          setResourceTab('specs');
-          setCurrentView('resources');
-        }}
+        onNavigateHome={() => setCurrentView('welcome')}
         currentView={currentView}
+        onProgramChange={(_progId) => {
+          // If on welcome, let user remain or switch to hub
+          if (currentView !== 'welcome' && currentView !== 'test') {
+            setCurrentView('hub');
+          }
+        }}
       />
 
       <main className="flex-1">
-        {currentView === 'landing' && (
-          <LandingPage
-            currentUser={currentUser}
-            onStartSimulation={handleStartSimulation}
-            onStartPractice={handleStartPractice}
+        {currentView === 'welcome' && (
+          <WelcomePage
+            onSelectProgram={handleSelectProgram}
+            onEnterMvpMath={handleEnterMvpMath}
           />
         )}
 
-        {currentView === 'resources' && (
-          <ResourceLibraryPage
-            initialTab={resourceTab}
-            onGoHome={() => setCurrentView('landing')}
+        {currentView === 'hub' && (
+          <SubjectHubPage
+            currentUser={currentUser}
+            onNavigateHome={() => setCurrentView('welcome')}
+            onStartSimulation={handleStartSimulation}
+            onStartPractice={handleStartPractice}
             onStartPracticeByItems={handleStartPracticeByItems}
+            onSwitchToBxm={handleEnterMvpMath}
           />
         )}
 
@@ -104,7 +121,7 @@ export function App() {
             session={completedSession}
             onRetry={handleRetry}
             onNewTest={handleNewTest}
-            onGoHome={() => setCurrentView('landing')}
+            onGoHome={() => setCurrentView('hub')}
           />
         )}
       </main>
