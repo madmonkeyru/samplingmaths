@@ -1,17 +1,26 @@
 # MEP-EA-01 — Costa Rican Educación Abierta Test Simulator & Practice Platform
 
-**MEP-EA-01** is a high-fidelity web-based test simulator and learning practice platform designed for students preparing for the Costa Rican *Bachillerato por Madurez Suficiente* (BXM) exam (Convocatoria 02-2026) and the broader *Educación Abierta* framework (CICO, III Ciclo, EDAD, BXM).
+**MEP-EA-01** is a high-fidelity web-based test simulator and learning practice platform designed for students preparing for the Costa Rican *Bachillerato por Madurez Suficiente* (BXM) exam (Convocatorias 01-2026 & 02-2026) and the broader *Educación Abierta* framework (I&II Ciclo CICO, III Ciclo, EDAD, BXM).
 
 ---
 
 ## 🚀 Key Features
 
-- **Full Exam Simulation**: 60-item timed simulation following official MEP specifications and distributions across Geometry, Functions & Algebra, and Statistics & Probability.
-- **Modular Practice Engine**: Filter practice sessions by specific Domain Area (Geometry, Functions, Statistics) or Topic across **170 high-quality question items** distributed in 4 specialized sets (`set_1` through `set_4`), with configurable item counts and optional timers.
-- **Multi-Program Content Architecture**:
-  - Centralized content manifest registry (`content/manifest.json`) supporting the four MEP Educación Abierta programs: **I&II CICO**, **III Ciclo**, **EDAD**, and **BXM**.
-  - Subject-modular question bank management with set-specific metadata, dedicated group files (`groups.json`), and schema validation (`schema.json`).
-  - Dynamic asynchronous loading via Vite `import.meta.glob` combined with instant synchronous preloading for seamless user navigation.
+- **Multi-Program Architecture Across 4 Testing Tracks**:
+  - **I & II Ciclo (CICO)**: Single monolithic primary-level exam with strict calculator prohibition rules (`calculatorAllowed: false`).
+  - **III Ciclo**: 3 lower secondary-level exams (7°, 8°, and 9° Año).
+  - **EDAD**: 2 upper secondary-level exams separated into distinct testing modules (Parte 1 / 10° Año, Parte 2 / 11° Año).
+  - **BXM**: Single monolithic exam covering combined 10° & 11° grade concepts.
+- **Biannual Convocatoria Blueprints**:
+  - Decoupled exam assembly manifests supporting multiple annual testing windows (e.g. Convocatoria 01-2026 and 02-2026) with passing score thresholds, item weights, and section boundaries.
+- **Decoupled Math Concept Library**:
+  - Centralized concept item bank located in `content/library/math/` (`geometry_concepts.json`, `algebra_concepts.json`, `statistics_concepts.json`).
+  - Standardized concept metadata: unique ID, domain, curriculum module tags, formal definitions, KaTeX formulas, examples, and official criteria links.
+- **Decoupled Item Repository**:
+  - Atomic question assets located in `content/items/math/`, tagged with linked concepts, evidence targets, cognitive levels, and calculator constraints.
+- **Full Exam Simulation & Practice Engine**:
+  - Timed 60-item simulation following official MEP specifications and distributions across Geometry, Functions & Algebra, and Statistics & Probability.
+  - Modular practice filterable by Domain Area, Topic, or Question Set across **170+ high-quality question items**, with configurable item counts and optional timers.
 - **Dynamic Math & Visual Rendering Engine**:
   - LaTeX mathematical equations rendered via **KaTeX** with inline (`$...$`) and block (`$$...$$`) support.
   - Interactive and vector-based 2D/3D visualizations (Cartesian planes, circles, transformations, function graphs, box plots, frequency/contingency tables, Venn diagrams) powered by custom SVG composite components.
@@ -80,12 +89,6 @@ Run unit tests using Vitest:
 npx vitest run
 ```
 
-Run Vitest in watch mode:
-
-```bash
-npx vitest
-```
-
 ### Linting
 
 Run Oxlint:
@@ -99,19 +102,31 @@ npm run lint
 ## 📂 Project Structure
 
 ```
-├── content/                     # Question bank and manifest registry
-│   ├── manifest.json            # Central registry mapping programs, subjects, sets, schemas
+├── content/                     # Question bank, concept library, and blueprints
+│   ├── manifest.json            # Central registry mapping programs, libraries, subjects
+│   ├── schema.json              # Item content JSON schema validator
+│   ├── library/                 # Centralized Math Concept Registry
+│   │   └── math/
+│   │       ├── geometry_concepts.json
+│   │       ├── algebra_concepts.json
+│   │       └── statistics_concepts.json
+│   ├── items/                   # Centralized Reusable Item Repository
+│   │   └── math/
+│   │       ├── geometry/
+│   │       ├── algebra/
+│   │       └── statistics/
+│   ├── programs/                # Program-specific rules & convocatoria assembly blueprints
+│   │   ├── bxm/                 # BXM subject metadata & convocatorias
+│   │   ├── edad/                # EDAD modules (Parte 1 & Parte 2) & convocatorias
+│   │   ├── iii_ciclo/           # III Ciclo subprograms (7°, 8°, 9°) & convocatorias
+│   │   └── i_ii_ciclo/          # I & II Ciclo (CICO) blueprints (calculator prohibited)
 │   └── bxm/
-│       └── matematicas/         # BXM Mathematics subject content
-│           ├── set_1.json       # Official Simulation Set (60 items)
-│           ├── set_2.json       # Additional Practice Expansion Set (70 items)
-│           ├── set_3.json       # Intensive Practice Refinement Set (20 items)
-│           ├── set_4.json       # Advanced Mastery & Real-world Contexts Set (20 items)
-│           ├── groups.json      # Shared context stimulus items
-│           └── schema.json      # Subject JSON schema validator
+│       └── matematicas/         # BXM verified sets (set_1 through set_4) & groups
 ├── project_docs/                # Requirements, SRS, architecture specs
-│   ├── SRS.md
-│   └── ...
+│   ├── SRS.md                   # System Requirements Specification (v2.0)
+│   ├── Strategy_for_Developing_Reusable_Visualisation_Components.md
+│   ├── images/                  # Architecture and UI screenshots
+│   └── reference_dumps/         # Raw text and PDF extractions
 ├── src/
 │   ├── components/              # UI components (common, knowledge, layout, pages, practice, test, visuals)
 │   ├── services/                # Services (dataService, storageService, knowledgeService)
