@@ -1,0 +1,192 @@
+[
+  {
+    "id": "mep-geo-circunferencia-01",
+    "term": "Circunferencia",
+    "domain": "geometry",
+    "blockName": "1. Geometría - Geometría Analítica",
+    "definition": "Lugar geométrico de todos los puntos del plano cartesiano que equidistan de un punto fijo denominado centro $(h, k)$ a una distancia constante llamada radio $r > 0$.",
+    "programModules": ["EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Ecuación Ordinaria de la Circunferencia",
+        "latex": "(x - h)^2 + (y - k)^2 = r^2",
+        "description": "Representación algebraica con centro en $(h, k)$ y radio $r$."
+      }
+    ],
+    "examples": ["Para centro $(3, -2)$ y radio $r = 5$, la ecuación es $(x - 3)^2 + (y + 2)^2 = 25$."],
+    "relatedEvidence": ["A1.1", "A1.2", "A1.3"]
+  },
+  {
+    "id": "mep-geo-centro-radio-02",
+    "term": "Centro y Radio de la Circunferencia",
+    "domain": "geometry",
+    "blockName": "1. Geometría - Geometría Analítica",
+    "definition": "El centro es el punto $(h, k)$ desde el cual se mide la distancia hacia cualquier punto de la circunferencia. El radio $r$ representa dicha distancia fija. El diámetro es $d = 2r$.",
+    "programModules": ["EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Fórmula del Radio y Diámetro",
+        "latex": "r = \\sqrt{(x - h)^2 + (y - k)^2}, \\quad d = 2r",
+        "description": "Distancia euclidiana del centro al contorno."
+      }
+    ],
+    "examples": ["Si la ecuación es $(x + 4)^2 + y^2 = 16$, el centro es $(-4, 0)$ y el radio es $4$."],
+    "relatedEvidence": ["A1.1", "A1.2"]
+  },
+  {
+    "id": "mep-geo-traslacion-03",
+    "term": "Traslación de una Circunferencia",
+    "domain": "geometry",
+    "blockName": "1. Geometría - Geometría Analítica",
+    "definition": "Transformación rígida que desplaza el centro $(h, k)$ mediante un vector horizontal ($a$) y vertical ($b$), obteniendo el nuevo centro $(h+a, k+b)$ manteniendo invariante el radio.",
+    "programModules": ["EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Ecuación Trasladada",
+        "latex": "(x - (h + a))^2 + (y - (k + b))^2 = r^2",
+        "description": "Desplazamiento horizontal en $a$ y vertical en $b$."
+      }
+    ],
+    "examples": ["Mover $(x - 1)^2 + (y - 2)^2 = 9$ tres unidades a la derecha y dos hacia abajo genera $(x - 4)^2 + y^2 = 9$."],
+    "relatedEvidence": ["A2.1", "A2.2"]
+  },
+  {
+    "id": "mep-geo-posicion-punto-04",
+    "term": "Posición Relativa de un Punto respecto a una Circunferencia",
+    "domain": "geometry",
+    "blockName": "1. Geometría - Geometría Analítica",
+    "definition": "Clasificación de un punto $P(x_0, y_0)$ según su distancia al centro respecto al radio: Interior ($d < r$), Sobre la circunferencia ($d = r$), o Exterior ($d > r$).",
+    "programModules": ["EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Condición de Pertenencia",
+        "latex": "(x_0 - h)^2 + (y_0 - k)^2 \\lessgtr r^2",
+        "description": "Comparación directa con el radio al cuadrado."
+      }
+    ],
+    "relatedEvidence": ["A3.1"]
+  },
+  {
+    "id": "mep-geo-posicion-recta-05",
+    "term": "Posición Relativa de una Recta y una Circunferencia",
+    "domain": "geometry",
+    "blockName": "1. Geometría - Geometría Analítica",
+    "definition": "Intersección entre recta $y = mx + b$ y la circunferencia: Secante (2 puntos, $\\Delta > 0$), Tangente (1 punto, $\\Delta = 0$) o Exterior (0 puntos, $\\Delta < 0$).",
+    "programModules": ["EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Criterio del Discriminante",
+        "latex": "\\Delta > 0 \\iff \\text{Secante}, \\quad \\Delta = 0 \\iff \\text{Tangente}, \\quad \\Delta < 0 \\iff \\text{Exterior}",
+        "description": "Solución de la ecuación cuadrática de intersección."
+      }
+    ],
+    "relatedEvidence": ["A3.2", "A3.3"]
+  },
+  {
+    "id": "mep-geo-rectas-paralelas-perp-06",
+    "term": "Rectas Paralelas y Perpendiculares",
+    "domain": "geometry",
+    "blockName": "1. Geometría - Geometría Analítica",
+    "definition": "Dos rectas son Paralelas si $m_1 = m_2$ y Perpendiculares si el producto de sus pendientes es $-1$ ($m_1 \\cdot m_2 = -1$).",
+    "programModules": ["III_CICLO_9", "EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Criterios de Pendientes",
+        "latex": "m_1 = m_2 \\iff L_1 \\parallel L_2, \\quad m_1 \\cdot m_2 = -1 \\iff L_1 \\perp L_2",
+        "description": "Relación métrica angular entre rectas."
+      }
+    ],
+    "relatedEvidence": ["A3.4"]
+  },
+  {
+    "id": "mep-geo-poligono-regular-07",
+    "term": "Polígono Regular y sus Elementos",
+    "domain": "geometry",
+    "blockName": "1. Geometría - Polígonos",
+    "definition": "Figura plana con $n$ lados congruentes y ángulos congruentes. Sus elementos son radio $r$, apotema $a$, ángulo central y perímetro $P = n \\cdot l$.",
+    "programModules": ["III_CICLO_8", "EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Área y Ángulos de Polígono Regular",
+        "latex": "S_i = 180^\\circ(n - 2), \\quad m\\angle i = \\frac{180^\\circ(n - 2)}{n}, \\quad A = \\frac{P \\cdot a}{2}",
+        "description": "Fórmulas elementales de polígonos regulares."
+      }
+    ],
+    "relatedEvidence": ["A4.1"]
+  },
+  {
+    "id": "mep-geo-poligono-irregular-08",
+    "term": "Área de Polígonos Irregulares por Coordenadas",
+    "domain": "geometry",
+    "blockName": "1. Geometría - Polígonos",
+    "definition": "Cálculo del área mediante descomposición en triángulos/rectángulos o la fórmula de Gauss de las coordenadas cartesianas.",
+    "programModules": ["EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Fórmula de Gauss",
+        "latex": "A = \\frac{1}{2} |\\sum (x_i y_{i+1} - y_i x_{i+1})|",
+        "description": "Determinante matricial de vértices."
+      }
+    ],
+    "relatedEvidence": ["A4.2", "A4.3"]
+  },
+  {
+    "id": "mep-geo-cuerpos-3d-09",
+    "term": "Cilindro Circular Recto y Esfera",
+    "domain": "geometry",
+    "blockName": "1. Geometría - Visualización Espacial",
+    "definition": "Cuerpos de revolución tridimensionales. Los cortes paralelos y oblicuos generan círculos o elipses.",
+    "programModules": ["III_CICLO_9", "EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Sección Plana Esférica",
+        "latex": "r_{seccion} = \\sqrt{R^2 - d^2}",
+        "description": "Teorema de Pitágoras en cortes esféricos."
+      }
+    ],
+    "relatedEvidence": ["A5.1", "A5.2", "A5.3", "A5.4"]
+  },
+  {
+    "id": "mep-geo-transformaciones-10",
+    "term": "Transformaciones en el Plano (Homotecia, Traslación, Reflexión, Rotación)",
+    "domain": "geometry",
+    "blockName": "1. Geometría - Transformaciones en el Plano",
+    "definition": "Mapeos geométricos en el plano cartesiano que preservan formas o dimensiones.",
+    "programModules": ["III_CICLO_7", "III_CICLO_8", "EDAD_PARTE_1", "BXM"],
+    "calculatorAllowed": true,
+    "formulas": [
+      {
+        "name": "Homotecia",
+        "latex": "P' = O + k(P - O)",
+        "description": "Escalamiento respecto a centro $O$ y factor $k$."
+      }
+    ],
+    "relatedEvidence": ["A7.1", "A7.2", "A7.3", "A7.4"]
+  },
+  {
+    "id": "mep-geo-primaria-perimetro-area-11",
+    "term": "Perímetro y Área de Figuras Planas Elementales",
+    "domain": "geometry",
+    "blockName": "Geometría Elemental",
+    "definition": "Medición del contorno y superficie de triángulos, cuadriláteros y polígonos básicos sin uso de calculadora.",
+    "programModules": ["I_II_CICLO"],
+    "calculatorAllowed": false,
+    "formulas": [
+      {
+        "name": "Área de Triángulo y Rectángulo",
+        "latex": "A_{\\triangle} = \\frac{b \\cdot h}{2}, \\quad A_{\\square} = b \\cdot h",
+        "description": "Cálculo manual y mental de áreas."
+      }
+    ],
+    "examples": ["Un rectángulo de base $6\\text{ cm}$ y altura $4\\text{ cm}$ tiene área $24\\text{ cm}^2$."]
+  }
+]

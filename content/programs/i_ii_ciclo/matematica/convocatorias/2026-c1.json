@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "convocatoriaId": "2026-c1",
+  "year": 2026,
+  "cycle": 1,
+  "programId": "cico",
+  "subjectId": "matematica",
+  "title": "Prueba I y II Ciclo Convocatoria 01-2026 (Sin Calculadora)",
+  "description": "Blueprint de examen para I y II Ciclo (CICO). Prohibido el uso de calculadora.",
+  "passingScore": 65,
+  "calculatorAllowed": false,
+  "timeLimitMinutes": 120,
+  "totalItems": 50,
+  "sections": [
+    {
+      "id": "numbers",
+      "name": "Números y Operaciones",
+      "itemRange": [1, 20],
+      "totalItems": 20,
+      "itemIds": []
+    },
+    {
+      "id": "geometry",
+      "name": "Geometría y Medidas",
+      "itemRange": [21, 35],
+      "totalItems": 15,
+      "itemIds": []
+    },
+    {
+      "id": "relations",
+      "name": "Relaciones y Estadística",
+      "itemRange": [36, 50],
+      "totalItems": 15,
+      "itemIds": []
+    }
+  ],
+  "itemPool": []
+}

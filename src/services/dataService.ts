@@ -16,22 +16,26 @@ import set3Json from '../../content/bxm/matematicas/set_3.json';
 import set4Json from '../../content/bxm/matematicas/set_4.json';
 import groupsJson from '../../content/bxm/matematicas/groups.json';
 
-// Glob import all json files in content directory for Vite dynamic loading
+// Glob import all json files in content directory for dynamic resolution
 const contentModules = import.meta.glob('../../content/**/*.json');
 
 class DataService {
   private manifest: ContentManifest;
   private currentProgramId: string;
+  private currentSubprogramId: string | undefined;
   private currentSubjectId: string;
+  private currentConvocatoriaId: string | undefined;
   private activeSets: SetInfo[];
   private itemsMap: Map<string, Item[]>; // key: setId
   private groupsMap: Map<string, Group>;
   private isInitialized: boolean = false;
+  private listeners: Array<() => void> = [];
 
   constructor() {
     this.manifest = manifestJson as unknown as ContentManifest;
     this.currentProgramId = this.manifest.default_program || 'bxm';
     this.currentSubjectId = this.manifest.default_subject || 'matematicas';
+    this.currentConvocatoriaId = '2026-c2';
     this.activeSets = [];
     this.itemsMap = new Map();
     this.groupsMap = new Map();
@@ -45,7 +49,7 @@ class DataService {
     const defaultSubject = defaultProgram?.subjects.find((s) => s.id === this.currentSubjectId);
 
     if (defaultSubject) {
-      this.activeSets = defaultSubject.sets;
+      this.activeSets = defaultSubject.sets || [];
     }
 
     // Populate default sets (set_1, set_2, set_3 & set_4)
@@ -69,6 +73,23 @@ class DataService {
     this.isInitialized = true;
   }
 
+  public subscribe(listener: () => void): () => void {
+    this.listeners.push(listener);
+    return () => {
+      this.listeners = this.listeners.filter((l) => l !== listener);
+    };
+  }
+
+  private notify(): void {
+    this.listeners.forEach((listener) => {
+      try {
+        listener();
+      } catch (e) {
+        console.error('Error in DataService listener:', e);
+      }
+    });
+  }
+
   public async init(): Promise<void> {
     if (this.isInitialized) return;
     await this.loadSubject(this.currentProgramId, this.currentSubjectId);
@@ -86,8 +107,73 @@ class DataService {
     return this.currentProgramId;
   }
 
+  public getCurrentProgram(): ProgramInfo | undefined {
+    return this.manifest.programs.find((p) => p.id === this.currentProgramId);
+  }
+
+  public getCurrentSubprogramId(): string | undefined {
+    return this.currentSubprogramId;
+  }
+
   public getCurrentSubjectId(): string {
     return this.currentSubjectId;
+  }
+
+  public getCurrentConvocatoriaId(): string | undefined {
+    return this.currentConvocatoriaId;
+  }
+
+  public setConvocatoriaId(convocatoriaId: string): void {
+    this.currentConvocatoriaId = convocatoriaId;
+    this.notify();
+  }
+
+  public isCalculatorAllowed(): boolean {
+    const program = this.getCurrentProgram();
+    if (program?.calculatorAllowed !== undefined) {
+      return program.calculatorAllowed;
+    }
+    // I & II Ciclo strictly prohibits calculators
+    if (this.currentProgramId === 'cico' || this.currentProgramId === 'i_ii_ciclo') {
+      return false;
+    }
+    return true;
+  }
+
+  public getPassingScore(): number {
+    const program = this.getCurrentProgram();
+    return program?.passingScore || 70;
+  }
+
+  public async setProgram(
+    programId: string,
+    subprogramId?: string,
+    convocatoriaId?: string
+  ): Promise<void> {
+    const program = this.manifest.programs.find((p) => p.id === programId);
+    if (!program) {
+      console.warn(`Program ${programId} not found`);
+      return;
+    }
+
+    this.currentProgramId = programId;
+    this.currentSubprogramId = subprogramId;
+    this.currentConvocatoriaId = convocatoriaId || '2026-c1';
+
+    // If switching back to BXM or if the program has subject sets, load them
+    const subject = program.subjects[0];
+    if (subject) {
+      this.currentSubjectId = subject.id;
+      if (subject.sets && subject.sets.length > 0) {
+        await this.loadSubject(programId, subject.id);
+      } else {
+        // Fall back to BXM questions pool so simulator remains fully functional
+        this.activeSets = defaultBxmSets;
+        this.notify();
+      }
+    } else {
+      this.notify();
+    }
   }
 
   public async loadSubject(programId: string, subjectId: string): Promise<void> {
@@ -99,7 +185,7 @@ class DataService {
 
     this.currentProgramId = programId;
     this.currentSubjectId = subjectId;
-    this.activeSets = subject.sets;
+    this.activeSets = subject.sets || [];
     this.itemsMap.clear();
     this.groupsMap.clear();
 
@@ -123,7 +209,7 @@ class DataService {
     }
 
     // Load each set
-    for (const setInfo of subject.sets) {
+    for (const setInfo of subject.sets || []) {
       if (setInfo.file) {
         const setKey = `../../content/${setInfo.file}`;
         const setModuleLoader = contentModules[setKey];
@@ -140,6 +226,7 @@ class DataService {
     }
 
     this.isInitialized = true;
+    this.notify();
   }
 
   public getAllItems(): Item[] {
@@ -147,11 +234,16 @@ class DataService {
     this.itemsMap.forEach((items) => {
       allItems.push(...items);
     });
+    // Fallback if current program has 0 items loaded directly
+    if (allItems.length === 0) {
+      const set1Data = set1Json as unknown as QuestionSetData;
+      return set1Data.items || [];
+    }
     return allItems;
   }
 
   public getSets(): SetInfo[] {
-    return this.activeSets;
+    return this.activeSets.length > 0 ? this.activeSets : defaultBxmSets;
   }
 
   public getSetById(setId: string): SetInfo | undefined {
@@ -160,7 +252,15 @@ class DataService {
 
   public getItemsBySet(setId: string): Item[] {
     if (!setId || setId === 'all') return this.getAllItems();
-    return this.itemsMap.get(setId) || [];
+    const items = this.itemsMap.get(setId);
+    if (!items || items.length === 0) {
+      // Check fallback sync sets
+      if (setId === 'set_1') return (set1Json as unknown as QuestionSetData).items || [];
+      if (setId === 'set_2') return (set2Json as unknown as QuestionSetData).items || [];
+      if (setId === 'set_3') return (set3Json as unknown as QuestionSetData).items || [];
+      if (setId === 'set_4') return (set4Json as unknown as QuestionSetData).items || [];
+    }
+    return items || [];
   }
 
   public getSimulationItems(setId: string = 'set_1'): Item[] {
@@ -178,7 +278,7 @@ class DataService {
   public getItemsByArea(area: DomainArea, setId?: string): Item[] {
     const baseItems = setId && setId !== 'all' ? this.getItemsBySet(setId) : this.getAllItems();
     return baseItems.filter(
-      (item) => item.area_id === area || item.area?.toLowerCase().includes(area)
+      (item) => item.area_id === area || item.area?.toLowerCase().includes(String(area).toLowerCase())
     );
   }
 
@@ -210,8 +310,37 @@ class DataService {
       totalItems: this.getAllItems().length,
       sets: this.getSets(),
       sections: set1Data.sections || [],
+      calculatorAllowed: this.isCalculatorAllowed(),
+      passingScore: this.getPassingScore(),
     };
   }
 }
+
+const defaultBxmSets: SetInfo[] = [
+  {
+    id: 'set_1',
+    name: 'Prueba Oficial Convocatoria 02-2026 (Simulación)',
+    description: 'Examen oficial de simulación completa con 60 ítems.',
+    total_items: 60,
+  },
+  {
+    id: 'set_2',
+    name: 'Banco de Práctica Adicional (Set de Expansión)',
+    description: 'Banco ampliado con 70 preguntas adicionales.',
+    total_items: 70,
+  },
+  {
+    id: 'set_3',
+    name: 'Práctica de Refuerzo Intensivo (Set de Refuerzo BXM)',
+    description: 'Práctica enfocada en la consolidación de conceptos clave.',
+    total_items: 20,
+  },
+  {
+    id: 'set_4',
+    name: 'Práctica de Dominio Avanzado y Contextos Reales (Set de Reto BXM)',
+    description: 'Práctica de reto de alto nivel con problemas contextualizados.',
+    total_items: 20,
+  },
+];
 
 export const dataService = new DataService();

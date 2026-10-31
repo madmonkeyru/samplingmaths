@@ -1,0 +1,32 @@
+{
+  "id": "item-math-geo-circ-001",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia y sus representaciones",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "affirmation_desc": "Resuelve problemas relacionados con la representación de circunferencias.",
+    "evidence": "A1.1",
+    "evidence_desc": "Reconoce la representación gráfica de una circunferencia dado su centro y su radio."
+  },
+  "linked_concepts": ["mep-geo-circunferencia-01", "mep-geo-centro-radio-02"],
+  "program_applicability": ["EDAD_PARTE_1", "BXM"],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "stem": "Considere una circunferencia con centro $C(3, -2)$ y radio $r = 5$. ¿Cuál es la ecuación ordinaria de dicha circunferencia?",
+  "options": {
+    "A": "$(x - 3)^2 + (y + 2)^2 = 25$",
+    "B": "$(x + 3)^2 + (y - 2)^2 = 25$",
+    "C": "$(x - 3)^2 + (y + 2)^2 = 5$",
+    "D": "$(x + 3)^2 + (y - 2)^2 = 5$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Identificar las coordenadas del centro $(h, k) = (3, -2)$ y el radio $r = 5$.",
+    "Aplicar la ecuación canónica $(x - h)^2 + (y - k)^2 = r^2$.",
+    "Sustituir: $(x - 3)^2 + (y - (-2))^2 = 5^2 \\implies (x - 3)^2 + (y + 2)^2 = 25$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

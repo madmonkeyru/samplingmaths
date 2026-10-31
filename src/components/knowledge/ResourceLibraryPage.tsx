@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { SpecsTable } from './SpecsTable';
 import { TermsDictionary } from './TermsDictionary';
 import { FormulasSheet } from './FormulasSheet';
-import { FileText, BookOpen, Calculator, ArrowLeft } from 'lucide-react';
+import { dataService } from '../../services/dataService';
+import { FileText, BookOpen, Calculator, ArrowLeft, Ban } from 'lucide-react';
 
 interface ResourceLibraryPageProps {
   initialTab?: 'specs' | 'terms' | 'formulas';
@@ -19,6 +20,10 @@ export const ResourceLibraryPage: React.FC<ResourceLibraryPageProps> = ({
     initialTab
   );
 
+  const activeProgram = dataService.getCurrentProgram();
+  const isCalcAllowed = dataService.isCalculatorAllowed();
+  const convocatoria = dataService.getCurrentConvocatoriaId() || '2026-c2';
+
   return (
     <div className="max-w-7xl 2xl:max-w-[1536px] mx-auto px-3.5 sm:px-6 py-6 space-y-6">
       {/* Top Header Navigation */}
@@ -32,11 +37,20 @@ export const ResourceLibraryPage: React.FC<ResourceLibraryPageProps> = ({
             <ArrowLeft className="w-5 h-5 stroke-[2.5]" />
           </button>
           <div>
-            <h1 className="text-base sm:text-xl font-black text-stone-900 dark:text-slate-100 uppercase tracking-wide">
-              Biblioteca de Conocimiento y Recursos BXM
-            </h1>
+            <div className="flex items-center gap-2">
+              <h1 className="text-base sm:text-xl font-black text-stone-900 dark:text-slate-100 uppercase tracking-wide">
+                {activeProgram?.id === 'bxm'
+                  ? 'Biblioteca de Conocimiento y Recursos BXM'
+                  : `Biblioteca de Conocimiento y Recursos: ${activeProgram?.name || 'BXM'}`}
+              </h1>
+              {!isCalcAllowed && (
+                <span className="flex items-center gap-1 px-2 py-0.5 rounded bg-amber-500/20 text-amber-700 dark:text-amber-300 text-[10px] font-black">
+                  <Ban className="w-3 h-3" /> Sin Calculadora
+                </span>
+              )}
+            </div>
             <p className="text-xs text-stone-600 dark:text-slate-400 font-bold">
-              Costa Rica Bachillerato por Madurez Suficiente (Convocatoria 02-2026)
+              Costa Rica Educación Abierta MEP — Convocatoria {convocatoria === '2026-c1' ? '01-2026' : '02-2026'}
             </p>
           </div>
         </div>

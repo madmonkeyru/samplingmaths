@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "convocatoriaId": "2026-c2",
+  "year": 2026,
+  "cycle": 2,
+  "programId": "bxm",
+  "subjectId": "matematica",
+  "title": "Prueba Oficial BXM Convocatoria 02-2026",
+  "description": "Simulación oficial BXM correspondiente a la segunda convocatoria del año 2026 (60 ítems).",
+  "passingScore": 70,
+  "calculatorAllowed": true,
+  "timeLimitMinutes": 150,
+  "totalItems": 60,
+  "sections": [
+    {
+      "id": "geometry",
+      "name": "Geometría",
+      "itemRange": [1, 23],
+      "totalItems": 23,
+      "itemIds": ["item-math-geo-circ-001"]
+    },
+    {
+      "id": "functions",
+      "name": "Relaciones y Álgebra",
+      "itemRange": [24, 48],
+      "totalItems": 25,
+      "itemIds": ["item-math-alg-lin-001"]
+    },
+    {
+      "id": "statistics",
+      "name": "Estadística y Probabilidad",
+      "itemRange": [49, 60],
+      "totalItems": 12,
+      "itemIds": ["item-math-est-stat-001"]
+    }
+  ],
+  "itemPool": [
+    "item-math-geo-circ-001",
+    "item-math-alg-lin-001",
+    "item-math-est-stat-001"
+  ]
+}

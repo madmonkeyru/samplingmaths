@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "convocatoriaId": "2026-c1",
+  "year": 2026,
+  "cycle": 1,
+  "programId": "iii_ciclo",
+  "subprogramId": "III_CICLO_7",
+  "subjectId": "matematica",
+  "title": "Prueba III Ciclo 7° Año Convocatoria 01-2026",
+  "description": "Blueprint de examen para 7° Año de la primera convocatoria 2026.",
+  "passingScore": 65,
+  "calculatorAllowed": true,
+  "timeLimitMinutes": 120,
+  "totalItems": 55,
+  "sections": [
+    { "id": "numbers", "name": "Números", "itemRange": [1, 20], "totalItems": 20, "itemIds": [] },
+    { "id": "geometry", "name": "Geometría", "itemRange": [21, 35], "totalItems": 15, "itemIds": [] },
+    { "id": "relations", "name": "Relaciones y Álgebra", "itemRange": [36, 45], "totalItems": 10, "itemIds": [] },
+    { "id": "statistics", "name": "Estadística y Probabilidad", "itemRange": [46, 55], "totalItems": 10, "itemIds": [] }
+  ],
+  "itemPool": []
+}

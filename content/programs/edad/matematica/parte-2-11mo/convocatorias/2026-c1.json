@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "convocatoriaId": "2026-c1",
+  "year": 2026,
+  "cycle": 1,
+  "programId": "edad",
+  "subprogramId": "parte-2-11mo",
+  "subjectId": "matematica",
+  "title": "Prueba EDAD Parte 2 (11mo) Convocatoria 01-2026",
+  "description": "Blueprint de examen para EDAD Módulo Parte 2 (11° Año) de la primera convocatoria 2026.",
+  "passingScore": 70,
+  "calculatorAllowed": true,
+  "timeLimitMinutes": 150,
+  "totalItems": 55,
+  "sections": [
+    {
+      "id": "functions",
+      "name": "Relaciones y Álgebra (11°)",
+      "itemRange": [1, 35],
+      "totalItems": 35,
+      "itemIds": ["item-math-alg-lin-001"]
+    },
+    {
+      "id": "statistics",
+      "name": "Estadística y Probabilidad (11°)",
+      "itemRange": [36, 55],
+      "totalItems": 20,
+      "itemIds": ["item-math-est-stat-001"]
+    }
+  ],
+  "itemPool": [
+    "item-math-alg-lin-001",
+    "item-math-est-stat-001"
+  ]
+}

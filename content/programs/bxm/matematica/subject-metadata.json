@@ -1,0 +1,11 @@
+{
+  "programId": "bxm",
+  "programName": "Bachillerato por Madurez Suficiente (BXM)",
+  "subjectId": "matematica",
+  "subjectName": "Matemáticas",
+  "passingScore": 70,
+  "calculatorAllowed": true,
+  "defaultTimeLimitMinutes": 150,
+  "totalExamQuestions": 60,
+  "convocatorias": ["2026-c1", "2026-c2"]
+}

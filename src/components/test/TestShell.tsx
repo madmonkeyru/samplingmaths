@@ -16,9 +16,9 @@ import {
   Menu,
   X,
   BookOpen,
-  Filter,
   CheckCircle2,
   XCircle,
+  Ban,
 } from 'lucide-react';
 
 interface TestShellProps {
@@ -40,6 +40,9 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
   const [isFormulaOpen, setIsFormulaOpen] = useState<boolean>(false);
   const [navFilter, setNavFilter] = useState<'all' | 'unanswered' | 'answered' | 'flagged'>('all');
   const [showPracticeExplanation, setShowPracticeExplanation] = useState<Record<number, boolean>>({});
+
+  const isCalculatorAllowed = dataService.isCalculatorAllowed();
+  const currentProgram = dataService.getCurrentProgram();
 
   // Keyboard Shortcuts Handler
   useEffect(() => {
@@ -241,11 +244,18 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
               <Menu className="w-5 h-5 stroke-[2.5]" />
             </button>
             <div className="min-w-0">
-              <div className="text-xs sm:text-sm font-black text-zinc-900 dark:text-zinc-100 truncate">
-                Pregunta {currentIndex + 1} de {items.length}
+              <div className="flex items-center gap-2">
+                <span className="text-xs sm:text-sm font-black text-zinc-900 dark:text-zinc-100 truncate">
+                  Pregunta {currentIndex + 1} de {items.length}
+                </span>
+                {!isCalculatorAllowed && (
+                  <span className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-800 dark:text-amber-300 text-[10px] font-black">
+                    <Ban className="w-2.5 h-2.5" /> Sin Calc
+                  </span>
+                )}
               </div>
               <div className="text-[10px] sm:text-xs text-zinc-600 dark:text-zinc-400 font-bold uppercase tracking-wider truncate">
-                {currentItem.topic || currentItem.area}
+                {currentItem.topic || currentItem.area} ({currentProgram?.name || 'BXM'})
               </div>
             </div>
           </div>
@@ -517,7 +527,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
               </div>
             )}
 
-            {/* Answer Options Selector (Cleaned option remover) */}
+            {/* Answer Options Selector */}
             <div className="space-y-2.5 sm:space-y-3 pt-1 sm:pt-2">
               {getOptionArray(currentItem).map((opt) => {
                 const selected = responses[currentItem.id]?.selectedOption === opt.letter;
@@ -599,7 +609,11 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
             <div className="p-4 sm:p-5 border-b-2 border-zinc-900 dark:border-zinc-700 flex items-center justify-between bg-zinc-100 dark:bg-zinc-800">
               <div className="flex items-center gap-2">
                 <BookOpen className="w-5 h-5 stroke-[2.5]" />
-                <h3 className="text-base font-black uppercase">Simbología y Fórmulas del Examen (BXM)</h3>
+                <h3 className="text-base font-black uppercase">
+                  {currentProgram?.id === 'bxm'
+                    ? 'Simbología y Fórmulas del Examen (BXM)'
+                    : `Simbología y Fórmulas (${currentProgram?.name || 'BXM'})`}
+                </h3>
               </div>
               <button
                 onClick={() => setIsFormulaOpen(false)}
@@ -613,7 +627,7 @@ export const TestShell: React.FC<TestShellProps> = ({ config, onFinishTest }) =>
               {/* Geometria */}
               <div className="space-y-3">
                 <h4 className="font-black border-b-2 border-zinc-900 dark:border-zinc-700 pb-1 uppercase tracking-wide text-xs">
-                  Geometría y Circunferencia
+                  Geometría
                 </h4>
                 <div className="grid sm:grid-cols-2 gap-3 text-xs">
                   <div className="bg-zinc-50 dark:bg-zinc-800 p-3 rounded-xl border-2 border-zinc-900 dark:border-zinc-700 space-y-1">

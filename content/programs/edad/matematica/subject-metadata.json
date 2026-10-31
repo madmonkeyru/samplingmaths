@@ -1,0 +1,24 @@
+{
+  "programId": "edad",
+  "programName": "Educación Diversificada a Distancia (EDAD)",
+  "subjectId": "matematica",
+  "subjectName": "Matemáticas",
+  "passingScore": 70,
+  "calculatorAllowed": true,
+  "defaultTimeLimitMinutes": 150,
+  "totalExamQuestions": 55,
+  "modules": [
+    {
+      "id": "parte-1-10mo",
+      "name": "Parte 1 (10° Año)",
+      "description": "Geometría analítica, función lineal, función cuadrática y estadística descriptiva de décimo año.",
+      "convocatorias": ["2026-c1", "2026-c2"]
+    },
+    {
+      "id": "parte-2-11mo",
+      "name": "Parte 2 (11° Año)",
+      "description": "Composición de funciones, inversa, función exponencial y logarítmica, y probabilidades de undécimo año.",
+      "convocatorias": ["2026-c1", "2026-c2"]
+    }
+  ]
+}
