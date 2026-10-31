@@ -18,9 +18,6 @@ import {
   FileText,
   BookOpen,
   LayoutGrid,
-  Info,
-  ArrowRight,
-  ExternalLink,
 } from 'lucide-react';
 
 interface SubjectHubPageProps {
@@ -29,7 +26,6 @@ interface SubjectHubPageProps {
   onStartSimulation: () => void;
   onStartPractice: (config: PracticeConfig) => void;
   onStartPracticeByItems?: (itemIds: number[], title: string) => void;
-  onSwitchToBxm?: () => void;
 }
 
 export const SubjectHubPage: React.FC<SubjectHubPageProps> = ({
@@ -38,7 +34,6 @@ export const SubjectHubPage: React.FC<SubjectHubPageProps> = ({
   onStartSimulation,
   onStartPractice,
   onStartPracticeByItems,
-  onSwitchToBxm,
 }) => {
   const [practiceModalMode, setPracticeModalMode] = useState<'area' | 'topic' | null>(null);
   const [activeProgram, setActiveProgram] = useState<ProgramInfo | undefined>(dataService.getCurrentProgram());
@@ -69,6 +64,39 @@ export const SubjectHubPage: React.FC<SubjectHubPageProps> = ({
     ...(isBxm ? [{ label: 'Matemáticas', active: true }] : []),
   ];
 
+  if (!isBxm) {
+    return (
+      <section
+        aria-label="Hub curricular en preparación"
+        className="subject-hub-page max-w-7xl 2xl:max-w-[1536px] mx-auto px-3.5 sm:px-6 py-5 sm:py-8 space-y-6"
+      >
+        <div aria-hidden="true" className="animate-pulse space-y-6">
+          <div className="flex items-center justify-between gap-4">
+            <div className="h-5 w-40 rounded bg-stone-200 dark:bg-slate-800" />
+            <div className="h-7 w-32 rounded-lg bg-stone-200 dark:bg-slate-800" />
+          </div>
+
+          <div className="h-24 rounded-2xl border-2 border-stone-200 dark:border-slate-800 bg-white dark:bg-slate-900" />
+
+          <div className="rounded-2xl border-2 border-stone-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 sm:p-5 space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="h-5 w-64 max-w-full rounded bg-stone-200 dark:bg-slate-800" />
+              <div className="flex gap-2">
+                <div className="h-9 w-36 rounded-lg bg-stone-200 dark:bg-slate-800" />
+                <div className="h-9 w-40 rounded-lg bg-stone-200 dark:bg-slate-800" />
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div className="lg:col-span-7 h-80 rounded-2xl border-2 border-stone-200 dark:border-slate-800 bg-white dark:bg-slate-900" />
+            <div className="lg:col-span-5 h-80 rounded-2xl border-2 border-stone-200 dark:border-slate-800 bg-white dark:bg-slate-900" />
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <div className="subject-hub-page max-w-7xl 2xl:max-w-[1536px] mx-auto px-3.5 sm:px-6 py-5 sm:py-8 space-y-6 text-stone-900 dark:text-slate-100 transition-colors">
       {/* 1. Contextual Navigation Breadcrumbs */}
@@ -96,30 +124,6 @@ export const SubjectHubPage: React.FC<SubjectHubPageProps> = ({
         attempts={attempts}
         programName={isBxm ? 'Matemáticas BXM (Convocatoria 02-2026)' : activeProgram?.name}
       />
-
-      {/* Non-MVP Notice for CICO, III Ciclo, EDAD */}
-      {!isBxm && (
-        <div className="bg-amber-50 dark:bg-amber-950/40 border-2 border-amber-300 dark:border-amber-800 rounded-2xl p-5 sm:p-6 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="space-y-1">
-            <div className="flex items-center gap-2 text-amber-900 dark:text-amber-200 font-black text-sm">
-              <Info className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-              <span>Programa en Fase de Preparación — {activeProgram?.name}</span>
-            </div>
-            <p className="text-xs text-amber-800/90 dark:text-amber-300/80 font-medium max-w-2xl leading-relaxed">
-              Los módulos interactivos para este programa se habilitarán en las siguientes fases del plan de estudios.
-              Puedes consultar sus especificaciones oficiales y reglas abajo, o ejercitar con el MVP activo de Matemáticas BXM.
-            </p>
-          </div>
-
-          <button
-            onClick={onSwitchToBxm}
-            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-black rounded-xl transition shadow-xs flex items-center gap-1.5 shrink-0 cursor-pointer"
-          >
-            <span>Ir a Matemáticas BXM (MVP)</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
-        </div>
-      )}
 
       {/* 3. Section Segmented Switcher inside the Hub: Práctica & Simulación vs. Recursos & Especificaciones */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white dark:bg-slate-900 border-2 border-stone-800 dark:border-slate-800 rounded-2xl p-3 sm:p-4 shadow-xs">
