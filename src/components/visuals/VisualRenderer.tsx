@@ -8,6 +8,7 @@ import {
   DistributionCurveComponent,
   VennDiagramComponent,
 } from './composites/StatisticsComposites';
+import { Solid3D } from './composites/Solid3D';
 
 interface VisualRendererProps {
   spec?: VisualSpec | null;
@@ -109,6 +110,11 @@ export const VisualRenderer: React.FC<VisualRendererProps> = ({
       case 'venn_diagram':
       case 'venn_3set':
         return <VennDiagramComponent {...(activeSpec as any)} />;
+
+      case 'solid_3d':
+      case 'solid3d':
+      case '3d_solid':
+        return <Solid3D {...(activeSpec as any)} />;
 
       default:
         // Default fallback to CartesianPlane

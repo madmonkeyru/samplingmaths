@@ -14,6 +14,7 @@ import set1Json from '../../content/bxm/matematicas/set_1.json';
 import set2Json from '../../content/bxm/matematicas/set_2.json';
 import set3Json from '../../content/bxm/matematicas/set_3.json';
 import set4Json from '../../content/bxm/matematicas/set_4.json';
+import set5Json from '../../content/bxm/matematicas/set_5.json';
 import groupsJson from '../../content/bxm/matematicas/groups.json';
 
 // Glob import all json files in content directory for dynamic resolution
@@ -52,16 +53,18 @@ class DataService {
       this.activeSets = defaultSubject.sets || [];
     }
 
-    // Populate default sets (set_1, set_2, set_3 & set_4)
+    // Populate default sets (set_1, set_2, set_3, set_4 & set_5)
     const set1Data = set1Json as unknown as QuestionSetData;
     const set2Data = set2Json as unknown as QuestionSetData;
     const set3Data = set3Json as unknown as QuestionSetData;
     const set4Data = set4Json as unknown as QuestionSetData;
+    const set5Data = set5Json as unknown as QuestionSetData;
 
     this.itemsMap.set('set_1', set1Data.items || []);
     this.itemsMap.set('set_2', set2Data.items || []);
     this.itemsMap.set('set_3', set3Data.items || []);
     this.itemsMap.set('set_4', set4Data.items || []);
+    this.itemsMap.set('set_5', set5Data.items || []);
 
     const groupData = groupsJson as unknown as GroupBankData;
     if (groupData && Array.isArray(groupData.groups)) {
@@ -259,6 +262,7 @@ class DataService {
       if (setId === 'set_2') return (set2Json as unknown as QuestionSetData).items || [];
       if (setId === 'set_3') return (set3Json as unknown as QuestionSetData).items || [];
       if (setId === 'set_4') return (set4Json as unknown as QuestionSetData).items || [];
+      if (setId === 'set_5') return (set5Json as unknown as QuestionSetData).items || [];
     }
     return items || [];
   }

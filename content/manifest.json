@@ -125,6 +125,13 @@
               "description": "Práctica de reto de alto nivel con problemas contextualizados, gráficas detalladas y explicaciones paso a paso en las tres áreas oficiales.",
               "file": "bxm/matematicas/set_4.json",
               "total_items": 20
+            },
+            {
+              "id": "set_5",
+              "name": "Práctica Especializada: Visualización Espacial 3D (Criterio A5)",
+              "description": "Práctica modular con ilustraciones técnicas paramétricas en SVG de sólidos geométricos tridimensionales (esfera, cono, cilindro, tronco de cono y prisma).",
+              "file": "bxm/matematicas/set_5.json",
+              "total_items": 5
             }
           ]
         }

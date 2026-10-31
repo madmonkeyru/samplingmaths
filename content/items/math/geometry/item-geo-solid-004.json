@@ -1,0 +1,73 @@
+{
+  "id": "item-math-geo-solids-004",
+  "code": "item-geo-solid-004",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Sección plana axial en un cilindro circular recto",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A5",
+    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+  },
+  "linked_concepts": [
+    "mep-geo-cilindro-01",
+    "mep-geo-seccion-axial-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "stem": "La siguiente figura ilustra un sólido con forma de cilindro circular recto donde $AB = BE = 4$: Si la intersección entre un plano y el sólido genera una figura plana que contiene a los puntos $A, C, F$ y $D$, entonces, ¿cuál es el área de esa figura plana?",
+  "options": {
+    "A": "16",
+    "B": "24",
+    "C": "25",
+    "D": "32"
+  },
+  "correct_answer": "D",
+  "solution_steps": [
+    "La sección plana que pasa por los puntos $A, C, F, D$ contiene a los centros de las bases $B$ y $E$, por lo que es una sección axial perpendicular a las bases.",
+    "Dicha sección plana corresponde a un rectángulo $ACFD$.",
+    "La base del rectángulo es el diámetro de las bases circulares $AC = 2 \\times AB = 2 \\times 4 = 8$.",
+    "La altura del rectángulo corresponde a la altura del cilindro $BE = 4$ (segmento $\\overline{CF}$ o $\\overline{AD}$).",
+    "El área de la figura plana rectangular es $\\text{Área} = \\text{base} \\times \\text{altura} = 8 \\times 4 = 32$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Cilindro circular recto con sección axial rectangular ACFD, centros de base B y E",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cylinder",
+      "width": 380,
+      "height": 260,
+      "parameters": {
+        "radius": 75,
+        "height": 105,
+        "showTopDiameter": true,
+        "showBottomDiameter": true
+      },
+      "showCrossSection": true,
+      "crossSectionType": "axial",
+      "crossSectionHatched": true,
+      "labels": {
+        "topLeft": "A",
+        "topCenter": "B",
+        "topRight": "C",
+        "bottomLeft": "D",
+        "bottomCenter": "E",
+        "bottomRight": "F"
+      },
+      "referenceBox": {
+        "lines": [
+          "A — B — C",
+          "D — E — F",
+          "B y E: centros de las bases"
+        ]
+      }
+    }
+  }
+}
