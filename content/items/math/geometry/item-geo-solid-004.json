@@ -1,73 +1,63 @@
 {
-  "id": "item-math-geo-solids-004",
-  "code": "item-geo-solid-004",
-  "area": "Geometría",
+  "id": "item-geo-solid-004",
+  "area": "GEOMETRÍA",
   "area_id": "geometry",
-  "topic": "Sección plana axial en un cilindro circular recto",
+  "topic": "Área de una sección plana de la esfera",
+  "cognitive_level": "Aplicación",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
   "spec": {
-    "block": "1. Geometría",
-    "affirmation": "A5",
-    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
     "evidence": "A5.3",
     "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
   },
-  "linked_concepts": [
-    "mep-geo-cilindro-01",
-    "mep-geo-seccion-axial-02"
-  ],
-  "program_applicability": [
-    "EDAD_PARTE_1",
-    "BXM"
-  ],
-  "calculator_allowed": true,
-  "cognitive_level": "conexion",
-  "stem": "La siguiente figura ilustra un sólido con forma de cilindro circular recto donde $AB = BE = 4$: Si la intersección entre un plano y el sólido genera una figura plana que contiene a los puntos $A, C, F$ y $D$, entonces, ¿cuál es el área de esa figura plana?",
+  "stem": "Una esfera posee un radio de $10\\text{ cm}$. Se traza un plano secante a una distancia de $6\\text{ cm}$ del centro. ¿Cuál es el área de la superficie delimitada por dicha sección plana?",
   "options": {
-    "A": "16",
-    "B": "24",
-    "C": "25",
-    "D": "32"
+    "A": "$8\\pi\\text{ cm}^2$",
+    "B": "$16\\pi\\text{ cm}^2$",
+    "C": "$64\\pi\\text{ cm}^2$",
+    "D": "$100\\pi\\text{ cm}^2$"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "solution_steps": [
-    "La sección plana que pasa por los puntos $A, C, F, D$ contiene a los centros de las bases $B$ y $E$, por lo que es una sección axial perpendicular a las bases.",
-    "Dicha sección plana corresponde a un rectángulo $ACFD$.",
-    "La base del rectángulo es el diámetro de las bases circulares $AC = 2 \\times AB = 2 \\times 4 = 8$.",
-    "La altura del rectángulo corresponde a la altura del cilindro $BE = 4$ (segmento $\\overline{CF}$ o $\\overline{AD}$).",
-    "El área de la figura plana rectangular es $\\text{Área} = \\text{base} \\times \\text{altura} = 8 \\times 4 = 32$."
+    "Aplicamos la relación métrica $R^2 = d^2 + r^2$ donde $R=10$ y $d=6$.",
+    "$10^2 = 6^2 + r^2 \\implies 100 = 36 + r^2 \\implies r^2 = 64$.",
+    "Por lo tanto, $r = 8\\text{ cm}$.",
+    "El área del círculo formado es $A = \\pi r^2 = \\pi (8)^2 = 64\\pi\\text{ cm}^2$."
   ],
-  "group_id": null,
   "visual_spec": {
-    "alt": "Cilindro circular recto con sección axial rectangular ACFD, centros de base B y E",
+    "alt": "Sección circular paralela al ecuador en una esfera",
     "visual": {
       "type": "solid_3d",
-      "shape": "cylinder",
+      "shape": "sphere",
       "width": 380,
-      "height": 260,
+      "height": 280,
       "parameters": {
-        "radius": 75,
-        "height": 105,
-        "showTopDiameter": true,
-        "showBottomDiameter": true
+        "radius": 85,
+        "distance": 32,
+        "showAxis": true,
+        "showRightAngle": true
       },
-      "showCrossSection": true,
-      "crossSectionType": "axial",
-      "crossSectionHatched": true,
       "labels": {
-        "topLeft": "A",
-        "topCenter": "B",
-        "topRight": "C",
-        "bottomLeft": "D",
-        "bottomCenter": "E",
-        "bottomRight": "F"
+        "center": "O",
+        "sectionCenter": "P",
+        "sectionRight": "Q",
+        "height": "6",
+        "radius": "10"
       },
       "referenceBox": {
         "lines": [
-          "A — B — C",
-          "D — E — F",
-          "B y E: centros de las bases"
+          "O: centro de la esfera",
+          "d(O, P) = 6",
+          "Radio de esfera = 10"
         ]
-      }
+      },
+      "showCrossSection": true,
+      "showAxes": true
     }
   }
 }

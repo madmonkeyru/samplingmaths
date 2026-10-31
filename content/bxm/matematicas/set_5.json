@@ -1,55 +1,19 @@
 {
-  "schema_version": "1.0",
-  "exam": "Práctica de Visualización Espacial y Cuerpos Geométricos 3D",
-  "convocatoria": "Práctica de Refuerzo 3D",
-  "language": "es-CR",
-  "source": "MEP Educación Abierta - Criterio A5 Sólidos Geométricos Tridimensionales",
-  "specification": "A5. Secciones planas y características métricas en cuerpos redondos y poliedros (Esfera, Cono, Cilindro, Frustum, Prisma/Cubo)",
-  "solucionario_verified": true,
-  "set_info": {
-    "id": "set_5",
-    "name": "Práctica Especializada: Visualización Espacial 3D (Criterio A5)",
-    "description": "Práctica modular con ilustraciones técnicas paramétricas en SVG de sólidos geométricos tridimensionales (esfera, cono, cilindro, tronco de cono y prisma).",
-    "total_items": 5
-  },
-  "total_items": 5,
-  "sections": [
-    {
-      "id": "geometria_3d",
-      "name": "Geometría - Visualización Espacial y Secciones Planas",
-      "item_range": [
-        171,
-        175
-      ],
-      "total_items": 5
-    }
-  ],
+  "set_id": "set_5",
+  "title": "Geometría del Espacio: Cuerpos Redondos y Poliedros (3D)",
+  "description": "25 ítems de visualización espacial, secciones planas y relaciones métricas en esfera, cilindro, cono, tronco de cono y prisma/cubo.",
   "items": [
     {
       "id": 171,
-      "code": "item-geo-solid-001",
-      "set_id": "set_5",
-      "area": "Geometría",
+      "area": "GEOMETRÍA",
       "area_id": "geometry",
-      "topic": "Secciones planas en figuras tridimensionales (Esfera)",
+      "topic": "Secciones planas en la esfera",
       "spec": {
-        "block": "1. Geometría",
-        "affirmation": "A5",
-        "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+        "block": "Geometría",
         "evidence": "A5.3",
         "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
       },
-      "linked_concepts": [
-        "mep-geo-esfera-01",
-        "mep-geo-seccion-plana-02"
-      ],
-      "program_applicability": [
-        "EDAD_PARTE_1",
-        "BXM"
-      ],
-      "calculator_allowed": true,
-      "cognitive_level": "conexion",
-      "stem": "Considere la siguiente figura que ilustra una sección plana producto de la intersección de un plano con una esfera. Además, considere que $MN = 10$ y $PN = 12$: ¿Cuál es la longitud de la circunferencia de la sección plana?",
+      "stem": "Considere la siguiente figura que ilustra una sección plana producto de la intersección de un plano con una esfera. Además, considere que $MN = 10$ y $PN = 12$:\n\n¿Cuál es la longitud de la circunferencia de la sección plana?",
       "options": {
         "A": "$10\\pi$",
         "B": "$12\\pi$",
@@ -58,182 +22,304 @@
       },
       "correct_answer": "B",
       "solution_steps": [
-        "La sección plana que se obtiene al cortar una esfera con un plano es un círculo de centro $O$ y diámetro $PN$.",
-        "El enunciado indica que el diámetro de la sección plana es $PN = 12$. Por lo tanto, su radio es $r = \\frac{12}{2} = 6$.",
-        "La longitud de la circunferencia de dicha sección plana se calcula con la fórmula $C = 2\\pi r = 2\\pi(6) = 12\\pi$ (o equivalentemente $C = \\pi \\cdot \\text{diámetro} = 12\\pi$).",
-        "Por consiguiente, la opción correcta es la B."
+        "El segmento $PN$ corresponde al diámetro de la sección plana circular obtenida por el corte con el plano, por lo que $PN = 2r = 12$.",
+        "El radio de la sección plana es $r = \\frac{12}{2} = 6$.",
+        "La longitud de la circunferencia de dicha sección plana viene dada por $C = 2\\pi r = 2\\pi(6) = 12\\pi$."
       ],
-      "group_id": null,
       "visual_spec": {
-        "alt": "Esfera intersecada por un plano con sección plana circular de diámetro PN y centro O",
+        "alt": "Sección plana circular en una esfera",
         "visual": {
           "type": "solid_3d",
           "shape": "sphere",
           "width": 380,
-          "height": 260,
+          "height": 280,
           "parameters": {
-            "radius": 75,
-            "distance": 38,
-            "showPlaneRadius": true,
+            "radius": 85,
+            "distance": 32,
+            "showCenter": true,
+            "showAxis": true,
             "showRightAngle": true
           },
-          "showCrossSection": true,
-          "crossSectionHatched": true,
           "labels": {
-            "sphereCenter": "M",
-            "planeCenter": "O",
-            "planeLeft": "P",
-            "planeRight": "N"
+            "center": "M",
+            "sectionCenter": "O",
+            "sectionLeft": "P",
+            "sectionRight": "N"
           },
           "referenceBox": {
-            "title": "P — O — N",
             "lines": [
+              "P — O — N",
               "M: centro de la esfera",
               "O: centro de la sección plana"
             ]
-          }
+          },
+          "showCrossSection": true,
+          "showAxes": true
         }
       }
     },
     {
       "id": 172,
-      "code": "item-geo-solid-003",
-      "set_id": "set_5",
-      "area": "Geometría",
+      "area": "GEOMETRÍA",
       "area_id": "geometry",
-      "topic": "Elementos del cono circular recto",
+      "topic": "Cálculo de la distancia al centro en una esfera",
       "spec": {
-        "block": "1. Geometría",
-        "affirmation": "A5",
-        "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
-        "evidence": "A5.1",
-        "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el diámetro en figuras tridimensionales."
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
       },
-      "linked_concepts": [
-        "mep-geo-cono-01"
-      ],
-      "program_applicability": [
-        "EDAD_PARTE_1",
-        "BXM"
-      ],
-      "calculator_allowed": true,
-      "cognitive_level": "reproduccion",
-      "stem": "Con base en la información de la figura referida a un cono circular recto y una sección plana circular paralela a la base: ¿Cuál segmento representa el diámetro del cono de centro $D$?",
+      "stem": "En una esfera de radio $R = 15\\text{ cm}$, se realiza un corte plano cuya sección circular tiene un radio de $12\\text{ cm}$. ¿A qué distancia del centro de la esfera se realizó el corte?",
       "options": {
-        "A": "$\\overline{AC}$",
-        "B": "$\\overline{EC}$",
-        "C": "$\\overline{GC}$",
-        "D": "$\\overline{HC}$"
+        "A": "$3\\text{ cm}$",
+        "B": "$8\\text{ cm}$",
+        "C": "$9\\text{ cm}$",
+        "D": "$\\sqrt{369}\\text{ cm}$"
       },
-      "correct_answer": "A",
+      "correct_answer": "C",
       "solution_steps": [
-        "La base del cono tiene como centro el punto $D$.",
-        "Los puntos $A$ y $C$ pertenecen a la circunferencia de la base y están alineados con el centro ($A - D - C$).",
-        "El segmento que pasa por el centro $D$ y une dos puntos de la circunferencia de la base es $\\overline{AC}$, el cual corresponde al diámetro de la base del cono.",
-        "Por lo tanto, la respuesta correcta es $\\overline{AC}$."
+        "En la esfera, el radio de la esfera $R$, el radio de la sección plana $r$ y la distancia $d$ del centro de la esfera al plano forman un triángulo rectángulo.",
+        "Por el Teorema de Pitágoras: $R^2 = d^2 + r^2$.",
+        "Sustituyendo los valores conocidos: $15^2 = d^2 + 12^2 \\implies 225 = d^2 + 144$.",
+        "$d^2 = 225 - 144 = 81 \\implies d = \\sqrt{81} = 9\\text{ cm}$."
       ],
-      "group_id": null,
       "visual_spec": {
-        "alt": "Cono circular recto con base de centro D y sección plana paralela con centro H",
+        "alt": "Cálculo métrico del corte transversal en una esfera",
         "visual": {
           "type": "solid_3d",
-          "shape": "cone",
+          "shape": "sphere",
           "width": 380,
-          "height": 260,
+          "height": 280,
           "parameters": {
-            "radius": 75,
-            "height": 125,
-            "cutHeightFraction": 0.48,
-            "showBaseDiameter": true
+            "radius": 85,
+            "distance": 35,
+            "showRadius": true,
+            "showAxis": true,
+            "showRightAngle": true
           },
-          "showCrossSection": true,
-          "crossSectionType": "parallel",
-          "crossSectionHatched": false,
           "labels": {
-            "apex": "B",
-            "baseCenter": "D",
-            "baseLeft": "A",
-            "baseRight": "C",
-            "cutCenter": "H",
-            "cutLeft": "G",
-            "cutRight": "E"
+            "center": "O",
+            "sectionCenter": "C",
+            "sectionRight": "A",
+            "radius": "15",
+            "sectionRadius": "12"
           },
           "referenceBox": {
             "lines": [
-              "A — G — B",
-              "A — D — C",
-              "C — E — B",
-              "G — H — E",
-              "D: centro de la base",
-              "H: centro de la sección"
+              "O: centro de la esfera",
+              "C: centro de la sección plana",
+              "Radio esfera = 15 cm"
             ]
-          }
+          },
+          "showCrossSection": true,
+          "showAxes": true
         }
       }
     },
     {
       "id": 173,
-      "code": "item-geo-solid-004",
-      "set_id": "set_5",
-      "area": "Geometría",
+      "area": "GEOMETRÍA",
       "area_id": "geometry",
-      "topic": "Sección plana axial en un cilindro circular recto",
+      "topic": "Sección máxima o ecuatorial en una esfera",
       "spec": {
-        "block": "1. Geometría",
-        "affirmation": "A5",
-        "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+        "block": "Geometría",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+      },
+      "stem": "Si un plano corta a una esfera pasando exactamente por su centro, ¿qué nombre recibe la sección plana obtenida y cuál es el área si el radio de la esfera es $5\\text{ cm}$?",
+      "options": {
+        "A": "Círculo menor de área $10\\pi\\text{ cm}^2$",
+        "B": "Círculo máximo de área $25\\pi\\text{ cm}^2$",
+        "C": "Elipse de área $25\\pi\\text{ cm}^2$",
+        "D": "Corona circular de área $50\\pi\\text{ cm}^2$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Toda sección plana que pasa por el centro de una esfera es un círculo máximo (o sección ecuatorial).",
+        "El radio de la sección es exactamente igual al radio de la esfera: $r = R = 5\\text{ cm}$.",
+        "El área del círculo es $A = \\pi r^2 = \\pi (5)^2 = 25\\pi\\text{ cm}^2$."
+      ],
+      "visual_spec": {
+        "alt": "Corte ecuatorial o círculo máximo en una esfera",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "sphere",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 85,
+            "distance": 0,
+            "showEquator": true,
+            "showCenter": true
+          },
+          "labels": {
+            "center": "O",
+            "sectionCenter": "O",
+            "sectionRight": "B",
+            "radius": "R = 5"
+          },
+          "referenceBox": {
+            "lines": [
+              "Plano secante diametral",
+              "O: centro de la esfera",
+              "Círculo máximo"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 174,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Área de una sección plana de la esfera",
+      "spec": {
+        "block": "Geometría",
         "evidence": "A5.3",
         "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
       },
-      "linked_concepts": [
-        "mep-geo-cilindro-01",
-        "mep-geo-seccion-axial-02"
-      ],
-      "program_applicability": [
-        "EDAD_PARTE_1",
-        "BXM"
-      ],
-      "calculator_allowed": true,
-      "cognitive_level": "conexion",
-      "stem": "La siguiente figura ilustra un sólido con forma de cilindro circular recto donde $AB = BE = 4$: Si la intersección entre un plano y el sólido genera una figura plana que contiene a los puntos $A, C, F$ y $D$, entonces, ¿cuál es el área de esa figura plana?",
+      "stem": "Una esfera posee un radio de $10\\text{ cm}$. Se traza un plano secante a una distancia de $6\\text{ cm}$ del centro. ¿Cuál es el área de la superficie delimitada por dicha sección plana?",
       "options": {
-        "A": "16",
-        "B": "24",
-        "C": "25",
-        "D": "32"
+        "A": "$8\\pi\\text{ cm}^2$",
+        "B": "$16\\pi\\text{ cm}^2$",
+        "C": "$64\\pi\\text{ cm}^2$",
+        "D": "$100\\pi\\text{ cm}^2$"
       },
-      "correct_answer": "D",
+      "correct_answer": "C",
       "solution_steps": [
-        "La sección plana que pasa por los puntos $A, C, F, D$ contiene a los centros de las bases $B$ y $E$, por lo que es una sección axial perpendicular a las bases.",
-        "Dicha sección plana corresponde a un rectángulo $ACFD$.",
-        "La base del rectángulo es el diámetro de las bases circulares $AC = 2 \\times AB = 2 \\times 4 = 8$.",
-        "La altura del rectángulo corresponde a la altura del cilindro $BE = 4$ (segmento $\\overline{CF}$ o $\\overline{AD}$).",
-        "El área de la figura plana rectangular es $\\text{Área} = \\text{base} \\times \\text{altura} = 8 \\times 4 = 32$."
+        "Aplicamos la relación métrica $R^2 = d^2 + r^2$ donde $R=10$ y $d=6$.",
+        "$10^2 = 6^2 + r^2 \\implies 100 = 36 + r^2 \\implies r^2 = 64$.",
+        "Por lo tanto, $r = 8\\text{ cm}$.",
+        "El área del círculo formado es $A = \\pi r^2 = \\pi (8)^2 = 64\\pi\\text{ cm}^2$."
       ],
-      "group_id": null,
       "visual_spec": {
-        "alt": "Cilindro circular recto con sección axial rectangular ACFD, centros de base B y E",
+        "alt": "Sección circular paralela al ecuador en una esfera",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "sphere",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 85,
+            "distance": 32,
+            "showAxis": true,
+            "showRightAngle": true
+          },
+          "labels": {
+            "center": "O",
+            "sectionCenter": "P",
+            "sectionRight": "Q",
+            "height": "6",
+            "radius": "10"
+          },
+          "referenceBox": {
+            "lines": [
+              "O: centro de la esfera",
+              "d(O, P) = 6",
+              "Radio de esfera = 10"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 175,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Identificación geométrica de secciones esféricas",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones respecto a las secciones planas de una esfera es siempre VERDADERA?",
+      "options": {
+        "A": "Al cortar una esfera con un plano oblicuo que no pase por el centro, la sección obtenida es una elipse.",
+        "B": "Toda sección plana producida por un plano secante a una esfera es una circunferencia o círculo.",
+        "C": "Si el corte se hace a mayor distancia del centro, el área del círculo de sección aumenta.",
+        "D": "Una sección plana que pase por el centro de la esfera genera una parábola."
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "En una esfera perfecta tridimensional, la intersección con cualquier plano secante (sin importar el ángulo o inclinación) siempre genera una circunferencia en su contorno y un círculo como región interior.",
+        "A mayor distancia del centro la sección disminuye de radio, y nunca se obtienen elipses o parábolas al cortar una esfera con planos."
+      ],
+      "visual_spec": {
+        "alt": "Intersección plana universal en una esfera",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "sphere",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 80,
+            "distance": 25,
+            "showEquator": true
+          },
+          "labels": {
+            "center": "O",
+            "sectionCenter": "C"
+          },
+          "referenceBox": {
+            "lines": [
+              "Sección plana en esfera",
+              "Siempre es circular",
+              "O: centro"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 176,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección axial de un cilindro circular recto",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+      },
+      "stem": "Considere la figura del cilindro circular recto donde $A-B-C$ y $D-E-F$ representan los diámetros de las bases superior e inferior. Si el radio de la base mide $4\\text{ cm}$ y la altura del cilindro mide $10\\text{ cm}$, ¿cuál es el área de la sección axial $ACFD$?",
+      "options": {
+        "A": "$40\\text{ cm}^2$",
+        "B": "$80\\text{ cm}^2$",
+        "C": "$80\\pi\\text{ cm}^2$",
+        "D": "$160\\text{ cm}^2$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La sección axial de un cilindro circular recto que contiene al eje central es un rectángulo cuyos lados son el diámetro de la base y la altura del cilindro.",
+        "Diámetro de la base: $AC = 2r = 2(4) = 8\\text{ cm}$.",
+        "Altura del cilindro: $h = CF = 10\\text{ cm}$.",
+        "Área del rectángulo de la sección: $\\text{Área} = \\text{base} \\times \\text{altura} = 8 \\times 10 = 80\\text{ cm}^2$."
+      ],
+      "visual_spec": {
+        "alt": "Sección axial rectangular en un cilindro circular recto",
         "visual": {
           "type": "solid_3d",
           "shape": "cylinder",
           "width": 380,
-          "height": 260,
+          "height": 280,
           "parameters": {
-            "radius": 75,
-            "height": 105,
-            "showTopDiameter": true,
-            "showBottomDiameter": true
+            "radius": 65,
+            "height": 115,
+            "crossSectionType": "axial",
+            "showAxis": true
           },
-          "showCrossSection": true,
-          "crossSectionType": "axial",
-          "crossSectionHatched": true,
           "labels": {
             "topLeft": "A",
             "topCenter": "B",
             "topRight": "C",
             "bottomLeft": "D",
             "bottomCenter": "E",
-            "bottomRight": "F"
+            "bottomRight": "F",
+            "height": "h"
           },
           "referenceBox": {
             "lines": [
@@ -241,133 +327,1019 @@
               "D — E — F",
               "B y E: centros de las bases"
             ]
-          }
+          },
+          "showCrossSection": true,
+          "showAxes": true
         }
       }
     },
     {
-      "id": 174,
-      "code": "item-geo-solid-005",
-      "set_id": "set_5",
-      "area": "Geometría",
+      "id": 177,
+      "area": "GEOMETRÍA",
       "area_id": "geometry",
-      "topic": "Sección plana axial en un tronco de cono (frustum)",
+      "topic": "Sección oblicua en un cilindro (Reconocimiento de la elipse)",
       "spec": {
-        "block": "1. Geometría",
-        "affirmation": "A5",
-        "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
-        "evidence": "A5.2",
-        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras geométricas tridimensionales."
+        "block": "Geometría",
+        "evidence": "A5.4",
+        "evidence_desc": "Reconoce elipses en diferentes contextos."
       },
-      "linked_concepts": [
-        "mep-geo-frustum-01"
-      ],
-      "program_applicability": [
-        "EDAD_PARTE_1",
-        "BXM"
-      ],
-      "calculator_allowed": true,
-      "cognitive_level": "conexion",
-      "stem": "Considere la siguiente figura de un tronco de cono circular recto donde se destaca una sección plana axial que contiene a los centros de las bases $D$ y $C$ y los radios $\\overline{DA}$ y $\\overline{CB}$: ¿Cuál es la forma geométrica de la región plana determinada por el corte axial delimitado por los vértices $D, A, B$ y $C$?",
+      "stem": "Al cortar un cilindro circular recto con un plano que no es paralelo ni perpendicular a las bases, y que no interseca a ninguna de ellas, ¿qué curva geométrica delimita el contorno de la sección plana resultante?",
       "options": {
-        "A": "Un trapecio rectángulo",
-        "B": "Un triángulo isósceles",
-        "C": "Un paralelogramo oblicuo",
-        "D": "Un romboide"
+        "A": "Una parábola",
+        "B": "Una circunferencia",
+        "C": "Una elipse",
+        "D": "Una hipérbola"
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "Un plano oblicuo que corta todas las generatrices del cilindro sin intersecar las bases genera una sección plana cuya frontera es una elipse.",
+        "El eje menor de la elipse coincide con el diámetro del cilindro y el eje mayor depende de la inclinación del ángulo del plano de corte."
+      ],
+      "visual_spec": {
+        "alt": "Sección plana oblicua produciendo una elipse en un cilindro",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cylinder",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 65,
+            "height": 120,
+            "crossSectionType": "oblique",
+            "showAxis": true
+          },
+          "labels": {
+            "topCenter": "O_1",
+            "bottomCenter": "O_2",
+            "sectionCenter": "M"
+          },
+          "referenceBox": {
+            "lines": [
+              "Plano secante oblicuo",
+              "Corte no paralelo a bases",
+              "Genera una elipse"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 178,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección transversal paralela a las bases de un cilindro",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+      },
+      "stem": "Si un cilindro circular recto de radio $r = 7\\text{ cm}$ y altura $14\\text{ cm}$ se corta con un plano paralelo a sus bases a la mitad de su altura, ¿cuál es el perímetro de la sección obtenida?",
+      "options": {
+        "A": "$7\\pi\\text{ cm}$",
+        "B": "$14\\pi\\text{ cm}$",
+        "C": "$28\\pi\\text{ cm}$",
+        "D": "$49\\pi\\text{ cm}$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Cualquier corte paralelo a las bases de un cilindro circular recto produce un círculo congruente con las bases.",
+        "Por lo tanto, el radio de la sección es exactamente igual al radio del cilindro: $r = 7\\text{ cm}$.",
+        "El perímetro (longitud de la circunferencia) es $P = 2\\pi r = 2\\pi(7) = 14\\pi\\text{ cm}$."
+      ],
+      "visual_spec": {
+        "alt": "Corte paralelo a las bases en un cilindro",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cylinder",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 65,
+            "height": 115,
+            "crossSectionType": "parallel",
+            "showAxis": true
+          },
+          "labels": {
+            "topCenter": "O_1",
+            "bottomCenter": "O_2",
+            "sectionCenter": "O_m",
+            "radius": "r = 7"
+          },
+          "referenceBox": {
+            "lines": [
+              "Plano paralelo a las bases",
+              "Círculo congruente a bases",
+              "Radio = 7 cm"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 179,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Cálculo del radio a partir de una sección axial cuadrada",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+      },
+      "stem": "La sección axial de un cilindro circular recto es un cuadrado cuya área es de $64\\text{ cm}^2$. ¿Cuál es la medida del radio de las bases de dicho cilindro?",
+      "options": {
+        "A": "$2\\text{ cm}$",
+        "B": "$4\\text{ cm}$",
+        "C": "$8\\text{ cm}$",
+        "D": "$16\\text{ cm}$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Al ser un cuadrado de área $64\\text{ cm}^2$, cada lado mide $l = \\sqrt{64} = 8\\text{ cm}$.",
+        "La base del cuadrado de la sección axial corresponde al diámetro de la base del cilindro: $2r = 8\\text{ cm}$.",
+        "Por lo tanto, el radio de la base es $r = \\frac{8}{2} = 4\\text{ cm}$."
+      ],
+      "visual_spec": {
+        "alt": "Cilindro equilátero con sección axial cuadrada",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cylinder",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 55,
+            "height": 110,
+            "crossSectionType": "axial",
+            "showAxis": true
+          },
+          "labels": {
+            "topLeft": "P",
+            "topCenter": "O_1",
+            "topRight": "Q",
+            "bottomLeft": "S",
+            "bottomCenter": "O_2",
+            "bottomRight": "R"
+          },
+          "referenceBox": {
+            "lines": [
+              "Sección axial PQRS cuadrada",
+              "Área = 64 cm²",
+              "O_1 y O_2: centros"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 180,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Identificación de elementos métricos del cilindro",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.1",
+        "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el diámetro de un cilindro circular recto en diversos contextos."
+      },
+      "stem": "¿Cuál de las siguientes relaciones métricas es correcta para cualquier cilindro circular recto donde $h$ es la altura, $r$ el radio y $g$ la generatriz?",
+      "options": {
+        "A": "$g = h$",
+        "B": "$g = 2r$",
+        "C": "$g = \\sqrt{r^2 + h^2}$",
+        "D": "$g = \\frac{h}{2}$"
       },
       "correct_answer": "A",
       "solution_steps": [
-        "El eje del tronco de cono es el segmento perpendicular a ambas bases circulares paralelas $\\overline{DC}$.",
-        "Los radios superior $\\overline{DA}$ e inferior $\\overline{CB}$ son paralelos entre sí y ambos son perpendiculares a la altura $\\overline{DC}$.",
-        "Como $\\overline{DA} \\parallel \\overline{CB}$, el segmento $\\overline{DC}$ es perpendicular a ambos, y los lados opuestos tienen longitudes distintas ($r \\\neq R$), el cuadrilátero $DABC$ tiene dos bases paralelas desiguales y dos ángulos rectos en $D$ y en $C$.",
-        "Por lo tanto, la figura plana delimitada por $D, A, B$ y $C$ corresponde exactamente a un trapecio rectángulo."
+        "En un cilindro circular recto, las generatrices son perpendiculares a las bases y paralelas al eje central.",
+        "Por esta razón geométrica, la longitud de la generatriz $g$ siempre es idéntica a la altura $h$ ($g = h$)."
       ],
-      "group_id": null,
       "visual_spec": {
-        "alt": "Tronco de cono circular recto con sección axial trapezoidal delimitada por centros D, C y radios DA, CB",
+        "alt": "Elementos y generatriz de un cilindro circular recto",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cylinder",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 65,
+            "height": 120,
+            "showAxis": true
+          },
+          "labels": {
+            "topCenter": "B_1",
+            "bottomCenter": "B_2",
+            "height": "h",
+            "topRight": "g"
+          },
+          "referenceBox": {
+            "lines": [
+              "Cilindro circular recto",
+              "g: generatriz lateral",
+              "g = h"
+            ]
+          },
+          "showCrossSection": false,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 181,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección paralela a la base en un cono",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+      },
+      "stem": "Considere la figura del cono donde $V$ es la cúspide y $O$ es el centro de la base. Si la altura del cono mide $12\\text{ cm}$, el radio de la base mide $9\\text{ cm}$ y se traza una sección plana paralela a la base a $4\\text{ cm}$ del vértice $V$, ¿cuál es el radio de dicha sección?",
+      "options": {
+        "A": "$3\\text{ cm}$",
+        "B": "$4\\text{ cm}$",
+        "C": "$5\\text{ cm}$",
+        "D": "$6\\text{ cm}$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Por semejanza de triángulos entre el triángulo axial del cono y el del cono menor superior determinado por el corte:",
+        "$\\frac{r'}{r} = \\frac{h'}{h}$, donde $h=12$, $r=9$ y $h'=4$.",
+        "$\\frac{r'}{9} = \\frac{4}{12} = \\frac{1}{3} \\implies r' = \\frac{9}{3} = 3\\text{ cm}$."
+      ],
+      "visual_spec": {
+        "alt": "Sección transversal paralela a la base de un cono",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cone",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 75,
+            "height": 130,
+            "cutHeightFraction": 0.45,
+            "showAxis": true,
+            "showCenter": true,
+            "showRightAngle": true
+          },
+          "labels": {
+            "apex": "V",
+            "baseCenter": "O",
+            "baseRight": "B",
+            "cutCenter": "O'",
+            "cutRight": "B'"
+          },
+          "referenceBox": {
+            "lines": [
+              "V: cúspide del cono",
+              "O: centro de la base",
+              "Triángulo V-O-B rectángulo en O"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 182,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Relación entre altura, radio y generatriz del cono",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+      },
+      "stem": "Un cono circular recto tiene un diámetro de base de $16\\text{ cm}$ y una generatriz de $17\\text{ cm}$. ¿Cuánto mide la altura del cono?",
+      "options": {
+        "A": "$8\\text{ cm}$",
+        "B": "$15\\text{ cm}$",
+        "C": "$23\\text{ cm}$",
+        "D": "$\\sqrt{353}\\text{ cm}$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "El radio de la base es $r = \\frac{16}{2} = 8\\text{ cm}$.",
+        "El triángulo axial rectángulo formado por la altura $h$, el radio $r$ y la generatriz $g$ cumple: $g^2 = h^2 + r^2$.",
+        "$17^2 = h^2 + 8^2 \\implies 289 = h^2 + 64 \\implies h^2 = 225$.",
+        "$h = \\sqrt{225} = 15\\text{ cm}$."
+      ],
+      "visual_spec": {
+        "alt": "Triángulo axial generatriz-radio-altura en cono",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cone",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 70,
+            "height": 130,
+            "showAxis": true,
+            "showRightAngle": true
+          },
+          "labels": {
+            "apex": "V",
+            "baseCenter": "O",
+            "baseRight": "A",
+            "slant": "g = 17",
+            "radius": "r = 8"
+          },
+          "referenceBox": {
+            "lines": [
+              "V: vértice",
+              "O: centro base",
+              "g² = h² + r²"
+            ]
+          },
+          "showCrossSection": false,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 183,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Corte oblicuo a las generatrices del cono (Elipse cónica)",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.4",
+        "evidence_desc": "Reconoce elipses en diferentes contextos."
+      },
+      "stem": "¿Qué curva cónica se obtiene al realizar una sección plana que corta a todas las generatrices del cono de un mismo lado del vértice, sin pasar por dicho vértice ni ser paralela a la base?",
+      "options": {
+        "A": "Una parábola",
+        "B": "Una elipse",
+        "C": "Una hipérbola",
+        "D": "Una circunferencia"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Cuando el plano secante corta todas las generatrices de la superficie cónica con un ángulo mayor que el del ángulo de inclinación de las generatrices (y distinto al plano de la base), la sección plana es una elipse cónica."
+      ],
+      "visual_spec": {
+        "alt": "Corte cónico que genera una elipse",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cone",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 70,
+            "height": 130,
+            "cutHeightFraction": 0.5,
+            "showAxis": true
+          },
+          "labels": {
+            "apex": "V",
+            "baseCenter": "O"
+          },
+          "referenceBox": {
+            "lines": [
+              "Corte plano oblicuo",
+              "Sección cónica",
+              "Frontera: elipse"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 184,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Área de la sección plana en un cono",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+      },
+      "stem": "Un cono de altura $10\\text{ cm}$ y radio basal $6\\text{ cm}$ es cortado por un plano paralelo a la base a una distancia de $5\\text{ cm}$ de la cúspide. ¿Cuál es el área de la sección circular producida?",
+      "options": {
+        "A": "$3\\pi\\text{ cm}^2$",
+        "B": "$6\\pi\\text{ cm}^2$",
+        "C": "$9\\pi\\text{ cm}^2$",
+        "D": "$18\\pi\\text{ cm}^2$"
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "La razón de alturas es $\\frac{h'}{h} = \\frac{5}{10} = \\frac{1}{2}$.",
+        "El radio de la sección es $r' = \\frac{1}{2} \\times r = \\frac{1}{2} \\times 6 = 3\\text{ cm}$.",
+        "El área del círculo es $A = \\pi (r')^2 = \\pi (3)^2 = 9\\pi\\text{ cm}^2$."
+      ],
+      "visual_spec": {
+        "alt": "Sección circular a media altura en cono",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cone",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 70,
+            "height": 130,
+            "cutHeightFraction": 0.5,
+            "showAxis": true
+          },
+          "labels": {
+            "apex": "V",
+            "baseCenter": "O",
+            "cutCenter": "C"
+          },
+          "referenceBox": {
+            "lines": [
+              "h = 10, h' = 5",
+              "r = 6",
+              "Círculo sección r' = 3"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 185,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección axial triangular del cono",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+      },
+      "stem": "Si un cono circular recto de radio $r=5\\text{ cm}$ y altura $h=12\\text{ cm}$ se corta con un plano que pasa por su vértice y por el centro de la base, ¿cuál es el perímetro de la sección plana resultante?",
+      "options": {
+        "A": "$26\\text{ cm}$",
+        "B": "$36\\text{ cm}$",
+        "C": "$40\\text{ cm}$",
+        "D": "$60\\text{ cm}$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La sección plana que pasa por el vértice y el diámetro de la base es un triángulo isósceles cuyos lados congruentes son las generatrices $g$ y cuya base es el diámetro basal $2r = 10\\text{ cm}$.",
+        "Calculamos la generatriz: $g = \\sqrt{h^2 + r^2} = \\sqrt{12^2 + 5^2} = \\sqrt{169} = 13\\text{ cm}$.",
+        "El perímetro del triángulo es $P = g + g + 2r = 13 + 13 + 10 = 36\\text{ cm}$."
+      ],
+      "visual_spec": {
+        "alt": "Sección axial triangular en un cono",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cone",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 75,
+            "height": 130,
+            "showAxis": true
+          },
+          "labels": {
+            "apex": "V",
+            "baseCenter": "O",
+            "baseLeft": "A",
+            "baseRight": "B"
+          },
+          "referenceBox": {
+            "lines": [
+              "Sección axial VAB",
+              "Triángulo isósceles",
+              "Base AB = 10, g = 13"
+            ]
+          },
+          "showCrossSection": false,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 186,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección axial trapecial de un tronco de cono",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+      },
+      "stem": "Un tronco de cono tiene un radio basal mayor de $R = 8\\text{ cm}$, un radio basal menor de $r = 3\\text{ cm}$ y una altura de $12\\text{ cm}$. ¿Cuál es el área de su sección axial?",
+      "options": {
+        "A": "$66\\text{ cm}^2$",
+        "B": "$132\\text{ cm}^2$",
+        "C": "$132\\pi\\text{ cm}^2$",
+        "D": "$192\\text{ cm}^2$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La sección axial de un tronco de cono circular recto es un trapecio isósceles.",
+        "La base mayor del trapecio es el diámetro basal inferior: $B_1 = 2R = 2(8) = 16\\text{ cm}$.",
+        "La base menor es el diámetro basal superior: $B_2 = 2r = 2(3) = 6\\text{ cm}$.",
+        "El área del trapecio es $A = \\frac{B_1 + B_2}{2} \\times h = \\frac{16 + 6}{2} \\times 12 = 11 \\times 12 = 132\\text{ cm}^2$."
+      ],
+      "visual_spec": {
+        "alt": "Sección axial de tronco de cono formando trapecio isósceles",
         "visual": {
           "type": "solid_3d",
           "shape": "frustum",
           "width": 380,
-          "height": 260,
+          "height": 280,
           "parameters": {
             "topRadius": 42,
             "bottomRadius": 78,
-            "height": 115
+            "height": 115,
+            "showAxis": true
           },
-          "showCrossSection": true,
-          "crossSectionHatched": true,
           "labels": {
-            "topCenter": "D",
+            "topCenter": "O_1",
+            "bottomCenter": "O_2",
             "topRight": "A",
-            "bottomCenter": "C",
             "bottomRight": "B",
             "topRadius": "r",
             "bottomRadius": "R",
             "height": "h",
             "slant": "g"
-          }
+          },
+          "referenceBox": {
+            "lines": [
+              "O_1 y O_2: centros de las bases",
+              "Bases paralelas r < R",
+              "Corte que contiene al eje central"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
         }
       }
     },
     {
-      "id": 175,
-      "code": "item-geo-solid-006",
-      "set_id": "set_5",
-      "area": "Geometría",
+      "id": 187,
+      "area": "GEOMETRÍA",
       "area_id": "geometry",
-      "topic": "Prisma recto y cálculo de aristas y áreas",
+      "topic": "Generatriz de un tronco de cono",
       "spec": {
-        "block": "1. Geometría",
-        "affirmation": "A5",
-        "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
-        "evidence": "A5.1",
-        "evidence_desc": "Identifica características métricas en figuras tridimensionales (cubos, prismas)."
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
       },
-      "linked_concepts": [
-        "mep-geo-prisma-01"
-      ],
-      "program_applicability": [
-        "EDAD_PARTE_1",
-        "BXM"
-      ],
-      "calculator_allowed": true,
-      "cognitive_level": "conexion",
-      "stem": "Considere el prisma rectangular recto mostrado en la figura, cuyas dimensiones de base son largo $l = 10$, ancho $a = 6$ y altura $h = 4$: ¿Cuál es el área total de dicho prisma rectangular?",
+      "stem": "En un tronco de cono, los radios de las bases miden $r = 4\\text{ cm}$ y $R = 9\\text{ cm}$, y la altura mide $h = 12\\text{ cm}$. ¿Cuál es la longitud de la generatriz $g$?",
       "options": {
-        "A": "248",
-        "B": "124",
-        "C": "240",
-        "D": "180"
+        "A": "$5\\text{ cm}$",
+        "B": "$13\\text{ cm}$",
+        "C": "$15\\text{ cm}$",
+        "D": "$\\sqrt{153}\\text{ cm}$"
       },
-      "correct_answer": "A",
+      "correct_answer": "B",
       "solution_steps": [
-        "La fórmula del área total de un prisma rectangular (ortoedro) es $\\text{Área Total} = 2(l \\cdot a + l \\cdot h + a \\cdot h)$.",
-        "Calculando el área de cada par de caras opuestas: base y tapa $2(10 \\times 6) = 120$; caras frontal y posterior $2(10 \\times 4) = 80$; caras laterales $2(6 \\times 4) = 48$.",
-        "Sumando las áreas: $120 + 80 + 48 = 248$.",
-        "Por lo tanto, la opción correcta es 248."
+        "En la sección axial trapecial, trazamos la altura perpendicular desde el extremo del radio menor al radio mayor, formando un triángulo rectángulo con catetos $h$ y $(R - r)$.",
+        "Diferencia de radios: $R - r = 9 - 4 = 5\\text{ cm}$.",
+        "Por Pitágoras: $g = \\sqrt{h^2 + (R - r)^2} = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13\\text{ cm}$."
       ],
-      "group_id": null,
       "visual_spec": {
-        "alt": "Prisma rectangular recto con base sombreada y dimensiones de largo, ancho y altura",
+        "alt": "Relación pitagórica de generatriz en tronco de cono",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "frustum",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "topRadius": 45,
+            "bottomRadius": 80,
+            "height": 115,
+            "showAxis": true
+          },
+          "labels": {
+            "topCenter": "O_1",
+            "bottomCenter": "O_2",
+            "height": "12",
+            "slant": "g"
+          },
+          "referenceBox": {
+            "lines": [
+              "r = 4, R = 9, h = 12",
+              "g² = h² + (R - r)²"
+            ]
+          },
+          "showCrossSection": false,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 188,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección paralela intermedia en tronco de cono",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+      },
+      "stem": "Un tronco de cono de bases paralelas tiene radios basal superior $r = 6\\text{ cm}$ e inferior $R = 10\\text{ cm}$. Se realiza un corte plano a la mitad de su altura. ¿Cuál es la longitud del radio de la sección circular obtenida?",
+      "options": {
+        "A": "$7\\text{ cm}$",
+        "B": "$8\\text{ cm}$",
+        "C": "$8.5\\text{ cm}$",
+        "D": "$9\\text{ cm}$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Al cortar a la mitad exacta de la altura, el radio de la sección corresponde a la mediana (base media) del trapecio axial correspondiente.",
+        "$r_{med} = \\frac{R + r}{2} = \\frac{10 + 6}{2} = \\frac{16}{2} = 8\\text{ cm}$."
+      ],
+      "visual_spec": {
+        "alt": "Sección circular a media altura en tronco de cono",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "frustum",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "topRadius": 44,
+            "bottomRadius": 76,
+            "height": 115,
+            "showAxis": true
+          },
+          "labels": {
+            "topCenter": "O_1",
+            "bottomCenter": "O_2",
+            "topRadius": "6",
+            "bottomRadius": "10"
+          },
+          "referenceBox": {
+            "lines": [
+              "Corte a media altura",
+              "Base media del trapecio",
+              "r_m = (R + r) / 2"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 189,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Identificación de bases y superficies de un tronco de cono",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones describe con precisión las bases de un tronco de cono circular recto?",
+      "options": {
+        "A": "Son dos elipses situadas en planos perpendiculares.",
+        "B": "Son dos círculos paralelos de radios distintos.",
+        "C": "Son dos círculos concéntricos situados en un mismo plano.",
+        "D": "Son dos polígonos regulares semejantes."
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Por definición, un tronco de cono circular recto de bases paralelas está limitado por dos círculos situados en planos paralelos cuyos radios son distintos ($r \\neq R$), unidos por una superficie lateral cónica truncada."
+      ],
+      "visual_spec": {
+        "alt": "Bases circulares paralelas de un tronco de cono",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "frustum",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "topRadius": 40,
+            "bottomRadius": 75,
+            "height": 110,
+            "showAxis": true
+          },
+          "labels": {
+            "topCenter": "O_1",
+            "bottomCenter": "O_2"
+          },
+          "referenceBox": {
+            "lines": [
+              "Bases: círculos paralelos",
+              "Radios: r < R",
+              "O_1 y O_2: centros"
+            ]
+          },
+          "showCrossSection": false,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 190,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Perímetro de la sección axial de un tronco de cono",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+      },
+      "stem": "Un tronco de cono posee bases de radios $r = 2\\text{ cm}$ y $R = 5\\text{ cm}$, con una generatriz de $5\\text{ cm}$. ¿Cuál es el perímetro de su sección axial?",
+      "options": {
+        "A": "$14\\text{ cm}$",
+        "B": "$24\\text{ cm}$",
+        "C": "$28\\text{ cm}$",
+        "D": "$34\\text{ cm}$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La sección axial es un trapecio isósceles con base menor $2r = 2(2) = 4\\text{ cm}$, base mayor $2R = 2(5) = 10\\text{ cm}$ y dos lados no paralelos iguales a la generatriz $g = 5\\text{ cm}$.",
+        "El perímetro es $P = 2r + 2R + 2g = 4 + 10 + 2(5) = 14 + 10 = 24\\text{ cm}$."
+      ],
+      "visual_spec": {
+        "alt": "Perímetro trapecial de sección axial",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "frustum",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "topRadius": 40,
+            "bottomRadius": 75,
+            "height": 110,
+            "showAxis": true
+          },
+          "labels": {
+            "topRadius": "r = 2",
+            "bottomRadius": "R = 5",
+            "slant": "g = 5"
+          },
+          "referenceBox": {
+            "lines": [
+              "Trapecio axial",
+              "Bases: 2r y 2R",
+              "Lados oblicuos: g"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 191,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección plana diagonal en un prisma recto (cubo)",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+      },
+      "stem": "En un cubo cuya arista mide $6\\text{ cm}$, se realiza un corte plano que pasa por dos aristas opuestas no coplanares (sección diagonal). ¿Cuál es el área de la sección rectangular sombreada resultante?",
+      "options": {
+        "A": "$36\\text{ cm}^2$",
+        "B": "$36\\sqrt{2}\\text{ cm}^2$",
+        "C": "$72\\text{ cm}^2$",
+        "D": "$72\\sqrt{2}\\text{ cm}^2$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La sección diagonal que pasa por dos aristas opuestas de un cubo es un rectángulo cuyas dimensiones son una arista del cubo $a$ y la diagonal de una de las caras $d_{cara}$.",
+        "Para un cubo de arista $a=6$: $d_{cara} = a\\sqrt{2} = 6\\sqrt{2}\\text{ cm}$.",
+        "El área del rectángulo es $A = a \\times d_{cara} = 6 \\times 6\\sqrt{2} = 36\\sqrt{2}\\text{ cm}^2$."
+      ],
+      "visual_spec": {
+        "alt": "Sección diagonal sombreada en un cubo",
         "visual": {
           "type": "solid_3d",
           "shape": "prism",
           "width": 380,
-          "height": 260,
+          "height": 280,
           "parameters": {
-            "boxWidth": 120,
-            "boxHeight": 70,
-            "boxDepth": 55,
-            "projectionAngle": 35
+            "width": 90,
+            "height": 90,
+            "depth": 55,
+            "hatchCrossSection": true
+          },
+          "labels": {
+            "width": "6",
+            "height": "6",
+            "depth": "6"
+          },
+          "referenceBox": {
+            "lines": [
+              "Cubo de arista a = 6",
+              "Corte plano diagonal",
+              "Sección rectangular"
+            ]
           },
           "showCrossSection": true,
-          "crossSectionHatched": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 192,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Diagonal espacial de un cubo",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+      },
+      "stem": "¿Cuál es la longitud de la diagonal espacial interior (que une dos vértices opuestos más distantes) de un cubo cuya arista mide $5\\text{ cm}$?",
+      "options": {
+        "A": "$5\\sqrt{2}\\text{ cm}$",
+        "B": "$5\\sqrt{3}\\text{ cm}$",
+        "C": "$10\\text{ cm}$",
+        "D": "$15\\text{ cm}$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La diagonal espacial de un paralelepípedo cumple $D = \\sqrt{l^2 + w^2 + h^2}$.",
+        "Para un cubo con todos los lados iguales a $a=5$: $D = \\sqrt{a^2 + a^2 + a^2} = \\sqrt{3a^2} = a\\sqrt{3}$.",
+        "Sustituyendo $a=5$: $D = 5\\sqrt{3}\\text{ cm}$."
+      ],
+      "visual_spec": {
+        "alt": "Diagonal principal tridimensional en un cubo",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "prism",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "width": 95,
+            "height": 95,
+            "depth": 60
+          },
           "labels": {
-            "width": "l = 10",
-            "height": "h = 4",
-            "depth": "a = 6"
-          }
+            "width": "5",
+            "height": "5"
+          },
+          "referenceBox": {
+            "lines": [
+              "Cubo de arista a = 5",
+              "Diagonal espacial D",
+              "D = a√3"
+            ]
+          },
+          "showCrossSection": false,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 193,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección transversal triangular en un cubo (Corte en vértice)",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+      },
+      "stem": "Si en un cubo se realiza un corte plano que pasa por los puntos medios de tres aristas que convergen en un mismo vértice, ¿qué figura geométrica se obtiene como sección plana?",
+      "options": {
+        "A": "Un triángulo equilátero",
+        "B": "Un triángulo rectángulo escaleno",
+        "C": "Un cuadrado",
+        "D": "Un rombo"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Los tres puntos medios están situados a la misma distancia del vértice común.",
+        "La distancia entre cualquier par de estos puntos medios es la hipotenusa de un triángulo rectángulo isósceles con catetos iguales a $\\frac{a}{2}$.",
+        "Por lo tanto, los tres lados de la sección plana miden exactamente $\\frac{a}{2}\\sqrt{2}$, formando un triángulo equilátero."
+      ],
+      "visual_spec": {
+        "alt": "Corte de esquina en cubo produciendo un triángulo equilátero",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "prism",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "width": 90,
+            "height": 90,
+            "depth": 55,
+            "hatchCrossSection": true
+          },
+          "labels": {
+            "width": "a",
+            "height": "a"
+          },
+          "referenceBox": {
+            "lines": [
+              "Corte en esquina del cubo",
+              "Puntos medios de aristas",
+              "Sección: triángulo equilátero"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 194,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Cálculo de volumen a partir de sección transversal",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+      },
+      "stem": "Un prisma rectangular recto tiene una base de $8\\text{ cm}$ de largo y $5\\text{ cm}$ de ancho. Si un corte plano paralelo a la base genera un rectángulo de $40\\text{ cm}^2$ y la altura del prisma es de $10\\text{ cm}$, ¿cuál es el volumen del prisma?",
+      "options": {
+        "A": "$400\\text{ cm}^3$",
+        "B": "$200\\text{ cm}^3$",
+        "C": "$160\\text{ cm}^3$",
+        "D": "$130\\text{ cm}^3$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Cualquier corte paralelo a la base de un prisma rectangular tiene un área idéntica a la base: $A_{base} = 8 \\times 5 = 40\\text{ cm}^2$.",
+        "El volumen de un prisma recto es $V = A_{base} \\times h$.",
+        "$V = 40 \\times 10 = 400\\text{ cm}^3$."
+      ],
+      "visual_spec": {
+        "alt": "Prisma rectangular recto con corte paralelo a la base",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "prism",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "width": 105,
+            "height": 85,
+            "depth": 55,
+            "hatchCrossSection": true
+          },
+          "labels": {
+            "width": "8",
+            "depth": "5",
+            "height": "10"
+          },
+          "referenceBox": {
+            "lines": [
+              "Prisma rectangular",
+              "Corte paralelo a la base",
+              "Área basal = 40 cm²"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 195,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Identificación de secciones planas en paralelepípedos rectos",
+      "spec": {
+        "block": "Geometría",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+      },
+      "stem": "¿Cuál de las siguientes figuras geométricas NUNCA puede obtenerse mediante una sección plana de un cubo?",
+      "options": {
+        "A": "Un hexágono",
+        "B": "Un trapecio",
+        "C": "Un círculo",
+        "D": "Un triángulo"
+      },
+      "correct_answer": "C",
+      "solution_steps": [
+        "Un cubo es un poliedro cuyas caras son planos poligonales. La intersección de un plano con planos siempre produce segmentos de recta.",
+        "Por ello, la sección plana de un cubo siempre es un polígono (triángulo, cuadrilátero, pentágono o hexágono).",
+        "Nunca puede tener lados curvos ni generar un círculo."
+      ],
+      "visual_spec": {
+        "alt": "Polígonos generados por secciones planas en un cubo",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "prism",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "width": 90,
+            "height": 90,
+            "depth": 55
+          },
+          "labels": {
+            "width": "a",
+            "height": "a"
+          },
+          "referenceBox": {
+            "lines": [
+              "Secciones en poliedros",
+              "Siempre son polígonos",
+              "Nunca figuras curvas"
+            ]
+          },
+          "showCrossSection": false,
+          "showAxes": true
         }
       }
     }

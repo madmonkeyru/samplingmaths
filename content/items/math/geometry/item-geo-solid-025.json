@@ -1,0 +1,58 @@
+{
+  "id": "item-geo-solid-025",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Identificación de secciones planas en paralelepípedos rectos",
+  "cognitive_level": "Comprensión",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+  },
+  "stem": "¿Cuál de las siguientes figuras geométricas NUNCA puede obtenerse mediante una sección plana de un cubo?",
+  "options": {
+    "A": "Un hexágono",
+    "B": "Un trapecio",
+    "C": "Un círculo",
+    "D": "Un triángulo"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Un cubo es un poliedro cuyas caras son planos poligonales. La intersección de un plano con planos siempre produce segmentos de recta.",
+    "Por ello, la sección plana de un cubo siempre es un polígono (triángulo, cuadrilátero, pentágono o hexágono).",
+    "Nunca puede tener lados curvos ni generar un círculo."
+  ],
+  "visual_spec": {
+    "alt": "Polígonos generados por secciones planas en un cubo",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "prism",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "width": 90,
+        "height": 90,
+        "depth": 55
+      },
+      "labels": {
+        "width": "a",
+        "height": "a"
+      },
+      "referenceBox": {
+        "lines": [
+          "Secciones en poliedros",
+          "Siempre son polígonos",
+          "Nunca figuras curvas"
+        ]
+      },
+      "showCrossSection": false,
+      "showAxes": true
+    }
+  }
+}

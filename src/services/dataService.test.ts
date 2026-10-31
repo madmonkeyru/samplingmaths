@@ -4,7 +4,7 @@ import { dataService } from './dataService';
 describe('DataService', () => {
   it('loads items correctly from questions.json', () => {
     const items = dataService.getAllItems();
-    expect(items.length).toBe(175);
+    expect(items.length).toBe(195);
     expect(items[0].id).toBe(1);
     expect(items[169].id).toBe(170);
     expect(items[174].id).toBe(175);
@@ -22,7 +22,7 @@ describe('DataService', () => {
     expect(sets[3].id).toBe('set_4');
     expect(sets[3].total_items).toBe(20);
     expect(sets[4].id).toBe('set_5');
-    expect(sets[4].total_items).toBe(5);
+    expect(sets[4].total_items).toBe(25);
 
     const set1Items = dataService.getItemsBySet('set_1');
     expect(set1Items.length).toBe(60);
@@ -31,7 +31,7 @@ describe('DataService', () => {
     expect(set3Items.length).toBe(20);
 
     const set5Items = dataService.getItemsBySet('set_5');
-    expect(set5Items.length).toBe(5);
+    expect(set5Items.length).toBe(25);
 
     const simulationItems = dataService.getSimulationItems('set_1');
     expect(simulationItems.length).toBe(60);
@@ -55,7 +55,7 @@ describe('DataService', () => {
     expect(set1Stats.length).toBe(12);
 
     const allGeometry = dataService.getItemsByArea('geometry');
-    expect(allGeometry.length).toBe(69); // 23 (set1) + 27 (set2) + 7 (set3) + 7 (set4) + 5 (set5)
+    expect(allGeometry.length).toBe(89); // 23 (set1) + 27 (set2) + 7 (set3) + 7 (set4) + 25 (set5)
 
     const allFunctions = dataService.getItemsByArea('functions');
     expect(allFunctions.length).toBe(64); // 25 (set1) + 25 (set2) + 7 (set3) + 7 (set4)

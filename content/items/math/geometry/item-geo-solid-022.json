@@ -1,0 +1,58 @@
+{
+  "id": "item-geo-solid-022",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Diagonal espacial de un cubo",
+  "cognitive_level": "Comprensión",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+  },
+  "stem": "¿Cuál es la longitud de la diagonal espacial interior (que une dos vértices opuestos más distantes) de un cubo cuya arista mide $5\\text{ cm}$?",
+  "options": {
+    "A": "$5\\sqrt{2}\\text{ cm}$",
+    "B": "$5\\sqrt{3}\\text{ cm}$",
+    "C": "$10\\text{ cm}$",
+    "D": "$15\\text{ cm}$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La diagonal espacial de un paralelepípedo cumple $D = \\sqrt{l^2 + w^2 + h^2}$.",
+    "Para un cubo con todos los lados iguales a $a=5$: $D = \\sqrt{a^2 + a^2 + a^2} = \\sqrt{3a^2} = a\\sqrt{3}$.",
+    "Sustituyendo $a=5$: $D = 5\\sqrt{3}\\text{ cm}$."
+  ],
+  "visual_spec": {
+    "alt": "Diagonal principal tridimensional en un cubo",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "prism",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "width": 95,
+        "height": 95,
+        "depth": 60
+      },
+      "labels": {
+        "width": "5",
+        "height": "5"
+      },
+      "referenceBox": {
+        "lines": [
+          "Cubo de arista a = 5",
+          "Diagonal espacial D",
+          "D = a√3"
+        ]
+      },
+      "showCrossSection": false,
+      "showAxes": true
+    }
+  }
+}
