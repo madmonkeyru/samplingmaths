@@ -1,0 +1,75 @@
+{
+  "id": "item-math-geo-solids-003",
+  "code": "item-geo-solid-003",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Elementos del cono circular recto",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A5",
+    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+    "evidence": "A5.1",
+    "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el diámetro en figuras tridimensionales."
+  },
+  "linked_concepts": [
+    "mep-geo-cono-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "stem": "Con base en la información de la figura referida a un cono circular recto y una sección plana circular paralela a la base: ¿Cuál segmento representa el diámetro del cono de centro $D$?",
+  "options": {
+    "A": "$\\overline{AC}$",
+    "B": "$\\overline{EC}$",
+    "C": "$\\overline{GC}$",
+    "D": "$\\overline{HC}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La base del cono tiene como centro el punto $D$.",
+    "Los puntos $A$ y $C$ pertenecen a la circunferencia de la base y están alineados con el centro ($A - D - C$).",
+    "El segmento que pasa por el centro $D$ y une dos puntos de la circunferencia de la base es $\\overline{AC}$, el cual corresponde al diámetro de la base del cono.",
+    "Por lo tanto, la respuesta correcta es $\\overline{AC}$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Cono circular recto con base de centro D y sección plana paralela con centro H",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cone",
+      "width": 380,
+      "height": 260,
+      "parameters": {
+        "radius": 75,
+        "height": 125,
+        "cutHeightFraction": 0.48,
+        "showBaseDiameter": true
+      },
+      "showCrossSection": true,
+      "crossSectionType": "parallel",
+      "crossSectionHatched": false,
+      "labels": {
+        "apex": "B",
+        "baseCenter": "D",
+        "baseLeft": "A",
+        "baseRight": "C",
+        "cutCenter": "H",
+        "cutLeft": "G",
+        "cutRight": "E"
+      },
+      "referenceBox": {
+        "lines": [
+          "A — G — B",
+          "A — D — C",
+          "C — E — B",
+          "G — H — E",
+          "D: centro de la base",
+          "H: centro de la sección"
+        ]
+      }
+    }
+  }
+}

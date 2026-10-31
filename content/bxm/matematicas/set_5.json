@@ -1,0 +1,375 @@
+{
+  "schema_version": "1.0",
+  "exam": "Práctica de Visualización Espacial y Cuerpos Geométricos 3D",
+  "convocatoria": "Práctica de Refuerzo 3D",
+  "language": "es-CR",
+  "source": "MEP Educación Abierta - Criterio A5 Sólidos Geométricos Tridimensionales",
+  "specification": "A5. Secciones planas y características métricas en cuerpos redondos y poliedros (Esfera, Cono, Cilindro, Frustum, Prisma/Cubo)",
+  "solucionario_verified": true,
+  "set_info": {
+    "id": "set_5",
+    "name": "Práctica Especializada: Visualización Espacial 3D (Criterio A5)",
+    "description": "Práctica modular con ilustraciones técnicas paramétricas en SVG de sólidos geométricos tridimensionales (esfera, cono, cilindro, tronco de cono y prisma).",
+    "total_items": 5
+  },
+  "total_items": 5,
+  "sections": [
+    {
+      "id": "geometria_3d",
+      "name": "Geometría - Visualización Espacial y Secciones Planas",
+      "item_range": [
+        171,
+        175
+      ],
+      "total_items": 5
+    }
+  ],
+  "items": [
+    {
+      "id": 171,
+      "code": "item-geo-solid-001",
+      "set_id": "set_5",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Secciones planas en figuras tridimensionales (Esfera)",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A5",
+        "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+      },
+      "linked_concepts": [
+        "mep-geo-esfera-01",
+        "mep-geo-seccion-plana-02"
+      ],
+      "program_applicability": [
+        "EDAD_PARTE_1",
+        "BXM"
+      ],
+      "calculator_allowed": true,
+      "cognitive_level": "conexion",
+      "stem": "Considere la siguiente figura que ilustra una sección plana producto de la intersección de un plano con una esfera. Además, considere que $MN = 10$ y $PN = 12$: ¿Cuál es la longitud de la circunferencia de la sección plana?",
+      "options": {
+        "A": "$10\\pi$",
+        "B": "$12\\pi$",
+        "C": "$22\\pi$",
+        "D": "$24\\pi$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La sección plana que se obtiene al cortar una esfera con un plano es un círculo de centro $O$ y diámetro $PN$.",
+        "El enunciado indica que el diámetro de la sección plana es $PN = 12$. Por lo tanto, su radio es $r = \\frac{12}{2} = 6$.",
+        "La longitud de la circunferencia de dicha sección plana se calcula con la fórmula $C = 2\\pi r = 2\\pi(6) = 12\\pi$ (o equivalentemente $C = \\pi \\cdot \\text{diámetro} = 12\\pi$).",
+        "Por consiguiente, la opción correcta es la B."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Esfera intersecada por un plano con sección plana circular de diámetro PN y centro O",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "sphere",
+          "width": 380,
+          "height": 260,
+          "parameters": {
+            "radius": 75,
+            "distance": 38,
+            "showPlaneRadius": true,
+            "showRightAngle": true
+          },
+          "showCrossSection": true,
+          "crossSectionHatched": true,
+          "labels": {
+            "sphereCenter": "M",
+            "planeCenter": "O",
+            "planeLeft": "P",
+            "planeRight": "N"
+          },
+          "referenceBox": {
+            "title": "P — O — N",
+            "lines": [
+              "M: centro de la esfera",
+              "O: centro de la sección plana"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 172,
+      "code": "item-geo-solid-003",
+      "set_id": "set_5",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Elementos del cono circular recto",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A5",
+        "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+        "evidence": "A5.1",
+        "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el diámetro en figuras tridimensionales."
+      },
+      "linked_concepts": [
+        "mep-geo-cono-01"
+      ],
+      "program_applicability": [
+        "EDAD_PARTE_1",
+        "BXM"
+      ],
+      "calculator_allowed": true,
+      "cognitive_level": "reproduccion",
+      "stem": "Con base en la información de la figura referida a un cono circular recto y una sección plana circular paralela a la base: ¿Cuál segmento representa el diámetro del cono de centro $D$?",
+      "options": {
+        "A": "$\\overline{AC}$",
+        "B": "$\\overline{EC}$",
+        "C": "$\\overline{GC}$",
+        "D": "$\\overline{HC}$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La base del cono tiene como centro el punto $D$.",
+        "Los puntos $A$ y $C$ pertenecen a la circunferencia de la base y están alineados con el centro ($A - D - C$).",
+        "El segmento que pasa por el centro $D$ y une dos puntos de la circunferencia de la base es $\\overline{AC}$, el cual corresponde al diámetro de la base del cono.",
+        "Por lo tanto, la respuesta correcta es $\\overline{AC}$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Cono circular recto con base de centro D y sección plana paralela con centro H",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cone",
+          "width": 380,
+          "height": 260,
+          "parameters": {
+            "radius": 75,
+            "height": 125,
+            "cutHeightFraction": 0.48,
+            "showBaseDiameter": true
+          },
+          "showCrossSection": true,
+          "crossSectionType": "parallel",
+          "crossSectionHatched": false,
+          "labels": {
+            "apex": "B",
+            "baseCenter": "D",
+            "baseLeft": "A",
+            "baseRight": "C",
+            "cutCenter": "H",
+            "cutLeft": "G",
+            "cutRight": "E"
+          },
+          "referenceBox": {
+            "lines": [
+              "A — G — B",
+              "A — D — C",
+              "C — E — B",
+              "G — H — E",
+              "D: centro de la base",
+              "H: centro de la sección"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 173,
+      "code": "item-geo-solid-004",
+      "set_id": "set_5",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Sección plana axial en un cilindro circular recto",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A5",
+        "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+      },
+      "linked_concepts": [
+        "mep-geo-cilindro-01",
+        "mep-geo-seccion-axial-02"
+      ],
+      "program_applicability": [
+        "EDAD_PARTE_1",
+        "BXM"
+      ],
+      "calculator_allowed": true,
+      "cognitive_level": "conexion",
+      "stem": "La siguiente figura ilustra un sólido con forma de cilindro circular recto donde $AB = BE = 4$: Si la intersección entre un plano y el sólido genera una figura plana que contiene a los puntos $A, C, F$ y $D$, entonces, ¿cuál es el área de esa figura plana?",
+      "options": {
+        "A": "16",
+        "B": "24",
+        "C": "25",
+        "D": "32"
+      },
+      "correct_answer": "D",
+      "solution_steps": [
+        "La sección plana que pasa por los puntos $A, C, F, D$ contiene a los centros de las bases $B$ y $E$, por lo que es una sección axial perpendicular a las bases.",
+        "Dicha sección plana corresponde a un rectángulo $ACFD$.",
+        "La base del rectángulo es el diámetro de las bases circulares $AC = 2 \\times AB = 2 \\times 4 = 8$.",
+        "La altura del rectángulo corresponde a la altura del cilindro $BE = 4$ (segmento $\\overline{CF}$ o $\\overline{AD}$).",
+        "El área de la figura plana rectangular es $\\text{Área} = \\text{base} \\times \\text{altura} = 8 \\times 4 = 32$."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Cilindro circular recto con sección axial rectangular ACFD, centros de base B y E",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cylinder",
+          "width": 380,
+          "height": 260,
+          "parameters": {
+            "radius": 75,
+            "height": 105,
+            "showTopDiameter": true,
+            "showBottomDiameter": true
+          },
+          "showCrossSection": true,
+          "crossSectionType": "axial",
+          "crossSectionHatched": true,
+          "labels": {
+            "topLeft": "A",
+            "topCenter": "B",
+            "topRight": "C",
+            "bottomLeft": "D",
+            "bottomCenter": "E",
+            "bottomRight": "F"
+          },
+          "referenceBox": {
+            "lines": [
+              "A — B — C",
+              "D — E — F",
+              "B y E: centros de las bases"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": 174,
+      "code": "item-geo-solid-005",
+      "set_id": "set_5",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Sección plana axial en un tronco de cono (frustum)",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A5",
+        "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras geométricas tridimensionales."
+      },
+      "linked_concepts": [
+        "mep-geo-frustum-01"
+      ],
+      "program_applicability": [
+        "EDAD_PARTE_1",
+        "BXM"
+      ],
+      "calculator_allowed": true,
+      "cognitive_level": "conexion",
+      "stem": "Considere la siguiente figura de un tronco de cono circular recto donde se destaca una sección plana axial que contiene a los centros de las bases $D$ y $C$ y los radios $\\overline{DA}$ y $\\overline{CB}$: ¿Cuál es la forma geométrica de la región plana determinada por el corte axial delimitado por los vértices $D, A, B$ y $C$?",
+      "options": {
+        "A": "Un trapecio rectángulo",
+        "B": "Un triángulo isósceles",
+        "C": "Un paralelogramo oblicuo",
+        "D": "Un romboide"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El eje del tronco de cono es el segmento perpendicular a ambas bases circulares paralelas $\\overline{DC}$.",
+        "Los radios superior $\\overline{DA}$ e inferior $\\overline{CB}$ son paralelos entre sí y ambos son perpendiculares a la altura $\\overline{DC}$.",
+        "Como $\\overline{DA} \\parallel \\overline{CB}$, el segmento $\\overline{DC}$ es perpendicular a ambos, y los lados opuestos tienen longitudes distintas ($r \\\neq R$), el cuadrilátero $DABC$ tiene dos bases paralelas desiguales y dos ángulos rectos en $D$ y en $C$.",
+        "Por lo tanto, la figura plana delimitada por $D, A, B$ y $C$ corresponde exactamente a un trapecio rectángulo."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Tronco de cono circular recto con sección axial trapezoidal delimitada por centros D, C y radios DA, CB",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "frustum",
+          "width": 380,
+          "height": 260,
+          "parameters": {
+            "topRadius": 42,
+            "bottomRadius": 78,
+            "height": 115
+          },
+          "showCrossSection": true,
+          "crossSectionHatched": true,
+          "labels": {
+            "topCenter": "D",
+            "topRight": "A",
+            "bottomCenter": "C",
+            "bottomRight": "B",
+            "topRadius": "r",
+            "bottomRadius": "R",
+            "height": "h",
+            "slant": "g"
+          }
+        }
+      }
+    },
+    {
+      "id": 175,
+      "code": "item-geo-solid-006",
+      "set_id": "set_5",
+      "area": "Geometría",
+      "area_id": "geometry",
+      "topic": "Prisma recto y cálculo de aristas y áreas",
+      "spec": {
+        "block": "1. Geometría",
+        "affirmation": "A5",
+        "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+        "evidence": "A5.1",
+        "evidence_desc": "Identifica características métricas en figuras tridimensionales (cubos, prismas)."
+      },
+      "linked_concepts": [
+        "mep-geo-prisma-01"
+      ],
+      "program_applicability": [
+        "EDAD_PARTE_1",
+        "BXM"
+      ],
+      "calculator_allowed": true,
+      "cognitive_level": "conexion",
+      "stem": "Considere el prisma rectangular recto mostrado en la figura, cuyas dimensiones de base son largo $l = 10$, ancho $a = 6$ y altura $h = 4$: ¿Cuál es el área total de dicho prisma rectangular?",
+      "options": {
+        "A": "248",
+        "B": "124",
+        "C": "240",
+        "D": "180"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La fórmula del área total de un prisma rectangular (ortoedro) es $\\text{Área Total} = 2(l \\cdot a + l \\cdot h + a \\cdot h)$.",
+        "Calculando el área de cada par de caras opuestas: base y tapa $2(10 \\times 6) = 120$; caras frontal y posterior $2(10 \\times 4) = 80$; caras laterales $2(6 \\times 4) = 48$.",
+        "Sumando las áreas: $120 + 80 + 48 = 248$.",
+        "Por lo tanto, la opción correcta es 248."
+      ],
+      "group_id": null,
+      "visual_spec": {
+        "alt": "Prisma rectangular recto con base sombreada y dimensiones de largo, ancho y altura",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "prism",
+          "width": 380,
+          "height": 260,
+          "parameters": {
+            "boxWidth": 120,
+            "boxHeight": 70,
+            "boxDepth": 55,
+            "projectionAngle": 35
+          },
+          "showCrossSection": true,
+          "crossSectionHatched": true,
+          "labels": {
+            "width": "l = 10",
+            "height": "h = 4",
+            "depth": "a = 6"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "item-math-geo-solids-005",
+  "code": "item-geo-solid-005",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Sección plana axial en un tronco de cono (frustum)",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A5",
+    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con secciones planas y características métricas en figuras geométricas tridimensionales.",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras geométricas tridimensionales."
+  },
+  "linked_concepts": [
+    "mep-geo-frustum-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "stem": "Considere la siguiente figura de un tronco de cono circular recto donde se destaca una sección plana axial que contiene a los centros de las bases $D$ y $C$ y los radios $\\overline{DA}$ y $\\overline{CB}$: ¿Cuál es la forma geométrica de la región plana determinada por el corte axial delimitado por los vértices $D, A, B$ y $C$?",
+  "options": {
+    "A": "Un trapecio rectángulo",
+    "B": "Un triángulo isósceles",
+    "C": "Un paralelogramo oblicuo",
+    "D": "Un romboide"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El eje del tronco de cono es el segmento perpendicular a ambas bases circulares paralelas $\\overline{DC}$.",
+    "Los radios superior $\\overline{DA}$ e inferior $\\overline{CB}$ son paralelos entre sí y ambos son perpendiculares a la altura $\\overline{DC}$.",
+    "Como $\\overline{DA} \\parallel \\overline{CB}$, el segmento $\\overline{DC}$ es perpendicular a ambos, y los lados opuestos tienen longitudes distintas ($r \\\neq R$), el cuadrilátero $DABC$ tiene dos bases paralelas desiguales y dos ángulos rectos en $D$ y en $C$.",
+    "Por lo tanto, la figura plana delimitada por $D, A, B$ y $C$ corresponde exactamente a un trapecio rectángulo."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Tronco de cono circular recto con sección axial trapezoidal delimitada por centros D, C y radios DA, CB",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "frustum",
+      "width": 380,
+      "height": 260,
+      "parameters": {
+        "topRadius": 42,
+        "bottomRadius": 78,
+        "height": 115
+      },
+      "showCrossSection": true,
+      "crossSectionHatched": true,
+      "labels": {
+        "topCenter": "D",
+        "topRight": "A",
+        "bottomCenter": "C",
+        "bottomRight": "B",
+        "topRadius": "r",
+        "bottomRadius": "R",
+        "height": "h",
+        "slant": "g"
+      }
+    }
+  }
+}

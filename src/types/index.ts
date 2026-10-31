@@ -84,6 +84,7 @@ export interface VisualElementSpec {
 export interface VisualSpec {
   alt?: string;
   type?: string;
+  shape?: 'sphere' | 'cylinder' | 'cone' | 'frustum' | 'prism' | 'cube' | string;
   visual?: VisualSpec;
   domain?: {
     x?: [number, number];
