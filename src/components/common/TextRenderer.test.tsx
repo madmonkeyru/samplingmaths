@@ -40,4 +40,13 @@ describe('TextRenderer', () => {
     expect(container.querySelector('.katex')).toBeNull();
     expect(container).toHaveTextContent('Texto claro y bien organizado.');
   });
+
+  it('renders parenthesized text containing inline math expressions cleanly', () => {
+    const { container } = render(
+      <TextRenderer content="Carlos obtuvo una nota de 85 en Matemáticas (media $\bar{x} = 75$, desviación estándar $s = 5$)." />
+    );
+    expect(container.textContent).toContain('media');
+    expect(container.textContent).toContain('desviación estándar');
+    expect(container.querySelectorAll('.katex').length).toBe(2);
+  });
 });

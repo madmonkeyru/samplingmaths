@@ -27,12 +27,12 @@
         "evidence": "A1.1",
         "evidence_desc": "Reconoce la representación gráfica de una circunferencia dado su centro y su radio, en diversos contextos."
       },
-      "stem": "Considere la siguiente representación gráfica de una circunferencia \"c\" en el plano cartesiano:",
+      "stem": "Considere la siguiente representación gráfica de una circunferencia $c$ en el plano cartesiano: ¿cuál es el centro y la medida del radio de $c$?",
       "options": {
-        "A": "Centro (3, -2) y radio 4.",
-        "B": "Centro (-3, 2) y radio 4.",
-        "C": "Centro (3, -2) y radio 16.",
-        "D": "Centro (-2, 3) y radio 4."
+        "A": "Centro $(3, -2)$ y radio $4$.",
+        "B": "Centro $(-3, 2)$ y radio $4$.",
+        "C": "Centro $(3, -2)$ y radio $16$.",
+        "D": "Centro $(-2, 3)$ y radio $4$."
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -425,12 +425,12 @@
         "evidence": "A2.2",
         "evidence_desc": "Resuelve problemas, de diversos contextos, relacionados con la traslación de una circunferencia y sus representaciones."
       },
-      "stem": "Un disco circular en una máquina industrial está centrado inicialmente en el origen (0, 0) con radio 5. Debido a un ajuste de calibración, el centro se desplaza al punto (3, -4), como se aprecia en la representación gráfica: [imagen]. ¿Cuál es la ecuación de la posición final del disco?",
+      "stem": "Un disco circular en una máquina industrial está centrado inicialmente en el origen $(0, 0)$ con radio $5$. Debido a un ajuste de calibración, el centro se desplaza al punto $(3, -4)$, como se aprecia en la representación gráfica: [imagen]. ¿Cuál es la ecuación de la posición final del disco?",
       "options": {
-        "A": "(x - 3)^2 + (y + 4)^2 = 25",
-        "B": "(x + 3)^2 + (y - 4)^2 = 25",
-        "C": "(x - 3)^2 + (y - 4)^2 = 25",
-        "D": "(x + 3)^2 + (y + 4)^2 = 25"
+        "A": "$(x - 3)^2 + (y + 4)^2 = 25$",
+        "B": "$(x + 3)^2 + (y - 4)^2 = 25$",
+        "C": "$(x - 3)^2 + (y - 4)^2 = 25$",
+        "D": "$(x + 3)^2 + (y + 4)^2 = 25$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -522,12 +522,12 @@
         "evidence": "A3.1",
         "evidence_desc": "Determina gráfica y algebraicamente si un punto se ubica en el interior o en el exterior de una circunferencia en diversos contextos."
       },
-      "stem": "Considere la circunferencia representada gráficamente con centro en C(1, 2) y radio 3: [imagen]. ¿Cuál de los siguientes puntos se ubica en el interior de la circunferencia?",
+      "stem": "Considere la circunferencia representada gráficamente con centro en $C(1, 2)$ y radio $3$: [imagen]. ¿Cuál de los siguientes puntos se ubica en el interior de la circunferencia?",
       "options": {
-        "A": "(1, 4)",
-        "B": "(5, 2)",
-        "C": "(1, 6)",
-        "D": "(-3, 2)"
+        "A": "$(1, 4)$",
+        "B": "$(5, 2)$",
+        "C": "$(1, 6)$",
+        "D": "$(-3, 2)$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -601,7 +601,7 @@
         "evidence": "A3.1",
         "evidence_desc": "Determina gráfica y algebraicamente si un punto se ubica en el interior o en el exterior de una circunferencia en diversos contextos."
       },
-      "stem": "Una zona de cobertura circular de rescate tiene su centro en (-2, 1) y un radio de 5 km. Un dron de rescate se encuentra en la posición P(1, 3). Según la gráfica adjunta, determine la posición relativa del dron respecto a la zona de rescate.",
+      "stem": "Una zona de cobertura circular de rescate tiene su centro en $(-2, 1)$ y un radio de $5\\text{ km}$. Un dron de rescate se encuentra en la posición $P(1, 3)$. Según la gráfica adjunta, determine la posición relativa del dron respecto a la zona de rescate.",
       "options": {
         "A": "Se ubica en el interior de la zona.",
         "B": "Se ubica sobre el borde exterior de la zona.",
@@ -755,12 +755,12 @@
         "evidence": "A3.2",
         "evidence_desc": "Determina si una recta dada gráfica o algebraicamente es secante, tangente o exterior a una circunferencia en diversos contextos."
       },
-      "stem": "En la gráfica adjunta, la recta L rosa el borde de la circunferencia c de centro O(0,0) exactamente en el punto P(0, 4): [imagen]. ¿Cuál es la ecuación algebraica de la recta L?",
+      "stem": "En la gráfica adjunta, la recta $L$ roza el borde de la circunferencia $c$ de centro $O(0, 0)$ exactamente en el punto $P(0, 4)$: [imagen]. ¿Cuál es la ecuación algebraica de la recta $L$?",
       "options": {
-        "A": "y = 4",
-        "B": "x = 4",
-        "C": "y = -4",
-        "D": "x = -4"
+        "A": "$y = 4$",
+        "B": "$x = 4$",
+        "C": "$y = -4$",
+        "D": "$x = -4$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -918,7 +918,7 @@
         "evidence": "A3.4",
         "evidence_desc": "Determina geométrica o algebraicamente la posición relativa entre rectas en el plano desde el punto de vista del paralelismo o la perpendicularidad, en diversos contextos."
       },
-      "stem": "Considere las rectas L1: y = 2x + 3 y L2: y = -1/2 x + 1 graficadas a continuación en el plano cartesiano: [imagen]. ¿Cuál es la relación de posición relativa entre L1 y L2?",
+      "stem": "Considere las rectas $L_1: y = 2x + 3$ y $L_2: y = -\\frac{1}{2}x + 1$ graficadas a continuación en el plano cartesiano: [imagen]. ¿Cuál es la relación de posición relativa entre $L_1$ y $L_2$?",
       "options": {
         "A": "Son perpendiculares.",
         "B": "Son paralelas no coincidentes.",
@@ -997,12 +997,12 @@
         "evidence": "A3.5",
         "evidence_desc": "Determina elementos relacionados con la propiedad que establece que una recta tangente a una circunferencia es perpendicular al radio de la circunferencia en el punto de tangencia en diversos contextos."
       },
-      "stem": "En la figura adjunta, la recta L es tangente a la circunferencia de centro O(0,0) en el punto T(6, 0). Si el punto P(6, 8) pertenece a la recta L y la distancia de O a T es el radio (6 cm): [imagen], ¿cuál es la medida en centímetros de la hipotenusa OP del triángulo rectángulo OTP?",
+      "stem": "En la figura adjunta, la recta $L$ es tangente a la circunferencia de centro $O(0, 0)$ en el punto $T(6, 0)$. Si el punto $P(6, 8)$ pertenece a la recta $L$ y la distancia de $O$ a $T$ es el radio ($6\\text{ cm}$): [imagen], ¿cuál es la medida en centímetros de la hipotenusa $OP$ del triángulo rectángulo $OTP$?",
       "options": {
-        "A": "10 cm",
-        "B": "12 cm",
-        "C": "14 cm",
-        "D": "100 cm"
+        "A": "$10\\text{ cm}$",
+        "B": "$12\\text{ cm}$",
+        "C": "$14\\text{ cm}$",
+        "D": "$100\\text{ cm}$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -1113,12 +1113,12 @@
         "evidence": "A4.1",
         "evidence_desc": "Determina elementos de los polígonos regulares para la obtención de perímetros o áreas de estos en diversos contextos."
       },
-      "stem": "Un quiosco de parque tiene forma de hexágono regular. Si la apotema del hexágono mide 4\\sqrt{3} metros, ¿cuál es el área total del piso del quiosco en metros cuadrados?",
+      "stem": "Un quiosco de parque tiene forma de hexágono regular. Si la apotema del hexágono mide $4\\sqrt{3}\\text{ metros}$, ¿cuál es el área total del piso del quiosco en metros cuadrados?",
       "options": {
-        "A": "96\\sqrt{3} m^2",
-        "B": "48\\sqrt{3} m^2",
-        "C": "192\\sqrt{3} m^2",
-        "D": "144 m^2"
+        "A": "$96\\sqrt{3}\\text{ m}^2$",
+        "B": "$48\\sqrt{3}\\text{ m}^2$",
+        "C": "$192\\sqrt{3}\\text{ m}^2$",
+        "D": "$144\\text{ m}^2$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -1218,12 +1218,12 @@
         "evidence": "A4.1",
         "evidence_desc": "Determina elementos de los polígonos regulares para la obtención de perímetros o áreas de estos en diversos contextos."
       },
-      "stem": "Un diseñador crea una mesa con forma de octágono regular donde cada lado mide 12 cm. ¿Cuál es el perímetro total de la mesa?",
+      "stem": "Un diseñador crea una mesa con forma de octágono regular donde cada lado mide $12\\text{ cm}$. ¿Cuál es el perímetro total de la mesa?",
       "options": {
-        "A": "96 cm",
-        "B": "80 cm",
-        "C": "64 cm",
-        "D": "48 cm"
+        "A": "$96\\text{ cm}$",
+        "B": "$80\\text{ cm}$",
+        "C": "$64\\text{ cm}$",
+        "D": "$48\\text{ cm}$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -1300,12 +1300,12 @@
         "evidence": "A4.2",
         "evidence_desc": "Determina perímetros o áreas de polígonos no regulares mediante un sistema de coordenadas rectangulares en diversos contextos."
       },
-      "stem": "Considere el polígono rectangular ABCD con vértices en A(1, 1), B(5, 1), C(5, 4) y D(1, 4) mostrado en el plano cartesiano adjunto: [imagen]. ¿Cuál es el área de dicho polígono?",
+      "stem": "Considere el polígono rectangular $ABCD$ con vértices en $A(1, 1)$, $B(5, 1)$, $C(5, 4)$ y $D(1, 4)$ mostrado en el plano cartesiano adjunto: [imagen]. ¿Cuál es el área de dicho polígono?",
       "options": {
-        "A": "12 unidades cuadradas",
-        "B": "14 unidades cuadradas",
-        "C": "16 unidades cuadradas",
-        "D": "20 unidades cuadradas"
+        "A": "$12\\text{ unidades cuadradas}$",
+        "B": "$14\\text{ unidades cuadradas}$",
+        "C": "$16\\text{ unidades cuadradas}$",
+        "D": "$20\\text{ unidades cuadradas}$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -1405,12 +1405,12 @@
         "evidence": "A4.2",
         "evidence_desc": "Determina perímetros o áreas de polígonos no regulares mediante un sistema de coordenadas rectangulares en diversos contextos."
       },
-      "stem": "Un terreno triangular PQR tiene sus vértices representados en el plano cartesiano en P(0, 0), Q(6, 0) y R(2, 4): [imagen]. ¿Cuál es el área del terreno en unidades cuadradas?",
+      "stem": "Un terreno triangular $PQR$ tiene sus vértices representados en el plano cartesiano en $P(0, 0)$, $Q(6, 0)$ y $R(2, 4)$: [imagen]. ¿Cuál es el área del terreno en unidades cuadradas?",
       "options": {
-        "A": "12 unidades cuadradas",
-        "B": "24 unidades cuadradas",
-        "C": "10 unidades cuadradas",
-        "D": "16 unidades cuadradas"
+        "A": "$12\\text{ unidades cuadradas}$",
+        "B": "$24\\text{ unidades cuadradas}$",
+        "C": "$10\\text{ unidades cuadradas}$",
+        "D": "$16\\text{ unidades cuadradas}$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -1497,12 +1497,12 @@
         "evidence": "A4.3",
         "evidence_desc": "Estima perímetros o áreas de figuras planas no poligonales mediante un sistema de coordenadas rectangulares en diversos contextos."
       },
-      "stem": "La figura adjunta ilustra la silueta de un lago artificial en un mapa en cuadrícula, donde cada cuadrícula equivale a 1 km^2: [imagen]. Estimando el área del lago por método de cuadrículas, su superficie se encuentra en el rango de",
+      "stem": "La figura adjunta ilustra la silueta de un lago artificial en un mapa en cuadrícula, donde cada cuadrícula equivale a $1\\text{ km}^2$: [imagen]. Estimando el área del lago por método de cuadrículas, su superficie se encuentra en el rango de",
       "options": {
-        "A": "entre 18 y 22 km^2.",
-        "B": "entre 30 y 35 km^2.",
-        "C": "menor que 10 km^2.",
-        "D": "mayor que 45 km^2."
+        "A": "entre $18\\text{ km}^2$ y $22\\text{ km}^2$.",
+        "B": "entre $30\\text{ km}^2$ y $35\\text{ km}^2$.",
+        "C": "menor que $10\\text{ km}^2$.",
+        "D": "mayor que $45\\text{ km}^2$."
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -1581,12 +1581,12 @@
         "evidence": "A5.1",
         "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el diámetro de un cilindro circular recto en diversos contextos."
       },
-      "stem": "Un tanque cilíndrico de almacenamiento de agua tiene una altura de 15 metros y el diámetro de su base mide 8 metros. ¿Cuál es la medida del radio basal de dicho tanque?",
+      "stem": "Un tanque cilíndrico de almacenamiento de agua tiene una altura de $15\\text{ metros}$ y el diámetro de su base mide $8\\text{ metros}$. ¿Cuál es la medida del radio basal de dicho tanque?",
       "options": {
-        "A": "4 metros",
-        "B": "8 metros",
-        "C": "16 metros",
-        "D": "30 metros"
+        "A": "$4\\text{ metros}$",
+        "B": "$8\\text{ metros}$",
+        "C": "$16\\text{ metros}$",
+        "D": "$30\\text{ metros}$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -1635,12 +1635,12 @@
         "evidence": "A5.3",
         "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
       },
-      "stem": "Una esfera sólida de madera tiene un radio de 10 cm. Se realiza un corte plano a una distancia de 6 cm del centro de la esfera. ¿Cuál es el radio de la sección plana circular resultante?",
+      "stem": "Una esfera sólida de madera tiene un radio de $10\\text{ cm}$. Se realiza un corte plano a una distancia de $6\\text{ cm}$ del centro de la esfera. ¿Cuál es el radio de la sección plana circular resultante?",
       "options": {
-        "A": "8 cm",
-        "B": "4 cm",
-        "C": "12 cm",
-        "D": "16 cm"
+        "A": "$8\\text{ cm}$",
+        "B": "$4\\text{ cm}$",
+        "C": "$12\\text{ cm}$",
+        "D": "$16\\text{ cm}$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -1664,12 +1664,12 @@
         "evidence": "A6.1",
         "evidence_desc": "Determina ejes de simetría en figuras simétricas en diversos contextos."
       },
-      "stem": "Considere el rectángulo ABCD representado en el plano cartesiano con vértices A(-3, 2), B(3, 2), C(3, -2) y D(-3, -2): [imagen]. ¿Cuál de las siguientes rectas corresponde a un eje de simetría del rectángulo?",
+      "stem": "Considere el rectángulo $ABCD$ representado en el plano cartesiano con vértices $A(-3, 2)$, $B(3, 2)$, $C(3, -2)$ y $D(-3, -2)$: [imagen]. ¿Cuál de las siguientes rectas corresponde a un eje de simetría del rectángulo?",
       "options": {
-        "A": "El eje y (recta x = 0)",
-        "B": "La recta y = x",
-        "C": "La recta y = 2",
-        "D": "La recta x = 3"
+        "A": "El eje $y$ (recta $x = 0$)",
+        "B": "La recta $y = x$",
+        "C": "La recta $y = 2$",
+        "D": "La recta $x = 3$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -1769,12 +1769,12 @@
         "evidence": "A6.2",
         "evidence_desc": "Identifica elementos homólogos en figuras que presentan simetría axial en diversos contextos."
       },
-      "stem": "En el plano cartesiano adjunto, los triángulos ABC y A'B'C' presentan simetría axial respecto al eje y: [imagen]. Si el punto A se ubica en (-3, 4), ¿cuáles son las coordenadas de su punto homólogo A'?",
+      "stem": "En el plano cartesiano adjunto, los triángulos $ABC$ y $A'B'C'$ presentan simetría axial respecto al eje $y$: [imagen]. Si el punto $A$ se ubica en $(-3, 4)$, ¿cuáles son las coordenadas de su punto homólogo $A'$?",
       "options": {
-        "A": "(3, 4)",
-        "B": "(-3, -4)",
-        "C": "(3, -4)",
-        "D": "(4, -3)"
+        "A": "$(3, 4)$",
+        "B": "$(-3, -4)$",
+        "C": "$(3, -4)$",
+        "D": "$(4, -3)$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -1874,12 +1874,12 @@
         "evidence": "A7.1",
         "evidence_desc": "Reconoce las figuras obtenidas a partir del concepto de transformación (traslación, homotecia, reflexión o rotación) a figuras dadas, en diversos contextos."
       },
-      "stem": "Al aplicar una homotecia de centro en el origen O(0,0) y razón de homotecia k = 3 al segmento AB de longitud 4 cm representado en la figura: [imagen], ¿cuál es la medida de la longitud del segmento transformado A'B'?",
+      "stem": "Al aplicar una homotecia de centro en el origen $O(0, 0)$ y razón de homotecia $k = 3$ al segmento $AB$ de longitud $4\\text{ cm}$ representado en la figura: [imagen], ¿cuál es la medida de la longitud del segmento transformado $A'B'$?",
       "options": {
-        "A": "12 cm",
-        "B": "7 cm",
-        "C": "4 cm",
-        "D": "1 cm"
+        "A": "$12\\text{ cm}$",
+        "B": "$7\\text{ cm}$",
+        "C": "$4\\text{ cm}$",
+        "D": "$1\\text{ cm}$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -1975,12 +1975,12 @@
         "evidence": "A7.1",
         "evidence_desc": "Reconoce las figuras obtenidas a partir del concepto de transformación (traslación, homotecia, reflexión o rotación) a figuras dadas, en diversos contextos."
       },
-      "stem": "Considere el triángulo con vértices P(1, 2), Q(4, 2) y R(1, 5) ilustrado en el plano cartesiano adjunto: [imagen]. Si al triángulo se le aplica una reflexión sobre el eje x, ¿cuáles son las coordenadas del vértice resultante R'?",
+      "stem": "Considere el triángulo con vértices $P(1, 2)$, $Q(4, 2)$ y $R(1, 5)$ ilustrado en el plano cartesiano adjunto: [imagen]. Si al triángulo se le aplica una reflexión sobre el eje $x$, ¿cuáles son las coordenadas del vértice resultante $R'$?",
       "options": {
-        "A": "(1, -5)",
-        "B": "(-1, 5)",
-        "C": "(-1, -5)",
-        "D": "(5, 1)"
+        "A": "$(1, -5)$",
+        "B": "$(-1, 5)$",
+        "C": "$(-1, -5)$",
+        "D": "$(5, 1)$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -2080,7 +2080,7 @@
         "evidence": "A7.2",
         "evidence_desc": "Identifica elementos de las figuras geométricas que aparecen invariantes bajo reflexiones o rotaciones, en diversos contextos."
       },
-      "stem": "Cuando se le aplica una rotación de 90° con centro en el origen a cualquier polígono en el plano cartesiano, ¿cuál de las siguientes propiedades permanece invariante (se conserva exactamente igual)?",
+      "stem": "Cuando se le aplica una rotación de $90^\\circ$ con centro en el origen a cualquier polígono en el plano cartesiano, ¿cuál de las siguientes propiedades permanece invariante (se conserva exactamente igual)?",
       "options": {
         "A": "La medida de sus ángulos internos y la longitud de sus lados.",
         "B": "Las coordenadas de todos sus vértices.",
@@ -2107,12 +2107,12 @@
         "evidence": "A7.3",
         "evidence_desc": "Determina el punto imagen de puntos dados mediante una transformación en diversos contextos."
       },
-      "stem": "Al aplicar una rotación de 180° alrededor del origen (0,0) al punto P(-2, 5) mostrado en la figura: [imagen], ¿cuáles corresponden a las coordenadas del punto imagen P'?",
+      "stem": "Al aplicar una rotación de $180^\\circ$ alrededor del origen $(0, 0)$ al punto $P(-2, 5)$ mostrado en la figura: [imagen], ¿cuáles corresponden a las coordenadas del punto imagen $P'$?",
       "options": {
-        "A": "(2, -5)",
-        "B": "(5, -2)",
-        "C": "(-5, 2)",
-        "D": "(2, 5)"
+        "A": "$(2, -5)$",
+        "B": "$(5, -2)$",
+        "C": "$(-5, 2)$",
+        "D": "$(2, 5)$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -3082,10 +3082,10 @@
       },
       "stem": "Si la gráfica de $f(x) = x^2$ se traslada 3 unidades a la derecha y 2 unidades hacia arriba para obtener $g(x)$, ¿cuál es el criterio de $g(x)$?",
       "options": {
-        "A": "g(x) = (x - 3)^2 + 2",
-        "B": "g(x) = (x + 3)^2 + 2",
-        "C": "g(x) = (x - 3)^2 - 2",
-        "D": "g(x) = (x + 3)^2 - 2"
+        "A": "$g(x) = (x - 3)^2 + 2$",
+        "B": "$g(x) = (x + 3)^2 + 2$",
+        "C": "$g(x) = (x - 3)^2 - 2$",
+        "D": "$g(x) = (x + 3)^2 - 2$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -3428,10 +3428,10 @@
       },
       "stem": "Si la recta $L_1$ tiene como criterio $y = -\\frac{2}{5}x + 1$, ¿cuál es la pendiente de cualquier recta $L_2$ perpendicular a $L_1$?",
       "options": {
-        "A": "m_2 = \\frac{5}{2}",
-        "B": "m_2 = -\\frac{5}{2}",
-        "C": "m_2 = \\frac{2}{5}",
-        "D": "m_2 = -\\frac{2}{5}"
+        "A": "$m_2 = \\frac{5}{2}$",
+        "B": "$m_2 = -\\frac{5}{2}$",
+        "C": "$m_2 = \\frac{2}{5}$",
+        "D": "$m_2 = -\\frac{2}{5}$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -3519,10 +3519,10 @@
       },
       "stem": "Considere la función $f(x) = \\frac{x + 2}{x - 3}$. ¿Cuál es el dominio máximo de $f$ en los números reales?",
       "options": {
-        "A": "\\mathbb{R} \\setminus \\{3\\}",
-        "B": "\\mathbb{R} \\setminus \\{-2\\}",
-        "C": "]3, +\\infty[",
-        "D": "\\mathbb{R}"
+        "A": "$\\mathbb{R} \\setminus \\{3\\}$",
+        "B": "$\\mathbb{R} \\setminus \\{-2\\}$",
+        "C": "$]3, +\\infty[$",
+        "D": "$\\mathbb{R}$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -3547,10 +3547,10 @@
       },
       "stem": "Dada la función cuadrática $f(x) = 2x^2 - 5x + 7$, ¿cuál es el punto de intersección de su gráfica con el eje $y$?",
       "options": {
-        "A": "(0, 7)",
-        "B": "(7, 0)",
-        "C": "(0, -5)",
-        "D": "(0, 2)"
+        "A": "$(0, 7)$",
+        "B": "$(7, 0)$",
+        "C": "$(0, -5)$",
+        "D": "$(0, 2)$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -3739,10 +3739,10 @@
       },
       "stem": "En un grupo de 60 estudiantes, 35 practican Baloncesto (B), 25 practican Natación (N) y 10 practican ambos deportes. El siguiente diagrama ilustra la distribución:",
       "options": {
-        "A": "\\frac{10}{60} = \\frac{1}{6}",
-        "B": "\\frac{25}{60} = \\frac{5}{12}",
-        "C": "\\frac{50}{60} = \\frac{5}{6}",
-        "D": "\\frac{15}{60} = \\frac{1}{4}"
+        "A": "$\\frac{10}{60} = \\frac{1}{6}$",
+        "B": "$\\frac{25}{60} = \\frac{5}{12}$",
+        "C": "$\\frac{50}{60} = \\frac{5}{6}$",
+        "D": "$\\frac{15}{60} = \\frac{1}{4}$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -3781,7 +3781,7 @@
         "evidence": "A2.2",
         "evidence_desc": "Compara la posición relativa (estandarización z) de dos observaciones de distintas poblaciones."
       },
-      "stem": "Carlos obtuvo una nota de 85 en Matemáticas (media $\\bar{x} = 75$, desviación estándar $s = 5$) y una nota de 88 in Español (media $\\bar{x} = 80$, desviación estándar $s = 8$). ¿En cuál asignatura tuvo Carlos una mejor posición relativa respecto a su grupo?",
+      "stem": "Carlos obtuvo una nota de 85 en Matemáticas (media $\\bar{x} = 75$, desviación estándar $s = 5$) y una nota de 88 en Español (media $\\bar{x} = 80$, desviación estándar $s = 8$). ¿En cuál asignatura tuvo Carlos una mejor posición relativa respecto a su grupo?",
       "options": {
         "A": "En Matemáticas, pues su puntuación estandarizada ($z = 2,0$) es mayor que en Español ($z = 1,0$).",
         "B": "En Español, pues obtuvo una calificación más alta (88 frente a 85).",
@@ -3884,10 +3884,10 @@
       },
       "stem": "Considere la siguiente tabla de contingencia sobre la preferencia de modalidad de estudio en un instituto según el género:",
       "options": {
-        "A": "\\frac{30}{60} = 0,50",
-        "B": "\\frac{30}{100} = 0,30",
-        "C": "\\frac{30}{50} = 0,60",
-        "D": "\\frac{20}{60} = 0,33"
+        "A": "$\\frac{30}{60} = 0,50$",
+        "B": "$\\frac{30}{100} = 0,30$",
+        "C": "$\\frac{30}{50} = 0,60$",
+        "D": "$\\frac{20}{60} = 0,33$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -4246,10 +4246,10 @@
       },
       "stem": "Si la probabilidad de que llueva durante la tarde en una zona tropical es del 68% ($P(L) = 0,68$), ¿cuál es la probabilidad de que no llueva ($P(L^c)$)?",
       "options": {
-        "A": "32%",
-        "B": "68%",
-        "C": "40%",
-        "D": "50%"
+        "A": "$32\\%$",
+        "B": "$68\\%$",
+        "C": "$40\\%$",
+        "D": "$50\\%$"
       },
       "correct_answer": "A",
       "solution_steps": [
@@ -4274,10 +4274,10 @@
       },
       "stem": "Se lanza un dado justo de 6 caras numeradas del 1 al 6. ¿Cuál es la probabilidad de obtener un número primo?",
       "options": {
-        "A": "\\frac{3}{6} = \\frac{1}{2}",
-        "B": "\\frac{2}{6} = \\frac{1}{3}",
-        "C": "\\frac{4}{6} = \\frac{2}{3}",
-        "D": "\\frac{1}{6}"
+        "A": "$\\frac{3}{6} = \\frac{1}{2}$",
+        "B": "$\\frac{2}{6} = \\frac{1}{3}$",
+        "C": "$\\frac{4}{6} = \\frac{2}{3}$",
+        "D": "$\\frac{1}{6}$"
       },
       "correct_answer": "A",
       "solution_steps": [

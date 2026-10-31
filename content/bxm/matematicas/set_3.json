@@ -353,7 +353,7 @@
         "evidence": "A3.2",
         "evidence_desc": "Reconoce simetrías respecto a los ejes de coordenadas."
       },
-      "stem": "Al reflejar el punto $P(3, -5)$ con respecto al eje y ($y$-axis), las coordenadas de su punto imagen $P’$ son",
+      "stem": "Al reflejar el punto $P(3, -5)$ con respecto al eje $y$, las coordenadas de su punto imagen $P’$ son",
       "options": {
         "A": "$(-3, -5)$",
         "B": "$(3, 5)$",
@@ -652,7 +652,7 @@
         "evidence": "A10.1",
         "evidence_desc": "Interpreta medidas de posición central y no central (cuartiles, mínimo, máximo, mediana)."
       },
-      "stem": "Considere los siguientes datos sobre el número de tardanzas de un grupo de estudiantes en un mes: $1, 2, 2, 3, 5, 7, 8, 10, 12$. El primer cuartil ($Q_1$) y la mediana ($Q_2$) corresponden a",
+      "stem": "Considere los siguientes datos sobre el número de tardanzas de un grupo de estudiantes en un mes: $1, 2, 2, 3, 5, 7, 8, 10, 12$. El primer cuartil $Q_1$ y la mediana $Q_2$ corresponden a",
       "options": {
         "A": "$Q_1 = 2$, Mediana = $5$",
         "B": "$Q_1 = 2.5$, Mediana = $5$",
@@ -726,7 +726,7 @@
         "evidence": "A10.3",
         "evidence_desc": "Compara distribuciones de datos mediante diagramas de caja."
       },
-      "stem": "Considere la siguiente información representada en una tabla comparativa de notas de dos secciones de secundaria A y B:\n\n| Sección | Mínimo | Q1 | Mediana | Q3 | Máximo |\n| :--- | :---: | :---: | :---: | :---: | :---: |\n| Sección A | 45 | 60 | 75 | 85 | 98 |\n| Sección B | 55 | 70 | 80 | 90 | 100 |\n\n¿Cuál de las siguientes afirmaciones es CORRECTA?",
+      "stem": "Considere la siguiente información representada en la tabla comparativa de notas de dos secciones de secundaria A y B: ¿Cuál de las siguientes afirmaciones es CORRECTA?",
       "options": {
         "A": "Al menos el 50% de los estudiantes de la Sección B obtuvo una nota mayor o igual a 80.",
         "B": "El recorrido total de las notas en la Sección A es menor que en la Sección B.",

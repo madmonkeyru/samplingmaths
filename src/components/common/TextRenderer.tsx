@@ -24,7 +24,15 @@ const bareMathPattern = new RegExp(
 );
 
 function isBareMath(expression: string): boolean {
-  if (/[\^_=<>≤≥≠*/×÷]/u.test(expression)) return true;
+  // If the expression contains LaTeX delimiters, let delimited parsing handle it.
+  if (/[$¥\\]/.test(expression)) return false;
+  // If the expression contains multiple spaces with words (prose inside parentheses), ignore it.
+  if (/\b\p{L}+\s+\p{L}+\b/u.test(expression)) return false;
+
+  if (/[\^_=<>≤≥≠*/×÷]/u.test(expression)) {
+    const withoutParentheses = expression.replace(/\([^()]*\)/g, '');
+    return !/[\p{L}]{2,}/u.test(withoutParentheses);
+  }
   if (!/[+\-−]/u.test(expression)) return false;
 
   const withoutParentheses = expression.replace(/\([^()]*\)/g, '');
