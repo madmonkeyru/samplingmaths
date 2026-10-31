@@ -127,7 +127,7 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
           </div>
           <div className="min-w-0">
             <span className="text-[10px] sm:text-xs font-black uppercase tracking-wider block text-zinc-600 dark:text-zinc-400">
-              Resultado de la Sesión
+              Resultados
             </span>
             <h2 className="text-xl sm:text-2xl font-black uppercase leading-tight truncate">
               {scorePercentage >= 70 ? '¡Buen Trabajo!' : 'Sigue Practicando'}
@@ -179,7 +179,7 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
           <div className="flex items-center justify-between mb-4 pb-2 border-b-2 border-zinc-900 dark:border-zinc-800">
             <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5 stroke-[2.5] text-indigo-600 dark:text-indigo-400" />
-              <h3 className="text-base font-black uppercase tracking-tight">Tendencia de Desempeño</h3>
+              <h3 className="text-base font-black uppercase tracking-tight">Desempeño</h3>
             </div>
             <span className="text-xs font-bold text-zinc-500 dark:text-zinc-400">
               Últimos {Math.min(attempts.length, 10)} intentos
@@ -233,7 +233,7 @@ export const ResultsPage: React.FC<ResultsPageProps> = ({
               <div className="flex items-center gap-2">
                 <LayoutGrid className="w-5 h-5 stroke-[2.5] text-indigo-600 dark:text-indigo-400" />
                 <h3 className="text-base sm:text-lg font-black uppercase tracking-tight">
-                  Navegador de Preguntas
+                  Preguntas
                 </h3>
                 <span className="text-xs text-zinc-500 dark:text-zinc-400 font-bold ml-1">
                   ({items.length} ítems)

@@ -189,7 +189,7 @@ export const EvaluationModulesWidget: React.FC<EvaluationModulesWidgetProps> = (
             <div className="bg-amber-50/60 dark:bg-slate-800/60 p-3.5 rounded-xl border border-amber-200/70 dark:border-slate-700 space-y-1.5 text-xs text-stone-700 dark:text-slate-300 font-medium">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0" />
-                <span>60 ítems distribuidos entre Geometría, Álgebra y Estadística</span>
+                <span>60 preguntas distribuidas entre Geometría, Álgebra y Estadística</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0" />

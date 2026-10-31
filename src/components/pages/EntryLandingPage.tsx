@@ -24,7 +24,7 @@ export const EntryLandingPage: React.FC<EntryLandingPageProps> = ({
         {/* Simple Top Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-stone-100 dark:bg-slate-800 border border-stone-300 dark:border-slate-700 text-xs font-bold text-stone-700 dark:text-slate-300">
           <Sparkles className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
-          <span>Plataforma MEP-EA-01 • Versión Prototipo MVP</span>
+          <span>Prototipo</span>
         </div>
 
         {/* Core Value Statement (Simple, direct, no narrative/testimonials) */}
@@ -32,10 +32,6 @@ export const EntryLandingPage: React.FC<EntryLandingPageProps> = ({
           <h1 className="text-2xl sm:text-4xl font-black text-stone-900 dark:text-stone-100 tracking-tight leading-tight">
             Preparación y Práctica para los Exámenes de Educación Abierta del MEP
           </h1>
-          <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
-            Plataforma modular con simulaciones oficiales y banco de reactivos alineados a los
-            programas de I & II Ciclo (CICO), III Ciclo, Bachillerato por Madurez (BXM) y EDAD.
-          </p>
         </div>
 
         {/* Action Pathway Cards for User Flow Validation */}
@@ -45,7 +41,7 @@ export const EntryLandingPage: React.FC<EntryLandingPageProps> = ({
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] uppercase font-black px-2.5 py-1 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
-                  MVP Activo
+                  Activo
                 </span>
                 <span className="text-xs font-extrabold text-stone-500 dark:text-stone-400">
                   10° y 11° Año
@@ -73,7 +69,7 @@ export const EntryLandingPage: React.FC<EntryLandingPageProps> = ({
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] uppercase font-black px-2.5 py-1 rounded bg-stone-100 dark:bg-slate-800 text-stone-700 dark:text-stone-300 border border-stone-300 dark:border-slate-700">
-                  Portal Curricular
+                  Portal
                 </span>
                 <span className="text-xs font-extrabold text-stone-500 dark:text-stone-400">
                   4 Programas MEP
@@ -96,39 +92,7 @@ export const EntryLandingPage: React.FC<EntryLandingPageProps> = ({
             </button>
           </div>
         </div>
-
         {/* Feature Highlights Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-stone-200 dark:border-stone-800">
-          <div className="flex items-start gap-3 p-3 rounded-xl bg-stone-50 dark:bg-slate-800/40 border border-stone-200 dark:border-slate-800">
-            <ShieldCheck className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
-            <div>
-              <h4 className="text-xs font-black text-stone-800 dark:text-stone-200">Alineación Oficial</h4>
-              <p className="text-[11px] text-stone-500 dark:text-stone-400 font-medium">
-                Reactivos basados en convocatorias oficiales del MEP.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-3 p-3 rounded-xl bg-stone-50 dark:bg-slate-800/40 border border-stone-200 dark:border-slate-800">
-            <Clock className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
-            <div>
-              <h4 className="text-xs font-black text-stone-800 dark:text-stone-200">Simulación Cronometrada</h4>
-              <p className="text-[11px] text-stone-500 dark:text-stone-400 font-medium">
-                Prueba completa de 150 minutos con revisión detallada.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-3 p-3 rounded-xl bg-stone-50 dark:bg-slate-800/40 border border-stone-200 dark:border-slate-800">
-            <Layers className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
-            <div>
-              <h4 className="text-xs font-black text-stone-800 dark:text-stone-200">Práctica Modular</h4>
-              <p className="text-[11px] text-stone-500 dark:text-stone-400 font-medium">
-                Ejercitación focalizada por área de conocimiento y tema.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Footer */}

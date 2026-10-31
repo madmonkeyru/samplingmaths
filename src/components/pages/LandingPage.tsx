@@ -268,7 +268,7 @@ export const SubjectHubPage: React.FC<SubjectHubPageProps> = ({
               }`}
             >
               <FileText className="w-4 h-4 stroke-[2.2]" />
-              <span>Tabla de Especificaciones</span>
+              <span>Temario</span>
             </button>
 
             <button
@@ -292,7 +292,7 @@ export const SubjectHubPage: React.FC<SubjectHubPageProps> = ({
               }`}
             >
               <Calculator className="w-4 h-4 stroke-[2.2]" />
-              <span>Fórmulas KaTeX</span>
+              <span>Fórmulas</span>
             </button>
           </div>
 

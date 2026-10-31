@@ -30,9 +30,6 @@ export const QuickStatsBanner: React.FC<QuickStatsBannerProps> = ({
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-black uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-                Dashboard de Preparación
-              </span>
               <span className="text-stone-300 dark:text-slate-600">•</span>
               <span className="text-[10px] font-bold text-stone-500 dark:text-slate-400">
                 {programName}

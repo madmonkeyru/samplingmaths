@@ -32,21 +32,12 @@ export const WelcomePage: React.FC<WelcomePageProps> = ({
       <div className="bg-stone-900 dark:bg-slate-900 text-white border-2 border-stone-800 dark:border-slate-800 rounded-3xl p-6 sm:p-10 shadow-lg relative overflow-hidden">
         <div className="relative z-10 max-w-3xl space-y-3">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-indigo-950/80 text-indigo-300 text-xs font-bold rounded-full border border-indigo-800/60 uppercase tracking-wider">
-              <Compass className="w-3.5 h-3.5 text-indigo-400" />
-              Portal Oficial de Preparación
-            </span>
             <ConvocatoriaBadge convocatoriaId={currentConvocatoria} />
           </div>
 
           <h1 className="text-2xl sm:text-4xl font-black uppercase tracking-tight leading-tight">
-            MEP Educación Abierta — Simulador & Práctica
+            Educación Abierta Digital
           </h1>
-
-          <p className="text-xs sm:text-sm text-stone-300 font-medium leading-relaxed max-w-2xl">
-            Plataforma modular para exámenes oficiales del Ministerio de Educación Pública de Costa Rica.
-            Selecciona tu programa curricular o accede directamente al módulo activo de Matemáticas BXM.
-          </p>
         </div>
 
         {/* Subtle decorative glow */}
@@ -57,10 +48,6 @@ export const WelcomePage: React.FC<WelcomePageProps> = ({
       <div className="bg-gradient-to-r from-amber-50 to-orange-50/40 dark:from-slate-900 dark:to-indigo-950/40 border-2 border-indigo-600 dark:border-indigo-500 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="space-y-2 max-w-2xl">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 bg-indigo-600 text-white text-[11px] font-black rounded-full uppercase tracking-wider">
-              <Sparkles className="w-3 h-3" />
-              MVP Activo y Verificado
-            </span>
             <span className="text-xs font-bold text-stone-600 dark:text-slate-400">
               Bachillerato por Madurez Suficiente
             </span>
@@ -71,8 +58,7 @@ export const WelcomePage: React.FC<WelcomePageProps> = ({
           </h2>
 
           <p className="text-xs sm:text-sm text-stone-700 dark:text-slate-300 font-medium leading-relaxed">
-            Acceso directo al simulador oficial de 60 ítems con temporizador de 150 minutos, banco modular
-            con más de 170 reactivos, y tabla de especificaciones con diccionario y fórmulas KaTeX integradas.
+           Practicas, Simulaciones, Explicaciones, Formulas y mas.
           </p>
         </div>
 
@@ -95,9 +81,6 @@ export const WelcomePage: React.FC<WelcomePageProps> = ({
               <Layers className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
               Programas de Educación Abierta
             </h2>
-            <p className="text-xs text-stone-500 dark:text-slate-400 font-medium mt-0.5">
-              Explora los 4 programas oficiales y consulta su estructura curricular
-            </p>
           </div>
         </div>
 

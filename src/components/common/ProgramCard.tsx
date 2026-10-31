@@ -41,11 +41,11 @@ export const ProgramCard: React.FC<ProgramCardProps> = ({
           {isMvp ? (
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-[10px] font-black rounded-full border border-emerald-500/30">
               <CheckCircle className="w-3 h-3" />
-              MVP Activo
+              Activo
             </span>
           ) : (
             <span className="text-[10px] font-bold text-stone-500 dark:text-slate-400 bg-stone-100 dark:bg-slate-800/80 px-2 py-0.5 rounded-full border border-stone-200 dark:border-slate-700">
-              Próxima Fase
+              En desarrollo.
             </span>
           )}
         </div>

@@ -118,7 +118,6 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
           </div>
 
           <div className="flex items-center gap-3 shrink-0 bg-stone-100 dark:bg-slate-800/80 px-4 py-3 rounded-xl border border-stone-200 dark:border-slate-700">
-            <Award className="w-6 h-6 text-indigo-600 dark:text-indigo-400 stroke-[2.5]" />
             <div>
               <span className="text-[10px] font-black uppercase text-stone-500 dark:text-slate-400 block">Total de Ítems / Puntos</span>
               <span className="text-base font-black text-stone-900 dark:text-slate-100">{totalExamItems} Puntos</span>
@@ -130,7 +129,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
         <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-stone-200 dark:border-slate-800">
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-xs font-black uppercase text-stone-500 dark:text-slate-400 mr-1 flex items-center gap-1">
-              <Filter className="w-3.5 h-3.5 stroke-[2.5]" /> Filtrar Área:
+              <Filter className="w-3.5 h-3.5 stroke-[2.5]" /> Filtros:
             </span>
             <button
               onClick={() => setActiveTab('all')}
@@ -150,7 +149,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
                   : 'bg-stone-100 dark:bg-slate-800 text-stone-800 dark:text-slate-200 border-stone-300 dark:border-slate-700 hover:bg-stone-200 dark:hover:bg-slate-700'
               }`}
             >
-              1. Geometría
+              Geometría
             </button>
             <button
               onClick={() => setActiveTab('functions')}
@@ -160,7 +159,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
                   : 'bg-stone-100 dark:bg-slate-800 text-stone-800 dark:text-slate-200 border-stone-300 dark:border-slate-700 hover:bg-stone-200 dark:hover:bg-slate-700'
               }`}
             >
-              2. Relaciones y Álgebra
+              Relaciones y Álgebra
             </button>
             <button
               onClick={() => setActiveTab('statistics')}
@@ -170,7 +169,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
                   : 'bg-stone-100 dark:bg-slate-800 text-stone-800 dark:text-slate-200 border-stone-300 dark:border-slate-700 hover:bg-stone-200 dark:hover:bg-slate-700'
               }`}
             >
-              3. Estadística y Probabilidad
+              Estadística y Probabilidad
             </button>
           </div>
 
@@ -197,10 +196,6 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
 
       {/* Sticky Quick-Jump Navigation Bar */}
       <div className="sticky top-14 z-20 bg-stone-100/90 dark:bg-slate-900/90 backdrop-blur-md border border-stone-200 dark:border-slate-800 rounded-xl p-2.5 shadow-xs flex items-center gap-2 overflow-x-auto">
-        <span className="text-[11px] font-black uppercase text-stone-500 dark:text-slate-400 px-2 shrink-0 flex items-center gap-1">
-          <Compass className="w-3.5 h-3.5 stroke-[2.5] text-indigo-600 dark:text-indigo-400" />
-          Navegación Rápida:
-        </span>
         <div className="flex items-center gap-1.5 min-w-0">
           <button
             onClick={() => scrollToBlock('geometry')}
