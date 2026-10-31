@@ -88,64 +88,46 @@ export const EvaluationModulesWidget: React.FC<EvaluationModulesWidgetProps> = (
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            {/* Convocatoria Selector */}
-            <div className="flex items-center gap-1 bg-stone-100 dark:bg-slate-800 px-2 py-1 rounded-lg border border-stone-300 dark:border-slate-700 text-[11px] font-bold">
-              <Calendar className="w-3 h-3 text-indigo-500" />
-              <select
-                value={selectedConvocatoria}
-                onChange={(e) => {
-                  setSelectedConvocatoria(e.target.value);
-                  dataService.setConvocatoriaId(e.target.value);
-                }}
-                className="bg-transparent text-stone-800 dark:text-slate-200 focus:outline-none cursor-pointer"
-              >
-                <option value="2026-c2">02-2026</option>
-                <option value="2026-c1">01-2026</option>
-              </select>
-            </div>
+          {/* Segmented Control Buttons */}
+          <div className="flex bg-stone-100 dark:bg-slate-800 p-1 rounded-xl border border-stone-300 dark:border-slate-700 gap-1 text-xs font-bold w-full sm:w-auto">
+            <button
+              type="button"
+              onClick={() => setActiveTab('simulation')}
+              className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg text-center transition flex items-center justify-center gap-1.5 min-h-[34px] cursor-pointer ${
+                activeTab === 'simulation'
+                  ? 'bg-indigo-600 text-white font-black shadow-2xs'
+                  : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white'
+              }`}
+            >
+              <Play className="w-3 h-3 stroke-[2.5]" />
+              <span>Simulación</span>
+            </button>
 
-            {/* Segmented Control Buttons */}
-            <div className="flex bg-stone-100 dark:bg-slate-800 p-1 rounded-xl border border-stone-300 dark:border-slate-700 gap-1 text-xs font-bold w-full sm:w-auto">
-              <button
-                type="button"
-                onClick={() => setActiveTab('simulation')}
-                className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg text-center transition flex items-center justify-center gap-1.5 min-h-[34px] cursor-pointer ${
-                  activeTab === 'simulation'
-                    ? 'bg-indigo-600 text-white font-black shadow-2xs'
-                    : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white'
-                }`}
-              >
-                <Play className="w-3 h-3 stroke-[2.5]" />
-                <span>Simulación</span>
-              </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab('area')}
+              className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg text-center transition flex items-center justify-center gap-1.5 min-h-[34px] cursor-pointer ${
+                activeTab === 'area'
+                  ? 'bg-indigo-600 text-white font-black shadow-2xs'
+                  : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white'
+              }`}
+            >
+              <Layers className="w-3 h-3 stroke-[2.5]" />
+              <span>Por Área</span>
+            </button>
 
-              <button
-                type="button"
-                onClick={() => setActiveTab('area')}
-                className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg text-center transition flex items-center justify-center gap-1.5 min-h-[34px] cursor-pointer ${
-                  activeTab === 'area'
-                    ? 'bg-indigo-600 text-white font-black shadow-2xs'
-                    : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white'
-                }`}
-              >
-                <Layers className="w-3 h-3 stroke-[2.5]" />
-                <span>Por Área</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setActiveTab('topic')}
-                className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg text-center transition flex items-center justify-center gap-1.5 min-h-[34px] cursor-pointer ${
-                  activeTab === 'topic'
-                    ? 'bg-indigo-600 text-white font-black shadow-2xs'
-                    : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white'
-                }`}
-              >
-                <Target className="w-3 h-3 stroke-[2.5]" />
-                <span>Por Tema</span>
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => setActiveTab('topic')}
+              className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg text-center transition flex items-center justify-center gap-1.5 min-h-[34px] cursor-pointer ${
+                activeTab === 'topic'
+                  ? 'bg-indigo-600 text-white font-black shadow-2xs'
+                  : 'text-stone-700 dark:text-slate-300 hover:text-stone-950 dark:hover:text-white'
+              }`}
+            >
+              <Target className="w-3 h-3 stroke-[2.5]" />
+              <span>Por Tema</span>
+            </button>
           </div>
         </div>
 
@@ -171,18 +153,36 @@ export const EvaluationModulesWidget: React.FC<EvaluationModulesWidgetProps> = (
         {/* Tab Content */}
         {activeTab === 'simulation' && (
           <div className="space-y-4 animate-in fade-in duration-200">
-            <div className="flex items-start gap-3.5">
-              <div className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 border-2 border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 flex items-center justify-center shrink-0">
-                <Play className="w-5 h-5 stroke-[2.2] fill-current" />
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-stone-100/60 dark:bg-slate-800/40 p-3 rounded-xl border border-stone-200 dark:border-slate-700/60">
+              <div className="flex items-start gap-3.5">
+                <div className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 border-2 border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 flex items-center justify-center shrink-0">
+                  <Play className="w-5 h-5 stroke-[2.2] fill-current" />
+                </div>
+                <div>
+                  <h3 className="text-sm sm:text-base font-black text-stone-900 dark:text-slate-100">
+                    Simulación Oficial MEP
+                  </h3>
+                  <p className="text-xs text-stone-600 dark:text-slate-400 leading-relaxed font-medium mt-0.5">
+                    Prueba de 60 reactivos con cronómetro oficial de 150 minutos.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-sm sm:text-base font-black text-stone-900 dark:text-slate-100">
-                  Simulación Oficial MEP ({selectedConvocatoria === '2026-c1' ? '01-2026' : '02-2026'})
-                </h3>
-                <p className="text-xs text-stone-600 dark:text-slate-400 leading-relaxed font-medium mt-0.5">
-                  Prueba de 60 reactivos con cronómetro oficial de 150 minutos. Evalúa Geometría,
-                  Funciones y Estadística con los mismos estándares de la convocatoria oficial.
-                </p>
+
+              {/* Convocatoria Selector Repositioned Here */}
+              <div className="flex items-center gap-2 self-start sm:self-center bg-white dark:bg-slate-800 px-3 py-1.5 rounded-xl border-2 border-stone-300 dark:border-slate-600 shadow-2xs">
+                <Calendar className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
+                <span className="text-[11px] font-bold text-stone-600 dark:text-slate-400">Convocatoria:</span>
+                <select
+                  value={selectedConvocatoria}
+                  onChange={(e) => {
+                    setSelectedConvocatoria(e.target.value);
+                    dataService.setConvocatoriaId(e.target.value);
+                  }}
+                  className="bg-transparent text-xs font-black text-stone-900 dark:text-slate-100 focus:outline-none cursor-pointer"
+                >
+                  <option value="2026-c2">02-2026</option>
+                  <option value="2026-c1">01-2026</option>
+                </select>
               </div>
             </div>
 
