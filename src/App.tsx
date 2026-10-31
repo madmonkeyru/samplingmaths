@@ -3,6 +3,7 @@ import { User, PracticeConfig, TestSession } from './types';
 import { storageService } from './services/storageService';
 import { dataService } from './services/dataService';
 import { Header } from './components/layout/Header';
+import { EntryLandingPage } from './components/pages/EntryLandingPage';
 import { WelcomePage } from './components/pages/WelcomePage';
 import { SubjectHubPage } from './components/pages/LandingPage';
 import { TestShell } from './components/test/TestShell';
@@ -10,7 +11,8 @@ import { ResultsPage } from './components/results/ResultsPage';
 
 export function App() {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
-  const [currentView, setCurrentView] = useState<'welcome' | 'hub' | 'test' | 'results'>('welcome');
+  // Views: 'landing' (entry flow validation), 'welcome' (program selection portal), 'hub' (subject hub), 'test' (simulation/practice), 'results' (results screen)
+  const [currentView, setCurrentView] = useState<'landing' | 'welcome' | 'hub' | 'test' | 'results'>('landing');
   const [activeConfig, setActiveConfig] = useState<PracticeConfig | null>(null);
   const [completedSession, setCompletedSession] = useState<TestSession | null>(null);
 
@@ -18,24 +20,12 @@ export function App() {
     setCurrentUser(storageService.getCurrentUser());
   }, []);
 
-  const handleSelectProgram = async (programId: string) => {
-    await dataService.setProgram(programId);
-    setCurrentView('hub');
-  };
-
-  const handleEnterMvpMath = async () => {
-    await dataService.setProgram('bxm');
-    setCurrentView('hub');
-  };
-
   const handleStartSimulation = () => {
     const config: PracticeConfig = {
       mode: 'simulation',
       itemCount: 60,
       enableTimer: true,
       timerDurationMinutes: 150,
-      programId: dataService.getCurrentProgramId(),
-      convocatoriaId: dataService.getCurrentConvocatoriaId() || '2026-c2',
     };
     setActiveConfig(config);
     setCurrentView('test');
@@ -64,51 +54,51 @@ export function App() {
     setCurrentView('hub');
   };
 
-  const handleStartPracticeByItems = (itemIds: number[], title: string) => {
-    const config: PracticeConfig = {
-      mode: 'topic',
-      topic: title,
-      itemCount: itemIds.length,
-      enableTimer: false,
-      timerDurationMinutes: 60,
-      programId: dataService.getCurrentProgramId(),
-      convocatoriaId: dataService.getCurrentConvocatoriaId() || '2026-c2',
-    };
-    setActiveConfig(config);
-    setCurrentView('test');
+  const handleSelectProgramFromPortal = async (programId: string) => {
+    await dataService.setProgram(programId);
+    setCurrentView('hub');
+  };
+
+  const handleEnterBxmHubDirectly = async () => {
+    await dataService.setProgram('bxm');
+    setCurrentView('hub');
   };
 
   return (
-    <div className="min-h-screen bg-[#fdfbf7] dark:bg-slate-950 text-stone-900 dark:text-slate-100 font-sans flex flex-col transition-colors">
+    <div className="min-h-screen bg-[#fdfbf7] dark:bg-stone-950 font-sans text-stone-900 dark:text-stone-100 flex flex-col transition-colors duration-200">
       <Header
         currentUser={currentUser}
         onUserChanged={setCurrentUser}
-        onNavigateHome={() => setCurrentView('welcome')}
+        onNavigateHome={() => setCurrentView('landing')}
         currentView={currentView}
-        onProgramChange={(_progId) => {
-          // If on welcome, let user remain or switch to hub
-          if (currentView !== 'welcome' && currentView !== 'test') {
+        onProgramChange={() => {
+          if (currentView !== 'hub') {
             setCurrentView('hub');
           }
         }}
       />
 
       <main className="flex-1">
+        {currentView === 'landing' && (
+          <EntryLandingPage
+            onExplorePrograms={() => setCurrentView('welcome')}
+            onEnterBxmHub={handleEnterBxmHubDirectly}
+          />
+        )}
+
         {currentView === 'welcome' && (
           <WelcomePage
-            onSelectProgram={handleSelectProgram}
-            onEnterMvpMath={handleEnterMvpMath}
+            onSelectProgram={handleSelectProgramFromPortal}
+            onEnterMvpMath={handleEnterBxmHubDirectly}
           />
         )}
 
         {currentView === 'hub' && (
           <SubjectHubPage
             currentUser={currentUser}
-            onNavigateHome={() => setCurrentView('welcome')}
             onStartSimulation={handleStartSimulation}
             onStartPractice={handleStartPractice}
-            onStartPracticeByItems={handleStartPracticeByItems}
-            onSwitchToBxm={handleEnterMvpMath}
+            onNavigateHome={() => setCurrentView('welcome')}
           />
         )}
 
