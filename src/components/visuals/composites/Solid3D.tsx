@@ -3,6 +3,24 @@ import { TextRenderer } from '../../common/TextRenderer';
 
 export type Solid3DShapeType = 'sphere' | 'cylinder' | 'cone' | 'frustum' | 'prism' | 'cube';
 
+export type Solid3DCrossSectionType =
+  | 'parallel' // parallel to base (circles in cylinder/cone, horizontal circle in sphere)
+  | 'axial' // through axis (rectangle in cylinder, right/isosceles triangle in cone, trapezoid in frustum)
+  | 'oblique' // cutting lateral surface at an angle without touching bases (ellipse in cylinder & cone)
+  | 'chord' // vertical cut parallel to axis but offset from center (smaller rectangle in cylinder)
+  | 'parabolic' // cutting cone parallel to slant edge
+  | 'hyperbolic' // cutting cone perpendicular to base / parallel to axis
+  | 'base'; // base polygon/circle
+
+export interface CuttingPlaneSpec {
+  show?: boolean;
+  label?: string; // e.g. "α", "β", "Plano secante"
+  tilt?: number; // tilt angle in degrees or relative slope
+  offset?: number; // offset along axis
+  color?: string; // custom fill or stroke
+  hatch?: boolean;
+}
+
 export interface Solid3DPoint {
   id?: string;
   coords: [number, number]; // 2D projected coordinate on SVG canvas
@@ -22,7 +40,7 @@ export interface Solid3DSegment {
 
 export interface Solid3DPerpendicularMark {
   corner: [number, number];
-  dir1: [number, number]; // vector along first arm (normalized or relative)
+  dir1: [number, number]; // vector along first arm
   dir2: [number, number]; // vector along second arm
   size?: number;
 }
@@ -40,10 +58,11 @@ export interface Solid3DSpec {
   height?: number;
   parameters?: Record<string, any>;
   showCrossSection?: boolean;
-  crossSectionType?: 'parallel' | 'axial' | 'oblique' | 'base';
-  crossSectionOffset?: number; // e.g. for sphere plane cut distance from center
+  crossSectionType?: Solid3DCrossSectionType;
+  crossSectionOffset?: number; // e.g. for sphere plane cut distance from center or cylinder chord offset
   crossSectionHatched?: boolean;
   hatchAngle?: number;
+  cuttingPlane?: CuttingPlaneSpec;
   labels?: Record<string, string>;
   points?: Solid3DPoint[];
   segments?: Solid3DSegment[];
@@ -62,6 +81,7 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
   crossSectionOffset = 0,
   crossSectionHatched = true,
   hatchAngle = -45,
+  cuttingPlane,
   labels = {},
   points = [],
   segments = [],
@@ -172,7 +192,7 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
     );
   };
 
-  const renderRightAngle = (mark: Solid3DSepmentOrMark, key: string | number) => {
+  const renderRightAngle = (mark: Solid3DPerpendicularMark, key: string | number) => {
     const { corner, dir1, dir2, size = 9 } = mark;
     const len1 = Math.hypot(dir1[0], dir1[1]) || 1;
     const len2 = Math.hypot(dir2[0], dir2[1]) || 1;
@@ -194,8 +214,6 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
     );
   };
 
-  type Solid3DSepmentOrMark = Solid3DPerpendicularMark;
-
   // Visual center anchor (offset to left if referenceBox is present)
   const hasRefBox = Boolean(referenceBox && referenceBox.lines && referenceBox.lines.length > 0);
   const cx = hasRefBox ? width * 0.32 : width * 0.5;
@@ -206,7 +224,7 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
     switch (shape) {
       case 'sphere': {
         const R = parameters.radius || 75;
-        const d = crossSectionOffset || parameters.distance || 38; // Distance from center S up to section plane O
+        const d = crossSectionOffset || parameters.distance || 38; // Distance from center S to section plane O
         // Cut circle radius: rCut = sqrt(R^2 - d^2)
         const rCut = Math.sqrt(Math.max(0, R * R - d * d));
         // Under orthographic tilt, horizontal circle becomes ellipse with ryCut = rCut * tilt
@@ -221,6 +239,9 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
         const centerO: [number, number] = [cx, planeY];
         const pointP: [number, number] = [cx - rCut, planeY];
         const pointN: [number, number] = [cx + rCut, planeY];
+
+        const showCuttingPlaneOverlay = cuttingPlane?.show;
+        const planeLabel = cuttingPlane?.label || 'α';
 
         return (
           <g className="solid-sphere">
@@ -283,6 +304,19 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
               </g>
             )}
 
+            {/* Visual Cutting Plane Parallelogram (Alpha) if enabled */}
+            {showCuttingPlaneOverlay && (
+              <g className="cutting-plane-alpha">
+                <polygon
+                  points={`${cx - rCut - 35},${planeY + 12} ${cx + rCut + 15},${planeY + 12} ${cx + rCut + 35},${planeY - 14} ${cx - rCut - 15},${planeY - 14}`}
+                  fill="rgba(59, 130, 246, 0.08)"
+                  stroke="var(--visual-stroke, #09090b)"
+                  strokeWidth={1.2}
+                />
+                {renderLabel(`$\\text{Plano } ${planeLabel}$`, cx - rCut - 25, planeY - 14, 'left', 12, 'lbl_alpha')}
+              </g>
+            )}
+
             {/* Distance segment from S (sphere center) to O (plane center) */}
             {showAxes && (
               <line
@@ -322,8 +356,8 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
               />
             )}
 
-            {/* Default right angle at centerO between axis SO and radius ON */}
-            {parameters.showRightAngle !== false && (
+            {/* Right angle at centerO between axis SO and radius ON */}
+            {parameters.showRightAngle && (
               renderRightAngle(
                 { corner: centerO, dir1: [0, 1], dir2: [1, 0], size: 8 },
                 'sphere_ra'
@@ -337,10 +371,10 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
             <circle cx={pointN[0]} cy={pointN[1]} r={3} fill="var(--visual-stroke, #09090b)" />
 
             {/* Default points labels */}
-            {renderLabel(labels.sphereCenter || 'M', centerS[0], centerS[1], 'bottom', 13, 'lbl_S')}
+            {renderLabel(labels.sphereCenter || 'S', centerS[0], centerS[1], 'bottom', 13, 'lbl_S')}
             {renderLabel(labels.planeCenter || 'O', centerO[0], centerO[1], 'top-left', 13, 'lbl_O')}
-            {renderLabel(labels.planeLeft || 'P', pointP[0], pointP[1], 'left', 13, 'lbl_P')}
-            {renderLabel(labels.planeRight || 'N', pointN[0], pointN[1], 'right', 13, 'lbl_N')}
+            {renderLabel(labels.planeLeft || 'M', pointP[0], pointP[1], 'left', 13, 'lbl_P')}
+            {renderLabel(labels.planeRight || 'R', pointN[0], pointN[1], 'right', 13, 'lbl_N')}
           </g>
         );
       }
@@ -359,15 +393,98 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
         const ptE: [number, number] = [cx, botY];
         const ptF: [number, number] = [cx + rx, botY];
 
+        const showCuttingPlaneOverlay = cuttingPlane?.show;
+        const planeLabel = cuttingPlane?.label || 'α';
+
+        // Oblique cut parameters
+        // A plane cutting the cylinder obliquely across its lateral surface without intersecting bases
+        const obliqueAngle = parameters.obliqueAngle || 24; // degrees
+        const rad = (obliqueAngle * Math.PI) / 180;
+        const obliqueMajor = rx / Math.cos(rad);
+        const obliqueMinor = ry * 1.35;
+
+        // Chord cut parameters: plane perpendicular to bases at distance d from axis
+        const chordDist = crossSectionOffset || parameters.chordDistance || rx * 0.6;
+        const halfChord = Math.sqrt(Math.max(0, rx * rx - chordDist * chordDist));
+        const chordX1 = cx + chordDist;
+        const chordYTop = topY + Math.sqrt(Math.max(0, 1 - (chordDist / rx) ** 2)) * ry * 0.4;
+        const chordYBot = botY + Math.sqrt(Math.max(0, 1 - (chordDist / rx) ** 2)) * ry * 0.4;
+
         return (
           <g className="solid-cylinder">
-            {/* Axial cross-section rectangle (if requested or showCrossSection) */}
+            {/* Visual Cutting Plane Polygon (Plano secante alpha) */}
+            {showCuttingPlaneOverlay && crossSectionType === 'oblique' && (
+              <g className="cutting-plane-oblique">
+                <polygon
+                  points={`${cx - rx - 35},${cy + 42} ${cx + rx + 30},${cy - 24} ${cx + rx + 45},${cy - 48} ${cx - rx - 20},${cy + 18}`}
+                  fill="rgba(59, 130, 246, 0.08)"
+                  stroke="var(--visual-stroke, #09090b)"
+                  strokeWidth={1.2}
+                />
+                {renderLabel(`$\\text{Plano } ${planeLabel}$`, cx + rx + 35, cy - 35, 'top-right', 12, 'lbl_plano_ob')}
+              </g>
+            )}
+
+            {/* Axial cross-section rectangle */}
             {showCrossSection && crossSectionType === 'axial' && (
               <polygon
                 points={`${ptA[0]},${ptA[1]} ${ptC[0]},${ptC[1]} ${ptF[0]},${ptF[1]} ${ptD[0]},${ptD[1]}`}
                 fill={crossSectionHatched ? `url(#${patternId})` : 'rgba(37,99,235,0.12)'}
                 stroke="none"
               />
+            )}
+
+            {/* Chord cross-section rectangle (perpendicular to base, offset from center) */}
+            {showCrossSection && crossSectionType === 'chord' && (
+              <g className="cylinder-chord-section">
+                <rect
+                  x={chordX1 - 1}
+                  y={topY}
+                  width={2}
+                  height={H}
+                  fill="none"
+                />
+                {/* 2D chord slice plane rendered as vertical stripe / rectangle */}
+                <polygon
+                  points={`${chordX1},${topY - ry * 0.3} ${chordX1},${topY + ry * 0.7} ${chordX1},${botY + ry * 0.7} ${chordX1},${botY - ry * 0.3}`}
+                  fill={crossSectionHatched ? `url(#${patternId})` : 'rgba(37,99,235,0.15)'}
+                  stroke="var(--visual-stroke, #09090b)"
+                  strokeWidth={1.6}
+                />
+                {/* Triangle in base to show chord relation */}
+                <line x1={cx} y1={botY} x2={chordX1} y2={botY} stroke="var(--visual-stroke, #09090b)" strokeWidth={1.4} strokeDasharray="3 3" />
+                <line x1={cx} y1={botY} x2={chordX1} y2={botY + ry * 0.7} stroke="var(--visual-stroke, #09090b)" strokeWidth={1.4} strokeDasharray="3 3" />
+                {renderLabel(labels.distance || 'd', (cx + chordX1) / 2, botY - 2, 'bottom', 11, 'lbl_cdist')}
+              </g>
+            )}
+
+            {/* Oblique cross-section: tilted ellipse */}
+            {showCrossSection && crossSectionType === 'oblique' && (
+              <g className="cylinder-oblique-section" transform={`rotate(${-obliqueAngle}, ${cx}, ${cy})`}>
+                <ellipse
+                  cx={cx}
+                  cy={cy}
+                  rx={obliqueMajor * 0.95}
+                  ry={obliqueMinor}
+                  fill={crossSectionHatched ? `url(#${patternId})` : 'rgba(37,99,235,0.12)'}
+                  stroke="none"
+                />
+                {/* Rear arc (dashed) */}
+                <path
+                  d={`M ${cx - obliqueMajor * 0.95} ${cy} A ${obliqueMajor * 0.95} ${obliqueMinor} 0 0 1 ${cx + obliqueMajor * 0.95} ${cy}`}
+                  fill="none"
+                  stroke="var(--visual-stroke, #09090b)"
+                  strokeWidth={1.6}
+                  strokeDasharray="4 4"
+                />
+                {/* Front arc (solid) */}
+                <path
+                  d={`M ${cx - obliqueMajor * 0.95} ${cy} A ${obliqueMajor * 0.95} ${obliqueMinor} 0 0 0 ${cx + obliqueMajor * 0.95} ${cy}`}
+                  fill="none"
+                  stroke="var(--visual-stroke, #09090b)"
+                  strokeWidth={2}
+                />
+              </g>
             )}
 
             {/* Bottom ellipse: rear dashed, front solid */}
@@ -414,7 +531,7 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
             )}
 
             {/* Top diameter AC dashed */}
-            {parameters.showTopDiameter !== false && (
+            {parameters.showTopDiameter !== false && crossSectionType !== 'oblique' && (
               <line
                 x1={ptA[0]}
                 y1={ptA[1]}
@@ -427,7 +544,7 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
             )}
 
             {/* Bottom diameter DF dashed */}
-            {parameters.showBottomDiameter !== false && (
+            {parameters.showBottomDiameter !== false && crossSectionType !== 'oblique' && (
               <line
                 x1={ptD[0]}
                 y1={ptD[1]}
@@ -440,20 +557,31 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
             )}
 
             {/* Center and vertex points */}
-            <circle cx={ptA[0]} cy={ptA[1]} r={3} fill="var(--visual-stroke, #09090b)" />
-            <circle cx={ptB[0]} cy={ptB[1]} r={3} fill="var(--visual-stroke, #09090b)" />
-            <circle cx={ptC[0]} cy={ptC[1]} r={3} fill="var(--visual-stroke, #09090b)" />
-            <circle cx={ptD[0]} cy={ptD[1]} r={3} fill="var(--visual-stroke, #09090b)" />
-            <circle cx={ptE[0]} cy={ptE[1]} r={3} fill="var(--visual-stroke, #09090b)" />
-            <circle cx={ptF[0]} cy={ptF[1]} r={3} fill="var(--visual-stroke, #09090b)" />
+            {crossSectionType !== 'oblique' && (
+              <>
+                <circle cx={ptA[0]} cy={ptA[1]} r={3} fill="var(--visual-stroke, #09090b)" />
+                <circle cx={ptB[0]} cy={ptB[1]} r={3} fill="var(--visual-stroke, #09090b)" />
+                <circle cx={ptC[0]} cy={ptC[1]} r={3} fill="var(--visual-stroke, #09090b)" />
+                <circle cx={ptD[0]} cy={ptD[1]} r={3} fill="var(--visual-stroke, #09090b)" />
+                <circle cx={ptE[0]} cy={ptE[1]} r={3} fill="var(--visual-stroke, #09090b)" />
+                <circle cx={ptF[0]} cy={ptF[1]} r={3} fill="var(--visual-stroke, #09090b)" />
 
-            {/* Labels */}
-            {renderLabel(labels.topLeft || 'A', ptA[0], ptA[1], 'left', 13, 'lbl_A')}
-            {renderLabel(labels.topCenter || 'B', ptB[0], ptB[1], 'top', 13, 'lbl_B')}
-            {renderLabel(labels.topRight || 'C', ptC[0], ptC[1], 'right', 13, 'lbl_C')}
-            {renderLabel(labels.bottomLeft || 'D', ptD[0], ptD[1], 'left', 13, 'lbl_D')}
-            {renderLabel(labels.bottomCenter || 'E', ptE[0], ptE[1], 'bottom', 13, 'lbl_E')}
-            {renderLabel(labels.bottomRight || 'F', ptF[0], ptF[1], 'right', 13, 'lbl_F')}
+                {renderLabel(labels.topLeft || 'A', ptA[0], ptA[1], 'left', 13, 'lbl_A')}
+                {renderLabel(labels.topCenter || 'B', ptB[0], ptB[1], 'top', 13, 'lbl_B')}
+                {renderLabel(labels.topRight || 'C', ptC[0], ptC[1], 'right', 13, 'lbl_C')}
+                {renderLabel(labels.bottomLeft || 'D', ptD[0], ptD[1], 'left', 13, 'lbl_D')}
+                {renderLabel(labels.bottomCenter || 'E', ptE[0], ptE[1], 'bottom', 13, 'lbl_E')}
+                {renderLabel(labels.bottomRight || 'F', ptF[0], ptF[1], 'right', 13, 'lbl_F')}
+              </>
+            )}
+            {crossSectionType === 'oblique' && (
+              <>
+                <circle cx={ptB[0]} cy={ptB[1]} r={3} fill="var(--visual-stroke, #09090b)" />
+                <circle cx={ptE[0]} cy={ptE[1]} r={3} fill="var(--visual-stroke, #09090b)" />
+                {renderLabel(labels.topCenter || 'O_1', ptB[0], ptB[1], 'top', 13, 'lbl_O1')}
+                {renderLabel(labels.bottomCenter || 'O_2', ptE[0], ptE[1], 'bottom', 13, 'lbl_O2')}
+              </>
+            )}
           </g>
         );
       }
@@ -470,6 +598,9 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
         const baseLeft: [number, number] = [cx - rx, baseY];
         const baseRight: [number, number] = [cx + rx, baseY];
 
+        const showCuttingPlaneOverlay = cuttingPlane?.show;
+        const planeLabel = cuttingPlane?.label || 'α';
+
         // Parallel planar cut
         const cutHeightFraction = parameters.cutHeightFraction || 0.45; // 0 (base) to 1 (apex)
         const cutY = baseY - H * cutHeightFraction;
@@ -479,14 +610,106 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
         const cutLeft: [number, number] = [cx - cutRx, cutY];
         const cutRight: [number, number] = [cx + cutRx, cutY];
 
+        // Oblique cut parameters on cone (generates ellipse)
+        const obliqueAngle = parameters.obliqueAngle || 20; // degrees
+        const obliqueCenterY = baseY - H * 0.42;
+
+        // Parabolic cut: plane parallel to slant height
+        const isParabolic = crossSectionType === 'parabolic';
+        // Hyperbolic cut: plane perpendicular to base
+        const isHyperbolic = crossSectionType === 'hyperbolic';
+
         return (
           <g className="solid-cone">
-            {/* Axial cross-section right triangle (if requested) */}
+            {/* Visual Cutting Plane Overlay if requested */}
+            {showCuttingPlaneOverlay && (
+              <g className="cone-cutting-plane">
+                {crossSectionType === 'oblique' ? (
+                  <polygon
+                    points={`${cx - rx - 25},${obliqueCenterY + 35} ${cx + rx + 25},${obliqueCenterY - 25} ${cx + rx + 38},${obliqueCenterY - 48} ${cx - rx - 12},${obliqueCenterY + 12}`}
+                    fill="rgba(59, 130, 246, 0.08)"
+                    stroke="var(--visual-stroke, #09090b)"
+                    strokeWidth={1.2}
+                  />
+                ) : isParabolic ? (
+                  <polygon
+                    points={`${cx - rx - 15},${baseY + 15} ${cx + 10},${apexY + 20} ${cx + 40},${apexY + 10} ${cx + 15},${baseY + 15}`}
+                    fill="rgba(59, 130, 246, 0.08)"
+                    stroke="var(--visual-stroke, #09090b)"
+                    strokeWidth={1.2}
+                  />
+                ) : isHyperbolic ? (
+                  <polygon
+                    points={`${cx + rx * 0.4},${apexY + 20} ${cx + rx * 0.4},${baseY + 20} ${cx + rx + 20},${baseY + 20} ${cx + rx + 20},${apexY + 20}`}
+                    fill="rgba(59, 130, 246, 0.08)"
+                    stroke="var(--visual-stroke, #09090b)"
+                    strokeWidth={1.2}
+                  />
+                ) : (
+                  <polygon
+                    points={`${cx - rx - 25},${cutY + 12} ${cx + rx + 15},${cutY + 12} ${cx + rx + 28},${cutY - 14} ${cx - rx - 12},${cutY - 14}`}
+                    fill="rgba(59, 130, 246, 0.08)"
+                    stroke="var(--visual-stroke, #09090b)"
+                    strokeWidth={1.2}
+                  />
+                )}
+                {renderLabel(`$\\text{Plano } ${planeLabel}$`, cx + rx + 15, (crossSectionType === 'oblique' ? obliqueCenterY - 30 : cutY - 14), 'top-right', 12, 'lbl_plano_cone')}
+              </g>
+            )}
+
+            {/* Axial cross-section right triangle */}
             {showCrossSection && crossSectionType === 'axial' && (
               <polygon
                 points={`${apex[0]},${apex[1]} ${baseCenter[0]},${baseCenter[1]} ${baseRight[0]},${baseRight[1]}`}
                 fill={crossSectionHatched ? `url(#${patternId})` : 'rgba(37,99,235,0.12)'}
                 stroke="none"
+              />
+            )}
+
+            {/* Oblique cross-section (ellipse) in cone */}
+            {showCrossSection && crossSectionType === 'oblique' && (
+              <g className="cone-oblique-ellipse" transform={`rotate(${-obliqueAngle}, ${cx}, ${obliqueCenterY})`}>
+                <ellipse
+                  cx={cx}
+                  cy={obliqueCenterY}
+                  rx={rx * 0.52}
+                  ry={ry * 0.9}
+                  fill={crossSectionHatched ? `url(#${patternId})` : 'rgba(37,99,235,0.12)'}
+                  stroke="none"
+                />
+                <path
+                  d={`M ${cx - rx * 0.52} ${obliqueCenterY} A ${rx * 0.52} ${ry * 0.9} 0 0 1 ${cx + rx * 0.52} ${obliqueCenterY}`}
+                  fill="none"
+                  stroke="var(--visual-stroke, #09090b)"
+                  strokeWidth={1.6}
+                  strokeDasharray="3 3"
+                />
+                <path
+                  d={`M ${cx - rx * 0.52} ${obliqueCenterY} A ${rx * 0.52} ${ry * 0.9} 0 0 0 ${cx + rx * 0.52} ${obliqueCenterY}`}
+                  fill="none"
+                  stroke="var(--visual-stroke, #09090b)"
+                  strokeWidth={2}
+                />
+              </g>
+            )}
+
+            {/* Parabolic cross-section in cone */}
+            {showCrossSection && isParabolic && (
+              <path
+                d={`M ${cx - rx * 0.5} ${baseY} Q ${cx - 5} ${apexY + 35} ${cx + rx * 0.4} ${baseY}`}
+                fill={crossSectionHatched ? `url(#${patternId})` : 'rgba(37,99,235,0.15)'}
+                stroke="var(--visual-stroke, #09090b)"
+                strokeWidth={2}
+              />
+            )}
+
+            {/* Hyperbolic cross-section in cone */}
+            {showCrossSection && isHyperbolic && (
+              <path
+                d={`M ${cx + rx * 0.3} ${baseY + 5} Q ${cx + rx * 0.55} ${cy} ${cx + rx * 0.3} ${apexY + 40}`}
+                fill={crossSectionHatched ? `url(#${patternId})` : 'rgba(37,99,235,0.15)'}
+                stroke="var(--visual-stroke, #09090b)"
+                strokeWidth={2}
               />
             )}
 
@@ -505,8 +728,8 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
               strokeWidth={2}
             />
 
-            {/* Parallel planar cross section (like sample question 2) */}
-            {showCrossSection && crossSectionType !== 'axial' && (
+            {/* Parallel planar cross section */}
+            {showCrossSection && crossSectionType === 'parallel' && (
               <g className="cone-cross-section">
                 <path
                   d={`M ${cutLeft[0]} ${cutLeft[1]} A ${cutRx} ${cutRy} 0 0 1 ${cutRight[0]} ${cutRight[1]}`}
@@ -582,14 +805,22 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
             {/* Key vertices */}
             <circle cx={apex[0]} cy={apex[1]} r={3.5} fill="var(--visual-stroke, #09090b)" />
             <circle cx={baseCenter[0]} cy={baseCenter[1]} r={3} fill="var(--visual-stroke, #09090b)" />
-            <circle cx={baseLeft[0]} cy={baseLeft[1]} r={3} fill="var(--visual-stroke, #09090b)" />
-            <circle cx={baseRight[0]} cy={baseRight[1]} r={3} fill="var(--visual-stroke, #09090b)" />
+            {crossSectionType !== 'oblique' && (
+              <>
+                <circle cx={baseLeft[0]} cy={baseLeft[1]} r={3} fill="var(--visual-stroke, #09090b)" />
+                <circle cx={baseRight[0]} cy={baseRight[1]} r={3} fill="var(--visual-stroke, #09090b)" />
+              </>
+            )}
 
             {/* Labels */}
-            {renderLabel(labels.apex || 'B', apex[0], apex[1], 'top', 13, 'lbl_Apex')}
-            {renderLabel(labels.baseCenter || 'D', baseCenter[0], baseCenter[1], 'bottom', 13, 'lbl_BaseCenter')}
-            {renderLabel(labels.baseLeft || 'A', baseLeft[0], baseLeft[1], 'left', 13, 'lbl_BaseLeft')}
-            {renderLabel(labels.baseRight || 'C', baseRight[0], baseRight[1], 'right', 13, 'lbl_BaseRight')}
+            {renderLabel(labels.apex || 'V', apex[0], apex[1], 'top', 13, 'lbl_Apex')}
+            {renderLabel(labels.baseCenter || 'O', baseCenter[0], baseCenter[1], 'bottom', 13, 'lbl_BaseCenter')}
+            {crossSectionType !== 'oblique' && (
+              <>
+                {renderLabel(labels.baseLeft || 'A', baseLeft[0], baseLeft[1], 'left', 13, 'lbl_BaseLeft')}
+                {renderLabel(labels.baseRight || 'C', baseRight[0], baseRight[1], 'right', 13, 'lbl_BaseRight')}
+              </>
+            )}
           </g>
         );
       }
@@ -708,9 +939,9 @@ export const Solid3D: React.FC<Solid3DSpec> = ({
 
       case 'cube':
       case 'prism': {
-        const w = parameters.boxWidth || 100;
-        const h = parameters.boxHeight || 75;
-        const depth = parameters.boxDepth || 55;
+        const w = parameters.width || parameters.boxWidth || 100;
+        const h = parameters.height || parameters.boxHeight || 75;
+        const depth = parameters.depth || parameters.boxDepth || 55;
         const angle = (parameters.projectionAngle || 35) * (Math.PI / 180);
         const dx = depth * Math.cos(angle);
         const dy = depth * Math.sin(angle);

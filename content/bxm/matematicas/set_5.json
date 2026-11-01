@@ -1,7 +1,7 @@
 {
   "set_id": "set_5",
   "title": "Geometría del Espacio: Cuerpos Redondos y Poliedros (3D)",
-  "description": "25 ítems de visualización espacial, secciones planas y relaciones métricas en esfera, cilindro, cono, tronco de cono y prisma/cubo.",
+  "description": "30 ítems de visualización espacial, secciones planas (círculo, elipse, parábola, rectángulo) y relaciones métricas en sólidos 3D.",
   "items": [
     {
       "id": 171,
@@ -1340,6 +1340,290 @@
           },
           "showCrossSection": false,
           "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 196,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección oblicua en un cilindro circular recto",
+      "spec": {
+        "block": "Geometría",
+        "affirmation": "Resolución de problemas con secciones planas y características métricas",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+      },
+      "stem": "Considere la siguiente figura de un cilindro circular recto de centros $O_1$ y $O_2$ intersecado por un plano secante $\\alpha$:\n\nSi el plano $\\alpha$ interseca la superficie lateral del cilindro de manera oblicua (sin intersecar las bases), ¿qué figura geométrica corresponde a dicha sección plana?",
+      "options": {
+        "A": "Una elipse",
+        "B": "Una circunferencia",
+        "C": "Una parábola",
+        "D": "Un rectángulo"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "La intersección de un cilindro circular recto con un plano secante que corta todas las generatrices oblicuamente sin cortar las bases es una elipse.",
+        "Si el corte fuera perpendicular al eje (paralelo a las bases) se obtendría una circunferencia.",
+        "Si el corte fuera paralelo al eje se obtendría un rectángulo.",
+        "Por lo tanto, la figura obtenida por el plano oblicuo $\\alpha$ es una elipse."
+      ],
+      "visual_spec": {
+        "alt": "Cilindro circular recto intersecado por un plano oblicuo",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cylinder",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 68,
+            "height": 115,
+            "obliqueAngle": 25
+          },
+          "crossSectionType": "oblique",
+          "showCrossSection": true,
+          "cuttingPlane": {
+            "show": true,
+            "label": "\\alpha"
+          },
+          "labels": {
+            "topCenter": "O_1",
+            "bottomCenter": "O_2"
+          },
+          "referenceBox": {
+            "lines": [
+              "O_1 y O_2: centros de bases",
+              "\\alpha: plano secante oblicuo"
+            ]
+          },
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 197,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección oblicua en un cono circular recto",
+      "spec": {
+        "block": "Geometría",
+        "affirmation": "Resolución de problemas con secciones planas y características métricas",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+      },
+      "stem": "Considere la siguiente figura de un cono circular recto de vértice $V$ intersecado por un plano secante $\\beta$ oblicuo respecto a la base, el cual corta todas sus generatrices:\n\n¿Cuál es el nombre de la curva o sección plana obtenida mediante dicha intersección?",
+      "options": {
+        "A": "Circunferencia",
+        "B": "Elipse",
+        "C": "Parábola",
+        "D": "Hipérbola"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "Cuando un plano secante corta a un cono circular recto con una inclinación oblicua menor que el ángulo de la generatriz (cortando todas las generatrices de un manto sin cortar la base), la sección plana obtenida es una elipse.",
+        "Si el corte fuera paralelo a la base, sería una circunferencia.",
+        "Si el plano fuera paralelo a una generatriz, se formaría una parábola.",
+        "Por consiguiente, la sección plana es una elipse."
+      ],
+      "visual_spec": {
+        "alt": "Cono circular recto cortado oblicuamente por un plano secante",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cone",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 72,
+            "height": 125,
+            "obliqueAngle": 22
+          },
+          "crossSectionType": "oblique",
+          "showCrossSection": true,
+          "cuttingPlane": {
+            "show": true,
+            "label": "\\beta"
+          },
+          "labels": {
+            "apex": "V",
+            "baseCenter": "O"
+          },
+          "referenceBox": {
+            "lines": [
+              "V: vértice del cono",
+              "O: centro de la base",
+              "\\beta: plano secante oblicuo"
+            ]
+          },
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 198,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección plana perpendicular a las bases no diametral en un cilindro",
+      "spec": {
+        "block": "Geometría",
+        "affirmation": "Resolución de problemas con secciones planas y características métricas",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+      },
+      "stem": "Un cilindro circular recto tiene una altura de $12\\text{ cm}$ y un radio de la base de $5\\text{ cm}$. Se realiza un corte con un plano paralelo al eje central (perpendicular a las bases) a una distancia de $3\\text{ cm}$ de dicho eje. ¿Cuál es el área de la sección rectangular resultante?",
+      "options": {
+        "A": "$48\\text{ cm}^2$",
+        "B": "$96\\text{ cm}^2$",
+        "C": "$60\\text{ cm}^2$",
+        "D": "$120\\text{ cm}^2$"
+      },
+      "correct_answer": "B",
+      "solution_steps": [
+        "La sección plana obtenida al cortar un cilindro con un plano perpendicular a sus bases es un rectángulo.",
+        "La altura del rectángulo coincide con la altura del cilindro: $h = 12\\text{ cm}$.",
+        "El ancho del rectángulo corresponde a la cuerda formada en la base del cilindro a una distancia $d = 3\\text{ cm}$ del centro.",
+        "Por el teorema de Pitágoras en el círculo de la base: $(\\text{mitad de la cuerda})^2 + d^2 = r^2 \\implies x^2 + 3^2 = 5^2 \\implies x = \\sqrt{25 - 9} = 4\\text{ cm}$.",
+        "La longitud total de la cuerda (ancho del rectángulo) es $2x = 2(4) = 8\\text{ cm}$.",
+        "El área de la sección plana es: $\\text{Área} = \\text{ancho} \\times h = 8 \\times 12 = 96\\text{ cm}^2$."
+      ],
+      "visual_spec": {
+        "alt": "Corte de un cilindro por plano vertical no diametral",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cylinder",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 70,
+            "height": 115,
+            "chordDistance": 36
+          },
+          "crossSectionType": "chord",
+          "showCrossSection": true,
+          "labels": {
+            "distance": "d"
+          },
+          "referenceBox": {
+            "lines": [
+              "Corte perpendicular a bases",
+              "Distancia al eje d = 3",
+              "r = 5, h = 12"
+            ]
+          },
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 199,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección cónica parabólica en un cono",
+      "spec": {
+        "block": "Geometría",
+        "affirmation": "Resolución de problemas con secciones planas y características métricas",
+        "evidence": "A5.2",
+        "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+      },
+      "stem": "Considere la siguiente figura de un cono circular recto intersecado por un plano secante $\\alpha$ que es exactamente paralelo a una de sus generatrices:\n\n¿Qué tipo de sección cónica se genera en el cono producto de dicho corte?",
+      "options": {
+        "A": "Parábola",
+        "B": "Elipse",
+        "C": "Hipérbola",
+        "D": "Circunferencia"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "Cuando un plano secante interseca a un cono circular recto de forma paralela a una de sus generatrices, la curva que se obtiene en la superficie lateral es una parábola.",
+        "Si el ángulo del plano fuera menor al de la generatriz (cortando todas las generatrices), sería una elipse.",
+        "Si el ángulo del plano fuera perpendicular a la base o paralelo al eje del cono, se formaría una rama de hipérbola.",
+        "Por consiguiente, la sección plana es una parábola."
+      ],
+      "visual_spec": {
+        "alt": "Cono circular recto cortado por un plano secante paralelo a una generatriz",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "cone",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 75,
+            "height": 120
+          },
+          "crossSectionType": "parabolic",
+          "showCrossSection": true,
+          "cuttingPlane": {
+            "show": true,
+            "label": "\\alpha"
+          },
+          "labels": {
+            "apex": "V",
+            "baseCenter": "O"
+          },
+          "referenceBox": {
+            "lines": [
+              "Plano \\alpha \\parallel generatriz",
+              "V: vértice del cono",
+              "O: centro de la base"
+            ]
+          },
+          "showAxes": true
+        }
+      }
+    },
+    {
+      "id": 200,
+      "area": "GEOMETRÍA",
+      "area_id": "geometry",
+      "topic": "Sección plana en una esfera con notación colineal MEP",
+      "spec": {
+        "block": "Geometría",
+        "affirmation": "Resolución de problemas con secciones planas y características métricas",
+        "evidence": "A5.3",
+        "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+      },
+      "stem": "La siguiente figura corresponde a una esfera cuya medida de su diámetro es $12$ y una sección plana obtenida de la intersección de un plano con la esfera:\n\n¿Cuál es la medida del radio de la sección plana de centro $O$?",
+      "options": {
+        "A": "$2\\sqrt{5}$",
+        "B": "$8\\sqrt{2}$",
+        "C": "$4\\sqrt{10}$",
+        "D": "$4\\sqrt{5}$"
+      },
+      "correct_answer": "A",
+      "solution_steps": [
+        "El diámetro de la esfera es $12$, por lo que su radio es $R = \\frac{12}{2} = 6$.",
+        "La distancia desde el centro $S$ de la esfera hasta el centro $O$ de la sección plana es $SO = d = 4$.",
+        "En el triángulo rectángulo formado por el centro de la esfera, el centro de la sección y un punto del borde (como $R$), se cumple por el teorema de Pitágoras:\n$$r^2 + d^2 = R^2$$\n$$r^2 + 4^2 = 6^2$$\n$$r^2 + 16 = 36$$\n$$r^2 = 20$$\n$$r = \\sqrt{20} = 2\\sqrt{5}$$",
+        "Por lo tanto, la medida del radio de la sección plana es $2\\sqrt{5}$."
+      ],
+      "visual_spec": {
+        "alt": "Esfera cortada por un plano secante con centros S y O y puntos colineales M-O-R",
+        "visual": {
+          "type": "solid_3d",
+          "shape": "sphere",
+          "width": 380,
+          "height": 280,
+          "parameters": {
+            "radius": 80,
+            "distance": 42,
+            "showPlaneRadius": false,
+            "showSphereRadius": false,
+            "showRightAngle": false
+          },
+          "labels": {
+            "sphereCenter": "S",
+            "planeCenter": "O",
+            "planeLeft": "M",
+            "planeRight": "R"
+          },
+          "referenceBox": {
+            "lines": [
+              "M — O — R; SO = 4",
+              "S: centro de la esfera",
+              "O: centro de la sección plana"
+            ]
+          },
+          "showCrossSection": true,
+          "showAxes": false
         }
       }
     }

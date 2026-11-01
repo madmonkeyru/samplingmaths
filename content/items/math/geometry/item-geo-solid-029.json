@@ -1,0 +1,63 @@
+{
+  "id": "item-geo-solid-029",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección cónica parabólica en un cono",
+  "cognitive_level": "Conocimiento",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+  },
+  "stem": "Considere la siguiente figura de un cono circular recto intersecado por un plano secante $\\alpha$ que es exactamente paralelo a una de sus generatrices:\n\n¿Qué tipo de sección cónica se genera en el cono producto de dicho corte?",
+  "options": {
+    "A": "Parábola",
+    "B": "Elipse",
+    "C": "Hipérbola",
+    "D": "Circunferencia"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Cuando un plano secante interseca a un cono circular recto de forma paralela a una de sus generatrices, la curva que se obtiene en la superficie lateral es una parábola.",
+    "Si el ángulo del plano fuera menor al de la generatriz (cortando todas las generatrices), sería una elipse.",
+    "Si el ángulo del plano fuera perpendicular a la base o paralelo al eje del cono, se formaría una rama de hipérbola.",
+    "Por consiguiente, la sección plana es una parábola."
+  ],
+  "visual_spec": {
+    "alt": "Cono circular recto cortado por un plano secante paralelo a una generatriz",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cone",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 75,
+        "height": 120
+      },
+      "crossSectionType": "parabolic",
+      "showCrossSection": true,
+      "cuttingPlane": {
+        "show": true,
+        "label": "\\alpha"
+      },
+      "labels": {
+        "apex": "V",
+        "baseCenter": "O"
+      },
+      "referenceBox": {
+        "lines": [
+          "Plano \\alpha \\parallel generatriz",
+          "V: vértice del cono",
+          "O: centro de la base"
+        ]
+      },
+      "showAxes": true
+    }
+  }
+}

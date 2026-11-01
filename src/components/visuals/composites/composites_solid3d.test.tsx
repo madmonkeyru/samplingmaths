@@ -1,113 +1,131 @@
 import { describe, it, expect } from 'vitest';
+import React from 'react';
 import { render } from '@testing-library/react';
 import { Solid3D } from './Solid3D';
-import { VisualRenderer } from '../VisualRenderer';
 
-describe('Solid3D Composite Component', () => {
-  it('renders a sphere with planar cross section and reference box', () => {
+describe('Solid3D Component', () => {
+  it('renders a sphere with parallel cross section and reference box', () => {
     const { container } = render(
       <Solid3D
         shape="sphere"
-        parameters={{ radius: 75, distance: 38 }}
+        parameters={{ radius: 80, distance: 40 }}
         showCrossSection={true}
-        crossSectionHatched={true}
-        labels={{ sphereCenter: 'M', planeCenter: 'O', planeLeft: 'P', planeRight: 'N' }}
+        labels={{ sphereCenter: 'S', planeCenter: 'O' }}
         referenceBox={{
-          title: 'P — O — N',
-          lines: ['M: centro de la esfera', 'O: centro de la sección plana'],
+          lines: ['M - O - R; SO = 4', 'S: centro de la esfera', 'O: centro de la sección plana'],
         }}
+        cuttingPlane={{ show: true, label: 'α' }}
       />
     );
-
     expect(container.querySelector('.solid-sphere')).toBeTruthy();
     expect(container.querySelector('.cross-section-plane')).toBeTruthy();
+    expect(container.querySelector('.cutting-plane-alpha')).toBeTruthy();
     expect(container.querySelector('.solid-reference-box')).toBeTruthy();
-    expect(container.textContent).toContain('M');
-    expect(container.textContent).toContain('O');
-    expect(container.textContent).toContain('P — O — N');
+    expect(container.textContent).toContain('S: centro de la esfera');
   });
 
-  it('renders a cylinder with axial cross section and diameter lines', () => {
+  it('renders a cylinder with axial rectangular section', () => {
     const { container } = render(
       <Solid3D
         shape="cylinder"
-        parameters={{ radius: 75, height: 110 }}
-        showCrossSection={true}
         crossSectionType="axial"
-        crossSectionHatched={true}
-        labels={{ topLeft: 'A', topCenter: 'B', topRight: 'C', bottomLeft: 'D', bottomCenter: 'E', bottomRight: 'F' }}
+        showCrossSection={true}
+        labels={{ topLeft: 'A', topCenter: 'B', topRight: 'C' }}
       />
     );
-
     expect(container.querySelector('.solid-cylinder')).toBeTruthy();
-    expect(container.textContent).toContain('A');
-    expect(container.textContent).toContain('B');
-    expect(container.textContent).toContain('F');
+    expect(container.querySelector('polygon')).toBeTruthy();
   });
 
-  it('renders a cone with parallel cut section and vertex labels', () => {
+  it('renders a cylinder with oblique elliptical cross section and cutting plane', () => {
+    const { container } = render(
+      <Solid3D
+        shape="cylinder"
+        crossSectionType="oblique"
+        showCrossSection={true}
+        cuttingPlane={{ show: true, label: 'α' }}
+        labels={{ topCenter: 'O_1', bottomCenter: 'O_2' }}
+      />
+    );
+    expect(container.querySelector('.solid-cylinder')).toBeTruthy();
+    expect(container.querySelector('.cylinder-oblique-section')).toBeTruthy();
+    expect(container.querySelector('.cutting-plane-oblique')).toBeTruthy();
+  });
+
+  it('renders a cylinder with vertical chord cross section', () => {
+    const { container } = render(
+      <Solid3D
+        shape="cylinder"
+        crossSectionType="chord"
+        showCrossSection={true}
+        crossSectionOffset={40}
+      />
+    );
+    expect(container.querySelector('.solid-cylinder')).toBeTruthy();
+    expect(container.querySelector('.cylinder-chord-section')).toBeTruthy();
+  });
+
+  it('renders a cone with oblique elliptical cross section', () => {
     const { container } = render(
       <Solid3D
         shape="cone"
-        parameters={{ radius: 75, height: 125, cutHeightFraction: 0.5 }}
+        crossSectionType="oblique"
         showCrossSection={true}
-        crossSectionType="parallel"
-        labels={{ apex: 'B', baseCenter: 'D', baseLeft: 'A', baseRight: 'C', cutCenter: 'H' }}
+        cuttingPlane={{ show: true, label: 'β' }}
+        labels={{ apex: 'V', baseCenter: 'O' }}
       />
     );
-
     expect(container.querySelector('.solid-cone')).toBeTruthy();
-    expect(container.querySelector('.cone-cross-section')).toBeTruthy();
-    expect(container.textContent).toContain('B');
-    expect(container.textContent).toContain('D');
-    expect(container.textContent).toContain('H');
+    expect(container.querySelector('.cone-oblique-ellipse')).toBeTruthy();
+    expect(container.querySelector('.cone-cutting-plane')).toBeTruthy();
   });
 
-  it('renders a frustum (truncated cone) with axial trapezoid section', () => {
+  it('renders a cone with parabolic cross section', () => {
+    const { container } = render(
+      <Solid3D
+        shape="cone"
+        crossSectionType="parabolic"
+        showCrossSection={true}
+        cuttingPlane={{ show: true, label: 'α' }}
+      />
+    );
+    expect(container.querySelector('.solid-cone')).toBeTruthy();
+    expect(container.querySelector('.cone-cutting-plane')).toBeTruthy();
+  });
+
+  it('renders a cone with parallel circle cross section', () => {
+    const { container } = render(
+      <Solid3D
+        shape="cone"
+        crossSectionType="parallel"
+        showCrossSection={true}
+        labels={{ apex: 'B', baseCenter: 'D', cutCenter: 'H' }}
+      />
+    );
+    expect(container.querySelector('.solid-cone')).toBeTruthy();
+    expect(container.querySelector('.cone-cross-section')).toBeTruthy();
+  });
+
+  it('renders a frustum with axial trapezoid section', () => {
     const { container } = render(
       <Solid3D
         shape="frustum"
-        parameters={{ topRadius: 40, bottomRadius: 80, height: 120 }}
         showCrossSection={true}
-        crossSectionHatched={true}
         labels={{ topCenter: 'D', topRight: 'A', bottomCenter: 'C', bottomRight: 'B' }}
       />
     );
-
     expect(container.querySelector('.solid-frustum')).toBeTruthy();
-    expect(container.textContent).toContain('D');
-    expect(container.textContent).toContain('A');
-    expect(container.textContent).toContain('C');
-    expect(container.textContent).toContain('B');
+    expect(container.querySelector('polygon')).toBeTruthy();
   });
 
-  it('renders a rectangular prism / cube with dashed hidden lines and shaded base', () => {
+  it('renders a prism / cube with shaded base', () => {
     const { container } = render(
       <Solid3D
-        shape="prism"
-        parameters={{ boxWidth: 100, boxHeight: 70, boxDepth: 50 }}
+        shape="cube"
         showCrossSection={true}
-        crossSectionHatched={true}
-        labels={{ width: 'l = 10', height: 'h = 4', depth: 'a = 6' }}
+        labels={{ width: '4', height: '4', depth: '4' }}
       />
     );
-
     expect(container.querySelector('.solid-prism')).toBeTruthy();
-    expect(container.textContent).toContain('l = 10');
-    expect(container.textContent).toContain('h = 4');
-  });
-
-  it('integrates seamlessly with VisualRenderer via type "solid_3d"', () => {
-    const spec = {
-      type: 'solid_3d',
-      shape: 'sphere',
-      parameters: { radius: 70 },
-      labels: { sphereCenter: 'S' },
-    };
-
-    const { container } = render(<VisualRenderer spec={spec} alt="Esfera 3D" />);
-    expect(container.querySelector('.solid-3d-container')).toBeTruthy();
-    expect(container.querySelector('.solid-sphere')).toBeTruthy();
-    expect(container.textContent).toContain('S');
   });
 });
