@@ -88,9 +88,9 @@ class StorageService {
     const color = `hsl(${hue}, 85%, 42%)`;
 
     let description = 'Excelente';
-    if (avg < 60) description = 'Necesita práctica';
-    else if (avg < 75) description = 'En progreso';
-    else if (avg < 90) description = 'Bueno';
+    if (avg < 60) description = 'Necesita prácticar mas';
+    else if (avg < 75) description = 'Progresando';
+    else if (avg < 90) description = 'Excelente';
 
     return {
       scoreAverage: Math.round(avg),

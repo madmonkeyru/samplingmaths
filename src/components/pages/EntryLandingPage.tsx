@@ -22,11 +22,6 @@ export const EntryLandingPage: React.FC<EntryLandingPageProps> = ({
     <div className="min-h-[calc(100vh-65px)] bg-[#fdfbf7] dark:bg-stone-950 text-stone-900 dark:text-stone-100 flex flex-col justify-between">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16 w-full space-y-10">
         {/* Simple Top Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-stone-100 dark:bg-slate-800 border border-stone-300 dark:border-slate-700 text-xs font-bold text-stone-700 dark:text-slate-300">
-          <Sparkles className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
-          <span>Prototipo</span>
-        </div>
-
         {/* Core Value Statement (Simple, direct, no narrative/testimonials) */}
         <div className="space-y-4">
           <h1 className="text-2xl sm:text-4xl font-black text-stone-900 dark:text-stone-100 tracking-tight leading-tight">

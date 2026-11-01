@@ -83,13 +83,10 @@ export const EvaluationModulesWidget: React.FC<EvaluationModulesWidgetProps> = (
             <h3 className="text-xs font-black uppercase tracking-wider text-stone-700 dark:text-slate-300 truncate">
               Módulos de Evaluación ({activeProgram?.name || 'BXM'})
             </h3>
-            <p className="text-[11px] text-stone-500 dark:text-slate-400 font-bold mt-0.5">
-              Simulador oficial y banco modular
-            </p>
           </div>
 
           {/* Segmented Control Buttons */}
-          <div className="flex bg-stone-100 dark:bg-slate-800 p-1 rounded-xl border border-stone-300 dark:border-slate-700 gap-1 text-xs font-bold w-full sm:w-auto">
+          <div className="flex bg-stone-100 dark:bg-slate-800 p-1 rounded-xl gap-1 text-xs font-bold w-full sm:w-auto">
             <button
               type="button"
               onClick={() => setActiveTab('simulation')}
@@ -113,7 +110,7 @@ export const EvaluationModulesWidget: React.FC<EvaluationModulesWidgetProps> = (
               }`}
             >
               <Layers className="w-3 h-3 stroke-[2.5]" />
-              <span>Por Área</span>
+              <span>Área</span>
             </button>
 
             <button
@@ -126,13 +123,13 @@ export const EvaluationModulesWidget: React.FC<EvaluationModulesWidgetProps> = (
               }`}
             >
               <Target className="w-3 h-3 stroke-[2.5]" />
-              <span>Por Tema</span>
+              <span>Tema</span>
             </button>
           </div>
         </div>
 
         {/* Program Constraint Banner */}
-        <div className="flex items-center justify-between bg-stone-100/70 dark:bg-slate-800/40 p-2.5 rounded-xl border border-stone-200 dark:border-slate-700/80 text-[11px] font-bold text-stone-700 dark:text-slate-300 mb-4">
+        <div className="flex items-center justify-between bg-stone-100/70 dark:bg-slate-800/40 p-2.5 rounded-xl text-[11px] font-bold text-stone-700 dark:text-slate-300 mb-4">
           <div className="flex items-center gap-2">
             {isCalcAllowed ? (
               <Calculator className="w-3.5 h-3.5 text-stone-500" />
@@ -160,10 +157,10 @@ export const EvaluationModulesWidget: React.FC<EvaluationModulesWidgetProps> = (
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base font-black text-stone-900 dark:text-slate-100">
-                    Simulación Oficial MEP
+                    Simulación Prueba Completa
                   </h3>
                   <p className="text-xs text-stone-600 dark:text-slate-400 leading-relaxed font-medium mt-0.5">
-                    Prueba de 60 reactivos con cronómetro oficial de 150 minutos.
+                    60 preguntas con cronómetro de 150 minutos.
                   </p>
                 </div>
               </div>

@@ -136,7 +136,7 @@ export const SubjectHubPage: React.FC<SubjectHubPageProps> = ({
         </div>
 
         {/* Section Tabs */}
-        <div className="flex bg-stone-100 dark:bg-slate-800 p-1 rounded-xl border border-stone-300 dark:border-slate-700 gap-1 text-xs font-bold w-full sm:w-auto">
+        <div className="flex bg-stone-100 dark:bg-slate-800 p-1 rounded-xl gap-1 text-xs font-bold w-full sm:w-auto">
           <button
             type="button"
             onClick={() => setActiveSection('practice')}
