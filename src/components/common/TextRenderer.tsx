@@ -137,8 +137,8 @@ export const TextRenderer: React.FC<TextRendererProps> = ({
               key={index}
               className={`math-data-badge ${
                 part.isBlock
-                  ? 'block my-3 text-center p-2 rounded-xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-300 dark:border-zinc-700 shadow-2xs font-extrabold text-zinc-950 dark:text-zinc-50'
-                  : 'inline-flex items-center px-1.5 py-0.5 mx-0.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/70 text-indigo-950 dark:text-indigo-100 font-bold align-baseline transition-colors'
+                  ? 'block my-3 text-center p-2 rounded-xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-300 dark:border-zinc-700 shadow-2xs font-semibold text-zinc-950 dark:text-zinc-50'
+                  : 'inline-flex items-center px-1.5 py-0.5 mx-0.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/60  text-indigo-950 dark:text-indigo-100 font-bold align-baseline transition-colors'
               }`}
               dangerouslySetInnerHTML={{ __html: html }}
             />

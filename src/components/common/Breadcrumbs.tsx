@@ -26,7 +26,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = '' 
                 <ChevronRight className="w-3.5 h-3.5 text-stone-400 dark:text-slate-500 shrink-0" aria-hidden="true" />
               )}
               {isLast ? (
-                <span className="font-extrabold text-stone-900 dark:text-slate-100 flex items-center gap-1" aria-current="page">
+                <span className="font-semibold text-stone-900 dark:text-slate-100 flex items-center gap-1" aria-current="page">
                   {isFirst && <Home className="w-3.5 h-3.5" />}
                   <span>{item.label}</span>
                 </span>

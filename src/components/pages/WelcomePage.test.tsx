@@ -34,11 +34,11 @@ describe('WelcomePage', () => {
     // Programs overview
     expect(screen.getByText('Programas de Educación Abierta')).toBeInTheDocument();
     expect(screen.getAllByText(/Bachillerato por Madurez Suficiente/i).length).toBeGreaterThan(0);
-    expect(screen.getByText(/Educación Diversificada a Distancia/i)).toBeInTheDocument();
+    expect(screen.getByText(/Bachillerato a distancia/i)).toBeInTheDocument();
 
     // Informational regulations banner
     expect(
-      screen.getByText('Reglamento y Directrices de Evaluación Oficial MEP')
+      screen.getByText('Estructura y reglas de referencia curricular')
     ).toBeInTheDocument();
     expect(screen.getByText('Notas de Aprobación')).toBeInTheDocument();
     expect(screen.getByText('Directriz de Calculadoras')).toBeInTheDocument();
@@ -55,7 +55,7 @@ describe('WelcomePage', () => {
       />
     );
 
-    const edadCard = screen.getByText(/Educación Diversificada a Distancia/i).closest('div[role="button"]');
+    const edadCard = screen.getByText(/Bachillerato a distancia/i).closest('div[role="button"]');
     expect(edadCard).toBeInTheDocument();
 
     if (edadCard) {

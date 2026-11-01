@@ -16,10 +16,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       onClick={toggleTheme}
       title={`Cambiar a modo ${isDark ? 'claro' : 'oscuro'}`}
       aria-label={`Cambiar a modo ${isDark ? 'claro' : 'oscuro'}`}
-      className={`relative p-2.5 rounded-xl border-2 transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer shadow-xs active:scale-95 ${
+      className={`relative p-2.5 rounded-xl border transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer shadow-xs active:scale-95 ${
         isDark
           ? 'bg-slate-800 text-amber-300 border-slate-700 hover:bg-slate-700 hover:border-amber-400 hover:text-amber-200'
-          : 'bg-stone-100 text-stone-900 border-stone-800 hover:bg-amber-100/70 hover:border-indigo-600 hover:text-indigo-700'
+          : 'bg-stone-100 text-stone-900 border-stone-200 hover:bg-amber-100/70 hover:border-indigo-600 hover:text-indigo-700'
       } ${className}`}
     >
       {isDark ? (

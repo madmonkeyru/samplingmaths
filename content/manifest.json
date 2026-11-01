@@ -14,7 +14,7 @@
     {
       "id": "cico",
       "name": "I y II Ciclo CICO",
-      "description": "Educación General Básica I y II Ciclo (Examen único sin calculadora)",
+      "description": "Educación primaria por suficiencia: cinco pruebas para completar I y II Ciclo.",
       "calculatorAllowed": false,
       "passingScore": 65,
       "subjects": [
@@ -27,13 +27,37 @@
             "programs/i_ii_ciclo/matematica/convocatorias/2026-c1.json"
           ],
           "sets": []
+        },
+        {
+          "id": "espanol",
+          "name": "Español",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "ciencias",
+          "name": "Ciencias",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "estudios-sociales",
+          "name": "Estudios Sociales",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "formacion-ciudadana",
+          "name": "Formación Ciudadana",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
         }
       ]
     },
     {
       "id": "iii_ciclo",
       "name": "III Ciclo",
-      "description": "Educación General Básica III Ciclo (7°, 8°, 9°)",
+      "description": "Educación General Básica: seis asignaturas en 7°, 8° y 9° año.",
       "calculatorAllowed": true,
       "passingScore": 65,
       "subprograms": [
@@ -63,13 +87,49 @@
             "programs/iii_ciclo/matematica/7mo/convocatorias/2026-c1.json"
           ],
           "sets": []
+        },
+        {
+          "id": "espanol",
+          "name": "Español",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "ciencias",
+          "name": "Ciencias",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "estudios-sociales",
+          "name": "Estudios Sociales",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "formacion-ciudadana",
+          "name": "Formación Ciudadana",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "ingles",
+          "name": "Inglés",
+          "description": "Opción de Idioma Extranjero. Vista previa del contenido.",
+          "sets": []
+        },
+        {
+          "id": "frances",
+          "name": "Francés",
+          "description": "Opción de Idioma Extranjero. Vista previa del contenido.",
+          "sets": []
         }
       ]
     },
     {
       "id": "edad",
       "name": "EDAD",
-      "description": "Educación Diversificada a Distancia (2 módulos: 10° y 11°)",
+      "description": "Bachillerato a distancia: Parte 1 (10° año) y Parte 2 (11° año) por asignatura.",
       "calculatorAllowed": true,
       "passingScore": 70,
       "subprograms": [
@@ -95,13 +155,61 @@
             "programs/edad/matematica/parte-2-11mo/convocatorias/2026-c1.json"
           ],
           "sets": []
+        },
+        {
+          "id": "espanol",
+          "name": "Español",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "biologia",
+          "name": "Biología",
+          "description": "Opción de Ciencias. Vista previa del contenido.",
+          "sets": []
+        },
+        {
+          "id": "fisica",
+          "name": "Física",
+          "description": "Opción de Ciencias. Vista previa del contenido.",
+          "sets": []
+        },
+        {
+          "id": "quimica",
+          "name": "Química",
+          "description": "Opción de Ciencias. Vista previa del contenido.",
+          "sets": []
+        },
+        {
+          "id": "estudios-sociales",
+          "name": "Estudios Sociales",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "educacion-civica",
+          "name": "Educación Cívica",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "ingles",
+          "name": "Inglés",
+          "description": "Opción de Idioma Extranjero. Vista previa del contenido.",
+          "sets": []
+        },
+        {
+          "id": "frances",
+          "name": "Francés",
+          "description": "Opción de Idioma Extranjero. Vista previa del contenido.",
+          "sets": []
         }
       ]
     },
     {
       "id": "bxm",
       "name": "Bachillerato por Madurez Suficiente (BXM)",
-      "description": "Programa de Bachillerato por Madurez Suficiente MEP",
+      "description": "Bachillerato por Madurez Suficiente: una prueba por asignatura.",
       "calculatorAllowed": true,
       "passingScore": 70,
       "subjects": [
@@ -154,6 +262,54 @@
               "total_items": 30
             }
           ]
+        },
+        {
+          "id": "espanol",
+          "name": "Español",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "biologia",
+          "name": "Biología",
+          "description": "Opción de Ciencias. Vista previa del contenido.",
+          "sets": []
+        },
+        {
+          "id": "fisica",
+          "name": "Física",
+          "description": "Opción de Ciencias. Vista previa del contenido.",
+          "sets": []
+        },
+        {
+          "id": "quimica",
+          "name": "Química",
+          "description": "Opción de Ciencias. Vista previa del contenido.",
+          "sets": []
+        },
+        {
+          "id": "estudios-sociales",
+          "name": "Estudios Sociales",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "educacion-civica",
+          "name": "Educación Cívica",
+          "description": "Vista previa del temario, prácticas y progreso.",
+          "sets": []
+        },
+        {
+          "id": "ingles",
+          "name": "Inglés",
+          "description": "Opción de Idioma Extranjero. Vista previa del contenido.",
+          "sets": []
+        },
+        {
+          "id": "frances",
+          "name": "Francés",
+          "description": "Opción de Idioma Extranjero. Vista previa del contenido.",
+          "sets": []
         }
       ]
     }

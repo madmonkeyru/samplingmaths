@@ -25,11 +25,11 @@ describe('SubjectHubPage', () => {
     );
 
     // Breadcrumbs
-    expect(screen.getByText('Inicio')).toBeInTheDocument();
+    expect(screen.getByText('Programas')).toBeInTheDocument();
     expect(screen.getByText('Matemáticas')).toBeInTheDocument();
 
     // Click Home breadcrumb
-    fireEvent.click(screen.getByText('Inicio'));
+    fireEvent.click(screen.getByText('Bachillerato por Madurez Suficiente (BXM)'));
     expect(onNavigateHome).toHaveBeenCalledTimes(1);
 
     // Quick stats banner
@@ -45,7 +45,7 @@ describe('SubjectHubPage', () => {
   });
 
   it.each(['cico', 'iii_ciclo', 'edad'])(
-    'renders only the hub skeleton when %s is active',
+    'renders usable subject structure when %s is active',
     async (programId) => {
       await dataService.setProgram(programId);
 
@@ -57,13 +57,12 @@ describe('SubjectHubPage', () => {
         />
       );
 
-      const skeleton = document.querySelector<HTMLElement>(
-        '[aria-label="Hub curricular en preparación"]'
-      );
-      expect(skeleton).not.toBeNull();
-      expect(skeleton?.querySelector('.animate-pulse')).not.toBeNull();
-      expect(skeleton?.querySelector('button')).toBeNull();
-      expect(skeleton?.textContent?.trim()).toBe('');
+      expect(screen.getByRole('heading', { name: /Matemáticas/ })).toBeInTheDocument();
+      expect(screen.getByRole('tab', { name: 'Recursos' })).toBeInTheDocument();
+      fireEvent.click(screen.getByRole('tab', { name: 'Recursos' }));
+      expect(screen.getByText('Recursos en preparación')).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: 'Ver asignaturas del programa' })).toBeInTheDocument();
+      expect(document.querySelector('.animate-pulse')).toBeNull();
     }
   );
 });

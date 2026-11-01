@@ -20,12 +20,12 @@ export const QuickStatsBanner: React.FC<QuickStatsBannerProps> = ({
 
   return (
     <div
-      className={`bg-white dark:bg-slate-900 border-2 border-stone-800 dark:border-slate-800 rounded-2xl p-4 sm:p-5 shadow-xs ${className}`}
+      className={`ui-surface rounded-2xl p-4 sm:p-5 shadow-xs ${className}`}
     >
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         {/* Left summary */}
         <div className="flex items-center gap-3.5">
-          <div className="w-11 h-11 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-black text-sm shrink-0 shadow-2xs">
+          <div className="w-11 h-11 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-semibold text-sm shrink-0 shadow-2xs">
             {attempts.length > 0 ? `${perfLevel.scoreAverage}%` : '--'}
           </div>
           <div>
@@ -35,7 +35,7 @@ export const QuickStatsBanner: React.FC<QuickStatsBannerProps> = ({
                 {programName}
               </span>
             </div>
-            <h4 className="text-xs sm:text-sm font-black text-stone-900 dark:text-slate-100">
+            <h4 className="text-xs sm:text-sm font-semibold text-stone-900 dark:text-slate-100">
               {attempts.length === 0
                 ? 'Listo para iniciar tu primera práctica'
                 : perfLevel.description}
@@ -50,7 +50,7 @@ export const QuickStatsBanner: React.FC<QuickStatsBannerProps> = ({
             <span className="text-[10px] font-bold text-stone-500 dark:text-slate-400 uppercase flex items-center gap-1">
               <Flame className="w-3 h-3 text-amber-500" /> Intentos
             </span>
-            <span className="text-sm font-black text-stone-900 dark:text-slate-100 mt-0.5">
+            <span className="text-sm font-semibold text-stone-900 dark:text-slate-100 mt-0.5">
               {attempts.length}
             </span>
           </div>
@@ -60,7 +60,7 @@ export const QuickStatsBanner: React.FC<QuickStatsBannerProps> = ({
             <span className="text-[10px] font-bold text-stone-500 dark:text-slate-400 uppercase flex items-center gap-1">
               <CheckCircle2 className="w-3 h-3 text-emerald-500" /> Simulacros
             </span>
-            <span className="text-sm font-black text-stone-900 dark:text-slate-100 mt-0.5">
+            <span className="text-sm font-semibold text-stone-900 dark:text-slate-100 mt-0.5">
               {simulationAttempts.length}
             </span>
           </div>
@@ -70,7 +70,7 @@ export const QuickStatsBanner: React.FC<QuickStatsBannerProps> = ({
             <span className="text-[10px] font-bold text-stone-500 dark:text-slate-400 uppercase flex items-center gap-1">
               <Award className="w-3 h-3 text-indigo-500" /> Último
             </span>
-            <span className="text-sm font-black text-stone-900 dark:text-slate-100 mt-0.5">
+            <span className="text-sm font-semibold text-stone-900 dark:text-slate-100 mt-0.5">
               {latestAttempt ? `${latestAttempt.scorePercentage}%` : 'N/A'}
             </span>
           </div>

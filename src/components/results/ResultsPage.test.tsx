@@ -87,7 +87,7 @@ describe('ResultsPage', () => {
       />
     );
 
-    expect(screen.getByText('Tendencia de Desempeño')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Desempeño' })).toBeInTheDocument();
     expect(screen.getByText('#1')).toBeInTheDocument();
     expect(screen.getByText('#2')).toBeInTheDocument();
     expect(screen.getByText('75%')).toBeInTheDocument();
@@ -127,7 +127,7 @@ describe('ResultsPage', () => {
     );
 
     // Global view shows Question Navigator
-    expect(screen.getByText('Navegador de Preguntas')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Preguntas' })).toBeInTheDocument();
     const btnQ1 = screen.getByRole('button', { name: /^1$/ });
     expect(btnQ1).toBeInTheDocument();
 
@@ -147,6 +147,6 @@ describe('ResultsPage', () => {
     const backBtn = screen.getByRole('button', { name: /Volver a la vista general/i });
     fireEvent.click(backBtn);
 
-    expect(screen.getByText('Navegador de Preguntas')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Preguntas' })).toBeInTheDocument();
   });
 });

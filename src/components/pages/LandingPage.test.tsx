@@ -20,8 +20,8 @@ describe('LandingPage', () => {
 
     // Segmented tab buttons
     expect(screen.getByRole('button', { name: /^Simulación$/i })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /^Por Área$/i })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /^Por Tema$/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /^Área$/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /^Tema$/i })).toBeInTheDocument();
 
     // Stacked Widget elements
     expect(screen.getByText('Rendimiento')).toBeInTheDocument();
@@ -35,7 +35,7 @@ describe('LandingPage', () => {
     expect(onStartSimulation).toHaveBeenCalledTimes(1);
 
     // Switch tab to Por Área
-    const areaTab = screen.getByRole('button', { name: /^Por Área$/i });
+    const areaTab = screen.getByRole('button', { name: /^Área$/i });
     fireEvent.click(areaTab);
 
     // Integrated evaluation modules widget offers direct configuration and start

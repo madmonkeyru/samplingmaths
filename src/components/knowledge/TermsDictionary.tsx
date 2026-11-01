@@ -13,12 +13,12 @@ export const TermsDictionary: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Search Header */}
-      <div className="bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xs space-y-4">
+      <div className="ui-surface rounded-2xl p-5 sm:p-6 shadow-xs space-y-4">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-indigo-600 dark:text-indigo-400 stroke-[2.5]" />
-              <h2 className="text-lg font-black text-stone-900 dark:text-slate-100 uppercase tracking-wide">
+              <h2 className="text-lg font-semibold text-stone-900 dark:text-slate-100 ">
                 Diccionario de Términos y Conceptos Matemáticos
               </h2>
             </div>
@@ -38,7 +38,7 @@ export const TermsDictionary: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Buscar concepto (ej: Circunferencia, Discriminante, Cuartiles)..."
-              className="w-full pl-10 pr-4 py-2.5 bg-stone-50 dark:bg-slate-800 border border-stone-300 dark:border-slate-700 rounded-xl text-xs sm:text-sm font-bold text-stone-900 dark:text-slate-100 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition min-h-[44px]"
+              className="w-full pl-10 pr-4 py-2.5 bg-stone-50 dark:bg-slate-800  rounded-xl text-xs sm:text-sm font-bold text-stone-900 dark:text-slate-100 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition min-h-[44px]"
             />
           </div>
 
@@ -47,7 +47,7 @@ export const TermsDictionary: React.FC = () => {
             <select
               value={activeDomain}
               onChange={(e) => setActiveDomain(e.target.value as DomainArea | 'all')}
-              className="w-full px-3.5 py-2.5 bg-stone-50 dark:bg-slate-800 border border-stone-300 dark:border-slate-700 rounded-xl text-xs sm:text-sm font-bold text-stone-900 dark:text-slate-100 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition min-h-[44px] cursor-pointer"
+              className="w-full px-3.5 py-2.5 bg-stone-50 dark:bg-slate-800  rounded-xl text-xs sm:text-sm font-bold text-stone-900 dark:text-slate-100 focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition min-h-[44px] cursor-pointer"
             >
               <option value="all">Todas las Áreas</option>
               <option value="geometry">1. Geometría</option>
@@ -60,9 +60,9 @@ export const TermsDictionary: React.FC = () => {
 
       {/* Dictionary Entries List */}
       {terms.length === 0 ? (
-        <div className="bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-800 rounded-2xl p-8 text-center space-y-2">
+        <div className="ui-surface rounded-2xl p-8 text-center space-y-2">
           <BookOpen className="w-8 h-8 text-stone-400 dark:text-slate-500 mx-auto stroke-[2]" />
-          <h3 className="font-black text-base text-stone-900 dark:text-slate-100 uppercase">
+          <h3 className="font-semibold text-base text-stone-900 dark:text-slate-100 ">
             No se encontraron términos
           </h3>
           <p className="text-xs text-stone-600 dark:text-slate-400 font-bold">
@@ -74,14 +74,14 @@ export const TermsDictionary: React.FC = () => {
           {terms.map((item) => (
             <div
               key={item.id}
-              className="bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xs transition hover:border-stone-300 dark:hover:border-slate-700"
+              className="ui-surface rounded-2xl p-5 sm:p-6 space-y-4 shadow-xs transition hover:border-stone-300 dark:hover:border-slate-700"
             >
               {/* Card Header */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-stone-200 dark:border-slate-800 pb-3">
-                <h3 className="text-base sm:text-lg font-black text-stone-900 dark:text-slate-100 tracking-wide uppercase">
+                <h3 className="text-base sm:text-lg font-semibold text-stone-900 dark:text-slate-100 ">
                   {item.term}
                 </h3>
-                <span className="px-3 py-1 bg-stone-100 dark:bg-slate-800 text-stone-800 dark:text-slate-200 border border-stone-200 dark:border-slate-700 rounded-xl text-xs font-black self-start sm:self-auto">
+                <span className="px-3 py-1 bg-stone-100 dark:bg-slate-800 text-stone-800 dark:text-slate-200  rounded-xl text-xs font-semibold self-start sm:self-auto">
                   {item.blockName}
                 </span>
               </div>
@@ -94,14 +94,14 @@ export const TermsDictionary: React.FC = () => {
               {/* Key Formulas */}
               {item.keyFormulas && item.keyFormulas.length > 0 && (
                 <div className="bg-stone-50/80 dark:bg-slate-800/50 p-3.5 rounded-xl border border-stone-200/80 dark:border-slate-700/80 space-y-2">
-                  <span className="text-[11px] font-black uppercase text-stone-600 dark:text-slate-400 flex items-center gap-1.5">
+                  <span className="text-[11px] font-semibold uppercase text-stone-600 dark:text-slate-400 flex items-center gap-1.5">
                     <Code className="w-3.5 h-3.5 stroke-[2.5]" /> Fórmulas / Expresiones clave:
                   </span>
                   <div className="flex flex-wrap gap-2 pt-0.5">
                     {item.keyFormulas.map((f, fIdx) => (
                       <div
                         key={fIdx}
-                        className="bg-white dark:bg-slate-900 px-3 py-1.5 rounded-lg border border-stone-200 dark:border-slate-700 text-xs font-bold text-stone-900 dark:text-slate-100"
+                        className="bg-white dark:bg-slate-900 px-3 py-1.5 rounded-lg  text-xs font-bold text-stone-900 dark:text-slate-100"
                       >
                         <TextRenderer inline content={`$${f}$`} />
                       </div>
@@ -113,7 +113,7 @@ export const TermsDictionary: React.FC = () => {
               {/* Examples */}
               {item.examples && item.examples.length > 0 && (
                 <div className="space-y-1.5 pt-1">
-                  <span className="text-[11px] font-black uppercase text-stone-500 dark:text-slate-400 flex items-center gap-1.5">
+                  <span className="text-[11px] font-semibold uppercase text-stone-500 dark:text-slate-400 flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" /> Ejemplos de aplicación:
                   </span>
                   {item.examples.map((ex, exIdx) => (

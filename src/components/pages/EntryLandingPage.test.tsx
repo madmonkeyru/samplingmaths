@@ -14,7 +14,7 @@ describe('EntryLandingPage', () => {
       />
     );
 
-    expect(screen.getByText(/Plataforma MEP-EA-01/i)).toBeInTheDocument();
+    expect(screen.getByText(/Preparación y Práctica para los Exámenes/i)).toBeInTheDocument();
     expect(screen.getByText('Matemáticas BXM')).toBeInTheDocument();
     expect(screen.getByText('Explorar Programas MEP')).toBeInTheDocument();
 

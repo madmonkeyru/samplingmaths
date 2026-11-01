@@ -34,7 +34,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onUserCha
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/70 backdrop-blur-xs p-3.5 sm:p-4 overflow-y-auto">
-      <div className="bg-white rounded-2xl border-2 border-zinc-900 shadow-2xl max-w-md w-full p-5 sm:p-6 relative my-auto">
+      <div className="bg-white rounded-2xl border border-zinc-200 shadow-2xl max-w-md w-full p-5 sm:p-6 relative my-auto">
         <button
           onClick={onClose}
           aria-label="Cerrar modal"
@@ -43,11 +43,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onUserCha
           <X className="w-5 h-5 stroke-[2.5]" />
         </button>
 
-        <div className="flex items-center gap-3 mb-5 border-b-2 border-zinc-900 pb-3">
-          <div className="p-2.5 bg-zinc-950 text-white rounded-xl border-2 border-zinc-900">
+        <div className="flex items-center gap-3 mb-5 border-b border-zinc-200 pb-3">
+          <div className="p-2.5 bg-zinc-950 text-white rounded-xl border border-zinc-200">
             {isRegister ? <UserCheck className="w-5 h-5 stroke-[2.5]" /> : <LogIn className="w-5 h-5 stroke-[2.5]" />}
           </div>
-          <h2 className="text-lg sm:text-xl font-black text-zinc-900 uppercase">
+          <h2 className="text-lg sm:text-xl font-semibold text-zinc-900 ">
             {isRegister ? 'Crear cuenta' : 'Iniciar sesión'}
           </h2>
         </div>
@@ -55,45 +55,45 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onUserCha
         <form onSubmit={handleSubmit} className="space-y-4">
           {isRegister && (
             <div>
-              <label className="block text-xs font-black text-zinc-900 mb-1.5 uppercase">Nombre</label>
+              <label className="block text-xs font-semibold text-zinc-900 mb-1.5 uppercase">Nombre</label>
               <input
                 type="text"
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Juan Pérez"
-                className="w-full px-3.5 py-2.5 border-2 border-zinc-900 rounded-xl text-xs font-bold bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
+                className="w-full px-3.5 py-2.5 border border-zinc-200 rounded-xl text-xs font-bold bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
               />
             </div>
           )}
 
           <div>
-            <label className="block text-xs font-black text-zinc-900 mb-1.5 uppercase">Correo electrónico</label>
+            <label className="block text-xs font-semibold text-zinc-900 mb-1.5 uppercase">Correo electrónico</label>
             <input
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="estudiante@mep.cr"
-              className="w-full px-3.5 py-2.5 border-2 border-zinc-900 rounded-xl text-xs font-bold bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
+              className="w-full px-3.5 py-2.5 border border-zinc-200 rounded-xl text-xs font-bold bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-black text-zinc-900 mb-1.5 uppercase">Contraseña</label>
+            <label className="block text-xs font-semibold text-zinc-900 mb-1.5 uppercase">Contraseña</label>
             <input
               type="password"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full px-3.5 py-2.5 border-2 border-zinc-900 rounded-xl text-xs font-bold bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
+              className="w-full px-3.5 py-2.5 border border-zinc-200 rounded-xl text-xs font-bold bg-white text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 min-h-[44px]"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full py-3 bg-zinc-950 hover:bg-zinc-800 text-white font-extrabold rounded-xl text-xs border-2 border-zinc-950 shadow-xs transition min-h-[44px] flex items-center justify-center mt-2"
+            className="w-full py-3 bg-zinc-950 hover:bg-zinc-800 text-white font-semibold rounded-xl text-xs border border-zinc-200 shadow-xs transition min-h-[44px] flex items-center justify-center mt-2"
           >
             {isRegister ? 'Registrarse' : 'Ingresar'}
           </button>
@@ -104,7 +104,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onUserCha
           <button
             type="button"
             onClick={() => setIsRegister(!isRegister)}
-            className="text-zinc-950 font-black underline hover:text-zinc-700 transition py-1"
+            className="text-zinc-950 font-semibold underline hover:text-zinc-700 transition py-1"
           >
             {isRegister ? 'Inicia sesión' : 'Regístrate aquí'}
           </button>

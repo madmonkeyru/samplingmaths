@@ -103,12 +103,12 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
   return (
     <div className="space-y-6">
       {/* Overview Banner */}
-      <div className="bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-800 rounded-2xl p-5 sm:p-6 shadow-xs space-y-4">
+      <div className="ui-surface rounded-2xl p-5 sm:p-6 shadow-xs space-y-4">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <FileText className="w-5 h-5 text-indigo-600 dark:text-indigo-400 stroke-[2.5]" />
-              <h2 className="text-lg font-black text-stone-900 dark:text-slate-100 uppercase tracking-wide">
+              <h2 className="text-lg font-semibold text-stone-900 dark:text-slate-100 ">
                 Tabla de Especificaciones BXM (Convocatoria 02-2026)
               </h2>
             </div>
@@ -117,10 +117,10 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
             </p>
           </div>
 
-          <div className="flex items-center gap-3 shrink-0 bg-stone-100 dark:bg-slate-800/80 px-4 py-3 rounded-xl border border-stone-200 dark:border-slate-700">
+          <div className="flex items-center gap-3 shrink-0 bg-stone-100 dark:bg-slate-800/80 px-4 py-3 rounded-xl ">
             <div>
-              <span className="text-[10px] font-black uppercase text-stone-500 dark:text-slate-400 block">Total de Ítems / Puntos</span>
-              <span className="text-base font-black text-stone-900 dark:text-slate-100">{totalExamItems} Puntos</span>
+              <span className="text-[10px] font-semibold uppercase text-stone-500 dark:text-slate-400 block">Total de Ítems / Puntos</span>
+              <span className="text-base font-semibold text-stone-900 dark:text-slate-100">{totalExamItems} Puntos</span>
             </div>
           </div>
         </div>
@@ -128,12 +128,12 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
         {/* Global Controls & Domain Filter Pills */}
         <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-stone-200 dark:border-slate-800">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs font-black uppercase text-stone-500 dark:text-slate-400 mr-1 flex items-center gap-1">
+            <span className="text-xs font-semibold uppercase text-stone-500 dark:text-slate-400 mr-1 flex items-center gap-1">
               <Filter className="w-3.5 h-3.5 stroke-[2.5]" /> Filtros:
             </span>
             <button
               onClick={() => setActiveTab('all')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-extrabold border transition min-h-[36px] cursor-pointer ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-semibold border transition min-h-[36px] cursor-pointer ${
                 activeTab === 'all'
                   ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs'
                   : 'bg-stone-100 dark:bg-slate-800 text-stone-800 dark:text-slate-200 border-stone-300 dark:border-slate-700 hover:bg-stone-200 dark:hover:bg-slate-700'
@@ -143,7 +143,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
             </button>
             <button
               onClick={() => setActiveTab('geometry')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-extrabold border transition min-h-[36px] cursor-pointer ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-semibold border transition min-h-[36px] cursor-pointer ${
                 activeTab === 'geometry'
                   ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs'
                   : 'bg-stone-100 dark:bg-slate-800 text-stone-800 dark:text-slate-200 border-stone-300 dark:border-slate-700 hover:bg-stone-200 dark:hover:bg-slate-700'
@@ -153,7 +153,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
             </button>
             <button
               onClick={() => setActiveTab('functions')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-extrabold border transition min-h-[36px] cursor-pointer ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-semibold border transition min-h-[36px] cursor-pointer ${
                 activeTab === 'functions'
                   ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs'
                   : 'bg-stone-100 dark:bg-slate-800 text-stone-800 dark:text-slate-200 border-stone-300 dark:border-slate-700 hover:bg-stone-200 dark:hover:bg-slate-700'
@@ -163,7 +163,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
             </button>
             <button
               onClick={() => setActiveTab('statistics')}
-              className={`px-3 py-1.5 rounded-xl text-xs font-extrabold border transition min-h-[36px] cursor-pointer ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-semibold border transition min-h-[36px] cursor-pointer ${
                 activeTab === 'statistics'
                   ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs'
                   : 'bg-stone-100 dark:bg-slate-800 text-stone-800 dark:text-slate-200 border-stone-300 dark:border-slate-700 hover:bg-stone-200 dark:hover:bg-slate-700'
@@ -176,7 +176,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
           {/* Global Accordion Toggle */}
           <button
             onClick={handleGlobalToggle}
-            className="px-3.5 py-1.5 bg-stone-100 dark:bg-slate-800 hover:bg-stone-200 dark:hover:bg-slate-700 text-stone-900 dark:text-slate-100 font-black rounded-xl text-xs border border-stone-300 dark:border-slate-700 flex items-center gap-1.5 transition min-h-[36px] cursor-pointer ml-auto"
+            className="px-3.5 py-1.5 bg-stone-100 dark:bg-slate-800 hover:bg-stone-200 dark:hover:bg-slate-700 text-stone-900 dark:text-slate-100 font-semibold rounded-xl text-xs  flex items-center gap-1.5 transition min-h-[36px] cursor-pointer ml-auto"
             title={isAllExpanded ? 'Colapsar todas las secciones' : 'Expandir todas las secciones'}
           >
             {isAllExpanded ? (
@@ -199,19 +199,19 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
         <div className="flex items-center gap-1.5 min-w-0">
           <button
             onClick={() => scrollToBlock('geometry')}
-            className="px-3 py-1 bg-white dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 text-stone-800 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-extrabold rounded-lg text-xs border border-stone-200 dark:border-slate-700 transition shrink-0 cursor-pointer"
+            className="px-3 py-1 bg-white dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 text-stone-800 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold rounded-lg text-xs  transition shrink-0 cursor-pointer"
           >
             Geometría (23 pts)
           </button>
           <button
             onClick={() => scrollToBlock('functions')}
-            className="px-3 py-1 bg-white dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 text-stone-800 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-extrabold rounded-lg text-xs border border-stone-200 dark:border-slate-700 transition shrink-0 cursor-pointer"
+            className="px-3 py-1 bg-white dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 text-stone-800 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold rounded-lg text-xs  transition shrink-0 cursor-pointer"
           >
             Relaciones y Álgebra (25 pts)
           </button>
           <button
             onClick={() => scrollToBlock('statistics')}
-            className="px-3 py-1 bg-white dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 text-stone-800 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-extrabold rounded-lg text-xs border border-stone-200 dark:border-slate-700 transition shrink-0 cursor-pointer"
+            className="px-3 py-1 bg-white dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 text-stone-800 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold rounded-lg text-xs  transition shrink-0 cursor-pointer"
           >
             Estadística y Probabilidad (12 pts)
           </button>
@@ -227,12 +227,12 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
             <div
               key={block.id}
               id={`block-${block.id}`}
-              className="bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-xs scroll-mt-28"
+              className="ui-surface rounded-2xl overflow-hidden shadow-xs scroll-mt-28"
             >
               {/* Level 1: Block Header Accordion Button */}
               <button
                 onClick={() => toggleBlock(block.id)}
-                className="w-full bg-stone-900 dark:bg-slate-800 text-white px-5 py-4 flex items-center justify-between gap-3 border-b border-stone-800 dark:border-slate-700 transition hover:bg-stone-850 dark:hover:bg-slate-750 text-left cursor-pointer"
+                className="w-full bg-stone-900 dark:bg-slate-800 text-white px-5 py-4 flex items-center justify-between gap-3 border-b border-stone-200 dark:border-slate-700 transition hover:bg-stone-850 dark:hover:bg-slate-750 text-left cursor-pointer"
               >
                 <div className="flex items-center gap-3 min-w-0">
                   <div className="p-1 rounded-lg bg-stone-800 dark:bg-slate-700 text-indigo-400">
@@ -244,17 +244,17 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
                   </div>
                   <Layers className="w-5 h-5 stroke-[2.5] shrink-0 text-indigo-400" />
                   <div>
-                    <span className="text-[10px] font-black tracking-widest text-indigo-400 uppercase block">
+                    <span className="text-[10px] font-semibold tracking-widest text-indigo-400 uppercase block">
                       ÁREA OFICIAL #{block.id === 'geometry' ? '1' : block.id === 'functions' ? '2' : '3'}
                     </span>
-                    <h3 className="text-base sm:text-lg font-black tracking-wide uppercase truncate">
+                    <h3 className="text-base sm:text-lg font-semibold truncate">
                       {block.block}
                     </h3>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 shrink-0">
-                  <span className="px-3 py-1 bg-stone-800 dark:bg-slate-900 text-stone-100 dark:text-slate-100 rounded-xl text-xs font-black border border-stone-700 dark:border-slate-700">
+                  <span className="px-3 py-1 bg-stone-800 dark:bg-slate-900 text-stone-100 dark:text-slate-100 rounded-xl text-xs font-semibold border border-stone-700 dark:border-slate-700">
                     {block.totalPoints} Puntos ({block.affirmations.length} Afirmaciones)
                   </span>
                 </div>
@@ -294,21 +294,21 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
 
                               <div className="space-y-1 min-w-0">
                                 <div className="flex items-center gap-2">
-                                  <span className="text-[10px] font-black uppercase bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-md border border-indigo-200 dark:border-indigo-800 tracking-wider">
+                                  <span className="text-[10px] font-semibold uppercase bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-md  tracking-wider">
                                     Afirmación {aff.affirmation}
                                   </span>
                                   <span className="text-xs font-bold text-stone-500 dark:text-slate-400">
                                     • {aff.evidences.length} Criterios
                                   </span>
                                 </div>
-                                <div className="text-sm font-black text-stone-900 dark:text-slate-100 leading-snug">
+                                <div className="text-sm font-semibold text-stone-900 dark:text-slate-100 leading-snug">
                                   <TextRenderer content={aff.affirmation_desc} />
                                 </div>
                               </div>
                             </div>
 
                             <div className="flex items-center gap-2 shrink-0 pt-1 sm:pt-0">
-                              <span className="text-xs font-extrabold bg-white dark:bg-slate-900 px-2.5 py-1 rounded-lg border border-stone-200 dark:border-slate-700 text-stone-800 dark:text-slate-200">
+                              <span className="text-xs font-semibold bg-white dark:bg-slate-900 px-2.5 py-1 rounded-lg  text-stone-800 dark:text-slate-200">
                                 {affTotalItems} pts
                               </span>
 
@@ -322,7 +322,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
                                       `Práctica - Afirmación ${aff.affirmation}`
                                     );
                                   }}
-                                  className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white font-black rounded-lg text-xs flex items-center gap-1.5 transition shadow-xs min-h-[34px] cursor-pointer"
+                                  className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg text-xs flex items-center gap-1.5 transition shadow-xs min-h-[34px] cursor-pointer"
                                   title="Practicar todos los ítems de esta afirmación"
                                 >
                                   <PlayCircle className="w-4 h-4 stroke-[2.5]" />
@@ -336,7 +336,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
                         {/* Level 3: Evidences List (Stepped Indented View) */}
                         {isAffExpanded && (
                           <div className="pl-2 sm:pl-4 space-y-2 border-l-2 border-stone-200 dark:border-slate-700/80 ml-2 sm:ml-3">
-                            <span className="text-[11px] font-black uppercase text-stone-500 dark:text-slate-400 block tracking-wider pl-1">
+                            <span className="text-[11px] font-semibold uppercase text-stone-500 dark:text-slate-400 block tracking-wider pl-1">
                               Evidencias y Criterios Evaluados:
                             </span>
 
@@ -351,7 +351,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
                                   >
                                     <div className="p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                                       <div className="flex items-start gap-2.5 min-w-0 flex-1">
-                                        <span className="px-2.5 py-1 bg-stone-100 dark:bg-slate-800 border border-stone-200 dark:border-slate-700 rounded-lg text-xs font-black text-stone-900 dark:text-slate-100 shrink-0">
+                                        <span className="px-2.5 py-1 bg-stone-100 dark:bg-slate-800  rounded-lg text-xs font-semibold text-stone-900 dark:text-slate-100 shrink-0">
                                           Evidencia {ev.evidence}
                                         </span>
                                         <div className="text-xs sm:text-sm font-bold text-stone-800 dark:text-slate-200 pt-0.5 leading-relaxed">
@@ -360,7 +360,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
                                       </div>
 
                                       <div className="flex items-center justify-between sm:justify-end gap-2.5 shrink-0 pt-2 sm:pt-0 border-t sm:border-t-0 border-stone-200 dark:border-slate-800">
-                                        <span className="text-xs font-black text-stone-600 dark:text-slate-400">
+                                        <span className="text-xs font-semibold text-stone-600 dark:text-slate-400">
                                           {ev.points} ítem{ev.points === 1 ? '' : 's'}
                                         </span>
 
@@ -373,7 +373,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
                                                 `Práctica - Evidencia ${ev.evidence}`
                                               )
                                             }
-                                            className="px-2.5 py-1.5 bg-stone-100 hover:bg-stone-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-stone-900 dark:text-slate-100 font-extrabold rounded-lg text-xs flex items-center gap-1 border border-stone-300 dark:border-slate-700 transition min-h-[32px] cursor-pointer"
+                                            className="px-2.5 py-1.5 bg-stone-100 hover:bg-stone-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-stone-900 dark:text-slate-100 font-semibold rounded-lg text-xs flex items-center gap-1  transition min-h-[32px] cursor-pointer"
                                             title="Practicar preguntas de este criterio"
                                           >
                                             <PlayCircle className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -409,7 +409,7 @@ export const SpecsTable: React.FC<SpecsTableProps> = ({ onStartPracticeByItems }
                                           {ev.item_ids.map((id) => (
                                             <span
                                               key={id}
-                                              className="px-2.5 py-1 bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-700 rounded-lg text-stone-900 dark:text-slate-100 font-extrabold"
+                                              className="px-2.5 py-1 bg-white dark:bg-slate-900  rounded-lg text-stone-900 dark:text-slate-100 font-semibold"
                                             >
                                               Ítem #{id}
                                             </span>

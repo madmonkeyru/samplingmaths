@@ -4,13 +4,15 @@
 
 ---
 
+The expanded navigation supports Welcome → Framework Hub → Subject Hub across all four programs. Only **BXM Mathematics, 02-2026** exposes functional question sets; other subjects and windows provide navigable previews. See [flow validation](project_docs/FLOW_VALIDATION.md) for routes, context-switch behavior and verification steps.
+
 ## 🚀 Key Features
 
 - **Multi-Program Architecture Across 4 Testing Tracks**:
-  - **I & II Ciclo (CICO)**: Single monolithic primary-level exam with strict calculator prohibition rules (`calculatorAllowed: false`).
+  - **I & II Ciclo (CICO)**: Five primary-level subject exams, with strict calculator prohibition in Mathematics (`calculatorAllowed: false`).
   - **III Ciclo**: 3 lower secondary-level exams (7°, 8°, and 9° Año).
   - **EDAD**: 2 upper secondary-level exams separated into distinct testing modules (Parte 1 / 10° Año, Parte 2 / 11° Año).
-  - **BXM**: Single monolithic exam covering combined 10° & 11° grade concepts.
+  - **BXM**: One exam per subject covering combined 10° & 11° grade concepts.
 - **Biannual Convocatoria Blueprints**:
   - Decoupled exam assembly manifests supporting multiple annual testing windows (e.g. Convocatoria 01-2026 and 02-2026) with passing score thresholds, item weights, and section boundaries.
 - **Decoupled Math Concept Library**:

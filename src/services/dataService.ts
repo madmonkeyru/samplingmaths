@@ -30,6 +30,7 @@ class DataService {
   private itemsMap: Map<string, Item[]>; // key: setId
   private groupsMap: Map<string, Group>;
   private isInitialized: boolean = false;
+  private loadVersion = 0;
   private listeners: Array<() => void> = [];
 
   constructor() {
@@ -163,20 +164,9 @@ class DataService {
     this.currentSubprogramId = subprogramId;
     this.currentConvocatoriaId = convocatoriaId || '2026-c1';
 
-    // If switching back to BXM or if the program has subject sets, load them
     const subject = program.subjects[0];
-    if (subject) {
-      this.currentSubjectId = subject.id;
-      if (subject.sets && subject.sets.length > 0) {
-        await this.loadSubject(programId, subject.id);
-      } else {
-        // Fall back to BXM questions pool so simulator remains fully functional
-        this.activeSets = defaultBxmSets;
-        this.notify();
-      }
-    } else {
-      this.notify();
-    }
+    if (subject) await this.loadSubject(programId, subject.id);
+    else this.notify();
   }
 
   public async loadSubject(programId: string, subjectId: string): Promise<void> {
@@ -186,6 +176,7 @@ class DataService {
     const subject = program.subjects.find((s) => s.id === subjectId);
     if (!subject) throw new Error(`Subject ${subjectId} not found in program ${programId}`);
 
+    const version = ++this.loadVersion;
     this.currentProgramId = programId;
     this.currentSubjectId = subjectId;
     this.activeSets = subject.sets || [];
@@ -199,6 +190,7 @@ class DataService {
       if (groupModuleLoader) {
         try {
           const groupModule: any = await groupModuleLoader();
+          if (version !== this.loadVersion) return;
           const groupData: GroupBankData = groupModule.default || groupModule;
           if (groupData && Array.isArray(groupData.groups)) {
             groupData.groups.forEach((g) => {
@@ -219,6 +211,7 @@ class DataService {
         if (setModuleLoader) {
           try {
             const setModule: any = await setModuleLoader();
+            if (version !== this.loadVersion) return;
             const setData: QuestionSetData = setModule.default || setModule;
             this.itemsMap.set(setInfo.id, setData.items || []);
           } catch (err) {
@@ -237,16 +230,11 @@ class DataService {
     this.itemsMap.forEach((items) => {
       allItems.push(...items);
     });
-    // Fallback if current program has 0 items loaded directly
-    if (allItems.length === 0) {
-      const set1Data = set1Json as unknown as QuestionSetData;
-      return set1Data.items || [];
-    }
     return allItems;
   }
 
   public getSets(): SetInfo[] {
-    return this.activeSets.length > 0 ? this.activeSets : defaultBxmSets;
+    return this.activeSets;
   }
 
   public getSetById(setId: string): SetInfo | undefined {
@@ -256,14 +244,6 @@ class DataService {
   public getItemsBySet(setId: string): Item[] {
     if (!setId || setId === 'all') return this.getAllItems();
     const items = this.itemsMap.get(setId);
-    if (!items || items.length === 0) {
-      // Check fallback sync sets
-      if (setId === 'set_1') return (set1Json as unknown as QuestionSetData).items || [];
-      if (setId === 'set_2') return (set2Json as unknown as QuestionSetData).items || [];
-      if (setId === 'set_3') return (set3Json as unknown as QuestionSetData).items || [];
-      if (setId === 'set_4') return (set4Json as unknown as QuestionSetData).items || [];
-      if (setId === 'set_5') return (set5Json as unknown as QuestionSetData).items || [];
-    }
     return items || [];
   }
 
@@ -319,32 +299,5 @@ class DataService {
     };
   }
 }
-
-const defaultBxmSets: SetInfo[] = [
-  {
-    id: 'set_1',
-    name: 'Prueba Oficial Convocatoria 02-2026 (Simulación)',
-    description: 'Examen oficial de simulación completa con 60 ítems.',
-    total_items: 60,
-  },
-  {
-    id: 'set_2',
-    name: 'Banco de Práctica Adicional (Set de Expansión)',
-    description: 'Banco ampliado con 70 preguntas adicionales.',
-    total_items: 70,
-  },
-  {
-    id: 'set_3',
-    name: 'Práctica de Refuerzo Intensivo (Set de Refuerzo BXM)',
-    description: 'Práctica enfocada en la consolidación de conceptos clave.',
-    total_items: 20,
-  },
-  {
-    id: 'set_4',
-    name: 'Práctica de Dominio Avanzado y Contextos Reales (Set de Reto BXM)',
-    description: 'Práctica de reto de alto nivel con problemas contextualizados.',
-    total_items: 20,
-  },
-];
 
 export const dataService = new DataService();
