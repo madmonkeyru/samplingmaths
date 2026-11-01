@@ -1,0 +1,63 @@
+{
+  "id": "item-geo-solid-026",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección oblicua en un cilindro circular recto",
+  "cognitive_level": "Conocimiento",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+  },
+  "stem": "Considere la siguiente figura de un cilindro circular recto de centros $O_1$ y $O_2$ intersecado por un plano secante $\\alpha$:\n\nSi el plano $\\alpha$ interseca la superficie lateral del cilindro de manera oblicua (sin intersecar las bases), ¿qué figura geométrica corresponde a dicha sección plana?",
+  "options": {
+    "A": "Una elipse",
+    "B": "Una circunferencia",
+    "C": "Una parábola",
+    "D": "Un rectángulo"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La intersección de un cilindro circular recto con un plano secante que corta todas las generatrices oblicuamente sin cortar las bases es una elipse.",
+    "Si el corte fuera perpendicular al eje (paralelo a las bases) se obtendría una circunferencia.",
+    "Si el corte fuera paralelo al eje se obtendría un rectángulo.",
+    "Por lo tanto, la figura obtenida por el plano oblicuo $\\alpha$ es una elipse."
+  ],
+  "visual_spec": {
+    "alt": "Cilindro circular recto intersecado por un plano oblicuo",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cylinder",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 68,
+        "height": 115,
+        "obliqueAngle": 25
+      },
+      "crossSectionType": "oblique",
+      "showCrossSection": true,
+      "cuttingPlane": {
+        "show": true,
+        "label": "\\alpha"
+      },
+      "labels": {
+        "topCenter": "O_1",
+        "bottomCenter": "O_2"
+      },
+      "referenceBox": {
+        "lines": [
+          "O_1 y O_2: centros de bases",
+          "\\alpha: plano secante oblicuo"
+        ]
+      },
+      "showAxes": true
+    }
+  }
+}

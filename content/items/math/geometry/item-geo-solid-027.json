@@ -1,0 +1,64 @@
+{
+  "id": "item-geo-solid-027",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección oblicua en un cono circular recto",
+  "cognitive_level": "Conocimiento",
+  "calculator_allowed": true,
+  "program_applicability": [
+    "bxm",
+    "edad"
+  ],
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+  },
+  "stem": "Considere la siguiente figura de un cono circular recto de vértice $V$ intersecado por un plano secante $\\beta$ oblicuo respecto a la base, el cual corta todas sus generatrices:\n\n¿Cuál es el nombre de la curva o sección plana obtenida mediante dicha intersección?",
+  "options": {
+    "A": "Circunferencia",
+    "B": "Elipse",
+    "C": "Parábola",
+    "D": "Hipérbola"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Cuando un plano secante corta a un cono circular recto con una inclinación oblicua menor que el ángulo de la generatriz (cortando todas las generatrices de un manto sin cortar la base), la sección plana obtenida es una elipse.",
+    "Si el corte fuera paralelo a la base, sería una circunferencia.",
+    "Si el plano fuera paralelo a una generatriz, se formaría una parábola.",
+    "Por consiguiente, la sección plana es una elipse."
+  ],
+  "visual_spec": {
+    "alt": "Cono circular recto cortado oblicuamente por un plano secante",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cone",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 72,
+        "height": 125,
+        "obliqueAngle": 22
+      },
+      "crossSectionType": "oblique",
+      "showCrossSection": true,
+      "cuttingPlane": {
+        "show": true,
+        "label": "\\beta"
+      },
+      "labels": {
+        "apex": "V",
+        "baseCenter": "O"
+      },
+      "referenceBox": {
+        "lines": [
+          "V: vértice del cono",
+          "O: centro de la base",
+          "\\beta: plano secante oblicuo"
+        ]
+      },
+      "showAxes": true
+    }
+  }
+}
