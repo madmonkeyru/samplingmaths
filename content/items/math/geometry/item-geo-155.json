@@ -1,0 +1,44 @@
+{
+  "id": 155,
+  "code": "item-geo-155",
+  "set_id": "set_4",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Cilindro",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A4",
+    "evidence": "A4.2",
+    "evidence_desc": "Calcula áreas y volúmenes de cilindros rectos."
+  },
+  "evidence_id": "A4.2",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un tanque cilíndrico cerrado tiene un radio de base $r = 3\\text{ m}$ y una altura $h = 5\\text{ m}$. El área total del cilindro (en metros cuadrados) es igual a",
+  "options": {
+    "A": "$48\\pi\\text{ m}^2$",
+    "B": "$30\\pi\\text{ m}^2$",
+    "C": "$18\\pi\\text{ m}^2$",
+    "D": "$45\\pi\\text{ m}^2$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El área total de un cilindro recto cerrado de radio $r$ y altura $h$ es $A_T = 2\\pi r h + 2\\pi r^2 = 2\\pi r (h + r)$.",
+    "Sustituyendo $r = 3$ y $h = 5$: $A_T = 2\\pi(3)(5 + 3) = 6\\pi(8) = 48\\pi\\text{ m}^2$.",
+    "Por lo tanto, la respuesta correcta es A."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

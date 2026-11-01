@@ -1,0 +1,60 @@
+{
+  "id": 116,
+  "code": "item-est-116",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Probabilidad y Teoría de Conjuntos",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A3",
+    "evidence": "A3.1",
+    "evidence_desc": "Calcula probabilidades a partir de un diagrama de Venn de dos conjuntos."
+  },
+  "evidence_id": "A3.1",
+  "concept_id": "mep-est-eventos-probabilidad-02",
+  "linked_concepts": [
+    "mep-est-eventos-probabilidad-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "En un grupo de 60 estudiantes, 35 practican Baloncesto (B), 25 practican Natación (N) y 10 practican ambos deportes. El siguiente diagrama ilustra la distribución:",
+  "options": {
+    "A": "$\\frac{10}{60} = \\frac{1}{6}$",
+    "B": "$\\frac{25}{60} = \\frac{5}{12}$",
+    "C": "$\\frac{50}{60} = \\frac{5}{6}$",
+    "D": "$\\frac{15}{60} = \\frac{1}{4}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El número de estudiantes que practican ambos deportes corresponden a la intersección $B \\cap N$, que según el enunciado es 10.",
+    "El total de estudiantes es 60.",
+    "Por la regla de Laplace: $P(B \\cap N) = \\frac{10}{60} = \\frac{1}{6}$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Diagrama de Venn de 2 conjuntos Baloncesto y Natación",
+    "visual": {
+      "type": "venn_diagram",
+      "sets": [
+        "Baloncesto (B)",
+        "Natación (N)"
+      ],
+      "region_values": {
+        "A_only": 25,
+        "B_only": 15,
+        "A_B_only": 10,
+        "outside": 10
+      },
+      "total": 60
+    }
+  }
+}

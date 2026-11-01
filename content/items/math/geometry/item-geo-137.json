@@ -1,0 +1,45 @@
+{
+  "id": 137,
+  "code": "item-geo-137",
+  "set_id": "set_3",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Transformaciones",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A3",
+    "affirmation_desc": null,
+    "evidence": "A3.2",
+    "evidence_desc": "Reconoce simetrías respecto a los ejes de coordenadas."
+  },
+  "evidence_id": "A3.2",
+  "concept_id": "mep-geo-transformaciones-10",
+  "linked_concepts": [
+    "mep-geo-transformaciones-10"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Al reflejar el punto $P(3, -5)$ con respecto al eje $y$, las coordenadas de su punto imagen $P’$ son",
+  "options": {
+    "A": "$(-3, -5)$",
+    "B": "$(3, 5)$",
+    "C": "$(-3, 5)$",
+    "D": "$(-5, 3)$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La reflexión respecto al eje $y$ cambia el signo de la coordenada $x$ manteniendo la coordenada $y$ intacta: $(x, y) \\to (-x, y)$.",
+    "Sustituyendo $P(3, -5)$: $P’ = (-3, -5)$.",
+    "Por lo tanto, la respuesta correcta es A."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

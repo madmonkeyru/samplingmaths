@@ -1,0 +1,100 @@
+{
+  "id": 132,
+  "code": "item-geo-132",
+  "set_id": "set_3",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "affirmation_desc": null,
+    "evidence": "A1.3",
+    "evidence_desc": "Determina si una recta dada es secante, tangente o exterior a una circunferencia."
+  },
+  "evidence_id": "A1.3",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere la circunferencia $C: x^2 + y^2 = 25$ y la recta $L: y = 3$. La recta $L$ con respecto a $C$ es",
+  "options": {
+    "A": "Secante",
+    "B": "Tangente",
+    "C": "Exterior",
+    "D": "Perpendicular al eje x"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El centro de $C$ es $(0,0)$ y su radio es $r = 5$.",
+    "La distancia desde el centro $(0,0)$ a la recta horizontal $y = 3$ es $d = |3 - 0| = 3$.",
+    "Como la distancia $d = 3$ es estrictamente menor que el radio $r = 5$, la recta interseca a la circunferencia en dos puntos distintos, por lo que es SECANTE."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Circunferencia centrada en el origen con radio 5 y recta horizontal y = 3 secante",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -6,
+          6
+        ],
+        "y": [
+          -6,
+          6
+        ]
+      },
+      "grid": true,
+      "axes": {
+        "arrows": true
+      },
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            0,
+            0
+          ],
+          "radius": 5,
+          "stroke": "indigo-600",
+          "strokeWidth": 2
+        },
+        {
+          "type": "line",
+          "x1": -6,
+          "y1": 3,
+          "x2": 6,
+          "y2": 3,
+          "stroke": "indigo-500",
+          "strokeWidth": 2,
+          "label": "y = 3"
+        },
+        {
+          "type": "point",
+          "x": -4,
+          "y": 3,
+          "label": "A(-4,3)",
+          "color": "stone-800"
+        },
+        {
+          "type": "point",
+          "x": 4,
+          "y": 3,
+          "label": "B(4,3)",
+          "color": "stone-800"
+        }
+      ]
+    }
+  }
+}

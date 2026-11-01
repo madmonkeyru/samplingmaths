@@ -1,35 +1,35 @@
 {
-  "id": "item-geo-solid-023",
-  "area": "GEOMETRÍA",
+  "id": 193,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Sección transversal triangular en un cubo (Corte en vértice)",
-  "cognitive_level": "Comprensión",
+  "topic": "Secci\u00f3n transversal triangular en un cubo (Corte en v\u00e9rtice)",
+  "cognitive_level": "Comprensi\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.2",
-    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+    "evidence_desc": "Determina qu\u00e9 figuras se obtienen mediante secciones planas de figuras tridimensionales."
   },
-  "stem": "Si en un cubo se realiza un corte plano que pasa por los puntos medios de tres aristas que convergen en un mismo vértice, ¿qué figura geométrica se obtiene como sección plana?",
+  "stem": "Si en un cubo se realiza un corte plano que pasa por los puntos medios de tres aristas que convergen en un mismo v\u00e9rtice, \u00bfqu\u00e9 figura geom\u00e9trica se obtiene como secci\u00f3n plana?",
   "options": {
-    "A": "Un triángulo equilátero",
-    "B": "Un triángulo rectángulo escaleno",
+    "A": "Un tri\u00e1ngulo equil\u00e1tero",
+    "B": "Un tri\u00e1ngulo rect\u00e1ngulo escaleno",
     "C": "Un cuadrado",
     "D": "Un rombo"
   },
   "correct_answer": "A",
   "solution_steps": [
-    "Los tres puntos medios están situados a la misma distancia del vértice común.",
-    "La distancia entre cualquier par de estos puntos medios es la hipotenusa de un triángulo rectángulo isósceles con catetos iguales a $\\frac{a}{2}$.",
-    "Por lo tanto, los tres lados de la sección plana miden exactamente $\\frac{a}{2}\\sqrt{2}$, formando un triángulo equilátero."
+    "Los tres puntos medios est\u00e1n situados a la misma distancia del v\u00e9rtice com\u00fan.",
+    "La distancia entre cualquier par de estos puntos medios es la hipotenusa de un tri\u00e1ngulo rect\u00e1ngulo is\u00f3sceles con catetos iguales a $\\frac{a}{2}$.",
+    "Por lo tanto, los tres lados de la secci\u00f3n plana miden exactamente $\\frac{a}{2}\\sqrt{2}$, formando un tri\u00e1ngulo equil\u00e1tero."
   ],
   "visual_spec": {
-    "alt": "Corte de esquina en cubo produciendo un triángulo equilátero",
+    "alt": "Corte de esquina en cubo produciendo un tri\u00e1ngulo equil\u00e1tero",
     "visual": {
       "type": "solid_3d",
       "shape": "prism",
@@ -49,11 +49,12 @@
         "lines": [
           "Corte en esquina del cubo",
           "Puntos medios de aristas",
-          "Sección: triángulo equilátero"
+          "Secci\u00f3n: tri\u00e1ngulo equil\u00e1tero"
         ]
       },
       "showCrossSection": true,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-023"
 }

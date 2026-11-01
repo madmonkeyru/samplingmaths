@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-024",
-  "area": "GEOMETRÍA",
+  "id": 194,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Cálculo de volumen a partir de sección transversal",
-  "cognitive_level": "Aplicación",
+  "topic": "C\u00e1lculo de volumen a partir de secci\u00f3n transversal",
+  "cognitive_level": "Aplicaci\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.3",
-    "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+    "evidence_desc": "Determina caracter\u00edsticas m\u00e9tricas de figuras geom\u00e9tricas tridimensionales."
   },
-  "stem": "Un prisma rectangular recto tiene una base de $8\\text{ cm}$ de largo y $5\\text{ cm}$ de ancho. Si un corte plano paralelo a la base genera un rectángulo de $40\\text{ cm}^2$ y la altura del prisma es de $10\\text{ cm}$, ¿cuál es el volumen del prisma?",
+  "stem": "Un prisma rectangular recto tiene una base de $8\\text{ cm}$ de largo y $5\\text{ cm}$ de ancho. Si un corte plano paralelo a la base genera un rect\u00e1ngulo de $40\\text{ cm}^2$ y la altura del prisma es de $10\\text{ cm}$, \u00bfcu\u00e1l es el volumen del prisma?",
   "options": {
     "A": "$400\\text{ cm}^3$",
     "B": "$200\\text{ cm}^3$",
@@ -24,7 +24,7 @@
   },
   "correct_answer": "A",
   "solution_steps": [
-    "Cualquier corte paralelo a la base de un prisma rectangular tiene un área idéntica a la base: $A_{base} = 8 \\times 5 = 40\\text{ cm}^2$.",
+    "Cualquier corte paralelo a la base de un prisma rectangular tiene un \u00e1rea id\u00e9ntica a la base: $A_{base} = 8 \\times 5 = 40\\text{ cm}^2$.",
     "El volumen de un prisma recto es $V = A_{base} \\times h$.",
     "$V = 40 \\times 10 = 400\\text{ cm}^3$."
   ],
@@ -50,11 +50,12 @@
         "lines": [
           "Prisma rectangular",
           "Corte paralelo a la base",
-          "Área basal = 40 cm²"
+          "\u00c1rea basal = 40 cm\u00b2"
         ]
       },
       "showCrossSection": true,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-024"
 }

@@ -1,0 +1,74 @@
+{
+  "id": 174,
+  "code": "item-geo-174",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Área de una sección plana de la esfera",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Una esfera posee un radio de $10\\text{ cm}$. Se traza un plano secante a una distancia de $6\\text{ cm}$ del centro. ¿Cuál es el área de la superficie delimitada por dicha sección plana?",
+  "options": {
+    "A": "$8\\pi\\text{ cm}^2$",
+    "B": "$16\\pi\\text{ cm}^2$",
+    "C": "$64\\pi\\text{ cm}^2$",
+    "D": "$100\\pi\\text{ cm}^2$"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Aplicamos la relación métrica $R^2 = d^2 + r^2$ donde $R=10$ y $d=6$.",
+    "$10^2 = 6^2 + r^2 \\implies 100 = 36 + r^2 \\implies r^2 = 64$.",
+    "Por lo tanto, $r = 8\\text{ cm}$.",
+    "El área del círculo formado es $A = \\pi r^2 = \\pi (8)^2 = 64\\pi\\text{ cm}^2$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Sección circular paralela al ecuador en una esfera",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "sphere",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 85,
+        "distance": 32,
+        "showAxis": true,
+        "showRightAngle": true
+      },
+      "labels": {
+        "center": "O",
+        "sectionCenter": "P",
+        "sectionRight": "Q",
+        "height": "6",
+        "radius": "10"
+      },
+      "referenceBox": {
+        "lines": [
+          "O: centro de la esfera",
+          "d(O, P) = 6",
+          "Radio de esfera = 10"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

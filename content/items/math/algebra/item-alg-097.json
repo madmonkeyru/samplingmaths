@@ -1,0 +1,46 @@
+{
+  "id": 97,
+  "code": "item-alg-097",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Sistemas de ecuaciones lineales",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A4",
+    "evidence": "A4.1",
+    "evidence_desc": "Resuelve problemas mediante sistemas de dos ecuaciones lineales."
+  },
+  "evidence_id": "A4.1",
+  "concept_id": "mep-alg-funcion-inversa-06",
+  "linked_concepts": [
+    "mep-alg-funcion-inversa-06"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "En una tienda de deportes se vendieron un total de 30 balones entre fútbol y baloncesto. Los balones de fútbol cuestan ₡10 000 cada uno y los de baloncesto ₡15 000. Si el ingreso total por la venta fue de ₡360 000, ¿cuántos balones de baloncesto se vendieron?",
+  "options": {
+    "A": "12",
+    "B": "18",
+    "C": "15",
+    "D": "20"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Sea $x$ la cantidad de balones de fútbol e $y$ la de baloncesto.",
+    "Ecuación de cantidad: $x + y = 30 \\implies x = 30 - y$.",
+    "Ecuación de dinero: $10000x + 15000y = 360000 \\implies 10x + 15y = 360$.",
+    "Sustituyendo $x$: $10(30 - y) + 15y = 360 \\implies 300 - 10y + 15y = 360 \\implies 5y = 60 \\implies y = 12$.",
+    "Se vendieron 12 balones de baloncesto."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

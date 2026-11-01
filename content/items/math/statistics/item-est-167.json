@@ -1,0 +1,43 @@
+{
+  "id": 167,
+  "code": "item-est-167",
+  "set_id": "set_4",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Coeficiente de Variación",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A10",
+    "evidence": "A10.5",
+    "evidence_desc": "Calcula e interpreta el coeficiente de variación relativo."
+  },
+  "evidence_id": "A10.5",
+  "concept_id": "mep-est-posicion-relativa-cv-04",
+  "linked_concepts": [
+    "mep-est-posicion-relativa-cv-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un grupo de adultos tiene una media de edad de $\\bar{x} = 40\\text{ años}$ con una desviación estándar $s = 8\\text{ años}$. El coeficiente de variación ($CV$) de este grupo corresponde a",
+  "options": {
+    "A": "$20\\%$",
+    "B": "$25\\%$",
+    "C": "$15\\%$",
+    "D": "$30\\%$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El coeficiente de variación se calcula mediante $CV = \\frac{s}{\\bar{x}} \\cdot 100\\%$.",
+    "Sustituyendo $s = 8$ y $\\bar{x} = 40$: $CV = \\frac{8}{40} \\cdot 100\\% = 0.20 \\cdot 100\\% = 20\\%$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

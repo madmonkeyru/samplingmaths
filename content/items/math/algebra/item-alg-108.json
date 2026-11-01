@@ -1,0 +1,80 @@
+{
+  "id": 108,
+  "code": "item-alg-108",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función cuadrática — Ceros",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A2",
+    "evidence": "A2.10",
+    "evidence_desc": "Encuentra las intersecciones con el eje x de una parábola."
+  },
+  "evidence_id": "A2.10",
+  "concept_id": "mep-alg-funcion-cuadratica-04",
+  "linked_concepts": [
+    "mep-alg-funcion-cuadratica-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la gráfica de la función $f(x) = x^2 - 9$:",
+  "options": {
+    "A": "Los ceros de la función son $x = -3$ y $x = 3$.",
+    "B": "Los ceros de la función son $x = 0$ y $x = 9$.",
+    "C": "El único cero de la función es $x = 9$.",
+    "D": "La función no tiene ceros reales."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Los ceros de la función ocurren cuando $f(x) = 0 \\implies x^2 - 9 = 0$.",
+    "Factorizando la diferencia de cuadrados: $(x - 3)(x + 3) = 0 \\implies x = 3$ ó $x = -3$.",
+    "Por lo tanto, interseca al eje $x$ en $(-3, 0)$ y $(3, 0)$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Parábola x^2 - 9 con ceros en x = -3 y x = 3",
+    "visual": {
+      "type": "function_plot",
+      "form": "quadratic",
+      "params": {
+        "a": 1,
+        "vertex": [
+          0,
+          -9
+        ],
+        "roots": [
+          -3,
+          3
+        ]
+      },
+      "annotations": {
+        "roots": {
+          "show": true,
+          "labels": [
+            "-3",
+            "3"
+          ]
+        }
+      },
+      "domain": {
+        "x": [
+          -5,
+          5
+        ],
+        "y": [
+          -10,
+          4
+        ]
+      }
+    }
+  }
+}

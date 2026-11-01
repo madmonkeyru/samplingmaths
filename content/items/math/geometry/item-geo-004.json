@@ -1,0 +1,46 @@
+{
+  "id": 4,
+  "code": "item-geo-004",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "affirmation_desc": null,
+    "evidence": "A1.3",
+    "evidence_desc": "Resuelve problemas, de diversos contextos, relacionados con la circunferencia y sus representaciones."
+  },
+  "evidence_id": "A1.3",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un faro de luz direccional emite una señal que cubre una zona circular en el mar. El borde de la zona iluminada está delimitado por la circunferencia “c” dada por la ecuación (x + 2)^2 + (y − 7)^2 = 49. ¿Cuál es el alcance máximo del haz de luz del faro?",
+  "options": {
+    "A": "7 m",
+    "B": "14 m",
+    "C": "49 m",
+    "D": "98 m"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La ecuación dada está en forma ordinaria: (x+2)^2 + (y-7)^2 = 49.",
+    "El radio al cuadrado es 49, por lo tanto el radio es 7.",
+    "El alcance máximo es el radio: 7 m.",
+    "Opción correcta: A."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

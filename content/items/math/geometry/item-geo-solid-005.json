@@ -1,34 +1,34 @@
 {
-  "id": "item-geo-solid-005",
-  "area": "GEOMETRÍA",
+  "id": 175,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Identificación geométrica de secciones esféricas",
-  "cognitive_level": "Comprensión",
+  "topic": "Identificaci\u00f3n geom\u00e9trica de secciones esf\u00e9ricas",
+  "cognitive_level": "Comprensi\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.2",
-    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+    "evidence_desc": "Determina qu\u00e9 figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
   },
-  "stem": "¿Cuál de las siguientes afirmaciones respecto a las secciones planas de una esfera es siempre VERDADERA?",
+  "stem": "\u00bfCu\u00e1l de las siguientes afirmaciones respecto a las secciones planas de una esfera es siempre VERDADERA?",
   "options": {
-    "A": "Al cortar una esfera con un plano oblicuo que no pase por el centro, la sección obtenida es una elipse.",
-    "B": "Toda sección plana producida por un plano secante a una esfera es una circunferencia o círculo.",
-    "C": "Si el corte se hace a mayor distancia del centro, el área del círculo de sección aumenta.",
-    "D": "Una sección plana que pase por el centro de la esfera genera una parábola."
+    "A": "Al cortar una esfera con un plano oblicuo que no pase por el centro, la secci\u00f3n obtenida es una elipse.",
+    "B": "Toda secci\u00f3n plana producida por un plano secante a una esfera es una circunferencia o c\u00edrculo.",
+    "C": "Si el corte se hace a mayor distancia del centro, el \u00e1rea del c\u00edrculo de secci\u00f3n aumenta.",
+    "D": "Una secci\u00f3n plana que pase por el centro de la esfera genera una par\u00e1bola."
   },
   "correct_answer": "B",
   "solution_steps": [
-    "En una esfera perfecta tridimensional, la intersección con cualquier plano secante (sin importar el ángulo o inclinación) siempre genera una circunferencia en su contorno y un círculo como región interior.",
-    "A mayor distancia del centro la sección disminuye de radio, y nunca se obtienen elipses o parábolas al cortar una esfera con planos."
+    "En una esfera perfecta tridimensional, la intersecci\u00f3n con cualquier plano secante (sin importar el \u00e1ngulo o inclinaci\u00f3n) siempre genera una circunferencia en su contorno y un c\u00edrculo como regi\u00f3n interior.",
+    "A mayor distancia del centro la secci\u00f3n disminuye de radio, y nunca se obtienen elipses o par\u00e1bolas al cortar una esfera con planos."
   ],
   "visual_spec": {
-    "alt": "Intersección plana universal en una esfera",
+    "alt": "Intersecci\u00f3n plana universal en una esfera",
     "visual": {
       "type": "solid_3d",
       "shape": "sphere",
@@ -45,7 +45,7 @@
       },
       "referenceBox": {
         "lines": [
-          "Sección plana en esfera",
+          "Secci\u00f3n plana en esfera",
           "Siempre es circular",
           "O: centro"
         ]
@@ -53,5 +53,6 @@
       "showCrossSection": true,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-005"
 }

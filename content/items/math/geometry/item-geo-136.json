@@ -1,0 +1,45 @@
+{
+  "id": 136,
+  "code": "item-geo-136",
+  "set_id": "set_3",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "affirmation_desc": null,
+    "evidence": "A1.2",
+    "evidence_desc": "Reconoce la representación algebraica de una circunferencia."
+  },
+  "evidence_id": "A1.2",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Si el centro de una circunferencia se encuentra en $C(-1, 4)$ y pasa por el origen $(0,0)$, la ecuación de la circunferencia es",
+  "options": {
+    "A": "$(x - 1)^2 + (y + 4)^2 = 17$",
+    "B": "$(x + 1)^2 + (y - 4)^2 = 17$",
+    "C": "$(x + 1)^2 + (y - 4)^2 = 25$",
+    "D": "$(x - 1)^2 + (y + 4)^2 = 25$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "El radio $r$ es la distancia entre el centro $C(-1, 4)$ y el punto por el que pasa $(0,0)$.",
+    "$r^2 = (0 - (-1))^2 + (0 - 4)^2 = 1^2 + (-4)^2 = 1 + 16 = 17$.",
+    "La ecuación con centro $(-1, 4)$ y $r^2 = 17$ es $(x - (-1))^2 + (y - 4)^2 = 17 \\implies (x + 1)^2 + (y - 4)^2 = 17$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

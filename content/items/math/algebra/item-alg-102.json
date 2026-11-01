@@ -1,0 +1,44 @@
+{
+  "id": 102,
+  "code": "item-alg-102",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función exponencial — Modelado",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A3",
+    "evidence": "A3.3",
+    "evidence_desc": "Evalúa un modelo exponencial de crecimiento poblacional."
+  },
+  "evidence_id": "A3.3",
+  "concept_id": "mep-alg-exponencial-logaritmica-08",
+  "linked_concepts": [
+    "mep-alg-exponencial-logaritmica-08"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "La población de bacterias en un cultivo después de $t$ horas está dada por $P(t) = 500 \\cdot 2^t$. ¿Cuántas bacterias habrá al cabo de 4 horas?",
+  "options": {
+    "A": "8000",
+    "B": "4000",
+    "C": "2000",
+    "D": "16000"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Para $t = 4$, sustituimos en el modelo: $P(4) = 500 \\cdot 2^4$.",
+    "Calculando la potencia: $2^4 = 16$.",
+    "Multiplicando: $P(4) = 500 \\cdot 16 = 8000$ bacterias."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

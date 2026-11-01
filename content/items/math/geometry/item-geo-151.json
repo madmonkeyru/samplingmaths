@@ -1,0 +1,90 @@
+{
+  "id": 151,
+  "code": "item-geo-151",
+  "set_id": "set_4",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "evidence": "A1.4",
+    "evidence_desc": "Resuelve problemas del entorno aplicando propiedades de la circunferencia."
+  },
+  "evidence_id": "A1.4",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un radar de cobertura circular centrado en la ciudad $C(1, 2)$ detecta señales en un radio de $8\\text{ km}$. Si un dron se desplaza a la posición $D(6, -3)$, determine la ecuación del borde del radar y si el dron está dentro de su alcance.",
+  "options": {
+    "A": "Ecuación: $(x - 1)^2 + (y - 2)^2 = 64$; el dron está DENTRO del alcance.",
+    "B": "Ecuación: $(x + 1)^2 + (y + 2)^2 = 64$; el dron está FUERA del alcance.",
+    "C": "Ecuación: $(x - 1)^2 + (y - 2)^2 = 64$; el dron está FUERA del alcance.",
+    "D": "Ecuación: $(x - 1)^2 + (y - 2)^2 = 16$; el dron está DENTRO del alcance."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La ecuación del alcance con centro $(1, 2)$ y radio $r = 8$ es $(x - 1)^2 + (y - 2)^2 = 8^2 = 64$.",
+    "Calculamos la distancia $d$ entre $C(1,2)$ y $D(6,-3)$: $d^2 = (6-1)^2 + (-3-2)^2 = 5^2 + (-5)^2 = 25 + 25 = 50$.",
+    "Como $d = \\sqrt{50} \\approx 7.07\\text{ km}$, que es menor que el radio de $8\\text{ km}$ ($d^2 = 50 < 64$), el dron está DENTRO del alcance."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Radar circular con centro en C(1,2) y dron D(6,-3) dentro de la zona de cobertura",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -8,
+          10
+        ],
+        "y": [
+          -7,
+          11
+        ]
+      },
+      "grid": true,
+      "axes": {
+        "arrows": true
+      },
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            1,
+            2
+          ],
+          "radius": 8,
+          "stroke": "indigo-600",
+          "strokeWidth": 2,
+          "fill": "indigo-50/20"
+        },
+        {
+          "type": "point",
+          "x": 1,
+          "y": 2,
+          "label": "C(1,2)",
+          "color": "stone-800"
+        },
+        {
+          "type": "point",
+          "x": 6,
+          "y": -3,
+          "label": "D(6,-3)",
+          "color": "indigo-600"
+        }
+      ]
+    }
+  }
+}

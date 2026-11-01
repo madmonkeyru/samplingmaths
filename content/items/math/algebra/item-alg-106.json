@@ -1,0 +1,44 @@
+{
+  "id": 106,
+  "code": "item-alg-106",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función cuadrática — Problemas de optimización",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A2",
+    "evidence": "A2.9",
+    "evidence_desc": "Determina el valor máximo o mínimo en problemas de optimización cuadrática."
+  },
+  "evidence_id": "A2.9",
+  "concept_id": "mep-alg-funcion-cuadratica-04",
+  "linked_concepts": [
+    "mep-alg-funcion-cuadratica-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "La ganancia diaria $G(x)$ en dólares por la venta de $x$ artículos está dada por $G(x) = -2x^2 + 80x - 300$. ¿Cuántos artículos se deben vender para obtener la ganancia máxima?",
+  "options": {
+    "A": "20 artículos",
+    "B": "40 artículos",
+    "C": "50 artículos",
+    "D": "80 artículos"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Dado que $a = -2 < 0$, la función alcanza su valor máximo en la abscisa del vértice $x_v = -\\frac{b}{2a}$.",
+    "$x_v = -\\frac{80}{2(-2)} = \\frac{-80}{-4} = 20$.",
+    "Se deben vender 20 artículos para maximizar la ganancia."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

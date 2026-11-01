@@ -1,0 +1,60 @@
+{
+  "id": 150,
+  "code": "item-est-150",
+  "set_id": "set_3",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Diagrama de Venn",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A11",
+    "affirmation_desc": null,
+    "evidence": "A11.3",
+    "evidence_desc": "Resuelve problemas de conteo y probabilidades utilizando diagramas de Venn."
+  },
+  "evidence_id": "A11.3",
+  "concept_id": "mep-est-eventos-probabilidad-02",
+  "linked_concepts": [
+    "mep-est-eventos-probabilidad-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "En un grupo de 50 estudiantes, 30 estudian Inglés, 20 estudian Francés y 8 estudian ambos idiomas. Si se selecciona un estudiante al azar, ¿cuál es la probabilidad de que estudie al menos uno de los dos idiomas?",
+  "options": {
+    "A": "$\\frac{42}{50} = \\frac{21}{25}$",
+    "B": "$\\frac{50}{50} = 1$",
+    "C": "$\\frac{38}{50} = \\frac{19}{25}$",
+    "D": "$\\frac{8}{50} = \\frac{4}{25}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Utilizamos la regla de la adición de conjuntos: $N(I \\cup F) = N(I) + N(F) - N(I \\cap F)$.",
+    "$N(I \\cup F) = 30 + 20 - 8 = 42$ estudiantes estudian al menos un idioma.",
+    "La probabilidad es $P(I \\cup F) = \\frac{42}{50} = \\frac{21}{25} = 0.84$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Diagrama de Venn mostrando estudiantes de Inglés (30) y Francés (20) con intersección 8",
+    "visual": {
+      "type": "venn_diagram",
+      "sets": [
+        "Inglés",
+        "Francés"
+      ],
+      "region_values": {
+        "only_A": 22,
+        "only_B": 12,
+        "both": 8,
+        "neither": 8
+      }
+    }
+  }
+}

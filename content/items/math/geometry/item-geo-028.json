@@ -1,0 +1,96 @@
+{
+  "id": 28,
+  "code": "item-geo-028",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Traslación de circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A2",
+    "evidence": "A2.1",
+    "evidence_desc": "Reconoce la representación gráfica o algebraica de la traslación de una circunferencia en diversos contextos."
+  },
+  "evidence_id": "A2.1",
+  "concept_id": "mep-geo-traslacion-03",
+  "linked_concepts": [
+    "mep-geo-traslacion-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Observe las gráficas de las circunferencias c1 y c2 mostradas a continuación en el plano cartesiano. Si la circunferencia c2 se obtuvo trasladando c1, ¿cuál fue el desplazamiento realizado?",
+  "options": {
+    "A": "5 unidades a la derecha y 3 unidades hacia arriba",
+    "B": "5 unidades a la izquierda y 3 unidades hacia abajo",
+    "C": "3 unidades a la derecha y 5 unidades hacia arriba",
+    "D": "2 unidades a la derecha y 2 unidades hacia arriba"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Centro de c1: (-2, -1). Centro de c2: (3, 2).",
+    "Desplazamiento horizontal: 3 - (-2) = 5 unidades a la derecha.",
+    "Desplazamiento vertical: 2 - (-1) = 3 unidades hacia arriba."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Plano cartesiano mostrando c1 centrado en (-2, -1) y c2 centrado en (3, 2).",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -5,
+          6
+        ],
+        "y": [
+          -4,
+          5
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            -2,
+            -1
+          ],
+          "radius": 2,
+          "stroke": "gray"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -2,
+            -1
+          ],
+          "label": "c1(-2,-1)"
+        },
+        {
+          "type": "circle",
+          "center": [
+            3,
+            2
+          ],
+          "radius": 2,
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            2
+          ],
+          "label": "c2(3,2)"
+        }
+      ]
+    }
+  }
+}

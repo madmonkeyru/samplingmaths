@@ -1,0 +1,46 @@
+{
+  "id": 7,
+  "code": "item-geo-007",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Traslación de circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A2",
+    "affirmation_desc": null,
+    "evidence": "A2.2",
+    "evidence_desc": "Resuelve problemas, de diversos contextos, relacionados con la traslación de una circunferencia y sus representaciones."
+  },
+  "evidence_id": "A2.2",
+  "concept_id": "mep-geo-traslacion-03",
+  "linked_concepts": [
+    "mep-geo-traslacion-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Sea “c” la circunferencia dada por c:(x + 2)^2 + y^2 = 6. Si se traslada “c” y se obtiene d:x^2 + (y +3)^2 = 6, entonces, la traslación aplicada corresponde a dos unidades hacia la",
+  "options": {
+    "A": "izquierda paralela al eje x y tres unidades hacia abajo paralela al eje y.",
+    "B": "izquierda paralela al eje x y tres unidades hacia arriba paralela al eje y.",
+    "C": "derecha paralela al eje x y tres unidades hacia arriba paralela al eje y.",
+    "D": "derecha paralela al eje x y tres unidades hacia abajo paralela al eje y."
+  },
+  "correct_answer": "D",
+  "solution_steps": [
+    "Centro de c: (-2, 0). Centro de d: (0, -3).",
+    "Para ir de (-2,0) a (0,-3): x aumenta en 2 (derecha), y disminuye en 3 (abajo).",
+    "Por lo tanto, la traslación es 2 unidades a la derecha y 3 unidades hacia abajo.",
+    "Opción correcta: D."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

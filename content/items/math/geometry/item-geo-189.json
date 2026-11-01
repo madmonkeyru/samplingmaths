@@ -1,0 +1,68 @@
+{
+  "id": 189,
+  "code": "item-geo-189",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Identificación de bases y superficies de un tronco de cono",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+  },
+  "evidence_id": "A5.2",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "¿Cuál de las siguientes afirmaciones describe con precisión las bases de un tronco de cono circular recto?",
+  "options": {
+    "A": "Son dos elipses situadas en planos perpendiculares.",
+    "B": "Son dos círculos paralelos de radios distintos.",
+    "C": "Son dos círculos concéntricos situados en un mismo plano.",
+    "D": "Son dos polígonos regulares semejantes."
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Por definición, un tronco de cono circular recto de bases paralelas está limitado por dos círculos situados en planos paralelos cuyos radios son distintos ($r \\neq R$), unidos por una superficie lateral cónica truncada."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Bases circulares paralelas de un tronco de cono",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "frustum",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "topRadius": 40,
+        "bottomRadius": 75,
+        "height": 110,
+        "showAxis": true
+      },
+      "labels": {
+        "topCenter": "O_1",
+        "bottomCenter": "O_2"
+      },
+      "referenceBox": {
+        "lines": [
+          "Bases: círculos paralelos",
+          "Radios: r < R",
+          "O_1 y O_2: centros"
+        ]
+      },
+      "showCrossSection": false,
+      "showAxes": true
+    }
+  }
+}

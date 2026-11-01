@@ -1,0 +1,69 @@
+{
+  "id": 195,
+  "code": "item-geo-195",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Identificación de secciones planas en paralelepípedos rectos",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+  },
+  "evidence_id": "A5.2",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "¿Cuál de las siguientes figuras geométricas NUNCA puede obtenerse mediante una sección plana de un cubo?",
+  "options": {
+    "A": "Un hexágono",
+    "B": "Un trapecio",
+    "C": "Un círculo",
+    "D": "Un triángulo"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Un cubo es un poliedro cuyas caras son planos poligonales. La intersección de un plano con planos siempre produce segmentos de recta.",
+    "Por ello, la sección plana de un cubo siempre es un polígono (triángulo, cuadrilátero, pentágono o hexágono).",
+    "Nunca puede tener lados curvos ni generar un círculo."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Polígonos generados por secciones planas en un cubo",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "prism",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "width": 90,
+        "height": 90,
+        "depth": 55
+      },
+      "labels": {
+        "width": "a",
+        "height": "a"
+      },
+      "referenceBox": {
+        "lines": [
+          "Secciones en poliedros",
+          "Siempre son polígonos",
+          "Nunca figuras curvas"
+        ]
+      },
+      "showCrossSection": false,
+      "showAxes": true
+    }
+  }
+}

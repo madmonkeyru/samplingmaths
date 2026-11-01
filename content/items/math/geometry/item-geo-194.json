@@ -1,0 +1,71 @@
+{
+  "id": 194,
+  "code": "item-geo-194",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Cálculo de volumen a partir de sección transversal",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un prisma rectangular recto tiene una base de $8\\text{ cm}$ de largo y $5\\text{ cm}$ de ancho. Si un corte plano paralelo a la base genera un rectángulo de $40\\text{ cm}^2$ y la altura del prisma es de $10\\text{ cm}$, ¿cuál es el volumen del prisma?",
+  "options": {
+    "A": "$400\\text{ cm}^3$",
+    "B": "$200\\text{ cm}^3$",
+    "C": "$160\\text{ cm}^3$",
+    "D": "$130\\text{ cm}^3$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Cualquier corte paralelo a la base de un prisma rectangular tiene un área idéntica a la base: $A_{base} = 8 \\times 5 = 40\\text{ cm}^2$.",
+    "El volumen de un prisma recto es $V = A_{base} \\times h$.",
+    "$V = 40 \\times 10 = 400\\text{ cm}^3$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Prisma rectangular recto con corte paralelo a la base",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "prism",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "width": 105,
+        "height": 85,
+        "depth": 55,
+        "hatchCrossSection": true
+      },
+      "labels": {
+        "width": "8",
+        "depth": "5",
+        "height": "10"
+      },
+      "referenceBox": {
+        "lines": [
+          "Prisma rectangular",
+          "Corte paralelo a la base",
+          "Área basal = 40 cm²"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

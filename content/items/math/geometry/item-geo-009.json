@@ -1,0 +1,163 @@
+{
+  "id": 9,
+  "code": "item-geo-009",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Posición de puntos respecto a una circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A3",
+    "affirmation_desc": null,
+    "evidence": "A3.1",
+    "evidence_desc": "Determina gráfica y algebraicamente si un punto se ubica en el interior o en el exterior de una circunferencia en diversos contextos."
+  },
+  "evidence_id": "A3.1",
+  "concept_id": "mep-geo-posicion-punto-04",
+  "linked_concepts": [
+    "mep-geo-posicion-punto-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un radar de ciberseguridad monitorea una red local. El servidor central está ubicado en el punto O y su zona de cobertura abarca un radio de 4 km, tal como se ilustra con el siguiente sistema de coordenadas: [imagen]. Considere las coordenadas de ubicación de cuatro dispositivos conectados: P(5,2), Q(4,1), R(6,1), S(8,4). ¿Cuál de los dispositivos se encuentra fuera del área de cobertura?",
+  "options": {
+    "A": "P",
+    "B": "Q",
+    "C": "R",
+    "D": "S"
+  },
+  "correct_answer": "D",
+  "solution_steps": [
+    "Del gráfico, el centro O está en (5,0) y el radio es 4.",
+    "La ecuación es (x-5)^2 + y^2 = 16.",
+    "Para un punto fuera, (x-5)^2 + y^2 > 16.",
+    "Evaluar S(8,4): (8-5)^2 + 4^2 = 9 + 16 = 25 > 16 → fuera.",
+    "Los demás puntos están dentro o sobre.",
+    "Opción correcta: D."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Circunferencia con centro en O(5,0), radio 4, y proyecciones a y=4 y y=-4.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -2,
+          10
+        ],
+        "y": [
+          -6,
+          6
+        ]
+      },
+      "grid": false,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            5,
+            0
+          ],
+          "radius": 4
+        },
+        {
+          "type": "point",
+          "coords": [
+            5,
+            0
+          ],
+          "label": "O",
+          "label_position": "top-left"
+        },
+        {
+          "type": "point",
+          "coords": [
+            5,
+            0
+          ],
+          "label": "5",
+          "label_position": "bottom-right"
+        },
+        {
+          "type": "point",
+          "coords": [
+            5,
+            4
+          ]
+        },
+        {
+          "type": "point",
+          "coords": [
+            5,
+            -4
+          ]
+        },
+        {
+          "type": "line",
+          "p1": [
+            0,
+            4
+          ],
+          "p2": [
+            5,
+            4
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            0,
+            -4
+          ],
+          "p2": [
+            5,
+            -4
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            5,
+            -4
+          ],
+          "p2": [
+            5,
+            4
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            4
+          ],
+          "label": "4",
+          "label_position": "left"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            -4
+          ],
+          "label": "-4",
+          "label_position": "left"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "id": 13,
+  "code": "item-geo-013",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Área de figuras no poligonales",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A4",
+    "affirmation_desc": null,
+    "evidence": "A4.3",
+    "evidence_desc": "Estima perímetros o áreas de figuras planas no poligonales mediante un sistema de coordenadas rectangulares en diversos contextos."
+  },
+  "evidence_id": "A4.3",
+  "concept_id": "mep-geo-poligono-regular-07",
+  "linked_concepts": [
+    "mep-geo-poligono-regular-07"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "La siguiente representación gráfica ilustra el perfil lateral de una rampa de acceso para un puente colgante, la cual asciende de forma curva desde el pilar lateral del soporte hasta alcanzar la torre central de suspensión, cuyas dimensiones de los ejes están en metros: [imagen]. De acuerdo con la información anterior, el área de la superficie lateral bajo esta sección del puente en metros cuadrados es",
+  "options": {
+    "A": "mayor que 20.",
+    "B": "mayor que 30.",
+    "C": "menor que 18.",
+    "D": "menor que 15."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La región está bajo una curva que va de (2,2) a (7,6).",
+    "Se puede aproximar el área con trapecios o contando cuadrículas.",
+    "El área es aproximadamente 20-25 m².",
+    "Por lo tanto, es mayor que 20.",
+    "Opción correcta: A."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Perfil lateral de la rampa de acceso del puente entre x=2 e x=7.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -1,
+          9
+        ],
+        "y": [
+          -1,
+          8
+        ]
+      },
+      "grid": false,
+      "children": [
+        {
+          "type": "path",
+          "points": [
+            [
+              2,
+              2
+            ],
+            [
+              4,
+              4.8
+            ],
+            [
+              6,
+              5.8
+            ],
+            [
+              7,
+              6
+            ]
+          ],
+          "color": "stone-900",
+          "strokeWidth": 2.5
+        },
+        {
+          "type": "line",
+          "p1": [
+            2,
+            0
+          ],
+          "p2": [
+            2,
+            2
+          ],
+          "strokeWidth": 2.5,
+          "color": "stone-900"
+        },
+        {
+          "type": "line",
+          "p1": [
+            7,
+            0
+          ],
+          "p2": [
+            7,
+            6
+          ],
+          "strokeWidth": 2.5,
+          "color": "stone-900"
+        },
+        {
+          "type": "line",
+          "p1": [
+            0,
+            2
+          ],
+          "p2": [
+            2,
+            2
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            0,
+            6
+          ],
+          "p2": [
+            7,
+            6
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            2
+          ],
+          "label": "2",
+          "label_position": "left"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            6
+          ],
+          "label": "6",
+          "label_position": "left"
+        },
+        {
+          "type": "point",
+          "coords": [
+            2,
+            0
+          ],
+          "label": "2",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            7,
+            0
+          ],
+          "label": "7",
+          "label_position": "bottom"
+        }
+      ]
+    }
+  }
+}

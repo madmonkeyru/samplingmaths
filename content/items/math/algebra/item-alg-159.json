@@ -1,0 +1,80 @@
+{
+  "id": 159,
+  "code": "item-alg-159",
+  "set_id": "set_4",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función Cuadrática",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A6",
+    "evidence": "A6.3",
+    "evidence_desc": "Calcula intersecciones de funciones cuadráticas con los ejes."
+  },
+  "evidence_id": "A6.3",
+  "concept_id": "mep-alg-exponencial-logaritmica-08",
+  "linked_concepts": [
+    "mep-alg-exponencial-logaritmica-08"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Las intersecciones con el eje $x$ de la función $f(x) = x^2 - 7x + 12$ se ubican en los puntos",
+  "options": {
+    "A": "$(3, 0)$ y $(4, 0)$",
+    "B": "$(-3, 0)$ y $(-4, 0)$",
+    "C": "$(12, 0)$ y $(1, 0)$",
+    "D": "$(0, 3)$ y $(0, 4)$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Para hallar intersecciones con el eje $x$, hacemos $f(x) = 0 \\implies x^2 - 7x + 12 = 0$.",
+    "Factorizamos el trinomio buscando dos números que multiplicados den 12 y sumados $-7$: $(x - 3)(x - 4) = 0$.",
+    "Las soluciones son $x_1 = 3$ y $x_2 = 4$.",
+    "Por lo tanto, las intersecciones con el eje $x$ son $(3, 0)$ y $(4, 0)$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Gráfica de f(x) = x^2 - 7x + 12 intersecando al eje x en 3 y 4",
+    "visual": {
+      "type": "function_plot",
+      "form": "quadratic",
+      "params": {
+        "a": 1,
+        "b": -7,
+        "c": 12
+      },
+      "domain": {
+        "x": [
+          1,
+          6
+        ],
+        "y": [
+          -2,
+          5
+        ]
+      },
+      "annotations": {
+        "points": [
+          {
+            "x": 3,
+            "y": 0,
+            "label": "(3,0)"
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "label": "(4,0)"
+          }
+        ]
+      }
+    }
+  }
+}

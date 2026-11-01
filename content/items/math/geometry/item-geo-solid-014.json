@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-014",
-  "area": "GEOMETRÍA",
+  "id": 184,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Área de la sección plana en un cono",
-  "cognitive_level": "Aplicación",
+  "topic": "\u00c1rea de la secci\u00f3n plana en un cono",
+  "cognitive_level": "Aplicaci\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.3",
-    "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+    "evidence_desc": "Determina caracter\u00edsticas m\u00e9tricas de secciones planas en figuras tridimensionales."
   },
-  "stem": "Un cono de altura $10\\text{ cm}$ y radio basal $6\\text{ cm}$ es cortado por un plano paralelo a la base a una distancia de $5\\text{ cm}$ de la cúspide. ¿Cuál es el área de la sección circular producida?",
+  "stem": "Un cono de altura $10\\text{ cm}$ y radio basal $6\\text{ cm}$ es cortado por un plano paralelo a la base a una distancia de $5\\text{ cm}$ de la c\u00faspide. \u00bfCu\u00e1l es el \u00e1rea de la secci\u00f3n circular producida?",
   "options": {
     "A": "$3\\pi\\text{ cm}^2$",
     "B": "$6\\pi\\text{ cm}^2$",
@@ -24,12 +24,12 @@
   },
   "correct_answer": "C",
   "solution_steps": [
-    "La razón de alturas es $\\frac{h'}{h} = \\frac{5}{10} = \\frac{1}{2}$.",
-    "El radio de la sección es $r' = \\frac{1}{2} \\times r = \\frac{1}{2} \\times 6 = 3\\text{ cm}$.",
-    "El área del círculo es $A = \\pi (r')^2 = \\pi (3)^2 = 9\\pi\\text{ cm}^2$."
+    "La raz\u00f3n de alturas es $\\frac{h'}{h} = \\frac{5}{10} = \\frac{1}{2}$.",
+    "El radio de la secci\u00f3n es $r' = \\frac{1}{2} \\times r = \\frac{1}{2} \\times 6 = 3\\text{ cm}$.",
+    "El \u00e1rea del c\u00edrculo es $A = \\pi (r')^2 = \\pi (3)^2 = 9\\pi\\text{ cm}^2$."
   ],
   "visual_spec": {
-    "alt": "Sección circular a media altura en cono",
+    "alt": "Secci\u00f3n circular a media altura en cono",
     "visual": {
       "type": "solid_3d",
       "shape": "cone",
@@ -50,11 +50,12 @@
         "lines": [
           "h = 10, h' = 5",
           "r = 6",
-          "Círculo sección r' = 3"
+          "C\u00edrculo secci\u00f3n r' = 3"
         ]
       },
       "showCrossSection": true,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-014"
 }

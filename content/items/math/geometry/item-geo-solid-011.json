@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-011",
-  "area": "GEOMETRÍA",
+  "id": 181,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Sección paralela a la base en un cono",
-  "cognitive_level": "Comprensión",
+  "topic": "Secci\u00f3n paralela a la base en un cono",
+  "cognitive_level": "Comprensi\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.3",
-    "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+    "evidence_desc": "Determina caracter\u00edsticas m\u00e9tricas de secciones planas en figuras tridimensionales."
   },
-  "stem": "Considere la figura del cono donde $V$ es la cúspide y $O$ es el centro de la base. Si la altura del cono mide $12\\text{ cm}$, el radio de la base mide $9\\text{ cm}$ y se traza una sección plana paralela a la base a $4\\text{ cm}$ del vértice $V$, ¿cuál es el radio de dicha sección?",
+  "stem": "Considere la figura del cono donde $V$ es la c\u00faspide y $O$ es el centro de la base. Si la altura del cono mide $12\\text{ cm}$, el radio de la base mide $9\\text{ cm}$ y se traza una secci\u00f3n plana paralela a la base a $4\\text{ cm}$ del v\u00e9rtice $V$, \u00bfcu\u00e1l es el radio de dicha secci\u00f3n?",
   "options": {
     "A": "$3\\text{ cm}$",
     "B": "$4\\text{ cm}$",
@@ -24,12 +24,12 @@
   },
   "correct_answer": "A",
   "solution_steps": [
-    "Por semejanza de triángulos entre el triángulo axial del cono y el del cono menor superior determinado por el corte:",
+    "Por semejanza de tri\u00e1ngulos entre el tri\u00e1ngulo axial del cono y el del cono menor superior determinado por el corte:",
     "$\\frac{r'}{r} = \\frac{h'}{h}$, donde $h=12$, $r=9$ y $h'=4$.",
     "$\\frac{r'}{9} = \\frac{4}{12} = \\frac{1}{3} \\implies r' = \\frac{9}{3} = 3\\text{ cm}$."
   ],
   "visual_spec": {
-    "alt": "Sección transversal paralela a la base de un cono",
+    "alt": "Secci\u00f3n transversal paralela a la base de un cono",
     "visual": {
       "type": "solid_3d",
       "shape": "cone",
@@ -52,13 +52,14 @@
       },
       "referenceBox": {
         "lines": [
-          "V: cúspide del cono",
+          "V: c\u00faspide del cono",
           "O: centro de la base",
-          "Triángulo V-O-B rectángulo en O"
+          "Tri\u00e1ngulo V-O-B rect\u00e1ngulo en O"
         ]
       },
       "showCrossSection": true,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-011"
 }

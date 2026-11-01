@@ -1,8 +1,8 @@
 {
-  "id": "item-geo-solid-027",
-  "area": "GEOMETRÍA",
+  "id": 197,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Sección oblicua en un cono circular recto",
+  "topic": "Secci\u00f3n oblicua en un cono circular recto",
   "cognitive_level": "Conocimiento",
   "calculator_allowed": true,
   "program_applicability": [
@@ -10,24 +10,24 @@
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.2",
-    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+    "evidence_desc": "Determina qu\u00e9 figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
   },
-  "stem": "Considere la siguiente figura de un cono circular recto de vértice $V$ intersecado por un plano secante $\\beta$ oblicuo respecto a la base, el cual corta todas sus generatrices:\n\n¿Cuál es el nombre de la curva o sección plana obtenida mediante dicha intersección?",
+  "stem": "Considere la siguiente figura de un cono circular recto de v\u00e9rtice $V$ intersecado por un plano secante $\\beta$ oblicuo respecto a la base, el cual corta todas sus generatrices:\n\n\u00bfCu\u00e1l es el nombre de la curva o secci\u00f3n plana obtenida mediante dicha intersecci\u00f3n?",
   "options": {
     "A": "Circunferencia",
     "B": "Elipse",
-    "C": "Parábola",
-    "D": "Hipérbola"
+    "C": "Par\u00e1bola",
+    "D": "Hip\u00e9rbola"
   },
   "correct_answer": "B",
   "solution_steps": [
-    "Cuando un plano secante corta a un cono circular recto con una inclinación oblicua menor que el ángulo de la generatriz (cortando todas las generatrices de un manto sin cortar la base), la sección plana obtenida es una elipse.",
-    "Si el corte fuera paralelo a la base, sería una circunferencia.",
-    "Si el plano fuera paralelo a una generatriz, se formaría una parábola.",
-    "Por consiguiente, la sección plana es una elipse."
+    "Cuando un plano secante corta a un cono circular recto con una inclinaci\u00f3n oblicua menor que el \u00e1ngulo de la generatriz (cortando todas las generatrices de un manto sin cortar la base), la secci\u00f3n plana obtenida es una elipse.",
+    "Si el corte fuera paralelo a la base, ser\u00eda una circunferencia.",
+    "Si el plano fuera paralelo a una generatriz, se formar\u00eda una par\u00e1bola.",
+    "Por consiguiente, la secci\u00f3n plana es una elipse."
   ],
   "visual_spec": {
     "alt": "Cono circular recto cortado oblicuamente por un plano secante",
@@ -53,12 +53,13 @@
       },
       "referenceBox": {
         "lines": [
-          "V: vértice del cono",
+          "V: v\u00e9rtice del cono",
           "O: centro de la base",
           "\\beta: plano secante oblicuo"
         ]
       },
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-027"
 }

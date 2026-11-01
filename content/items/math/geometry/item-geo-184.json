@@ -1,0 +1,71 @@
+{
+  "id": 184,
+  "code": "item-geo-184",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Área de la sección plana en un cono",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un cono de altura $10\\text{ cm}$ y radio basal $6\\text{ cm}$ es cortado por un plano paralelo a la base a una distancia de $5\\text{ cm}$ de la cúspide. ¿Cuál es el área de la sección circular producida?",
+  "options": {
+    "A": "$3\\pi\\text{ cm}^2$",
+    "B": "$6\\pi\\text{ cm}^2$",
+    "C": "$9\\pi\\text{ cm}^2$",
+    "D": "$18\\pi\\text{ cm}^2$"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "La razón de alturas es $\\frac{h'}{h} = \\frac{5}{10} = \\frac{1}{2}$.",
+    "El radio de la sección es $r' = \\frac{1}{2} \\times r = \\frac{1}{2} \\times 6 = 3\\text{ cm}$.",
+    "El área del círculo es $A = \\pi (r')^2 = \\pi (3)^2 = 9\\pi\\text{ cm}^2$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Sección circular a media altura en cono",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cone",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 70,
+        "height": 130,
+        "cutHeightFraction": 0.5,
+        "showAxis": true
+      },
+      "labels": {
+        "apex": "V",
+        "baseCenter": "O",
+        "cutCenter": "C"
+      },
+      "referenceBox": {
+        "lines": [
+          "h = 10, h' = 5",
+          "r = 6",
+          "Círculo sección r' = 3"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

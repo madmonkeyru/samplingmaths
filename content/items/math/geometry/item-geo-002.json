@@ -1,0 +1,46 @@
+{
+  "id": 2,
+  "code": "item-geo-002",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "affirmation_desc": null,
+    "evidence": "A1.3",
+    "evidence_desc": "Resuelve problemas, de diversos contextos, relacionados con la circunferencia y sus representaciones."
+  },
+  "evidence_id": "A1.3",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Una torre de control de un aeropuerto tiene un radar con un alcance máximo de 20 kilómetros. Tomando como origen la pista principal del aeropuerto, la torre de control se ubica 5 kilómetros al este (eje x positivo) y 4 kilómetros al sur (eje y negativo) de dicha pista. ¿Cuál es la ecuación que representa el alcance máximo del radar de la torre de control?",
+  "options": {
+    "A": "(x-5)^2 + (y+4)^2 = 400",
+    "B": "(x+5)^2 + (y-4)^2 = 400",
+    "C": "(x-5)^2 + (y-4)^2 = 400",
+    "D": "(x+5)^2 + (y+4)^2 = 400"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El centro de la circunferencia es (5, -4) porque 5 km al este y 4 km al sur.",
+    "El radio es 20 km, por lo que r^2 = 400.",
+    "La ecuación es (x-5)^2 + (y+4)^2 = 400.",
+    "Opción correcta: A."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

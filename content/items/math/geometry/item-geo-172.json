@@ -1,0 +1,75 @@
+{
+  "id": 172,
+  "code": "item-geo-172",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Cálculo de la distancia al centro en una esfera",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "En una esfera de radio $R = 15\\text{ cm}$, se realiza un corte plano cuya sección circular tiene un radio de $12\\text{ cm}$. ¿A qué distancia del centro de la esfera se realizó el corte?",
+  "options": {
+    "A": "$3\\text{ cm}$",
+    "B": "$8\\text{ cm}$",
+    "C": "$9\\text{ cm}$",
+    "D": "$\\sqrt{369}\\text{ cm}$"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "En la esfera, el radio de la esfera $R$, el radio de la sección plana $r$ y la distancia $d$ del centro de la esfera al plano forman un triángulo rectángulo.",
+    "Por el Teorema de Pitágoras: $R^2 = d^2 + r^2$.",
+    "Sustituyendo los valores conocidos: $15^2 = d^2 + 12^2 \\implies 225 = d^2 + 144$.",
+    "$d^2 = 225 - 144 = 81 \\implies d = \\sqrt{81} = 9\\text{ cm}$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Cálculo métrico del corte transversal en una esfera",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "sphere",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 85,
+        "distance": 35,
+        "showRadius": true,
+        "showAxis": true,
+        "showRightAngle": true
+      },
+      "labels": {
+        "center": "O",
+        "sectionCenter": "C",
+        "sectionRight": "A",
+        "radius": "15",
+        "sectionRadius": "12"
+      },
+      "referenceBox": {
+        "lines": [
+          "O: centro de la esfera",
+          "C: centro de la sección plana",
+          "Radio esfera = 15 cm"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

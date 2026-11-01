@@ -1,0 +1,48 @@
+{
+  "id": 52,
+  "code": "item-alg-052",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Composición de funciones",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A1",
+    "affirmation_desc": null,
+    "evidence": "A1.4",
+    "evidence_desc": "Determina las condiciones necesarias y suficientes para que se defina la composición de dos funciones en diversos contextos."
+  },
+  "evidence_id": "A1.4",
+  "concept_id": "mep-alg-composicion-02",
+  "linked_concepts": [
+    "mep-alg-composicion-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere las siguientes funciones $f$, $g$ y $p$ con sus respectivos dominios y ámbitos:\n• $f: [0, 4] \\to [1, 5]$\n• $g: [2, 6] \\to [1, 4]$\n• $p: [2, 6] \\to [0, 4]$\n\n¿Cuál de las siguientes composiciones de funciones está bien definida?",
+  "options": {
+    "A": "$(g \\circ f)(x)$",
+    "B": "$(p \\circ f)(x)$",
+    "C": "$(f \\circ p)(x)$",
+    "D": "$(g \\circ p)(x)$"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Para que (h ° k)(x) = h(k(x)) esté bien definida, el ámbito de k debe estar contenido en el dominio de h.",
+    "(g ° f): ámbito de f = [1, 5]; dominio de g = [2, 6]. [1, 5] ⊄ [2, 6]. No está bien definida.",
+    "(p ° f): ámbito de f = [1, 5]; dominio de p = [2, 6]. [1, 5] ⊄ [2, 6]. No está bien definida.",
+    "(f ° p): ámbito de p = [0, 4]; dominio de f = [0, 4]. [0, 4] ⊆ [0, 4]. ✓ Bien definida.",
+    "(g ° p): ámbito de p = [0, 4]; dominio de g = [2, 6]. [0, 4] ⊄ [2, 6]. No está bien definida.",
+    "Por lo tanto, la respuesta correcta es C."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

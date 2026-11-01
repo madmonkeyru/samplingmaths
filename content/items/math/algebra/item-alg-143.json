@@ -1,0 +1,48 @@
+{
+  "id": 143,
+  "code": "item-alg-143",
+  "set_id": "set_3",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Sistemas de Ecuaciones",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A9",
+    "affirmation_desc": null,
+    "evidence": "A9.1",
+    "evidence_desc": "Resuelve sistemas de dos ecuaciones lineales con dos incógnitas."
+  },
+  "evidence_id": "A9.1",
+  "concept_id": "mep-alg-sistemas-ecuaciones-05",
+  "linked_concepts": [
+    "mep-alg-sistemas-ecuaciones-05"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "En una tienda se compraron 2 cuadernos y 3 lápices por $\\mathbb{C}3\\,100$. En otra compra se adquirieron 4 cuadernos y 1 lápiz del mismo tipo por $\\mathbb{C}4\\,700$. ¿Cuál es el precio de un cuaderno?",
+  "options": {
+    "A": "$\\mathbb{C}500$",
+    "B": "$\\mathbb{C}1\\,000$",
+    "C": "$\\mathbb{C}1\\,100$",
+    "D": "$\\mathbb{C}700$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Planteamos el sistema de ecuaciones donde $x$ es el precio del cuaderno e $y$ el del lápiz:",
+    "(1) $2x + 3y = 3100$",
+    "(2) $4x + y = 4700 \\implies y = 4700 - 4x$",
+    "Sustituimos $y$ en (1): $2x + 3(4700 - 4x) = 3100 \\implies 2x + 14100 - 12x = 3100$.",
+    "$-10x = 3100 - 14100 \\implies -10x = -11000 \\implies x = 1000$.",
+    "El precio de un cuaderno es $\\mathbb{C}1\\,000$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

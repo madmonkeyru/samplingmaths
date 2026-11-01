@@ -1,0 +1,93 @@
+{
+  "id": 99,
+  "code": "item-alg-099",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Intersección de funciones",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A2",
+    "evidence": "A2.6",
+    "evidence_desc": "Determina los puntos de intersección entre una recta y una parábola."
+  },
+  "evidence_id": "A2.6",
+  "concept_id": "mep-alg-funcion-lineal-03",
+  "linked_concepts": [
+    "mep-alg-funcion-lineal-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere las funciones $f(x) = x^2$ y $g(x) = x + 2$. ¿Cuáles son las abscisas ($x$) de los puntos donde se intersecan las gráficas de $f$ y $g$?",
+  "options": {
+    "A": "$x = -1$ y $x = 2$",
+    "B": "$x = 1$ y $x = -2$",
+    "C": "$x = 0$ y $x = 2$",
+    "D": "$x = -1$ y $x = -2$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Para hallar las intersecciones, igualamos las expresiones: $f(x) = g(x) \\implies x^2 = x + 2$.",
+    "Reordenando a la forma estándar: $x^2 - x - 2 = 0$.",
+    "Factorizando: $(x - 2)(x + 1) = 0 \\implies x = 2$ ó $x = -1$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Intersección de parábola y recta en x = -1 y x = 2",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -3,
+          4
+        ],
+        "y": [
+          -1,
+          6
+        ]
+      },
+      "children": [
+        {
+          "type": "line",
+          "p1": [
+            -2,
+            0
+          ],
+          "p2": [
+            3,
+            5
+          ],
+          "color": "#e11d48",
+          "strokeWidth": 2,
+          "label": "y = x+2"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -1,
+            1
+          ],
+          "label": "(-1,1)",
+          "color": "#2563eb"
+        },
+        {
+          "type": "point",
+          "coords": [
+            2,
+            4
+          ],
+          "label": "(2,4)",
+          "color": "#2563eb"
+        }
+      ]
+    }
+  }
+}

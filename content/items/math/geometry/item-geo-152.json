@@ -1,0 +1,45 @@
+{
+  "id": 152,
+  "code": "item-geo-152",
+  "set_id": "set_4",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "evidence": "A1.3",
+    "evidence_desc": "Determina la posición relativa de rectas respecto a circunferencias."
+  },
+  "evidence_id": "A1.3",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Dada la circunferencia $x^2 + y^2 = 16$ y la recta $L: y = x + 6$, determine la posición relativa de la recta $L$ respecto a la circunferencia.",
+  "options": {
+    "A": "Secante",
+    "B": "Tangente",
+    "C": "Exterior",
+    "D": "Coincidente con el diámetro"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Sustituimos $y = x + 6$ en la ecuación de la circunferencia: $x^2 + (x + 6)^2 = 16$.",
+    "Desarrollamos: $x^2 + x^2 + 12x + 36 = 16 \\implies 2x^2 + 12x + 20 = 0 \\implies x^2 + 6x + 10 = 0$.",
+    "Calculamos el discriminante $\\Delta = b^2 - 4ac = 6^2 - 4(1)(10) = 36 - 40 = -4$.",
+    "Dado que $\\Delta < 0$, la ecuación no tiene soluciones reales y la recta es EXTERIOR a la circunferencia."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

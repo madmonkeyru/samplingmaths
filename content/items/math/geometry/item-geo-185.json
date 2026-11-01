@@ -1,0 +1,71 @@
+{
+  "id": 185,
+  "code": "item-geo-185",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección axial triangular del cono",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+  },
+  "evidence_id": "A5.2",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Si un cono circular recto de radio $r=5\\text{ cm}$ y altura $h=12\\text{ cm}$ se corta con un plano que pasa por su vértice y por el centro de la base, ¿cuál es el perímetro de la sección plana resultante?",
+  "options": {
+    "A": "$26\\text{ cm}$",
+    "B": "$36\\text{ cm}$",
+    "C": "$40\\text{ cm}$",
+    "D": "$60\\text{ cm}$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La sección plana que pasa por el vértice y el diámetro de la base es un triángulo isósceles cuyos lados congruentes son las generatrices $g$ y cuya base es el diámetro basal $2r = 10\\text{ cm}$.",
+    "Calculamos la generatriz: $g = \\sqrt{h^2 + r^2} = \\sqrt{12^2 + 5^2} = \\sqrt{169} = 13\\text{ cm}$.",
+    "El perímetro del triángulo es $P = g + g + 2r = 13 + 13 + 10 = 36\\text{ cm}$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Sección axial triangular en un cono",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cone",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 75,
+        "height": 130,
+        "showAxis": true
+      },
+      "labels": {
+        "apex": "V",
+        "baseCenter": "O",
+        "baseLeft": "A",
+        "baseRight": "B"
+      },
+      "referenceBox": {
+        "lines": [
+          "Sección axial VAB",
+          "Triángulo isósceles",
+          "Base AB = 10, g = 13"
+        ]
+      },
+      "showCrossSection": false,
+      "showAxes": true
+    }
+  }
+}

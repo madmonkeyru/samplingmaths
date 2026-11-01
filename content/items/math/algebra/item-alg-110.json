@@ -1,0 +1,79 @@
+{
+  "id": 110,
+  "code": "item-alg-110",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función logarítmica",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A3",
+    "evidence": "A3.6",
+    "evidence_desc": "Analiza el comportamiento creciente de una función logarítmica."
+  },
+  "evidence_id": "A3.6",
+  "concept_id": "mep-alg-propiedades-logaritmos-09",
+  "linked_concepts": [
+    "mep-alg-propiedades-logaritmos-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la función $g(x) = \\log_{10}(x)$. ¿En cuál de los siguientes intervalos la función es estrictamente creciente?",
+  "options": {
+    "A": "$]0, +\\infty[$",
+    "B": "$]-\\infty, 0[$",
+    "C": "$[1, +\\infty[$ únicamente",
+    "D": "En ningún intervalo"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Toda función logarítmica $g(x) = \\log_a(x)$ con base $a > 1$ (aquí $a = 10$) es estrictamente creciente en todo su dominio.",
+    "El dominio de la función logarítmica es el conjunto de números reales positivos $]0, +\\infty[$.",
+    "Por lo tanto, es estrictamente creciente en $]0, +\\infty[$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Gráfica creciente de log10(x)",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -1,
+          10
+        ],
+        "y": [
+          -2,
+          2
+        ]
+      },
+      "children": [
+        {
+          "type": "point",
+          "coords": [
+            1,
+            0
+          ],
+          "label": "(1,0)",
+          "color": "#2563eb"
+        },
+        {
+          "type": "point",
+          "coords": [
+            10,
+            1
+          ],
+          "label": "(10,1)",
+          "color": "#1e293b"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": 107,
+  "code": "item-alg-107",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Comparación de modelos de funciones",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A3",
+    "evidence": "A3.5",
+    "evidence_desc": "Diferencia entre crecimiento constante (lineal) y crecimiento multiplicativo (exponencial)."
+  },
+  "evidence_id": "A3.5",
+  "concept_id": "mep-alg-concepto-funcion-01",
+  "linked_concepts": [
+    "mep-alg-concepto-funcion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Un inversionista analiza dos opciones de ahorro para un capital inicial de $₡100 000$: el Plan A agrega $₡10 000$ fijos cada año, mientras que el Plan B duplica el monto total acumulado cada 5 años. ¿Qué tipos de modelos describen el Plan A y el Plan B respectivamente?",
+  "options": {
+    "A": "Plan A es lineal y Plan B es exponencial.",
+    "B": "Plan A es exponencial y Plan B es lineal.",
+    "C": "Ambos planes se modelan con funciones cuadráticas.",
+    "D": "Ambos planes se modelan con funciones lineales."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Un incremento de una cantidad fija por unidad de tiempo representa una razón de cambio constante, la cual se modela mediante una función lineal $A(t) = 10000t + 100000$.",
+    "Un incremento por factor constante (duplicar) representa una tasa de crecimiento porcentual/multiplicativo, el cual se modela mediante una función exponencial $B(t) = 100000 \\cdot 2^{t/5}$.",
+    "Por lo tanto, Plan A es lineal y Plan B es exponencial."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

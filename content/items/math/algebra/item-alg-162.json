@@ -1,0 +1,43 @@
+{
+  "id": 162,
+  "code": "item-alg-162",
+  "set_id": "set_4",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función Inversa",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A8",
+    "evidence": "A8.2",
+    "evidence_desc": "Reconoce propiedades de la función inversa respecto a la simetría con la recta y = x."
+  },
+  "evidence_id": "A8.2",
+  "concept_id": "mep-alg-funcion-inversa-06",
+  "linked_concepts": [
+    "mep-alg-funcion-inversa-06"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Si el punto $(2, 7)$ pertenece a la gráfica de una función biyectiva $f$, ¿cuál punto pertenece con certeza a la gráfica de su función inversa $f^{-1}$?",
+  "options": {
+    "A": "$(7, 2)$",
+    "B": "$(-2, -7)$",
+    "C": "$(-7, -2)$",
+    "D": "$(2, -7)$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Por definición de función inversa, si $f(a) = b$, entonces $f^{-1}(b) = a$.",
+    "Dado que el par ordenado $(2,7)$ pertenece a $f$, el par ordenado invertido $(7,2)$ pertenece a $f^{-1}$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

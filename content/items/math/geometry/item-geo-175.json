@@ -1,0 +1,68 @@
+{
+  "id": 175,
+  "code": "item-geo-175",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Identificación geométrica de secciones esféricas",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+  },
+  "evidence_id": "A5.2",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "¿Cuál de las siguientes afirmaciones respecto a las secciones planas de una esfera es siempre VERDADERA?",
+  "options": {
+    "A": "Al cortar una esfera con un plano oblicuo que no pase por el centro, la sección obtenida es una elipse.",
+    "B": "Toda sección plana producida por un plano secante a una esfera es una circunferencia o círculo.",
+    "C": "Si el corte se hace a mayor distancia del centro, el área del círculo de sección aumenta.",
+    "D": "Una sección plana que pase por el centro de la esfera genera una parábola."
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "En una esfera perfecta tridimensional, la intersección con cualquier plano secante (sin importar el ángulo o inclinación) siempre genera una circunferencia en su contorno y un círculo como región interior.",
+    "A mayor distancia del centro la sección disminuye de radio, y nunca se obtienen elipses o parábolas al cortar una esfera con planos."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Intersección plana universal en una esfera",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "sphere",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 80,
+        "distance": 25,
+        "showEquator": true
+      },
+      "labels": {
+        "center": "O",
+        "sectionCenter": "C"
+      },
+      "referenceBox": {
+        "lines": [
+          "Sección plana en esfera",
+          "Siempre es circular",
+          "O: centro"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": 170,
+  "code": "item-est-170",
+  "set_id": "set_4",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Diagrama de Caja",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A10",
+    "evidence": "A10.1",
+    "evidence_desc": "Interpreta diagramas de caja en el contexto de notas escolares."
+  },
+  "evidence_id": "A10.1",
+  "concept_id": "mep-est-diagrama-cajas-ric-03",
+  "linked_concepts": [
+    "mep-est-diagrama-cajas-ric-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "El diagrama de caja de las notas de un grupo muestra: $\\text{Mínimo} = 50$, $Q_1 = 65$, $\\text{Mediana} = 78$, $Q_3 = 88$, $\\text{Máximo} = 100$. ¿Qué porcentaje de estudiantes obtuvo una nota entre 65 y 88?",
+  "options": {
+    "A": "$50\\%$",
+    "B": "$25\\%$",
+    "C": "$75\\%$",
+    "D": "$40\\%$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Entre $Q_1 = 65$ y $Q_3 = 88$ se encuentra la caja central de la distribución.",
+    "Por definición de cuartiles, exactamente el $50\\%$ de los datos está comprendido en el intervalo $[Q_1, Q_3]$.",
+    "Por lo tanto, la respuesta correcta es el $50\\%$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Diagrama de caja de notas escolares mostrando Q1=65, Mediana=78, Q3=88",
+    "visual": {
+      "type": "box_plot",
+      "groups": [
+        {
+          "name": "Notas",
+          "min": 50,
+          "q1": 65,
+          "median": 78,
+          "q3": 88,
+          "max": 100
+        }
+      ]
+    }
+  }
+}

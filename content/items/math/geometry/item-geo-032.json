@@ -1,0 +1,100 @@
+{
+  "id": 32,
+  "code": "item-geo-032",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Recta secante a una circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A3",
+    "evidence": "A3.2",
+    "evidence_desc": "Determina si una recta dada gráfica o algebraicamente es secante, tangente o exterior a una circunferencia en diversos contextos."
+  },
+  "evidence_id": "A3.2",
+  "concept_id": "mep-geo-posicion-recta-05",
+  "linked_concepts": [
+    "mep-geo-posicion-recta-05"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la circunferencia dada por x^2 + y^2 = 25 y la recta L dada por y = 3, cuya representación gráfica se observa a continuación: [imagen]. De acuerdo con la figura, ¿cuál es la posición relativa de la recta L respecto a la circunferencia?",
+  "options": {
+    "A": "Secante",
+    "B": "Tangente",
+    "C": "Exterior",
+    "D": "Perpendicular al eje y"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La recta y = 3 es una recta horizontal a distancia 3 del origen.",
+    "El radio de la circunferencia x^2 + y^2 = 25 es r = sqrt(25) = 5.",
+    "Como la distancia desde el centro (0,0) a la recta (d = 3) es menor que el radio (5), la recta interseca a la circunferencia en dos puntos distintos.",
+    "Por lo tanto, la recta L es secante a la circunferencia."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Circunferencia x^2 + y^2 = 25 e intersección con la recta horizontal y = 3.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -6,
+          6
+        ],
+        "y": [
+          -6,
+          6
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            0,
+            0
+          ],
+          "radius": 5,
+          "stroke": "black"
+        },
+        {
+          "type": "line",
+          "from": [
+            -6,
+            3
+          ],
+          "to": [
+            6,
+            3
+          ],
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -4,
+            3
+          ],
+          "label": "P1"
+        },
+        {
+          "type": "point",
+          "coords": [
+            4,
+            3
+          ],
+          "label": "P2"
+        }
+      ]
+    }
+  }
+}

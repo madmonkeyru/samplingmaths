@@ -1,0 +1,47 @@
+{
+  "id": 72,
+  "code": "item-alg-072",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función exponencial — modelado",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A6",
+    "affirmation_desc": null,
+    "evidence": "A6.1",
+    "evidence_desc": "Identifica modelos matemáticos que involucran las funciones exponenciales en diversos contextos."
+  },
+  "evidence_id": "A6.1",
+  "concept_id": "mep-alg-exponencial-logaritmica-08",
+  "linked_concepts": [
+    "mep-alg-exponencial-logaritmica-08"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Una persona abre una cuenta de ahorros especial que duplica el dinero depositado cada año que pasa. Si la cantidad inicial depositada fue de 250 colones, entonces, ¿cuál es el criterio del modelo matemático $D(t)$ que explica la cantidad de dinero acumulado en función de los años t?",
+  "options": {
+    "A": "$250 + 2t$",
+    "B": "$250 \\cdot 2t$",
+    "C": "$250 + 2^t$",
+    "D": "$250 \\cdot 2^t$"
+  },
+  "correct_answer": "D",
+  "solution_steps": [
+    "El dinero se duplica cada año, lo que corresponde a un crecimiento exponencial.",
+    "El modelo general es D(t) = D₀ • r^t, donde D₀ es la cantidad inicial y r es el factor de crecimiento.",
+    "Aquí D₀ = 250 y r = 2 (se duplica).",
+    "Por lo tanto: D(t) = 250 • 2^t.",
+    "Respuesta: D."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

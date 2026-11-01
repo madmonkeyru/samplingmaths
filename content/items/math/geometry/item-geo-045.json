@@ -1,0 +1,121 @@
+{
+  "id": 45,
+  "code": "item-geo-045",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Simetría axial",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A6",
+    "evidence": "A6.1",
+    "evidence_desc": "Determina ejes de simetría en figuras simétricas en diversos contextos."
+  },
+  "evidence_id": "A6.1",
+  "concept_id": "mep-geo-transformaciones-10",
+  "linked_concepts": [
+    "mep-geo-transformaciones-10"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere el rectángulo $ABCD$ representado en el plano cartesiano con vértices $A(-3, 2)$, $B(3, 2)$, $C(3, -2)$ y $D(-3, -2)$: [imagen]. ¿Cuál de las siguientes rectas corresponde a un eje de simetría del rectángulo?",
+  "options": {
+    "A": "El eje $y$ (recta $x = 0$)",
+    "B": "La recta $y = x$",
+    "C": "La recta $y = 2$",
+    "D": "La recta $x = 3$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El rectángulo está centrado en el origen (0,0).",
+    "Reflejar respecto al eje y (x = 0) envía A(-3, 2) a B(3, 2) y D(-3, -2) a C(3, -2).",
+    "Por lo tanto, la recta x = 0 (eje y) es un eje de simetría axial para la figura."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Rectángulo ABCD centrado en el origen del plano cartesiano.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -5,
+          5
+        ],
+        "y": [
+          -4,
+          4
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              -3,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              -2
+            ],
+            [
+              -3,
+              -2
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "type": "point",
+          "coords": [
+            -3,
+            2
+          ],
+          "label": "A(-3,2)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            2
+          ],
+          "label": "B(3,2)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            -2
+          ],
+          "label": "C(3,-2)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -3,
+            -2
+          ],
+          "label": "D(-3,-2)"
+        }
+      ]
+    }
+  }
+}

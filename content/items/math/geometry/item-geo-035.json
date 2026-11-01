@@ -1,0 +1,95 @@
+{
+  "id": 35,
+  "code": "item-geo-035",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Posición relativa entre rectas",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A3",
+    "evidence": "A3.4",
+    "evidence_desc": "Determina geométrica o algebraicamente la posición relativa entre rectas en el plano desde el punto de vista del paralelismo o la perpendicularidad, en diversos contextos."
+  },
+  "evidence_id": "A3.4",
+  "concept_id": "mep-geo-rectas-paralelas-perp-06",
+  "linked_concepts": [
+    "mep-geo-rectas-paralelas-perp-06"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere las rectas $L_1: y = 2x + 3$ y $L_2: y = -\\frac{1}{2}x + 1$ graficadas a continuación en el plano cartesiano: [imagen]. ¿Cuál es la relación de posición relativa entre $L_1$ y $L_2$?",
+  "options": {
+    "A": "Son perpendiculares.",
+    "B": "Son paralelas no coincidentes.",
+    "C": "Son coincidentes.",
+    "D": "Son oblicuas no perpendiculares."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La pendiente de L1 es m1 = 2.",
+    "La pendiente de L2 es m2 = -1/2.",
+    "El producto de sus pendientes es m1 * m2 = 2 * (-1/2) = -1.",
+    "Cuando el producto de las pendientes es -1, las rectas son perpendiculares."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Gráfica de dos rectas L1 y L2 que se intersecan formando un ángulo recto.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -4,
+          4
+        ],
+        "y": [
+          -2,
+          6
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "line",
+          "from": [
+            -3.5,
+            -4
+          ],
+          "to": [
+            1.5,
+            6
+          ],
+          "stroke": "black"
+        },
+        {
+          "type": "line",
+          "from": [
+            -4,
+            3
+          ],
+          "to": [
+            4,
+            -1
+          ],
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -0.8,
+            1.4
+          ],
+          "label": "P"
+        }
+      ]
+    }
+  }
+}

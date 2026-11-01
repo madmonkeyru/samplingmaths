@@ -1,0 +1,77 @@
+{
+  "id": 101,
+  "code": "item-alg-101",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Transformaciones de funciones",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A2",
+    "evidence": "A2.7",
+    "evidence_desc": "Determina el criterio de una función trasladada horizontal y verticalmente."
+  },
+  "evidence_id": "A2.7",
+  "concept_id": "mep-alg-funcion-lineal-03",
+  "linked_concepts": [
+    "mep-alg-funcion-lineal-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Si la gráfica de $f(x) = x^2$ se traslada 3 unidades a la derecha y 2 unidades hacia arriba para obtener $g(x)$, ¿cuál es el criterio de $g(x)$?",
+  "options": {
+    "A": "$g(x) = (x - 3)^2 + 2$",
+    "B": "$g(x) = (x + 3)^2 + 2$",
+    "C": "$g(x) = (x - 3)^2 - 2$",
+    "D": "$g(x) = (x + 3)^2 - 2$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Una traslación de $h$ unidades a la derecha sustituye $x$ por $(x - h)$. Aquí $h = 3$, por lo que queda $(x - 3)^2$.",
+    "Una traslación de $k$ unidades hacia arriba suma $k$ al final. Aquí $k = 2$.",
+    "Por lo tanto, el nuevo criterio es $g(x) = (x - 3)^2 + 2$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Parábola trasladada con vértice en (3, 2)",
+    "visual": {
+      "type": "function_plot",
+      "form": "quadratic",
+      "params": {
+        "a": 1,
+        "vertex": [
+          3,
+          2
+        ]
+      },
+      "annotations": {
+        "vertex": {
+          "show": true,
+          "label": "V(3, 2)",
+          "project_to": [
+            "x",
+            "y"
+          ]
+        }
+      },
+      "domain": {
+        "x": [
+          -1,
+          6
+        ],
+        "y": [
+          0,
+          8
+        ]
+      }
+    }
+  }
+}

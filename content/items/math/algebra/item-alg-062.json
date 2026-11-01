@@ -1,0 +1,47 @@
+{
+  "id": 62,
+  "code": "item-alg-062",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función inversa",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A4",
+    "affirmation_desc": null,
+    "evidence": "A4.1",
+    "evidence_desc": "Identifica las condiciones para que una función tenga inversa en diversos contextos."
+  },
+  "evidence_id": "A4.1",
+  "concept_id": "mep-alg-funcion-inversa-06",
+  "linked_concepts": [
+    "mep-alg-funcion-inversa-06"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Sea una función f con dominio A y codominio B (considere el codominio igual al ámbito). ¿Cuál de las siguientes condiciones es necesaria y suficiente para garantizar la existencia de su función inversa?",
+  "options": {
+    "A": "Que la función sea lineal.",
+    "B": "Que la gráfica de la función no pase por el origen (0, 0).",
+    "C": "Que la función posea únicamente números positivos en su dominio.",
+    "D": "Que elementos distintos del dominio A tengan imágenes distintas en el codominio B."
+  },
+  "correct_answer": "D",
+  "solution_steps": [
+    "Una función tiene inversa si y solo si es inyectiva (uno a uno).",
+    "La inyectividad significa que elementos distintos del dominio tienen imágenes distintas en el codominio.",
+    "La opción D expresa exactamente esta condición necesaria y suficiente.",
+    "Las opciones A, B y C no garantizan inyectividad (una función lineal puede no ser inyectiva si es constante; pasar o no por el origen no determina inyectividad; restringir a positivos no garantiza inyectividad).",
+    "Respuesta: D."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

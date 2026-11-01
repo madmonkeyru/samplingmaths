@@ -1,0 +1,45 @@
+{
+  "id": 144,
+  "code": "item-alg-144",
+  "set_id": "set_3",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función Cuadrática",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A6",
+    "affirmation_desc": null,
+    "evidence": "A6.2",
+    "evidence_desc": "Resuelve problemas de optimización utilizando funciones cuadráticas."
+  },
+  "evidence_id": "A6.2",
+  "concept_id": "mep-alg-funcion-cuadratica-04",
+  "linked_concepts": [
+    "mep-alg-funcion-cuadratica-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "La altura $h(t)$ en metros que alcanza un proyectil $t$ segundos después del lanzamiento está dada por $h(t) = -5t^2 + 30t$. La altura máxima que alcanza el proyectil es",
+  "options": {
+    "A": "$3\\text{ metros}$",
+    "B": "$30\\text{ metros}$",
+    "C": "$45\\text{ metros}$",
+    "D": "$60\\text{ metros}$"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Dado que la función cuadrática $h(t) = -5t^2 + 30t$ tiene $a = -5 < 0$, su valor máximo ocurre en la coordenada $y$ del vértice.",
+    "Calculamos el tiempo en el vértice $t_v = -\\frac{b}{2a} = -\\frac{30}{2(-5)} = 3\\text{ segundos}$.",
+    "Evaluamos la altura máxima $h(3) = -5(3)^2 + 30(3) = -5(9) + 90 = -45 + 90 = 45\\text{ metros}$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

@@ -1,0 +1,44 @@
+{
+  "id": 154,
+  "code": "item-geo-154",
+  "set_id": "set_4",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Transformaciones",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A3",
+    "evidence": "A3.3",
+    "evidence_desc": "Aplica homotecias en el plano cartesiano."
+  },
+  "evidence_id": "A3.3",
+  "concept_id": "mep-geo-transformaciones-10",
+  "linked_concepts": [
+    "mep-geo-transformaciones-10"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Al aplicar una homotecia centrada en el origen $(0,0)$ con razón de homotecia $k = -2$ al triángulo con vértice $V(3, -2)$, las coordenadas del vértice homólogo $V’$ corresponden a",
+  "options": {
+    "A": "$(-6, 4)$",
+    "B": "$(6, -4)$",
+    "C": "$(-1.5, 1)$",
+    "D": "$(-6, -4)$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Para una homotecia con centro en el origen y razón $k$, la coordenada del punto imagen se calcula multiplicando cada componente por $k$: $V’ = (k \\cdot x, k \\cdot y)$.",
+    "Sustituyendo $V(3, -2)$ y $k = -2$: $V’ = (-2 \\cdot 3, -2 \\cdot (-2)) = (-6, 4)$.",
+    "Por ende, las coordenadas de $V’$ son $(-6, 4)$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

@@ -1,0 +1,132 @@
+{
+  "id": 36,
+  "code": "item-geo-036",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Propiedad de la recta tangente y el radio",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A3",
+    "evidence": "A3.5",
+    "evidence_desc": "Determina elementos relacionados con la propiedad que establece que una recta tangente a una circunferencia es perpendicular al radio de la circunferencia en el punto de tangencia en diversos contextos."
+  },
+  "evidence_id": "A3.5",
+  "concept_id": "mep-geo-posicion-recta-05",
+  "linked_concepts": [
+    "mep-geo-posicion-recta-05"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "En la figura adjunta, la recta $L$ es tangente a la circunferencia de centro $O(0, 0)$ en el punto $T(6, 0)$. Si el punto $P(6, 8)$ pertenece a la recta $L$ y la distancia de $O$ a $T$ es el radio ($6\\text{ cm}$): [imagen], ¿cuál es la medida en centímetros de la hipotenusa $OP$ del triángulo rectángulo $OTP$?",
+  "options": {
+    "A": "$10\\text{ cm}$",
+    "B": "$12\\text{ cm}$",
+    "C": "$14\\text{ cm}$",
+    "D": "$100\\text{ cm}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Por la propiedad de la tangente, la recta L es perpendicular al radio OT en el punto de tangencia T, formando un triángulo rectángulo OTP en T.",
+    "Los catetos miden OT = 6 cm y TP = 8 cm.",
+    "Aplicando el teorema de Pitágoras: OP^2 = OT^2 + TP^2 = 6^2 + 8^2 = 36 + 64 = 100.",
+    "OP = sqrt(100) = 10 cm."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Triángulo rectángulo OTP formado por el radio OT (6 cm), la tangente TP (8 cm) y la hipotenusa OP.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -2,
+          9
+        ],
+        "y": [
+          -2,
+          10
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            0,
+            0
+          ],
+          "radius": 6,
+          "stroke": "black"
+        },
+        {
+          "type": "line",
+          "from": [
+            0,
+            0
+          ],
+          "to": [
+            6,
+            0
+          ],
+          "stroke": "black"
+        },
+        {
+          "type": "line",
+          "from": [
+            6,
+            -1
+          ],
+          "to": [
+            6,
+            9
+          ],
+          "stroke": "black"
+        },
+        {
+          "type": "line",
+          "from": [
+            0,
+            0
+          ],
+          "to": [
+            6,
+            8
+          ],
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            0
+          ],
+          "label": "O"
+        },
+        {
+          "type": "point",
+          "coords": [
+            6,
+            0
+          ],
+          "label": "T(6,0)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            6,
+            8
+          ],
+          "label": "P(6,8)"
+        }
+      ]
+    }
+  }
+}

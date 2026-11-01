@@ -1,0 +1,337 @@
+{
+  "id": 22,
+  "code": "item-geo-022",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Transformaciones en el plano - Reflexión",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A7",
+    "affirmation_desc": null,
+    "evidence": "A7.1",
+    "evidence_desc": "Reconoce las figuras obtenidas a partir del concepto de transformación (traslación, homotecia, reflexión o rotación) a figuras dadas, en diversos contextos."
+  },
+  "evidence_id": "A7.1",
+  "concept_id": "mep-geo-transformaciones-10",
+  "linked_concepts": [
+    "mep-geo-transformaciones-10"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Una forma de obtener el polígono #3 es aplicándole al polígono #4 una reflexión sobre",
+  "options": {
+    "A": "y = 1",
+    "B": "x = 1",
+    "C": "y = 2",
+    "D": "x = 2"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "El polígono #4 se ubica en la región de abscisas negativas y el polígono #3 en la de abscisas positivas.",
+    "Una reflexión respecto a una recta vertical x = a transforma cada punto (x, y) en (2a − x, y).",
+    "La recta de reflexión es vertical y equidista de ambos polígonos: x = 1.",
+    "Por lo tanto, el polígono #3 se obtiene reflejando el polígono #4 sobre la recta x = 1.",
+    "Opción correcta: B."
+  ],
+  "group_id": "g_transformations",
+  "visual_spec": {
+    "alt": "Cuatro polígonos (#1, #2, #3, #4) en un plano cartesiano con cuadrícula.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -4.5,
+          6.5
+        ],
+        "y": [
+          -5.5,
+          4.5
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              -1,
+              3
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "color": "stone-900",
+          "fill": "none",
+          "strokeWidth": 2
+        },
+        {
+          "type": "label",
+          "coords": [
+            -0.75,
+            1.5
+          ],
+          "text": "#1"
+        },
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "color": "stone-900",
+          "fill": "none",
+          "strokeWidth": 2
+        },
+        {
+          "type": "label",
+          "coords": [
+            2.25,
+            2.5
+          ],
+          "text": "#2"
+        },
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              4,
+              -1
+            ],
+            [
+              5,
+              -1
+            ],
+            [
+              5,
+              -4
+            ],
+            [
+              3,
+              -4
+            ]
+          ],
+          "color": "stone-900",
+          "fill": "none",
+          "strokeWidth": 2
+        },
+        {
+          "type": "label",
+          "coords": [
+            4.25,
+            -2.5
+          ],
+          "text": "#3"
+        },
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              -3,
+              -1
+            ],
+            [
+              -2,
+              -1
+            ],
+            [
+              -1,
+              -4
+            ],
+            [
+              -3,
+              -4
+            ]
+          ],
+          "color": "stone-900",
+          "fill": "none",
+          "strokeWidth": 2
+        },
+        {
+          "type": "label",
+          "coords": [
+            -2.25,
+            -2.5
+          ],
+          "text": "#4"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            0
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -2,
+            0
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -1,
+            3
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            3
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            2,
+            1
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            1
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            4
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            4
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            4,
+            -1
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            5,
+            -1
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            5,
+            -4
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            -4
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -3,
+            -1
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -2,
+            -1
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -1,
+            -4
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -3,
+            -4
+          ],
+          "radius": 3,
+          "color": "stone-900"
+        }
+      ]
+    }
+  }
+}

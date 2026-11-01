@@ -1,0 +1,44 @@
+{
+  "id": 161,
+  "code": "item-alg-161",
+  "set_id": "set_4",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función Logarítmica",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A7",
+    "evidence": "A7.1",
+    "evidence_desc": "Analiza las propiedades del dominio y ámbito de funciones logarítmicas."
+  },
+  "evidence_id": "A7.1",
+  "concept_id": "mep-alg-concepto-funcion-01",
+  "linked_concepts": [
+    "mep-alg-concepto-funcion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "El dominio de la función logarítmica $g(x) = \\log_2(3x - 6)$ corresponde al intervalo",
+  "options": {
+    "A": "$]2, +\\infty[$",
+    "B": "$[2, +\\infty[$",
+    "C": "$]0, +\\infty[$",
+    "D": "$]-\\infty, 2[$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El argumento de una función logarítmica debe ser estrictamente mayor que cero: $3x - 6 > 0$.",
+    "Despejamos $x$: $3x > 6 \\implies x > 2$.",
+    "En notación de intervalos, el dominio es $]2, +\\infty[$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

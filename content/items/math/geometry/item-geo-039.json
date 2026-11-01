@@ -1,0 +1,121 @@
+{
+  "id": 39,
+  "code": "item-geo-039",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Perímetros y áreas en plano cartesiano",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A4",
+    "evidence": "A4.2",
+    "evidence_desc": "Determina perímetros o áreas de polígonos no regulares mediante un sistema de coordenadas rectangulares en diversos contextos."
+  },
+  "evidence_id": "A4.2",
+  "concept_id": "mep-geo-poligono-irregular-08",
+  "linked_concepts": [
+    "mep-geo-poligono-irregular-08"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere el polígono rectangular $ABCD$ con vértices en $A(1, 1)$, $B(5, 1)$, $C(5, 4)$ y $D(1, 4)$ mostrado en el plano cartesiano adjunto: [imagen]. ¿Cuál es el área de dicho polígono?",
+  "options": {
+    "A": "$12\\text{ unidades cuadradas}$",
+    "B": "$14\\text{ unidades cuadradas}$",
+    "C": "$16\\text{ unidades cuadradas}$",
+    "D": "$20\\text{ unidades cuadradas}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Base de la figura = x_B - x_A = 5 - 1 = 4 unidades.",
+    "Altura de la figura = y_D - y_A = 4 - 1 = 3 unidades.",
+    "Área = Base * Altura = 4 * 3 = 12 unidades cuadradas."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Polígono ABCD en el plano cartesiano con A(1,1), B(5,1), C(5,4), D(1,4).",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          0,
+          7
+        ],
+        "y": [
+          0,
+          6
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              1,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            1
+          ],
+          "label": "A(1,1)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            5,
+            1
+          ],
+          "label": "B(5,1)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            5,
+            4
+          ],
+          "label": "C(5,4)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            4
+          ],
+          "label": "D(1,4)"
+        }
+      ]
+    }
+  }
+}

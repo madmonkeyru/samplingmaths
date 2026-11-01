@@ -1,0 +1,59 @@
+{
+  "id": 118,
+  "code": "item-est-118",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Análisis de diagramas de caja",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A1",
+    "evidence": "A1.3",
+    "evidence_desc": "Interpreta los porcentajes acumulados por cuartiles en un diagrama de caja."
+  },
+  "evidence_id": "A1.3",
+  "concept_id": "mep-est-diagrama-cajas-ric-03",
+  "linked_concepts": [
+    "mep-est-diagrama-cajas-ric-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Un estudio sobre las edades de 200 participantes en una carrera arrojó los cuartiles $Q_1 = 22$ años, $Q_2 = 30$ años y $Q_3 = 42$ años. ¿Cuántos participantes tienen al menos 30 años?",
+  "options": {
+    "A": "100 participantes",
+    "B": "50 participantes",
+    "C": "150 participantes",
+    "D": "75 participantes"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La mediana $Q_2 = 30$ divide la distribución en dos partes iguales, exactamente el 50% por debajo y el 50% por encima.",
+    "Tener 'al menos 30 años' significa tener 30 años o más (el 50% superior).",
+    "50% de 200 participantes $= 0,50 \\cdot 200 = 100$ participantes."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Diagrama de caja con Q1=22, Q2=30, Q3=42",
+    "visual": {
+      "type": "box_plot",
+      "min": 18,
+      "q1": 22,
+      "median": 30,
+      "q3": 42,
+      "max": 65,
+      "axis": {
+        "label": "Edad en años",
+        "min": 15,
+        "max": 70
+      }
+    }
+  }
+}

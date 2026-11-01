@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-012",
-  "area": "GEOMETRÍA",
+  "id": 182,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Relación entre altura, radio y generatriz del cono",
-  "cognitive_level": "Comprensión",
+  "topic": "Relaci\u00f3n entre altura, radio y generatriz del cono",
+  "cognitive_level": "Comprensi\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.3",
-    "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+    "evidence_desc": "Determina caracter\u00edsticas m\u00e9tricas de figuras geom\u00e9tricas tridimensionales."
   },
-  "stem": "Un cono circular recto tiene un diámetro de base de $16\\text{ cm}$ y una generatriz de $17\\text{ cm}$. ¿Cuánto mide la altura del cono?",
+  "stem": "Un cono circular recto tiene un di\u00e1metro de base de $16\\text{ cm}$ y una generatriz de $17\\text{ cm}$. \u00bfCu\u00e1nto mide la altura del cono?",
   "options": {
     "A": "$8\\text{ cm}$",
     "B": "$15\\text{ cm}$",
@@ -25,12 +25,12 @@
   "correct_answer": "B",
   "solution_steps": [
     "El radio de la base es $r = \\frac{16}{2} = 8\\text{ cm}$.",
-    "El triángulo axial rectángulo formado por la altura $h$, el radio $r$ y la generatriz $g$ cumple: $g^2 = h^2 + r^2$.",
+    "El tri\u00e1ngulo axial rect\u00e1ngulo formado por la altura $h$, el radio $r$ y la generatriz $g$ cumple: $g^2 = h^2 + r^2$.",
     "$17^2 = h^2 + 8^2 \\implies 289 = h^2 + 64 \\implies h^2 = 225$.",
     "$h = \\sqrt{225} = 15\\text{ cm}$."
   ],
   "visual_spec": {
-    "alt": "Triángulo axial generatriz-radio-altura en cono",
+    "alt": "Tri\u00e1ngulo axial generatriz-radio-altura en cono",
     "visual": {
       "type": "solid_3d",
       "shape": "cone",
@@ -51,13 +51,14 @@
       },
       "referenceBox": {
         "lines": [
-          "V: vértice",
+          "V: v\u00e9rtice",
           "O: centro base",
-          "g² = h² + r²"
+          "g\u00b2 = h\u00b2 + r\u00b2"
         ]
       },
       "showCrossSection": false,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-012"
 }

@@ -1,0 +1,47 @@
+{
+  "id": 58,
+  "code": "item-alg-058",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función lineal — modelado",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A3",
+    "affirmation_desc": null,
+    "evidence": "A3.1",
+    "evidence_desc": "Resuelve problemas en contextos reales utilizando las funciones lineales y cuadráticas."
+  },
+  "evidence_id": "A3.1",
+  "concept_id": "mep-alg-funcion-lineal-03",
+  "linked_concepts": [
+    "mep-alg-funcion-lineal-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un gimnasio ofrece un paquete de entrenamiento personalizado para un mes. Toda persona que desee inscribirse debe pagar una cuota única de inscripción de 25 000 y luego 4000 por cada clase asistida con el entrenador. Si un cliente reservó espacio para 15 clases durante el último mes, pero al final asistió solamente a 12 clases, entonces, ¿cuánto pagó en total?",
+  "options": {
+    "A": "85 000",
+    "B": "73 000",
+    "C": "60 000",
+    "D": "48 000"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "El pago total es la cuota de inscripción más el costo por las clases efectivamente asistidas.",
+    "Clases asistidas: 12 (no 15, pues se cobra solo por clase a la que asistió).",
+    "Pago = 25 000 + 4000 × 12",
+    "Pago = 25 000 + 48 000 = 73 000",
+    "Respuesta: B."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

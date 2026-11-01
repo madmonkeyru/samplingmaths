@@ -1,0 +1,92 @@
+{
+  "id": 131,
+  "code": "item-geo-131",
+  "set_id": "set_3",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "affirmation_desc": null,
+    "evidence": "A1.1",
+    "evidence_desc": "Representa gráficamente una circunferencia dada su ecuación o centro y radio."
+  },
+  "evidence_id": "A1.1",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere la circunferencia $C$ dada por la ecuación $(x - 3)^2 + (y + 2)^2 = 16$. ¿Cuál es la ubicación del punto $P(6, 2)$ con respecto a la circunferencia $C$?",
+  "options": {
+    "A": "Punto interior",
+    "B": "Punto frontera (sobre la circunferencia)",
+    "C": "Punto exterior",
+    "D": "El centro de la circunferencia"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "El centro de $C$ es $(h,k) = (3, -2)$ y su radio es $r = \\sqrt{16} = 4$.",
+    "Calculamos la distancia $d$ entre el centro $(3, -2)$ y el punto $P(6, 2)$: $d = \\sqrt{(6-3)^2 + (2 - (-2))^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+    "Dado que la distancia $d = 5$ es mayor que el radio $r = 4$, el punto $P(6, 2)$ se ubica en el exterior de la circunferencia $C$.",
+    "Por lo tanto, la opción correcta es C."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Circunferencia C centrada en (3, -2) con radio 4 y punto P(6, 2) exterior",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -2,
+          8
+        ],
+        "y": [
+          -7,
+          4
+        ]
+      },
+      "grid": true,
+      "axes": {
+        "arrows": true
+      },
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            3,
+            -2
+          ],
+          "radius": 4,
+          "stroke": "indigo-600",
+          "strokeWidth": 2,
+          "fill": "indigo-50/20"
+        },
+        {
+          "type": "point",
+          "x": 3,
+          "y": -2,
+          "label": "C(3,-2)",
+          "color": "stone-800"
+        },
+        {
+          "type": "point",
+          "x": 6,
+          "y": 2,
+          "label": "P(6,2)",
+          "color": "indigo-600"
+        }
+      ]
+    }
+  }
+}

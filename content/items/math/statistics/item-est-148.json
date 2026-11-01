@@ -1,0 +1,45 @@
+{
+  "id": 148,
+  "code": "item-est-148",
+  "set_id": "set_3",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Probabilidad Regla de Laplace",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A11",
+    "affirmation_desc": null,
+    "evidence": "A11.1",
+    "evidence_desc": "Calcula probabilidades simples empleando la regla de Laplace."
+  },
+  "evidence_id": "A11.1",
+  "concept_id": "mep-est-eventos-probabilidad-02",
+  "linked_concepts": [
+    "mep-est-eventos-probabilidad-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "En una urna hay 8 bolas rojas, 5 bolas azules y 7 bolas verdes, todas de igual tamaño. Si se extrae una bola al azar, ¿cuál es la probabilidad de que la bola extraída NO sea azul?",
+  "options": {
+    "A": "$\\frac{1}{4}$",
+    "B": "$\\frac{3}{4}$",
+    "C": "$\\frac{2}{5}$",
+    "D": "$\\frac{3}{5}$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "El número total de bolas en la urna es $8 + 5 + 7 = 20$.",
+    "Las bolas que NO son azules son las rojas y verdes: $8 + 7 = 15$.",
+    "La probabilidad es $P(\\text{No Azul}) = \\frac{15}{20} = \\frac{3}{4} = 0.75$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

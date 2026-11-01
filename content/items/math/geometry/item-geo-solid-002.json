@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-002",
-  "area": "GEOMETRÍA",
+  "id": 172,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Cálculo de la distancia al centro en una esfera",
-  "cognitive_level": "Aplicación",
+  "topic": "C\u00e1lculo de la distancia al centro en una esfera",
+  "cognitive_level": "Aplicaci\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.3",
-    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+    "evidence_desc": "Determina caracter\u00edsticas m\u00e9tricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
   },
-  "stem": "En una esfera de radio $R = 15\\text{ cm}$, se realiza un corte plano cuya sección circular tiene un radio de $12\\text{ cm}$. ¿A qué distancia del centro de la esfera se realizó el corte?",
+  "stem": "En una esfera de radio $R = 15\\text{ cm}$, se realiza un corte plano cuya secci\u00f3n circular tiene un radio de $12\\text{ cm}$. \u00bfA qu\u00e9 distancia del centro de la esfera se realiz\u00f3 el corte?",
   "options": {
     "A": "$3\\text{ cm}$",
     "B": "$8\\text{ cm}$",
@@ -24,13 +24,13 @@
   },
   "correct_answer": "C",
   "solution_steps": [
-    "En la esfera, el radio de la esfera $R$, el radio de la sección plana $r$ y la distancia $d$ del centro de la esfera al plano forman un triángulo rectángulo.",
-    "Por el Teorema de Pitágoras: $R^2 = d^2 + r^2$.",
+    "En la esfera, el radio de la esfera $R$, el radio de la secci\u00f3n plana $r$ y la distancia $d$ del centro de la esfera al plano forman un tri\u00e1ngulo rect\u00e1ngulo.",
+    "Por el Teorema de Pit\u00e1goras: $R^2 = d^2 + r^2$.",
     "Sustituyendo los valores conocidos: $15^2 = d^2 + 12^2 \\implies 225 = d^2 + 144$.",
     "$d^2 = 225 - 144 = 81 \\implies d = \\sqrt{81} = 9\\text{ cm}$."
   ],
   "visual_spec": {
-    "alt": "Cálculo métrico del corte transversal en una esfera",
+    "alt": "C\u00e1lculo m\u00e9trico del corte transversal en una esfera",
     "visual": {
       "type": "solid_3d",
       "shape": "sphere",
@@ -53,12 +53,13 @@
       "referenceBox": {
         "lines": [
           "O: centro de la esfera",
-          "C: centro de la sección plana",
+          "C: centro de la secci\u00f3n plana",
           "Radio esfera = 15 cm"
         ]
       },
       "showCrossSection": true,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-002"
 }

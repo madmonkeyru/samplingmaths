@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-009",
-  "area": "GEOMETRÍA",
+  "id": 179,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Cálculo del radio a partir de una sección axial cuadrada",
-  "cognitive_level": "Aplicación",
+  "topic": "C\u00e1lculo del radio a partir de una secci\u00f3n axial cuadrada",
+  "cognitive_level": "Aplicaci\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.3",
-    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+    "evidence_desc": "Determina caracter\u00edsticas m\u00e9tricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
   },
-  "stem": "La sección axial de un cilindro circular recto es un cuadrado cuya área es de $64\\text{ cm}^2$. ¿Cuál es la medida del radio de las bases de dicho cilindro?",
+  "stem": "La secci\u00f3n axial de un cilindro circular recto es un cuadrado cuya \u00e1rea es de $64\\text{ cm}^2$. \u00bfCu\u00e1l es la medida del radio de las bases de dicho cilindro?",
   "options": {
     "A": "$2\\text{ cm}$",
     "B": "$4\\text{ cm}$",
@@ -24,12 +24,12 @@
   },
   "correct_answer": "B",
   "solution_steps": [
-    "Al ser un cuadrado de área $64\\text{ cm}^2$, cada lado mide $l = \\sqrt{64} = 8\\text{ cm}$.",
-    "La base del cuadrado de la sección axial corresponde al diámetro de la base del cilindro: $2r = 8\\text{ cm}$.",
+    "Al ser un cuadrado de \u00e1rea $64\\text{ cm}^2$, cada lado mide $l = \\sqrt{64} = 8\\text{ cm}$.",
+    "La base del cuadrado de la secci\u00f3n axial corresponde al di\u00e1metro de la base del cilindro: $2r = 8\\text{ cm}$.",
     "Por lo tanto, el radio de la base es $r = \\frac{8}{2} = 4\\text{ cm}$."
   ],
   "visual_spec": {
-    "alt": "Cilindro equilátero con sección axial cuadrada",
+    "alt": "Cilindro equil\u00e1tero con secci\u00f3n axial cuadrada",
     "visual": {
       "type": "solid_3d",
       "shape": "cylinder",
@@ -51,13 +51,14 @@
       },
       "referenceBox": {
         "lines": [
-          "Sección axial PQRS cuadrada",
-          "Área = 64 cm²",
+          "Secci\u00f3n axial PQRS cuadrada",
+          "\u00c1rea = 64 cm\u00b2",
           "O_1 y O_2: centros"
         ]
       },
       "showCrossSection": true,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-009"
 }

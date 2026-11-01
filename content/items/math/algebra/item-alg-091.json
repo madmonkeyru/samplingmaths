@@ -1,0 +1,139 @@
+{
+  "id": 91,
+  "code": "item-alg-091",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función inversa",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A2",
+    "evidence": "A2.2",
+    "evidence_desc": "Identifica la gráfica de la función inversa por simetría sobre la recta y = x."
+  },
+  "evidence_id": "A2.2",
+  "concept_id": "mep-alg-funcion-inversa-06",
+  "linked_concepts": [
+    "mep-alg-funcion-inversa-06"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Si la función $f(x) = 2x - 2$ tiene como intersección con el eje $y$ el punto $(0, -2)$ y con el eje $x$ el punto $(1, 0)$, ¿cuál de las siguientes opciones representa la gráfica de su función inversa $f^{-1}$?",
+  "options": {
+    "A": "Gráfica A (pasa por $(-2, 0)$ y $(0, 1)$)",
+    "B": "Gráfica B (pasa por $(2, 0)$ y $(0, -1)$)",
+    "C": "Gráfica C (pasa por $(0, -2)$ y $(1, 0)$)",
+    "D": "Gráfica D (pasa por $(-1, 0)$ y $(0, 2)$)"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Los puntos de la función inversa $f^{-1}$ se obtienen intercambiando las coordenadas $(x, y) \\to (y, x)$.",
+    "Dado que $f$ pasa por $(0, -2)$ y $(1, 0)$, la inversa $f^{-1}$ debe pasar por $(-2, 0)$ y $(0, 1)$.",
+    "La Opción A muestra la recta que pasa por $(-2, 0)$ y $(0, 1)$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Cuatro gráficas de funciones lineales opciones A-D",
+    "visual": {
+      "type": "multi_view_grid",
+      "layout": {
+        "rows": 2,
+        "cols": 2
+      },
+      "views": [
+        {
+          "label": "A)",
+          "visual": {
+            "type": "function_plot",
+            "form": "linear",
+            "params": {
+              "m": 0.5,
+              "b": 1
+            },
+            "domain": {
+              "x": [
+                -3,
+                3
+              ],
+              "y": [
+                -2,
+                3
+              ]
+            }
+          }
+        },
+        {
+          "label": "B)",
+          "visual": {
+            "type": "function_plot",
+            "form": "linear",
+            "params": {
+              "m": 0.5,
+              "b": -1
+            },
+            "domain": {
+              "x": [
+                -3,
+                3
+              ],
+              "y": [
+                -3,
+                2
+              ]
+            }
+          }
+        },
+        {
+          "label": "C)",
+          "visual": {
+            "type": "function_plot",
+            "form": "linear",
+            "params": {
+              "m": 2,
+              "b": -2
+            },
+            "domain": {
+              "x": [
+                -3,
+                3
+              ],
+              "y": [
+                -3,
+                3
+              ]
+            }
+          }
+        },
+        {
+          "label": "D)",
+          "visual": {
+            "type": "function_plot",
+            "form": "linear",
+            "params": {
+              "m": 2,
+              "b": 2
+            },
+            "domain": {
+              "x": [
+                -3,
+                3
+              ],
+              "y": [
+                -2,
+                4
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

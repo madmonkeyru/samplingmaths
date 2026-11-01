@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-015",
-  "area": "GEOMETRÍA",
+  "id": 185,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Sección axial triangular del cono",
-  "cognitive_level": "Comprensión",
+  "topic": "Secci\u00f3n axial triangular del cono",
+  "cognitive_level": "Comprensi\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.2",
-    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+    "evidence_desc": "Determina qu\u00e9 figuras se obtienen mediante secciones planas de figuras tridimensionales."
   },
-  "stem": "Si un cono circular recto de radio $r=5\\text{ cm}$ y altura $h=12\\text{ cm}$ se corta con un plano que pasa por su vértice y por el centro de la base, ¿cuál es el perímetro de la sección plana resultante?",
+  "stem": "Si un cono circular recto de radio $r=5\\text{ cm}$ y altura $h=12\\text{ cm}$ se corta con un plano que pasa por su v\u00e9rtice y por el centro de la base, \u00bfcu\u00e1l es el per\u00edmetro de la secci\u00f3n plana resultante?",
   "options": {
     "A": "$26\\text{ cm}$",
     "B": "$36\\text{ cm}$",
@@ -24,12 +24,12 @@
   },
   "correct_answer": "B",
   "solution_steps": [
-    "La sección plana que pasa por el vértice y el diámetro de la base es un triángulo isósceles cuyos lados congruentes son las generatrices $g$ y cuya base es el diámetro basal $2r = 10\\text{ cm}$.",
+    "La secci\u00f3n plana que pasa por el v\u00e9rtice y el di\u00e1metro de la base es un tri\u00e1ngulo is\u00f3sceles cuyos lados congruentes son las generatrices $g$ y cuya base es el di\u00e1metro basal $2r = 10\\text{ cm}$.",
     "Calculamos la generatriz: $g = \\sqrt{h^2 + r^2} = \\sqrt{12^2 + 5^2} = \\sqrt{169} = 13\\text{ cm}$.",
-    "El perímetro del triángulo es $P = g + g + 2r = 13 + 13 + 10 = 36\\text{ cm}$."
+    "El per\u00edmetro del tri\u00e1ngulo es $P = g + g + 2r = 13 + 13 + 10 = 36\\text{ cm}$."
   ],
   "visual_spec": {
-    "alt": "Sección axial triangular en un cono",
+    "alt": "Secci\u00f3n axial triangular en un cono",
     "visual": {
       "type": "solid_3d",
       "shape": "cone",
@@ -48,13 +48,14 @@
       },
       "referenceBox": {
         "lines": [
-          "Sección axial VAB",
-          "Triángulo isósceles",
+          "Secci\u00f3n axial VAB",
+          "Tri\u00e1ngulo is\u00f3sceles",
           "Base AB = 10, g = 13"
         ]
       },
       "showCrossSection": false,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-015"
 }

@@ -1,0 +1,45 @@
+{
+  "id": 146,
+  "code": "item-est-146",
+  "set_id": "set_3",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de Variabilidad",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A10",
+    "affirmation_desc": null,
+    "evidence": "A10.2",
+    "evidence_desc": "Calcula e interpreta el recorrido y el recorrido intercuartílico."
+  },
+  "evidence_id": "A10.2",
+  "concept_id": "mep-est-medidas-posicion-01",
+  "linked_concepts": [
+    "mep-est-medidas-posicion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un resumen de cinco números para un conjunto de salarios (en miles de colones) arrojó: $\\text{Mín} = 350$, $Q_1 = 420$, $\\text{Mediana} = 500$, $Q_3 = 680$, $\\text{Máx} = 950$. El recorrido intercuartílico (RIC) de este conjunto de salarios es",
+  "options": {
+    "A": "$600\\text{ mil colones}$",
+    "B": "$260\\text{ mil colones}$",
+    "C": "$180\\text{ mil colones}$",
+    "D": "$330\\text{ mil colones}$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "El Recorrido Intercuartílico (RIC) se calcula mediante la fórmula $\\text{RIC} = Q_3 - Q_1$.",
+    "Sustituyendo los valores de $Q_3 = 680$ y $Q_1 = 420$: $\\text{RIC} = 680 - 420 = 260\\text{ mil colones}$.",
+    "Por lo tanto, la opción correcta es B."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

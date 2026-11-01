@@ -1,0 +1,104 @@
+{
+  "id": 34,
+  "code": "item-geo-034",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Rectas secantes, tangentes y exteriores",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A3",
+    "evidence": "A3.3",
+    "evidence_desc": "Determina gráfica o algebraicamente rectas secantes, tangentes y exteriores a una circunferencia, en diversos contextos."
+  },
+  "evidence_id": "A3.3",
+  "concept_id": "mep-geo-posicion-recta-05",
+  "linked_concepts": [
+    "mep-geo-posicion-recta-05"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la circunferencia (x - 2)^2 + (y + 1)^2 = 16 representada en la gráfica adjunta, con centro en (2, -1) y radio 4. Analice las rectas L1: x = 6 y L2: y = 4: [imagen]. ¿Cuál de las siguientes afirmaciones es VERDADERA?",
+  "options": {
+    "A": "L1 es tangente y L2 es exterior a la circunferencia.",
+    "B": "L1 es secante y L2 es tangente a la circunferencia.",
+    "C": "Ambas rectas L1 y L2 son tangentes a la circunferencia.",
+    "D": "Ambas rectas L1 y L2 son exteriores a la circunferencia."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Centro de la circunferencia C(2, -1), radio r = 4.",
+    "Para L1: x = 6, la distancia al centro es |6 - 2| = 4. Como d = r = 4, L1 es tangente.",
+    "Para L2: y = 4, la distancia al centro es |4 - (-1)| = 5. Como d = 5 > r = 4, L2 es exterior.",
+    "Por lo tanto, L1 es tangente y L2 es exterior."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Circunferencia en (2,-1) r=4 con recta vertical x=6 y recta horizontal y=4.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -3,
+          8
+        ],
+        "y": [
+          -6,
+          6
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            2,
+            -1
+          ],
+          "radius": 4,
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            2,
+            -1
+          ],
+          "label": "C(2,-1)"
+        },
+        {
+          "type": "line",
+          "from": [
+            6,
+            -6
+          ],
+          "to": [
+            6,
+            6
+          ],
+          "stroke": "black"
+        },
+        {
+          "type": "line",
+          "from": [
+            -3,
+            4
+          ],
+          "to": [
+            8,
+            4
+          ],
+          "stroke": "gray"
+        }
+      ]
+    }
+  }
+}

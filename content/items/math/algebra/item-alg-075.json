@@ -1,0 +1,47 @@
+{
+  "id": 75,
+  "code": "item-alg-075",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función logarítmica — modelado",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A6",
+    "affirmation_desc": null,
+    "evidence": "A6.3",
+    "evidence_desc": "Identifica modelos matemáticos que involucran las funciones logarítmicas en diversos contextos."
+  },
+  "evidence_id": "A6.3",
+  "concept_id": "mep-alg-exponencial-logaritmica-08",
+  "linked_concepts": [
+    "mep-alg-exponencial-logaritmica-08"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un biólogo determina que el crecimiento C(t) de una colonia de hongos se comporta según un modelo logarítmico que depende del tiempo (t) en días. Si a los 8 días el crecimiento registra un valor exacto de 3, entonces, ¿cuál es el criterio de C(t) que modela correctamente esta situación?",
+  "options": {
+    "A": "$\\log_2(t)$",
+    "B": "$\\log_3(t)$",
+    "C": "$\\log_5(t)$",
+    "D": "$\\log_8(t)$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Se busca una función logarítmica C(t) = log_b(t) tal que C(8) = 3.",
+    "Probando con base b: log_b(8) = 3 → b³ = 8 → b = 2.",
+    "Por lo tanto, C(t) = log₂(t).",
+    "Verificación: C(8) = log₂(8) = 3. ✓",
+    "Respuesta: A."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

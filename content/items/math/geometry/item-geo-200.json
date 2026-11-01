@@ -1,0 +1,75 @@
+{
+  "id": 200,
+  "code": "item-geo-200",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección plana en una esfera con notación colineal MEP",
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "La siguiente figura corresponde a una esfera cuya medida de su diámetro es $12$ y una sección plana obtenida de la intersección de un plano con la esfera:\n\n¿Cuál es la medida del radio de la sección plana de centro $O$?",
+  "options": {
+    "A": "$2\\sqrt{5}$",
+    "B": "$8\\sqrt{2}$",
+    "C": "$4\\sqrt{10}$",
+    "D": "$4\\sqrt{5}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El diámetro de la esfera es $12$, por lo que su radio es $R = \\frac{12}{2} = 6$.",
+    "La distancia desde el centro $S$ de la esfera hasta el centro $O$ de la sección plana es $SO = d = 4$.",
+    "En el triángulo rectángulo formado por el centro de la esfera, el centro de la sección y un punto del borde (como $R$), se cumple por el teorema de Pitágoras:\n$$r^2 + d^2 = R^2$$\n$$r^2 + 4^2 = 6^2$$\n$$r^2 + 16 = 36$$\n$$r^2 = 20$$\n$$r = \\sqrt{20} = 2\\sqrt{5}$$",
+    "Por lo tanto, la medida del radio de la sección plana es $2\\sqrt{5}$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Esfera cortada por un plano secante con centros S y O y puntos colineales M-O-R",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "sphere",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 80,
+        "distance": 42,
+        "showPlaneRadius": false,
+        "showSphereRadius": false,
+        "showRightAngle": false
+      },
+      "labels": {
+        "sphereCenter": "S",
+        "planeCenter": "O",
+        "planeLeft": "M",
+        "planeRight": "R"
+      },
+      "referenceBox": {
+        "lines": [
+          "M — O — R; SO = 4",
+          "S: centro de la esfera",
+          "O: centro de la sección plana"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": false
+    }
+  }
+}

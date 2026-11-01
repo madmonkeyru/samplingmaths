@@ -1,0 +1,72 @@
+{
+  "id": 173,
+  "code": "item-geo-173",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección máxima o ecuatorial en una esfera",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+  },
+  "evidence_id": "A5.2",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Si un plano corta a una esfera pasando exactamente por su centro, ¿qué nombre recibe la sección plana obtenida y cuál es el área si el radio de la esfera es $5\\text{ cm}$?",
+  "options": {
+    "A": "Círculo menor de área $10\\pi\\text{ cm}^2$",
+    "B": "Círculo máximo de área $25\\pi\\text{ cm}^2$",
+    "C": "Elipse de área $25\\pi\\text{ cm}^2$",
+    "D": "Corona circular de área $50\\pi\\text{ cm}^2$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Toda sección plana que pasa por el centro de una esfera es un círculo máximo (o sección ecuatorial).",
+    "El radio de la sección es exactamente igual al radio de la esfera: $r = R = 5\\text{ cm}$.",
+    "El área del círculo es $A = \\pi r^2 = \\pi (5)^2 = 25\\pi\\text{ cm}^2$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Corte ecuatorial o círculo máximo en una esfera",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "sphere",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 85,
+        "distance": 0,
+        "showEquator": true,
+        "showCenter": true
+      },
+      "labels": {
+        "center": "O",
+        "sectionCenter": "O",
+        "sectionRight": "B",
+        "radius": "R = 5"
+      },
+      "referenceBox": {
+        "lines": [
+          "Plano secante diametral",
+          "O: centro de la esfera",
+          "Círculo máximo"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

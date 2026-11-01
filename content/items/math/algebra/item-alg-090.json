@@ -1,0 +1,69 @@
+{
+  "id": 90,
+  "code": "item-alg-090",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función lineal",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A2",
+    "evidence": "A2.1",
+    "evidence_desc": "Calcula la pendiente de una recta a partir de dos puntos."
+  },
+  "evidence_id": "A2.1",
+  "concept_id": "mep-alg-funcion-lineal-03",
+  "linked_concepts": [
+    "mep-alg-funcion-lineal-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la gráfica de la función lineal $g(x) = mx + b$ que pasa por los puntos $(-2, 0)$ y $(0, 4)$:",
+  "options": {
+    "A": "$m = 2$",
+    "B": "$m = -2$",
+    "C": "$m = \\frac{1}{2}$",
+    "D": "$m = -\\frac{1}{2}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La pendiente $m$ de una recta que pasa por $(x_1, y_1)$ y $(x_2, y_2)$ se calcula como $m = \\frac{y_2 - y_1}{x_2 - x_1}$.",
+    "Sustituyendo $(-2, 0)$ y $(0, 4)$: $m = \\frac{4 - 0}{0 - (-2)} = \\frac{4}{2} = 2$.",
+    "Por lo tanto, la pendiente es $m = 2$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Recta pasando por (-2,0) y (0,4)",
+    "visual": {
+      "type": "function_plot",
+      "form": "linear",
+      "params": {
+        "m": 2,
+        "b": 4
+      },
+      "domain": {
+        "x": [
+          -4,
+          3
+        ],
+        "y": [
+          -2,
+          6
+        ]
+      },
+      "annotations": {
+        "vertex": {
+          "show": false
+        }
+      }
+    }
+  }
+}

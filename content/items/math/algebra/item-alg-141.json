@@ -1,0 +1,46 @@
+{
+  "id": 141,
+  "code": "item-alg-141",
+  "set_id": "set_3",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función Logarítmica",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A7",
+    "affirmation_desc": null,
+    "evidence": "A7.2",
+    "evidence_desc": "Resuelve ecuaciones exponenciales y logarítmicas en contextos matemáticos y cotidianos."
+  },
+  "evidence_id": "A7.2",
+  "concept_id": "mep-alg-concepto-funcion-01",
+  "linked_concepts": [
+    "mep-alg-concepto-funcion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "El valor de $x$ que satisface la ecuación logarítmica $\\log_3(2x - 1) = 2$ es",
+  "options": {
+    "A": "$x = 3.5$",
+    "B": "$x = 5$",
+    "C": "$x = 4.5$",
+    "D": "$x = 8$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Convertimos la ecuación logarítmica a su forma exponencial equivalente: $\\log_b(A) = c \\iff b^c = A$.",
+    "Así, $3^2 = 2x - 1 \\implies 9 = 2x - 1$.",
+    "Sumamos 1 a ambos lados: $2x = 10 \\implies x = 5$.",
+    "Verificamos que el argumento $2(5) - 1 = 9 > 0$, lo cual es válido."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

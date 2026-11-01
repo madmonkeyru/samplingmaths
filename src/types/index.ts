@@ -32,6 +32,23 @@ export interface ConceptRegistryEntry {
   examples?: string[];
   relatedEvidence?: string[];
   prerequisiteConcepts?: string[];
+  gradeLevel?: '7mo' | '8vo' | '9no' | '10mo' | '11mo' | 'primaria' | string;
+  subdomain?: string;
+}
+
+export type CognitiveLevel = 'reproduccion' | 'conexion' | 'reflexion' | string;
+export type DifficultyTier = 1 | 2 | 3; // 1: Básico, 2: Intermedio, 3: Avanzado
+
+export interface CurriculumCompetency {
+  evidenceId: string; // e.g. 'A1.2'
+  affirmationId: string; // e.g. 'A1'
+  domainId: DomainArea; // 'geometry' | 'functions' | 'statistics'
+  blockName: string;
+  description: string;
+  programModules: ProgramModuleTag[];
+  gradeLevel?: '7mo' | '8vo' | '9no' | '10mo' | '11mo' | 'primaria';
+  targetWeight?: number;
+  linkedConceptIds?: string[];
 }
 
 export interface ProgramMetadata {
@@ -176,18 +193,22 @@ export interface ItemSpec {
 
 export interface Item {
   id: number;
-  code?: string; // Atomic string ID (e.g. item-math-geo-001)
+  code?: string; // Atomic string ID (e.g. item-geo-001)
   set_id?: string;
   area: string;
   area_id: DomainArea;
   topic: string;
   spec?: ItemSpec;
   evidence?: string;
+  evidence_id?: string;
   knowledge?: string;
+  concept_id?: string;
   linked_concepts?: string[];
   program_applicability?: ProgramModuleTag[];
   calculator_allowed?: boolean;
-  cognitive_level?: 'reproduccion' | 'conexion' | 'reflexion' | string;
+  cognitive_level?: CognitiveLevel;
+  difficulty_tier?: DifficultyTier;
+  historical_convocatoria?: string[];
   stem: string;
   options: Record<'A' | 'B' | 'C' | 'D', string> | Option[];
   correct_answer: 'A' | 'B' | 'C' | 'D';
@@ -259,14 +280,25 @@ export interface ItemResponse {
   flagged?: boolean;
 }
 
+export type PracticeMode =
+  | 'simulation'
+  | 'area'
+  | 'topic'
+  | 'concept_drilldown'
+  | 'dynamic_mock'
+  | 'random_practice';
+
 export interface PracticeConfig {
-  mode: 'simulation' | 'area' | 'topic';
+  mode: PracticeMode;
   programId?: string;
   subprogramId?: string;
   convocatoriaId?: string;
   setId?: string | 'all';
   area?: DomainArea | 'all';
   topic?: string | 'all';
+  conceptId?: string;
+  cognitiveLevel?: CognitiveLevel;
+  difficultyTier?: DifficultyTier;
   itemCount: number | 'all';
   enableTimer: boolean;
   timerDurationMinutes: number;
@@ -276,7 +308,7 @@ export interface Attempt {
   id: string;
   userId: string;
   timestamp: string; // ISO String
-  mode: 'simulation' | 'area' | 'topic';
+  mode: PracticeMode;
   programId?: string;
   scopeText: string;
   scorePercentage: number;

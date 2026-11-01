@@ -1,0 +1,45 @@
+{
+  "id": 158,
+  "code": "item-alg-158",
+  "set_id": "set_4",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función Lineal",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A5",
+    "evidence": "A5.2",
+    "evidence_desc": "Resuelve problemas del entorno mediante modelos de funciones lineales."
+  },
+  "evidence_id": "A5.2",
+  "concept_id": "mep-alg-exponencial-logaritmica-08",
+  "linked_concepts": [
+    "mep-alg-exponencial-logaritmica-08"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un servicio de taxi cobra una tarifa fija de $\\mathbb{C}800$ más $\\mathbb{C}650$ por cada kilómetro recorrido. Si una persona pagó $\\mathbb{C}8\\,600$ por un viaje, ¿cuántos kilómetros recorrió el taxi?",
+  "options": {
+    "A": "$12\\text{ km}$",
+    "B": "$10\\text{ km}$",
+    "C": "$14\\text{ km}$",
+    "D": "$15\\text{ km}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Planteamos la función lineal de costo $C(x) = 650x + 800$, donde $x$ es la cantidad de kilómetros.",
+    "Igualamos al monto pagado: $650x + 800 = 8600$.",
+    "Restamos $800$: $650x = 7800$.",
+    "Dividimos entre $650$: $x = \\frac{7800}{650} = 12\\text{ km}$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

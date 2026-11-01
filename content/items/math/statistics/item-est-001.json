@@ -1,20 +1,25 @@
 {
-  "id": "item-math-est-stat-001",
-  "area": "Estadística y Probabilidad",
+  "id": 49,
+  "area": "Estad\u00edstica y Probabilidad",
   "area_id": "statistics",
-  "topic": "Medidas de Posición Relativa",
+  "topic": "Medidas de Posici\u00f3n Relativa",
   "spec": {
-    "block": "3. Estadística y Probabilidad",
+    "block": "3. Estad\u00edstica y Probabilidad",
     "affirmation": "A3",
-    "affirmation_desc": "Resuelve problemas relacionados con análisis de medidas de posición o variabilidad.",
+    "affirmation_desc": "Resuelve problemas relacionados con an\u00e1lisis de medidas de posici\u00f3n o variabilidad.",
     "evidence": "A3.3",
-    "evidence_desc": "Aplica estandarización y coeficiente de variación."
+    "evidence_desc": "Aplica estandarizaci\u00f3n y coeficiente de variaci\u00f3n."
   },
-  "linked_concepts": ["mep-est-posicion-relativa-cv-04"],
-  "program_applicability": ["EDAD_PARTE_2", "BXM"],
+  "linked_concepts": [
+    "mep-est-posicion-relativa-cv-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_2",
+    "BXM"
+  ],
   "calculator_allowed": true,
   "cognitive_level": "conexion",
-  "stem": "En un grupo de estudiantes, la media en un examen fue $\\bar{x} = 70$ y la desviación estándar fue $\\sigma = 8$. Si Carlos obtuvo una calificación de $86$, ¿cuál es su posición relativa (puntaje estandarizado $z$)?",
+  "stem": "En un grupo de estudiantes, la media en un examen fue $\\bar{x} = 70$ y la desviaci\u00f3n est\u00e1ndar fue $\\sigma = 8$. Si Carlos obtuvo una calificaci\u00f3n de $86$, \u00bfcu\u00e1l es su posici\u00f3n relativa (puntaje estandarizado $z$)?",
   "options": {
     "A": "$z = +2.0$",
     "B": "$z = +1.5$",
@@ -24,9 +29,10 @@
   "correct_answer": "A",
   "solution_steps": [
     "Identificar los datos del problema: $x = 86$, $\\bar{x} = 70$ y $\\sigma = 8$.",
-    "Aplicar la fórmula de estandarización: $z = \\frac{x - \\bar{x}}{\\sigma}$.",
+    "Aplicar la f\u00f3rmula de estandarizaci\u00f3n: $z = \\frac{x - \\bar{x}}{\\sigma}$.",
     "Sustituir: $z = \\frac{86 - 70}{8} = \\frac{16}{8} = 2.0$."
   ],
   "group_id": null,
-  "visual_spec": null
+  "visual_spec": null,
+  "code": "item-math-est-stat-001"
 }

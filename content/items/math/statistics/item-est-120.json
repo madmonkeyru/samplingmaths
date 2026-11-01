@@ -1,0 +1,79 @@
+{
+  "id": 120,
+  "code": "item-est-120",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de posición — Promedio ponderado",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A1",
+    "evidence": "A1.4",
+    "evidence_desc": "Calcula el promedio ponderado en una escala de porcentajes."
+  },
+  "evidence_id": "A1.4",
+  "concept_id": "mep-est-medidas-posicion-01",
+  "linked_concepts": [
+    "mep-est-medidas-posicion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "La calificación final de un curso se calcula mediante los siguientes porcentajes: Exámenes 50%, Tareas 30% y Proyecto 20%. Si un estudiante obtuvo 80 en Exámenes, 90 en Tareas y 70 en Proyecto, ¿cuál es su nota final ponderada?",
+  "options": {
+    "A": "81",
+    "B": "80",
+    "C": "83",
+    "D": "85"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Multiplicamos cada nota por su peso relativo en decimales:",
+    "Exámenes: $80 \\cdot 0,50 = 40$.",
+    "Tareas: $90 \\cdot 0,30 = 27$.",
+    "Proyecto: $70 \\cdot 0,20 = 14$.",
+    "Suma ponderada total: $40 + 27 + 14 = 81$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Tabla de pesos y notas para promedio ponderado",
+    "visual": {
+      "type": "table",
+      "variant": "weighted_table",
+      "headers": [
+        "Evaluación",
+        "Porcentaje (Peso)",
+        "Nota Obtenida"
+      ],
+      "rows": [
+        [
+          "Exámenes",
+          "50%",
+          "80"
+        ],
+        [
+          "Tareas",
+          "30%",
+          "90"
+        ],
+        [
+          "Proyecto",
+          "20%",
+          "70"
+        ]
+      ],
+      "total_row": [
+        "Total",
+        "100%",
+        "Nota Final: 81"
+      ]
+    }
+  }
+}

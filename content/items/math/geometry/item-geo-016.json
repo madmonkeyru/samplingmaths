@@ -1,0 +1,46 @@
+{
+  "id": 16,
+  "code": "item-geo-016",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Visualización espacial - Esfera",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A5",
+    "affirmation_desc": null,
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un florero artesanal se fabricó a partir de una pieza esférica de porcelana de 13 cm de radio, a la cual se le realizó un corte para su abertura (boca). Si el centro de dicha abertura quedó a 12 cm del centro de la esfera, entonces, ¿de cuántos centímetros es el perímetro (aproximadamente) de la abertura de ese florero?",
+  "options": {
+    "A": "15,7",
+    "B": "31,4",
+    "C": "25,0",
+    "D": "39,2"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La sección plana de una esfera es un círculo. El radio de la sección r se obtiene con el teorema de Pitágoras: r^2 + d^2 = R^2, donde d=12, R=13.",
+    "r^2 = 13^2 - 12^2 = 169 - 144 = 25 → r = 5.",
+    "El perímetro de la abertura es 2πr = 2 × 3.14 × 5 = 31.4 cm.",
+    "Opción correcta: B."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

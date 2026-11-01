@@ -1,0 +1,73 @@
+{
+  "id": 198,
+  "code": "item-geo-198",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección plana perpendicular a las bases no diametral en un cilindro",
+  "spec": {
+    "block": "Geometría",
+    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un cilindro circular recto tiene una altura de $12\\text{ cm}$ y un radio de la base de $5\\text{ cm}$. Se realiza un corte con un plano paralelo al eje central (perpendicular a las bases) a una distancia de $3\\text{ cm}$ de dicho eje. ¿Cuál es el área de la sección rectangular resultante?",
+  "options": {
+    "A": "$48\\text{ cm}^2$",
+    "B": "$96\\text{ cm}^2$",
+    "C": "$60\\text{ cm}^2$",
+    "D": "$120\\text{ cm}^2$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La sección plana obtenida al cortar un cilindro con un plano perpendicular a sus bases es un rectángulo.",
+    "La altura del rectángulo coincide con la altura del cilindro: $h = 12\\text{ cm}$.",
+    "El ancho del rectángulo corresponde a la cuerda formada en la base del cilindro a una distancia $d = 3\\text{ cm}$ del centro.",
+    "Por el teorema de Pitágoras en el círculo de la base: $(\\text{mitad de la cuerda})^2 + d^2 = r^2 \\implies x^2 + 3^2 = 5^2 \\implies x = \\sqrt{25 - 9} = 4\\text{ cm}$.",
+    "La longitud total de la cuerda (ancho del rectángulo) es $2x = 2(4) = 8\\text{ cm}$.",
+    "El área de la sección plana es: $\\text{Área} = \\text{ancho} \\times h = 8 \\times 12 = 96\\text{ cm}^2$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Corte de un cilindro por plano vertical no diametral",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cylinder",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 70,
+        "height": 115,
+        "chordDistance": 36
+      },
+      "crossSectionType": "chord",
+      "showCrossSection": true,
+      "labels": {
+        "distance": "d"
+      },
+      "referenceBox": {
+        "lines": [
+          "Corte perpendicular a bases",
+          "Distancia al eje d = 3",
+          "r = 5, h = 12"
+        ]
+      },
+      "showAxes": true
+    }
+  }
+}

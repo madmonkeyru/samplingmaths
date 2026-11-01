@@ -1,0 +1,44 @@
+{
+  "id": 163,
+  "code": "item-alg-163",
+  "set_id": "set_4",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Composición de Funciones",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A8",
+    "evidence": "A8.3",
+    "evidence_desc": "Evalúa composiciones de funciones."
+  },
+  "evidence_id": "A8.3",
+  "concept_id": "mep-alg-composicion-02",
+  "linked_concepts": [
+    "mep-alg-composicion-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Dadas las funciones $f(x) = 2x + 1$ y $g(x) = x^2 - 3$, el valor de $(f \\circ g)(3)$ es",
+  "options": {
+    "A": "13",
+    "B": "14",
+    "C": "15",
+    "D": "16"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Por definición de composición, $(f \\circ g)(3) = f(g(3))$.",
+    "Evaluamos primero $g(3) = 3^2 - 3 = 9 - 3 = 6$.",
+    "Evaluamos luego $f(6) = 2(6) + 1 = 12 + 1 = 13$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

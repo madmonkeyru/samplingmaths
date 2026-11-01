@@ -1,0 +1,118 @@
+{
+  "id": 12,
+  "code": "item-geo-012",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Área de figuras no poligonales",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A4",
+    "affirmation_desc": null,
+    "evidence": "A4.3",
+    "evidence_desc": "Estima perímetros o áreas de figuras planas no poligonales mediante un sistema de coordenadas rectangulares en diversos contextos."
+  },
+  "evidence_id": "A4.3",
+  "concept_id": "mep-geo-poligono-regular-07",
+  "linked_concepts": [
+    "mep-geo-poligono-regular-07"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "La siguiente representación gráfica corresponde al diseño de una pieza de metal para el logotipo de una empresa automotriz, cuyas dimensiones están dadas en centímetros: [imagen]. De acuerdo con la información anterior, el área en centímetros cuadrados de esa pieza de metal es mayor que:",
+  "options": {
+    "A": "2200 pero menor que 2600.",
+    "B": "2600 pero menor que 2900.",
+    "C": "2900 pero menor que 3300.",
+    "D": "3300 pero menor que 3800."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La región está delimitada por la base y = 40 (de x = 40 a x = 120), el lado vertical x = 40 (de y = 40 a y = 100), la curva que desciende de (40, 100) a (100, 60) y el segmento de (100, 60) a (120, 40).",
+    "Se estima el área sobre la base y = 40 usando trapecios de ancho 20:",
+    "De x = 40 a 100: (60 + 40)/2 · 20 + (40 + 25)/2 · 20 + (25 + 20)/2 · 20 = 1000 + 650 + 450 = 2100.",
+    "De x = 100 a 120: (20 + 0)/2 · 20 = 200.",
+    "Área total ≈ 2100 + 200 = 2300 cm².",
+    "El área (≈ 2300 cm²) es mayor que 2200 pero menor que 2600.",
+    "Opción correcta: A."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Perfil de una pieza de metal delimitado por una curva y segmentos rectos, en un plano cartesiano.",
+    "visual": {
+      "type": "curve_region",
+      "domain": {
+        "x": [
+          30,
+          130
+        ],
+        "y": [
+          30,
+          110
+        ]
+      },
+      "grid": true,
+      "path": {
+        "points": [
+          [
+            40,
+            100
+          ],
+          [
+            60,
+            80
+          ],
+          [
+            80,
+            65
+          ],
+          [
+            100,
+            60
+          ]
+        ],
+        "label": "curva"
+      },
+      "straight_segments": [
+        {
+          "from": [
+            100,
+            60
+          ],
+          "to": [
+            120,
+            40
+          ]
+        },
+        {
+          "from": [
+            40,
+            40
+          ],
+          "to": [
+            40,
+            100
+          ]
+        }
+      ],
+      "base": {
+        "from": [
+          40,
+          40
+        ],
+        "to": [
+          120,
+          40
+        ]
+      }
+    }
+  }
+}

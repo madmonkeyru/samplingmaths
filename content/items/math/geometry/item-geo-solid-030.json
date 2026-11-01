@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-030",
-  "area": "GEOMETRÍA",
+  "id": 200,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Sección plana en una esfera con notación colineal MEP",
-  "cognitive_level": "Aplicación",
+  "topic": "Secci\u00f3n plana en una esfera con notaci\u00f3n colineal MEP",
+  "cognitive_level": "Aplicaci\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.3",
-    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+    "evidence_desc": "Determina caracter\u00edsticas m\u00e9tricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
   },
-  "stem": "La siguiente figura corresponde a una esfera cuya medida de su diámetro es $12$ y una sección plana obtenida de la intersección de un plano con la esfera:\n\n¿Cuál es la medida del radio de la sección plana de centro $O$?",
+  "stem": "La siguiente figura corresponde a una esfera cuya medida de su di\u00e1metro es $12$ y una secci\u00f3n plana obtenida de la intersecci\u00f3n de un plano con la esfera:\n\n\u00bfCu\u00e1l es la medida del radio de la secci\u00f3n plana de centro $O$?",
   "options": {
     "A": "$2\\sqrt{5}$",
     "B": "$8\\sqrt{2}$",
@@ -24,10 +24,10 @@
   },
   "correct_answer": "A",
   "solution_steps": [
-    "El diámetro de la esfera es $12$, por lo que su radio es $R = \\frac{12}{2} = 6$.",
-    "La distancia desde el centro $S$ de la esfera hasta el centro $O$ de la sección plana es $SO = d = 4$.",
-    "En el triángulo rectángulo formado por el centro de la esfera, el centro de la sección y un punto del borde (como $R$), se cumple por el teorema de Pitágoras:\n$$r^2 + d^2 = R^2$$\n$$r^2 + 4^2 = 6^2$$\n$$r^2 + 16 = 36$$\n$$r^2 = 20$$\n$$r = \\sqrt{20} = 2\\sqrt{5}$$",
-    "Por lo tanto, la medida del radio de la sección plana es $2\\sqrt{5}$."
+    "El di\u00e1metro de la esfera es $12$, por lo que su radio es $R = \\frac{12}{2} = 6$.",
+    "La distancia desde el centro $S$ de la esfera hasta el centro $O$ de la secci\u00f3n plana es $SO = d = 4$.",
+    "En el tri\u00e1ngulo rect\u00e1ngulo formado por el centro de la esfera, el centro de la secci\u00f3n y un punto del borde (como $R$), se cumple por el teorema de Pit\u00e1goras:\n$$r^2 + d^2 = R^2$$\n$$r^2 + 4^2 = 6^2$$\n$$r^2 + 16 = 36$$\n$$r^2 = 20$$\n$$r = \\sqrt{20} = 2\\sqrt{5}$$",
+    "Por lo tanto, la medida del radio de la secci\u00f3n plana es $2\\sqrt{5}$."
   ],
   "visual_spec": {
     "alt": "Esfera cortada por un plano secante con centros S y O y puntos colineales M-O-R",
@@ -51,13 +51,14 @@
       },
       "referenceBox": {
         "lines": [
-          "M — O — R; SO = 4",
+          "M \u2014 O \u2014 R; SO = 4",
           "S: centro de la esfera",
-          "O: centro de la sección plana"
+          "O: centro de la secci\u00f3n plana"
         ]
       },
       "showCrossSection": true,
       "showAxes": false
     }
-  }
+  },
+  "code": "item-geo-solid-030"
 }

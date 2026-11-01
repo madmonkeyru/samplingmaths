@@ -1,0 +1,78 @@
+{
+  "id": 147,
+  "code": "item-est-147",
+  "set_id": "set_3",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Diagrama de Caja",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A10",
+    "affirmation_desc": null,
+    "evidence": "A10.3",
+    "evidence_desc": "Compara distribuciones de datos mediante diagramas de caja."
+  },
+  "evidence_id": "A10.3",
+  "concept_id": "mep-est-diagrama-cajas-ric-03",
+  "linked_concepts": [
+    "mep-est-diagrama-cajas-ric-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere la siguiente información representada en la tabla comparativa de notas de dos secciones de secundaria A y B: ¿Cuál de las siguientes afirmaciones es CORRECTA?",
+  "options": {
+    "A": "Al menos el 50% de los estudiantes de la Sección B obtuvo una nota mayor o igual a 80.",
+    "B": "El recorrido total de las notas en la Sección A es menor que en la Sección B.",
+    "C": "El 25% superior de la Sección A obtuvo notas mayores a 90.",
+    "D": "La mediana de la Sección A es mayor que la mediana de la Sección B."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Evaluamos la opción A: En la Sección B, la mediana es 80. Por definición de la mediana, el 50% de los datos es mayor o igual a 80. La afirmación A es CORRECTA.",
+    "Evaluamos la opción B: Recorrido A = 98 - 45 = 53. Recorrido B = 100 - 55 = 45. El recorrido de A (53) es MAYOR que el de B (45), por lo que B es falsa.",
+    "Evaluamos la opción C: El $Q_3$ de A es 85, por lo que el 25% superior sacó más de 85, no de 90 (falsa).",
+    "Evaluamos la opción D: Mediana A (75) < Mediana B (80) (falsa)."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Tabla comparativa de calificaciones secciones A y B",
+    "visual": {
+      "type": "table",
+      "variant": "summary",
+      "headers": [
+        "Sección",
+        "Mínimo",
+        "Q1",
+        "Mediana",
+        "Q3",
+        "Máximo"
+      ],
+      "rows": [
+        [
+          "Sección A",
+          "45",
+          "60",
+          "75",
+          "85",
+          "98"
+        ],
+        [
+          "Sección B",
+          "55",
+          "70",
+          "80",
+          "90",
+          "100"
+        ]
+      ]
+    }
+  }
+}

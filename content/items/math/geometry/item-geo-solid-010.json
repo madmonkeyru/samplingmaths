@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-010",
-  "area": "GEOMETRÍA",
+  "id": 180,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Identificación de elementos métricos del cilindro",
-  "cognitive_level": "Comprensión",
+  "topic": "Identificaci\u00f3n de elementos m\u00e9tricos del cilindro",
+  "cognitive_level": "Comprensi\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.1",
-    "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el diámetro de un cilindro circular recto en diversos contextos."
+    "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el di\u00e1metro de un cilindro circular recto en diversos contextos."
   },
-  "stem": "¿Cuál de las siguientes relaciones métricas es correcta para cualquier cilindro circular recto donde $h$ es la altura, $r$ el radio y $g$ la generatriz?",
+  "stem": "\u00bfCu\u00e1l de las siguientes relaciones m\u00e9tricas es correcta para cualquier cilindro circular recto donde $h$ es la altura, $r$ el radio y $g$ la generatriz?",
   "options": {
     "A": "$g = h$",
     "B": "$g = 2r$",
@@ -25,7 +25,7 @@
   "correct_answer": "A",
   "solution_steps": [
     "En un cilindro circular recto, las generatrices son perpendiculares a las bases y paralelas al eje central.",
-    "Por esta razón geométrica, la longitud de la generatriz $g$ siempre es idéntica a la altura $h$ ($g = h$)."
+    "Por esta raz\u00f3n geom\u00e9trica, la longitud de la generatriz $g$ siempre es id\u00e9ntica a la altura $h$ ($g = h$)."
   ],
   "visual_spec": {
     "alt": "Elementos y generatriz de un cilindro circular recto",
@@ -55,5 +55,6 @@
       "showCrossSection": false,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-010"
 }

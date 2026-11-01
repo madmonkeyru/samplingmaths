@@ -1,0 +1,61 @@
+{
+  "id": 145,
+  "code": "item-est-145",
+  "set_id": "set_3",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de Posición",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A10",
+    "affirmation_desc": null,
+    "evidence": "A10.1",
+    "evidence_desc": "Interpreta medidas de posición central y no central (cuartiles, mínimo, máximo, mediana)."
+  },
+  "evidence_id": "A10.1",
+  "concept_id": "mep-est-diagrama-cajas-ric-03",
+  "linked_concepts": [
+    "mep-est-diagrama-cajas-ric-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere los siguientes datos sobre el número de tardanzas de un grupo de estudiantes en un mes: $1, 2, 2, 3, 5, 7, 8, 10, 12$. El primer cuartil $Q_1$ y la mediana $Q_2$ corresponden a",
+  "options": {
+    "A": "$Q_1 = 2$, Mediana = $5$",
+    "B": "$Q_1 = 2.5$, Mediana = $5$",
+    "C": "$Q_1 = 2$, Mediana = $7$",
+    "D": "$Q_1 = 3$, Mediana = $5$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Los datos ya están ordenados de menor a mayor (9 datos en total, $n=9$).",
+    "La mediana ($Q_2$) es el dato central en la posición $\\frac{9+1}{2} = 5^\\circ$ dato, el cual es $5$.",
+    "La mitad inferior comprende los datos $1, 2, 2, 3$. El primer cuartil ($Q_1$) es la mediana de esta mitad: entre el 2° y 3° dato, $Q_1 = \\frac{2 + 2}{2} = 2$.",
+    "Por lo tanto, $Q_1 = 2$ y la Mediana = $5$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Diagrama de caja para los datos de tardanzas mostrando Q1=2, Mediana=5, Q3=8",
+    "visual": {
+      "type": "box_plot",
+      "groups": [
+        {
+          "name": "Tardanzas",
+          "min": 1,
+          "q1": 2,
+          "median": 5,
+          "q3": 8,
+          "max": 12
+        }
+      ]
+    }
+  }
+}

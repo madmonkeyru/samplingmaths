@@ -1,0 +1,77 @@
+{
+  "id": 115,
+  "code": "item-est-115",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Asimetría de la distribución",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A2",
+    "evidence": "A2.1",
+    "evidence_desc": "Identifica la relación entre media, mediana y moda en una distribución con asimetría positiva."
+  },
+  "evidence_id": "A2.1",
+  "concept_id": "mep-est-eventos-probabilidad-02",
+  "linked_concepts": [
+    "mep-est-eventos-probabilidad-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la siguiente gráfica que muestra la distribución de tiempos de espera en minutos en una ventanilla de servicios:",
+  "options": {
+    "A": "Presenta asimetría positiva (sesgada a la derecha), cumpliéndose $Moda < Mediana < Media$.",
+    "B": "Presenta asimetría negativa (sesgada a la izquierda), cumpliéndose $Media < Mediana < Moda$.",
+    "C": "Es una distribución perfectamente simétrica donde $Media = Mediana = Moda$.",
+    "D": "La moda es igual a 25 minutos."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "En una gráfica con la cola más larga hacia la derecha (asimetría positiva o sesgada a la derecha), la moda está en el pico más alto a la izquierda, la mediana en el centro y la media es arrastrada hacia valores mayores por la cola derecha.",
+    "Por lo tanto, la relación de orden es $\\text{Moda} < \\text{Mediana} < \\text{Media}$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Curva de distribución con asimetría positiva (sesgada a la derecha)",
+    "visual": {
+      "type": "distribution_curve",
+      "skew": "positive",
+      "markers": [
+        {
+          "label": "Moda (10)",
+          "value": 10,
+          "dashed": true
+        },
+        {
+          "label": "Mediana (15)",
+          "value": 15,
+          "dashed": true
+        },
+        {
+          "label": "Media (20)",
+          "value": 20,
+          "dashed": true
+        }
+      ],
+      "x_axis": {
+        "label": "Tiempo de espera (min)",
+        "ticks": [
+          5,
+          10,
+          15,
+          20,
+          25,
+          30
+        ]
+      }
+    }
+  }
+}

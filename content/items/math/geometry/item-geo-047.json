@@ -1,0 +1,117 @@
+{
+  "id": 47,
+  "code": "item-geo-047",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Transformaciones en el plano - Homotecia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A7",
+    "evidence": "A7.1",
+    "evidence_desc": "Reconoce las figuras obtenidas a partir del concepto de transformación (traslación, homotecia, reflexión o rotación) a figuras dadas, en diversos contextos."
+  },
+  "evidence_id": "A7.1",
+  "concept_id": "mep-geo-transformaciones-10",
+  "linked_concepts": [
+    "mep-geo-transformaciones-10"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Al aplicar una homotecia de centro en el origen $O(0, 0)$ y razón de homotecia $k = 3$ al segmento $AB$ de longitud $4\\text{ cm}$ representado en la figura: [imagen], ¿cuál es la medida de la longitud del segmento transformado $A'B'$?",
+  "options": {
+    "A": "$12\\text{ cm}$",
+    "B": "$7\\text{ cm}$",
+    "C": "$4\\text{ cm}$",
+    "D": "$1\\text{ cm}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "En una homotecia de razón k, la longitud de todo segmento transformado se multiplica por |k|.",
+    "Longitud de A'B' = |k| * (Longitud de AB) = 3 * 4 cm = 12 cm."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Segmento AB y su homotético A'B' desde el origen con k=3.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -1,
+          8
+        ],
+        "y": [
+          -1,
+          15
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "line",
+          "from": [
+            1,
+            1
+          ],
+          "to": [
+            1,
+            5
+          ],
+          "stroke": "black"
+        },
+        {
+          "type": "line",
+          "from": [
+            3,
+            3
+          ],
+          "to": [
+            3,
+            15
+          ],
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            1
+          ],
+          "label": "A"
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            5
+          ],
+          "label": "B"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            3
+          ],
+          "label": "A'"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            15
+          ],
+          "label": "B'"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": 78,
+  "code": "item-est-078",
+  "set_id": "set_1",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de posición",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A1",
+    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con medidas de posición de un grupo de datos cuantitativos o cualitativos.",
+    "evidence": "A1.3",
+    "evidence_desc": "Identifica la ubicación aproximada de las medidas de posición de acuerdo con el tipo de asimetría de la distribución de los datos en diversos contextos."
+  },
+  "evidence_id": "A1.3",
+  "concept_id": "mep-est-medidas-posicion-01",
+  "linked_concepts": [
+    "mep-est-medidas-posicion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "La distribución de los datos correspondientes a las calificaciones de un examen de admisión universitario presenta una asimetría. De acuerdo con el reporte del departamento de registro, se determinó que 80 puntos representan a la mediana de esos datos y 85 puntos representan a la moda.\n\n[Ver curva de distribución asimétrica]\n\nCon certeza, la calificación promedio de los estudiantes en ese examen fue:",
+  "options": {
+    "A": "igual que 85.",
+    "B": "menor que 80.",
+    "C": "mayor que 85.",
+    "D": "mayor que 80 y menor que 85."
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "En una distribución asimétrica negativa (cola hacia la izquierda), la moda es mayor que la mediana, y la mediana es mayor que la media.",
+    "Dado que moda = 85 y mediana = 80, se cumple: media < mediana < moda, es decir, media < 80 < 85.",
+    "Por lo tanto, la calificación promedio es menor que 80."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Curva de distribución asimétrica con valores 80 y 85.",
+    "visual": {
+      "type": "distribution_curve",
+      "skew": "negative",
+      "median": 80,
+      "mode": 85,
+      "markers": [
+        {
+          "label": "80",
+          "value": 80,
+          "dashed": true
+        },
+        {
+          "label": "85",
+          "value": 85,
+          "dashed": true
+        }
+      ]
+    }
+  }
+}
