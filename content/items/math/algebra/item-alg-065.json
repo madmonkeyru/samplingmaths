@@ -1,0 +1,47 @@
+{
+  "id": 65,
+  "code": "item-alg-065",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Transformaciones de la gráfica de la función f(x) = a√x + b + c",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A4",
+    "affirmation_desc": null,
+    "evidence": "A4.5",
+    "evidence_desc": "Determina la transformación de la gráfica de la función dada por f(x) = a√x + b + c, en diversos contextos."
+  },
+  "evidence_id": "A4.5",
+  "concept_id": "mep-alg-funcion-raiz-cuadrada-07",
+  "linked_concepts": [
+    "mep-alg-funcion-raiz-cuadrada-07"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Sea la función $f$ definida por $f(x) = \\sqrt{x}$. Si su gráfica original se traslada verticalmente tres unidades hacia abajo para obtener la función $h$, entonces, ¿cuál es el criterio de $h(x)$?",
+  "options": {
+    "A": "$\\sqrt{x - 3}$",
+    "B": "$\\sqrt{x} + 3$",
+    "C": "$\\sqrt{x + 3}$",
+    "D": "$\\sqrt{x} - 3$"
+  },
+  "correct_answer": "D",
+  "solution_steps": [
+    "Una traslación vertical de k unidades hacia abajo se obtiene restando k a la función original.",
+    "Si f(x) = √x y la traslación es 3 unidades hacia abajo:",
+    "h(x) = f(x) − 3 = √x − 3",
+    "Por lo tanto, el criterio es h(x) = √x − 3.",
+    "Respuesta: D."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

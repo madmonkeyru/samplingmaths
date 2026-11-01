@@ -1,0 +1,97 @@
+{
+  "id": 50,
+  "code": "item-geo-050",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Transformaciones en el plano - Rotación",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A7",
+    "evidence": "A7.3",
+    "evidence_desc": "Determina el punto imagen de puntos dados mediante una transformación en diversos contextos."
+  },
+  "evidence_id": "A7.3",
+  "concept_id": "mep-geo-transformaciones-10",
+  "linked_concepts": [
+    "mep-geo-transformaciones-10"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Al aplicar una rotación de $180^\\circ$ alrededor del origen $(0, 0)$ al punto $P(-2, 5)$ mostrado en la figura: [imagen], ¿cuáles corresponden a las coordenadas del punto imagen $P'$?",
+  "options": {
+    "A": "$(2, -5)$",
+    "B": "$(5, -2)$",
+    "C": "$(-5, 2)$",
+    "D": "$(2, 5)$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Una rotación de 180° con centro en (0,0) transforma el punto (x, y) en (-x, -y).",
+    "Para P(-2, 5): P' = (-(-2), -5) = (2, -5)."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Punto P(-2, 5) y su imagen P'(2, -5) tras una rotación de 180°.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -4,
+          4
+        ],
+        "y": [
+          -7,
+          7
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "point",
+          "coords": [
+            -2,
+            5
+          ],
+          "label": "P(-2,5)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            2,
+            -5
+          ],
+          "label": "P'(2,-5)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            0
+          ],
+          "label": "(0,0)"
+        },
+        {
+          "type": "line",
+          "from": [
+            -2,
+            5
+          ],
+          "to": [
+            2,
+            -5
+          ],
+          "stroke": "gray"
+        }
+      ]
+    }
+  }
+}

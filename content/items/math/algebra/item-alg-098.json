@@ -1,0 +1,65 @@
+{
+  "id": 98,
+  "code": "item-alg-098",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función lineal — Modelado",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A2",
+    "evidence": "A2.5",
+    "evidence_desc": "Interpreta el significado de la pendiente y la intersección en un contexto real."
+  },
+  "evidence_id": "A2.5",
+  "concept_id": "mep-alg-funcion-cuadratica-04",
+  "linked_concepts": [
+    "mep-alg-funcion-cuadratica-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "El costo $C(x)$ en colones de fabricar $x$ camisetas se modela por la función $C(x) = 2500x + 40000$. En este contexto, ¿qué representa el valor $40000$?",
+  "options": {
+    "A": "El costo fijo inicial de producción.",
+    "B": "El costo de producir una camiseta individual.",
+    "C": "La cantidad máxima de camisetas que se pueden fabricar.",
+    "D": "La ganancia por cada camiseta vendida."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "En la función lineal $C(x) = mx + b$, $m = 2500$ representa el costo variable por unidad producida ($x$).",
+    "El valor constante $b = 40000$ corresponde al costo cuando $x = 0$ ($C(0) = 40000$), es decir, el costo fijo inicial (alquiler, equipo, etc.)."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Gráfica de costo lineal C(x) = 2500x + 40000",
+    "visual": {
+      "type": "function_plot",
+      "form": "linear",
+      "params": {
+        "m": 2.5,
+        "b": 40
+      },
+      "domain": {
+        "x": [
+          0,
+          20
+        ],
+        "y": [
+          0,
+          100
+        ]
+      },
+      "x_label": "Camisetas (x)",
+      "y_label": "Costo en miles (C)"
+    }
+  }
+}

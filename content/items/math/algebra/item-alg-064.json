@@ -1,0 +1,49 @@
+{
+  "id": 64,
+  "code": "item-alg-064",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Inversa de la función lineal",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A4",
+    "affirmation_desc": null,
+    "evidence": "A4.4",
+    "evidence_desc": "Determina la función inversa de f(x) = mx + b, m ≠ 0, en diversos contextos."
+  },
+  "evidence_id": "A4.4",
+  "concept_id": "mep-alg-funcion-inversa-06",
+  "linked_concepts": [
+    "mep-alg-funcion-inversa-06"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Si la inversa de la función $r$ dada por $r(x) = \\frac{6 - 2x}{8}$ es de la forma $r^{-1}(x) = ax + b$, entonces, se cumple que",
+  "options": {
+    "A": "$a = -4$ y $b = -3$",
+    "B": "$a = -4$ y $b = 3$",
+    "C": "$a = -8$ y $b = 6$",
+    "D": "$a = 4$ y $b = 3$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Simplificando r(x): r(x) = (6 − 2x)/8 = 6/8 − 2x/8 = 3/4 − x/4.",
+    "Para hallar la inversa, se escribe y = 3/4 − x/4 y se intercambian x e y:",
+    "x = 3/4 − y/4",
+    "4x = 3 − y",
+    "y = 3 − 4x",
+    "Por lo tanto, r⁻¹(x) = 3 − 4x, es decir, a = −4 y b = 3.",
+    "Respuesta: B."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

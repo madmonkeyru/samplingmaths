@@ -1,0 +1,46 @@
+{
+  "id": 81,
+  "code": "item-est-081",
+  "set_id": "set_1",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Eventos y probabilidades",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A2",
+    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con probabilidades o eventos aleatorios.",
+    "evidence": "A2.3",
+    "evidence_desc": "Reconoce eventos aleatorios mutuamente excluyentes, en diversos contextos."
+  },
+  "evidence_id": "A2.3",
+  "concept_id": "mep-est-eventos-probabilidad-02",
+  "linked_concepts": [
+    "mep-est-eventos-probabilidad-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Con base en la información dada en la tabla de contingencia, se establecen los siguientes eventos al elegir al azar para control de calidad:\n\n• E: Que la orden incluya una repostería dulce con café negro.\n\n• F: Que la orden incluya una repostería salada con café negro.\n\n• G: Que la orden incluya una repostería salada con un café con leche o jugo natural.\n\n• H: Que la orden sea de repostería dulce o salada acompañado de jugo natural.\n\n¿Cuál evento es imposible que ocurra?",
+  "options": {
+    "A": "$F^c \\cup G^c$",
+    "B": "$F^c \\cap G^c$",
+    "C": "$F \\cap G$",
+    "D": "$F \\cup G$"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "F: repostería salada con café negro (15 órdenes).",
+    "G: repostería salada con café con leche o jugo natural (16 + 14 = 30 órdenes).",
+    "F ∩ G requeriría una orden de repostería salada que incluya simultáneamente café negro y (café con leche o jugo natural), lo cual es imposible porque cada orden tiene una sola bebida.",
+    "Por lo tanto, F ∩ G es un evento imposible."
+  ],
+  "group_id": "g_cont_table",
+  "visual_spec": null
+}

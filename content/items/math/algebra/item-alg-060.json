@@ -1,0 +1,51 @@
+{
+  "id": 60,
+  "code": "item-alg-060",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Sistemas de dos ecuaciones lineales con dos incógnitas",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A3",
+    "affirmation_desc": null,
+    "evidence": "A3.3",
+    "evidence_desc": "Resuelve problemas, de diversos contextos (reales), relacionados con sistemas de dos ecuaciones con dos incógnitas."
+  },
+  "evidence_id": "A3.3",
+  "concept_id": "mep-alg-sistemas-ecuaciones-05",
+  "linked_concepts": [
+    "mep-alg-sistemas-ecuaciones-05"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "En una pastelería se producen únicamente queques de chocolate y galletas de avena. Cada queque requiere 4 h de horneado y 2 h de decoración; mientras que cada paquete de galletas requiere 3 h de horneado y 1 h de decoración. Si en total se utilizaron 110 h para horneado y 50 h para decoración, entonces, ¿cuántos queques de chocolate se produjeron?",
+  "options": {
+    "A": "30",
+    "B": "20",
+    "C": "15",
+    "D": "5"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Sea q = cantidad de queques y g = cantidad de paquetes de galletas.",
+    "Sistema de ecuaciones:\n4q + 3g = 110  (horneado)\n2q + g = 50    (decoración)",
+    "De la segunda ecuación: g = 50 − 2q.",
+    "Sustituyendo en la primera: 4q + 3(50 − 2q) = 110",
+    "4q + 150 − 6q = 110",
+    "−2q = −40",
+    "q = 20",
+    "Por lo tanto, se produjeron 20 queques de chocolate.",
+    "Respuesta: B."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

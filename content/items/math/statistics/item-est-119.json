@@ -1,0 +1,77 @@
+{
+  "id": 119,
+  "code": "item-est-119",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Probabilidad condicional",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A3",
+    "evidence": "A3.2",
+    "evidence_desc": "Calcula probabilidades condicionales a partir de una tabla de contingencia."
+  },
+  "evidence_id": "A3.2",
+  "concept_id": "mep-est-diagrama-cajas-ric-03",
+  "linked_concepts": [
+    "mep-est-diagrama-cajas-ric-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la siguiente tabla de contingencia sobre la preferencia de modalidad de estudio en un instituto según el género:",
+  "options": {
+    "A": "$\\frac{30}{60} = 0,50$",
+    "B": "$\\frac{30}{100} = 0,30$",
+    "C": "$\\frac{30}{50} = 0,60$",
+    "D": "$\\frac{20}{60} = 0,33$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Nos piden la probabilidad de que prefiera la modalidad Presencial dado que es Mujer: $P(\\text{Presencial} \\mid \\text{Mujer})$.",
+    "El espacio muestral restringido son las mujeres (total = 60).",
+    "De esas 60 mujeres, 30 prefieren modalidad Presencial.",
+    "Por lo tanto, la probabilidad es $\\frac{30}{60} = 0,50$ (50%)."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Tabla de contingencia género vs modalidad",
+    "visual": {
+      "type": "table",
+      "variant": "contingency_table",
+      "headers": [
+        "Género / Modalidad",
+        "Presencial",
+        "Virtual",
+        "Total"
+      ],
+      "rows": [
+        [
+          "Hombre",
+          "20",
+          "20",
+          "40"
+        ],
+        [
+          "Mujer",
+          "30",
+          "30",
+          "60"
+        ]
+      ],
+      "total_row": [
+        "Total",
+        "50",
+        "50",
+        "100"
+      ]
+    }
+  }
+}

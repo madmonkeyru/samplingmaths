@@ -1,0 +1,65 @@
+{
+  "id": 129,
+  "code": "item-est-129",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Resumen de cinco números",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A1",
+    "evidence": "A1.7",
+    "evidence_desc": "Interpreta una tabla de cinco números resumen."
+  },
+  "evidence_id": "A1.7",
+  "concept_id": "mep-est-medidas-posicion-01",
+  "linked_concepts": [
+    "mep-est-medidas-posicion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "La siguiente tabla muestra el resumen de las calificaciones de un curso universitario:",
+  "options": {
+    "A": "El 25% superior de los estudiantes obtuvo calificaciones superiores a 88.",
+    "B": "La calificación promedio fue 78.",
+    "C": "El 50% de los estudiantes reprobó.",
+    "D": "La nota máxima fue 88."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El tercer cuartil $Q_3 = 88$ indica que el 75% de las notas están por debajo de 88 y el 25% superior está por encima de 88.",
+    "Por lo tanto, es correcto afiramar que el 25% superior obtuvo calificaciones superiores a 88."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Tabla resumen de cinco números",
+    "visual": {
+      "type": "table",
+      "variant": "summary_table",
+      "headers": [
+        "Mínimo",
+        "Cuartil 1 (Q1)",
+        "Mediana (Me)",
+        "Cuartil 3 (Q3)",
+        "Máximo"
+      ],
+      "rows": [
+        [
+          "45",
+          "65",
+          "78",
+          "88",
+          "100"
+        ]
+      ]
+    }
+  }
+}

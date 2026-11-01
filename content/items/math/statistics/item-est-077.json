@@ -1,0 +1,78 @@
+{
+  "id": 77,
+  "code": "item-est-077",
+  "set_id": "set_1",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de posición",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A1",
+    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con medidas de posición de un grupo de datos cuantitativos o cualitativos.",
+    "evidence": "A1.4",
+    "evidence_desc": "Determina la media aritmética en grupos de datos que tienen pesos relativos (o ponderación) diferentes entre sí en diversos contextos."
+  },
+  "evidence_id": "A1.4",
+  "concept_id": "mep-est-medidas-posicion-01",
+  "linked_concepts": [
+    "mep-est-medidas-posicion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "El siguiente cuadro muestra las calificaciones obtenidas por un estudiante en el curso universitario de Química Orgánica, así como el valor porcentual de cada rubro calificado. La nota final se obtiene a partir de la sumatoria de los porcentajes obtenidos:\n\n[Ver tabla de ponderaciones]\n\n¿Cuál fue la nota final que obtuvo el estudiante en el curso de Química?",
+  "options": {
+    "A": "78,50",
+    "B": "79,50",
+    "C": "81,25",
+    "D": "82,50"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Se multiplica cada calificación por su peso porcentual: 70×0,30 = 21; 80×0,35 = 28; 90×0,15 = 13,5; 85×0,20 = 17.",
+    "Se suman los productos: 21 + 28 + 13,5 + 17 = 79,5.",
+    "La nota final es 79,50."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Tabla de datos.",
+    "visual": {
+      "type": "table",
+      "variant": "weighted",
+      "columns": [
+        "Rubro",
+        "Valor porcentual",
+        "Calificación obtenida"
+      ],
+      "rows": [
+        [
+          "I Parcial",
+          "30%",
+          70
+        ],
+        [
+          "II Parcial",
+          "35%",
+          80
+        ],
+        [
+          "Quices y tareas",
+          "15%",
+          90
+        ],
+        [
+          "Laboratorio",
+          "20%",
+          85
+        ]
+      ]
+    }
+  }
+}

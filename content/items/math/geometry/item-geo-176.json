@@ -1,0 +1,76 @@
+{
+  "id": 176,
+  "code": "item-geo-176",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección axial de un cilindro circular recto",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere la figura del cilindro circular recto donde $A-B-C$ y $D-E-F$ representan los diámetros de las bases superior e inferior. Si el radio de la base mide $4\\text{ cm}$ y la altura del cilindro mide $10\\text{ cm}$, ¿cuál es el área de la sección axial $ACFD$?",
+  "options": {
+    "A": "$40\\text{ cm}^2$",
+    "B": "$80\\text{ cm}^2$",
+    "C": "$80\\pi\\text{ cm}^2$",
+    "D": "$160\\text{ cm}^2$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La sección axial de un cilindro circular recto que contiene al eje central es un rectángulo cuyos lados son el diámetro de la base y la altura del cilindro.",
+    "Diámetro de la base: $AC = 2r = 2(4) = 8\\text{ cm}$.",
+    "Altura del cilindro: $h = CF = 10\\text{ cm}$.",
+    "Área del rectángulo de la sección: $\\text{Área} = \\text{base} \\times \\text{altura} = 8 \\times 10 = 80\\text{ cm}^2$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Sección axial rectangular en un cilindro circular recto",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cylinder",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 65,
+        "height": 115,
+        "crossSectionType": "axial",
+        "showAxis": true
+      },
+      "labels": {
+        "topLeft": "A",
+        "topCenter": "B",
+        "topRight": "C",
+        "bottomLeft": "D",
+        "bottomCenter": "E",
+        "bottomRight": "F",
+        "height": "h"
+      },
+      "referenceBox": {
+        "lines": [
+          "A — B — C",
+          "D — E — F",
+          "B y E: centros de las bases"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": 85,
+  "code": "item-est-085",
+  "set_id": "set_1",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de variabilidad",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A3",
+    "affirmation_desc": "Resuelve problemas de diversos contextos relacionados con el análisis de las medidas de posición o variabilidad de dos o más grupos en datos cuantitativos.",
+    "evidence": "A3.2",
+    "evidence_desc": "Compara medidas de posición o de variabilidad de dos grupos de datos mediante la utilización de diagramas de cajas en diversos contextos."
+  },
+  "evidence_id": "A3.2",
+  "concept_id": "mep-est-diagrama-cajas-ric-03",
+  "linked_concepts": [
+    "mep-est-diagrama-cajas-ric-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere la información de los diagramas de caja sobre las edades de los empleados de dos empresas, A y B.\n\n[Ver diagramas de caja]\n\n¿Cuál de las siguientes afirmaciones es verdadera?",
+  "options": {
+    "A": "El empleado de mayor edad pertenece únicamente a la empresa A.",
+    "B": "En ambas empresas al menos un 50% de sus empleados tienen 33 años o más.",
+    "C": "En la empresa B al menos el 75% de sus empleados tiene 38 años cumplidos o más.",
+    "D": "Con certeza en ambas empresas hay al menos un empleado con una edad de 33 años cumplidos."
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "A) Falso: el valor máximo de ambas empresas es 45, por lo que el empleado de mayor edad podría pertenecer a cualquiera de las dos.",
+    "B) Verdadero: la mediana de la empresa A es 33 (≥ 33) y la mediana de la empresa B es 33 (≥ 33); por lo tanto, al menos el 50 % de los empleados de cada empresa tiene 33 años o más.",
+    "C) Falso: en la empresa B, Q3 = 38, lo que indica que a lo sumo el 25 % tiene 38 años o más.",
+    "D) Falso: no se puede garantizar que exista un empleado con exactamente 33 años en ambas empresas."
+  ],
+  "group_id": "g_emp_ages",
+  "visual_spec": null
+}

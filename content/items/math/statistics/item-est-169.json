@@ -1,0 +1,46 @@
+{
+  "id": 169,
+  "code": "item-est-169",
+  "set_id": "set_4",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Probabilidad Regla de Laplace",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A11",
+    "evidence": "A11.1",
+    "evidence_desc": "Calcula la probabilidad de la unión de eventos."
+  },
+  "evidence_id": "A11.1",
+  "concept_id": "mep-est-eventos-probabilidad-02",
+  "linked_concepts": [
+    "mep-est-eventos-probabilidad-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Se lanza un dado regular de 6 caras. Sean los eventos $A$: obtener un número par y $B$: obtener un número mayor que 4. La probabilidad de que ocurra $A$ o $B$ ($P(A \\cup B)$) es",
+  "options": {
+    "A": "$\\frac{4}{6} = \\frac{2}{3}$",
+    "B": "$\\frac{5}{6}$",
+    "C": "$\\frac{3}{6} = \\frac{1}{2}$",
+    "D": "$\\frac{1}{6}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Espacio muestral $S = \\{1, 2, 3, 4, 5, 6\\}$.",
+    "Evento $A$ (pares): $\\{2, 4, 6\\}$.",
+    "Evento $B$ (>4): $\\{5, 6\\}$.",
+    "Unión $A \\cup B = \\{2, 4, 5, 6\\}$, que consta de 4 elementos.",
+    "La probabilidad es $P(A \\cup B) = \\frac{4}{6} = \\frac{2}{3}$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

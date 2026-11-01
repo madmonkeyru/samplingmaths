@@ -1,0 +1,282 @@
+{
+  "id": 51,
+  "code": "item-alg-051",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Concepto de función y de gráfica de una función",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A1",
+    "affirmation_desc": null,
+    "evidence": "A1.1",
+    "evidence_desc": "Identifica en diversos contextos si una relación dada en forma tabular, simbólica o gráfica corresponde a una función."
+  },
+  "evidence_id": "A1.1",
+  "concept_id": "mep-alg-concepto-funcion-01",
+  "linked_concepts": [
+    "mep-alg-concepto-funcion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "En las siguientes relaciones “x” representa la variable independiente y “y” la dependiente. ¿Cuál de ellas corresponde a una función?",
+  "options": {
+    "A": "Gráfica A (curva suave que pasa la prueba de la recta vertical)",
+    "B": "Gráfica B (dos rayos desde un punto en el eje y)",
+    "C": "Gráfica C (curva en forma de S acostada)",
+    "D": "Gráfica D (dos rayos desde un punto en el eje x positivo)"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Una relación es función si a cada valor de x le corresponde un único valor de y.",
+    "Esto se verifica con la prueba de la recta vertical: si alguna recta vertical interseca la gráfica en más de un punto, la relación no es función.",
+    "La gráfica A pasa la prueba de la recta vertical en todo su dominio.",
+    "Las gráficas B, C y D fallan la prueba: B y D tienen dos valores de y para un mismo x en ciertos intervalos; C tiene múltiples valores de y para un mismo x.",
+    "Por lo tanto, la respuesta correcta es A."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Representación de cuatro relaciones A, B, C y D para determinar cuál de ellas corresponde a una función.",
+    "visual": {
+      "type": "multi_view_grid",
+      "layout": {
+        "rows": 2,
+        "cols": 2
+      },
+      "views": [
+        {
+          "label": "A)",
+          "visual": {
+            "type": "cartesian_2d",
+            "domain": {
+              "x": [
+                -4,
+                4
+              ],
+              "y": [
+                -4,
+                4
+              ]
+            },
+            "grid": false,
+            "show_ticks": false,
+            "axes": {
+              "arrows": true
+            },
+            "children": [
+              {
+                "type": "path",
+                "points": [
+                  [
+                    -3.2,
+                    -0.2
+                  ],
+                  [
+                    -2.3,
+                    1.3
+                  ],
+                  [
+                    -0.9,
+                    1.4
+                  ],
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0.9,
+                    -1.4
+                  ],
+                  [
+                    2.3,
+                    -1.3
+                  ],
+                  [
+                    3.2,
+                    0.8
+                  ]
+                ],
+                "arrow": "both",
+                "strokeWidth": 2
+              }
+            ]
+          }
+        },
+        {
+          "label": "B)",
+          "visual": {
+            "type": "cartesian_2d",
+            "domain": {
+              "x": [
+                -2,
+                5
+              ],
+              "y": [
+                -4,
+                4
+              ]
+            },
+            "grid": false,
+            "show_ticks": false,
+            "axes": {
+              "arrows": true
+            },
+            "children": [
+              {
+                "type": "ray",
+                "origin": [
+                  0,
+                  1.2
+                ],
+                "direction": "up-right",
+                "arrow": true,
+                "length": 4,
+                "strokeWidth": 2
+              },
+              {
+                "type": "ray",
+                "origin": [
+                  0,
+                  1.2
+                ],
+                "direction": "down-right",
+                "arrow": true,
+                "length": 3.5,
+                "strokeWidth": 2
+              },
+              {
+                "type": "point",
+                "coords": [
+                  0,
+                  1.2
+                ],
+                "radius": 3.5,
+                "color": "stone-900"
+              }
+            ]
+          }
+        },
+        {
+          "label": "C)",
+          "visual": {
+            "type": "cartesian_2d",
+            "domain": {
+              "x": [
+                -4,
+                4
+              ],
+              "y": [
+                -4,
+                4
+              ]
+            },
+            "grid": false,
+            "show_ticks": false,
+            "axes": {
+              "arrows": true
+            },
+            "children": [
+              {
+                "type": "path",
+                "points": [
+                  [
+                    -0.4,
+                    2.8
+                  ],
+                  [
+                    0.7,
+                    1.6
+                  ],
+                  [
+                    0.8,
+                    0.4
+                  ],
+                  [
+                    0,
+                    -0.6
+                  ],
+                  [
+                    -0.8,
+                    -1.5
+                  ],
+                  [
+                    -0.6,
+                    -2.4
+                  ],
+                  [
+                    0.4,
+                    -3.2
+                  ]
+                ],
+                "arrow": "both",
+                "strokeWidth": 2
+              }
+            ]
+          }
+        },
+        {
+          "label": "D)",
+          "visual": {
+            "type": "cartesian_2d",
+            "domain": {
+              "x": [
+                -3,
+                4
+              ],
+              "y": [
+                -2,
+                5
+              ]
+            },
+            "grid": false,
+            "show_ticks": false,
+            "axes": {
+              "arrows": true
+            },
+            "children": [
+              {
+                "type": "ray",
+                "origin": [
+                  1.8,
+                  0
+                ],
+                "direction": "up-left",
+                "arrow": true,
+                "length": 4,
+                "strokeWidth": 2
+              },
+              {
+                "type": "ray",
+                "origin": [
+                  1.8,
+                  0
+                ],
+                "direction": "left-horizontal",
+                "arrow": true,
+                "length": 4.5,
+                "strokeWidth": 2
+              },
+              {
+                "type": "point",
+                "coords": [
+                  1.8,
+                  0
+                ],
+                "radius": 3.5,
+                "color": "stone-900"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,35 +1,35 @@
 {
-  "id": "item-geo-solid-003",
-  "area": "GEOMETRÍA",
+  "id": 173,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Sección máxima o ecuatorial en una esfera",
-  "cognitive_level": "Comprensión",
+  "topic": "Secci\u00f3n m\u00e1xima o ecuatorial en una esfera",
+  "cognitive_level": "Comprensi\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.2",
-    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+    "evidence_desc": "Determina qu\u00e9 figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
   },
-  "stem": "Si un plano corta a una esfera pasando exactamente por su centro, ¿qué nombre recibe la sección plana obtenida y cuál es el área si el radio de la esfera es $5\\text{ cm}$?",
+  "stem": "Si un plano corta a una esfera pasando exactamente por su centro, \u00bfqu\u00e9 nombre recibe la secci\u00f3n plana obtenida y cu\u00e1l es el \u00e1rea si el radio de la esfera es $5\\text{ cm}$?",
   "options": {
-    "A": "Círculo menor de área $10\\pi\\text{ cm}^2$",
-    "B": "Círculo máximo de área $25\\pi\\text{ cm}^2$",
-    "C": "Elipse de área $25\\pi\\text{ cm}^2$",
-    "D": "Corona circular de área $50\\pi\\text{ cm}^2$"
+    "A": "C\u00edrculo menor de \u00e1rea $10\\pi\\text{ cm}^2$",
+    "B": "C\u00edrculo m\u00e1ximo de \u00e1rea $25\\pi\\text{ cm}^2$",
+    "C": "Elipse de \u00e1rea $25\\pi\\text{ cm}^2$",
+    "D": "Corona circular de \u00e1rea $50\\pi\\text{ cm}^2$"
   },
   "correct_answer": "B",
   "solution_steps": [
-    "Toda sección plana que pasa por el centro de una esfera es un círculo máximo (o sección ecuatorial).",
-    "El radio de la sección es exactamente igual al radio de la esfera: $r = R = 5\\text{ cm}$.",
-    "El área del círculo es $A = \\pi r^2 = \\pi (5)^2 = 25\\pi\\text{ cm}^2$."
+    "Toda secci\u00f3n plana que pasa por el centro de una esfera es un c\u00edrculo m\u00e1ximo (o secci\u00f3n ecuatorial).",
+    "El radio de la secci\u00f3n es exactamente igual al radio de la esfera: $r = R = 5\\text{ cm}$.",
+    "El \u00e1rea del c\u00edrculo es $A = \\pi r^2 = \\pi (5)^2 = 25\\pi\\text{ cm}^2$."
   ],
   "visual_spec": {
-    "alt": "Corte ecuatorial o círculo máximo en una esfera",
+    "alt": "Corte ecuatorial o c\u00edrculo m\u00e1ximo en una esfera",
     "visual": {
       "type": "solid_3d",
       "shape": "sphere",
@@ -51,11 +51,12 @@
         "lines": [
           "Plano secante diametral",
           "O: centro de la esfera",
-          "Círculo máximo"
+          "C\u00edrculo m\u00e1ximo"
         ]
       },
       "showCrossSection": true,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-003"
 }

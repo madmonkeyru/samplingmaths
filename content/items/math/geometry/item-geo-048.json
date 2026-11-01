@@ -1,0 +1,121 @@
+{
+  "id": 48,
+  "code": "item-geo-048",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Transformaciones en el plano - Reflexión",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A7",
+    "evidence": "A7.1",
+    "evidence_desc": "Reconoce las figuras obtenidas a partir del concepto de transformación (traslación, homotecia, reflexión o rotación) a figuras dadas, en diversos contextos."
+  },
+  "evidence_id": "A7.1",
+  "concept_id": "mep-geo-transformaciones-10",
+  "linked_concepts": [
+    "mep-geo-transformaciones-10"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere el triángulo con vértices $P(1, 2)$, $Q(4, 2)$ y $R(1, 5)$ ilustrado en el plano cartesiano adjunto: [imagen]. Si al triángulo se le aplica una reflexión sobre el eje $x$, ¿cuáles son las coordenadas del vértice resultante $R'$?",
+  "options": {
+    "A": "$(1, -5)$",
+    "B": "$(-1, 5)$",
+    "C": "$(-1, -5)$",
+    "D": "$(5, 1)$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La reflexión con respecto al eje x cambia el signo de la coordenada y: (x, y) -> (x, -y).",
+    "Para R(1, 5), se obtiene R'(1, -5)."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Triángulo PQR y su reflejado P'Q'R' respecto al eje x.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -1,
+          6
+        ],
+        "y": [
+          -6,
+          6
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              1,
+              2
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              1,
+              5
+            ]
+          ],
+          "labels": [
+            "P",
+            "Q",
+            "R"
+          ]
+        },
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              1,
+              -2
+            ],
+            [
+              4,
+              -2
+            ],
+            [
+              1,
+              -5
+            ]
+          ],
+          "labels": [
+            "P'",
+            "Q'",
+            "R'"
+          ]
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            5
+          ],
+          "label": "R(1,5)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            -5
+          ],
+          "label": "R'(1,-5)"
+        }
+      ]
+    }
+  }
+}

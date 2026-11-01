@@ -1,0 +1,108 @@
+{
+  "id": 40,
+  "code": "item-geo-040",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Perímetros y áreas en plano cartesiano",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A4",
+    "evidence": "A4.2",
+    "evidence_desc": "Determina perímetros o áreas de polígonos no regulares mediante un sistema de coordenadas rectangulares en diversos contextos."
+  },
+  "evidence_id": "A4.2",
+  "concept_id": "mep-geo-poligono-irregular-08",
+  "linked_concepts": [
+    "mep-geo-poligono-irregular-08"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Un terreno triangular $PQR$ tiene sus vértices representados en el plano cartesiano en $P(0, 0)$, $Q(6, 0)$ y $R(2, 4)$: [imagen]. ¿Cuál es el área del terreno en unidades cuadradas?",
+  "options": {
+    "A": "$12\\text{ unidades cuadradas}$",
+    "B": "$24\\text{ unidades cuadradas}$",
+    "C": "$10\\text{ unidades cuadradas}$",
+    "D": "$16\\text{ unidades cuadradas}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La base sobre el eje x es la distancia PQ = |6 - 0| = 6 unidades.",
+    "La altura h correspondiente a R(2, 4) es la coordenada y = 4 unidades.",
+    "Área del triángulo = (base * altura) / 2 = (6 * 4) / 2 = 12 unidades cuadradas."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Triángulo PQR en plano cartesiano con P(0,0), Q(6,0), R(2,4).",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -1,
+          8
+        ],
+        "y": [
+          -1,
+          6
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              0,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "labels": [
+            "P",
+            "Q",
+            "R"
+          ]
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            0
+          ],
+          "label": "P(0,0)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            6,
+            0
+          ],
+          "label": "Q(6,0)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            2,
+            4
+          ],
+          "label": "R(2,4)"
+        }
+      ]
+    }
+  }
+}

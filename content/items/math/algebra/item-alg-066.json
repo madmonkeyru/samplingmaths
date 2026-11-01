@@ -1,0 +1,109 @@
+{
+  "id": 66,
+  "code": "item-alg-066",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función inversa — representación gráfica",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A4",
+    "affirmation_desc": null,
+    "evidence": "A4.2",
+    "evidence_desc": "Reconoce la gráfica de la inversa de una función a partir de la gráfica de la función en diversos contextos."
+  },
+  "evidence_id": "A4.2",
+  "concept_id": "mep-alg-funcion-inversa-06",
+  "linked_concepts": [
+    "mep-alg-funcion-inversa-06"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere la representación gráfica de una función p:\n[recta que pasa por (0, −3) y (6, 0)]\nCon base en la información dada, ¿cuál es la representación gráfica de la función inversa de p?",
+  "options": {
+    "A": "Recta que pasa por $(-3, 0)$ y $(0, 6)$",
+    "B": "Recta que pasa por $(0, 6)$ y $(3, 0)$",
+    "C": "Recta que pasa por $(-6, 0)$ y $(0, 3)$",
+    "D": "Recta que pasa por $(0, 3)$ y $(6, 0)$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La función p pasa por (0, −3) y (6, 0). Su ecuación es p(x) = x/2 − 3.",
+    "La inversa se obtiene intercambiando x e y: x = y/2 − 3 → y = 2x + 6.",
+    "La recta y = 2x + 6 pasa por (−3, 0) y (0, 6).",
+    "Esta corresponde a la opción A.",
+    "Respuesta: A."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Representación gráfica de la función p.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -5,
+          8
+        ],
+        "y": [
+          -2,
+          8
+        ]
+      },
+      "grid": false,
+      "axes": {
+        "arrows": true
+      },
+      "x_label": "x",
+      "y_label": "y",
+      "children": [
+        {
+          "type": "line",
+          "p1": [
+            -3,
+            0
+          ],
+          "p2": [
+            0,
+            6
+          ],
+          "color": "indigo-600",
+          "strokeWidth": 2.5
+        },
+        {
+          "type": "point",
+          "coords": [
+            -3,
+            0
+          ],
+          "label": "-3",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            6
+          ],
+          "label": "6",
+          "label_position": "left"
+        },
+        {
+          "type": "label",
+          "coords": [
+            -1.8,
+            3.5
+          ],
+          "text": "p"
+        }
+      ]
+    }
+  }
+}

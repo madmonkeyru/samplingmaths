@@ -1,0 +1,45 @@
+{
+  "id": 44,
+  "code": "item-geo-044",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Visualización espacial - Esfera",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A5",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Una esfera sólida de madera tiene un radio de $10\\text{ cm}$. Se realiza un corte plano a una distancia de $6\\text{ cm}$ del centro de la esfera. ¿Cuál es el radio de la sección plana circular resultante?",
+  "options": {
+    "A": "$8\\text{ cm}$",
+    "B": "$4\\text{ cm}$",
+    "C": "$12\\text{ cm}$",
+    "D": "$16\\text{ cm}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El radio de la esfera R = 10 cm, la distancia del centro al plano d = 6 cm.",
+    "La relación métrica en la sección es R^2 = d^2 + r^2, donde 'r' es el radio de la sección plana.",
+    "10^2 = 6^2 + r^2 => 100 = 36 + r^2 => r^2 = 64.",
+    "r = sqrt(64) = 8 cm."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

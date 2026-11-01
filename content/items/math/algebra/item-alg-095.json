@@ -1,0 +1,98 @@
+{
+  "id": 95,
+  "code": "item-alg-095",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función lineal — Criterio de paralelismo",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A2",
+    "evidence": "A2.4",
+    "evidence_desc": "Determina el criterio de una recta paralela a otra dada."
+  },
+  "evidence_id": "A2.4",
+  "concept_id": "mep-alg-funcion-lineal-03",
+  "linked_concepts": [
+    "mep-alg-funcion-lineal-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la recta $L_1$ definida por $y = 3x - 2$. ¿Cuál de las siguientes rectas es paralela a $L_1$ y pasa por el punto $(1, 5)$?",
+  "options": {
+    "A": "$y = 3x + 2$",
+    "B": "$y = -3x + 8$",
+    "C": "$y = \\frac{1}{3}x + \\frac{14}{3}$",
+    "D": "$y = 3x - 5$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Dos rectas son paralelas si y solo si sus pendientes son iguales: $m_2 = m_1 = 3$.",
+    "Utilizando la forma punto-pendiente con $(x_1, y_1) = (1, 5)$: $y - 5 = 3(x - 1) \\implies y - 5 = 3x - 3 \\implies y = 3x + 2$.",
+    "Por lo tanto, la ecuación es $y = 3x + 2$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Dos rectas paralelas con pendiente m = 3",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -2,
+          4
+        ],
+        "y": [
+          -4,
+          8
+        ]
+      },
+      "children": [
+        {
+          "type": "line",
+          "p1": [
+            -1,
+            -5
+          ],
+          "p2": [
+            2,
+            4
+          ],
+          "color": "#2563eb",
+          "strokeWidth": 2,
+          "label": "L1: y=3x-2"
+        },
+        {
+          "type": "line",
+          "p1": [
+            -1,
+            -1
+          ],
+          "p2": [
+            2,
+            8
+          ],
+          "color": "#e11d48",
+          "strokeWidth": 2,
+          "label": "L2: y=3x+2"
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            5
+          ],
+          "label": "(1,5)",
+          "color": "#e11d48"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "id": 29,
+  "code": "item-geo-029",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Traslación de circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A2",
+    "evidence": "A2.2",
+    "evidence_desc": "Resuelve problemas, de diversos contextos, relacionados con la traslación de una circunferencia y sus representaciones."
+  },
+  "evidence_id": "A2.2",
+  "concept_id": "mep-geo-traslacion-03",
+  "linked_concepts": [
+    "mep-geo-traslacion-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Un disco circular en una máquina industrial está centrado inicialmente en el origen $(0, 0)$ con radio $5$. Debido a un ajuste de calibración, el centro se desplaza al punto $(3, -4)$, como se aprecia en la representación gráfica: [imagen]. ¿Cuál es la ecuación de la posición final del disco?",
+  "options": {
+    "A": "$(x - 3)^2 + (y + 4)^2 = 25$",
+    "B": "$(x + 3)^2 + (y - 4)^2 = 25$",
+    "C": "$(x - 3)^2 + (y - 4)^2 = 25$",
+    "D": "$(x + 3)^2 + (y + 4)^2 = 25$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La posición inicial es x^2 + y^2 = 25 (centro (0,0)).",
+    "El nuevo centro tras el movimiento es (h, k) = (3, -4).",
+    "El radio r = 5 se mantiene igual.",
+    "La ecuación resultante es (x - 3)^2 + (y - (-4))^2 = 5^2, que da (x - 3)^2 + (y + 4)^2 = 25."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Disco original centrado en (0,0) y disco trasladado centrado en (3, -4).",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -6,
+          9
+        ],
+        "y": [
+          -10,
+          6
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            0,
+            0
+          ],
+          "radius": 5,
+          "stroke": "gray"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            0
+          ],
+          "label": "(0,0)"
+        },
+        {
+          "type": "circle",
+          "center": [
+            3,
+            -4
+          ],
+          "radius": 5,
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            -4
+          ],
+          "label": "(3,-4)"
+        },
+        {
+          "type": "dashed_projection",
+          "from": [
+            3,
+            -4
+          ],
+          "to_axis": "x"
+        },
+        {
+          "type": "dashed_projection",
+          "from": [
+            3,
+            -4
+          ],
+          "to_axis": "y"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": 109,
+  "code": "item-alg-109",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función lineal — Perpendicularidad",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A2",
+    "evidence": "A2.11",
+    "evidence_desc": "Calcula la pendiente de una recta perpendicular."
+  },
+  "evidence_id": "A2.11",
+  "concept_id": "mep-alg-funcion-lineal-03",
+  "linked_concepts": [
+    "mep-alg-funcion-lineal-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Si la recta $L_1$ tiene como criterio $y = -\\frac{2}{5}x + 1$, ¿cuál es la pendiente de cualquier recta $L_2$ perpendicular a $L_1$?",
+  "options": {
+    "A": "$m_2 = \\frac{5}{2}$",
+    "B": "$m_2 = -\\frac{5}{2}$",
+    "C": "$m_2 = \\frac{2}{5}$",
+    "D": "$m_2 = -\\frac{2}{5}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Dos rectas no verticales son perpendiculares si y solo si el producto de sus pendientes es $-1$: $m_1 \\cdot m_2 = -1$.",
+    "Dado $m_1 = -\\frac{2}{5}$, despejamos $m_2 = -\\frac{1}{m_1} = -\\frac{1}{-2/5} = \\frac{5}{2}$.",
+    "Por lo tanto, la pendiente es $\\frac{5}{2}$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

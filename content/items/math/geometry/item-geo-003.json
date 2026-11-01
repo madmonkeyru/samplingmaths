@@ -1,0 +1,120 @@
+{
+  "id": 3,
+  "code": "item-geo-003",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "affirmation_desc": null,
+    "evidence": "A1.1",
+    "evidence_desc": "Reconoce la representación gráfica de una circunferencia dado su centro y su radio, en diversos contextos."
+  },
+  "evidence_id": "A1.1",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere la siguiente representación gráfica de la circunferencia “c”, de centro “O”: [imagen]. De acuerdo con la información dada la ecuación de “c” corresponde a",
+  "options": {
+    "A": "x^2 + (y − 2)^2 = 6",
+    "B": "x^2 + (y + 2)^2 = 9",
+    "C": "x^2 + (y − 2)^2 = 9",
+    "D": "x^2 + (y + 2)^2 = 6"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Del gráfico, el centro O está en (0, 2).",
+    "El radio es la distancia del centro a un punto de la circunferencia, por ejemplo (0,5): r = 3.",
+    "La ecuación es (x-0)^2 + (y-2)^2 = 3^2, es decir, x^2 + (y-2)^2 = 9.",
+    "Opción correcta: C."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Circunferencia c con centro en O(0, 2) y radio 3 en un plano cartesiano.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -6,
+          6
+        ],
+        "y": [
+          -2,
+          6
+        ]
+      },
+      "grid": false,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            0,
+            2
+          ],
+          "radius": 3
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            2
+          ],
+          "label": "O"
+        },
+        {
+          "type": "label",
+          "coords": [
+            2.2,
+            4.2
+          ],
+          "text": "c"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            5
+          ],
+          "label": "5"
+        },
+        {
+          "type": "dashed_projection",
+          "from": [
+            0,
+            5
+          ],
+          "to_axis": "y"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            -1
+          ],
+          "label": "-1"
+        },
+        {
+          "type": "dashed_projection",
+          "from": [
+            0,
+            -1
+          ],
+          "to_axis": "y"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": 103,
+  "code": "item-alg-103",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Ecuaciones logarítmicas",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A3",
+    "evidence": "A3.4",
+    "evidence_desc": "Resuelve ecuaciones logarítmicas simples."
+  },
+  "evidence_id": "A3.4",
+  "concept_id": "mep-alg-sistemas-ecuaciones-05",
+  "linked_concepts": [
+    "mep-alg-sistemas-ecuaciones-05"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la ecuación $\\log_3(2x - 1) = 2$. ¿Cuál es el valor de $x$?",
+  "options": {
+    "A": "5",
+    "B": "4",
+    "C": "9",
+    "D": "8"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Convertimos la ecuación logarítmica a forma exponencial: $\\log_a(M) = N \\iff M = a^N$.",
+    "$2x - 1 = 3^2 \\implies 2x - 1 = 9$.",
+    "Sumando 1: $2x = 10 \\implies x = 5$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

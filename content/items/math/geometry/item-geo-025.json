@@ -1,0 +1,95 @@
+{
+  "id": 25,
+  "code": "item-geo-025",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "evidence": "A1.2",
+    "evidence_desc": "Reconoce la representación algebraica de una circunferencia dado su centro y su radio, en diversos contextos."
+  },
+  "evidence_id": "A1.2",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Un estanque circular en un parque tiene su centro en el punto (-4, 5) del plano cartesiano y un radio de 6 metros. ¿Cuál es la ecuación algebraica que representa el borde de este estanque?",
+  "options": {
+    "A": "(x - 4)^2 + (y + 5)^2 = 36",
+    "B": "(x + 4)^2 + (y - 5)^2 = 36",
+    "C": "(x + 4)^2 + (y - 5)^2 = 12",
+    "D": "(x - 4)^2 + (y + 5)^2 = 12"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La ecuación ordinaria de la circunferencia es (x - h)^2 + (y - k)^2 = r^2.",
+    "Sustituyendo h = -4, k = 5 y r = 6: (x - (-4))^2 + (y - 5)^2 = 6^2.",
+    "Esto simplifica a (x + 4)^2 + (y - 5)^2 = 36."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Representación del estanque circular centrado en (-4, 5) con radio 6.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -11,
+          3
+        ],
+        "y": [
+          -2,
+          12
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            -4,
+            5
+          ],
+          "radius": 6,
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -4,
+            5
+          ],
+          "label": "Centro(-4, 5)"
+        },
+        {
+          "type": "dashed_projection",
+          "from": [
+            -4,
+            5
+          ],
+          "to_axis": "x"
+        },
+        {
+          "type": "dashed_projection",
+          "from": [
+            -4,
+            5
+          ],
+          "to_axis": "y"
+        }
+      ]
+    }
+  }
+}

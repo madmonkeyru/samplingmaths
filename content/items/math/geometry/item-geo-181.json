@@ -1,0 +1,75 @@
+{
+  "id": 181,
+  "code": "item-geo-181",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección paralela a la base en un cono",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere la figura del cono donde $V$ es la cúspide y $O$ es el centro de la base. Si la altura del cono mide $12\\text{ cm}$, el radio de la base mide $9\\text{ cm}$ y se traza una sección plana paralela a la base a $4\\text{ cm}$ del vértice $V$, ¿cuál es el radio de dicha sección?",
+  "options": {
+    "A": "$3\\text{ cm}$",
+    "B": "$4\\text{ cm}$",
+    "C": "$5\\text{ cm}$",
+    "D": "$6\\text{ cm}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Por semejanza de triángulos entre el triángulo axial del cono y el del cono menor superior determinado por el corte:",
+    "$\\frac{r'}{r} = \\frac{h'}{h}$, donde $h=12$, $r=9$ y $h'=4$.",
+    "$\\frac{r'}{9} = \\frac{4}{12} = \\frac{1}{3} \\implies r' = \\frac{9}{3} = 3\\text{ cm}$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Sección transversal paralela a la base de un cono",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cone",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 75,
+        "height": 130,
+        "cutHeightFraction": 0.45,
+        "showAxis": true,
+        "showCenter": true,
+        "showRightAngle": true
+      },
+      "labels": {
+        "apex": "V",
+        "baseCenter": "O",
+        "baseRight": "B",
+        "cutCenter": "O'",
+        "cutRight": "B'"
+      },
+      "referenceBox": {
+        "lines": [
+          "V: cúspide del cono",
+          "O: centro de la base",
+          "Triángulo V-O-B rectángulo en O"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

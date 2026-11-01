@@ -1,0 +1,46 @@
+{
+  "id": 82,
+  "code": "item-est-082",
+  "set_id": "set_1",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Eventos y probabilidades",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A2",
+    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con probabilidades o eventos aleatorios.",
+    "evidence": "A2.1",
+    "evidence_desc": "Determina los puntos muestrales del evento aleatorio obtenido mediante las operaciones: unión 'U', intersección '∩' o 'complemento' de dos o más eventos aleatorios en diversos contextos."
+  },
+  "evidence_id": "A2.1",
+  "concept_id": "mep-est-eventos-probabilidad-02",
+  "linked_concepts": [
+    "mep-est-eventos-probabilidad-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "En una academia de artes se imparte música, pintura y ballet. El siguiente diagrama muestra la cantidad de estudiantes matriculados en esas disciplinas:\n\n[Ver diagrama de Venn]\n\nSi se selecciona al azar un estudiante de esa academia, entonces, la probabilidad de que esté matriculado en las tres disciplinas corresponde a",
+  "options": {
+    "A": "$36/43$",
+    "B": "$18/43$",
+    "C": "$0$",
+    "D": "$1$"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Del diagrama de Venn se observa que no hay región de intersección triple (Música ∩ Pintura ∩ Ballet).",
+    "El número de estudiantes en las tres disciplinas es 0.",
+    "El total de estudiantes es 8 + 4 + 11 + 3 + 17 = 43.",
+    "P(tres disciplinas) = 0/43 = 0."
+  ],
+  "group_id": "g_venn_3set",
+  "visual_spec": null
+}

@@ -1,0 +1,133 @@
+{
+  "id": 153,
+  "code": "item-geo-153",
+  "set_id": "set_4",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Polígonos",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A2",
+    "evidence": "A2.2",
+    "evidence_desc": "Calcula áreas de polígonos irregulares mediante descomposición en triángulos y rectángulos."
+  },
+  "evidence_id": "A2.2",
+  "concept_id": "mep-geo-poligono-irregular-08",
+  "linked_concepts": [
+    "mep-geo-poligono-irregular-08"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un terreno con forma de pentágono irregular tiene sus vértices situados en $A(0,0)$, $B(6,0)$, $C(6,4)$, $D(3,7)$ y $E(0,4)$. ¿Cuál es el área total del terreno en metros cuadrados?",
+  "options": {
+    "A": "$33\\text{ m}^2$",
+    "B": "$30\\text{ m}^2$",
+    "C": "$36\\text{ m}^2$",
+    "D": "$27\\text{ m}^2$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Descomponemos el pentágono en dos figuras conocidas: un rectángulo base $ABCE$ de ancho 6 y alto 4, y un triángulo superior $ECD$ de base $EC = 6$ (de $(0,4)$ a $(6,4)$) y altura $h = 7 - 4 = 3$.",
+    "Área del rectángulo $ABCE = \\text{base} \\cdot \\text{altura} = 6 \\cdot 4 = 24\\text{ m}^2$.",
+    "Área del triángulo $ECD = \\frac{\\text{base} \\cdot \\text{altura}}{2} = \\frac{6 \\cdot 3}{2} = 9\\text{ m}^2$.",
+    "Área total = $24 + 9 = 33\\text{ m}^2$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Pentágono irregular descompuesto en un rectángulo y un triángulo superior",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -1,
+          7
+        ],
+        "y": [
+          -1,
+          8
+        ]
+      },
+      "grid": true,
+      "axes": {
+        "arrows": true
+      },
+      "children": [
+        {
+          "type": "polygon",
+          "points": [
+            [
+              0,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              0,
+              4
+            ]
+          ],
+          "stroke": "indigo-600",
+          "fill": "indigo-50/30",
+          "strokeWidth": 2
+        },
+        {
+          "type": "line",
+          "x1": 0,
+          "y1": 4,
+          "x2": 6,
+          "y2": 4,
+          "stroke": "stone-400",
+          "strokeWidth": 1.5
+        },
+        {
+          "type": "point",
+          "x": 0,
+          "y": 0,
+          "label": "A(0,0)"
+        },
+        {
+          "type": "point",
+          "x": 6,
+          "y": 0,
+          "label": "B(6,0)"
+        },
+        {
+          "type": "point",
+          "x": 6,
+          "y": 4,
+          "label": "C(6,4)"
+        },
+        {
+          "type": "point",
+          "x": 3,
+          "y": 7,
+          "label": "D(3,7)"
+        },
+        {
+          "type": "point",
+          "x": 0,
+          "y": 4,
+          "label": "E(0,4)"
+        }
+      ]
+    }
+  }
+}

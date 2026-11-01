@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-028",
-  "area": "GEOMETRÍA",
+  "id": 198,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Sección plana perpendicular a las bases no diametral en un cilindro",
-  "cognitive_level": "Aplicación",
+  "topic": "Secci\u00f3n plana perpendicular a las bases no diametral en un cilindro",
+  "cognitive_level": "Aplicaci\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.3",
-    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+    "evidence_desc": "Determina caracter\u00edsticas m\u00e9tricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
   },
-  "stem": "Un cilindro circular recto tiene una altura de $12\\text{ cm}$ y un radio de la base de $5\\text{ cm}$. Se realiza un corte con un plano paralelo al eje central (perpendicular a las bases) a una distancia de $3\\text{ cm}$ de dicho eje. ¿Cuál es el área de la sección rectangular resultante?",
+  "stem": "Un cilindro circular recto tiene una altura de $12\\text{ cm}$ y un radio de la base de $5\\text{ cm}$. Se realiza un corte con un plano paralelo al eje central (perpendicular a las bases) a una distancia de $3\\text{ cm}$ de dicho eje. \u00bfCu\u00e1l es el \u00e1rea de la secci\u00f3n rectangular resultante?",
   "options": {
     "A": "$48\\text{ cm}^2$",
     "B": "$96\\text{ cm}^2$",
@@ -24,12 +24,12 @@
   },
   "correct_answer": "B",
   "solution_steps": [
-    "La sección plana obtenida al cortar un cilindro con un plano perpendicular a sus bases es un rectángulo.",
-    "La altura del rectángulo coincide con la altura del cilindro: $h = 12\\text{ cm}$.",
-    "El ancho del rectángulo corresponde a la cuerda formada en la base del cilindro a una distancia $d = 3\\text{ cm}$ del centro.",
-    "Por el teorema de Pitágoras en el círculo de la base: $(\\text{mitad de la cuerda})^2 + d^2 = r^2 \\implies x^2 + 3^2 = 5^2 \\implies x = \\sqrt{25 - 9} = 4\\text{ cm}$.",
-    "La longitud total de la cuerda (ancho del rectángulo) es $2x = 2(4) = 8\\text{ cm}$.",
-    "El área de la sección plana es: $\\text{Área} = \\text{ancho} \\times h = 8 \\times 12 = 96\\text{ cm}^2$."
+    "La secci\u00f3n plana obtenida al cortar un cilindro con un plano perpendicular a sus bases es un rect\u00e1ngulo.",
+    "La altura del rect\u00e1ngulo coincide con la altura del cilindro: $h = 12\\text{ cm}$.",
+    "El ancho del rect\u00e1ngulo corresponde a la cuerda formada en la base del cilindro a una distancia $d = 3\\text{ cm}$ del centro.",
+    "Por el teorema de Pit\u00e1goras en el c\u00edrculo de la base: $(\\text{mitad de la cuerda})^2 + d^2 = r^2 \\implies x^2 + 3^2 = 5^2 \\implies x = \\sqrt{25 - 9} = 4\\text{ cm}$.",
+    "La longitud total de la cuerda (ancho del rect\u00e1ngulo) es $2x = 2(4) = 8\\text{ cm}$.",
+    "El \u00e1rea de la secci\u00f3n plana es: $\\text{\u00c1rea} = \\text{ancho} \\times h = 8 \\times 12 = 96\\text{ cm}^2$."
   ],
   "visual_spec": {
     "alt": "Corte de un cilindro por plano vertical no diametral",
@@ -57,5 +57,6 @@
       },
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-028"
 }

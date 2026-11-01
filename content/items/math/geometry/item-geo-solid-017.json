@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-017",
-  "area": "GEOMETRÍA",
+  "id": 187,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
   "topic": "Generatriz de un tronco de cono",
-  "cognitive_level": "Comprensión",
+  "cognitive_level": "Comprensi\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.3",
-    "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+    "evidence_desc": "Determina caracter\u00edsticas m\u00e9tricas de figuras geom\u00e9tricas tridimensionales."
   },
-  "stem": "En un tronco de cono, los radios de las bases miden $r = 4\\text{ cm}$ y $R = 9\\text{ cm}$, y la altura mide $h = 12\\text{ cm}$. ¿Cuál es la longitud de la generatriz $g$?",
+  "stem": "En un tronco de cono, los radios de las bases miden $r = 4\\text{ cm}$ y $R = 9\\text{ cm}$, y la altura mide $h = 12\\text{ cm}$. \u00bfCu\u00e1l es la longitud de la generatriz $g$?",
   "options": {
     "A": "$5\\text{ cm}$",
     "B": "$13\\text{ cm}$",
@@ -24,12 +24,12 @@
   },
   "correct_answer": "B",
   "solution_steps": [
-    "En la sección axial trapecial, trazamos la altura perpendicular desde el extremo del radio menor al radio mayor, formando un triángulo rectángulo con catetos $h$ y $(R - r)$.",
+    "En la secci\u00f3n axial trapecial, trazamos la altura perpendicular desde el extremo del radio menor al radio mayor, formando un tri\u00e1ngulo rect\u00e1ngulo con catetos $h$ y $(R - r)$.",
     "Diferencia de radios: $R - r = 9 - 4 = 5\\text{ cm}$.",
-    "Por Pitágoras: $g = \\sqrt{h^2 + (R - r)^2} = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13\\text{ cm}$."
+    "Por Pit\u00e1goras: $g = \\sqrt{h^2 + (R - r)^2} = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13\\text{ cm}$."
   ],
   "visual_spec": {
-    "alt": "Relación pitagórica de generatriz en tronco de cono",
+    "alt": "Relaci\u00f3n pitag\u00f3rica de generatriz en tronco de cono",
     "visual": {
       "type": "solid_3d",
       "shape": "frustum",
@@ -50,11 +50,12 @@
       "referenceBox": {
         "lines": [
           "r = 4, R = 9, h = 12",
-          "g² = h² + (R - r)²"
+          "g\u00b2 = h\u00b2 + (R - r)\u00b2"
         ]
       },
       "showCrossSection": false,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-017"
 }

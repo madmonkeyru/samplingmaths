@@ -1,0 +1,322 @@
+{
+  "id": 6,
+  "code": "item-geo-006",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Traslación de circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A2",
+    "affirmation_desc": null,
+    "evidence": "A2.1",
+    "evidence_desc": "Reconoce la representación gráfica o algebraica de la traslación de una circunferencia en diversos contextos."
+  },
+  "evidence_id": "A2.1",
+  "concept_id": "mep-geo-traslacion-03",
+  "linked_concepts": [
+    "mep-geo-traslacion-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Sea “c” la circunferencia dada por c:(x − 2)^2 + (y − 3)^2 = 4. Al trasladar a “c” dos unidades hacia la izquierda (paralela al eje x) y tres unidades hacia arriba (paralela al eje y), se obtiene la circunferencia “d” de centro O. ¿Cuál de las siguientes opciones corresponde a la representación de “d”?",
+  "options": {
+    "A": "Gráfico A",
+    "B": "Gráfico B",
+    "C": "Gráfico C",
+    "D": "Gráfico D"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Centro original de c: (2,3), radio 2.",
+    "Traslación: 2 izquierda → x-2; 3 arriba → y+3.",
+    "Nuevo centro: (2-2, 3+3) = (0, 6).",
+    "La circunferencia d tiene centro (0,6) y radio 2.",
+    "El gráfico A muestra una circunferencia con centro en (0,6) y radio 2 (pasa por (0,4) y (0,8) aproximadamente).",
+    "Opción correcta: A."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Opciones A, B, C y D para la representación de la circunferencia d.",
+    "visual": {
+      "type": "multi_view_grid",
+      "layout": {
+        "rows": 2,
+        "cols": 2
+      },
+      "views": [
+        {
+          "label": "A",
+          "visual": {
+            "type": "cartesian_2d",
+            "domain": {
+              "x": [
+                -4,
+                4
+              ],
+              "y": [
+                -1,
+                9
+              ]
+            },
+            "grid": false,
+            "children": [
+              {
+                "type": "circle",
+                "center": [
+                  0,
+                  6
+                ],
+                "radius": 2
+              },
+              {
+                "type": "point",
+                "coords": [
+                  0,
+                  6
+                ],
+                "label": "O"
+              },
+              {
+                "type": "point",
+                "coords": [
+                  0,
+                  6
+                ],
+                "label": "6",
+                "label_position": "left"
+              },
+              {
+                "type": "dashed_projection",
+                "from": [
+                  0,
+                  6
+                ],
+                "to_axis": "y"
+              }
+            ]
+          }
+        },
+        {
+          "label": "B",
+          "visual": {
+            "type": "cartesian_2d",
+            "domain": {
+              "x": [
+                -4,
+                4
+              ],
+              "y": [
+                -4,
+                4
+              ]
+            },
+            "grid": false,
+            "children": [
+              {
+                "type": "circle",
+                "center": [
+                  0,
+                  0
+                ],
+                "radius": 2
+              },
+              {
+                "type": "point",
+                "coords": [
+                  0,
+                  0
+                ],
+                "label": "O"
+              },
+              {
+                "type": "point",
+                "coords": [
+                  2,
+                  0
+                ],
+                "label": "2",
+                "label_position": "bottom"
+              },
+              {
+                "type": "-2",
+                "coords": [
+                  -2,
+                  0
+                ],
+                "label": "-2",
+                "label_position": "bottom"
+              },
+              {
+                "type": "point",
+                "coords": [
+                  0,
+                  2
+                ],
+                "label": "2",
+                "label_position": "left"
+              },
+              {
+                "type": "point",
+                "coords": [
+                  0,
+                  -2
+                ],
+                "label": "-2",
+                "label_position": "left"
+              }
+            ]
+          }
+        },
+        {
+          "label": "C",
+          "visual": {
+            "type": "cartesian_2d",
+            "domain": {
+              "x": [
+                -1,
+                5
+              ],
+              "y": [
+                -1,
+                6
+              ]
+            },
+            "grid": false,
+            "children": [
+              {
+                "type": "circle",
+                "center": [
+                  2,
+                  3
+                ],
+                "radius": 2
+              },
+              {
+                "type": "point",
+                "coords": [
+                  2,
+                  3
+                ],
+                "label": "O"
+              },
+              {
+                "type": "point",
+                "coords": [
+                  2,
+                  0
+                ],
+                "label": "2",
+                "label_position": "bottom"
+              },
+              {
+                "type": "point",
+                "coords": [
+                  0,
+                  3
+                ],
+                "label": "3",
+                "label_position": "left"
+              },
+              {
+                "type": "line",
+                "p1": [
+                  2,
+                  0
+                ],
+                "p2": [
+                  2,
+                  3
+                ],
+                "dashed": true,
+                "color": "#64748b"
+              },
+              {
+                "type": "line",
+                "p1": [
+                  0,
+                  3
+                ],
+                "p2": [
+                  2,
+                  3
+                ],
+                "dashed": true,
+                "color": "#64748b"
+              }
+            ]
+          }
+        },
+        {
+          "label": "D",
+          "visual": {
+            "type": "cartesian_2d",
+            "domain": {
+              "x": [
+                -1,
+                6
+              ],
+              "y": [
+                -1,
+                5
+              ]
+            },
+            "grid": false,
+            "children": [
+              {
+                "type": "circle",
+                "center": [
+                  3,
+                  2
+                ],
+                "radius": 1
+              },
+              {
+                "type": "point",
+                "coords": [
+                  3,
+                  2
+                ],
+                "label": "O"
+              },
+              {
+                "type": "point",
+                "coords": [
+                  3,
+                  0
+                ],
+                "label": "3",
+                "label_position": "bottom"
+              },
+              {
+                "type": "point",
+                "coords": [
+                  0,
+                  2
+                ],
+                "label": "2",
+                "label_position": "left"
+              },
+              {
+                "type": "dashed_projection",
+                "from": [
+                  3,
+                  2
+                ],
+                "to_axis": "both"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

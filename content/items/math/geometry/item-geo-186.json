@@ -1,0 +1,77 @@
+{
+  "id": 186,
+  "code": "item-geo-186",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección axial trapecial de un tronco de cono",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un tronco de cono tiene un radio basal mayor de $R = 8\\text{ cm}$, un radio basal menor de $r = 3\\text{ cm}$ y una altura de $12\\text{ cm}$. ¿Cuál es el área de su sección axial?",
+  "options": {
+    "A": "$66\\text{ cm}^2$",
+    "B": "$132\\text{ cm}^2$",
+    "C": "$132\\pi\\text{ cm}^2$",
+    "D": "$192\\text{ cm}^2$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La sección axial de un tronco de cono circular recto es un trapecio isósceles.",
+    "La base mayor del trapecio es el diámetro basal inferior: $B_1 = 2R = 2(8) = 16\\text{ cm}$.",
+    "La base menor es el diámetro basal superior: $B_2 = 2r = 2(3) = 6\\text{ cm}$.",
+    "El área del trapecio es $A = \\frac{B_1 + B_2}{2} \\times h = \\frac{16 + 6}{2} \\times 12 = 11 \\times 12 = 132\\text{ cm}^2$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Sección axial de tronco de cono formando trapecio isósceles",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "frustum",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "topRadius": 42,
+        "bottomRadius": 78,
+        "height": 115,
+        "showAxis": true
+      },
+      "labels": {
+        "topCenter": "O_1",
+        "bottomCenter": "O_2",
+        "topRight": "A",
+        "bottomRight": "B",
+        "topRadius": "r",
+        "bottomRadius": "R",
+        "height": "h",
+        "slant": "g"
+      },
+      "referenceBox": {
+        "lines": [
+          "O_1 y O_2: centros de las bases",
+          "Bases paralelas r < R",
+          "Corte que contiene al eje central"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

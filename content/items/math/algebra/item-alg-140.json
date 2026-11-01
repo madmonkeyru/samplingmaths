@@ -1,0 +1,45 @@
+{
+  "id": 140,
+  "code": "item-alg-140",
+  "set_id": "set_3",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función Exponencial",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A7",
+    "affirmation_desc": null,
+    "evidence": "A7.1",
+    "evidence_desc": "Analiza las propiedades de la función exponencial y logarítmica."
+  },
+  "evidence_id": "A7.1",
+  "concept_id": "mep-alg-exponencial-logaritmica-08",
+  "linked_concepts": [
+    "mep-alg-exponencial-logaritmica-08"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere la función exponencial $f(x) = 2^{x - 1} + 3$. La asíntota horizontal de la gráfica de $f(x)$ corresponde a la recta",
+  "options": {
+    "A": "$y = 0$",
+    "B": "$y = 1$",
+    "C": "$y = 3$",
+    "D": "$x = 3$"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Para una función exponencial de la forma $f(x) = a^{x - h} + k$ con $a > 0, a \\neq 1$, cuando $x \\to -\\infty$, $a^{x-h} \\to 0$.",
+    "Por ende, $f(x) \\to k$. La asíntota horizontal de la gráfica es la recta $y = k$.",
+    "En $f(x) = 2^{x - 1} + 3$, el valor de $k$ es $3$, por lo que la asíntota horizontal es $y = 3$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

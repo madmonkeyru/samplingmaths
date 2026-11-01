@@ -1,0 +1,95 @@
+{
+  "id": 24,
+  "code": "item-geo-024",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "evidence": "A1.1",
+    "evidence_desc": "Reconoce la representación gráfica de una circunferencia dado su centro y su radio, en diversos contextos."
+  },
+  "evidence_id": "A1.1",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la siguiente representación gráfica de una circunferencia $c$ en el plano cartesiano: ¿cuál es el centro y la medida del radio de $c$?",
+  "options": {
+    "A": "Centro $(3, -2)$ y radio $4$.",
+    "B": "Centro $(-3, 2)$ y radio $4$.",
+    "C": "Centro $(3, -2)$ y radio $16$.",
+    "D": "Centro $(-2, 3)$ y radio $4$."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Al observar la gráfica, el centro se ubica en x = 3, y = -2, lo que da las coordenadas (3, -2).",
+    "La distancia desde el centro a los puntos extremos vertical u horizontalmente es de 4 unidades, por lo que el radio r = 4.",
+    "Por lo tanto, corresponde a centro (3, -2) y radio 4."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Circunferencia en el plano cartesiano con centro en (3, -2) y radio 4.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -2,
+          8
+        ],
+        "y": [
+          -7,
+          3
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            3,
+            -2
+          ],
+          "radius": 4,
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            -2
+          ],
+          "label": "O(3,-2)"
+        },
+        {
+          "type": "dashed_projection",
+          "from": [
+            3,
+            -2
+          ],
+          "to_axis": "x"
+        },
+        {
+          "type": "dashed_projection",
+          "from": [
+            3,
+            -2
+          ],
+          "to_axis": "y"
+        }
+      ]
+    }
+  }
+}

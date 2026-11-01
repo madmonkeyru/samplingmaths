@@ -1,0 +1,88 @@
+{
+  "id": 96,
+  "code": "item-alg-096",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función raíz cuadrada",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A1",
+    "evidence": "A1.3",
+    "evidence_desc": "Determina el dominio máximo de una función raíz cuadrada."
+  },
+  "evidence_id": "A1.3",
+  "concept_id": "mep-alg-funcion-raiz-cuadrada-07",
+  "linked_concepts": [
+    "mep-alg-funcion-raiz-cuadrada-07"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la función $f(x) = \\sqrt{x - 4}$. ¿Cuál es el dominio máximo de $f$?",
+  "options": {
+    "A": "$[4, +\\infty[$",
+    "B": "$]- \\infty, 4]$",
+    "C": "$[0, +\\infty[$",
+    "D": "$\\mathbb{R}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Para que la función raíz cuadrada con índice par esté definida en los números reales, el subradical debe ser mayor o igual a cero.",
+    "$x - 4 \\ge 0 \\implies x \\ge 4$.",
+    "Por lo tanto, el dominio máximo es $[4, +\\infty[$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Gráfica de función raíz cuadrada f(x) = sqrt(x-4) initiating at x=4",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -1,
+          10
+        ],
+        "y": [
+          -1,
+          4
+        ]
+      },
+      "children": [
+        {
+          "type": "point",
+          "coords": [
+            4,
+            0
+          ],
+          "label": "(4,0)",
+          "color": "#2563eb"
+        },
+        {
+          "type": "point",
+          "coords": [
+            5,
+            1
+          ],
+          "label": "(5,1)",
+          "color": "#1e293b"
+        },
+        {
+          "type": "point",
+          "coords": [
+            8,
+            2
+          ],
+          "label": "(8,2)",
+          "color": "#1e293b"
+        }
+      ]
+    }
+  }
+}

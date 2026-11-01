@@ -1,0 +1,48 @@
+{
+  "id": 57,
+  "code": "item-alg-057",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función lineal",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A2",
+    "affirmation_desc": null,
+    "evidence": "A2.3",
+    "evidence_desc": "Determina la pendiente, la intersección con el eje de las ordenadas o de las abscisas de una recta dada en forma gráfica o algebraica en diversos contextos."
+  },
+  "evidence_id": "A2.3",
+  "concept_id": "mep-alg-funcion-lineal-03",
+  "linked_concepts": [
+    "mep-alg-funcion-lineal-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Dada la ecuación de la recta $y = 2x + b$, y sabiendo que el punto (−2, 1) pertenece a ella, ¿cuáles son las coordenadas del punto de intersección con el eje $y$?",
+  "options": {
+    "A": "$(0, -3)$",
+    "B": "$(-3, 0)$",
+    "C": "$(5, 0)$",
+    "D": "$(0, 5)$"
+  },
+  "correct_answer": "D",
+  "solution_steps": [
+    "Sustituyendo el punto (−2, 1) en y = 2x + b:",
+    "1 = 2(−2) + b",
+    "1 = −4 + b",
+    "b = 5",
+    "La intersección con el eje y ocurre cuando x = 0, es decir, en (0, b) = (0, 5).",
+    "Respuesta: D."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

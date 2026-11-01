@@ -1,0 +1,49 @@
+{
+  "id": 59,
+  "code": "item-alg-059",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función lineal — modelado",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A3",
+    "affirmation_desc": null,
+    "evidence": "A3.1",
+    "evidence_desc": "Resuelve problemas en contextos reales utilizando las funciones lineales y cuadráticas."
+  },
+  "evidence_id": "A3.1",
+  "concept_id": "mep-alg-funcion-lineal-03",
+  "linked_concepts": [
+    "mep-alg-funcion-lineal-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Luis llama por teléfono a Ana y le comenta que la temperatura en su ciudad es de 41 °F. Si se sabe que la relación entre la temperatura en grados Fahrenheit (°F) y en grados Celsius (°C) está asociada mediante la función $F(C) = \\frac{9}{5}C + 32$, entonces, ¿a cuántos grados Celsius equivale la temperatura comentada?",
+  "options": {
+    "A": "5",
+    "B": "9",
+    "C": "22,8",
+    "D": "40,5"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Sustituyendo F = 41 en F(C) = (9/5)C + 32:",
+    "41 = (9/5)C + 32",
+    "41 − 32 = (9/5)C",
+    "9 = (9/5)C",
+    "C = 9 × (5/9) = 5",
+    "Por lo tanto, 41 °F equivalen a 5 °C.",
+    "Respuesta: A."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

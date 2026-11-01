@@ -1,0 +1,45 @@
+{
+  "id": 142,
+  "code": "item-alg-142",
+  "set_id": "set_3",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función Inversa",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A8",
+    "affirmation_desc": null,
+    "evidence": "A8.1",
+    "evidence_desc": "Determina el criterio de la función inversa de una función biyectiva dada."
+  },
+  "evidence_id": "A8.1",
+  "concept_id": "mep-alg-funcion-inversa-06",
+  "linked_concepts": [
+    "mep-alg-funcion-inversa-06"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Dada la función biyectiva $f(x) = 4x - 5$, el criterio de su función inversa $f^{-1}(x)$ corresponde a",
+  "options": {
+    "A": "$f^{-1}(x) = \\frac{x + 5}{4}$",
+    "B": "$f^{-1}(x) = \\frac{x - 5}{4}$",
+    "C": "$f^{-1}(x) = 5x - 4$",
+    "D": "$f^{-1}(x) = \\frac{4}{x + 5}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Hacemos $y = f(x) \\implies y = 4x - 5$.",
+    "Despejamos la variable $x$ en términos de $y$: $y + 5 = 4x \\implies x = \\frac{y + 5}{4}$.",
+    "Intercambiamos variables $x$ e $y$ para obtener la función inversa: $f^{-1}(x) = \\frac{x + 5}{4}$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

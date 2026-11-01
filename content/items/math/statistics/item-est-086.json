@@ -1,0 +1,48 @@
+{
+  "id": 86,
+  "code": "item-est-086",
+  "set_id": "set_1",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de variabilidad",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A3",
+    "affirmation_desc": "Resuelve problemas de diversos contextos relacionados con el análisis de las medidas de posición o variabilidad de dos o más grupos en datos cuantitativos.",
+    "evidence": "A3.3",
+    "evidence_desc": "Aplica estandarización y el coeficiente de variación para la comparación de la posición o variabilidad de dos o más grupos de datos, en diversos contextos."
+  },
+  "evidence_id": "A3.3",
+  "concept_id": "mep-est-posicion-relativa-cv-04",
+  "linked_concepts": [
+    "mep-est-posicion-relativa-cv-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "El grupo que presenta menor variabilidad relativa corresponde al",
+  "options": {
+    "A": "H",
+    "B": "Q",
+    "C": "S",
+    "D": "P"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "El coeficiente de variación se calcula como Cv = (desviación estándar / media aritmética) × 100.",
+    "Cv_H = (4,4 / 15) × 100 = 29,33 %",
+    "Cv_Q = (4,5 / 16) × 100 = 28,13 %",
+    "Cv_S = (5,3 / 18) × 100 = 29,44 %",
+    "Cv_P = (5,0 / 17) × 100 = 29,41 %",
+    "El menor coeficiente de variación corresponde al grupo Q (28,13 %)."
+  ],
+  "group_id": "g_volunteer",
+  "visual_spec": null
+}

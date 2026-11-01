@@ -1,0 +1,44 @@
+{
+  "id": 122,
+  "code": "item-est-122",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Probabilidad de eventos",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A3",
+    "evidence": "A3.3",
+    "evidence_desc": "Aplica la regla de la suma para eventos mutuamente excluyentes."
+  },
+  "evidence_id": "A3.3",
+  "concept_id": "mep-est-posicion-relativa-cv-04",
+  "linked_concepts": [
+    "mep-est-posicion-relativa-cv-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "En una caja hay únicamente fichas rojas, verdes y azules. Si la probabilidad de extraer una ficha roja es $P(R) = 0,35$ y de extraer una verde es $P(V) = 0,40$, ¿cuál es la probabilidad de extraer una ficha roja o verde?",
+  "options": {
+    "A": "0,75",
+    "B": "0,14",
+    "C": "0,25",
+    "D": "0,50"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Los eventos $R$ (extraer roja) y $V$ (extraer verde) son mutuamente excluyentes (una ficha no puede ser roja y verde a la vez).",
+    "Por la regla de la suma para eventos incompatibles: $P(R \\cup V) = P(R) + P(V)$.",
+    "$P(R \\cup V) = 0,35 + 0,40 = 0,75$ (75%)."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

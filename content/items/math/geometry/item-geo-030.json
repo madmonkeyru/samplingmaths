@@ -1,0 +1,95 @@
+{
+  "id": 30,
+  "code": "item-geo-030",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Posición de puntos respecto a una circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A3",
+    "evidence": "A3.1",
+    "evidence_desc": "Determina gráfica y algebraicamente si un punto se ubica en el interior o en el exterior de una circunferencia en diversos contextos."
+  },
+  "evidence_id": "A3.1",
+  "concept_id": "mep-geo-posicion-punto-04",
+  "linked_concepts": [
+    "mep-geo-posicion-punto-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la circunferencia representada gráficamente con centro en $C(1, 2)$ y radio $3$: [imagen]. ¿Cuál de los siguientes puntos se ubica en el interior de la circunferencia?",
+  "options": {
+    "A": "$(1, 4)$",
+    "B": "$(5, 2)$",
+    "C": "$(1, 6)$",
+    "D": "$(-3, 2)$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Para comprobar si un punto (x, y) está en el interior, calculamos la distancia d al centro (1, 2): d = sqrt((x - 1)^2 + (y - 2)^2).",
+    "Para (1, 4): d = sqrt((1-1)^2 + (4-2)^2) = sqrt(4) = 2. Como 2 < 3 (radio), el punto (1, 4) se encuentra estrictamente en el interior.",
+    "Para los demás puntos la distancia es mayor o igual a 3."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Circunferencia centrada en (1, 2) con radio 3 y punto (1, 4) en su interior.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -3,
+          6
+        ],
+        "y": [
+          -2,
+          7
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            1,
+            2
+          ],
+          "radius": 3,
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            2
+          ],
+          "label": "C(1,2)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            4
+          ],
+          "label": "A(1,4)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            5,
+            2
+          ],
+          "label": "B(5,2)"
+        }
+      ]
+    }
+  }
+}

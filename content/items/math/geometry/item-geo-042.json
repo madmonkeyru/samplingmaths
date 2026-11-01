@@ -1,0 +1,43 @@
+{
+  "id": 42,
+  "code": "item-geo-042",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Visualización espacial - Cilindro",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A5",
+    "evidence": "A5.1",
+    "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el diámetro de un cilindro circular recto en diversos contextos."
+  },
+  "evidence_id": "A5.1",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Un tanque cilíndrico de almacenamiento de agua tiene una altura de $15\\text{ metros}$ y el diámetro de su base mide $8\\text{ metros}$. ¿Cuál es la medida del radio basal de dicho tanque?",
+  "options": {
+    "A": "$4\\text{ metros}$",
+    "B": "$8\\text{ metros}$",
+    "C": "$16\\text{ metros}$",
+    "D": "$30\\text{ metros}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El radio 'r' es la mitad de la medida del diámetro 'd'.",
+    "r = d / 2 = 8 / 2 = 4 metros."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

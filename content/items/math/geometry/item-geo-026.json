@@ -1,0 +1,95 @@
+{
+  "id": 26,
+  "code": "item-geo-026",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A1",
+    "evidence": "A1.3",
+    "evidence_desc": "Resuelve problemas, de diversos contextos, relacionados con la circunferencia y sus representaciones."
+  },
+  "evidence_id": "A1.3",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "La zona de cobertura circular de una antena WiFi está dada por la ecuación (x - 1)^2 + (y + 3)^2 = 25. Según la representación gráfica mostrada a continuación, ¿cuál es el radio de alcance máximo de la señal de la antena?",
+  "options": {
+    "A": "5 unidades",
+    "B": "10 unidades",
+    "C": "25 unidades",
+    "D": "50 unidades"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "De la ecuación (x - 1)^2 + (y + 3)^2 = 25, se identifica que r^2 = 25.",
+    "Calculando la raíz cuadrada: r = sqrt(25) = 5.",
+    "El alcance máximo (radio) de la antena es de 5 unidades."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Zona de cobertura de la antena WiFi de centro (1, -3) y radio 5.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -5,
+          7
+        ],
+        "y": [
+          -9,
+          3
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            1,
+            -3
+          ],
+          "radius": 5,
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            -3
+          ],
+          "label": "Antena(1, -3)"
+        },
+        {
+          "type": "dashed_projection",
+          "from": [
+            1,
+            -3
+          ],
+          "to_axis": "x"
+        },
+        {
+          "type": "dashed_projection",
+          "from": [
+            1,
+            -3
+          ],
+          "to_axis": "y"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mep-ea-01.local/schemas/taxonomy.schema.json",
+  "title": "MEP-EA-01 Unified Curriculum Taxonomy Schema",
+  "type": "object",
+  "required": ["version", "framework", "programs", "domains"],
+  "properties": {
+    "version": { "type": "string" },
+    "framework": { "type": "string" },
+    "programs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "targetPassingScore", "calculatorAllowed"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "targetPassingScore": { "type": "number" },
+          "calculatorAllowed": { "type": "boolean" },
+          "subprograms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "name"],
+              "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" },
+                "gradeLevel": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "affirmations"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "affirmations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["code", "desc", "evidences"],
+              "properties": {
+                "code": { "type": "string" },
+                "desc": { "type": "string" },
+                "targetPoints": { "type": "number" },
+                "evidences": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["code", "desc"],
+                    "properties": {
+                      "code": { "type": "string" },
+                      "desc": { "type": "string" },
+                      "conceptIds": {
+                        "type": "array",
+                        "items": { "type": "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

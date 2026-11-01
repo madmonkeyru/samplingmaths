@@ -1,0 +1,76 @@
+{
+  "id": 76,
+  "code": "item-est-076",
+  "set_id": "set_1",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de posición",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A1",
+    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con medidas de posición de un grupo de datos cuantitativos o cualitativos.",
+    "evidence": "A1.5",
+    "evidence_desc": "Determina la media aritmética ponderada en datos que se encuentran agrupados en una distribución de frecuencias en diversos contextos."
+  },
+  "evidence_id": "A1.5",
+  "concept_id": "mep-est-medidas-posicion-01",
+  "linked_concepts": [
+    "mep-est-medidas-posicion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Se realizó un estudio para determinar la cantidad de kilómetros diarios que recorren 100 estudiantes para asistir al centro educativo. A continuación, se muestran los resultados obtenidos:\n\n[Ver tabla de frecuencia]\n\n¿Cuál es el promedio de kilómetros diarios que recorre cada estudiante para llegar al centro educativo?",
+  "options": {
+    "A": "8",
+    "B": "12",
+    "C": "15",
+    "D": "20"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Se calcula el punto medio de cada clase: (0+10)/2 = 5; (10+20)/2 = 15; (20+30)/2 = 25.",
+    "Se multiplica cada punto medio por su frecuencia: 5×50 = 250; 15×30 = 450; 25×20 = 500.",
+    "Se suman los productos: 250 + 450 + 500 = 1200.",
+    "Se divide entre el total de estudiantes: 1200 / 100 = 12.",
+    "El promedio es 12 km diarios."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Cantidad de kilómetros diarios que recorren los estudiantes para llegar al centro educativo",
+    "visual": {
+      "type": "table",
+      "variant": "frequency",
+      "title": "Cantidad de kilómetros diarios que recorren los estudiantes para llegar al centro educativo",
+      "columns": [
+        "Kilómetros",
+        "Cantidad de estudiantes"
+      ],
+      "rows": [
+        [
+          "De 0 a menos de 10",
+          50
+        ],
+        [
+          "De 10 a menos de 20",
+          30
+        ],
+        [
+          "De 20 a menos de 30",
+          20
+        ]
+      ],
+      "total_row": [
+        "Total",
+        100
+      ]
+    }
+  }
+}

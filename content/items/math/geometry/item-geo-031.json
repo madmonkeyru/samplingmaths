@@ -1,0 +1,86 @@
+{
+  "id": 31,
+  "code": "item-geo-031",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Posición de puntos respecto a una circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A3",
+    "evidence": "A3.1",
+    "evidence_desc": "Determina gráfica y algebraicamente si un punto se ubica en el interior o en el exterior de una circunferencia en diversos contextos."
+  },
+  "evidence_id": "A3.1",
+  "concept_id": "mep-geo-posicion-punto-04",
+  "linked_concepts": [
+    "mep-geo-posicion-punto-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Una zona de cobertura circular de rescate tiene su centro en $(-2, 1)$ y un radio de $5\\text{ km}$. Un dron de rescate se encuentra en la posición $P(1, 3)$. Según la gráfica adjunta, determine la posición relativa del dron respecto a la zona de rescate.",
+  "options": {
+    "A": "Se ubica en el interior de la zona.",
+    "B": "Se ubica sobre el borde exterior de la zona.",
+    "C": "Se ubica en el exterior de la zona.",
+    "D": "Coincide exactamente con el centro."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Distancia del punto P(1, 3) al centro C(-2, 1): d = sqrt((1 - (-2))^2 + (3 - 1)^2) = sqrt(3^2 + 2^2) = sqrt(9 + 4) = sqrt(13) approx 3.61 km.",
+    "Como 3.61 < 5 km (radio de la zona), el dron se ubica en el interior de la zona."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Zona circular centrada en (-2, 1) con radio 5 y dron en el punto P(1, 3).",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -8,
+          4
+        ],
+        "y": [
+          -5,
+          7
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            -2,
+            1
+          ],
+          "radius": 5,
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -2,
+            1
+          ],
+          "label": "C(-2,1)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            1,
+            3
+          ],
+          "label": "P(1,3)"
+        }
+      ]
+    }
+  }
+}

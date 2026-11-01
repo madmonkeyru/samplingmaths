@@ -1,30 +1,30 @@
 {
-  "id": "item-geo-solid-019",
-  "area": "GEOMETRÍA",
+  "id": 189,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
-  "topic": "Identificación de bases y superficies de un tronco de cono",
-  "cognitive_level": "Comprensión",
+  "topic": "Identificaci\u00f3n de bases y superficies de un tronco de cono",
+  "cognitive_level": "Comprensi\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.2",
-    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+    "evidence_desc": "Determina qu\u00e9 figuras se obtienen mediante secciones planas de figuras tridimensionales."
   },
-  "stem": "¿Cuál de las siguientes afirmaciones describe con precisión las bases de un tronco de cono circular recto?",
+  "stem": "\u00bfCu\u00e1l de las siguientes afirmaciones describe con precisi\u00f3n las bases de un tronco de cono circular recto?",
   "options": {
     "A": "Son dos elipses situadas en planos perpendiculares.",
-    "B": "Son dos círculos paralelos de radios distintos.",
-    "C": "Son dos círculos concéntricos situados en un mismo plano.",
-    "D": "Son dos polígonos regulares semejantes."
+    "B": "Son dos c\u00edrculos paralelos de radios distintos.",
+    "C": "Son dos c\u00edrculos conc\u00e9ntricos situados en un mismo plano.",
+    "D": "Son dos pol\u00edgonos regulares semejantes."
   },
   "correct_answer": "B",
   "solution_steps": [
-    "Por definición, un tronco de cono circular recto de bases paralelas está limitado por dos círculos situados en planos paralelos cuyos radios son distintos ($r \\neq R$), unidos por una superficie lateral cónica truncada."
+    "Por definici\u00f3n, un tronco de cono circular recto de bases paralelas est\u00e1 limitado por dos c\u00edrculos situados en planos paralelos cuyos radios son distintos ($r \\neq R$), unidos por una superficie lateral c\u00f3nica truncada."
   ],
   "visual_spec": {
     "alt": "Bases circulares paralelas de un tronco de cono",
@@ -45,7 +45,7 @@
       },
       "referenceBox": {
         "lines": [
-          "Bases: círculos paralelos",
+          "Bases: c\u00edrculos paralelos",
           "Radios: r < R",
           "O_1 y O_2: centros"
         ]
@@ -53,5 +53,6 @@
       "showCrossSection": false,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-019"
 }

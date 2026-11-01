@@ -1,0 +1,48 @@
+{
+  "id": 87,
+  "code": "item-est-087",
+  "set_id": "set_1",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de variabilidad",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A3",
+    "affirmation_desc": "Resuelve problemas de diversos contextos relacionados con el análisis de las medidas de posición o variabilidad de dos o más grupos en datos cuantitativos.",
+    "evidence": "A3.3",
+    "evidence_desc": "Aplica estandarización y el coeficiente de variación para la comparación de la posición o variabilidad de dos o más grupos de datos, en diversos contextos."
+  },
+  "evidence_id": "A3.3",
+  "concept_id": "mep-est-posicion-relativa-cv-04",
+  "linked_concepts": [
+    "mep-est-posicion-relativa-cv-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "En términos relativos y con respecto a su grupo de referencia, la persona que presenta la mayor posición relativa corresponde a",
+  "options": {
+    "A": "Andrés.",
+    "B": "Sofía.",
+    "C": "María.",
+    "D": "Rosa."
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Se calcula la posición relativa (estandarización) de cada persona: Pr = (dato − media) / desviación estándar.",
+    "Sofía (H): Pr = (15 − 15) / 4,4 = 0",
+    "María (Q): Pr = (17 − 16) / 4,5 = 0,222",
+    "Andrés (S): Pr = (19 − 18) / 5,3 = 0,189",
+    "Rosa (P): Pr = (16 − 17) / 5,0 = −0,2",
+    "El mayor valor de posición relativa corresponde a María (0,222), por lo que presenta el mejor desempeño relativo."
+  ],
+  "group_id": "g_volunteer",
+  "visual_spec": null
+}

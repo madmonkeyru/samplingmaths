@@ -1,0 +1,90 @@
+{
+  "id": 94,
+  "code": "item-alg-094",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función cuadrática",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A2",
+    "evidence": "A2.3",
+    "evidence_desc": "Calcula la ecuación del eje de simetría de una parábola."
+  },
+  "evidence_id": "A2.3",
+  "concept_id": "mep-alg-funcion-cuadratica-04",
+  "linked_concepts": [
+    "mep-alg-funcion-cuadratica-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Dada la función cuadrática $f(x) = -x^2 + 6x - 5$, ¿cuál es la ecuación de su eje de simetría?",
+  "options": {
+    "A": "$x = 3$",
+    "B": "$x = -3$",
+    "C": "$x = 6$",
+    "D": "$x = 4$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El eje de simetría de una parábola dada por $f(x) = ax^2 + bx + c$ es la recta vertical $x = -\\frac{b}{2a}$.",
+    "Para $a = -1$, $b = 6$: $x = -\\frac{6}{2(-1)} = \\frac{-6}{-2} = 3$.",
+    "Por lo tanto, la ecuación del eje de simetría es $x = 3$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Parábola abre hacia abajo con eje de simetría en x = 3",
+    "visual": {
+      "type": "function_plot",
+      "form": "quadratic",
+      "params": {
+        "a": -1,
+        "b": 6,
+        "c": -5,
+        "vertex": [
+          3,
+          4
+        ],
+        "roots": [
+          1,
+          5
+        ]
+      },
+      "annotations": {
+        "axis_of_symmetry": {
+          "show": true,
+          "x": 3
+        },
+        "vertex": {
+          "show": true,
+          "label": "V(3, 4)"
+        },
+        "roots": {
+          "show": true,
+          "labels": [
+            "1",
+            "5"
+          ]
+        }
+      },
+      "domain": {
+        "x": [
+          -1,
+          7
+        ],
+        "y": [
+          -2,
+          6
+        ]
+      }
+    }
+  }
+}

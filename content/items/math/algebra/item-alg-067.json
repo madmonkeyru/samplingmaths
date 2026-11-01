@@ -1,0 +1,50 @@
+{
+  "id": 67,
+  "code": "item-alg-067",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función exponencial",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A5",
+    "affirmation_desc": null,
+    "evidence": "A5.4",
+    "evidence_desc": "Resuelve problemas en contextos reales utilizando ecuaciones exponenciales."
+  },
+  "evidence_id": "A5.4",
+  "concept_id": "mep-alg-exponencial-logaritmica-08",
+  "linked_concepts": [
+    "mep-alg-exponencial-logaritmica-08"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Si la población “p(x)” de una comunidad se estima mediante $p(x) = 2000 \\cdot 2^{x/5}$, donde “x” representa los años transcurridos a partir de 2025, entonces, ¿cuántos años deben transcurrir para que la población sea de 16 000 individuos?",
+  "options": {
+    "A": "10",
+    "B": "15",
+    "C": "8",
+    "D": "3"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Igualando p(x) = 16 000:",
+    "16 000 = 2000 • 2^(x/5)",
+    "8 = 2^(x/5)",
+    "2³ = 2^(x/5)",
+    "3 = x/5",
+    "x = 15",
+    "Por lo tanto, deben transcurrir 15 años.",
+    "Respuesta: B."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

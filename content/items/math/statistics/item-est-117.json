@@ -1,0 +1,74 @@
+{
+  "id": 117,
+  "code": "item-est-117",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Posición relativa (z-score)",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A2",
+    "evidence": "A2.2",
+    "evidence_desc": "Compara la posición relativa (estandarización z) de dos observaciones de distintas poblaciones."
+  },
+  "evidence_id": "A2.2",
+  "concept_id": "mep-est-posicion-relativa-cv-04",
+  "linked_concepts": [
+    "mep-est-posicion-relativa-cv-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Carlos obtuvo una nota de 85 en Matemáticas (media $\\bar{x} = 75$, desviación estándar $s = 5$) y una nota de 88 en Español (media $\\bar{x} = 80$, desviación estándar $s = 8$). ¿En cuál asignatura tuvo Carlos una mejor posición relativa respecto a su grupo?",
+  "options": {
+    "A": "En Matemáticas, pues su puntuación estandarizada ($z = 2,0$) es mayor que en Español ($z = 1,0$).",
+    "B": "En Español, pues obtuvo una calificación más alta (88 frente a 85).",
+    "C": "En ambas tuvo exactamente la misma posición relativa.",
+    "D": "En Español, pues la media del grupo fue mayor."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Calculamos la nota estandarizada $z = \\frac{x - \\bar{x}}{s}$ para cada materia:",
+    "Matemáticas: $z_{Mat} = \\frac{85 - 75}{5} = \\frac{10}{5} = 2,0$.",
+    "Español: $z_{Esp} = \\frac{88 - 80}{8} = \\frac{8}{8} = 1,0$.",
+    "Como $z_{Mat} > z_{Esp}$ ($2,0 > 1,0$), Carlos tuvo un desempeño relativo significativamente mejor en Matemáticas."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Tabla comparativa de calificaciones y estadísticos",
+    "visual": {
+      "type": "table",
+      "variant": "stats_table",
+      "headers": [
+        "Asignatura",
+        "Nota (x)",
+        "Media (x̄)",
+        "Desviación (s)",
+        "Z-score"
+      ],
+      "rows": [
+        [
+          "Matemáticas",
+          "85",
+          "75",
+          "5",
+          "z = +2,0"
+        ],
+        [
+          "Español",
+          "88",
+          "80",
+          "8",
+          "z = +1,0"
+        ]
+      ]
+    }
+  }
+}

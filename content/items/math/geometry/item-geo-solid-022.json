@@ -1,21 +1,21 @@
 {
-  "id": "item-geo-solid-022",
-  "area": "GEOMETRÍA",
+  "id": 192,
+  "area": "GEOMETR\u00cdA",
   "area_id": "geometry",
   "topic": "Diagonal espacial de un cubo",
-  "cognitive_level": "Comprensión",
+  "cognitive_level": "Comprensi\u00f3n",
   "calculator_allowed": true,
   "program_applicability": [
     "bxm",
     "edad"
   ],
   "spec": {
-    "block": "Geometría",
-    "affirmation": "Resolución de problemas con secciones planas y características métricas",
+    "block": "Geometr\u00eda",
+    "affirmation": "Resoluci\u00f3n de problemas con secciones planas y caracter\u00edsticas m\u00e9tricas",
     "evidence": "A5.3",
-    "evidence_desc": "Determina características métricas de figuras geométricas tridimensionales."
+    "evidence_desc": "Determina caracter\u00edsticas m\u00e9tricas de figuras geom\u00e9tricas tridimensionales."
   },
-  "stem": "¿Cuál es la longitud de la diagonal espacial interior (que une dos vértices opuestos más distantes) de un cubo cuya arista mide $5\\text{ cm}$?",
+  "stem": "\u00bfCu\u00e1l es la longitud de la diagonal espacial interior (que une dos v\u00e9rtices opuestos m\u00e1s distantes) de un cubo cuya arista mide $5\\text{ cm}$?",
   "options": {
     "A": "$5\\sqrt{2}\\text{ cm}$",
     "B": "$5\\sqrt{3}\\text{ cm}$",
@@ -24,7 +24,7 @@
   },
   "correct_answer": "B",
   "solution_steps": [
-    "La diagonal espacial de un paralelepípedo cumple $D = \\sqrt{l^2 + w^2 + h^2}$.",
+    "La diagonal espacial de un paralelep\u00edpedo cumple $D = \\sqrt{l^2 + w^2 + h^2}$.",
     "Para un cubo con todos los lados iguales a $a=5$: $D = \\sqrt{a^2 + a^2 + a^2} = \\sqrt{3a^2} = a\\sqrt{3}$.",
     "Sustituyendo $a=5$: $D = 5\\sqrt{3}\\text{ cm}$."
   ],
@@ -48,11 +48,12 @@
         "lines": [
           "Cubo de arista a = 5",
           "Diagonal espacial D",
-          "D = a√3"
+          "D = a\u221a3"
         ]
       },
       "showCrossSection": false,
       "showAxes": true
     }
-  }
+  },
+  "code": "item-geo-solid-022"
 }

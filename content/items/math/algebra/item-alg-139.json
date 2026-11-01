@@ -1,0 +1,74 @@
+{
+  "id": 139,
+  "code": "item-alg-139",
+  "set_id": "set_3",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función Cuadrática",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A6",
+    "affirmation_desc": null,
+    "evidence": "A6.1",
+    "evidence_desc": "Identifica el vértice, concavidad, eje de simetría e intersecciones de una función cuadrática."
+  },
+  "evidence_id": "A6.1",
+  "concept_id": "mep-alg-funcion-cuadratica-04",
+  "linked_concepts": [
+    "mep-alg-funcion-cuadratica-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Dada la función cuadrática $f(x) = -x^2 + 4x + 5$, ¿cuáles son las coordenadas del vértice de la parábola y su concavidad?",
+  "options": {
+    "A": "Vértice $(2, 9)$, Cóncava hacia abajo",
+    "B": "Vértice $(-2, 9)$, Cóncava hacia arriba",
+    "C": "Vértice $(2, 5)$, Cóncava hacia abajo",
+    "D": "Vértice $(4, 5)$, Cóncava hacia arriba"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Identificamos coeficientes: $a = -1$, $b = 4$, $c = 5$. Dado que $a = -1 < 0$, la parábola es cóncava hacia abajo.",
+    "La coordenada $x$ del vértice es $h = -\\frac{b}{2a} = -\\frac{4}{2(-1)} = 2$.",
+    "La coordenada $y$ del vértice es $k = f(2) = -(2)^2 + 4(2) + 5 = -4 + 8 + 5 = 9$.",
+    "Por lo tanto, el vértice es $(2, 9)$ y la concavidad es hacia abajo."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Parábola cóncava hacia abajo f(x) = -x^2 + 4x + 5 con vértice en (2,9)",
+    "visual": {
+      "type": "function_plot",
+      "form": "quadratic",
+      "params": {
+        "a": -1,
+        "b": 4,
+        "c": 5
+      },
+      "domain": {
+        "x": [
+          -2,
+          6
+        ],
+        "y": [
+          -2,
+          10
+        ]
+      },
+      "annotations": {
+        "vertex": {
+          "x": 2,
+          "y": 9,
+          "label": "V(2,9)"
+        }
+      }
+    }
+  }
+}

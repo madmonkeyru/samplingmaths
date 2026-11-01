@@ -1,0 +1,71 @@
+{
+  "id": 188,
+  "code": "item-geo-188",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección paralela intermedia en tronco de cono",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un tronco de cono de bases paralelas tiene radios basal superior $r = 6\\text{ cm}$ e inferior $R = 10\\text{ cm}$. Se realiza un corte plano a la mitad de su altura. ¿Cuál es la longitud del radio de la sección circular obtenida?",
+  "options": {
+    "A": "$7\\text{ cm}$",
+    "B": "$8\\text{ cm}$",
+    "C": "$8.5\\text{ cm}$",
+    "D": "$9\\text{ cm}$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Al cortar a la mitad exacta de la altura, el radio de la sección corresponde a la mediana (base media) del trapecio axial correspondiente.",
+    "$r_{med} = \\frac{R + r}{2} = \\frac{10 + 6}{2} = \\frac{16}{2} = 8\\text{ cm}$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Sección circular a media altura en tronco de cono",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "frustum",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "topRadius": 44,
+        "bottomRadius": 76,
+        "height": 115,
+        "showAxis": true
+      },
+      "labels": {
+        "topCenter": "O_1",
+        "bottomCenter": "O_2",
+        "topRadius": "6",
+        "bottomRadius": "10"
+      },
+      "referenceBox": {
+        "lines": [
+          "Corte a media altura",
+          "Base media del trapecio",
+          "r_m = (R + r) / 2"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

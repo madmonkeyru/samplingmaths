@@ -1,0 +1,70 @@
+{
+  "id": 177,
+  "code": "item-geo-177",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección oblicua en un cilindro (Reconocimiento de la elipse)",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.4",
+    "evidence_desc": "Reconoce elipses en diferentes contextos."
+  },
+  "evidence_id": "A5.4",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Al cortar un cilindro circular recto con un plano que no es paralelo ni perpendicular a las bases, y que no interseca a ninguna de ellas, ¿qué curva geométrica delimita el contorno de la sección plana resultante?",
+  "options": {
+    "A": "Una parábola",
+    "B": "Una circunferencia",
+    "C": "Una elipse",
+    "D": "Una hipérbola"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Un plano oblicuo que corta todas las generatrices del cilindro sin intersecar las bases genera una sección plana cuya frontera es una elipse.",
+    "El eje menor de la elipse coincide con el diámetro del cilindro y el eje mayor depende de la inclinación del ángulo del plano de corte."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Sección plana oblicua produciendo una elipse en un cilindro",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cylinder",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 65,
+        "height": 120,
+        "crossSectionType": "oblique",
+        "showAxis": true
+      },
+      "labels": {
+        "topCenter": "O_1",
+        "bottomCenter": "O_2",
+        "sectionCenter": "M"
+      },
+      "referenceBox": {
+        "lines": [
+          "Plano secante oblicuo",
+          "Corte no paralelo a bases",
+          "Genera una elipse"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

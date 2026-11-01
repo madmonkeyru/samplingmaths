@@ -1,0 +1,45 @@
+{
+  "id": 17,
+  "code": "item-geo-017",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Visualización espacial - Esfera",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A5",
+    "affirmation_desc": null,
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en un cilindro circular recto o en una esfera en diversos contextos."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Si el radio de una esfera mide 25 y esta se interseca con una sección plana de radio 24, entonces, ¿a qué distancia del centro de la esfera se encuentra dicha sección?",
+  "options": {
+    "A": "7",
+    "B": "12",
+    "C": "14",
+    "D": "49"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "En una esfera, la relación entre el radio de la esfera R, el radio de la sección r y la distancia d del centro al plano es R^2 = r^2 + d^2.",
+    "25^2 = 24^2 + d^2 → 625 = 576 + d^2 → d^2 = 49 → d = 7.",
+    "Opción correcta: A."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

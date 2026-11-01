@@ -1,0 +1,46 @@
+{
+  "id": 70,
+  "code": "item-alg-070",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función exponencial y logarítmica",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A5",
+    "affirmation_desc": null,
+    "evidence": "A5.1",
+    "evidence_desc": "Identifica la función logarítmica como la inversa de la función exponencial en diversos contextos."
+  },
+  "evidence_id": "A5.1",
+  "concept_id": "mep-alg-exponencial-logaritmica-08",
+  "linked_concepts": [
+    "mep-alg-exponencial-logaritmica-08"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "¿Cuál de las siguientes funciones es inversa con la función $f(x) = 2^x$?",
+  "options": {
+    "A": "$g(x) = (1/2)^x$",
+    "B": "$t(x) = \\log_2(x)$",
+    "C": "$h(x) = \\log_1(x)$",
+    "D": "$r(x) = 2\\log(x)$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La función inversa de una función exponencial de base a es la función logarítmica de base a.",
+    "Para f(x) = 2^x, la inversa es f⁻¹(x) = log₂(x).",
+    "Por lo tanto, t(x) = log₂(x) es la función inversa.",
+    "Respuesta: B."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

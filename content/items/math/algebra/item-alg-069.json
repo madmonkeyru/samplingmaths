@@ -1,0 +1,48 @@
+{
+  "id": 69,
+  "code": "item-alg-069",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función logarítmica",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A5",
+    "affirmation_desc": null,
+    "evidence": "A5.7",
+    "evidence_desc": "Resuelve problemas en contextos reales utilizando ecuaciones logarítmicas."
+  },
+  "evidence_id": "A5.7",
+  "concept_id": "mep-alg-propiedades-logaritmos-09",
+  "linked_concepts": [
+    "mep-alg-propiedades-logaritmos-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "La escala de pH de una solución química especial está dada por la función $p(x) = 2\\log_3(x)$, donde “x” representa la concentración de ciertos iones en la mezcla con $3 \\le x \\le 81$. Si la concentración detectada es de 27 unidades, entonces, ¿cuál es el valor del pH obtenido?",
+  "options": {
+    "A": "6",
+    "B": "9",
+    "C": "18",
+    "D": "54"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Sustituyendo x = 27 en p(x) = 2log₃(x):",
+    "p(27) = 2 · log₃(27)",
+    "Como 3³ = 27, log₃(27) = 3.",
+    "p(27) = 2 · 3 = 6",
+    "Por lo tanto, el pH obtenido es 6.",
+    "Respuesta: A."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

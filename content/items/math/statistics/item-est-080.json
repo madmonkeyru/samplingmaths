@@ -1,0 +1,46 @@
+{
+  "id": 80,
+  "code": "item-est-080",
+  "set_id": "set_1",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Eventos y probabilidades",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A2",
+    "affirmation_desc": "Resuelve problemas, de diversos contextos, relacionados con probabilidades o eventos aleatorios.",
+    "evidence": "A2.4",
+    "evidence_desc": "Resuelve problemas de diversos contextos relacionados con probabilidades obtenidas mediante axiomas o propiedades básicas."
+  },
+  "evidence_id": "A2.4",
+  "concept_id": "mep-est-eventos-probabilidad-02",
+  "linked_concepts": [
+    "mep-est-eventos-probabilidad-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Con base en la información dada en la tabla de contingencia, se establecen los siguientes eventos al elegir al azar para control de calidad:\n\n• E: Que la orden incluya una repostería dulce con café negro.\n\n• F: Que la orden incluya una repostería salada con café negro.\n\n• G: Que la orden incluya una repostería salada con un café con leche o jugo natural.\n\n• H: Que la orden sea de repostería dulce o salada acompañado de jugo natural.\n\n¿Cuál es la probabilidad de que ocurra el evento $E \\cup F$?",
+  "options": {
+    "A": "$1/80$",
+    "B": "$7/80$",
+    "C": "$23/80$",
+    "D": "$57/80$"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "E: repostería dulce con café negro = 8 órdenes.",
+    "F: repostería salada con café negro = 15 órdenes.",
+    "E ∩ F = 0 (una orden no puede ser simultáneamente dulce y salada).",
+    "P(E ∪ F) = P(E) + P(F) − P(E ∩ F) = (8/80) + (15/80) − 0 = 23/80."
+  ],
+  "group_id": "g_cont_table",
+  "visual_spec": null
+}

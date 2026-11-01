@@ -1,0 +1,84 @@
+{
+  "id": 89,
+  "code": "item-alg-089",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Dominio y ámbito de funciones",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A1",
+    "evidence": "A1.2",
+    "evidence_desc": "Determina el ámbito de una función cuadrática a partir de su representación gráfica."
+  },
+  "evidence_id": "A1.2",
+  "concept_id": "mep-alg-concepto-funcion-01",
+  "linked_concepts": [
+    "mep-alg-concepto-funcion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la gráfica de la función cuadrática $f$ cuyo vértice es $(2, -3)$ y abre hacia arriba:",
+  "options": {
+    "A": "$[-3, +\\infty[$",
+    "B": "$]-\\infty, -3]$",
+    "C": "$[2, +\\infty[$",
+    "D": "$]-\\infty, 2]$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El ámbito de una función cuadrática $f(x) = ax^2+bx+c$ que abre hacia arriba ($a > 0$) con vértice $(h, k)$ está dado por $[k, +\\infty[$.",
+    "Dado que el vértice es $(2, -3)$, la ordenada mínima es $y = -3$.",
+    "Por lo tanto, el ámbito es $[-3, +\\infty[$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Parábola con vértice en (2, -3) abriendo hacia arriba",
+    "visual": {
+      "type": "function_plot",
+      "form": "quadratic",
+      "params": {
+        "a": 1,
+        "vertex": [
+          2,
+          -3
+        ],
+        "roots": [
+          0.27,
+          3.73
+        ]
+      },
+      "annotations": {
+        "vertex": {
+          "show": true,
+          "label": "V(2, -3)",
+          "project_to": [
+            "x",
+            "y"
+          ]
+        },
+        "roots": {
+          "show": false
+        }
+      },
+      "domain": {
+        "x": [
+          -1,
+          5
+        ],
+        "y": [
+          -4,
+          5
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mep-ea-01.local/schemas/item.schema.json",
+  "title": "MEP-EA-01 Unified Atomic Item Schema",
+  "type": "object",
+  "required": [
+    "id",
+    "area",
+    "area_id",
+    "topic",
+    "stem",
+    "options",
+    "correct_answer",
+    "solution_steps"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "code": {
+      "type": "string",
+      "pattern": "^item-[a-z0-9-]+$"
+    },
+    "set_id": {
+      "type": "string"
+    },
+    "area": {
+      "type": "string"
+    },
+    "area_id": {
+      "enum": ["geometry", "functions", "statistics"]
+    },
+    "topic": {
+      "type": "string"
+    },
+    "spec": {
+      "$ref": "#/$defs/spec"
+    },
+    "evidence_id": {
+      "type": "string"
+    },
+    "concept_id": {
+      "type": "string"
+    },
+    "linked_concepts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "program_applicability": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "I_II_CICLO",
+          "III_CICLO_7",
+          "III_CICLO_8",
+          "III_CICLO_9",
+          "EDAD_PARTE_1",
+          "EDAD_PARTE_2",
+          "BXM"
+        ]
+      }
+    },
+    "calculator_allowed": {
+      "type": "boolean"
+    },
+    "cognitive_level": {
+      "enum": ["reproduccion", "conexion", "reflexion"]
+    },
+    "difficulty_tier": {
+      "enum": [1, 2, 3]
+    },
+    "historical_convocatoria": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "stem": {
+      "type": "string"
+    },
+    "options": {
+      "type": "object",
+      "required": ["A", "B", "C", "D"],
+      "properties": {
+        "A": { "type": "string" },
+        "B": { "type": "string" },
+        "C": { "type": "string" },
+        "D": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "correct_answer": {
+      "enum": ["A", "B", "C", "D"]
+    },
+    "solution_steps": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "required": ["step", "title", "explanation"],
+            "properties": {
+              "step": { "type": "integer" },
+              "title": { "type": "string" },
+              "explanation": { "type": "string" }
+            }
+          }
+        ]
+      }
+    },
+    "group_id": {
+      "type": ["string", "null"]
+    },
+    "visual_spec": {
+      "$ref": "#/$defs/visual_spec"
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "spec": {
+      "type": "object",
+      "required": ["block", "affirmation", "evidence", "evidence_desc"],
+      "properties": {
+        "block": { "type": "string" },
+        "affirmation": { "type": "string" },
+        "affirmation_desc": { "type": ["string", "null"] },
+        "evidence": { "type": "string" },
+        "evidence_desc": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "visual_spec": {
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "required": ["alt", "visual"],
+          "properties": {
+            "alt": { "type": "string" },
+            "visual": { "$ref": "#/$defs/visual" }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "visual": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "enum": [
+            "cartesian_2d",
+            "multi_view_grid",
+            "function_plot",
+            "curve_region",
+            "transformation_overlay",
+            "table",
+            "box_plot",
+            "distribution_curve",
+            "venn_diagram",
+            "solid_3d"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": 15,
+  "code": "item-geo-015",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Polígonos regulares",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A4",
+    "affirmation_desc": null,
+    "evidence": "A4.1",
+    "evidence_desc": "Determina elementos de los polígonos regulares para la obtención de perímetros o áreas de estos en diversos contextos."
+  },
+  "evidence_id": "A4.1",
+  "concept_id": "mep-geo-poligono-regular-07",
+  "linked_concepts": [
+    "mep-geo-poligono-regular-07"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Si la medida del radio de un polígono regular es $3\\sqrt{2}$ y la de su ángulo externo $90^\\circ$, entonces, ¿cuál es el área de ese polígono?",
+  "options": {
+    "A": "36",
+    "B": "24",
+    "C": "18",
+    "D": "12"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Ángulo externo = 90° → n = 360/90 = 4 (cuadrado).",
+    "El radio de un cuadrado es la distancia del centro a un vértice, que es la mitad de la diagonal.",
+    "Si radio = 3√2, entonces la diagonal = 6√2, y el lado L = diagonal/√2 = 6.",
+    "Área = L^2 = 36.",
+    "Opción correcta: A."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

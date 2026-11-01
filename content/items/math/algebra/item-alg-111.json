@@ -1,0 +1,44 @@
+{
+  "id": 111,
+  "code": "item-alg-111",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Dominio de funciones",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A1",
+    "evidence": "A1.6",
+    "evidence_desc": "Determina las restricciones del dominio para expresiones racionales."
+  },
+  "evidence_id": "A1.6",
+  "concept_id": "mep-alg-concepto-funcion-01",
+  "linked_concepts": [
+    "mep-alg-concepto-funcion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la función $f(x) = \\frac{x + 2}{x - 3}$. ¿Cuál es el dominio máximo de $f$ en los números reales?",
+  "options": {
+    "A": "$\\mathbb{R} \\setminus \\{3\\}$",
+    "B": "$\\mathbb{R} \\setminus \\{-2\\}$",
+    "C": "$]3, +\\infty[$",
+    "D": "$\\mathbb{R}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Para que una expresión racional esté definida en $\\mathbb{R}$, el denominador no puede ser igual a cero.",
+    "$x - 3 \\neq 0 \\implies x \\neq 3$.",
+    "Por lo tanto, el dominio máximo es $\\mathbb{R} \\setminus \\{3\\}$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

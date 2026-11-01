@@ -1,0 +1,65 @@
+{
+  "id": 104,
+  "code": "item-alg-104",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Dominio y ámbito de funciones",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A1",
+    "evidence": "A1.5",
+    "evidence_desc": "Calcula el ámbito de una función lineal con dominio restringido."
+  },
+  "evidence_id": "A1.5",
+  "concept_id": "mep-alg-concepto-funcion-01",
+  "linked_concepts": [
+    "mep-alg-concepto-funcion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Sea $f: [-1, 4] \\to \\mathbb{R}$ dada por $f(x) = 3x - 2$. ¿Cuál es el ámbito de $f$?",
+  "options": {
+    "A": "[-5, 10]",
+    "B": "[-1, 4]",
+    "C": "[1, 10]",
+    "D": "[-5, 12]"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Dado que $f$ es estrictamente creciente ($m = 3 > 0$), el valor mínimo ocurre en el extremo izquierdo $x = -1$ y el máximo en $x = 4$.",
+    "$f(-1) = 3(-1) - 2 = -3 - 2 = -5$.",
+    "$f(4) = 3(4) - 2 = 12 - 2 = 10$.",
+    "Por lo tanto, el ámbito es $[-5, 10]$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Segmento de recta f(x) = 3x - 2 en el dominio [-1, 4]",
+    "visual": {
+      "type": "function_plot",
+      "form": "linear",
+      "params": {
+        "m": 3,
+        "b": -2
+      },
+      "domain": {
+        "x": [
+          -2,
+          5
+        ],
+        "y": [
+          -6,
+          12
+        ]
+      }
+    }
+  }
+}

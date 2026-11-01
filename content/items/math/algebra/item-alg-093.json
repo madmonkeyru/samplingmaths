@@ -1,0 +1,87 @@
+{
+  "id": 93,
+  "code": "item-alg-093",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función logarítmica",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A3",
+    "evidence": "A3.2",
+    "evidence_desc": "Identifica las características de la función logarítmica."
+  },
+  "evidence_id": "A3.2",
+  "concept_id": "mep-alg-sistemas-ecuaciones-05",
+  "linked_concepts": [
+    "mep-alg-sistemas-ecuaciones-05"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la función logarítmica $h(x) = \\log_2(x)$. ¿Cuál es la recta asíntota de la gráfica de $h$?",
+  "options": {
+    "A": "La recta $y = 0$ (eje $x$)",
+    "B": "La recta $x = 0$ (eje $y$)",
+    "C": "La recta $y = 1$",
+    "D": "La recta $x = 1$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La función logarítmica $h(x) = \\log_a(x)$ con $a > 0, a \\neq 1$ tiene como dominio $]0, +\\infty[$.",
+    "A medida que $x \\to 0^+$, $h(x) \\to -\\infty$, por lo que el eje $y$ (la recta $x = 0$) es una asíntota vertical."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Gráfica de función logarítmica h(x) = log2(x)",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -1,
+          5
+        ],
+        "y": [
+          -3,
+          3
+        ]
+      },
+      "children": [
+        {
+          "type": "point",
+          "coords": [
+            1,
+            0
+          ],
+          "label": "(1,0)",
+          "color": "#2563eb"
+        },
+        {
+          "type": "point",
+          "coords": [
+            2,
+            1
+          ],
+          "label": "(2,1)",
+          "color": "#1e293b"
+        },
+        {
+          "type": "point",
+          "coords": [
+            4,
+            2
+          ],
+          "label": "(4,2)",
+          "color": "#1e293b"
+        }
+      ]
+    }
+  }
+}

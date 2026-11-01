@@ -7,6 +7,8 @@ import {
   ContentManifest,
   QuestionSetData,
   ProgramInfo,
+  ConvocatoriaManifest,
+  PracticeConfig,
 } from '../types';
 
 import manifestJson from '../../content/manifest.json';
@@ -16,6 +18,7 @@ import set3Json from '../../content/bxm/matematicas/set_3.json';
 import set4Json from '../../content/bxm/matematicas/set_4.json';
 import set5Json from '../../content/bxm/matematicas/set_5.json';
 import groupsJson from '../../content/bxm/matematicas/groups.json';
+import { TestEngine } from './testEngine';
 
 // Glob import all json files in content directory for dynamic resolution
 const contentModules = import.meta.glob('../../content/**/*.json');
@@ -28,6 +31,7 @@ class DataService {
   private currentConvocatoriaId: string | undefined;
   private activeSets: SetInfo[];
   private itemsMap: Map<string, Item[]>; // key: setId
+  private decoupledItemsMap: Map<string, Item>; // key: item code or id string
   private groupsMap: Map<string, Group>;
   private isInitialized: boolean = false;
   private loadVersion = 0;
@@ -40,6 +44,7 @@ class DataService {
     this.currentConvocatoriaId = '2026-c2';
     this.activeSets = [];
     this.itemsMap = new Map();
+    this.decoupledItemsMap = new Map();
     this.groupsMap = new Map();
 
     // Default synchronous load of bxm/matematicas bundle so synchronous getters work immediately
@@ -66,6 +71,17 @@ class DataService {
     this.itemsMap.set('set_3', set3Data.items || []);
     this.itemsMap.set('set_4', set4Data.items || []);
     this.itemsMap.set('set_5', set5Data.items || []);
+
+    // Register all items into decoupled index map
+    [set1Data, set2Data, set3Data, set4Data, set5Data].forEach((s) => {
+      (s.items || []).forEach((item) => {
+        if (item.code) this.decoupledItemsMap.set(item.code, item);
+        this.decoupledItemsMap.set(String(item.id), item);
+        const prefix =
+          item.area_id === 'functions' ? 'item-alg' : item.area_id === 'statistics' ? 'item-est' : 'item-geo';
+        this.decoupledItemsMap.set(`${prefix}-${String(item.id).padStart(3, '0')}`, item);
+      });
+    });
 
     const groupData = groupsJson as unknown as GroupBankData;
     if (groupData && Array.isArray(groupData.groups)) {
@@ -181,6 +197,7 @@ class DataService {
     this.currentSubjectId = subjectId;
     this.activeSets = subject.sets || [];
     this.itemsMap.clear();
+    this.decoupledItemsMap.clear();
     this.groupsMap.clear();
 
     // Load groups if path exists
@@ -213,7 +230,15 @@ class DataService {
             const setModule: any = await setModuleLoader();
             if (version !== this.loadVersion) return;
             const setData: QuestionSetData = setModule.default || setModule;
-            this.itemsMap.set(setInfo.id, setData.items || []);
+            const items = setData.items || [];
+            this.itemsMap.set(setInfo.id, items);
+            items.forEach((item) => {
+              if (item.code) this.decoupledItemsMap.set(item.code, item);
+              this.decoupledItemsMap.set(String(item.id), item);
+              const prefix =
+                item.area_id === 'functions' ? 'item-alg' : item.area_id === 'statistics' ? 'item-est' : 'item-geo';
+              this.decoupledItemsMap.set(`${prefix}-${String(item.id).padStart(3, '0')}`, item);
+            });
           } catch (err) {
             console.warn(`Failed to dynamically load set file ${setInfo.file}:`, err);
           }
@@ -251,7 +276,10 @@ class DataService {
     return this.getItemsBySet(setId);
   }
 
-  public getItemById(id: number): Item | undefined {
+  public getItemById(id: number | string): Item | undefined {
+    if (typeof id === 'string') {
+      return this.decoupledItemsMap.get(id);
+    }
     return this.getAllItems().find((item) => item.id === id);
   }
 
@@ -284,6 +312,13 @@ class DataService {
       }
     });
     return Array.from(topicsSet);
+  }
+
+  /**
+   * Dynamic session assembly powered by TestEngine
+   */
+  public assembleSession(config: PracticeConfig): Item[] {
+    return TestEngine.assemblePracticeSession(config, this.getAllItems());
   }
 
   public getQuestionBankInfo() {

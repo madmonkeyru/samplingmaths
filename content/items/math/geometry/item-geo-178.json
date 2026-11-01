@@ -1,0 +1,72 @@
+{
+  "id": 178,
+  "code": "item-geo-178",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección transversal paralela a las bases de un cilindro",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de una esfera o un cilindro circular recto en diversos contextos."
+  },
+  "evidence_id": "A5.2",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Si un cilindro circular recto de radio $r = 7\\text{ cm}$ y altura $14\\text{ cm}$ se corta con un plano paralelo a sus bases a la mitad de su altura, ¿cuál es el perímetro de la sección obtenida?",
+  "options": {
+    "A": "$7\\pi\\text{ cm}$",
+    "B": "$14\\pi\\text{ cm}$",
+    "C": "$28\\pi\\text{ cm}$",
+    "D": "$49\\pi\\text{ cm}$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "Cualquier corte paralelo a las bases de un cilindro circular recto produce un círculo congruente con las bases.",
+    "Por lo tanto, el radio de la sección es exactamente igual al radio del cilindro: $r = 7\\text{ cm}$.",
+    "El perímetro (longitud de la circunferencia) es $P = 2\\pi r = 2\\pi(7) = 14\\pi\\text{ cm}$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Corte paralelo a las bases en un cilindro",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cylinder",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 65,
+        "height": 115,
+        "crossSectionType": "parallel",
+        "showAxis": true
+      },
+      "labels": {
+        "topCenter": "O_1",
+        "bottomCenter": "O_2",
+        "sectionCenter": "O_m",
+        "radius": "r = 7"
+      },
+      "referenceBox": {
+        "lines": [
+          "Plano paralelo a las bases",
+          "Círculo congruente a bases",
+          "Radio = 7 cm"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

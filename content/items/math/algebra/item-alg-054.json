@@ -1,0 +1,380 @@
+{
+  "id": 54,
+  "code": "item-alg-054",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Análisis de gráficas de funciones",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A2",
+    "affirmation_desc": null,
+    "evidence": "A2.1",
+    "evidence_desc": "Analiza una función a partir de sus representaciones en diversos contextos."
+  },
+  "evidence_id": "A2.1",
+  "concept_id": "mep-alg-funcion-lineal-03",
+  "linked_concepts": [
+    "mep-alg-funcion-lineal-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "¿En cuál semana se registró el precio más alto de todo el periodo?",
+  "options": {
+    "A": "18",
+    "B": "16",
+    "C": "20",
+    "D": "24"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "El punto más alto de la gráfica corresponde a 900 colones.",
+    "Observando la gráfica, ese valor ocurre en x = 16 semanas.",
+    "Por lo tanto, el precio más alto se registró en la semana 16.",
+    "Respuesta: B."
+  ],
+  "group_id": "g_fuel_price",
+  "visual_spec": {
+    "alt": "Gráfica del precio por litro de combustible p(x) en colones según la semana x.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          0,
+          26
+        ],
+        "y": [
+          0,
+          1000
+        ]
+      },
+      "grid": false,
+      "axes": {
+        "arrows": true
+      },
+      "x_label": "x",
+      "y_label": "p(x)",
+      "children": [
+        {
+          "type": "polyline",
+          "points": [
+            [
+              0,
+              500
+            ],
+            [
+              4,
+              600
+            ],
+            [
+              8,
+              750
+            ],
+            [
+              12,
+              750
+            ],
+            [
+              16,
+              900
+            ],
+            [
+              20,
+              600
+            ],
+            [
+              24,
+              500
+            ]
+          ],
+          "color": "indigo-600",
+          "strokeWidth": 2.5
+        },
+        {
+          "type": "line",
+          "p1": [
+            0,
+            500
+          ],
+          "p2": [
+            24,
+            500
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            0,
+            600
+          ],
+          "p2": [
+            20,
+            600
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            0,
+            750
+          ],
+          "p2": [
+            12,
+            750
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            0,
+            900
+          ],
+          "p2": [
+            16,
+            900
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            4,
+            0
+          ],
+          "p2": [
+            4,
+            600
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            8,
+            0
+          ],
+          "p2": [
+            8,
+            750
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            12,
+            0
+          ],
+          "p2": [
+            12,
+            750
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            16,
+            0
+          ],
+          "p2": [
+            16,
+            900
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            20,
+            0
+          ],
+          "p2": [
+            20,
+            600
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            24,
+            0
+          ],
+          "p2": [
+            24,
+            500
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            500
+          ],
+          "radius": 4,
+          "color": "stone-900",
+          "label": "500",
+          "label_position": "left"
+        },
+        {
+          "type": "point",
+          "coords": [
+            4,
+            600
+          ],
+          "radius": 4,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            8,
+            750
+          ],
+          "radius": 4,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            12,
+            750
+          ],
+          "radius": 4,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            16,
+            900
+          ],
+          "radius": 4,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            20,
+            600
+          ],
+          "radius": 4,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            24,
+            500
+          ],
+          "radius": 4,
+          "color": "stone-900"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            600
+          ],
+          "label": "600",
+          "label_position": "left"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            750
+          ],
+          "label": "750",
+          "label_position": "left"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            900
+          ],
+          "label": "900",
+          "label_position": "left"
+        },
+        {
+          "type": "point",
+          "coords": [
+            4,
+            0
+          ],
+          "label": "4",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            8,
+            0
+          ],
+          "label": "8",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            12,
+            0
+          ],
+          "label": "12",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            16,
+            0
+          ],
+          "label": "16",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            20,
+            0
+          ],
+          "label": "20",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            24,
+            0
+          ],
+          "label": "24",
+          "label_position": "bottom"
+        }
+      ]
+    }
+  }
+}

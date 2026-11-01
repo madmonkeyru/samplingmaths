@@ -1,31 +1,44 @@
 {
-  "id": "item-math-geo-circ-001",
+  "id": 1,
+  "code": "item-geo-001",
+  "set_id": "set_1",
   "area": "Geometría",
   "area_id": "geometry",
-  "topic": "Circunferencia y sus representaciones",
+  "topic": "Circunferencia",
   "spec": {
     "block": "1. Geometría",
     "affirmation": "A1",
-    "affirmation_desc": "Resuelve problemas relacionados con la representación de circunferencias.",
-    "evidence": "A1.1",
-    "evidence_desc": "Reconoce la representación gráfica de una circunferencia dado su centro y su radio."
+    "affirmation_desc": null,
+    "evidence": "A1.2",
+    "evidence_desc": "Reconoce la representación algebraica de una circunferencia dado su centro y su radio, en diversos contextos."
   },
-  "linked_concepts": ["mep-geo-circunferencia-01", "mep-geo-centro-radio-02"],
-  "program_applicability": ["EDAD_PARTE_1", "BXM"],
+  "evidence_id": "A1.2",
+  "concept_id": "mep-geo-circunferencia-01",
+  "linked_concepts": [
+    "mep-geo-circunferencia-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
   "calculator_allowed": true,
   "cognitive_level": "reproduccion",
-  "stem": "Considere una circunferencia con centro $C(3, -2)$ y radio $r = 5$. ¿Cuál es la ecuación ordinaria de dicha circunferencia?",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Si la medida del radio de la circunferencia “c” es 5 y su centro es (2, 3), entonces, la ecuación de “c” corresponde a",
   "options": {
-    "A": "$(x - 3)^2 + (y + 2)^2 = 25$",
-    "B": "$(x + 3)^2 + (y - 2)^2 = 25$",
-    "C": "$(x - 3)^2 + (y + 2)^2 = 5$",
-    "D": "$(x + 3)^2 + (y - 2)^2 = 5$"
+    "A": "(x+2)^2 + (y+3)^2 = 25",
+    "B": "(x-2)^2 + (y-3)^2 = 25",
+    "C": "(x+3)^2 + (y-2)^2 = 25",
+    "D": "(x-3)^2 + (y-2)^2 = 25"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "solution_steps": [
-    "Identificar las coordenadas del centro $(h, k) = (3, -2)$ y el radio $r = 5$.",
-    "Aplicar la ecuación canónica $(x - h)^2 + (y - k)^2 = r^2$.",
-    "Sustituir: $(x - 3)^2 + (y - (-2))^2 = 5^2 \\implies (x - 3)^2 + (y + 2)^2 = 25$."
+    "La ecuación ordinaria de una circunferencia con centro (h,k) y radio r es (x-h)^2 + (y-k)^2 = r^2.",
+    "Sustituyendo h=2, k=3, r=5: (x-2)^2 + (y-3)^2 = 25.",
+    "Por lo tanto, la opción correcta es B."
   ],
   "group_id": null,
   "visual_spec": null

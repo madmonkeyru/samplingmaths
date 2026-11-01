@@ -1,0 +1,153 @@
+{
+  "id": 5,
+  "code": "item-geo-005",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Traslación de circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A2",
+    "affirmation_desc": null,
+    "evidence": "A2.1",
+    "evidence_desc": "Reconoce la representación gráfica o algebraica de la traslación de una circunferencia en diversos contextos."
+  },
+  "evidence_id": "A2.1",
+  "concept_id": "mep-geo-traslacion-03",
+  "linked_concepts": [
+    "mep-geo-traslacion-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere la siguiente representación de la circunferencia “d” de centro O: [imagen]. Si a “d” se le aplica una traslación de cinco unidades a la izquierda (paralela al eje x) y tres unidades hacia abajo (paralela al eje y), entonces, se obtiene una circunferencia cuya ecuación corresponde a",
+  "options": {
+    "A": "(x+1)^2 + (y-3)^2 = 9",
+    "B": "(x-1)^2 + (y-3)^2 = 9",
+    "C": "(x+1)^2 + (y+3)^2 = 9",
+    "D": "(x-1)^2 + (y+3)^2 = 9"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Del gráfico, la circunferencia d tiene centro en (4,0) y radio 3 (pues pasa por (4,3) y (4,-3)).",
+    "Trasladar 5 unidades a la izquierda: x' = x - 5; 3 unidades hacia abajo: y' = y - 3.",
+    "El nuevo centro es (4-5, 0-3) = (-1, -3).",
+    "La ecuación resultante es (x+1)^2 + (y+3)^2 = 9.",
+    "Opción correcta: C."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Circunferencia d con centro en O(4, 0) y radio 3 en un plano cartesiano.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -2,
+          8
+        ],
+        "y": [
+          -5,
+          5
+        ]
+      },
+      "grid": false,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            4,
+            0
+          ],
+          "radius": 3
+        },
+        {
+          "type": "point",
+          "coords": [
+            4,
+            0
+          ],
+          "label": "O"
+        },
+        {
+          "type": "label",
+          "coords": [
+            6.2,
+            2.2
+          ],
+          "text": "d"
+        },
+        {
+          "type": "line",
+          "p1": [
+            4,
+            -3
+          ],
+          "p2": [
+            4,
+            3
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            0,
+            3
+          ],
+          "p2": [
+            4,
+            3
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            0,
+            -3
+          ],
+          "p2": [
+            4,
+            -3
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            3
+          ],
+          "label": "3"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            -3
+          ],
+          "label": "-3"
+        },
+        {
+          "type": "point",
+          "coords": [
+            4,
+            0
+          ],
+          "label": "4",
+          "label_position": "bottom"
+        }
+      ]
+    }
+  }
+}

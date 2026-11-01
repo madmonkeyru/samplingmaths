@@ -1,0 +1,64 @@
+{
+  "id": 124,
+  "code": "item-est-124",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Diagramas de Venn de 3 conjuntos",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A3",
+    "evidence": "A3.4",
+    "evidence_desc": "Interpreta regiones en un diagrama de Venn de 3 conjuntos."
+  },
+  "evidence_id": "A3.4",
+  "concept_id": "mep-est-eventos-probabilidad-02",
+  "linked_concepts": [
+    "mep-est-eventos-probabilidad-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "El siguiente diagrama de Venn muestra la distribución de estudiantes según las materias que cursan: Inglés (I), Francés (F) y Alemán (A):",
+  "options": {
+    "A": "8 estudiantes",
+    "B": "12 estudiantes",
+    "C": "20 estudiantes",
+    "D": "5 estudiantes"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La región central donde se traslapan los tres círculos ($I \\cap F \\cap A$) representa a los estudiantes matriculados en los tres idiomas simultáneamente.",
+    "Mirando el valor en la región central del diagrama (`A_B_C`), hay exactamente 8 estudiantes."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Diagrama de Venn de 3 conjuntos para idiomas I, F, A",
+    "visual": {
+      "type": "venn_diagram",
+      "sets": [
+        "Inglés (I)",
+        "Francés (F)",
+        "Alemán (A)"
+      ],
+      "region_values": {
+        "A_only": 20,
+        "B_only": 15,
+        "C_only": 10,
+        "A_B_only": 6,
+        "A_C_only": 5,
+        "B_C_only": 4,
+        "A_B_C": 8,
+        "outside": 12
+      },
+      "total": 80
+    }
+  }
+}

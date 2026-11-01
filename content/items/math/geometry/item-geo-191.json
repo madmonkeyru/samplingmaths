@@ -1,0 +1,71 @@
+{
+  "id": 191,
+  "code": "item-geo-191",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección plana diagonal en un prisma recto (cubo)",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.3",
+    "evidence_desc": "Determina características métricas de secciones planas en figuras tridimensionales."
+  },
+  "evidence_id": "A5.3",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "En un cubo cuya arista mide $6\\text{ cm}$, se realiza un corte plano que pasa por dos aristas opuestas no coplanares (sección diagonal). ¿Cuál es el área de la sección rectangular sombreada resultante?",
+  "options": {
+    "A": "$36\\text{ cm}^2$",
+    "B": "$36\\sqrt{2}\\text{ cm}^2$",
+    "C": "$72\\text{ cm}^2$",
+    "D": "$72\\sqrt{2}\\text{ cm}^2$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La sección diagonal que pasa por dos aristas opuestas de un cubo es un rectángulo cuyas dimensiones son una arista del cubo $a$ y la diagonal de una de las caras $d_{cara}$.",
+    "Para un cubo de arista $a=6$: $d_{cara} = a\\sqrt{2} = 6\\sqrt{2}\\text{ cm}$.",
+    "El área del rectángulo es $A = a \\times d_{cara} = 6 \\times 6\\sqrt{2} = 36\\sqrt{2}\\text{ cm}^2$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Sección diagonal sombreada en un cubo",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "prism",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "width": 90,
+        "height": 90,
+        "depth": 55,
+        "hatchCrossSection": true
+      },
+      "labels": {
+        "width": "6",
+        "height": "6",
+        "depth": "6"
+      },
+      "referenceBox": {
+        "lines": [
+          "Cubo de arista a = 6",
+          "Corte plano diagonal",
+          "Sección rectangular"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": 125,
+  "code": "item-est-125",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Comparación de distribuciones mediante diagramas de caja",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A1",
+    "evidence": "A1.5",
+    "evidence_desc": "Compara las medianas y rangos entre dos diagramas de caja comparativos."
+  },
+  "evidence_id": "A1.5",
+  "concept_id": "mep-est-diagrama-cajas-ric-03",
+  "linked_concepts": [
+    "mep-est-diagrama-cajas-ric-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Los siguientes diagramas de caja comparan el tiempo de armado (en minutos) de un producto por dos turnos de trabajo (Turno Mañana y Turno Noche):",
+  "options": {
+    "A": "El Turno Mañana tuvo una mediana menor (25 min) que el Turno Noche (35 min).",
+    "B": "El Turno Mañana fue más lento en promedio que el Turno Noche.",
+    "C": "Ambos turnos tuvieron exactamente la misma dispersión intercuartílica.",
+    "D": "El tiempo mínimo en el Turno Noche fue 10 minutos."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Observando la línea central (mediana) de cada caja:",
+    "Turno Mañana: Mediana $= 25$ minutos.",
+    "Turno Noche: Mediana $= 35$ minutos.",
+    "Por lo tanto, la mediana del Turno Mañana (25 min) es menor que la del Turno Noche (35 min)."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Diagramas de caja comparativos Turno Mañana vs Turno Noche",
+    "visual": {
+      "type": "box_plot",
+      "groups": [
+        {
+          "label": "Mañana",
+          "min": 15,
+          "q1": 20,
+          "median": 25,
+          "q3": 30,
+          "max": 40
+        },
+        {
+          "label": "Noche",
+          "min": 20,
+          "q1": 28,
+          "median": 35,
+          "q3": 42,
+          "max": 50
+        }
+      ],
+      "axis": {
+        "label": "Tiempo de armado (min)",
+        "min": 10,
+        "max": 55
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": 133,
+  "code": "item-geo-133",
+  "set_id": "set_3",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Polígonos",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A2",
+    "affirmation_desc": null,
+    "evidence": "A2.1",
+    "evidence_desc": "Calcula el perímetro y el área de polígonos regulares e irregulares."
+  },
+  "evidence_id": "A2.1",
+  "concept_id": "mep-geo-poligono-regular-07",
+  "linked_concepts": [
+    "mep-geo-poligono-regular-07"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un polígono regular tiene un ángulo interno cuya medida es $135^\\circ$. Si la medida de cada uno de sus lados es $6\\text{ cm}$, ¿cuál es el número total de lados $n$ de dicho polígono y su perímetro?",
+  "options": {
+    "A": "$n = 6$, Perímetro = $36\\text{ cm}$",
+    "B": "$n = 8$, Perímetro = $48\\text{ cm}$",
+    "C": "$n = 10$, Perímetro = $60\\text{ cm}$",
+    "D": "$n = 12$, Perímetro = $72\\text{ cm}$"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La medida de un ángulo interno de un polígono regular de $n$ lados es $i = \\frac{180^\\circ(n-2)}{n}$.",
+    "Igualando $135^\\circ = \\frac{180(n-2)}{n} \\implies 135n = 180n - 360 \\implies 45n = 360 \\implies n = 8$ (Octágono regular).",
+    "El perímetro de un octágono regular con lado $l = 6\\text{ cm}$ es $P = n \\cdot l = 8 \\cdot 6 = 48\\text{ cm}$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

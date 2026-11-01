@@ -1,0 +1,121 @@
+{
+  "id": 46,
+  "code": "item-geo-046",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Simetría axial",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A6",
+    "evidence": "A6.2",
+    "evidence_desc": "Identifica elementos homólogos en figuras que presentan simetría axial en diversos contextos."
+  },
+  "evidence_id": "A6.2",
+  "concept_id": "mep-geo-transformaciones-10",
+  "linked_concepts": [
+    "mep-geo-transformaciones-10"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "En el plano cartesiano adjunto, los triángulos $ABC$ y $A'B'C'$ presentan simetría axial respecto al eje $y$: [imagen]. Si el punto $A$ se ubica en $(-3, 4)$, ¿cuáles son las coordenadas de su punto homólogo $A'$?",
+  "options": {
+    "A": "$(3, 4)$",
+    "B": "$(-3, -4)$",
+    "C": "$(3, -4)$",
+    "D": "$(4, -3)$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La reflexión con respecto al eje y cambia el signo de la coordenada x manteniendo la coordenada y: (x, y) -> (-x, y).",
+    "Para A(-3, 4): A' = (-(-3), 4) = (3, 4)."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Triángulos ABC y A'B'C' simétricos respecto al eje y.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -5,
+          5
+        ],
+        "y": [
+          -1,
+          6
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              -3,
+              4
+            ],
+            [
+              -4,
+              1
+            ],
+            [
+              -1,
+              1
+            ]
+          ],
+          "labels": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "labels": [
+            "A'",
+            "B'",
+            "C'"
+          ]
+        },
+        {
+          "type": "point",
+          "coords": [
+            -3,
+            4
+          ],
+          "label": "A(-3,4)"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            4
+          ],
+          "label": "A'(3,4)"
+        }
+      ]
+    }
+  }
+}

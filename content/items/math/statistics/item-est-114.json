@@ -1,0 +1,59 @@
+{
+  "id": 114,
+  "code": "item-est-114",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de posición y dispersión",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A1",
+    "evidence": "A1.2",
+    "evidence_desc": "Identifica los cinco números resumen a partir de un diagrama de caja."
+  },
+  "evidence_id": "A1.2",
+  "concept_id": "mep-est-medidas-posicion-01",
+  "linked_concepts": [
+    "mep-est-medidas-posicion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "El siguiente diagrama de caja representa los salarios mensuales, en miles de colones, de los empleados de una PYME:",
+  "options": {
+    "A": "El recorrido intercuartílico (RIC) es 200 mil colones.",
+    "B": "La mediana del salario es 350 mil colones.",
+    "C": "El 50% de los empleados gana entre 400 y 600 mil colones.",
+    "D": "El salario máximo es 500 mil colones."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Del diagrama de caja obtenemos: $M\\text{ín} = 250$, $Q_1 = 350$, $M\\text{ediana} = 450$, $Q_3 = 550$, $M\\text{áx} = 700$.",
+    "El recorrido intercuartílico es $RIC = Q_3 - Q_1 = 550 - 350 = 200$ miles de colones.",
+    "Por lo tanto, la opción A es totalmente correcta."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Diagrama de caja de salarios en miles de colones",
+    "visual": {
+      "type": "box_plot",
+      "min": 250,
+      "q1": 350,
+      "median": 450,
+      "q3": 550,
+      "max": 700,
+      "axis": {
+        "label": "Salarios en miles de ₡",
+        "min": 200,
+        "max": 750
+      }
+    }
+  }
+}

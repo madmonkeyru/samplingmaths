@@ -1,0 +1,108 @@
+{
+  "id": 88,
+  "code": "item-alg-088",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Concepto de función y de gráfica de una función",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A1",
+    "affirmation_desc": "Identificar relaciones funcionales",
+    "evidence": "A1.1",
+    "evidence_desc": "Determina si una representación gráfica corresponde a una función mediante la prueba de la recta vertical."
+  },
+  "evidence_id": "A1.1",
+  "concept_id": "mep-alg-concepto-funcion-01",
+  "linked_concepts": [
+    "mep-alg-concepto-funcion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la siguiente representación gráfica de una relación en el plano cartesiano:",
+  "options": {
+    "A": "El dominio de la relación es $[-3, 3]$.",
+    "B": "Corresponde a la gráfica de una función.",
+    "C": "No corresponde a una función pues existen rectas verticales que intersecan la gráfica en más de un punto.",
+    "D": "El ámbito es $[0, 5]$."
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Para que una relación gráfica en el plano cartesiano represente una función, cada elemento $x$ del dominio debe tener una única imagen $y$.",
+    "Aplicando el criterio de la recta vertical, una recta vertical $x = 0$ interseca la figura semicircular en dos puntos distintos: $(0, 3)$ y $(0, -3)$.",
+    "Por lo tanto, no corresponde a una función."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Círculo centrado en el origen con radio 3",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -4,
+          4
+        ],
+        "y": [
+          -4,
+          4
+        ]
+      },
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            0,
+            0
+          ],
+          "r": 3,
+          "color": "#2563eb",
+          "strokeWidth": 2
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            3
+          ],
+          "label": "(0,3)",
+          "color": "#1e293b"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            -3
+          ],
+          "label": "(0,-3)",
+          "color": "#1e293b"
+        },
+        {
+          "type": "point",
+          "coords": [
+            3,
+            0
+          ],
+          "label": "3",
+          "color": "#1e293b"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -3,
+            0
+          ],
+          "label": "-3",
+          "color": "#1e293b"
+        }
+      ]
+    }
+  }
+}

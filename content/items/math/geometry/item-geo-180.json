@@ -1,0 +1,70 @@
+{
+  "id": 180,
+  "code": "item-geo-180",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Identificación de elementos métricos del cilindro",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.1",
+    "evidence_desc": "Identifica la superficie lateral, las bases, la altura, el radio o el diámetro de un cilindro circular recto en diversos contextos."
+  },
+  "evidence_id": "A5.1",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "¿Cuál de las siguientes relaciones métricas es correcta para cualquier cilindro circular recto donde $h$ es la altura, $r$ el radio y $g$ la generatriz?",
+  "options": {
+    "A": "$g = h$",
+    "B": "$g = 2r$",
+    "C": "$g = \\sqrt{r^2 + h^2}$",
+    "D": "$g = \\frac{h}{2}$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "En un cilindro circular recto, las generatrices son perpendiculares a las bases y paralelas al eje central.",
+    "Por esta razón geométrica, la longitud de la generatriz $g$ siempre es idéntica a la altura $h$ ($g = h$)."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Elementos y generatriz de un cilindro circular recto",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "cylinder",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "radius": 65,
+        "height": 120,
+        "showAxis": true
+      },
+      "labels": {
+        "topCenter": "B_1",
+        "bottomCenter": "B_2",
+        "height": "h",
+        "topRight": "g"
+      },
+      "referenceBox": {
+        "lines": [
+          "Cilindro circular recto",
+          "g: generatriz lateral",
+          "g = h"
+        ]
+      },
+      "showCrossSection": false,
+      "showAxes": true
+    }
+  }
+}

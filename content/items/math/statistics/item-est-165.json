@@ -1,0 +1,72 @@
+{
+  "id": 165,
+  "code": "item-est-165",
+  "set_id": "set_4",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Estadística Descriptiva",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A10",
+    "evidence": "A10.4",
+    "evidence_desc": "Calcula la media ponderada e interpreta promedios."
+  },
+  "evidence_id": "A10.4",
+  "concept_id": "mep-est-medidas-posicion-01",
+  "linked_concepts": [
+    "mep-est-medidas-posicion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Un estudiante obtuvo las siguientes calificaciones en sus evaluaciones de matemática: Examen 1 (30%): 80, Examen 2 (40%): 90, Tareas (30%): 70. Su nota final en la asignatura es",
+  "options": {
+    "A": "81",
+    "B": "80",
+    "C": "83",
+    "D": "85"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Calculamos la media ponderada multiplicando cada nota por su porcentaje:",
+    "Nota = $(80 \\cdot 0.30) + (90 \\cdot 0.40) + (70 \\cdot 0.30)$.",
+    "Nota = $24 + 36 + 21 = 81$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Tabla de ponderación de calificaciones",
+    "visual": {
+      "type": "table",
+      "variant": "weighted",
+      "headers": [
+        "Evaluación",
+        "Porcentaje",
+        "Nota Obtenida"
+      ],
+      "rows": [
+        [
+          "Examen 1",
+          "30%",
+          "80"
+        ],
+        [
+          "Examen 2",
+          "40%",
+          "90"
+        ],
+        [
+          "Tareas",
+          "30%",
+          "70"
+        ]
+      ]
+    }
+  }
+}

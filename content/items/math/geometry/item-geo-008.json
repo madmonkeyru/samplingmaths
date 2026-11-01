@@ -1,0 +1,47 @@
+{
+  "id": 8,
+  "code": "item-geo-008",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Posición de puntos respecto a una circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A3",
+    "affirmation_desc": null,
+    "evidence": "A3.1",
+    "evidence_desc": "Determina gráfica y algebraicamente si un punto se ubica en el interior o en el exterior de una circunferencia en diversos contextos."
+  },
+  "evidence_id": "A3.1",
+  "concept_id": "mep-geo-posicion-punto-04",
+  "linked_concepts": [
+    "mep-geo-posicion-punto-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "¿Cuál opción contiene las coordenadas de un punto interior a la circunferencia dada por (x−2)^2 + y^2 = 5?",
+  "options": {
+    "A": "(0, 2)",
+    "B": "(1, 0)",
+    "C": "(2, 3)",
+    "D": "(3, 3)"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La circunferencia tiene centro (2,0) y radio √5 ≈ 2.236.",
+    "Un punto (x,y) es interior si (x-2)^2 + y^2 < 5.",
+    "Evaluar (1,0): (1-2)^2 + 0^2 = 1 < 5 → interior.",
+    "Las demás opciones dan valores ≥ 5.",
+    "Opción correcta: B."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

@@ -1,0 +1,248 @@
+{
+  "id": 20,
+  "code": "item-geo-020",
+  "set_id": "set_1",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Simetría axial",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A6",
+    "affirmation_desc": null,
+    "evidence": "A6.2",
+    "evidence_desc": "Identifica elementos homólogos en figuras que presentan simetría axial en diversos contextos."
+  },
+  "evidence_id": "A6.2",
+  "concept_id": "mep-geo-transformaciones-10",
+  "linked_concepts": [
+    "mep-geo-transformaciones-10"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere el siguiente polígono DEFGHIJ: [imagen]. De acuerdo con la información de la gráfica, ¿cuál punto corresponde a la imagen de J con respecto al eje y?",
+  "options": {
+    "A": "F",
+    "B": "E",
+    "C": "G",
+    "D": "H"
+  },
+  "correct_answer": "B",
+  "solution_steps": [
+    "La reflexión respecto al eje y cambia (x,y) a (-x,y).",
+    "J está en (4,5). Su imagen es (-4,5).",
+    "El punto en (-4,5) es E.",
+    "Opción correcta: B."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Polígono DEFGHIJ en un plano cartesiano.",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -5,
+          5
+        ],
+        "y": [
+          0,
+          9
+        ]
+      },
+      "grid": false,
+      "children": [
+        {
+          "type": "polygon",
+          "vertices": [
+            [
+              0,
+              8
+            ],
+            [
+              -4,
+              5
+            ],
+            [
+              -2,
+              5
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "labels": [
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J"
+          ],
+          "fill": "rgba(99, 102, 241, 0.15)"
+        },
+        {
+          "type": "line",
+          "p1": [
+            -4,
+            0
+          ],
+          "p2": [
+            -4,
+            5
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            -2,
+            0
+          ],
+          "p2": [
+            -2,
+            5
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            2,
+            0
+          ],
+          "p2": [
+            2,
+            5
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            4,
+            0
+          ],
+          "p2": [
+            4,
+            5
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            -4,
+            5
+          ],
+          "p2": [
+            4,
+            5
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "line",
+          "p1": [
+            -2,
+            2
+          ],
+          "p2": [
+            2,
+            2
+          ],
+          "dashed": true,
+          "color": "#64748b"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            8
+          ],
+          "label": "8",
+          "label_position": "left"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            5
+          ],
+          "label": "5",
+          "label_position": "left"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            2
+          ],
+          "label": "2",
+          "label_position": "left"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -4,
+            0
+          ],
+          "label": "-4",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            -2,
+            0
+          ],
+          "label": "-2",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            2,
+            0
+          ],
+          "label": "2",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            4,
+            0
+          ],
+          "label": "4",
+          "label_position": "bottom"
+        }
+      ]
+    }
+  }
+}

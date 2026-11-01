@@ -1,0 +1,76 @@
+{
+  "id": 105,
+  "code": "item-alg-105",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función cuadrática",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A2",
+    "evidence": "A2.8",
+    "evidence_desc": "Relaciona el signo del discriminante con la cantidad de intersecciones con el eje x."
+  },
+  "evidence_id": "A2.8",
+  "concept_id": "mep-alg-funcion-cuadratica-04",
+  "linked_concepts": [
+    "mep-alg-funcion-cuadratica-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Considere la función cuadrática $f(x) = x^2 - 4x + 4$. ¿Cuántas intersecciones tiene su gráfica con el eje $x$?",
+  "options": {
+    "A": "Exactamente una intersección (el vértice roza el eje $x$).",
+    "B": "Dos intersecciones distintas.",
+    "C": "Ninguna intersección.",
+    "D": "Tres intersecciones."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Calculamos el discriminante $\\Delta = b^2 - 4ac$.",
+    "Para $a = 1, b = -4, c = 4$: $\\Delta = (-4)^2 - 4(1)(4) = 16 - 16 = 0$.",
+    "Cuando $\\Delta = 0$, la gráfica tiene exactamente una intersección con el eje $x$ en el punto $(2, 0)$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Parábola tangencial al eje x en (2,0)",
+    "visual": {
+      "type": "function_plot",
+      "form": "quadratic",
+      "params": {
+        "a": 1,
+        "vertex": [
+          2,
+          0
+        ],
+        "roots": [
+          2
+        ]
+      },
+      "annotations": {
+        "vertex": {
+          "show": true,
+          "label": "(2,0)"
+        }
+      },
+      "domain": {
+        "x": [
+          -1,
+          5
+        ],
+        "y": [
+          -1,
+          5
+        ]
+      }
+    }
+  }
+}

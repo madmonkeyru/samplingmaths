@@ -1,0 +1,91 @@
+{
+  "id": 33,
+  "code": "item-geo-033",
+  "set_id": "set_2",
+  "area": "Geometría",
+  "area_id": "geometry",
+  "topic": "Recta tangente a una circunferencia",
+  "spec": {
+    "block": "1. Geometría",
+    "affirmation": "A3",
+    "evidence": "A3.2",
+    "evidence_desc": "Determina si una recta dada gráfica o algebraicamente es secante, tangente o exterior a una circunferencia en diversos contextos."
+  },
+  "evidence_id": "A3.2",
+  "concept_id": "mep-geo-posicion-recta-05",
+  "linked_concepts": [
+    "mep-geo-posicion-recta-05"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "En la gráfica adjunta, la recta $L$ roza el borde de la circunferencia $c$ de centro $O(0, 0)$ exactamente en el punto $P(0, 4)$: [imagen]. ¿Cuál es la ecuación algebraica de la recta $L$?",
+  "options": {
+    "A": "$y = 4$",
+    "B": "$x = 4$",
+    "C": "$y = -4$",
+    "D": "$x = -4$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La recta toca a la circunferencia en un único punto P(0, 4) en el eje y.",
+    "Es una recta horizontal perpendicular al radio vertical OP.",
+    "Toda recta horizontal que pasa por y = 4 tiene la ecuación y = 4."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Circunferencia centrada en (0,0) con recta tangente horizontal en P(0,4).",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -5,
+          5
+        ],
+        "y": [
+          -5,
+          6
+        ]
+      },
+      "grid": true,
+      "children": [
+        {
+          "type": "circle",
+          "center": [
+            0,
+            0
+          ],
+          "radius": 4,
+          "stroke": "black"
+        },
+        {
+          "type": "line",
+          "from": [
+            -5,
+            4
+          ],
+          "to": [
+            5,
+            4
+          ],
+          "stroke": "black"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            4
+          ],
+          "label": "P(0,4)"
+        }
+      ]
+    }
+  }
+}

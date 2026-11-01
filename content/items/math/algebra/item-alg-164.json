@@ -1,0 +1,93 @@
+{
+  "id": 164,
+  "code": "item-alg-164",
+  "set_id": "set_4",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Sistemas de Ecuaciones",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A9",
+    "evidence": "A9.2",
+    "evidence_desc": "Interpreta gráficamente la solución de un sistema de ecuaciones lineales."
+  },
+  "evidence_id": "A9.2",
+  "concept_id": "mep-alg-sistemas-ecuaciones-05",
+  "linked_concepts": [
+    "mep-alg-sistemas-ecuaciones-05"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "El punto de intersección entre las rectas $L_1: y = 2x - 1$ y $L_2: y = -x + 5$ corresponde a",
+  "options": {
+    "A": "$(2, 3)$",
+    "B": "$(3, 2)$",
+    "C": "$(1, 1)$",
+    "D": "$(2, 5)$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Igualamos los criterios de $y$: $2x - 1 = -x + 5$.",
+    "Sumamos $x$ y restamos $-1$: $3x = 6 \\implies x = 2$.",
+    "Sustituimos $x = 2$ en $L_1$: $y = 2(2) - 1 = 3$.",
+    "El punto de intersección es $(2, 3)$."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Intersección de las rectas y = 2x - 1 e y = -x + 5 en el punto (2,3)",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -1,
+          5
+        ],
+        "y": [
+          -2,
+          6
+        ]
+      },
+      "grid": true,
+      "axes": {
+        "arrows": true
+      },
+      "children": [
+        {
+          "type": "line",
+          "x1": -0.5,
+          "y1": -2,
+          "x2": 3.5,
+          "y2": 6,
+          "stroke": "indigo-600",
+          "strokeWidth": 2,
+          "label": "L1"
+        },
+        {
+          "type": "line",
+          "x1": -1,
+          "y1": 6,
+          "x2": 6,
+          "y2": -1,
+          "stroke": "amber-600",
+          "strokeWidth": 2,
+          "label": "L2"
+        },
+        {
+          "type": "point",
+          "x": 2,
+          "y": 3,
+          "label": "(2,3)",
+          "color": "stone-900"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": 100,
+  "code": "item-alg-100",
+  "set_id": "set_2",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Composición de funciones",
+  "spec": {
+    "block": "Relaciones y Álgebra",
+    "affirmation": "A1",
+    "evidence": "A1.4",
+    "evidence_desc": "Evalúa la composición de dos funciones (g o f)(x)."
+  },
+  "evidence_id": "A1.4",
+  "concept_id": "mep-alg-composicion-02",
+  "linked_concepts": [
+    "mep-alg-composicion-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Dadas las funciones $f(x) = 2x + 3$ y $g(x) = x^2 - 1$, ¿cuál es el criterio de la función compuesta $(g \\circ f)(x)$?",
+  "options": {
+    "A": "4x^2 + 12x + 8",
+    "B": "2x^2 + 1",
+    "C": "4x^2 + 9",
+    "D": "4x^2 + 12x + 10"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Por definición, $(g \\circ f)(x) = g(f(x))$.",
+    "Sustituyendo $f(x) = 2x + 3$ en $g$: $g(2x + 3) = (2x + 3)^2 - 1$.",
+    "Desarrollando el binomio al cuadrado: $(2x)^2 + 2(2x)(3) + 3^2 - 1 = 4x^2 + 12x + 9 - 1 = 4x^2 + 12x + 8$."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

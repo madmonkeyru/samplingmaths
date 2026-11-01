@@ -1,0 +1,128 @@
+{
+  "id": 63,
+  "code": "item-alg-063",
+  "set_id": "set_1",
+  "area": "Relaciones y Álgebra",
+  "area_id": "functions",
+  "topic": "Función cuadrática — inversa",
+  "spec": {
+    "block": "2. Relaciones y Álgebra",
+    "affirmation": "A4",
+    "affirmation_desc": null,
+    "evidence": "A4.3",
+    "evidence_desc": "Determina intervalos en los cuales una función representada gráficamente tiene inversa en diversos contextos."
+  },
+  "evidence_id": "A4.3",
+  "concept_id": "mep-alg-funcion-inversa-06",
+  "linked_concepts": [
+    "mep-alg-funcion-inversa-06"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Una posible gráfica de la función $h(x) = x^2 - 4$; $x \\in \\mathbb{R}$ es la siguiente:\n\n[gráfica de parábola que abre hacia arriba, vértice en (0, −4), raíces en −2 y 2]\n\nSi se desea que $h$ tenga inversa, entonces, un posible dominio para $h$ corresponde a",
+  "options": {
+    "A": "$[-2, 2]$",
+    "B": "$]-\\infty, 2]$",
+    "C": "$[0, +\\infty[$",
+    "D": "$[-2, +\\infty[$"
+  },
+  "correct_answer": "C",
+  "solution_steps": [
+    "Para que una función tenga inversa, debe ser inyectiva en su dominio.",
+    "h(x) = x² − 4 es una parábola que abre hacia arriba con vértice en (0, −4).",
+    "Es decreciente en ]−∞, 0] y creciente en [0, +∞[.",
+    "Restringiendo el dominio a [0, +∞[ (donde es estrictamente creciente), h es inyectiva y por tanto tiene inversa.",
+    "El intervalo [−2, 2] incluye el vértice, donde la función no es inyectiva. Los intervalos ]−∞, 2] y [−2, +∞[ tampoco garantizan inyectividad.",
+    "Respuesta: C."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Gráfica de la función h(x) = x^2 - 4 con intersecciones x en -2 y 2, y mínimo en (0, -4).",
+    "visual": {
+      "type": "cartesian_2d",
+      "domain": {
+        "x": [
+          -4,
+          4
+        ],
+        "y": [
+          -6,
+          3
+        ]
+      },
+      "grid": false,
+      "children": [
+        {
+          "type": "path",
+          "points": [
+            [
+              -3,
+              5
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              0,
+              -4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "color": "indigo-600",
+          "strokeWidth": 2.5
+        },
+        {
+          "type": "point",
+          "coords": [
+            -2,
+            0
+          ],
+          "label": "-2",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            2,
+            0
+          ],
+          "label": "2",
+          "label_position": "bottom"
+        },
+        {
+          "type": "point",
+          "coords": [
+            0,
+            -4
+          ],
+          "label": "-4",
+          "label_position": "left"
+        },
+        {
+          "type": "label",
+          "coords": [
+            1.8,
+            2.5
+          ],
+          "text": "h"
+        }
+      ]
+    }
+  }
+}

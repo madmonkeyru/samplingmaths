@@ -1,0 +1,70 @@
+{
+  "id": 193,
+  "code": "item-geo-193",
+  "set_id": "set_5",
+  "area": "GEOMETRÍA",
+  "area_id": "geometry",
+  "topic": "Sección transversal triangular en un cubo (Corte en vértice)",
+  "spec": {
+    "block": "Geometría",
+    "evidence": "A5.2",
+    "evidence_desc": "Determina qué figuras se obtienen mediante secciones planas de figuras tridimensionales."
+  },
+  "evidence_id": "A5.2",
+  "concept_id": "mep-geo-cuerpos-3d-09",
+  "linked_concepts": [
+    "mep-geo-cuerpos-3d-09"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Si en un cubo se realiza un corte plano que pasa por los puntos medios de tres aristas que convergen en un mismo vértice, ¿qué figura geométrica se obtiene como sección plana?",
+  "options": {
+    "A": "Un triángulo equilátero",
+    "B": "Un triángulo rectángulo escaleno",
+    "C": "Un cuadrado",
+    "D": "Un rombo"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Los tres puntos medios están situados a la misma distancia del vértice común.",
+    "La distancia entre cualquier par de estos puntos medios es la hipotenusa de un triángulo rectángulo isósceles con catetos iguales a $\\frac{a}{2}$.",
+    "Por lo tanto, los tres lados de la sección plana miden exactamente $\\frac{a}{2}\\sqrt{2}$, formando un triángulo equilátero."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Corte de esquina en cubo produciendo un triángulo equilátero",
+    "visual": {
+      "type": "solid_3d",
+      "shape": "prism",
+      "width": 380,
+      "height": 280,
+      "parameters": {
+        "width": 90,
+        "height": 90,
+        "depth": 55,
+        "hatchCrossSection": true
+      },
+      "labels": {
+        "width": "a",
+        "height": "a"
+      },
+      "referenceBox": {
+        "lines": [
+          "Corte en esquina del cubo",
+          "Puntos medios de aristas",
+          "Sección: triángulo equilátero"
+        ]
+      },
+      "showCrossSection": true,
+      "showAxes": true
+    }
+  }
+}

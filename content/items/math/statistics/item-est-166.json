@@ -1,0 +1,43 @@
+{
+  "id": 166,
+  "code": "item-est-166",
+  "set_id": "set_4",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Diagrama de Caja",
+  "spec": {
+    "block": "3. Estadística y Probabilidad",
+    "affirmation": "A10",
+    "evidence": "A10.3",
+    "evidence_desc": "Compara variabilidad utilizando diagramas de caja."
+  },
+  "evidence_id": "A10.3",
+  "concept_id": "mep-est-diagrama-cajas-ric-03",
+  "linked_concepts": [
+    "mep-est-diagrama-cajas-ric-03"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c2"
+  ],
+  "stem": "Considere la siguiente información sobre los tiempos de espera (en minutos) en dos sucursales bancarias S1 y S2:\n\n- Sucursal S1: $Q_1 = 10$, $\\text{Mediana} = 15$, $Q_3 = 22$, $\\text{RIC} = 12$.\n- Sucursal S2: $Q_1 = 12$, $\\text{Mediana} = 18$, $Q_3 = 30$, $\\text{RIC} = 18$.\n\n¿En cuál sucursal existe una MAYOR dispersión o variabilidad en el 50% central de los tiempos de espera?",
+  "options": {
+    "A": "En la Sucursal S2, porque su RIC es 18 frente a 12 de S1.",
+    "B": "En la Sucursal S1, porque su mediana es menor.",
+    "C": "En ambas por igual.",
+    "D": "No se puede determinar sin conocer el mínimo y el máximo."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El Recorrido Intercuartílico (RIC) mide la dispersión del 50% central de los datos.",
+    "Dado que $\\text{RIC}_{S2} = 18 > \\text{RIC}_{S1} = 12$, el 50% central de los tiempos de espera en la Sucursal S2 presenta una mayor variabilidad."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

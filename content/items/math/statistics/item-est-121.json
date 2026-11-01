@@ -1,0 +1,71 @@
+{
+  "id": 121,
+  "code": "item-est-121",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de variabilidad — Coeficiente de variación",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A2",
+    "evidence": "A2.3",
+    "evidence_desc": "Compara la variabilidad relativa de dos grupos."
+  },
+  "evidence_id": "A2.3",
+  "concept_id": "mep-est-posicion-relativa-cv-04",
+  "linked_concepts": [
+    "mep-est-posicion-relativa-cv-04"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Dos secciones de décimo año realizaron el mismo examen de Matemática. La Sección A tuvo una media $\\bar{x} = 80$ y desviación $s = 8$. La Sección B tuvo una media $\\bar{x} = 60$ y desviación $s = 9$. ¿Cuál de las secciones presentó mayor variabilidad relativa (CV)?",
+  "options": {
+    "A": "La Sección B ($CV = 15\\%$), por tener mayor coeficiente de variación que la Sección A ($CV = 10\\%$).",
+    "B": "La Sección A, por tener una media más alta.",
+    "C": "Ambas secciones tuvieron exactamente la misma variabilidad relativa.",
+    "D": "La Sección A, pues su desviación estándar es menor."
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "El coeficiente de variación ($CV$) mide la variabilidad relativa: $CV = \\frac{s}{\\bar{x}} \\cdot 100\\%$.",
+    "Sección A: $CV_A = \\frac{8}{80} \\cdot 100\\% = 0,10 \\cdot 100\\% = 10\\%$.",
+    "Sección B: $CV_B = \\frac{9}{60} \\cdot 100\\% = 0,15 \\cdot 100\\% = 15\\%$.",
+    "Como $15\\% > 10\\%$, la Sección B presenta mayor variabilidad relativa."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Tabla comparativa de promedios y desviaciones de secciones A y B",
+    "visual": {
+      "type": "table",
+      "variant": "stats_table",
+      "headers": [
+        "Sección",
+        "Media (x̄)",
+        "Desviación (s)",
+        "CV (%)"
+      ],
+      "rows": [
+        [
+          "Sección A",
+          "80",
+          "8",
+          "10%"
+        ],
+        [
+          "Sección B",
+          "60",
+          "9",
+          "15%"
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": 113,
+  "code": "item-est-113",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Medidas de posición",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A1",
+    "evidence": "A1.1",
+    "evidence_desc": "Calcula la media aritmética a partir de una tabla de distribución de frecuencias."
+  },
+  "evidence_id": "A1.1",
+  "concept_id": "mep-est-medidas-posicion-01",
+  "linked_concepts": [
+    "mep-est-medidas-posicion-01"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reproduccion",
+  "difficulty_tier": 1,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "En un hospital se registró el número de días de internamiento de 50 pacientes. Los resultados se resumen en la siguiente tabla:",
+  "options": {
+    "A": "3,2 días",
+    "B": "3,0 días",
+    "C": "3,5 días",
+    "D": "2,8 días"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Para hallar la media aritmética $\\bar{x}$, sumamos los productos de cada valor por su frecuencia y dividimos entre el total $N = 50$:",
+    "$\\sum x_i f_i = (1 \\cdot 10) + (2 \\cdot 15) + (4 \\cdot 15) + (5 \\cdot 10) = 10 + 30 + 60 + 50 = 160$.",
+    "$\\bar{x} = \\frac{160}{50} = 3,2$ días."
+  ],
+  "group_id": null,
+  "visual_spec": {
+    "alt": "Tabla de frecuencias de días de internamiento",
+    "visual": {
+      "type": "table",
+      "variant": "frequency_table",
+      "headers": [
+        "Días de internamiento (x)",
+        "Cantidad de pacientes (f)"
+      ],
+      "rows": [
+        [
+          "1 día",
+          "10"
+        ],
+        [
+          "2 días",
+          "15"
+        ],
+        [
+          "4 días",
+          "15"
+        ],
+        [
+          "5 días",
+          "10"
+        ]
+      ],
+      "total_row": [
+        "Total",
+        "50"
+      ]
+    }
+  }
+}

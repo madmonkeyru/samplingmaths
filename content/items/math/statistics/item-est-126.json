@@ -1,0 +1,44 @@
+{
+  "id": 126,
+  "code": "item-est-126",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Probabilidad del complemento",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A3",
+    "evidence": "A3.5",
+    "evidence_desc": "Calcula la probabilidad del evento contrario o complemento."
+  },
+  "evidence_id": "A3.5",
+  "concept_id": "mep-est-eventos-probabilidad-02",
+  "linked_concepts": [
+    "mep-est-eventos-probabilidad-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "conexion",
+  "difficulty_tier": 2,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Si la probabilidad de que llueva durante la tarde en una zona tropical es del 68% ($P(L) = 0,68$), ¿cuál es la probabilidad de que no llueva ($P(L^c)$)?",
+  "options": {
+    "A": "$32\\%$",
+    "B": "$68\\%$",
+    "C": "$40\\%$",
+    "D": "$50\\%$"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "La regla del complemento establece que $P(A^c) = 1 - P(A)$.",
+    "$P(L^c) = 100\\% - 68\\% = 32\\%$ (ó $1 - 0,68 = 0,32$).",
+    "Por lo tanto, la probabilidad de que no llueva es 32%."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}

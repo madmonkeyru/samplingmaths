@@ -1,0 +1,46 @@
+{
+  "id": 130,
+  "code": "item-est-130",
+  "set_id": "set_2",
+  "area": "Estadística y Probabilidad",
+  "area_id": "statistics",
+  "topic": "Desviación estándar",
+  "spec": {
+    "block": "Estadística y Probabilidad",
+    "affirmation": "A2",
+    "evidence": "A2.5",
+    "evidence_desc": "Interpreta la desviación estándar como medida de dispersión alrededor de la media."
+  },
+  "evidence_id": "A2.5",
+  "concept_id": "mep-est-eventos-probabilidad-02",
+  "linked_concepts": [
+    "mep-est-eventos-probabilidad-02"
+  ],
+  "program_applicability": [
+    "EDAD_PARTE_1",
+    "BXM"
+  ],
+  "calculator_allowed": true,
+  "cognitive_level": "reflexion",
+  "difficulty_tier": 3,
+  "historical_convocatoria": [
+    "2026-c1"
+  ],
+  "stem": "Un fabricante mide el peso de cajas de galletas de 500 gramos. Si la media del proceso es 500 g y la desviación estándar es 2 g, ¿entre qué valores se concentran aproximadamente las cajas que están a menos de una desviación estándar de la media?",
+  "options": {
+    "A": "Entre 498 g y 502 g",
+    "B": "Entre 496 g y 504 g",
+    "C": "Entre 490 g y 510 g",
+    "D": "Entre 495 g y 505 g"
+  },
+  "correct_answer": "A",
+  "solution_steps": [
+    "Un intervalo a una desviación estándar alrededor de la media está dado por $[\\bar{x} - s, \\bar{x} + s]$.",
+    "Sustituyendo $\\bar{x} = 500$ g y $s = 2$ g:",
+    "Límite inferior: $500 - 2 = 498$ g.",
+    "Límite superior: $500 + 2 = 502$ g.",
+    "Por lo tanto, las cajas están entre 498 g y 502 g."
+  ],
+  "group_id": null,
+  "visual_spec": null
+}
