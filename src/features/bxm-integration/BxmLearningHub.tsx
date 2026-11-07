@@ -13,6 +13,7 @@ import { SessionRunner } from '../bxm-assessment/sessionRunner';
 import type { BlueprintSelectionResult, SessionResultExport, DifficultyTier } from '../bxm-assessment/types';
 import { BxmPreparationDashboard } from '../bxm-progress/ui/BxmPreparationDashboard';
 import { BXM_OFFICIAL_EVIDENCES_FIXTURE as catalog } from '../bxm-progress/ui/evidenceCatalogFixture';
+import { accessService } from '../../services/accessService';
 import { useSubscriptionCapabilities } from './capabilities';
 import { BxmLearningStore } from './learningStore';
 import { inventory, lessons, policyFor, preparePresentation, sampleLessonKeys, selectActivity, type ActivityRequest } from './providers';
@@ -113,8 +114,9 @@ export function BxmLearningHub({ userId, route, onNavigate, onOfficialSimulation
   const practicePreview = selectActivity({ kind: 'evidence_practice', evidenceKey: selectedEvidence, difficulty, itemCount: Number.isInteger(practiceCount) && practiceCount > 0 && practiceCount <= 100 ? practiceCount : 5 }, 0, events.map(event => event.itemId));
 
   const allow = (feature: Parameters<typeof capabilities.canAccess>[0]) => {
-    if (capabilities.canAccess(feature)) return true;
-    setPaywall(true); return false;
+    if (accessService.can(feature)) return true;
+    setPaywall(true);
+    return false;
   };
   function request(requested: ActivityRequest) {
     const source = result || store.getResult(route.sourceSessionId);
@@ -513,12 +515,12 @@ export function BxmLearningHub({ userId, route, onNavigate, onOfficialSimulation
         </article>
       </div>
     </section>}
-    {(tab === 'progress' || tab === 'path') && (capabilities.canAccess('longitudinal_mastery_dashboard')
+    {(tab === 'progress' || tab === 'path') && (accessService.can('longitudinal_mastery_dashboard')
       ? <BxmPreparationDashboard key={tab} initialTab={tab === 'path' ? 'queue' : 'overview'} events={events} completions={store.getCompletions()} capabilityProvider={capabilities} availableInventoryByEvidence={inventory} availableLessonKeys={lessons.map(l => l.evidenceKey)}
         canonicalRecommendation={canonicalHomeRecommendation} onRecommendationAction={handleRecommendationAction}
         onNavigateToLesson={openLesson} onNavigateToPractice={(key, tier) => request({ kind: 'evidence_practice', evidenceKey: key, difficulty: tier as DifficultyTier })} onOpenUpgradeModal={() => setPaywall(true)} />
       : <section className="feedback-panel space-y-3"><h2>Seguimiento personalizado Premium</h2><p>El diagnóstico, sus resultados básicos y una lección completa por área siguen disponibles gratis.</p><button className="primary-button" onClick={() => setPaywall(true)}>Ver opciones Premium</button></section>)}
-    {tab === 'assessment' && (runner && runner.policy.kind !== 'diagnostic' && !capabilities.canAccess(runner.policy.kind === 'mock_exam' ? 'configurable_mock_sessions' : 'extended_authored_practice') ? <section className="feedback-panel"><h2>Práctica Pro</h2><p>El intento guardado se conserva. Activa Pro para continuar esta actividad.</p><button className="primary-button" onClick={() => setPaywall(true)}>Ver planes</button></section> : runner && runner.sessionId === route.sessionId ? <BxmSessionRunnerView key={runner.sessionId} runner={runner} onFinish={finish} onStateChange={persist} onExit={() => go('diagnostic')} formulaSheet={<FormulasSheet />} />
+    {tab === 'assessment' && (runner && runner.policy.kind !== 'diagnostic' && !accessService.can(runner.policy.kind === 'mock_exam' ? 'configurable_mock_sessions' : 'extended_authored_practice') ? <section className="feedback-panel"><h2>Práctica Pro</h2><p>El intento guardado se conserva. Activa Pro para continuar esta actividad.</p><button className="primary-button" onClick={() => setPaywall(true)}>Ver planes</button></section> : runner && runner.sessionId === route.sessionId ? <BxmSessionRunnerView key={runner.sessionId} runner={runner} onFinish={finish} onStateChange={persist} onExit={() => go('diagnostic')} formulaSheet={<FormulasSheet />} />
       : <section className="feedback-panel"><h2>Actividad no disponible en este perfil</h2><p>Busca el intento guardado o inicia otra actividad.</p><button onClick={() => go('diagnostic')}>Volver al diagnóstico</button></section>)}
     {tab === 'result' && (result ? <>
       <BxmSessionResultBreakdownView result={result} onExit={() => go('diagnostic')} />

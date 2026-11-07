@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, CheckCircle, ChevronDown, ChevronRight, Lock, Play, Sparkles, BookCheck } from 'lucide-react';
+import { BookOpen, CheckCircle, ChevronDown, ChevronRight, Lock, Play, BookCheck } from 'lucide-react';
 import { TextRenderer } from '../common/TextRenderer';
 import { PaywallModal } from '../common/PaywallModal';
-import { subscriptionService, type SubscriptionTier } from '../../services/subscriptionService';
+import { accessService } from '../../services/accessService';
+import { AccessBadge } from '../common/AccessBadge';
 import type { PracticeConfig } from '../../types';
 
 interface TemarioLesson {
@@ -168,12 +169,12 @@ export const DigitalTemarioView: React.FC<{
 }> = ({ onStartQuiz }) => {
   const [selectedArea, setSelectedArea] = useState<'all' | 'geometry' | 'functions' | 'statistics'>('all');
   const [expandedLessonId, setExpandedLessonId] = useState<string>(TEMARIO_LESSONS[0].id);
-  const [tier, setTier] = useState<SubscriptionTier>(subscriptionService.getTier());
+  const [, setTier] = useState(accessService.getTier());
   const [paywallOpen, setPaywallOpen] = useState(false);
   const [paywallLessonTitle, setPaywallLessonTitle] = useState('');
 
   useEffect(() => {
-    return subscriptionService.subscribe(newTier => setTier(newTier));
+    return accessService.subscribe(newTier => setTier(newTier));
   }, []);
 
   const filteredLessons = selectedArea === 'all'
@@ -181,7 +182,7 @@ export const DigitalTemarioView: React.FC<{
     : TEMARIO_LESSONS.filter(l => l.area === selectedArea);
 
   const handleOpenQuiz = (lesson: TemarioLesson) => {
-    if (!lesson.preview && tier !== 'premium') {
+    if (!accessService.canAccessLesson(lesson.preview)) {
       setPaywallLessonTitle(`Lección: ${lesson.title}`);
       setPaywallOpen(true);
       return;
@@ -244,7 +245,7 @@ export const DigitalTemarioView: React.FC<{
       <div className="space-y-4">
         {filteredLessons.map(lesson => {
           const isExpanded = expandedLessonId === lesson.id;
-          const isLocked = !lesson.preview && tier !== 'premium';
+          const isLocked = !accessService.canAccessLesson(lesson.preview);
 
           return (
             <article
@@ -282,10 +283,7 @@ export const DigitalTemarioView: React.FC<{
                           Acceso Libre
                         </span>
                       ) : (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.2 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800/60">
-                          <Sparkles className="size-2.5" />
-                          <span>PRO</span>
-                        </span>
+                        <AccessBadge capability="full_authored_lesson_pack" />
                       )}
                     </div>
                     <p className="text-xs text-stone-500 dark:text-stone-400 mt-0.5">

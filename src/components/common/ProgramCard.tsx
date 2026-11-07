@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProgramInfo } from '../../types';
-import { ArrowRight, Calculator, Ban, CheckCircle } from 'lucide-react';
+import { ArrowRight, Calculator, Ban } from 'lucide-react';
 
 interface ProgramCardProps {
   program: ProgramInfo;

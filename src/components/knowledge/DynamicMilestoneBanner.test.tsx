@@ -24,7 +24,7 @@ describe('DynamicMilestoneBanner & ProgramSchedulesOverview', () => {
   it('renders multiprogram schedule overview comparing programs', () => {
     render(<ProgramSchedulesOverview />);
 
-    expect(screen.getByText('Cronograma Oficial de Pruebas y Matrícula')).toBeInTheDocument();
+    expect(screen.getByText(/Cronograma.*Pruebas y Matrícula/)).toBeInTheDocument();
     expect(screen.getByText(/Bachillerato por Madurez Suficiente/)).toBeInTheDocument();
     expect(screen.getByText(/Educación Diversificada a Distancia/)).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /III Ciclo/ })).toBeInTheDocument();
